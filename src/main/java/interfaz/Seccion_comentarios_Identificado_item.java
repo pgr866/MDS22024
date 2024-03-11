@@ -6,6 +6,10 @@ public class Seccion_comentarios_Identificado_item extends Seccion_comentarios_i
 //	private Button _me_gusta;
 //	private Button _no_me_gusta;
 	public Seccion_comentarios_Identificado _seccion_comentarios_Identificado;
+	
+	public Seccion_comentarios_Identificado_item(Seccion_comentarios _seccion_comentarios) {
+		super(_seccion_comentarios);
+	}
 
 	public void Valorar_comentario() {
 		throw new UnsupportedOperationException();
