@@ -12,7 +12,11 @@ export class VistaListaperiodistas_item extends LitElement {
   }
 
   render() {
-    return html``;
+    return html`
+<vaadin-item selected>
+ Periodista
+</vaadin-item>
+`;
   }
 
   // Remove this method to render the contents of this view inside Shadow DOM
