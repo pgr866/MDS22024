@@ -7,6 +7,8 @@ public class Listado_noticias_portada_Editor_item extends Listado_noticias_porta
 	
 	public Listado_noticias_portada_Editor_item(Listado_noticias_portada _listado_noticias_portada) {
 		super(_listado_noticias_portada);
+		this.getTitulolistadonoticiasportada().setVisible(false);
+		this.getComboboxtitulolistadonoticiasportada().setVisible(true);
 	}
 
 	public void Cambiar_orden_noticias_portada() {

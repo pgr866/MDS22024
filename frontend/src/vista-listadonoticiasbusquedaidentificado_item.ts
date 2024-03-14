@@ -13,8 +13,8 @@ export class VistaListadonoticiasbusquedaidentificado_item extends LitElement {
 
   render() {
     return html`
-<vaadin-item selected>
- Noticia
+<vaadin-item selected id="Itemlistadonoticiasbusquedaidentificado">
+  Noticia 
 </vaadin-item>
 `;
   }

@@ -6,6 +6,7 @@ public class Listado_noticias_portada_Identificado_item extends Listado_noticias
 	
 	public Listado_noticias_portada_Identificado_item(Listado_noticias_portada _listado_noticias_portada) {
 		super(_listado_noticias_portada);
+		this.getComboboxtitulolistadonoticiasportada().setVisible(false);
 	}
 
 	public void Pagina_noticia_Identificado() {

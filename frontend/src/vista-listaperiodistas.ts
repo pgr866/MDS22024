@@ -15,9 +15,9 @@ export class VistaListaperiodistas extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout theme="" style="width: 100%; height: 100%;">
- <vaadin-combo-box style="width: 100%;" placeholder="Busqueda periodista" .items="${['Periodista1', 'Periodista2']}">
-  <iron-icon icon="lumo:search" slot="prefix"></iron-icon>
+<vaadin-vertical-layout theme="" style="width: 100%; height: 100%;" id="Layoutlistaperiodistas">
+ <vaadin-combo-box style="width: 100%;" placeholder="Busqueda periodista" .items="${['Periodista1', 'Periodista2']}" id="Comboboxlistaperiodistas">
+  <iron-icon icon="lumo:search" slot="prefix" id="Lupalistadoperiodistas"></iron-icon>
  </vaadin-combo-box>
 </vaadin-vertical-layout>
 `;

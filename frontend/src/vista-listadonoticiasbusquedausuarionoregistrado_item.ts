@@ -13,8 +13,8 @@ export class VistaListadonoticiasbusquedausuarionoregistrado_item extends LitEle
 
   render() {
     return html`
-<vaadin-item selected>
- Noticia
+<vaadin-item selected id="Itemlistadonoticiasbusquedausuarionoregistrado">
+  Noticia 
 </vaadin-item>
 `;
   }

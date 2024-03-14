@@ -16,9 +16,9 @@ export class VistaListadonoticiasbusquedaidentificado extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout theme="" style="width: 100%; height: 100%;">
- <vaadin-combo-box style="width: 100%;" placeholder="Barra Búsqueda" .items="${['Noticia1', 'Noticia2']}">
-  <iron-icon icon="lumo:search" slot="prefix"></iron-icon>
+<vaadin-vertical-layout theme="" style="width: 100%; height: 100%;" id="Layoutlistadonoticiasbusquedaidentificado">
+ <vaadin-combo-box style="width: 100%;" placeholder="Barra Búsqueda" .items="${['Noticia1', 'Noticia2']}" id="Comboboxlistadonoticiasbusquedaidentificado">
+  <iron-icon icon="lumo:search" slot="prefix" id="Lupalistadonoticiasbusquedaidentificado"></iron-icon>
  </vaadin-combo-box>
 </vaadin-vertical-layout>
 `;

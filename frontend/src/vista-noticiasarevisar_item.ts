@@ -13,8 +13,8 @@ export class VistaNoticiasarevisar_item extends LitElement {
 
   render() {
     return html`
-<vaadin-item selected>
- Noticiaarevisar1
+<vaadin-item selected id="Itemnoticiasarevisar">
+  Noticiaarevisar1 
 </vaadin-item>
 `;
   }
