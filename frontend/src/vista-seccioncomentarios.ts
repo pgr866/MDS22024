@@ -15,9 +15,9 @@ export class VistaSeccioncomentarios extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%; justify-content: space-between;">
- <vaadin-text-field style="align-self: center;" readonly value="Comentarios" has-value></vaadin-text-field>
- <vaadin-vertical-layout theme="spacing" style="flex-grow: 1; flex-shrink: 0; width: 100%; padding-top: var(--lumo-space-s); padding-right: var(--lumo-space-s); padding-bottom: var(--lumo-space-s); padding-left: var(--lumo-space-s);"></vaadin-vertical-layout>
+<vaadin-vertical-layout style="width: 100%; height: 100%; justify-content: space-between;" id="Layoutseccioncomentarios">
+ <vaadin-text-field style="align-self: center;" readonly value="Comentarios" has-value id="Labelcomentarios"></vaadin-text-field>
+ <vaadin-vertical-layout theme="spacing" style="flex-grow: 1; flex-shrink: 0; width: 100%; padding-top: var(--lumo-space-s); padding-right: var(--lumo-space-s); padding-bottom: var(--lumo-space-s); padding-left: var(--lumo-space-s);" id="Seccioncomentarios"></vaadin-vertical-layout>
 </vaadin-vertical-layout>
 `;
   }

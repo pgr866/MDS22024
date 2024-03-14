@@ -17,9 +17,9 @@ export class VistaSecciones extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout theme="" style="width: 100%; height: 100%;">
- <vaadin-text-field style="align-self: center; flex-shrink: 1; flex-grow: 0;" readonly value="Secciones" has-value></vaadin-text-field>
- <vaadin-select value="Item one" style="width: 100%; flex-shrink: 1; flex-grow: 0;" label="Selecciona una sección:">
+<vaadin-vertical-layout theme="" style="width: 100%; height: 100%;" id="secciones">
+ <vaadin-text-field style="align-self: center; flex-shrink: 1; flex-grow: 0;" readonly value="Secciones" has-value id="Labelsecciones"></vaadin-text-field>
+ <vaadin-select value="Item one" style="width: 100%; flex-shrink: 1; flex-grow: 0;" label="Selecciona una sección:" id="Desplegablesecciones">
   <template>
    <vaadin-list-box selected="0"></vaadin-list-box>
   </template>
