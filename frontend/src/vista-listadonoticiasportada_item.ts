@@ -50,13 +50,11 @@ export class VistaListadonoticiasportada_item extends LitElement {
 }    return html`
 <vaadin-vertical-layout style="width: 100%; height: 100%;">
  <vaadin-horizontal-layout style="width: 100%; flex-shrink: 0; padding-bottom: var(--lumo-space-s);">
-  <vaadin-vertical-layout style="width: 100%; flex-shrink: 0; align-self: stretch; flex-direction: row; flex-wrap: wrap;">
-   <vaadin-button style="flex-shrink: 0; width: 100%; height: 100%; background-color: #FFFFFF; visibility: hidden;">
+  <vaadin-vertical-layout style="width: 100%; flex-shrink: 0; flex-direction: row; flex-wrap: wrap;">
+   <vaadin-button style="flex-shrink: 0; width: 100%; height: 100%; background-color: #FFFFFF;">
      Button 
    </vaadin-button>
-   <vaadin-combo-box style="width: 100%; flex-shrink: 1; height: 100%;" .items="${['Noticia1', 'Noticia2']}">
-    <iron-icon icon="lumo:search" slot="prefix"></iron-icon>
-   </vaadin-combo-box>
+   <vaadin-combo-box style="width: 100%; flex-shrink: 0; height: 100%;" .items="${['Noticia1', 'Noticia2']}"></vaadin-combo-box>
   </vaadin-vertical-layout>
  </vaadin-horizontal-layout>
  <vaadin-horizontal-layout style="width: 100%; flex-shrink: 0; flex-direction: column; display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1;">
