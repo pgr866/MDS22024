@@ -12,7 +12,11 @@ export class VistaNoticiasarevisar_item extends LitElement {
   }
 
   render() {
-    return html``;
+    return html`
+<vaadin-item selected>
+ Noticiaarevisar1
+</vaadin-item>
+`;
   }
 
   // Remove this method to render the contents of this view inside Shadow DOM

@@ -1,6 +1,5 @@
 import { LitElement, html, css, customElement } from 'lit-element';
-import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
-import './vista-noticiasenseccionusuarionoregistrado_item';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
 
 @customElement('vista-noticiasenseccionusuarionoregistrado')
 export class VistaNoticiasenseccionusuarionoregistrado extends LitElement {
@@ -16,13 +15,8 @@ export class VistaNoticiasenseccionusuarionoregistrado extends LitElement {
   render() {
     return html`
 <vaadin-vertical-layout style="width: 100%; height: 100%;">
- <vaadin-text-field style="align-self: center;" readonly value="Noticias en Seccion" has-value></vaadin-text-field>
- <vaadin-vertical-layout style="width: 100%; height: 100%; flex-direction: row; flex-wrap: wrap; justify-content: space-between; padding-right: var(--lumo-space-l); padding-left: var(--lumo-space-l);">
-  <vista-noticiasenseccionusuarionoregistrado_item></vista-noticiasenseccionusuarionoregistrado_item>
-  <vista-noticiasenseccionusuarionoregistrado_item></vista-noticiasenseccionusuarionoregistrado_item>
-  <vista-noticiasenseccionusuarionoregistrado_item></vista-noticiasenseccionusuarionoregistrado_item>
-  <vista-noticiasenseccionusuarionoregistrado_item></vista-noticiasenseccionusuarionoregistrado_item>
- </vaadin-vertical-layout>
+ <vaadin-text-field style="flex-shrink: 0; align-self: center;" readonly value="Seccion" has-value></vaadin-text-field>
+ <vaadin-horizontal-layout theme="" style="width: 100%; height: 100%; flex-shrink: 0; flex-direction: row; justify-content: space-between; flex-wrap: wrap; padding: var(--lumo-space-m); padding-right: var(--lumo-space-l); padding-left: var(--lumo-space-l); flex-grow: 0;"></vaadin-horizontal-layout>
 </vaadin-vertical-layout>
 `;
   }
