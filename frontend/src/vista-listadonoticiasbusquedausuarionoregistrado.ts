@@ -1,4 +1,7 @@
 import { LitElement, html, css, customElement } from 'lit-element';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
+import '@vaadin/vaadin-combo-box/src/vaadin-combo-box.js';
+import '@polymer/iron-icon/iron-icon.js';
 
 @customElement('vista-listadonoticiasbusquedausuarionoregistrado')
 export class VistaListadonoticiasbusquedausuarionoregistrado extends LitElement {
@@ -12,7 +15,13 @@ export class VistaListadonoticiasbusquedausuarionoregistrado extends LitElement 
   }
 
   render() {
-    return html``;
+    return html`
+<vaadin-vertical-layout theme="" style="width: 100%; height: 100%;">
+ <vaadin-combo-box style="width: 100%;" placeholder="Barra Búsqueda" .items="${['Noticia1', 'Noticia2']}">
+  <iron-icon icon="lumo:search" slot="prefix"></iron-icon>
+ </vaadin-combo-box>
+</vaadin-vertical-layout>
+`;
   }
 
   // Remove this method to render the contents of this view inside Shadow DOM

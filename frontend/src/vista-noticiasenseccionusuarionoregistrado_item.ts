@@ -2,8 +2,8 @@ import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-text-field/src/vaadin-text-area.js';
 import '@vaadin/vaadin-text-field/src/vaadin-text-field.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
-import '@vaadin/vaadin-button/src/vaadin-button.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
+import '@vaadin/vaadin-button/src/vaadin-button.js';
 
 @customElement('vista-noticiasenseccionusuarionoregistrado_item')
 export class VistaNoticiasenseccionusuarionoregistrado_item extends LitElement {
@@ -20,7 +20,7 @@ export class VistaNoticiasenseccionusuarionoregistrado_item extends LitElement {
     return html`
 <vaadin-vertical-layout style="width: 100%; height: 100%;">
  <vaadin-horizontal-layout style="width: 100%; flex-shrink: 0; padding-bottom: var(--lumo-space-s);">
-  <vaadin-vertical-layout style="width: 100%; flex-shrink: 0;">
+  <vaadin-vertical-layout style="width: 100%; flex-shrink: 0; align-self: stretch; flex-direction: row; flex-wrap: wrap;">
    <vaadin-button style="flex-shrink: 0; width: 100%; height: 100%; background-color: #FFFFFF;">
      Button 
    </vaadin-button>

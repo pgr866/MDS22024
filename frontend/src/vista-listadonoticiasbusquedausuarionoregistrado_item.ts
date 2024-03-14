@@ -12,7 +12,11 @@ export class VistaListadonoticiasbusquedausuarionoregistrado_item extends LitEle
   }
 
   render() {
-    return html``;
+    return html`
+<vaadin-item selected>
+ Noticia
+</vaadin-item>
+`;
   }
 
   // Remove this method to render the contents of this view inside Shadow DOM
