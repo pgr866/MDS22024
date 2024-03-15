@@ -19,4 +19,13 @@ public class Usuario_Suscrito extends Identificado {
 	public void Configurar_perfil_Usuario_suscrito() {
 		throw new UnsupportedOperationException();
 	}
+	
+	public void Buscar () {
+		//this.getBucarLayout().as(VerticalLayout.class).add(-buscar);
+	}
+	
+	public void Log_out() {
+		//Mainview.remove(this);
+		//MainView.add(Mainview.usuario_no_registrado);
+	}
 }

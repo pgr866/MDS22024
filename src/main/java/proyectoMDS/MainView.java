@@ -10,7 +10,7 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.PWA;
 import org.springframework.beans.factory.annotation.Autowired;
-
+import interfaz.Usuario_no_Registrado;
 /**
  * A sample Vaadin view class.
  * <p>
@@ -42,6 +42,10 @@ public class MainView extends VerticalLayout {
         // Use TextField for standard text input
         TextField textField = new TextField("Your name");
         textField.addThemeName("bordered");
+        
+        //CLASE 15/03
+        Usuario_no_Registrado u = new Usuario_no_Registrado(this);
+        add(u);
 
         // Button click listeners can be defined as lambda expressions
         Button button = new Button("Say hello",
