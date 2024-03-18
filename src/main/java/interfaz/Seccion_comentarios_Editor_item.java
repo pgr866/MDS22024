@@ -6,6 +6,7 @@ public class Seccion_comentarios_Editor_item extends Seccion_comentarios_Identif
 	
 	public Seccion_comentarios_Editor_item(Seccion_comentarios _seccion_comentarios) {
 		super(_seccion_comentarios);
+		this.getLayoutborrarcomentario().setVisible(true);
 	}
 
 	public void Eliminar_comentario() {

@@ -9,6 +9,7 @@ public class Seccion_comentarios_Identificado_item extends Seccion_comentarios_i
 	
 	public Seccion_comentarios_Identificado_item(Seccion_comentarios _seccion_comentarios) {
 		super(_seccion_comentarios);
+		this.getLayoutborrarcomentario().setVisible(false);
 	}
 
 	public void Valorar_comentario() {
