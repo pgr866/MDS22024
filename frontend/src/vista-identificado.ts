@@ -2,6 +2,7 @@ import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
 import '@vaadin/vaadin-button/src/vaadin-button.js';
+import './vista-buscar';
 
 @customElement('vista-identificado')
 export class VistaIdentificado extends LitElement {
@@ -24,7 +25,9 @@ export class VistaIdentificado extends LitElement {
    </vaadin-button>
   </vaadin-vertical-layout>
   <vaadin-vertical-layout style="flex-shrink: 1; width: 72%;">
-   <vaadin-horizontal-layout style="width: 100%; height: 50%; flex-shrink: 0; flex-grow: 0;" id="Barrabusquedaidentificado"></vaadin-horizontal-layout>
+   <vaadin-horizontal-layout style="width: 100%; height: 50%; flex-shrink: 0; flex-grow: 0;" id="Barrabusquedaidentificado">
+    <vista-buscar style="flex-grow: 1; flex-shrink: 0;"></vista-buscar>
+   </vaadin-horizontal-layout>
    <vaadin-horizontal-layout style="width: 100%; height: 50%; flex-shrink: 0; justify-content: space-between; flex-wrap: wrap;">
     <vaadin-vertical-layout style="flex-shrink: 1; width: 30%; height: 100%;" id="Layoutexplorarseccionesidentificado">
      <vaadin-button style="width: 100%; height: 100%; flex-shrink: 1;" id="Explorarseccionesidentificado">
