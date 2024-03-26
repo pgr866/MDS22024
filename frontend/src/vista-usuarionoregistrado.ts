@@ -1,12 +1,9 @@
 import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-button/src/vaadin-button.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
-<<<<<<< HEAD
 import './vista-mostrarpublicidad';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
-=======
 import './vista-buscar';
->>>>>>> branch 'main' of git@github.com:pgr866/fornielesgomez.git
 
 @customElement('vista-usuarionoregistrado')
 export class VistaUsuarionoregistrado extends LitElement {
