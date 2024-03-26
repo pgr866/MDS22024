@@ -1,3 +1,6 @@
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=branch 'main' of git@github.com\:pgr866/fornielesgomez.git
 eclipse.preferences.version=1
 paperSizePresets=[{"caption"\:"Phone","width"\:320,"height"\:568},{"caption"\:"Tablet","width"\:768,"height"\:1024}]
 serverAddress=192.168.1.185

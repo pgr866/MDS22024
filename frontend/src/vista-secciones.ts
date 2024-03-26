@@ -2,7 +2,6 @@ import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 import '@vaadin/vaadin-select/src/vaadin-select.js';
 import '@vaadin/vaadin-list-box/src/vaadin-list-box.js';
-import '@vaadin/vaadin-text-field/src/vaadin-text-field.js';
 
 @customElement('vista-secciones')
 export class VistaSecciones extends LitElement {
@@ -17,9 +16,8 @@ export class VistaSecciones extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout theme="" style="width: 100%; height: 100%;" id="secciones">
- <vaadin-text-field style="align-self: center; flex-shrink: 1; flex-grow: 0;" readonly value="Secciones" has-value id="Labelsecciones"></vaadin-text-field>
- <vaadin-select value="Item one" style="width: 100%; flex-shrink: 1; flex-grow: 0;" label="Selecciona una sección:" id="Desplegablesecciones">
+<vaadin-vertical-layout theme="" style="width: 100%; height: 100%; justify-content: center;" id="secciones">
+ <vaadin-select style="width: 100%; flex-shrink: 0; flex-grow: 0;" id="Desplegablesecciones" placeholder="Selecciona una sección">
   <template>
    <vaadin-list-box selected="0"></vaadin-list-box>
   </template>

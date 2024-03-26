@@ -1,8 +1,12 @@
 import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-button/src/vaadin-button.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
+<<<<<<< HEAD
 import './vista-mostrarpublicidad';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
+=======
+import './vista-buscar';
+>>>>>>> branch 'main' of git@github.com:pgr866/fornielesgomez.git
 
 @customElement('vista-usuarionoregistrado')
 export class VistaUsuarionoregistrado extends LitElement {
@@ -25,7 +29,9 @@ export class VistaUsuarionoregistrado extends LitElement {
    </vaadin-button>
   </vaadin-vertical-layout>
   <vaadin-vertical-layout style="flex-shrink: 1; width: 72%;">
-   <vaadin-horizontal-layout style="width: 100%; height: 50%; flex-shrink: 0;" id="Barrabusquedanoregistrado"></vaadin-horizontal-layout>
+   <vaadin-horizontal-layout style="width: 100%; height: 50%; flex-shrink: 0;" id="Barrabusquedanoregistrado">
+    <vista-buscar style="flex-shrink: 0; flex-grow: 1;"></vista-buscar>
+   </vaadin-horizontal-layout>
    <vaadin-horizontal-layout style="width: 100%; height: 50%; flex-shrink: 0; justify-content: space-between;" id="Opcionesnoregistrado">
     <vaadin-button style="width: 100%; height: 100%; flex-shrink: 0;" id="Explorarseccionesnoregistrado">
       Explorar secciones 
