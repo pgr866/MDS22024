@@ -1,7 +1,8 @@
 import { LitElement, html, css, customElement } from 'lit-element';
-import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 import '@vaadin/vaadin-button/src/vaadin-button.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
+import './vista-mostrarpublicidad';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 
 @customElement('vista-usuarionoregistrado')
 export class VistaUsuarionoregistrado extends LitElement {
@@ -38,9 +39,13 @@ export class VistaUsuarionoregistrado extends LitElement {
   </vaadin-vertical-layout>
  </vaadin-horizontal-layout>
  <vaadin-horizontal-layout style="width: 100%; justify-content: space-between; flex-shrink: 0; flex-grow: 1; padding-top: var(--lumo-space-s);">
-  <vaadin-vertical-layout style="width: 15%; flex-shrink: 0; flex-grow: 0;" id="Anuncioizquierda"></vaadin-vertical-layout>
+  <vaadin-vertical-layout style="width: 15%; flex-shrink: 0; flex-grow: 0; height: 100%;" id="Anuncioizquierda">
+   <vista-mostrarpublicidad style="flex-grow: 1; width: 100%; height: 100%;"></vista-mostrarpublicidad>
+  </vaadin-vertical-layout>
   <vaadin-vertical-layout style="width: 70%; flex-grow: 0; flex-shrink: 0; flex-direction: row; align-content: space-between; flex-wrap: wrap;" id="Noticiasportadanoregistrado"></vaadin-vertical-layout>
-  <vaadin-vertical-layout style="width: 15%; flex-shrink: 0;" id="Anuncioderecha"></vaadin-vertical-layout>
+  <vaadin-vertical-layout style="width: 15%; flex-shrink: 0;" id="Anuncioderecha">
+   <vista-mostrarpublicidad style="flex-grow: 1; width: 100%; height: 100%;"></vista-mostrarpublicidad>
+  </vaadin-vertical-layout>
  </vaadin-horizontal-layout>
 </vaadin-vertical-layout>
 `;
