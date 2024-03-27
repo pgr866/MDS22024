@@ -12,22 +12,22 @@ public class Iniciar_Sesion extends VistaIniciarsesion {
 	public Usuario_no_Registrado _usuario_no_Registrado;
 	public Registrarse _registrarse;
 	
-	public Iniciar_Sesion(Usuario_no_Registrado u) {
-		super();
-		this._usuario_no_Registrado=u;
-		
-		this.getBotonlogin().addClickListener(event->
-		{
-			if (this.getUsernamelogin().getValue().equals("Usuario")) {
-				this._usuario_no_Registrado.mainview.removeAll();
-				Identificado identificado = new Identificado(this._usuario_no_Registrado.mainview);
-				this._usuario_no_Registrado.mainview.add(identificado.mainview);
-			} else 
-				this._usuario_no_Registrado.mainview.removeAll();}
-		);
-			
-		
-	}
+//	public Iniciar_Sesion(Usuario_no_Registrado u) {
+//		super();
+//		this._usuario_no_Registrado=u;
+//		
+//		this.getBotonlogin().addClickListener(event->
+//		{
+//			if (this.getUsernamelogin().getValue().equals("Usuario")) {
+//				this._usuario_no_Registrado.mainview.removeAll();
+//				Identificado identificado = new Identificado(this._usuario_no_Registrado.mainview);
+//				this._usuario_no_Registrado.mainview.add(identificado.mainview);
+//			} else 
+//				this._usuario_no_Registrado.mainview.removeAll();}
+//		);
+//			
+//		
+//	}
 
 	public void Entrar() {
 		throw new UnsupportedOperationException();
