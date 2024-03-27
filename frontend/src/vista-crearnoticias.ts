@@ -23,7 +23,7 @@ export class VistaCrearnoticias extends LitElement {
  <vaadin-vertical-layout style="width: 100%; height: 85%; flex-shrink: 0; align-items: center;">
   <vaadin-horizontal-layout style="flex-shrink: 0; width: 80%; height: 12%; justify-content: center; align-items: center;">
    <label style="width: 20%; flex-shrink: 0; flex-grow: 0;">Titulo noticia</label>
-   <vaadin-text-field placeholder="Titular" style="flex-shrink: 0; flex-grow: 1;"></vaadin-text-field>
+   <vaadin-text-field placeholder="Titular" style="flex-shrink: 0; flex-grow: 1; background-color: white;"></vaadin-text-field>
   </vaadin-horizontal-layout>
   <vaadin-horizontal-layout style="flex-shrink: 0; width: 80%; height: 12%; justify-content: center; align-items: center;">
    <label style="width: 20%; flex-shrink: 0; flex-grow: 0;">Url Imagenes</label>
@@ -46,7 +46,7 @@ export class VistaCrearnoticias extends LitElement {
   </vaadin-horizontal-layout>
   <vaadin-horizontal-layout style="flex-shrink: 0; width: 80%; height: 12%; justify-content: center; align-items: center;">
    <vaadin-button style="width: 27%;">
-    Crear Noticia
+     Crear Noticia 
    </vaadin-button>
   </vaadin-horizontal-layout>
  </vaadin-vertical-layout>
