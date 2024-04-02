@@ -18,14 +18,14 @@ export class VistaSeccioncomentarios extends LitElement {
   render() {
     return html`
 <vaadin-vertical-layout style="width: 100%; height: 100%; justify-content: space-between;" id="Layoutseccioncomentarios">
- <label style="flex-shrink: 0; align-self: center; font-size: 150%; align-self: center;">Comentarios</label>
- <vaadin-horizontal-layout style="flex-shrink: 0; flex-grow: 0; height: 15%; width: 100%; justify-content: space-between; padding-top: var(--lumo-space-m); padding-bottom: var(--lumo-space-m); padding-right: var(--lumo-space-xl); padding-left: var(--lumo-space-xl);">
-  <vaadin-button style="flex-shrink: 0; flex-grow: 0; height: 100%; width: 12%; align-self: center;">
+ <label style="flex-shrink: 0; align-self: center; font-size: 150%; align-self: center;" id="Labelseccioncomentarios">Comentarios</label>
+ <vaadin-horizontal-layout style="flex-shrink: 0; flex-grow: 0; height: 15%; width: 100%; justify-content: space-between; padding-top: var(--lumo-space-m); padding-bottom: var(--lumo-space-m); padding-right: var(--lumo-space-xl); padding-left: var(--lumo-space-xl);" id="Layoutcomentarioseccioncomentarios">
+  <vaadin-button style="flex-shrink: 0; flex-grow: 0; height: 100%; width: 12%; align-self: center;" id="Botonanadircomentarioseccioncomentarios">
     Añadir comentario 
   </vaadin-button>
-  <vaadin-text-area placeholder="Escriba un comentario..." style="width: 85%; height: 100%;"></vaadin-text-area>
+  <vaadin-text-area placeholder="Escriba un comentario..." style="width: 85%; height: 100%;" dir="Textareacomentarioseccioncomentarios"></vaadin-text-area>
  </vaadin-horizontal-layout>
- <vaadin-vertical-layout style="flex-grow: 1; flex-shrink: 0; width: 100%; padding-top: var(--lumo-space-s); padding-right: var(--lumo-space-s); padding-bottom: var(--lumo-space-s); padding-left: var(--lumo-space-s); padding: var(--lumo-space-s);" id="Seccioncomentarios"></vaadin-vertical-layout>
+ <vaadin-vertical-layout style="flex-grow: 1; flex-shrink: 0; width: 100%; padding-top: var(--lumo-space-s); padding-right: var(--lumo-space-s); padding-bottom: var(--lumo-space-s); padding-left: var(--lumo-space-s); padding: var(--lumo-space-s);" id="Layoutvistaseccioncomentarios"></vaadin-vertical-layout>
 </vaadin-vertical-layout>
 `;
   }

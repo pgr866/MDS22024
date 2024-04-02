@@ -18,17 +18,17 @@ export class VistaMostrarpublicidad extends LitElement {
   render() {
     return html`
 <vaadin-vertical-layout style="width: 100%; height: 100%;">
- <vaadin-horizontal-layout style="width: 100%; height: 45%; flex-shrink: 0;" id="Layoutpublicidadsuperior">
-  <vaadin-button style="background-color: white; width: 100%; height: 100%;">
-   <img style="width: 100%; height: 100%;" src="../../src/main/resources/META-INF/resources/images/anuncio1.jpg" id="Imgpublicidadsuperior">
+ <vaadin-horizontal-layout style="width: 100%; height: 45%; flex-shrink: 0;" id="Layoutpublicidadsuperiormostrarpublidad">
+  <vaadin-button style="background-color: white; width: 100%; height: 100%;" id="Anunciosuperiormostrarpublidad">
+   <img style="width: 100%; height: 100%;" src="../../src/main/resources/META-INF/resources/images/anuncio1.jpg" id="Imagenpublicidadsuperiormostrarpublidad">
   </vaadin-button>
  </vaadin-horizontal-layout>
- <vaadin-horizontal-layout style="width: 100%; height: 10%; flex-shrink: 0;" id="Layoutpublicidadetiqueta">
-  <vaadin-text-field label="" placeholder="Publicidad" style="align-self: center; flex-grow: 1; width: 100%;" id="Publicidadetiqueta"></vaadin-text-field>
+ <vaadin-horizontal-layout style="width: 100%; height: 10%; flex-shrink: 0;" id="Layoutpublicidadetiquetamostrarpublidad">
+  <vaadin-text-field label="" placeholder="Publicidad" style="align-self: center; flex-grow: 1; width: 100%;" id="Publicidadetiquetamostrarpublidad"></vaadin-text-field>
  </vaadin-horizontal-layout>
- <vaadin-horizontal-layout style="width: 100%; height: 45%; flex-shrink: 0;">
-  <vaadin-button style="background-color: white; width: 100%; height: 100%; flex-shrink: 0; flex-grow: 0;" id="Layoutpublicidadinferior">
-   <img style="width: 100%; height: 100%;" src="../../src/main/resources/META-INF/resources/images/anuncio2.jpg" id="Imgpublicidadinferior">
+ <vaadin-horizontal-layout style="width: 100%; height: 45%; flex-shrink: 0;" id="Layoutpublicidadinferiormostrarpublidad">
+  <vaadin-button style="background-color: white; width: 100%; height: 100%; flex-shrink: 0; flex-grow: 0;" id="Publicidadinferiormostrarpublidad">
+   <img style="width: 100%; height: 100%;" src="../../src/main/resources/META-INF/resources/images/anuncio2.jpg" id="Imagenpublicidadinferiormostrarpublidad">
   </vaadin-button>
  </vaadin-horizontal-layout>
 </vaadin-vertical-layout>
