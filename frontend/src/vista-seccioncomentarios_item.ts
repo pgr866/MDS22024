@@ -20,7 +20,7 @@ export class VistaSeccioncomentarios_item extends LitElement {
     return html`
 <vaadin-vertical-layout style="width: 100%; flex-shrink: 0; justify-content: space-between; height: 100%; flex-direction: row;">
  <vaadin-vertical-layout style="width: 85%; flex-shrink: 1;">
-  <vaadin-horizontal-layout theme="" style="flex-shrink: 0; width: 100%; justify-content: space-between;">
+  <vaadin-horizontal-layout theme="" style="flex-shrink: 0; width: 100%; justify-content: space-between;" id="vaadinHorizontalLayout">
    <vaadin-vertical-layout style="width: 15%; height: 100%;" id="vaadinVerticalLayout" dir="Layoutfotousuarioseccioncomentariositem">
     <img style="flex-shrink: 0; width: 100%; height: 100%;" src="https://img.freepik.com/foto-gratis/chico-guapo-seguro-posando-contra-pared-blanca_176420-32936.jpg?size=626&amp;ext=jpg&amp;ga=GA1.1.117944100.1710201600&amp;semt=sph" id="Fotousuarioseccioncomentariositem">
    </vaadin-vertical-layout>
@@ -28,7 +28,7 @@ export class VistaSeccioncomentarios_item extends LitElement {
     <label style="width: 100%; font-size: 120%;" id="Labelnickusuarioseccioncomentariositem">Nick</label>
    </vaadin-vertical-layout>
   </vaadin-horizontal-layout>
-  <vaadin-horizontal-layout theme="" style="flex-shrink: 0; width: 100%; justify-content: space-between; flex-grow: 0;">
+  <vaadin-horizontal-layout theme="" style="flex-shrink: 0; width: 100%; justify-content: space-between; flex-grow: 0;" id="vaadinHorizontalLayout1">
    <vaadin-vertical-layout style="flex-shrink: 0; height: 100%; justify-content: flex-start; flex-grow: 1; padding-right: var(--lumo-space-s);" id="Layoutvistamostrarcomentarioseccioncomentariositem">
     <vista-mostrarcomentario style="width: 100%; flex-shrink: 0;" id="Vistamostrarcomentarioseccioncomentariositem"></vista-mostrarcomentario>
    </vaadin-vertical-layout>
@@ -40,7 +40,7 @@ export class VistaSeccioncomentarios_item extends LitElement {
   </vaadin-horizontal-layout>
  </vaadin-vertical-layout>
  <vaadin-vertical-layout style="width: 15%; flex-shrink: 0; height: 100%;" id="Layoutvistamostrarvaloracioncomentarioseccioncomentariositem">
-  <vista-mostrarvaloracioncomentario style="flex-shrink: 0; width: 100%;" id="vistamostrarcomentarioseccioncomentariositem"></vista-mostrarvaloracioncomentario>
+  <vista-mostrarvaloracioncomentario style="flex-shrink: 0; width: 100%;" id="Vistamostrarcomentarioseccioncomentariositem1"></vista-mostrarvaloracioncomentario>
  </vaadin-vertical-layout>
 </vaadin-vertical-layout>
 `;

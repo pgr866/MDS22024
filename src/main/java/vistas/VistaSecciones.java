@@ -12,6 +12,13 @@ import com.vaadin.flow.component.select.Select;
 @JsModule("./src/vista-secciones.ts")
 public class VistaSecciones extends LitTemplate {
 
+	@Id("Layoutsecciones")
+	private Element layoutsecciones;
+	@Id("Desplegablesecciones")
+	private Select desplegablesecciones;
+	@Id("Listboxsecciones")
+	private Element listboxsecciones;
+
 	public VistaSecciones() {
         // You can initialise any data required for the connected UI components here.
     }
