@@ -18,37 +18,37 @@ export class VistaConfigurarperfil extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%; flex-shrink: 0; padding-top: var(--lumo-space-s); padding-bottom: var(--lumo-space-s); align-items: center; justify-content: space-between;">
- <vaadin-button style="flex-shrink: 0; align-self: center; width: 40%; height: 40%;">
-  <img style="width: 100%; height: 100%;" src="">
+<vaadin-vertical-layout style="width: 100%; height: 100%; flex-shrink: 0; padding-top: var(--lumo-space-s); padding-bottom: var(--lumo-space-s); align-items: center; justify-content: space-between;" id="Layoutconfigurarperfil">
+ <vaadin-button style="flex-shrink: 0; align-self: center; width: 40%; height: 40%;" id="ButtonFotoconfigurarperfil">
+  <img style="width: 100%; height: 100%;" src="" id="Fotoconfigurarperfil">
  </vaadin-button>
  <vaadin-vertical-layout style="width: 40%; height: 40%; justify-content: space-between; flex-shrink: 0;">
-  <vaadin-horizontal-layout style="width: 100%; height: 15%; flex-shrink: 0; align-items: center;">
-   <label style="flex-shrink: 0; width: 30%; flex-grow: 0;">Nombre</label>
-   <vaadin-text-field placeholder="Nombre" style="flex-shrink: 0; width: 70%;"></vaadin-text-field>
+  <vaadin-horizontal-layout style="width: 100%; height: 15%; flex-shrink: 0; align-items: center;" id="Layoutnombreconfigurarperfil">
+   <label style="flex-shrink: 0; width: 30%; flex-grow: 0;" id="Labelnombreconfigurarperfil">Nombre</label>
+   <vaadin-text-field placeholder="Nombre" style="flex-shrink: 0; width: 70%;" id="Textfieldnombreconfigurarperfil"></vaadin-text-field>
   </vaadin-horizontal-layout>
-  <vaadin-horizontal-layout style="width: 100%; height: 15%; flex-shrink: 0; align-items: center;">
-   <label style="flex-shrink: 0; width: 30%; flex-grow: 0;">Apodo</label>
-   <vaadin-text-field placeholder="Apodo" style="flex-shrink: 0; width: 70%;"></vaadin-text-field>
+  <vaadin-horizontal-layout style="width: 100%; height: 15%; flex-shrink: 0; align-items: center;" id="Layoutapodoconfigurarperfil">
+   <label style="flex-shrink: 0; width: 30%; flex-grow: 0;" id="Labelapodoconfigurarperfil">Apodo</label>
+   <vaadin-text-field placeholder="Apodo" style="flex-shrink: 0; width: 70%;" id="Textfieldapodoconfigurarperfil"></vaadin-text-field>
   </vaadin-horizontal-layout>
-  <vaadin-horizontal-layout style="width: 100%; height: 15%; flex-shrink: 0; align-items: center;">
-   <label style="flex-shrink: 0; width: 30%; flex-grow: 0;">Email</label>
-   <vaadin-text-field placeholder="Email" style="flex-shrink: 0; width: 70%;"></vaadin-text-field>
+  <vaadin-horizontal-layout style="width: 100%; height: 15%; flex-shrink: 0; align-items: center;" id="Layoutemailconfigurarperfil">
+   <label style="flex-shrink: 0; width: 30%; flex-grow: 0;" id="Labelemailconfigurarperfil">Email</label>
+   <vaadin-text-field placeholder="Email" style="flex-shrink: 0; width: 70%;" id="Textfieldemailconfigurarperfil"></vaadin-text-field>
   </vaadin-horizontal-layout>
-  <vaadin-horizontal-layout style="width: 100%; height: 15%; flex-shrink: 0; align-items: center;">
-   <label style="flex-shrink: 0; width: 30%; flex-grow: 0;">Nº Tarjeta</label>
-   <vaadin-text-field placeholder="Nº Tarjeta" style="flex-shrink: 0; width: 70%;"></vaadin-text-field>
+  <vaadin-horizontal-layout style="width: 100%; height: 15%; flex-shrink: 0; align-items: center;" id="Layoutntarjetaconfigurarperfil">
+   <label style="flex-shrink: 0; width: 30%; flex-grow: 0;" id="Labelntarjetaconfigurarperfil">Nº Tarjeta</label>
+   <vaadin-text-field placeholder="Nº Tarjeta" style="flex-shrink: 0; width: 70%;" id="Textfieldntarjetaconfigurarperfil"></vaadin-text-field>
   </vaadin-horizontal-layout>
-  <vaadin-horizontal-layout style="width: 100%; height: 15%; flex-shrink: 0; align-items: center;">
-   <label style="flex-shrink: 0; width: 30%; flex-grow: 0;">Contraseña</label>
-   <vaadin-password-field placeholder="Contraseña" style="flex-shrink: 0; width: 70%;" has-value></vaadin-password-field>
+  <vaadin-horizontal-layout style="width: 100%; height: 15%; flex-shrink: 0; align-items: center;" id="Layoutcontrasenaconfigurarperfil">
+   <label style="flex-shrink: 0; width: 30%; flex-grow: 0;" id="Labelcontrasenaconfigurarperfil">Contraseña</label>
+   <vaadin-password-field placeholder="Contraseña" style="flex-shrink: 0; width: 70%;" has-value id="Passwordfieldcontrasenaconfigurarperfil"></vaadin-password-field>
   </vaadin-horizontal-layout>
  </vaadin-vertical-layout>
- <vaadin-horizontal-layout style="flex-shrink: 0; width: 40%; height: 10%; justify-content: space-between;">
-  <vaadin-button style="flex-shrink: 0; width: 47%; align-self: center;">
+ <vaadin-horizontal-layout style="flex-shrink: 0; width: 40%; height: 10%; justify-content: space-between;" id="Layoutbotonesconfigurarperfil">
+  <vaadin-button style="flex-shrink: 0; width: 47%; align-self: center;" id="Buttoneliminarcuentaconfigurarperfil">
     Eliminar cuenta 
   </vaadin-button>
-  <vaadin-button style="flex-shrink: 0; width: 47%; align-self: center;">
+  <vaadin-button style="flex-shrink: 0; width: 47%; align-self: center;" id="Buttonguardarcambiosconfigurarperfil">
     Guardar cambios 
   </vaadin-button>
  </vaadin-horizontal-layout>

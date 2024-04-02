@@ -20,28 +20,28 @@ export class VistaIniciarsesion extends LitElement {
     return html`
 <vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; padding-top: var(--lumo-space-m); padding-right: var(--lumo-space-m); padding-bottom: var(--lumo-space-m); padding-left: var(--lumo-space-m);">
  <vaadin-horizontal-layout id="Layoutlogin" style="width: 100%; height: 25%; flex-shrink: 0; justify-content: space-between;">
-  <vaadin-button theme="icon" ; style="height: 100%; width: 20%; flex-shrink: 0; background-color: #FFFFFF;">
-   <img src="../../src/main/resources/META-INF/resources/images/logo.svg" width="" alt="logo" style="width: 100%; height: 100%;">
+  <vaadin-button theme="icon" ; style="height: 100%; width: 20%; flex-shrink: 0; background-color: #FFFFFF;" id="Buttonlogologin">
+   <img src="../../src/main/resources/META-INF/resources/images/logo.svg" width="" alt="logo" style="width: 100%; height: 100%;" id="Imagenlogologin">
   </vaadin-button>
-  <label style="width: 70%; height: 100%; flex-shrink: 0; font-size: 500%;">Iniciar sesión</label>
+  <label style="width: 70%; height: 100%; flex-shrink: 0; font-size: 500%;" id="Labellogin">Iniciar sesión</label>
  </vaadin-horizontal-layout>
- <vaadin-vertical-layout style="flex-shrink: 0; align-self: center; width: 50%; flex-grow: 0; justify-content: space-evenly; height: 50%;">
+ <vaadin-vertical-layout style="flex-shrink: 0; align-self: center; width: 50%; flex-grow: 0; justify-content: space-evenly; height: 50%;" id="Layoutopcioneslogin">
   <vaadin-vertical-layout style="width: 100%; flex-shrink: 0;">
-   <vaadin-horizontal-layout style="width: 100%; flex-shrink: 0;">
-    <label style="width: 20%; flex-shrink: 0; align-self: center; font-size: 120%;">Usuario </label>
-    <vaadin-text-field placeholder="Nombre Usuario" id="Usernamelogin" style="flex-shrink: 0; width: 80%;"></vaadin-text-field>
+   <vaadin-horizontal-layout style="width: 100%; flex-shrink: 0;" id="Layoutusuariologin">
+    <label style="width: 20%; flex-shrink: 0; align-self: center; font-size: 120%;" id="Labelusuariologin">Usuario </label>
+    <vaadin-text-field placeholder="Nombre Usuario" id="Textfieldusuariologin" style="flex-shrink: 0; width: 80%;"></vaadin-text-field>
    </vaadin-horizontal-layout>
-   <vaadin-horizontal-layout style="width: 100%;">
-    <label style="width: 20%; flex-shrink: 0; align-self: center; font-size: 120%;">Contraseña</label>
-    <vaadin-password-field placeholder="Contraseña" style="flex-shrink: 0; width: 80%;" has-value></vaadin-password-field>
+   <vaadin-horizontal-layout style="width: 100%;" id="Layoutcontrasenalogin">
+    <label style="width: 20%; flex-shrink: 0; align-self: center; font-size: 120%;" id="Labelcontrasenalogin">Contraseña</label>
+    <vaadin-password-field placeholder="Contraseña" style="flex-shrink: 0; width: 80%;" has-value id="Passwordfieldogin"></vaadin-password-field>
    </vaadin-horizontal-layout>
   </vaadin-vertical-layout>
-  <vaadin-button style="flex-shrink: 0; align-self: center; width: 20%;">
+  <vaadin-button style="flex-shrink: 0; align-self: center; width: 20%;" id="Buttonentrarlogin">
     Entrar 
   </vaadin-button>
-  <vaadin-horizontal-layout style="flex-shrink: 0; width: 100%; justify-content: space-around;">
-   <label style="flex-shrink: 0; font-size: 150%;">¿No estas registrado?</label>
-   <vaadin-button style="flex-shrink: 0; align-self: center; width: 40%;">
+  <vaadin-horizontal-layout style="flex-shrink: 0; width: 100%; justify-content: space-around;" id="Layoutregistrarselogin">
+   <label style="flex-shrink: 0; font-size: 150%;" id="Labelnoestasregistrado">¿No estas registrado?</label>
+   <vaadin-button style="flex-shrink: 0; align-self: center; width: 40%;" id="Buttonregistrarselogin">
      Registrarse 
    </vaadin-button>
   </vaadin-horizontal-layout>

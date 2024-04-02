@@ -20,20 +20,20 @@ export class VistaExplorarsecciones extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%; flex-shrink: 0; align-items: center;">
- <vista-secciones style="flex-shrink: 0; width: 60%; height: 10%;"></vista-secciones>
- <vaadin-horizontal-layout style="width: 60%; justify-content: space-between; flex-shrink: 0; align-items: center;">
-  <vaadin-text-field placeholder="Nombre sección" style="flex-shrink: 0; width: 45%;"></vaadin-text-field>
-  <vaadin-button style="width: 25%; flex-shrink: 0;">
+<vaadin-vertical-layout style="width: 100%; height: 100%; flex-shrink: 0; align-items: center;" id="Layoutvistaseccionesexplorarsecciones">
+ <vista-secciones style="flex-shrink: 0; width: 60%; height: 10%;" id="vistaseccionesexplorarsecciones"></vista-secciones>
+ <vaadin-horizontal-layout style="width: 60%; justify-content: space-between; flex-shrink: 0; align-items: center;" id="Layoutnombrebotonesexplorarsecciones">
+  <vaadin-text-field placeholder="Nombre sección" style="flex-shrink: 0; width: 45%;" id="Textfieldnombreexplorarsecciones"></vaadin-text-field>
+  <vaadin-button style="width: 25%; flex-shrink: 0;" id="Buttonanadirseccionexplorarsecciones">
     Añadir sección 
   </vaadin-button>
-  <vaadin-button style="width: 25%; flex-shrink: 0;">
+  <vaadin-button style="width: 25%; flex-shrink: 0;" id="Buttoneliminarexplorarsecciones">
     Eliminar sección 
   </vaadin-button>
  </vaadin-horizontal-layout>
- <vaadin-horizontal-layout style="flex-shrink: 0; width: 100%; flex-grow: 1; justify-content: space-between;">
-  <vista-noticiasenseccionidentificado style="flex-shrink: 0; width: 100%; padding-top: var(--lumo-space-s);"></vista-noticiasenseccionidentificado>
-  <vista-noticiasenseccionusuarionoregistrado style="width: 100%; flex-shrink: 0; padding-top: var(--lumo-space-s);"></vista-noticiasenseccionusuarionoregistrado>
+ <vaadin-horizontal-layout style="flex-shrink: 0; width: 100%; flex-grow: 1; justify-content: space-between;" id="Layoutvistasnoticiasenseccionexplorarsecciones">
+  <vista-noticiasenseccionidentificado style="flex-shrink: 0; width: 100%; padding-top: var(--lumo-space-s);" id="vistanoticiasseccionidentificadoexplorarsecciones"></vista-noticiasenseccionidentificado>
+  <vista-noticiasenseccionusuarionoregistrado style="width: 100%; flex-shrink: 0; padding-top: var(--lumo-space-s);" id="vistanoticiasseccionusuarionoregistradoexplorarsecciones"></vista-noticiasenseccionusuarionoregistrado>
  </vaadin-horizontal-layout>
 </vaadin-vertical-layout>
 `;

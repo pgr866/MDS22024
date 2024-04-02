@@ -15,8 +15,8 @@ export class VistaMostrarnoticiaextendida extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%; justify-content: center;">
- <vaadin-text-area style="width: 100%; flex-shrink: 0; align-self: stretch; height: 100%;" readonly value="Contenido" has-value></vaadin-text-area>
+<vaadin-vertical-layout style="width: 100%; height: 100%; justify-content: center;" id="Layoutmostrarnoticiaextendida">
+ <vaadin-text-area style="width: 100%; flex-shrink: 0; align-self: stretch; height: 100%;" readonly value="Contenido" has-value id="Textareamostrarnoticiaextendida"></vaadin-text-area>
 </vaadin-vertical-layout>
 `;
   }

@@ -30,13 +30,13 @@ export class VistaListadonoticiasportada_item extends LitElement {
  <vaadin-horizontal-layout id="Layoutimagenlistadonoticiasportada" style="width: 100%; flex-shrink: 0; flex-direction: column; display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1;">
   <img id="Imagenlistadonoticiasportada" style="flex-shrink: 0; width: 100%; flex-grow: 1; z-index: -1;" src="https://imagenes.elpais.com/resizer/xb6jt6pm3nPIWdSvk8ikJp_3wCg=/1200x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/PC672K3NJRDJNGSA7ZEM2M6E6A.jpg">
   <vaadin-horizontal-layout id="Layoutautorlugarfechalistadonoticiasportada" style="width: 100%; flex-shrink: 0; justify-content: space-between; flex-grow: 0;">
-   <label style="flex-shrink: 0; width: 30%; height: 100%; text-align: center;">Fecha</label>
-   <label style="flex-shrink: 0; width: 30%; height: 100%; text-align: center;">Autor</label>
-   <label style="flex-shrink: 0; height: 100%; width: 30%; text-align: center;">Lugar</label>
+   <label style="flex-shrink: 0; width: 30%; height: 100%; text-align: center;" id="Labelfechalistadonoticiasportada">Fecha</label>
+   <label style="flex-shrink: 0; width: 30%; height: 100%; text-align: center;" id="Labelautorlistadonoticiasportada">Autor</label>
+   <label style="flex-shrink: 0; height: 100%; width: 30%; text-align: center;" id="Labellugarlistadonoticiasportada">Lugar</label>
   </vaadin-horizontal-layout>
  </vaadin-horizontal-layout>
- <vaadin-horizontal-layout id="Layoutcontenidolistadonoticiasportada" style="width: 100%; flex-shrink: 1; padding-top: var(--lumo-space-s); flex-grow: 0; padding-bottom: var(--lumo-space-l);">
-  <vaadin-text-area id="Contenidolistadonoticiasportada" style="width: 100%; flex-shrink: 0; align-self: stretch; height: 100%;" readonly value="Resumen" has-value></vaadin-text-area>
+ <vaadin-horizontal-layout id="Layouresumenlistadonoticiasportada" style="width: 100%; flex-shrink: 1; padding-top: var(--lumo-space-s); flex-grow: 0; padding-bottom: var(--lumo-space-l);">
+  <vaadin-text-area id="Textarearesumenlistadonoticiasportada" style="width: 100%; flex-shrink: 0; align-self: stretch; height: 100%;" readonly value="Resumen" has-value></vaadin-text-area>
  </vaadin-horizontal-layout>
 </vaadin-vertical-layout>
 `;

@@ -1,7 +1,4 @@
 import { LitElement, html, css, customElement } from 'lit-element';
-import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
-import '@vaadin/vaadin-select/src/vaadin-select.js';
-import '@vaadin/vaadin-list-box/src/vaadin-list-box.js';
 
 @customElement('vista-mostrarmisnoticias')
 export class VistaMostrarmisnoticias extends LitElement {
@@ -16,12 +13,10 @@ export class VistaMostrarmisnoticias extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout theme="" style="width: 100%; height: 100%; justify-content: center;">
- <vaadin-select value="Item one" style="width: 100%; flex-shrink: 0; flex-grow: 0;" placeholder="Ver mis noticias">
-  <template>
-   <vaadin-list-box selected="0"></vaadin-list-box>
-  </template>
- </vaadin-select>
+<vaadin-vertical-layout theme="" style="width: 100%; height: 100%; justify-content: center;" id="Layoutmostrarmisnoticias">
+ <vaadin-combo-box style="width: 100%; flex-shrink: 0;" placeholder="Ver mis noticias" .items="${['Noticia1', 'Noticia2']}" id="Comboboxmostrarmisnoticias">
+  <iron-icon icon="lumo:search" slot="prefix"></iron-icon>
+ </vaadin-combo-box>
 </vaadin-vertical-layout>
 `;
   }

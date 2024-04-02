@@ -1,6 +1,6 @@
 import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
-import '@vaadin/vaadin-button/src/vaadin-text-area.js';
+import '@vaadin/vaadin-text-field/src/vaadin-text-area.js';
 
 @customElement('vista-mostrarcomentario')
 export class VistaMostrarcomentario extends LitElement {
@@ -15,8 +15,8 @@ export class VistaMostrarcomentario extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%;">
- <vaadin-text-area style="width: 100%;" readonly has-value value="Contenido del comentario" id="Contenidocomentario"></vaadin-text-area>
+<vaadin-vertical-layout style="width: 100%;" id="Layoutmostrarcomentario">
+ <vaadin-text-area style="width: 100%;" readonly has-value value="Contenido del comentario" id="Textareacontenidocomentario"></vaadin-text-area>
 </vaadin-vertical-layout>
 `;
   }
