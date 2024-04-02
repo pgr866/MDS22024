@@ -1,4 +1,6 @@
 import { LitElement, html, css, customElement } from 'lit-element';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
 
 @customElement('vista-mostrarvaloracioncomentario')
 export class VistaMostrarvaloracioncomentario extends LitElement {
@@ -13,9 +15,19 @@ export class VistaMostrarvaloracioncomentario extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; flex-shrink: 0; height: 100%; justify-content: space-around;" id="Layoutnumeromegustanomegustamostrarvaloracioncomentario">
- <label style="width: 100%; flex-shrink: 1;" id="Numeromegustamostrarvaloracioncomentario">N</label>
- <label style="width: 100%;" id="Numeronomegustamostrarvaloracioncomentario">N</label>
+<vaadin-vertical-layout id="Layoutnumeromegustanomegustamostrarvaloracioncomentario" style="width: 100%; height: 100%; justify-content: space-between; align-items: stretch;">
+ <vaadin-horizontal-layout id="Layoutmegustamostrarvaloracioncomentario" style="justify-content: space-between;">
+  <vaadin-button style="flex-shrink: 0; flex-grow: 0; align-self: center; background-color: #FFFFFF; width: 40%; height: 100%;" id="Megustaseccioncomentariositem">
+   <img style="width: 100%; height: 100%;" src="https://cdn-icons-png.flaticon.com/512/126/126473.png" id="Imagenmegustaseccioncomentariositem">
+  </vaadin-button>
+  <label style="width: 50%; flex-shrink: 1; align-self: center;" id="Numeromegustamostrarvaloracioncomentario">N</label>
+ </vaadin-horizontal-layout>
+ <vaadin-horizontal-layout id="Layoutnomegustamostrarvaloracioncomentario" style="justify-content: space-between;">
+  <vaadin-button style="width: 40%; flex-shrink: 0; flex-grow: 0; align-self: center; background-color: #FFFFFF; height: 100%;" id="Nomegustaseccioncomentariositem">
+   <img style="width: 100%; height: 100%;" src="https://cdn-icons-png.flaticon.com/512/126/126504.png" id="Imagennomegustaseccioncomentariositem">
+  </vaadin-button>
+  <label style="width: 50%; flex-shrink: 0; align-self: center;" id="Numeronomegustamostrarvaloracioncomentario">N</label>
+ </vaadin-horizontal-layout>
 </vaadin-vertical-layout>
 `;
   }
