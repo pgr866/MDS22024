@@ -10,17 +10,6 @@ import com.vaadin.flow.component.template.Id;
 @JsModule("./src/vista-listadonoticiasbusquedausuarionoregistrado_item.ts")
 public class VistaListadonoticiasbusquedausuarionoregistrado_item extends LitTemplate {
 
-    public Element getItemlistadonoticiasbusquedausuarionoregistrado() {
-		return itemlistadonoticiasbusquedausuarionoregistrado;
-	}
-
-	public void setItemlistadonoticiasbusquedausuarionoregistrado(Element itemlistadonoticiasbusquedausuarionoregistrado) {
-		this.itemlistadonoticiasbusquedausuarionoregistrado = itemlistadonoticiasbusquedausuarionoregistrado;
-	}
-
-	@Id("Itemlistadonoticiasbusquedausuarionoregistrado")
-	private Element itemlistadonoticiasbusquedausuarionoregistrado;
-
 	public VistaListadonoticiasbusquedausuarionoregistrado_item() {
         // You can initialise any data required for the connected UI components here.
     }

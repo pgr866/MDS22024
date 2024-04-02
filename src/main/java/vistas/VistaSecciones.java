@@ -12,37 +12,6 @@ import com.vaadin.flow.component.select.Select;
 @JsModule("./src/vista-secciones.ts")
 public class VistaSecciones extends LitTemplate {
 
-    public Element getSecciones() {
-		return secciones;
-	}
-
-	public void setSecciones(Element secciones) {
-		this.secciones = secciones;
-	}
-
-	public TextField getLabelsecciones() {
-		return labelsecciones;
-	}
-
-	public void setLabelsecciones(TextField labelsecciones) {
-		this.labelsecciones = labelsecciones;
-	}
-
-	public Select getDesplegablesecciones() {
-		return desplegablesecciones;
-	}
-
-	public void setDesplegablesecciones(Select desplegablesecciones) {
-		this.desplegablesecciones = desplegablesecciones;
-	}
-
-	@Id("secciones")
-	private Element secciones;
-	@Id("Labelsecciones")
-	private TextField labelsecciones;
-	@Id("Desplegablesecciones")
-	private Select desplegablesecciones;
-
 	public VistaSecciones() {
         // You can initialise any data required for the connected UI components here.
     }

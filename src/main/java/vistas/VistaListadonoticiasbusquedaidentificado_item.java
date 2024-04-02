@@ -10,17 +10,6 @@ import com.vaadin.flow.component.template.Id;
 @JsModule("./src/vista-listadonoticiasbusquedaidentificado_item.ts")
 public class VistaListadonoticiasbusquedaidentificado_item extends LitTemplate {
 
-    public Element getItemlistadonoticiasbusquedaidentificado() {
-		return itemlistadonoticiasbusquedaidentificado;
-	}
-
-	public void setItemlistadonoticiasbusquedaidentificado(Element itemlistadonoticiasbusquedaidentificado) {
-		this.itemlistadonoticiasbusquedaidentificado = itemlistadonoticiasbusquedaidentificado;
-	}
-
-	@Id("Itemlistadonoticiasbusquedaidentificado")
-	private Element itemlistadonoticiasbusquedaidentificado;
-
 	public VistaListadonoticiasbusquedaidentificado_item() {
         // You can initialise any data required for the connected UI components here.
     }

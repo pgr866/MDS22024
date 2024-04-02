@@ -12,37 +12,6 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 @JsModule("./src/vista-noticiasenseccionusuarionoregistrado.ts")
 public class VistaNoticiasenseccionusuarionoregistrado extends LitTemplate {
 
-    public Element getLayoutnoticiasenseccionusuarionoregistrado() {
-		return layoutnoticiasenseccionusuarionoregistrado;
-	}
-
-	public void setLayoutnoticiasenseccionusuarionoregistrado(Element layoutnoticiasenseccionusuarionoregistrado) {
-		this.layoutnoticiasenseccionusuarionoregistrado = layoutnoticiasenseccionusuarionoregistrado;
-	}
-
-	public TextField getLabelnoticiasenseccionusuarionoregistrado() {
-		return labelnoticiasenseccionusuarionoregistrado;
-	}
-
-	public void setLabelnoticiasenseccionusuarionoregistrado(TextField labelnoticiasenseccionusuarionoregistrado) {
-		this.labelnoticiasenseccionusuarionoregistrado = labelnoticiasenseccionusuarionoregistrado;
-	}
-
-	public HorizontalLayout getNoticiasenseccionusuarionoregistrado() {
-		return noticiasenseccionusuarionoregistrado;
-	}
-
-	public void setNoticiasenseccionusuarionoregistrado(HorizontalLayout noticiasenseccionusuarionoregistrado) {
-		this.noticiasenseccionusuarionoregistrado = noticiasenseccionusuarionoregistrado;
-	}
-
-	@Id("Layoutnoticiasenseccionusuarionoregistrado")
-	private Element layoutnoticiasenseccionusuarionoregistrado;
-	@Id("Labelnoticiasenseccionusuarionoregistrado")
-	private TextField labelnoticiasenseccionusuarionoregistrado;
-	@Id("Noticiasenseccionusuarionoregistrado")
-	private HorizontalLayout noticiasenseccionusuarionoregistrado;
-
 	public VistaNoticiasenseccionusuarionoregistrado() {
         // You can initialise any data required for the connected UI components here.
     }

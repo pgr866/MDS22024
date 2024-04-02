@@ -11,37 +11,6 @@ import com.vaadin.flow.component.select.Select;
 @JsModule("./src/vista-noticiasarevisar.ts")
 public class VistaNoticiasarevisar extends LitTemplate {
 
-    public Element getLayoutnoticiasarevisar() {
-		return layoutnoticiasarevisar;
-	}
-
-	public void setLayoutnoticiasarevisar(Element layoutnoticiasarevisar) {
-		this.layoutnoticiasarevisar = layoutnoticiasarevisar;
-	}
-
-	public Select getSelectnoticiasarevisar() {
-		return selectnoticiasarevisar;
-	}
-
-	public void setSelectnoticiasarevisar(Select selectnoticiasarevisar) {
-		this.selectnoticiasarevisar = selectnoticiasarevisar;
-	}
-
-	public Element getNoticiasarevisar() {
-		return noticiasarevisar;
-	}
-
-	public void setNoticiasarevisar(Element noticiasarevisar) {
-		this.noticiasarevisar = noticiasarevisar;
-	}
-
-	@Id("Layoutnoticiasarevisar")
-	private Element layoutnoticiasarevisar;
-	@Id("Selectnoticiasarevisar")
-	private Select selectnoticiasarevisar;
-	@Id("Noticiasarevisar")
-	private Element noticiasarevisar;
-
 	public VistaNoticiasarevisar() {
         // You can initialise any data required for the connected UI components here.
     }

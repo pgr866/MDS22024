@@ -12,37 +12,6 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 @JsModule("./src/vista-listadonoticiasportada.ts")
 public class VistaListadonoticiasportada extends LitTemplate {
 
-	public Element getLayoutlistadonoticiasportada() {
-		return layoutlistadonoticiasportada;
-	}
-
-	public void setLayoutlistadonoticiasportada(Element layoutlistadonoticiasportada) {
-		this.layoutlistadonoticiasportada = layoutlistadonoticiasportada;
-	}
-
-	public TextField getLabellistadonoticiasportada() {
-		return labellistadonoticiasportada;
-	}
-
-	public void setLabellistadonoticiasportada(TextField labellistadonoticiasportada) {
-		this.labellistadonoticiasportada = labellistadonoticiasportada;
-	}
-
-	public HorizontalLayout getListadonoticiasportada() {
-		return listadonoticiasportada;
-	}
-
-	public void setListadonoticiasportada(HorizontalLayout listadonoticiasportada) {
-		this.listadonoticiasportada = listadonoticiasportada;
-	}
-
-	@Id("Layoutlistadonoticiasportada")
-	private Element layoutlistadonoticiasportada;
-	@Id("Labellistadonoticiasportada")
-	private TextField labellistadonoticiasportada;
-	@Id("Listadonoticiasportada")
-	private HorizontalLayout listadonoticiasportada;
-
 	public VistaListadonoticiasportada() {
         // You can initialise any data required for the connected UI components here.
     }

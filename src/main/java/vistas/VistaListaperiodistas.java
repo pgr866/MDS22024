@@ -11,37 +11,6 @@ import com.vaadin.flow.component.combobox.ComboBox;
 @JsModule("./src/vista-listaperiodistas.ts")
 public class VistaListaperiodistas extends LitTemplate {
 
-    public Element getLayoutlistaperiodistas() {
-		return layoutlistaperiodistas;
-	}
-
-	public void setLayoutlistaperiodistas(Element layoutlistaperiodistas) {
-		this.layoutlistaperiodistas = layoutlistaperiodistas;
-	}
-
-	public ComboBox<String> getComboboxlistaperiodistas() {
-		return comboboxlistaperiodistas;
-	}
-
-	public void setComboboxlistaperiodistas(ComboBox<String> comboboxlistaperiodistas) {
-		this.comboboxlistaperiodistas = comboboxlistaperiodistas;
-	}
-
-	public Element getLupalistadoperiodistas() {
-		return lupalistadoperiodistas;
-	}
-
-	public void setLupalistadoperiodistas(Element lupalistadoperiodistas) {
-		this.lupalistadoperiodistas = lupalistadoperiodistas;
-	}
-
-	@Id("Layoutlistaperiodistas")
-	private Element layoutlistaperiodistas;
-	@Id("Comboboxlistaperiodistas")
-	private ComboBox<String> comboboxlistaperiodistas;
-	@Id("Lupalistadoperiodistas")
-	private Element lupalistadoperiodistas;
-
 	public VistaListaperiodistas() {
         // You can initialise any data required for the connected UI components here.
     }
