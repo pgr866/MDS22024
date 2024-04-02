@@ -1,10 +1,10 @@
 import { LitElement, html, css, customElement } from 'lit-element';
-import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
 import '@vaadin/vaadin-text-field/src/vaadin-text-field.js';
 import '@vaadin/vaadin-text-field/src/vaadin-text-area.js';
-import '@vaadin/vaadin-combo-box/src/vaadin-combo-box.js';
 import '@vaadin/vaadin-button/src/vaadin-button.js';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
+import './vista-secciones';
 
 @customElement('vista-revisarnoticias')
 export class VistaRevisarnoticias extends LitElement {
@@ -20,8 +20,7 @@ export class VistaRevisarnoticias extends LitElement {
  render() {
     return html`
 <vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%;">
- <vaadin-vertical-layout theme="" style="width: 100%; height: 15%;"></vaadin-vertical-layout>
- <vaadin-vertical-layout style="width: 100%; height: 85%; flex-shrink: 0; align-items: center;">
+ <vaadin-vertical-layout style="width: 100%; height: 100%; flex-shrink: 0; align-items: center;">
   <vaadin-horizontal-layout style="flex-shrink: 0; width: 80%; height: 12%; justify-content: center; align-items: center;">
    <label style="width: 20%; flex-shrink: 0; flex-grow: 0;">Titulo noticia</label>
    <vaadin-text-field style="flex-shrink: 0; flex-grow: 1;" disabled value="Titular"></vaadin-text-field>
@@ -32,7 +31,7 @@ export class VistaRevisarnoticias extends LitElement {
   </vaadin-horizontal-layout>
   <vaadin-horizontal-layout style="flex-shrink: 0; width: 80%; height: 35%; justify-content: center; align-items: center;">
    <label style="width: 20%; flex-shrink: 0; flex-grow: 0; align-self: flex-start;">Contenido noticia</label>
-   <vaadin-text-area style="flex-grow: 1; align-self: stretch; flex-shrink: 0;" disabled value="Contenido noticia"></vaadin-text-area>
+   <vaadin-text-area style="flex-grow: 1; align-self: stretch; flex-shrink: 0;" disabled value="Contenido noticia" tabindex="" has-value></vaadin-text-area>
   </vaadin-horizontal-layout>
   <vaadin-horizontal-layout style="flex-shrink: 0; width: 80%; height: 12%; justify-content: center; align-items: center;">
    <label style="width: 20%; flex-shrink: 0; flex-grow: 0;">Fecha y lugar</label>
@@ -47,14 +46,14 @@ export class VistaRevisarnoticias extends LitElement {
   </vaadin-horizontal-layout>
   <vaadin-horizontal-layout style="flex-shrink: 0; width: 60%; height: 12%; justify-content: center; align-items: center; padding-left: var(--lumo-space-xl);">
    <vaadin-horizontal-layout style="width: 40%;">
-    <vaadin-combo-box placeholder="Asignar Seccion"></vaadin-combo-box>
+    <vista-secciones></vista-secciones>
    </vaadin-horizontal-layout>
-   <vaadin-horizontal-layout style="width: 55%;">
+   <vaadin-horizontal-layout style="width: 55%; justify-content: space-between;">
     <vaadin-button style="width: 48%;">
-     Publicar Noticia
+      Publicar Noticia 
     </vaadin-button>
     <vaadin-button style="width: 48%;">
-     Eliminar Noticia
+      Eliminar Noticia 
     </vaadin-button>
    </vaadin-horizontal-layout>
   </vaadin-horizontal-layout>

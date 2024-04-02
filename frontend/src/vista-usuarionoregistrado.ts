@@ -3,6 +3,7 @@ import '@vaadin/vaadin-button/src/vaadin-button.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
 import './vista-mostrarpublicidad';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
+import './vista-listadonoticiasportada';
 import './vista-buscar';
 
 @customElement('vista-usuarionoregistrado')
@@ -27,7 +28,7 @@ export class VistaUsuarionoregistrado extends LitElement {
   </vaadin-vertical-layout>
   <vaadin-vertical-layout style="flex-shrink: 1; width: 72%;">
    <vaadin-horizontal-layout style="width: 100%; height: 50%; flex-shrink: 0;" id="Barrabusquedanoregistrado">
-    <vista-buscar style="flex-shrink: 0; flex-grow: 1;"></vista-buscar>
+    <vista-buscar style="width: 100%; flex-shrink: 0; height: 100%;"></vista-buscar>
    </vaadin-horizontal-layout>
    <vaadin-horizontal-layout style="width: 100%; height: 50%; flex-shrink: 0; justify-content: space-between;" id="Opcionesnoregistrado">
     <vaadin-button style="width: 100%; height: 100%; flex-shrink: 0;" id="Explorarseccionesnoregistrado">
@@ -43,11 +44,13 @@ export class VistaUsuarionoregistrado extends LitElement {
  </vaadin-horizontal-layout>
  <vaadin-horizontal-layout style="width: 100%; justify-content: space-between; flex-shrink: 0; flex-grow: 1; padding-top: var(--lumo-space-s);">
   <vaadin-vertical-layout style="width: 15%; flex-shrink: 0; flex-grow: 0; height: 100%;" id="Anuncioizquierda">
-   <vista-mostrarpublicidad style="flex-grow: 1; width: 100%; height: 100%;"></vista-mostrarpublicidad>
+   <vista-mostrarpublicidad style="flex-grow: 0; width: 100%; height: 100%; flex-shrink: 0;"></vista-mostrarpublicidad>
   </vaadin-vertical-layout>
-  <vaadin-vertical-layout style="width: 70%; flex-grow: 0; flex-shrink: 0; flex-direction: row; align-content: space-between; flex-wrap: wrap;" id="Noticiasportadanoregistrado"></vaadin-vertical-layout>
+  <vaadin-vertical-layout style="width: 70%; flex-grow: 0; flex-shrink: 0; flex-direction: row; align-content: space-between; flex-wrap: wrap;" id="Noticiasportadanoregistrado">
+   <vista-listadonoticiasportada style="width: 100%; flex-shrink: 0; height: 100%;"></vista-listadonoticiasportada>
+  </vaadin-vertical-layout>
   <vaadin-vertical-layout style="width: 15%; flex-shrink: 0;" id="Anuncioderecha">
-   <vista-mostrarpublicidad style="flex-grow: 1; width: 100%; height: 100%;"></vista-mostrarpublicidad>
+   <vista-mostrarpublicidad style="flex-grow: 0; width: 100%; height: 100%; flex-shrink: 0;"></vista-mostrarpublicidad>
   </vaadin-vertical-layout>
  </vaadin-horizontal-layout>
 </vaadin-vertical-layout>

@@ -28,11 +28,11 @@ export class VistaIniciarsesion extends LitElement {
  <vaadin-vertical-layout style="flex-shrink: 0; align-self: center; width: 50%; flex-grow: 0; justify-content: space-evenly; height: 50%;">
   <vaadin-vertical-layout style="width: 100%; flex-shrink: 0;">
    <vaadin-horizontal-layout style="width: 100%; flex-shrink: 0;">
-    <label style="width: 20%; flex-shrink: 0; align-self: center;">Usuario </label>
+    <label style="width: 20%; flex-shrink: 0; align-self: center; font-size: 120%;">Usuario </label>
     <vaadin-text-field placeholder="Nombre Usuario" id="Usernamelogin" style="flex-shrink: 0; width: 80%;"></vaadin-text-field>
    </vaadin-horizontal-layout>
    <vaadin-horizontal-layout style="width: 100%;">
-    <label style="width: 20%; flex-shrink: 0; align-self: center;">Contraseña</label>
+    <label style="width: 20%; flex-shrink: 0; align-self: center; font-size: 120%;">Contraseña</label>
     <vaadin-password-field placeholder="Contraseña" style="flex-shrink: 0; width: 80%;" has-value></vaadin-password-field>
    </vaadin-horizontal-layout>
   </vaadin-vertical-layout>

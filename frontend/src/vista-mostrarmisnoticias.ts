@@ -16,8 +16,8 @@ export class VistaMostrarmisnoticias extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout theme="" style="width: 100%; height: 100%;">
- <vaadin-select value="Item one">
+<vaadin-vertical-layout theme="" style="width: 100%; height: 100%; justify-content: center;">
+ <vaadin-select value="Item one" style="width: 100%; flex-shrink: 0; flex-grow: 0;" placeholder="Ver mis noticias">
   <template>
    <vaadin-list-box selected="0"></vaadin-list-box>
   </template>

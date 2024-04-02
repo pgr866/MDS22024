@@ -13,9 +13,7 @@ export class VistaListaperiodistas_item extends LitElement {
 
   render() {
     return html`
-<vaadin-item selected id="Itemlistaperiodistas">
-  Periodista 
-</vaadin-item>
+Periodista
 `;
   }
 
