@@ -63,7 +63,7 @@ export class VistaIdentificado extends LitElement {
    <vista-logout style="flex-shrink: 0; width: 45%; height: 100%; align-self: center;" id="vistalogoutidentificado"></vista-logout>
   </vaadin-vertical-layout>
  </vaadin-horizontal-layout>
- <vaadin-horizontal-layout style="width: 100%; justify-content: space-between; flex-shrink: 0; flex-grow: 1; padding-top: var(--lumo-space-s); padding-bottom: var(--lumo-space-s); padding-right: var(--lumo-space-m); padding-left: var(--lumo-space-m);">
+ <vaadin-horizontal-layout style="width: 100%; justify-content: space-between; flex-shrink: 0; flex-grow: 1; padding-top: var(--lumo-space-s); padding-bottom: var(--lumo-space-s); padding-right: var(--lumo-space-m); padding-left: var(--lumo-space-m);" id="vaadinHorizontalLayout">
   <vaadin-vertical-layout style="width: 100%; flex-grow: 0; flex-shrink: 0; flex-direction: row; align-content: space-between; flex-wrap: wrap;" id="Layoutnoticiasportadaidentificado">
    <vista-listadonoticiasportada style="width: 100%; flex-shrink: 0; height: 100%;" id="vistanoticiasportadaidentificado"></vista-listadonoticiasportada>
   </vaadin-vertical-layout>

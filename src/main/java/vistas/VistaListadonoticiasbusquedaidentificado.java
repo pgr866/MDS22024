@@ -11,6 +11,13 @@ import com.vaadin.flow.component.combobox.ComboBox;
 @JsModule("./src/vista-listadonoticiasbusquedaidentificado.ts")
 public class VistaListadonoticiasbusquedaidentificado extends LitTemplate {
 
+	@Id("Layoutlistadonoticiasbusquedaidentificado")
+	private Element layoutlistadonoticiasbusquedaidentificado;
+	@Id("Comboboxlistadonoticiasbusquedaidentificado")
+	private ComboBox<String> comboboxlistadonoticiasbusquedaidentificado;
+	@Id("ironIcon")
+	private Element ironIcon;
+
 	public VistaListadonoticiasbusquedaidentificado() {
         // You can initialise any data required for the connected UI components here.
     }

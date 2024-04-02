@@ -11,6 +11,11 @@ import com.vaadin.flow.component.combobox.ComboBox;
 @JsModule("./src/vista-listadonoticiasbusquedausuarionoregistrado.ts")
 public class VistaListadonoticiasbusquedausuarionoregistrado extends LitTemplate {
 
+	@Id("Layoutlistadonoticiasbusquedausuarionoregistrado")
+	private Element layoutlistadonoticiasbusquedausuarionoregistrado;
+	@Id("Comboboxlistadonoticiasbusquedausuarionoregistrado")
+	private ComboBox<String> comboboxlistadonoticiasbusquedausuarionoregistrado;
+
 	public VistaListadonoticiasbusquedausuarionoregistrado() {
         // You can initialise any data required for the connected UI components here.
     }

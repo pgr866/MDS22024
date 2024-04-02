@@ -10,6 +10,9 @@ import com.vaadin.flow.component.template.Id;
 @JsModule("./src/vista-noticiasarevisar_item.ts")
 public class VistaNoticiasarevisar_item extends LitTemplate {
 
+	@Id("Itemnoticiasarevisar")
+	private Element itemnoticiasarevisar;
+
 	public VistaNoticiasarevisar_item() {
         // You can initialise any data required for the connected UI components here.
     }

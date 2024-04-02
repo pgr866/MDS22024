@@ -11,6 +11,13 @@ import com.vaadin.flow.component.select.Select;
 @JsModule("./src/vista-noticiasarevisar.ts")
 public class VistaNoticiasarevisar extends LitTemplate {
 
+	@Id("Layoutnoticiasarevisar")
+	private Element layoutnoticiasarevisar;
+	@Id("Selectnoticiasarevisar")
+	private Select selectnoticiasarevisar;
+	@Id("Listboxnoticiasarevisar")
+	private Element listboxnoticiasarevisar;
+
 	public VistaNoticiasarevisar() {
         // You can initialise any data required for the connected UI components here.
     }

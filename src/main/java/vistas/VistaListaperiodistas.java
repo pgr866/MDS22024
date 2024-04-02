@@ -11,6 +11,11 @@ import com.vaadin.flow.component.combobox.ComboBox;
 @JsModule("./src/vista-listaperiodistas.ts")
 public class VistaListaperiodistas extends LitTemplate {
 
+	@Id("Layoutlistaperiodistas")
+	private Element layoutlistaperiodistas;
+	@Id("Comboboxlistaperiodistas")
+	private ComboBox<String> comboboxlistaperiodistas;
+
 	public VistaListaperiodistas() {
         // You can initialise any data required for the connected UI components here.
     }
