@@ -1,6 +1,6 @@
 package interfaz;
 
-public class Revisar_noticias {
+public class Revisar_noticias extends vistas.VistaRevisarnoticias {
 //	private event _eliminar_noticia;
 //	private event _publicar_noticia;
 //	private event _realizar_resumen;
@@ -12,6 +12,11 @@ public class Revisar_noticias {
 //	private Label _lugar;
 //	private TextArea _resumen;
 	public Noticias_a_revisar_item _noticias_a_revisar;
+	
+	public Revisar_noticias(Noticias_a_revisar_item _noticias_a_revisar) {
+		super();
+		this._noticias_a_revisar = _noticias_a_revisar;
+	}
 
 	public void Eliminar_noticia() {
 		throw new UnsupportedOperationException();

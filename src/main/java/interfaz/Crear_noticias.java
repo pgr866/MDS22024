@@ -1,6 +1,7 @@
 package interfaz;
 
-public class Crear_noticias {
+public class Crear_noticias extends vistas.VistaCrearnoticias {
+
 //	private event _asignar_tematicas;
 //	private event _crear_noticia;
 //	private event _rellenar_noticia;
@@ -15,6 +16,11 @@ public class Crear_noticias {
 //	private Label _lugar;
 //	private TextArea _introducir_lugar;
 	public Periodista _periodista;
+	
+	public Crear_noticias(Periodista _periodista) {
+		super();
+		this._periodista = _periodista;
+	}
 
 	public void Asignar_tematicas() {
 		throw new UnsupportedOperationException();

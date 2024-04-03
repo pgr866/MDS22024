@@ -1,6 +1,8 @@
 package interfaz;
 
-public class Baja_Alta_Periodistas {
+public class Baja_Alta_Periodistas extends vistas.VistaBajaaltaperiodistas {
+
+
 //	private event _alta_periodista;
 //	private Label _nombre;
 //	private TextArea _introducir_nombre;
@@ -19,6 +21,12 @@ public class Baja_Alta_Periodistas {
 //	private Label _busqueda_periodista;
 	public Editor _editor;
 	public Buscar_periodista _buscar_periodista;
+	
+	public Baja_Alta_Periodistas(Editor _editor, interfaz.Buscar_periodista _buscar_periodista) {
+		super();
+		this._editor = _editor;
+		this._buscar_periodista = _buscar_periodista;
+	}
 
 	public void Alta_periodista() {
 		throw new UnsupportedOperationException();

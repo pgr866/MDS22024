@@ -12,9 +12,11 @@ public class Iniciar_Sesion extends VistaIniciarsesion {
 	public Usuario_no_Registrado _usuario_no_Registrado;
 	public Registrarse _registrarse;
 	
-//	public Iniciar_Sesion(Usuario_no_Registrado u) {
-//		super();
-//		this._usuario_no_Registrado=u;
+	public Iniciar_Sesion(Usuario_no_Registrado u) {
+		super();
+		this._usuario_no_Registrado=u;
+		
+	}
 //		
 //		this.getBotonlogin().addClickListener(event->
 //		{

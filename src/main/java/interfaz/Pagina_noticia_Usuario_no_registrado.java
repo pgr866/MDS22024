@@ -1,6 +1,7 @@
 package interfaz;
 
 public class Pagina_noticia_Usuario_no_registrado extends Pagina_Noticia {
+
 //	private Panel _panel_publicidad;
 //	private ImageButton _imagen_publicidad;
 	public Listado_noticias_portada_Usuario_no_registrado_item _listado_noticias_portada_Usuario_no_registrado;
@@ -9,6 +10,20 @@ public class Pagina_noticia_Usuario_no_registrado extends Pagina_Noticia {
 	public Seccion_comentarios_Usuario_no_registrado _seccion_comentarios_Usuario_no_registrado;
 	public Mostrar_noticia_resumida _mostrar_noticia_resumida;
 
+	public Pagina_noticia_Usuario_no_registrado(interfaz.Mostrar_valoracion_noticia _mostrar_valoracion_noticia,
+			Listado_noticias_portada_Usuario_no_registrado_item _listado_noticias_portada_Usuario_no_registrado,
+			Noticias_en_seccion_Usuario_no_registrado_item _noticias_en_seccion_Usuario_no_registrado,
+			Listado_noticias_busqueda_Usuario_no_registrado_item _listado_noticias_busqueda_Usuario_no_registrado,
+			interfaz.Seccion_comentarios_Usuario_no_registrado _seccion_comentarios_Usuario_no_registrado,
+			interfaz.Mostrar_noticia_resumida _mostrar_noticia_resumida) {
+		super(_mostrar_valoracion_noticia);
+		this._listado_noticias_portada_Usuario_no_registrado = _listado_noticias_portada_Usuario_no_registrado;
+		this._noticias_en_seccion_Usuario_no_registrado = _noticias_en_seccion_Usuario_no_registrado;
+		this._listado_noticias_busqueda_Usuario_no_registrado = _listado_noticias_busqueda_Usuario_no_registrado;
+		this._seccion_comentarios_Usuario_no_registrado = _seccion_comentarios_Usuario_no_registrado;
+		this._mostrar_noticia_resumida = _mostrar_noticia_resumida;
+	}
+	
 	public void Seccion_comentarios_Usuario_no_registrado() {
 		throw new UnsupportedOperationException();
 	}

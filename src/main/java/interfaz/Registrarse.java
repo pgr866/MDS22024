@@ -1,6 +1,6 @@
 package interfaz;
 
-public class Registrarse {
+public class Registrarse extends vistas.VistaRegistrarse {
 //	private event _cancelar;
 //	private event _enviar;
 //	private Label _email;
@@ -15,6 +15,13 @@ public class Registrarse {
 	public Iniciar_Sesion _iniciar_Sesion;
 	public Gestionar_correo _gestionar_correo;
 	public Gestionar_pagos _gestionar_pagos;
+	
+	public Registrarse(Iniciar_Sesion _iniciar_Sesion, Gestionar_correo _gestionar_correo, Gestionar_pagos _gestionar_pagos) {
+		super();
+		this._iniciar_Sesion = _iniciar_Sesion;
+		this._gestionar_correo = _gestionar_correo;
+		this._gestionar_pagos = _gestionar_pagos;
+	}
 
 	public void Gestionar_correo() {
 		throw new UnsupportedOperationException();

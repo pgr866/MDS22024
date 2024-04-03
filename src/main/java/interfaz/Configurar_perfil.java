@@ -1,6 +1,7 @@
 package interfaz;
 
-public class Configurar_perfil {
+public class Configurar_perfil extends vistas.VistaConfigurarperfil {
+
 //	private event _guardar_cambios;
 //	private event _modificar_datos;
 //	private Image _imagen_perfil;
@@ -16,6 +17,11 @@ public class Configurar_perfil {
 //	private TextArea _rellenar_contrasena;
 	public Identificado _identificado;
 
+	public Configurar_perfil(Identificado _identificado) {
+		super();
+		this._identificado = _identificado;
+	}
+	
 	public void Guardar_cambios() {
 		throw new UnsupportedOperationException();
 	}
