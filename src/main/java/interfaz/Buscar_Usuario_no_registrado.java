@@ -10,6 +10,8 @@ public class Buscar_Usuario_no_registrado extends Buscar {
 		super();
 		this._usuario_no_Registrado = _usuario_no_Registrado;
 		//this._listado_noticias_busqueda_Usuario_no_registrado = _listado_noticias_busqueda_Usuario_no_registrado;
+		this.getBusquedanoticiasidentificado().setVisible(false);
+
 	}
 	
 	public void Listado_noticias_busqueda_Usuario_no_registrado() {

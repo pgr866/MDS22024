@@ -10,6 +10,7 @@ public class Buscar_Identificado extends Buscar {
 		super();
 		this._identificado = _identificado;
 		this._listado_noticias_busqueda_Identificado = _listado_noticias_busqueda_Identificado;
+		this.getBusquedanoticiasusuarionoregistrado().setVisible(false);
 	}
 	
 	public void Listado_noticias_busqueda_Identificado() {

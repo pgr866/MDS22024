@@ -20,6 +20,8 @@ public class Configurar_perfil extends vistas.VistaConfigurarperfil {
 	public Configurar_perfil(Identificado _identificado) {
 		super();
 		this._identificado = _identificado;
+		this.getLayoutntarjetaconfigurarperfil().setVisible(false);
+		this.getButtoneliminarcuentaconfigurarperfil().setVisible(false);
 	}
 	
 	public void Guardar_cambios() {

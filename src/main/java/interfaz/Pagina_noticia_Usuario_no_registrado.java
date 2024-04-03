@@ -22,6 +22,11 @@ public class Pagina_noticia_Usuario_no_registrado extends Pagina_Noticia {
 		this._listado_noticias_busqueda_Usuario_no_registrado = _listado_noticias_busqueda_Usuario_no_registrado;
 		this._seccion_comentarios_Usuario_no_registrado = _seccion_comentarios_Usuario_no_registrado;
 		this._mostrar_noticia_resumida = _mostrar_noticia_resumida;
+		this.getVistaMostrarnoticiaextendida().setVisible(false);
+		this._mostrar_valoracion_noticia.getMegustamostrarvaloracionnoticia().setDisableOnClick(true);
+		this._mostrar_valoracion_noticia.getNomegustamostrarvaloracionnoticia().setDisableOnClick(true);
+
+
 	}
 	
 	public void Seccion_comentarios_Usuario_no_registrado() {

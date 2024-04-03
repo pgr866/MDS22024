@@ -5,5 +5,8 @@ public class Seccion_comentarios_Usuario_no_registrado_item extends Seccion_come
 	
 	public Seccion_comentarios_Usuario_no_registrado_item(Seccion_comentarios _seccion_comentarios) {
 		super(_seccion_comentarios);
+		this.getLayoutborrarcomentarioseccioncomentariositem().setVisible(false);
+		this.getVistamostrarcomentarioseccioncomentariositem1().getMegustaseccioncomentariositem().setDisableOnClick(true);
+		this.getVistamostrarcomentarioseccioncomentariositem1().getNomegustaseccioncomentariositem().setDisableOnClick(true);
 	}
 }

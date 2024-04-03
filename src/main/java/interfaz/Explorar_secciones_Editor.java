@@ -1,13 +1,16 @@
 package interfaz;
 
 public class Explorar_secciones_Editor extends Explorar_secciones_Identificado {
+	
 	//	private event _anadir_seccion;
-//	private event _borrar_seccion;
+	//	private event _borrar_seccion;
 	public Editor _editor;
 	
-	public Explorar_secciones_Editor(interfaz.Secciones _secciones) {
-		super(_secciones);
-		// TODO Auto-generated constructor stub
+	public Explorar_secciones_Editor(interfaz.Secciones _secciones, Identificado _identificado,
+			interfaz.Noticias_en_seccion_Identificado _noticias_en_seccion_Identificado, Editor _editor) {
+		super(_secciones, _identificado, _noticias_en_seccion_Identificado);
+		this._editor = _editor;
+		this.getLayoutnombrebotonesexplorarsecciones().setVisible(true);
 	}
 
 

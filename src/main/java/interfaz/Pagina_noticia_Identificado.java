@@ -18,6 +18,8 @@ public class Pagina_noticia_Identificado extends Pagina_Noticia {
 		this._listado_noticias_busqueda_Identificado = _listado_noticias_busqueda_Identificado;
 		this._mostrar_noticia_extendida = _mostrar_noticia_extendida;
 		this._seccion_comentarios_Identificado = _seccion_comentarios_Identificado;
+		this.getVistaMostrarnoticiaresumida().setVisible(false);
+
 	}
 	
 	public void Valorar_noticia() {
