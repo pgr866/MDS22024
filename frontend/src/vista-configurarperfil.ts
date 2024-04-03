@@ -2,8 +2,8 @@ import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 import '@vaadin/vaadin-text-field/src/vaadin-text-field.js';
 import '@vaadin/vaadin-text-field/src/vaadin-password-field.js';
-import '@vaadin/vaadin-button/src/vaadin-button.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
+import '@vaadin/vaadin-button/src/vaadin-button.js';
 
 @customElement('vista-configurarperfil')
 export class VistaConfigurarperfil extends LitElement {
@@ -44,7 +44,7 @@ export class VistaConfigurarperfil extends LitElement {
    <vaadin-password-field placeholder="Contraseña" style="flex-shrink: 0; width: 70%;" has-value id="Passwordfieldcontrasenaconfigurarperfil"></vaadin-password-field>
   </vaadin-horizontal-layout>
  </vaadin-vertical-layout>
- <vaadin-horizontal-layout style="flex-shrink: 0; width: 40%; height: 10%; justify-content: space-between;" id="Layoutbotonesconfigurarperfil">
+ <vaadin-horizontal-layout style="flex-shrink: 0; width: 40%; height: 10%; justify-content: space-around;" id="Layoutbotonesconfigurarperfil">
   <vaadin-button style="flex-shrink: 0; width: 47%; align-self: center;" id="Buttoneliminarcuentaconfigurarperfil">
     Eliminar cuenta 
   </vaadin-button>

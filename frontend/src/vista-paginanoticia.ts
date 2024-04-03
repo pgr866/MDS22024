@@ -27,7 +27,7 @@ export class VistaPaginanoticia extends LitElement {
    <vaadin-horizontal-layout style="width: 100%; flex-shrink: 0; flex-direction: column; display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1;" id="vaadinHorizontalLayout">
     <img style="flex-shrink: 1; width: 95%; flex-grow: 0; z-index: -1; align-self: center;" src="https://imagenes.elpais.com/resizer/xb6jt6pm3nPIWdSvk8ikJp_3wCg=/1200x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/PC672K3NJRDJNGSA7ZEM2M6E6A.jpg" id="img">
     <vaadin-horizontal-layout style="width: 95%; flex-shrink: 0; justify-content: space-between; flex-grow: 0; align-self: center; height: 6%;">
-     <vaadin-horizontal-layout style="flex-shrink: 0; height: 100%; width: 80%; align-self: center; justify-content: space-between;" id="vaadinHorizontalLayout1">
+     <vaadin-horizontal-layout style="flex-shrink: 0; height: 100%; align-self: center; justify-content: space-between; flex-grow: 1;" id="vaadinHorizontalLayout1">
       <label style="flex-shrink: 0; width: 30%; text-align: center;" id="label2">Fecha</label>
       <label style="flex-shrink: 0; width: 30%; text-align: center;" id="label3">Autor</label>
       <label style="flex-shrink: 0; width: 30%; text-align: center;" id="label4">Lugar</label>
