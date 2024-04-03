@@ -10,10 +10,10 @@ public class Usuario_Suscrito extends Identificado {
 	
 	public Usuario_Suscrito (MainView mainview) {
 		super(mainview);
-		this.getLayoutvermisnoticias().setVisible(false);
-		this.getLayoutcrearnuevanoticia().setVisible(false);
-		this.getLayoutrevisarnoticia().setVisible(false);
-		this.getLayoutdaraltabajaperiodista().setVisible(false);
+		this.getLayoutvermisnoticiasidentificado().setVisible(false);
+		this.getLayoutcrearnuevanoticiaidentificado().setVisible(false);
+		this.getLayoutvistanoticiasarevisaridentificado().setVisible(false);
+		this.getLayoutdaraltabajaperiodistaidentificado().setVisible(false);
 	}
 
 	public void Configurar_perfil_Usuario_suscrito() {

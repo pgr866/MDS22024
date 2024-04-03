@@ -10,7 +10,7 @@ public class Seccion_comentarios_item extends VistaSeccioncomentarios_item {
 	public Seccion_comentarios_item(Seccion_comentarios _seccion_comentarios) {
 		super();
 		this._seccion_comentarios = _seccion_comentarios;
-		this.getLayoutborrarcomentario().setVisible(false);
+		this.getLayoutborrarcomentarioseccioncomentariositem().setVisible(false);
 	}
 
 	public void Mostrar_comentario() {
