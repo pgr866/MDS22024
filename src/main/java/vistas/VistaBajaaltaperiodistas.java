@@ -15,7 +15,199 @@ import vistas.VistaBuscarperiodista;
 @JsModule("./src/vista-bajaaltaperiodistas.ts")
 public class VistaBajaaltaperiodistas extends LitTemplate {
 
-    @Id("Layoutdaraltaperiodista")
+    public Element getLayoutdaraltaperiodista() {
+		return layoutdaraltaperiodista;
+	}
+
+	public void setLayoutdaraltaperiodista(Element layoutdaraltaperiodista) {
+		this.layoutdaraltaperiodista = layoutdaraltaperiodista;
+	}
+
+	public Label getLabeldaraltaperiodista() {
+		return labeldaraltaperiodista;
+	}
+
+	public void setLabeldaraltaperiodista(Label labeldaraltaperiodista) {
+		this.labeldaraltaperiodista = labeldaraltaperiodista;
+	}
+
+	public HorizontalLayout getNombreydnidaraltaperiodista() {
+		return nombreydnidaraltaperiodista;
+	}
+
+	public void setNombreydnidaraltaperiodista(HorizontalLayout nombreydnidaraltaperiodista) {
+		this.nombreydnidaraltaperiodista = nombreydnidaraltaperiodista;
+	}
+
+	public Label getLabelnombredaraltaperiodista() {
+		return labelnombredaraltaperiodista;
+	}
+
+	public void setLabelnombredaraltaperiodista(Label labelnombredaraltaperiodista) {
+		this.labelnombredaraltaperiodista = labelnombredaraltaperiodista;
+	}
+
+	public TextField getTextfieldnombredaraltaperiodista() {
+		return textfieldnombredaraltaperiodista;
+	}
+
+	public void setTextfieldnombredaraltaperiodista(TextField textfieldnombredaraltaperiodista) {
+		this.textfieldnombredaraltaperiodista = textfieldnombredaraltaperiodista;
+	}
+
+	public Label getLabeldnidaraltaperiodista() {
+		return labeldnidaraltaperiodista;
+	}
+
+	public void setLabeldnidaraltaperiodista(Label labeldnidaraltaperiodista) {
+		this.labeldnidaraltaperiodista = labeldnidaraltaperiodista;
+	}
+
+	public TextField getTextfielddnidaraltaperiodista() {
+		return textfielddnidaraltaperiodista;
+	}
+
+	public void setTextfielddnidaraltaperiodista(TextField textfielddnidaraltaperiodista) {
+		this.textfielddnidaraltaperiodista = textfielddnidaraltaperiodista;
+	}
+
+	public HorizontalLayout getApellidosemaildaraltaperiodista() {
+		return apellidosemaildaraltaperiodista;
+	}
+
+	public void setApellidosemaildaraltaperiodista(HorizontalLayout apellidosemaildaraltaperiodista) {
+		this.apellidosemaildaraltaperiodista = apellidosemaildaraltaperiodista;
+	}
+
+	public Label getLabelapellidosdaraltaperiodista() {
+		return labelapellidosdaraltaperiodista;
+	}
+
+	public void setLabelapellidosdaraltaperiodista(Label labelapellidosdaraltaperiodista) {
+		this.labelapellidosdaraltaperiodista = labelapellidosdaraltaperiodista;
+	}
+
+	public TextField getTextfieldapellidosdaraltaperiodista() {
+		return textfieldapellidosdaraltaperiodista;
+	}
+
+	public void setTextfieldapellidosdaraltaperiodista(TextField textfieldapellidosdaraltaperiodista) {
+		this.textfieldapellidosdaraltaperiodista = textfieldapellidosdaraltaperiodista;
+	}
+
+	public Label getLabelemaildaraltaperiodista() {
+		return labelemaildaraltaperiodista;
+	}
+
+	public void setLabelemaildaraltaperiodista(Label labelemaildaraltaperiodista) {
+		this.labelemaildaraltaperiodista = labelemaildaraltaperiodista;
+	}
+
+	public TextField getTextfieldemaildaraltaperiodista() {
+		return textfieldemaildaraltaperiodista;
+	}
+
+	public void setTextfieldemaildaraltaperiodista(TextField textfieldemaildaraltaperiodista) {
+		this.textfieldemaildaraltaperiodista = textfieldemaildaraltaperiodista;
+	}
+
+	public HorizontalLayout getNicktelefonodaraltaperiodista() {
+		return nicktelefonodaraltaperiodista;
+	}
+
+	public void setNicktelefonodaraltaperiodista(HorizontalLayout nicktelefonodaraltaperiodista) {
+		this.nicktelefonodaraltaperiodista = nicktelefonodaraltaperiodista;
+	}
+
+	public Label getLabelnickdaraltaperiodista() {
+		return labelnickdaraltaperiodista;
+	}
+
+	public void setLabelnickdaraltaperiodista(Label labelnickdaraltaperiodista) {
+		this.labelnickdaraltaperiodista = labelnickdaraltaperiodista;
+	}
+
+	public TextField getTextfieldnickdaraltaperiodista() {
+		return textfieldnickdaraltaperiodista;
+	}
+
+	public void setTextfieldnickdaraltaperiodista(TextField textfieldnickdaraltaperiodista) {
+		this.textfieldnickdaraltaperiodista = textfieldnickdaraltaperiodista;
+	}
+
+	public Label getLabeltelefonodaraltaperiodista() {
+		return labeltelefonodaraltaperiodista;
+	}
+
+	public void setLabeltelefonodaraltaperiodista(Label labeltelefonodaraltaperiodista) {
+		this.labeltelefonodaraltaperiodista = labeltelefonodaraltaperiodista;
+	}
+
+	public TextField getTextfieldtelefonodaraltaperiodista() {
+		return textfieldtelefonodaraltaperiodista;
+	}
+
+	public void setTextfieldtelefonodaraltaperiodista(TextField textfieldtelefonodaraltaperiodista) {
+		this.textfieldtelefonodaraltaperiodista = textfieldtelefonodaraltaperiodista;
+	}
+
+	public HorizontalLayout getLayoutbotondaraltaperiodista() {
+		return layoutbotondaraltaperiodista;
+	}
+
+	public void setLayoutbotondaraltaperiodista(HorizontalLayout layoutbotondaraltaperiodista) {
+		this.layoutbotondaraltaperiodista = layoutbotondaraltaperiodista;
+	}
+
+	public Button getButtondaraltaperiodista() {
+		return buttondaraltaperiodista;
+	}
+
+	public void setButtondaraltaperiodista(Button buttondaraltaperiodista) {
+		this.buttondaraltaperiodista = buttondaraltaperiodista;
+	}
+
+	public Element getLayoutdarbajaperiodista() {
+		return layoutdarbajaperiodista;
+	}
+
+	public void setLayoutdarbajaperiodista(Element layoutdarbajaperiodista) {
+		this.layoutdarbajaperiodista = layoutdarbajaperiodista;
+	}
+
+	public Label getLabeldarbajaperiodista() {
+		return labeldarbajaperiodista;
+	}
+
+	public void setLabeldarbajaperiodista(Label labeldarbajaperiodista) {
+		this.labeldarbajaperiodista = labeldarbajaperiodista;
+	}
+
+	public HorizontalLayout getLayoutvistadarbajaperiodista() {
+		return layoutvistadarbajaperiodista;
+	}
+
+	public void setLayoutvistadarbajaperiodista(HorizontalLayout layoutvistadarbajaperiodista) {
+		this.layoutvistadarbajaperiodista = layoutvistadarbajaperiodista;
+	}
+
+	public VistaBuscarperiodista getBusquedadarbajaperiodista() {
+		return busquedadarbajaperiodista;
+	}
+
+	public void setBusquedadarbajaperiodista(VistaBuscarperiodista busquedadarbajaperiodista) {
+		this.busquedadarbajaperiodista = busquedadarbajaperiodista;
+	}
+
+	public Button getButtondarbajaperiodista() {
+		return buttondarbajaperiodista;
+	}
+
+	public void setButtondarbajaperiodista(Button buttondarbajaperiodista) {
+		this.buttondarbajaperiodista = buttondarbajaperiodista;
+	}
+
+	@Id("Layoutdaraltaperiodista")
 	private Element layoutdaraltaperiodista;
 	@Id("Labeldaraltaperiodista")
 	private Label labeldaraltaperiodista;

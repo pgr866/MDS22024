@@ -16,7 +16,183 @@ import com.vaadin.flow.component.textfield.PasswordField;
 @JsModule("./src/vista-configurarperfil.ts")
 public class VistaConfigurarperfil extends LitTemplate {
 
-    @Id("Layoutconfigurarperfil")
+    public Element getLayoutconfigurarperfil() {
+		return layoutconfigurarperfil;
+	}
+
+	public void setLayoutconfigurarperfil(Element layoutconfigurarperfil) {
+		this.layoutconfigurarperfil = layoutconfigurarperfil;
+	}
+
+	public Button getButtonFotoconfigurarperfil() {
+		return buttonFotoconfigurarperfil;
+	}
+
+	public void setButtonFotoconfigurarperfil(Button buttonFotoconfigurarperfil) {
+		this.buttonFotoconfigurarperfil = buttonFotoconfigurarperfil;
+	}
+
+	public Image getFotoconfigurarperfil() {
+		return fotoconfigurarperfil;
+	}
+
+	public void setFotoconfigurarperfil(Image fotoconfigurarperfil) {
+		this.fotoconfigurarperfil = fotoconfigurarperfil;
+	}
+
+	public Element getVaadinVerticalLayout() {
+		return vaadinVerticalLayout;
+	}
+
+	public void setVaadinVerticalLayout(Element vaadinVerticalLayout) {
+		this.vaadinVerticalLayout = vaadinVerticalLayout;
+	}
+
+	public HorizontalLayout getLayoutnombreconfigurarperfil() {
+		return layoutnombreconfigurarperfil;
+	}
+
+	public void setLayoutnombreconfigurarperfil(HorizontalLayout layoutnombreconfigurarperfil) {
+		this.layoutnombreconfigurarperfil = layoutnombreconfigurarperfil;
+	}
+
+	public Label getLabelnombreconfigurarperfil() {
+		return labelnombreconfigurarperfil;
+	}
+
+	public void setLabelnombreconfigurarperfil(Label labelnombreconfigurarperfil) {
+		this.labelnombreconfigurarperfil = labelnombreconfigurarperfil;
+	}
+
+	public TextField getTextfieldnombreconfigurarperfil() {
+		return textfieldnombreconfigurarperfil;
+	}
+
+	public void setTextfieldnombreconfigurarperfil(TextField textfieldnombreconfigurarperfil) {
+		this.textfieldnombreconfigurarperfil = textfieldnombreconfigurarperfil;
+	}
+
+	public HorizontalLayout getLayoutapodoconfigurarperfil() {
+		return layoutapodoconfigurarperfil;
+	}
+
+	public void setLayoutapodoconfigurarperfil(HorizontalLayout layoutapodoconfigurarperfil) {
+		this.layoutapodoconfigurarperfil = layoutapodoconfigurarperfil;
+	}
+
+	public Label getLabelapodoconfigurarperfil() {
+		return labelapodoconfigurarperfil;
+	}
+
+	public void setLabelapodoconfigurarperfil(Label labelapodoconfigurarperfil) {
+		this.labelapodoconfigurarperfil = labelapodoconfigurarperfil;
+	}
+
+	public TextField getTextfieldapodoconfigurarperfil() {
+		return textfieldapodoconfigurarperfil;
+	}
+
+	public void setTextfieldapodoconfigurarperfil(TextField textfieldapodoconfigurarperfil) {
+		this.textfieldapodoconfigurarperfil = textfieldapodoconfigurarperfil;
+	}
+
+	public HorizontalLayout getLayoutemailconfigurarperfil() {
+		return layoutemailconfigurarperfil;
+	}
+
+	public void setLayoutemailconfigurarperfil(HorizontalLayout layoutemailconfigurarperfil) {
+		this.layoutemailconfigurarperfil = layoutemailconfigurarperfil;
+	}
+
+	public Label getLabelemailconfigurarperfil() {
+		return labelemailconfigurarperfil;
+	}
+
+	public void setLabelemailconfigurarperfil(Label labelemailconfigurarperfil) {
+		this.labelemailconfigurarperfil = labelemailconfigurarperfil;
+	}
+
+	public HorizontalLayout getLayoutntarjetaconfigurarperfil() {
+		return layoutntarjetaconfigurarperfil;
+	}
+
+	public void setLayoutntarjetaconfigurarperfil(HorizontalLayout layoutntarjetaconfigurarperfil) {
+		this.layoutntarjetaconfigurarperfil = layoutntarjetaconfigurarperfil;
+	}
+
+	public TextField getTextfieldemailconfigurarperfil() {
+		return textfieldemailconfigurarperfil;
+	}
+
+	public void setTextfieldemailconfigurarperfil(TextField textfieldemailconfigurarperfil) {
+		this.textfieldemailconfigurarperfil = textfieldemailconfigurarperfil;
+	}
+
+	public Label getLabelntarjetaconfigurarperfil() {
+		return labelntarjetaconfigurarperfil;
+	}
+
+	public void setLabelntarjetaconfigurarperfil(Label labelntarjetaconfigurarperfil) {
+		this.labelntarjetaconfigurarperfil = labelntarjetaconfigurarperfil;
+	}
+
+	public TextField getTextfieldntarjetaconfigurarperfil() {
+		return textfieldntarjetaconfigurarperfil;
+	}
+
+	public void setTextfieldntarjetaconfigurarperfil(TextField textfieldntarjetaconfigurarperfil) {
+		this.textfieldntarjetaconfigurarperfil = textfieldntarjetaconfigurarperfil;
+	}
+
+	public HorizontalLayout getLayoutcontrasenaconfigurarperfil() {
+		return layoutcontrasenaconfigurarperfil;
+	}
+
+	public void setLayoutcontrasenaconfigurarperfil(HorizontalLayout layoutcontrasenaconfigurarperfil) {
+		this.layoutcontrasenaconfigurarperfil = layoutcontrasenaconfigurarperfil;
+	}
+
+	public Label getLabelcontrasenaconfigurarperfil() {
+		return labelcontrasenaconfigurarperfil;
+	}
+
+	public void setLabelcontrasenaconfigurarperfil(Label labelcontrasenaconfigurarperfil) {
+		this.labelcontrasenaconfigurarperfil = labelcontrasenaconfigurarperfil;
+	}
+
+	public PasswordField getPasswordfieldcontrasenaconfigurarperfil() {
+		return passwordfieldcontrasenaconfigurarperfil;
+	}
+
+	public void setPasswordfieldcontrasenaconfigurarperfil(PasswordField passwordfieldcontrasenaconfigurarperfil) {
+		this.passwordfieldcontrasenaconfigurarperfil = passwordfieldcontrasenaconfigurarperfil;
+	}
+
+	public HorizontalLayout getLayoutbotonesconfigurarperfil() {
+		return layoutbotonesconfigurarperfil;
+	}
+
+	public void setLayoutbotonesconfigurarperfil(HorizontalLayout layoutbotonesconfigurarperfil) {
+		this.layoutbotonesconfigurarperfil = layoutbotonesconfigurarperfil;
+	}
+
+	public Button getButtonguardarcambiosconfigurarperfil() {
+		return buttonguardarcambiosconfigurarperfil;
+	}
+
+	public void setButtonguardarcambiosconfigurarperfil(Button buttonguardarcambiosconfigurarperfil) {
+		this.buttonguardarcambiosconfigurarperfil = buttonguardarcambiosconfigurarperfil;
+	}
+
+	public Button getButtoneliminarcuentaconfigurarperfil() {
+		return buttoneliminarcuentaconfigurarperfil;
+	}
+
+	public void setButtoneliminarcuentaconfigurarperfil(Button buttoneliminarcuentaconfigurarperfil) {
+		this.buttoneliminarcuentaconfigurarperfil = buttoneliminarcuentaconfigurarperfil;
+	}
+
+	@Id("Layoutconfigurarperfil")
 	private Element layoutconfigurarperfil;
 	@Id("ButtonFotoconfigurarperfil")
 	private Button buttonFotoconfigurarperfil;

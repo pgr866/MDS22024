@@ -11,7 +11,23 @@ import com.vaadin.flow.component.combobox.ComboBox;
 @JsModule("./src/vista-buscarperiodista.ts")
 public class VistaBuscarperiodista extends LitTemplate {
 
-    @Id("Layoutbuscarperiodista")
+    public Element getLayoutbuscarperiodista() {
+		return layoutbuscarperiodista;
+	}
+
+	public void setLayoutbuscarperiodista(Element layoutbuscarperiodista) {
+		this.layoutbuscarperiodista = layoutbuscarperiodista;
+	}
+
+	public ComboBox<String> getComboboxbuscarperiodista() {
+		return comboboxbuscarperiodista;
+	}
+
+	public void setComboboxbuscarperiodista(ComboBox<String> comboboxbuscarperiodista) {
+		this.comboboxbuscarperiodista = comboboxbuscarperiodista;
+	}
+
+	@Id("Layoutbuscarperiodista")
 	private Element layoutbuscarperiodista;
 	@Id("Comboboxbuscarperiodista")
 	private ComboBox<String> comboboxbuscarperiodista;

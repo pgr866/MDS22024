@@ -11,7 +11,23 @@ import com.vaadin.flow.component.textfield.TextArea;
 @JsModule("./src/vista-mostrarcomentario.ts")
 public class VistaMostrarcomentario extends LitTemplate {
 
-    @Id("Layoutmostrarcomentario")
+    public Element getLayoutmostrarcomentario() {
+		return layoutmostrarcomentario;
+	}
+
+	public void setLayoutmostrarcomentario(Element layoutmostrarcomentario) {
+		this.layoutmostrarcomentario = layoutmostrarcomentario;
+	}
+
+	public TextArea getTextareacontenidocomentario() {
+		return textareacontenidocomentario;
+	}
+
+	public void setTextareacontenidocomentario(TextArea textareacontenidocomentario) {
+		this.textareacontenidocomentario = textareacontenidocomentario;
+	}
+
+	@Id("Layoutmostrarcomentario")
 	private Element layoutmostrarcomentario;
 	@Id("Textareacontenidocomentario")
 	private TextArea textareacontenidocomentario;

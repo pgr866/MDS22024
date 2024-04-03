@@ -10,6 +10,14 @@ import com.vaadin.flow.component.template.Id;
 @JsModule("./src/vista-noticiasarevisar_item.ts")
 public class VistaNoticiasarevisar_item extends LitTemplate {
 
+	public Element getItemnoticiasarevisar() {
+		return itemnoticiasarevisar;
+	}
+
+	public void setItemnoticiasarevisar(Element itemnoticiasarevisar) {
+		this.itemnoticiasarevisar = itemnoticiasarevisar;
+	}
+
 	@Id("Itemnoticiasarevisar")
 	private Element itemnoticiasarevisar;
 

@@ -11,7 +11,23 @@ import com.vaadin.flow.component.combobox.ComboBox;
 @JsModule("./src/vista-mostrarmisnoticias.ts")
 public class VistaMostrarmisnoticias extends LitTemplate {
 
-    @Id("Layoutmostrarmisnoticias")
+    public Element getLayoutmostrarmisnoticias() {
+		return layoutmostrarmisnoticias;
+	}
+
+	public void setLayoutmostrarmisnoticias(Element layoutmostrarmisnoticias) {
+		this.layoutmostrarmisnoticias = layoutmostrarmisnoticias;
+	}
+
+	public ComboBox<String> getComboboxmostrarmisnoticias() {
+		return comboboxmostrarmisnoticias;
+	}
+
+	public void setComboboxmostrarmisnoticias(ComboBox<String> comboboxmostrarmisnoticias) {
+		this.comboboxmostrarmisnoticias = comboboxmostrarmisnoticias;
+	}
+
+	@Id("Layoutmostrarmisnoticias")
 	private Element layoutmostrarmisnoticias;
 	@Id("Comboboxmostrarmisnoticias")
 	private ComboBox<String> comboboxmostrarmisnoticias;

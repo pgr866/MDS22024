@@ -11,6 +11,24 @@ import com.vaadin.flow.component.combobox.ComboBox;
 @JsModule("./src/vista-listadonoticiasbusquedausuarionoregistrado.ts")
 public class VistaListadonoticiasbusquedausuarionoregistrado extends LitTemplate {
 
+	public Element getLayoutlistadonoticiasbusquedausuarionoregistrado() {
+		return layoutlistadonoticiasbusquedausuarionoregistrado;
+	}
+
+	public void setLayoutlistadonoticiasbusquedausuarionoregistrado(
+			Element layoutlistadonoticiasbusquedausuarionoregistrado) {
+		this.layoutlistadonoticiasbusquedausuarionoregistrado = layoutlistadonoticiasbusquedausuarionoregistrado;
+	}
+
+	public ComboBox<String> getComboboxlistadonoticiasbusquedausuarionoregistrado() {
+		return comboboxlistadonoticiasbusquedausuarionoregistrado;
+	}
+
+	public void setComboboxlistadonoticiasbusquedausuarionoregistrado(
+			ComboBox<String> comboboxlistadonoticiasbusquedausuarionoregistrado) {
+		this.comboboxlistadonoticiasbusquedausuarionoregistrado = comboboxlistadonoticiasbusquedausuarionoregistrado;
+	}
+
 	@Id("Layoutlistadonoticiasbusquedausuarionoregistrado")
 	private Element layoutlistadonoticiasbusquedausuarionoregistrado;
 	@Id("Comboboxlistadonoticiasbusquedausuarionoregistrado")

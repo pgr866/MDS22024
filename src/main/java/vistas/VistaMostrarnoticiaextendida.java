@@ -11,7 +11,23 @@ import com.vaadin.flow.component.textfield.TextArea;
 @JsModule("./src/vista-mostrarnoticiaextendida.ts")
 public class VistaMostrarnoticiaextendida extends LitTemplate {
 
-    @Id("Layoutmostrarnoticiaextendida")
+    public Element getLayoutmostrarnoticiaextendida() {
+		return layoutmostrarnoticiaextendida;
+	}
+
+	public void setLayoutmostrarnoticiaextendida(Element layoutmostrarnoticiaextendida) {
+		this.layoutmostrarnoticiaextendida = layoutmostrarnoticiaextendida;
+	}
+
+	public TextArea getTextareamostrarnoticiaextendida() {
+		return textareamostrarnoticiaextendida;
+	}
+
+	public void setTextareamostrarnoticiaextendida(TextArea textareamostrarnoticiaextendida) {
+		this.textareamostrarnoticiaextendida = textareamostrarnoticiaextendida;
+	}
+
+	@Id("Layoutmostrarnoticiaextendida")
 	private Element layoutmostrarnoticiaextendida;
 	@Id("Textareamostrarnoticiaextendida")
 	private TextArea textareamostrarnoticiaextendida;

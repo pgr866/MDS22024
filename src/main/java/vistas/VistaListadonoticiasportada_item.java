@@ -17,6 +17,95 @@ import com.vaadin.flow.component.html.Label;
 @JsModule("./src/vista-listadonoticiasportada_item.ts")
 public class VistaListadonoticiasportada_item extends LitTemplate {
 
+	public Element getLayouttitulolistadonoticiasportada() {
+		return layouttitulolistadonoticiasportada;
+	}
+
+	public void setLayouttitulolistadonoticiasportada(Element layouttitulolistadonoticiasportada) {
+		this.layouttitulolistadonoticiasportada = layouttitulolistadonoticiasportada;
+	}
+
+	public Button getTitulolistadonoticiasportada() {
+		return titulolistadonoticiasportada;
+	}
+
+	public void setTitulolistadonoticiasportada(Button titulolistadonoticiasportada) {
+		this.titulolistadonoticiasportada = titulolistadonoticiasportada;
+	}
+
+	public ComboBox<String> getComboboxtitulolistadonoticiasportada() {
+		return comboboxtitulolistadonoticiasportada;
+	}
+
+	public void setComboboxtitulolistadonoticiasportada(ComboBox<String> comboboxtitulolistadonoticiasportada) {
+		this.comboboxtitulolistadonoticiasportada = comboboxtitulolistadonoticiasportada;
+	}
+
+	public HorizontalLayout getLayoutimagenlistadonoticiasportada() {
+		return layoutimagenlistadonoticiasportada;
+	}
+
+	public void setLayoutimagenlistadonoticiasportada(HorizontalLayout layoutimagenlistadonoticiasportada) {
+		this.layoutimagenlistadonoticiasportada = layoutimagenlistadonoticiasportada;
+	}
+
+	public Image getImagenlistadonoticiasportada() {
+		return imagenlistadonoticiasportada;
+	}
+
+	public void setImagenlistadonoticiasportada(Image imagenlistadonoticiasportada) {
+		this.imagenlistadonoticiasportada = imagenlistadonoticiasportada;
+	}
+
+	public HorizontalLayout getLayoutautorlugarfechalistadonoticiasportada() {
+		return layoutautorlugarfechalistadonoticiasportada;
+	}
+
+	public void setLayoutautorlugarfechalistadonoticiasportada(
+			HorizontalLayout layoutautorlugarfechalistadonoticiasportada) {
+		this.layoutautorlugarfechalistadonoticiasportada = layoutautorlugarfechalistadonoticiasportada;
+	}
+
+	public Label getLabelfechalistadonoticiasportada() {
+		return labelfechalistadonoticiasportada;
+	}
+
+	public void setLabelfechalistadonoticiasportada(Label labelfechalistadonoticiasportada) {
+		this.labelfechalistadonoticiasportada = labelfechalistadonoticiasportada;
+	}
+
+	public Label getLabelautorlistadonoticiasportada() {
+		return labelautorlistadonoticiasportada;
+	}
+
+	public void setLabelautorlistadonoticiasportada(Label labelautorlistadonoticiasportada) {
+		this.labelautorlistadonoticiasportada = labelautorlistadonoticiasportada;
+	}
+
+	public Label getLabellugarlistadonoticiasportada() {
+		return labellugarlistadonoticiasportada;
+	}
+
+	public void setLabellugarlistadonoticiasportada(Label labellugarlistadonoticiasportada) {
+		this.labellugarlistadonoticiasportada = labellugarlistadonoticiasportada;
+	}
+
+	public HorizontalLayout getLayouresumenlistadonoticiasportada() {
+		return layouresumenlistadonoticiasportada;
+	}
+
+	public void setLayouresumenlistadonoticiasportada(HorizontalLayout layouresumenlistadonoticiasportada) {
+		this.layouresumenlistadonoticiasportada = layouresumenlistadonoticiasportada;
+	}
+
+	public TextArea getTextarearesumenlistadonoticiasportada() {
+		return textarearesumenlistadonoticiasportada;
+	}
+
+	public void setTextarearesumenlistadonoticiasportada(TextArea textarearesumenlistadonoticiasportada) {
+		this.textarearesumenlistadonoticiasportada = textarearesumenlistadonoticiasportada;
+	}
+
 	@Id("Layouttitulolistadonoticiasportada")
 	private Element layouttitulolistadonoticiasportada;
 	@Id("Titulolistadonoticiasportada")

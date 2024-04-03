@@ -11,7 +11,23 @@ import com.vaadin.flow.component.textfield.TextArea;
 @JsModule("./src/vista-mostrarnoticiaresumida.ts")
 public class VistaMostrarnoticiaresumida extends LitTemplate {
 
-    @Id("Layoutresumenmostrarnoticiaresumida")
+    public Element getLayoutresumenmostrarnoticiaresumida() {
+		return layoutresumenmostrarnoticiaresumida;
+	}
+
+	public void setLayoutresumenmostrarnoticiaresumida(Element layoutresumenmostrarnoticiaresumida) {
+		this.layoutresumenmostrarnoticiaresumida = layoutresumenmostrarnoticiaresumida;
+	}
+
+	public TextArea getTextarearesumenmostrarnoticiaresumida() {
+		return textarearesumenmostrarnoticiaresumida;
+	}
+
+	public void setTextarearesumenmostrarnoticiaresumida(TextArea textarearesumenmostrarnoticiaresumida) {
+		this.textarearesumenmostrarnoticiaresumida = textarearesumenmostrarnoticiaresumida;
+	}
+
+	@Id("Layoutresumenmostrarnoticiaresumida")
 	private Element layoutresumenmostrarnoticiaresumida;
 	@Id("Textarearesumenmostrarnoticiaresumida")
 	private TextArea textarearesumenmostrarnoticiaresumida;

@@ -13,6 +13,30 @@ import com.vaadin.flow.component.html.Label;
 @JsModule("./src/vista-noticiasenseccionidentificado.ts")
 public class VistaNoticiasenseccionidentificado extends LitTemplate {
 
+	public Element getLayoutnoticiasenseccionidentificado() {
+		return layoutnoticiasenseccionidentificado;
+	}
+
+	public void setLayoutnoticiasenseccionidentificado(Element layoutnoticiasenseccionidentificado) {
+		this.layoutnoticiasenseccionidentificado = layoutnoticiasenseccionidentificado;
+	}
+
+	public Label getLabel() {
+		return label;
+	}
+
+	public void setLabel(Label label) {
+		this.label = label;
+	}
+
+	public HorizontalLayout getNoticiasenseccionidentificado() {
+		return noticiasenseccionidentificado;
+	}
+
+	public void setNoticiasenseccionidentificado(HorizontalLayout noticiasenseccionidentificado) {
+		this.noticiasenseccionidentificado = noticiasenseccionidentificado;
+	}
+
 	@Id("Layoutnoticiasenseccionidentificado")
 	private Element layoutnoticiasenseccionidentificado;
 	@Id("label")

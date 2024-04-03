@@ -13,6 +13,30 @@ import com.vaadin.flow.component.html.Label;
 @JsModule("./src/vista-noticiasenseccionusuarionoregistrado.ts")
 public class VistaNoticiasenseccionusuarionoregistrado extends LitTemplate {
 
+	public Element getLayoutnoticiasenseccionusuarionoregistrado() {
+		return layoutnoticiasenseccionusuarionoregistrado;
+	}
+
+	public void setLayoutnoticiasenseccionusuarionoregistrado(Element layoutnoticiasenseccionusuarionoregistrado) {
+		this.layoutnoticiasenseccionusuarionoregistrado = layoutnoticiasenseccionusuarionoregistrado;
+	}
+
+	public Label getLabel() {
+		return label;
+	}
+
+	public void setLabel(Label label) {
+		this.label = label;
+	}
+
+	public HorizontalLayout getNoticiasenseccionusuarionoregistrado() {
+		return noticiasenseccionusuarionoregistrado;
+	}
+
+	public void setNoticiasenseccionusuarionoregistrado(HorizontalLayout noticiasenseccionusuarionoregistrado) {
+		this.noticiasenseccionusuarionoregistrado = noticiasenseccionusuarionoregistrado;
+	}
+
 	@Id("Layoutnoticiasenseccionusuarionoregistrado")
 	private Element layoutnoticiasenseccionusuarionoregistrado;
 	@Id("label")

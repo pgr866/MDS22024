@@ -14,6 +14,70 @@ import com.vaadin.flow.component.html.Label;
 @JsModule("./src/vista-mostrarvaloracioncomentario.ts")
 public class VistaMostrarvaloracioncomentario extends LitTemplate {
 
+	public HorizontalLayout getLayoutmegustamostrarvaloracioncomentario() {
+		return layoutmegustamostrarvaloracioncomentario;
+	}
+
+	public void setLayoutmegustamostrarvaloracioncomentario(HorizontalLayout layoutmegustamostrarvaloracioncomentario) {
+		this.layoutmegustamostrarvaloracioncomentario = layoutmegustamostrarvaloracioncomentario;
+	}
+
+	public Button getMegustaseccioncomentariositem() {
+		return megustaseccioncomentariositem;
+	}
+
+	public void setMegustaseccioncomentariositem(Button megustaseccioncomentariositem) {
+		this.megustaseccioncomentariositem = megustaseccioncomentariositem;
+	}
+
+	public Image getImagenmegustaseccioncomentariositem() {
+		return imagenmegustaseccioncomentariositem;
+	}
+
+	public void setImagenmegustaseccioncomentariositem(Image imagenmegustaseccioncomentariositem) {
+		this.imagenmegustaseccioncomentariositem = imagenmegustaseccioncomentariositem;
+	}
+
+	public Label getNumeromegustamostrarvaloracioncomentario() {
+		return numeromegustamostrarvaloracioncomentario;
+	}
+
+	public void setNumeromegustamostrarvaloracioncomentario(Label numeromegustamostrarvaloracioncomentario) {
+		this.numeromegustamostrarvaloracioncomentario = numeromegustamostrarvaloracioncomentario;
+	}
+
+	public HorizontalLayout getLayoutnomegustamostrarvaloracioncomentario() {
+		return layoutnomegustamostrarvaloracioncomentario;
+	}
+
+	public void setLayoutnomegustamostrarvaloracioncomentario(HorizontalLayout layoutnomegustamostrarvaloracioncomentario) {
+		this.layoutnomegustamostrarvaloracioncomentario = layoutnomegustamostrarvaloracioncomentario;
+	}
+
+	public Button getNomegustaseccioncomentariositem() {
+		return nomegustaseccioncomentariositem;
+	}
+
+	public void setNomegustaseccioncomentariositem(Button nomegustaseccioncomentariositem) {
+		this.nomegustaseccioncomentariositem = nomegustaseccioncomentariositem;
+	}
+
+	public Image getImagennomegustaseccioncomentariositem() {
+		return imagennomegustaseccioncomentariositem;
+	}
+
+	public void setImagennomegustaseccioncomentariositem(Image imagennomegustaseccioncomentariositem) {
+		this.imagennomegustaseccioncomentariositem = imagennomegustaseccioncomentariositem;
+	}
+
+	public Label getNumeronomegustamostrarvaloracioncomentario() {
+		return numeronomegustamostrarvaloracioncomentario;
+	}
+
+	public void setNumeronomegustamostrarvaloracioncomentario(Label numeronomegustamostrarvaloracioncomentario) {
+		this.numeronomegustamostrarvaloracioncomentario = numeronomegustamostrarvaloracioncomentario;
+	}
+
 	@Id("Layoutmegustamostrarvaloracioncomentario")
 	private HorizontalLayout layoutmegustamostrarvaloracioncomentario;
 	@Id("Megustaseccioncomentariositem")

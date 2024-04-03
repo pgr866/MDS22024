@@ -15,7 +15,175 @@ import com.vaadin.flow.component.button.Button;
 @JsModule("./src/vista-revisarnoticias.ts")
 public class VistaRevisarnoticias extends LitTemplate {
 
-    @Id("Layouttitulonoticiarevisarnoticias")
+    public HorizontalLayout getLayouttitulonoticiarevisarnoticias() {
+		return layouttitulonoticiarevisarnoticias;
+	}
+
+	public void setLayouttitulonoticiarevisarnoticias(HorizontalLayout layouttitulonoticiarevisarnoticias) {
+		this.layouttitulonoticiarevisarnoticias = layouttitulonoticiarevisarnoticias;
+	}
+
+	public Label getLabeltitulonoticiarevisarnoticias() {
+		return labeltitulonoticiarevisarnoticias;
+	}
+
+	public void setLabeltitulonoticiarevisarnoticias(Label labeltitulonoticiarevisarnoticias) {
+		this.labeltitulonoticiarevisarnoticias = labeltitulonoticiarevisarnoticias;
+	}
+
+	public TextField getTextfieldtitulonoticiarevisarnoticias() {
+		return textfieldtitulonoticiarevisarnoticias;
+	}
+
+	public void setTextfieldtitulonoticiarevisarnoticias(TextField textfieldtitulonoticiarevisarnoticias) {
+		this.textfieldtitulonoticiarevisarnoticias = textfieldtitulonoticiarevisarnoticias;
+	}
+
+	public HorizontalLayout getLayouturlimagenesrevisarnoticias() {
+		return layouturlimagenesrevisarnoticias;
+	}
+
+	public void setLayouturlimagenesrevisarnoticias(HorizontalLayout layouturlimagenesrevisarnoticias) {
+		this.layouturlimagenesrevisarnoticias = layouturlimagenesrevisarnoticias;
+	}
+
+	public Label getLabelurlimagenesrevisarnoticias() {
+		return labelurlimagenesrevisarnoticias;
+	}
+
+	public void setLabelurlimagenesrevisarnoticias(Label labelurlimagenesrevisarnoticias) {
+		this.labelurlimagenesrevisarnoticias = labelurlimagenesrevisarnoticias;
+	}
+
+	public TextField getTextfieldurlimagenesrevisarnoticias() {
+		return textfieldurlimagenesrevisarnoticias;
+	}
+
+	public void setTextfieldurlimagenesrevisarnoticias(TextField textfieldurlimagenesrevisarnoticias) {
+		this.textfieldurlimagenesrevisarnoticias = textfieldurlimagenesrevisarnoticias;
+	}
+
+	public HorizontalLayout getLayoutcontenidonoticiarevisarnoticias() {
+		return layoutcontenidonoticiarevisarnoticias;
+	}
+
+	public void setLayoutcontenidonoticiarevisarnoticias(HorizontalLayout layoutcontenidonoticiarevisarnoticias) {
+		this.layoutcontenidonoticiarevisarnoticias = layoutcontenidonoticiarevisarnoticias;
+	}
+
+	public TextArea getTextareacontenidonoticiarevisarnoticias() {
+		return textareacontenidonoticiarevisarnoticias;
+	}
+
+	public void setTextareacontenidonoticiarevisarnoticias(TextArea textareacontenidonoticiarevisarnoticias) {
+		this.textareacontenidonoticiarevisarnoticias = textareacontenidonoticiarevisarnoticias;
+	}
+
+	public HorizontalLayout getLayoutfechaylugarrevisarnoticias() {
+		return layoutfechaylugarrevisarnoticias;
+	}
+
+	public void setLayoutfechaylugarrevisarnoticias(HorizontalLayout layoutfechaylugarrevisarnoticias) {
+		this.layoutfechaylugarrevisarnoticias = layoutfechaylugarrevisarnoticias;
+	}
+
+	public Label getLabelfechaylugarrevisarnoticias() {
+		return labelfechaylugarrevisarnoticias;
+	}
+
+	public void setLabelfechaylugarrevisarnoticias(Label labelfechaylugarrevisarnoticias) {
+		this.labelfechaylugarrevisarnoticias = labelfechaylugarrevisarnoticias;
+	}
+
+	public HorizontalLayout getLayouttextfieldsfechaylugarrevisarnoticias() {
+		return layouttextfieldsfechaylugarrevisarnoticias;
+	}
+
+	public void setLayouttextfieldsfechaylugarrevisarnoticias(HorizontalLayout layouttextfieldsfechaylugarrevisarnoticias) {
+		this.layouttextfieldsfechaylugarrevisarnoticias = layouttextfieldsfechaylugarrevisarnoticias;
+	}
+
+	public TextField getTextfieldfecharevisarnoticias() {
+		return textfieldfecharevisarnoticias;
+	}
+
+	public void setTextfieldfecharevisarnoticias(TextField textfieldfecharevisarnoticias) {
+		this.textfieldfecharevisarnoticias = textfieldfecharevisarnoticias;
+	}
+
+	public TextField getTextfieldlugarrevisarnoticias() {
+		return textfieldlugarrevisarnoticias;
+	}
+
+	public void setTextfieldlugarrevisarnoticias(TextField textfieldlugarrevisarnoticias) {
+		this.textfieldlugarrevisarnoticias = textfieldlugarrevisarnoticias;
+	}
+
+	public HorizontalLayout getLayoutresumenrevisarnoticias() {
+		return layoutresumenrevisarnoticias;
+	}
+
+	public void setLayoutresumenrevisarnoticias(HorizontalLayout layoutresumenrevisarnoticias) {
+		this.layoutresumenrevisarnoticias = layoutresumenrevisarnoticias;
+	}
+
+	public Label getLabelresumenrevisarnoticias() {
+		return labelresumenrevisarnoticias;
+	}
+
+	public void setLabelresumenrevisarnoticias(Label labelresumenrevisarnoticias) {
+		this.labelresumenrevisarnoticias = labelresumenrevisarnoticias;
+	}
+
+	public TextField getTextfieldresumenrevisarnoticias() {
+		return textfieldresumenrevisarnoticias;
+	}
+
+	public void setTextfieldresumenrevisarnoticias(TextField textfieldresumenrevisarnoticias) {
+		this.textfieldresumenrevisarnoticias = textfieldresumenrevisarnoticias;
+	}
+
+	public HorizontalLayout getLayoutvistaseccionessrevisarnoticias() {
+		return layoutvistaseccionessrevisarnoticias;
+	}
+
+	public void setLayoutvistaseccionessrevisarnoticias(HorizontalLayout layoutvistaseccionessrevisarnoticias) {
+		this.layoutvistaseccionessrevisarnoticias = layoutvistaseccionessrevisarnoticias;
+	}
+
+	public Element getVistaseccionesrevisarnoticia() {
+		return vistaseccionesrevisarnoticia;
+	}
+
+	public void setVistaseccionesrevisarnoticia(Element vistaseccionesrevisarnoticia) {
+		this.vistaseccionesrevisarnoticia = vistaseccionesrevisarnoticia;
+	}
+
+	public HorizontalLayout getLayoutopcionesrevisarnoticia() {
+		return layoutopcionesrevisarnoticia;
+	}
+
+	public void setLayoutopcionesrevisarnoticia(HorizontalLayout layoutopcionesrevisarnoticia) {
+		this.layoutopcionesrevisarnoticia = layoutopcionesrevisarnoticia;
+	}
+
+	public Button getPublicarrevisarnoticia() {
+		return publicarrevisarnoticia;
+	}
+
+	public void setPublicarrevisarnoticia(Button publicarrevisarnoticia) {
+		this.publicarrevisarnoticia = publicarrevisarnoticia;
+	}
+
+	public Button getEliminarrevisarnoticia() {
+		return eliminarrevisarnoticia;
+	}
+
+	public void setEliminarrevisarnoticia(Button eliminarrevisarnoticia) {
+		this.eliminarrevisarnoticia = eliminarrevisarnoticia;
+	}
+
+	@Id("Layouttitulonoticiarevisarnoticias")
 	private HorizontalLayout layouttitulonoticiarevisarnoticias;
 	@Id("Labeltitulonoticiarevisarnoticias")
 	private Label labeltitulonoticiarevisarnoticias;

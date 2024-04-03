@@ -13,7 +13,64 @@ import com.vaadin.flow.component.html.Label;
 @JsModule("./src/vista-mostrarvaloracionnoticia.ts")
 public class VistaMostrarvaloracionnoticia extends LitTemplate {
 
-    @Id("Layoutmegustanomegustamostrarvaloracionnoticia")
+    public HorizontalLayout getLayoutmegustanomegustamostrarvaloracionnoticia() {
+		return layoutmegustanomegustamostrarvaloracionnoticia;
+	}
+
+	public void setLayoutmegustanomegustamostrarvaloracionnoticia(
+			HorizontalLayout layoutmegustanomegustamostrarvaloracionnoticia) {
+		this.layoutmegustanomegustamostrarvaloracionnoticia = layoutmegustanomegustamostrarvaloracionnoticia;
+	}
+
+	public Button getMegustamostrarvaloracionnoticia() {
+		return megustamostrarvaloracionnoticia;
+	}
+
+	public void setMegustamostrarvaloracionnoticia(Button megustamostrarvaloracionnoticia) {
+		this.megustamostrarvaloracionnoticia = megustamostrarvaloracionnoticia;
+	}
+
+	public Image getImagenmegustamostrarvaloracionnoticia() {
+		return imagenmegustamostrarvaloracionnoticia;
+	}
+
+	public void setImagenmegustamostrarvaloracionnoticia(Image imagenmegustamostrarvaloracionnoticia) {
+		this.imagenmegustamostrarvaloracionnoticia = imagenmegustamostrarvaloracionnoticia;
+	}
+
+	public Label getNumeromegustamostrarvaloracionnoticia() {
+		return numeromegustamostrarvaloracionnoticia;
+	}
+
+	public void setNumeromegustamostrarvaloracionnoticia(Label numeromegustamostrarvaloracionnoticia) {
+		this.numeromegustamostrarvaloracionnoticia = numeromegustamostrarvaloracionnoticia;
+	}
+
+	public Button getNomegustamostrarvaloracionnoticia() {
+		return nomegustamostrarvaloracionnoticia;
+	}
+
+	public void setNomegustamostrarvaloracionnoticia(Button nomegustamostrarvaloracionnoticia) {
+		this.nomegustamostrarvaloracionnoticia = nomegustamostrarvaloracionnoticia;
+	}
+
+	public Image getImagennomegustamostrarvaloracionnoticia() {
+		return imagennomegustamostrarvaloracionnoticia;
+	}
+
+	public void setImagennomegustamostrarvaloracionnoticia(Image imagennomegustamostrarvaloracionnoticia) {
+		this.imagennomegustamostrarvaloracionnoticia = imagennomegustamostrarvaloracionnoticia;
+	}
+
+	public Label getNumeronomegustamostrarvaloracionnoticia() {
+		return numeronomegustamostrarvaloracionnoticia;
+	}
+
+	public void setNumeronomegustamostrarvaloracionnoticia(Label numeronomegustamostrarvaloracionnoticia) {
+		this.numeronomegustamostrarvaloracionnoticia = numeronomegustamostrarvaloracionnoticia;
+	}
+
+	@Id("Layoutmegustanomegustamostrarvaloracionnoticia")
 	private HorizontalLayout layoutmegustanomegustamostrarvaloracionnoticia;
 	@Id("Megustamostrarvaloracionnoticia")
 	private Button megustamostrarvaloracionnoticia;

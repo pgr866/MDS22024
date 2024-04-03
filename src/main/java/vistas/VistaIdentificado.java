@@ -16,6 +16,182 @@ import vistas.VistaLogout;
 @JsModule("./src/vista-identificado.ts")
 public class VistaIdentificado extends LitTemplate {
 
+	public Element getLayoutlogoidentificado() {
+		return layoutlogoidentificado;
+	}
+
+	public void setLayoutlogoidentificado(Element layoutlogoidentificado) {
+		this.layoutlogoidentificado = layoutlogoidentificado;
+	}
+
+	public Button getButtonlogoidentificado() {
+		return buttonlogoidentificado;
+	}
+
+	public void setButtonlogoidentificado(Button buttonlogoidentificado) {
+		this.buttonlogoidentificado = buttonlogoidentificado;
+	}
+
+	public Image getImagenlogoidentificado() {
+		return imagenlogoidentificado;
+	}
+
+	public void setImagenlogoidentificado(Image imagenlogoidentificado) {
+		this.imagenlogoidentificado = imagenlogoidentificado;
+	}
+
+	public HorizontalLayout getLayoutvistabuscaridentificado() {
+		return layoutvistabuscaridentificado;
+	}
+
+	public void setLayoutvistabuscaridentificado(HorizontalLayout layoutvistabuscaridentificado) {
+		this.layoutvistabuscaridentificado = layoutvistabuscaridentificado;
+	}
+
+	public VistaBuscar getVistabuscaridentificado() {
+		return vistabuscaridentificado;
+	}
+
+	public void setVistabuscaridentificado(VistaBuscar vistabuscaridentificado) {
+		this.vistabuscaridentificado = vistabuscaridentificado;
+	}
+
+	public Element getLayoutexplorarseccionesidentificado() {
+		return layoutexplorarseccionesidentificado;
+	}
+
+	public void setLayoutexplorarseccionesidentificado(Element layoutexplorarseccionesidentificado) {
+		this.layoutexplorarseccionesidentificado = layoutexplorarseccionesidentificado;
+	}
+
+	public Button getExplorarseccionesidentificado() {
+		return explorarseccionesidentificado;
+	}
+
+	public void setExplorarseccionesidentificado(Button explorarseccionesidentificado) {
+		this.explorarseccionesidentificado = explorarseccionesidentificado;
+	}
+
+	public Element getLayoutvermisnoticiasidentificado() {
+		return layoutvermisnoticiasidentificado;
+	}
+
+	public void setLayoutvermisnoticiasidentificado(Element layoutvermisnoticiasidentificado) {
+		this.layoutvermisnoticiasidentificado = layoutvermisnoticiasidentificado;
+	}
+
+	public VistaMostrarmisnoticias getVistavermisnoticiasidentificado() {
+		return vistavermisnoticiasidentificado;
+	}
+
+	public void setVistavermisnoticiasidentificado(VistaMostrarmisnoticias vistavermisnoticiasidentificado) {
+		this.vistavermisnoticiasidentificado = vistavermisnoticiasidentificado;
+	}
+
+	public Element getLayoutcrearnuevanoticiaidentificado() {
+		return layoutcrearnuevanoticiaidentificado;
+	}
+
+	public void setLayoutcrearnuevanoticiaidentificado(Element layoutcrearnuevanoticiaidentificado) {
+		this.layoutcrearnuevanoticiaidentificado = layoutcrearnuevanoticiaidentificado;
+	}
+
+	public Button getButtoncrearnuevanoticiaidentificado() {
+		return buttoncrearnuevanoticiaidentificado;
+	}
+
+	public void setButtoncrearnuevanoticiaidentificado(Button buttoncrearnuevanoticiaidentificado) {
+		this.buttoncrearnuevanoticiaidentificado = buttoncrearnuevanoticiaidentificado;
+	}
+
+	public Element getLayoutvistanoticiasarevisaridentificado() {
+		return layoutvistanoticiasarevisaridentificado;
+	}
+
+	public void setLayoutvistanoticiasarevisaridentificado(Element layoutvistanoticiasarevisaridentificado) {
+		this.layoutvistanoticiasarevisaridentificado = layoutvistanoticiasarevisaridentificado;
+	}
+
+	public Element getVistanoticiasarevisaridentificado() {
+		return vistanoticiasarevisaridentificado;
+	}
+
+	public void setVistanoticiasarevisaridentificado(Element vistanoticiasarevisaridentificado) {
+		this.vistanoticiasarevisaridentificado = vistanoticiasarevisaridentificado;
+	}
+
+	public Element getLayoutdaraltabajaperiodistaidentificado() {
+		return layoutdaraltabajaperiodistaidentificado;
+	}
+
+	public void setLayoutdaraltabajaperiodistaidentificado(Element layoutdaraltabajaperiodistaidentificado) {
+		this.layoutdaraltabajaperiodistaidentificado = layoutdaraltabajaperiodistaidentificado;
+	}
+
+	public Button getButtondaraltabajaperiodistaidentificado() {
+		return buttondaraltabajaperiodistaidentificado;
+	}
+
+	public void setButtondaraltabajaperiodistaidentificado(Button buttondaraltabajaperiodistaidentificado) {
+		this.buttondaraltabajaperiodistaidentificado = buttondaraltabajaperiodistaidentificado;
+	}
+
+	public Element getOpcionescuentaidentificado() {
+		return opcionescuentaidentificado;
+	}
+
+	public void setOpcionescuentaidentificado(Element opcionescuentaidentificado) {
+		this.opcionescuentaidentificado = opcionescuentaidentificado;
+	}
+
+	public Button getConfigurarperfilidentificado() {
+		return configurarperfilidentificado;
+	}
+
+	public void setConfigurarperfilidentificado(Button configurarperfilidentificado) {
+		this.configurarperfilidentificado = configurarperfilidentificado;
+	}
+
+	public Image getImagenconfigurarperfilidentificado() {
+		return imagenconfigurarperfilidentificado;
+	}
+
+	public void setImagenconfigurarperfilidentificado(Image imagenconfigurarperfilidentificado) {
+		this.imagenconfigurarperfilidentificado = imagenconfigurarperfilidentificado;
+	}
+
+	public VistaLogout getVistalogoutidentificado() {
+		return vistalogoutidentificado;
+	}
+
+	public void setVistalogoutidentificado(VistaLogout vistalogoutidentificado) {
+		this.vistalogoutidentificado = vistalogoutidentificado;
+	}
+
+	public HorizontalLayout getVaadinHorizontalLayout() {
+		return vaadinHorizontalLayout;
+	}
+
+	public void setVaadinHorizontalLayout(HorizontalLayout vaadinHorizontalLayout) {
+		this.vaadinHorizontalLayout = vaadinHorizontalLayout;
+	}
+
+	public Element getLayoutnoticiasportadaidentificado() {
+		return layoutnoticiasportadaidentificado;
+	}
+
+	public void setLayoutnoticiasportadaidentificado(Element layoutnoticiasportadaidentificado) {
+		this.layoutnoticiasportadaidentificado = layoutnoticiasportadaidentificado;
+	}
+
+	public Element getVistanoticiasportadaidentificado() {
+		return vistanoticiasportadaidentificado;
+	}
+
+	public void setVistanoticiasportadaidentificado(Element vistanoticiasportadaidentificado) {
+		this.vistanoticiasportadaidentificado = vistanoticiasportadaidentificado;
+	}
+
 	@Id("Layoutlogoidentificado")
 	private Element layoutlogoidentificado;
 	@Id("Buttonlogoidentificado")

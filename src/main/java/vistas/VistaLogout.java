@@ -12,7 +12,31 @@ import com.vaadin.flow.component.html.Image;
 @JsModule("./src/vista-logout.ts")
 public class VistaLogout extends LitTemplate {
 
-    @Id("Layoutbotonlogout")
+    public Element getLayoutbotonlogout() {
+		return layoutbotonlogout;
+	}
+
+	public void setLayoutbotonlogout(Element layoutbotonlogout) {
+		this.layoutbotonlogout = layoutbotonlogout;
+	}
+
+	public Button getButtonlogout() {
+		return buttonlogout;
+	}
+
+	public void setButtonlogout(Button buttonlogout) {
+		this.buttonlogout = buttonlogout;
+	}
+
+	public Image getImg() {
+		return img;
+	}
+
+	public void setImg(Image img) {
+		this.img = img;
+	}
+
+	@Id("Layoutbotonlogout")
 	private Element layoutbotonlogout;
 	@Id("Buttonlogout")
 	private Button buttonlogout;

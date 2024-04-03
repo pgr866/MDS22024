@@ -11,6 +11,30 @@ import com.vaadin.flow.component.select.Select;
 @JsModule("./src/vista-noticiasarevisar.ts")
 public class VistaNoticiasarevisar extends LitTemplate {
 
+	public Element getLayoutnoticiasarevisar() {
+		return layoutnoticiasarevisar;
+	}
+
+	public void setLayoutnoticiasarevisar(Element layoutnoticiasarevisar) {
+		this.layoutnoticiasarevisar = layoutnoticiasarevisar;
+	}
+
+	public Select getSelectnoticiasarevisar() {
+		return selectnoticiasarevisar;
+	}
+
+	public void setSelectnoticiasarevisar(Select selectnoticiasarevisar) {
+		this.selectnoticiasarevisar = selectnoticiasarevisar;
+	}
+
+	public Element getListboxnoticiasarevisar() {
+		return listboxnoticiasarevisar;
+	}
+
+	public void setListboxnoticiasarevisar(Element listboxnoticiasarevisar) {
+		this.listboxnoticiasarevisar = listboxnoticiasarevisar;
+	}
+
 	@Id("Layoutnoticiasarevisar")
 	private Element layoutnoticiasarevisar;
 	@Id("Selectnoticiasarevisar")

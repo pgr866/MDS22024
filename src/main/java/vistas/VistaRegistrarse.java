@@ -16,6 +16,278 @@ import com.vaadin.flow.component.textfield.PasswordField;
 public class VistaRegistrarse extends LitTemplate {
 
 
+	public HorizontalLayout getLayoutregistrarse() {
+		return layoutregistrarse;
+	}
+
+	public void setLayoutregistrarse(HorizontalLayout layoutregistrarse) {
+		this.layoutregistrarse = layoutregistrarse;
+	}
+
+	public Button getLogoregistrarse() {
+		return logoregistrarse;
+	}
+
+	public void setLogoregistrarse(Button logoregistrarse) {
+		this.logoregistrarse = logoregistrarse;
+	}
+
+	public Image getImagenlogoregistrarse() {
+		return imagenlogoregistrarse;
+	}
+
+	public void setImagenlogoregistrarse(Image imagenlogoregistrarse) {
+		this.imagenlogoregistrarse = imagenlogoregistrarse;
+	}
+
+	public Label getLabelregistrarse() {
+		return labelregistrarse;
+	}
+
+	public void setLabelregistrarse(Label labelregistrarse) {
+		this.labelregistrarse = labelregistrarse;
+	}
+
+	public HorizontalLayout getLayoutemailregistrarse() {
+		return layoutemailregistrarse;
+	}
+
+	public void setLayoutemailregistrarse(HorizontalLayout layoutemailregistrarse) {
+		this.layoutemailregistrarse = layoutemailregistrarse;
+	}
+
+	public Label getLabelemailregistrarse() {
+		return labelemailregistrarse;
+	}
+
+	public void setLabelemailregistrarse(Label labelemailregistrarse) {
+		this.labelemailregistrarse = labelemailregistrarse;
+	}
+
+	public TextField getTextfieldemailregistrarse() {
+		return textfieldemailregistrarse;
+	}
+
+	public void setTextfieldemailregistrarse(TextField textfieldemailregistrarse) {
+		this.textfieldemailregistrarse = textfieldemailregistrarse;
+	}
+
+	public HorizontalLayout getLayoutnombreregistrarse() {
+		return layoutnombreregistrarse;
+	}
+
+	public void setLayoutnombreregistrarse(HorizontalLayout layoutnombreregistrarse) {
+		this.layoutnombreregistrarse = layoutnombreregistrarse;
+	}
+
+	public Label getLabelnombreregistrarse() {
+		return labelnombreregistrarse;
+	}
+
+	public void setLabelnombreregistrarse(Label labelnombreregistrarse) {
+		this.labelnombreregistrarse = labelnombreregistrarse;
+	}
+
+	public TextField getTextfieldnombreregistrarse() {
+		return textfieldnombreregistrarse;
+	}
+
+	public void setTextfieldnombreregistrarse(TextField textfieldnombreregistrarse) {
+		this.textfieldnombreregistrarse = textfieldnombreregistrarse;
+	}
+
+	public HorizontalLayout getLayoutapellidosregistrarse() {
+		return layoutapellidosregistrarse;
+	}
+
+	public void setLayoutapellidosregistrarse(HorizontalLayout layoutapellidosregistrarse) {
+		this.layoutapellidosregistrarse = layoutapellidosregistrarse;
+	}
+
+	public Label getLabelapellidosregistrarse() {
+		return labelapellidosregistrarse;
+	}
+
+	public void setLabelapellidosregistrarse(Label labelapellidosregistrarse) {
+		this.labelapellidosregistrarse = labelapellidosregistrarse;
+	}
+
+	public TextField getTextfieldapellidosregistrarse() {
+		return textfieldapellidosregistrarse;
+	}
+
+	public void setTextfieldapellidosregistrarse(TextField textfieldapellidosregistrarse) {
+		this.textfieldapellidosregistrarse = textfieldapellidosregistrarse;
+	}
+
+	public HorizontalLayout getLayoutfechanacimientoregistrarse() {
+		return layoutfechanacimientoregistrarse;
+	}
+
+	public void setLayoutfechanacimientoregistrarse(HorizontalLayout layoutfechanacimientoregistrarse) {
+		this.layoutfechanacimientoregistrarse = layoutfechanacimientoregistrarse;
+	}
+
+	public Label getLabelfechanacimientoregistrarse() {
+		return labelfechanacimientoregistrarse;
+	}
+
+	public void setLabelfechanacimientoregistrarse(Label labelfechanacimientoregistrarse) {
+		this.labelfechanacimientoregistrarse = labelfechanacimientoregistrarse;
+	}
+
+	public TextField getTextfieldfechanacimientoregistrarse() {
+		return textfieldfechanacimientoregistrarse;
+	}
+
+	public void setTextfieldfechanacimientoregistrarse(TextField textfieldfechanacimientoregistrarse) {
+		this.textfieldfechanacimientoregistrarse = textfieldfechanacimientoregistrarse;
+	}
+
+	public HorizontalLayout getLayoutapodoregistrarse() {
+		return layoutapodoregistrarse;
+	}
+
+	public void setLayoutapodoregistrarse(HorizontalLayout layoutapodoregistrarse) {
+		this.layoutapodoregistrarse = layoutapodoregistrarse;
+	}
+
+	public Label getLabelapodoregistrarse() {
+		return labelapodoregistrarse;
+	}
+
+	public void setLabelapodoregistrarse(Label labelapodoregistrarse) {
+		this.labelapodoregistrarse = labelapodoregistrarse;
+	}
+
+	public TextField getTextfieldregistrarse() {
+		return textfieldregistrarse;
+	}
+
+	public void setTextfieldregistrarse(TextField textfieldregistrarse) {
+		this.textfieldregistrarse = textfieldregistrarse;
+	}
+
+	public HorizontalLayout getLayoutdniregistrarse() {
+		return layoutdniregistrarse;
+	}
+
+	public void setLayoutdniregistrarse(HorizontalLayout layoutdniregistrarse) {
+		this.layoutdniregistrarse = layoutdniregistrarse;
+	}
+
+	public Label getLabeldniregistrarse() {
+		return labeldniregistrarse;
+	}
+
+	public void setLabeldniregistrarse(Label labeldniregistrarse) {
+		this.labeldniregistrarse = labeldniregistrarse;
+	}
+
+	public TextField getTextfielddniregistrarse() {
+		return textfielddniregistrarse;
+	}
+
+	public void setTextfielddniregistrarse(TextField textfielddniregistrarse) {
+		this.textfielddniregistrarse = textfielddniregistrarse;
+	}
+
+	public HorizontalLayout getLayoutntarjetaregistrarse() {
+		return layoutntarjetaregistrarse;
+	}
+
+	public void setLayoutntarjetaregistrarse(HorizontalLayout layoutntarjetaregistrarse) {
+		this.layoutntarjetaregistrarse = layoutntarjetaregistrarse;
+	}
+
+	public Label getLabelntarjetaregistrarse() {
+		return labelntarjetaregistrarse;
+	}
+
+	public void setLabelntarjetaregistrarse(Label labelntarjetaregistrarse) {
+		this.labelntarjetaregistrarse = labelntarjetaregistrarse;
+	}
+
+	public TextField getTextfieldntarjetaregistrarse() {
+		return textfieldntarjetaregistrarse;
+	}
+
+	public void setTextfieldntarjetaregistrarse(TextField textfieldntarjetaregistrarse) {
+		this.textfieldntarjetaregistrarse = textfieldntarjetaregistrarse;
+	}
+
+	public HorizontalLayout getLayoutcontrasenaregistrarse() {
+		return layoutcontrasenaregistrarse;
+	}
+
+	public void setLayoutcontrasenaregistrarse(HorizontalLayout layoutcontrasenaregistrarse) {
+		this.layoutcontrasenaregistrarse = layoutcontrasenaregistrarse;
+	}
+
+	public Label getLabelcontrasenaregistrarse() {
+		return labelcontrasenaregistrarse;
+	}
+
+	public void setLabelcontrasenaregistrarse(Label labelcontrasenaregistrarse) {
+		this.labelcontrasenaregistrarse = labelcontrasenaregistrarse;
+	}
+
+	public PasswordField getPasswordfieldcontrasenaregistrarse() {
+		return passwordfieldcontrasenaregistrarse;
+	}
+
+	public void setPasswordfieldcontrasenaregistrarse(PasswordField passwordfieldcontrasenaregistrarse) {
+		this.passwordfieldcontrasenaregistrarse = passwordfieldcontrasenaregistrarse;
+	}
+
+	public HorizontalLayout getLayoutrepetircontrasenaregistrarse() {
+		return layoutrepetircontrasenaregistrarse;
+	}
+
+	public void setLayoutrepetircontrasenaregistrarse(HorizontalLayout layoutrepetircontrasenaregistrarse) {
+		this.layoutrepetircontrasenaregistrarse = layoutrepetircontrasenaregistrarse;
+	}
+
+	public Label getLabelrepetircontrasenaregistrarse() {
+		return labelrepetircontrasenaregistrarse;
+	}
+
+	public void setLabelrepetircontrasenaregistrarse(Label labelrepetircontrasenaregistrarse) {
+		this.labelrepetircontrasenaregistrarse = labelrepetircontrasenaregistrarse;
+	}
+
+	public PasswordField getPasswordfieldrepetircontrasenaregistrarse() {
+		return passwordfieldrepetircontrasenaregistrarse;
+	}
+
+	public void setPasswordfieldrepetircontrasenaregistrarse(PasswordField passwordfieldrepetircontrasenaregistrarse) {
+		this.passwordfieldrepetircontrasenaregistrarse = passwordfieldrepetircontrasenaregistrarse;
+	}
+
+	public HorizontalLayout getLayoutcancelarenviarregistrarse() {
+		return layoutcancelarenviarregistrarse;
+	}
+
+	public void setLayoutcancelarenviarregistrarse(HorizontalLayout layoutcancelarenviarregistrarse) {
+		this.layoutcancelarenviarregistrarse = layoutcancelarenviarregistrarse;
+	}
+
+	public Button getCancelarregistrarse() {
+		return cancelarregistrarse;
+	}
+
+	public void setCancelarregistrarse(Button cancelarregistrarse) {
+		this.cancelarregistrarse = cancelarregistrarse;
+	}
+
+	public Button getEnviarregistrarse() {
+		return enviarregistrarse;
+	}
+
+	public void setEnviarregistrarse(Button enviarregistrarse) {
+		this.enviarregistrarse = enviarregistrarse;
+	}
+
 	@Id("Layoutregistrarse")
 	private HorizontalLayout layoutregistrarse;
 	@Id("Logoregistrarse")

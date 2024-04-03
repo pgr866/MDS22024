@@ -11,6 +11,31 @@ import com.vaadin.flow.component.combobox.ComboBox;
 @JsModule("./src/vista-listadonoticiasbusquedaidentificado.ts")
 public class VistaListadonoticiasbusquedaidentificado extends LitTemplate {
 
+	public Element getLayoutlistadonoticiasbusquedaidentificado() {
+		return layoutlistadonoticiasbusquedaidentificado;
+	}
+
+	public void setLayoutlistadonoticiasbusquedaidentificado(Element layoutlistadonoticiasbusquedaidentificado) {
+		this.layoutlistadonoticiasbusquedaidentificado = layoutlistadonoticiasbusquedaidentificado;
+	}
+
+	public ComboBox<String> getComboboxlistadonoticiasbusquedaidentificado() {
+		return comboboxlistadonoticiasbusquedaidentificado;
+	}
+
+	public void setComboboxlistadonoticiasbusquedaidentificado(
+			ComboBox<String> comboboxlistadonoticiasbusquedaidentificado) {
+		this.comboboxlistadonoticiasbusquedaidentificado = comboboxlistadonoticiasbusquedaidentificado;
+	}
+
+	public Element getIronIcon() {
+		return ironIcon;
+	}
+
+	public void setIronIcon(Element ironIcon) {
+		this.ironIcon = ironIcon;
+	}
+
 	@Id("Layoutlistadonoticiasbusquedaidentificado")
 	private Element layoutlistadonoticiasbusquedaidentificado;
 	@Id("Comboboxlistadonoticiasbusquedaidentificado")

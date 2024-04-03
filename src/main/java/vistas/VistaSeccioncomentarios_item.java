@@ -18,6 +18,114 @@ import vistas.VistaMostrarvaloracioncomentario;
 @JsModule("./src/vista-seccioncomentarios_item.ts")
 public class VistaSeccioncomentarios_item extends LitTemplate {
 
+	public HorizontalLayout getVaadinHorizontalLayout() {
+		return vaadinHorizontalLayout;
+	}
+
+	public void setVaadinHorizontalLayout(HorizontalLayout vaadinHorizontalLayout) {
+		this.vaadinHorizontalLayout = vaadinHorizontalLayout;
+	}
+
+	public Element getVaadinVerticalLayout() {
+		return vaadinVerticalLayout;
+	}
+
+	public void setVaadinVerticalLayout(Element vaadinVerticalLayout) {
+		this.vaadinVerticalLayout = vaadinVerticalLayout;
+	}
+
+	public Image getFotousuarioseccioncomentariositem() {
+		return fotousuarioseccioncomentariositem;
+	}
+
+	public void setFotousuarioseccioncomentariositem(Image fotousuarioseccioncomentariositem) {
+		this.fotousuarioseccioncomentariositem = fotousuarioseccioncomentariositem;
+	}
+
+	public Element getLayoutnickusuarioseccioncomentariositem() {
+		return layoutnickusuarioseccioncomentariositem;
+	}
+
+	public void setLayoutnickusuarioseccioncomentariositem(Element layoutnickusuarioseccioncomentariositem) {
+		this.layoutnickusuarioseccioncomentariositem = layoutnickusuarioseccioncomentariositem;
+	}
+
+	public Label getLabelnickusuarioseccioncomentariositem() {
+		return labelnickusuarioseccioncomentariositem;
+	}
+
+	public void setLabelnickusuarioseccioncomentariositem(Label labelnickusuarioseccioncomentariositem) {
+		this.labelnickusuarioseccioncomentariositem = labelnickusuarioseccioncomentariositem;
+	}
+
+	public HorizontalLayout getVaadinHorizontalLayout1() {
+		return vaadinHorizontalLayout1;
+	}
+
+	public void setVaadinHorizontalLayout1(HorizontalLayout vaadinHorizontalLayout1) {
+		this.vaadinHorizontalLayout1 = vaadinHorizontalLayout1;
+	}
+
+	public Element getLayoutvistamostrarcomentarioseccioncomentariositem() {
+		return layoutvistamostrarcomentarioseccioncomentariositem;
+	}
+
+	public void setLayoutvistamostrarcomentarioseccioncomentariositem(
+			Element layoutvistamostrarcomentarioseccioncomentariositem) {
+		this.layoutvistamostrarcomentarioseccioncomentariositem = layoutvistamostrarcomentarioseccioncomentariositem;
+	}
+
+	public VistaMostrarcomentario getVistamostrarcomentarioseccioncomentariositem() {
+		return vistamostrarcomentarioseccioncomentariositem;
+	}
+
+	public void setVistamostrarcomentarioseccioncomentariositem(
+			VistaMostrarcomentario vistamostrarcomentarioseccioncomentariositem) {
+		this.vistamostrarcomentarioseccioncomentariositem = vistamostrarcomentarioseccioncomentariositem;
+	}
+
+	public Element getLayoutborrarcomentarioseccioncomentariositem() {
+		return layoutborrarcomentarioseccioncomentariositem;
+	}
+
+	public void setLayoutborrarcomentarioseccioncomentariositem(Element layoutborrarcomentarioseccioncomentariositem) {
+		this.layoutborrarcomentarioseccioncomentariositem = layoutborrarcomentarioseccioncomentariositem;
+	}
+
+	public Image getImagenborrarcomentarioseccioncomentariositem() {
+		return imagenborrarcomentarioseccioncomentariositem;
+	}
+
+	public void setImagenborrarcomentarioseccioncomentariositem(Image imagenborrarcomentarioseccioncomentariositem) {
+		this.imagenborrarcomentarioseccioncomentariositem = imagenborrarcomentarioseccioncomentariositem;
+	}
+
+	public Button getSeccioncomentariositem() {
+		return seccioncomentariositem;
+	}
+
+	public void setSeccioncomentariositem(Button seccioncomentariositem) {
+		this.seccioncomentariositem = seccioncomentariositem;
+	}
+
+	public Element getLayoutvistamostrarvaloracioncomentarioseccioncomentariositem() {
+		return layoutvistamostrarvaloracioncomentarioseccioncomentariositem;
+	}
+
+	public void setLayoutvistamostrarvaloracioncomentarioseccioncomentariositem(
+			Element layoutvistamostrarvaloracioncomentarioseccioncomentariositem) {
+		this.layoutvistamostrarvaloracioncomentarioseccioncomentariositem = layoutvistamostrarvaloracioncomentarioseccioncomentariositem;
+	}
+
+	public VistaMostrarvaloracioncomentario getVistamostrarcomentarioseccioncomentariositem1() {
+		return vistamostrarcomentarioseccioncomentariositem1;
+	}
+
+	public void setVistamostrarcomentarioseccioncomentariositem1(
+			VistaMostrarvaloracioncomentario vistamostrarcomentarioseccioncomentariositem1) {
+		this.vistamostrarcomentarioseccioncomentariositem1 = vistamostrarcomentarioseccioncomentariositem1;
+	}
+
 	@Id("vaadinHorizontalLayout")
 	private HorizontalLayout vaadinHorizontalLayout;
 	@Id("vaadinVerticalLayout")

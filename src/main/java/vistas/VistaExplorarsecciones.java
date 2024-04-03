@@ -13,7 +13,64 @@ import com.vaadin.flow.component.button.Button;
 @JsModule("./src/vista-explorarsecciones.ts")
 public class VistaExplorarsecciones extends LitTemplate {
 
-    @Id("Layoutvistaseccionesexplorarsecciones")
+    public Element getLayoutvistaseccionesexplorarsecciones() {
+		return layoutvistaseccionesexplorarsecciones;
+	}
+	public void setLayoutvistaseccionesexplorarsecciones(Element layoutvistaseccionesexplorarsecciones) {
+		this.layoutvistaseccionesexplorarsecciones = layoutvistaseccionesexplorarsecciones;
+	}
+	public Element getVistaseccionesexplorarsecciones() {
+		return vistaseccionesexplorarsecciones;
+	}
+	public void setVistaseccionesexplorarsecciones(Element vistaseccionesexplorarsecciones) {
+		this.vistaseccionesexplorarsecciones = vistaseccionesexplorarsecciones;
+	}
+	public HorizontalLayout getLayoutnombrebotonesexplorarsecciones() {
+		return layoutnombrebotonesexplorarsecciones;
+	}
+	public void setLayoutnombrebotonesexplorarsecciones(HorizontalLayout layoutnombrebotonesexplorarsecciones) {
+		this.layoutnombrebotonesexplorarsecciones = layoutnombrebotonesexplorarsecciones;
+	}
+	public TextField getTextfieldnombreexplorarsecciones() {
+		return textfieldnombreexplorarsecciones;
+	}
+	public void setTextfieldnombreexplorarsecciones(TextField textfieldnombreexplorarsecciones) {
+		this.textfieldnombreexplorarsecciones = textfieldnombreexplorarsecciones;
+	}
+	public Button getButtonanadirseccionexplorarsecciones() {
+		return buttonanadirseccionexplorarsecciones;
+	}
+	public void setButtonanadirseccionexplorarsecciones(Button buttonanadirseccionexplorarsecciones) {
+		this.buttonanadirseccionexplorarsecciones = buttonanadirseccionexplorarsecciones;
+	}
+	public Button getButtoneliminarexplorarsecciones() {
+		return buttoneliminarexplorarsecciones;
+	}
+	public void setButtoneliminarexplorarsecciones(Button buttoneliminarexplorarsecciones) {
+		this.buttoneliminarexplorarsecciones = buttoneliminarexplorarsecciones;
+	}
+	public HorizontalLayout getLayoutvistasnoticiasenseccionexplorarsecciones() {
+		return layoutvistasnoticiasenseccionexplorarsecciones;
+	}
+	public void setLayoutvistasnoticiasenseccionexplorarsecciones(
+			HorizontalLayout layoutvistasnoticiasenseccionexplorarsecciones) {
+		this.layoutvistasnoticiasenseccionexplorarsecciones = layoutvistasnoticiasenseccionexplorarsecciones;
+	}
+	public Element getVistanoticiasseccionusuarionoregistradoexplorarsecciones() {
+		return vistanoticiasseccionusuarionoregistradoexplorarsecciones;
+	}
+	public void setVistanoticiasseccionusuarionoregistradoexplorarsecciones(
+			Element vistanoticiasseccionusuarionoregistradoexplorarsecciones) {
+		this.vistanoticiasseccionusuarionoregistradoexplorarsecciones = vistanoticiasseccionusuarionoregistradoexplorarsecciones;
+	}
+	public Element getVistanoticiasseccionidentificadoexplorarsecciones() {
+		return vistanoticiasseccionidentificadoexplorarsecciones;
+	}
+	public void setVistanoticiasseccionidentificadoexplorarsecciones(
+			Element vistanoticiasseccionidentificadoexplorarsecciones) {
+		this.vistanoticiasseccionidentificadoexplorarsecciones = vistanoticiasseccionidentificadoexplorarsecciones;
+	}
+	@Id("Layoutvistaseccionesexplorarsecciones")
 	private Element layoutvistaseccionesexplorarsecciones;
 	@Id("vistaseccionesexplorarsecciones")
 	private Element vistaseccionesexplorarsecciones;
