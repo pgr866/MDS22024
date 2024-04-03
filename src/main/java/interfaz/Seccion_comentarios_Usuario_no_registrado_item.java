@@ -2,9 +2,12 @@ package interfaz;
 
 public class Seccion_comentarios_Usuario_no_registrado_item extends Seccion_comentarios_item {
 	public Seccion_comentarios_Usuario_no_registrado _seccion_comentarios_Usuario_no_registrado;
-	
-	public Seccion_comentarios_Usuario_no_registrado_item(Seccion_comentarios _seccion_comentarios) {
-		super(_seccion_comentarios);
+
+	public Seccion_comentarios_Usuario_no_registrado_item(Seccion_comentarios_Usuario_no_registrado _seccion_comentarios_Usuario_no_registrado,
+			interfaz.Mostrar_comentario _mostrar_comentario,
+			interfaz.Mostrar_valoracion_comentario _mostrar_valoracion_comentario) {
+		super(_seccion_comentarios_Usuario_no_registrado, _mostrar_comentario, _mostrar_valoracion_comentario);
+		this._seccion_comentarios_Usuario_no_registrado = _seccion_comentarios_Usuario_no_registrado;
 		this.getLayoutborrarcomentarioseccioncomentariositem().setVisible(false);
 		this.getVistamostrarcomentarioseccioncomentariositem1().getMegustaseccioncomentariositem().setDisableOnClick(true);
 		this.getVistamostrarcomentarioseccioncomentariositem1().getNomegustaseccioncomentariositem().setDisableOnClick(true);

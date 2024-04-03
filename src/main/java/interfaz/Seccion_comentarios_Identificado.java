@@ -12,4 +12,6 @@ public class Seccion_comentarios_Identificado extends Seccion_comentarios {
 		super();
 		this._pagina_noticia_Identificado = _pagina_noticia_Identificado;
 	}
+	
+	
 }

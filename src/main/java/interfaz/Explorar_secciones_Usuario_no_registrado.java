@@ -14,10 +14,7 @@ public class Explorar_secciones_Usuario_no_registrado extends Explorar_secciones
 		this._usuario_no_Registrado = _usuario_no_Registrado;
 		this._noticias_en_seccion_Usuario_no_registrado = _noticias_en_seccion_Usuario_no_registrado;
 		this.getLayoutnombrebotonesexplorarsecciones().setVisible(false);
-
 	}
-	
-
 	
 	public void Noticias_en_seccion_Usuario_no_registrado() {
 		throw new UnsupportedOperationException();

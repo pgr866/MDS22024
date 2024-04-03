@@ -8,5 +8,6 @@ public class Listado_noticias_portada_item extends VistaListadonoticiasportada_i
 	public Listado_noticias_portada_item(Listado_noticias_portada _listado_noticias_portada) {
 		super();
 		this._listado_noticias_portada = _listado_noticias_portada;
+		this.getComboboxtitulolistadonoticiasportada().setVisible(false);
 	}
 }

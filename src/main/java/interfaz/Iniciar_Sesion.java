@@ -11,12 +11,13 @@ public class Iniciar_Sesion extends VistaIniciarsesion {
 //	private TextArea _introducir_contrasena;
 	public Usuario_no_Registrado _usuario_no_Registrado;
 	public Registrarse _registrarse;
-	
-	public Iniciar_Sesion(Usuario_no_Registrado u) {
+
+	public Iniciar_Sesion(Usuario_no_Registrado _usuario_no_Registrado, interfaz.Registrarse _registrarse) {
 		super();
-		this._usuario_no_Registrado=u;
-		
+		this._usuario_no_Registrado = _usuario_no_Registrado;
+		this._registrarse = _registrarse;
 	}
+
 //		
 //		this.getBotonlogin().addClickListener(event->
 //		{
