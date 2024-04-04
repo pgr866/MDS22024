@@ -28,7 +28,7 @@ public class Identificado extends VistaIdentificado {
 	}
 
 	public void Buscar_Identificado() {
-		throw new UnsupportedOperationException();
+		this.getLayoutvistabuscaridentificado().as(VerticalLayout.class).add(_buscar_periodista);
 	}
 
 	public void Explorar_secciones_Identificado() {
