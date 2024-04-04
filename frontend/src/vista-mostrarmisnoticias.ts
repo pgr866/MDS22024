@@ -1,4 +1,7 @@
 import { LitElement, html, css, customElement } from 'lit-element';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
+import '@vaadin/vaadin-combo-box/src/vaadin-combo-box.js';
+import '@polymer/iron-icon/iron-icon.js';
 
 @customElement('vista-mostrarmisnoticias')
 export class VistaMostrarmisnoticias extends LitElement {

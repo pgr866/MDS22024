@@ -160,14 +160,6 @@ public class VistaIdentificado extends LitTemplate {
 		this.imagenconfigurarperfilidentificado = imagenconfigurarperfilidentificado;
 	}
 
-	public VistaLogout getVistalogoutidentificado() {
-		return vistalogoutidentificado;
-	}
-
-	public void setVistalogoutidentificado(VistaLogout vistalogoutidentificado) {
-		this.vistalogoutidentificado = vistalogoutidentificado;
-	}
-
 	public HorizontalLayout getVaadinHorizontalLayout() {
 		return vaadinHorizontalLayout;
 	}
@@ -228,14 +220,21 @@ public class VistaIdentificado extends LitTemplate {
 	private Button configurarperfilidentificado;
 	@Id("Imagenconfigurarperfilidentificado")
 	private Image imagenconfigurarperfilidentificado;
-	@Id("vistalogoutidentificado")
-	private VistaLogout vistalogoutidentificado;
 	@Id("vaadinHorizontalLayout")
 	private HorizontalLayout vaadinHorizontalLayout;
 	@Id("Layoutnoticiasportadaidentificado")
 	private Element layoutnoticiasportadaidentificado;
 	@Id("vistanoticiasportadaidentificado")
 	private Element vistanoticiasportadaidentificado;
+	@Id("vistalogoutidentificado")
+	private Element vistalogoutidentificado;
+	public Element getVistalogoutidentificado() {
+		return vistalogoutidentificado;
+	}
+
+	public void setVistalogoutidentificado(Element vistalogoutidentificado) {
+		this.vistalogoutidentificado = vistalogoutidentificado;
+	}
 
 	public VistaIdentificado() {
         // You can initialise any data required for the connected UI components here.

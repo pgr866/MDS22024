@@ -1,6 +1,9 @@
 package interfaz;
 
 import vistas.VistaIdentificado;
+
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+
 import proyectoMDS.MainView;
 
 //import basededatos.iIdentificado;
@@ -16,6 +19,8 @@ public class Identificado extends VistaIdentificado {
 	public MainView mainview;
 	public Identificado(MainView mainview) {
 		this.mainview = mainview;
+		_log_out = new Log_out(this);
+		Log_out();
 	}
 
 	public void Listado_noticias_portada_Identificado() {
@@ -31,7 +36,7 @@ public class Identificado extends VistaIdentificado {
 	}
 
 	public void Log_out() {
-		throw new UnsupportedOperationException();
+		this.getOpcionescuentaidentificado().as(VerticalLayout.class).add(_log_out);
 	}
 
 	public void Configurar_perfil() {

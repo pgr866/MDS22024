@@ -10,6 +10,7 @@ public class Explorar_secciones extends vistas.VistaExplorarsecciones {
 	public Explorar_secciones(interfaz.Secciones _secciones) {
 		super();
 		this._secciones = _secciones;
+		//this.get
 	}
 
 	public void Secciones() {

@@ -15,7 +15,15 @@ import vistas.VistaBuscarperiodista;
 @JsModule("./src/vista-bajaaltaperiodistas.ts")
 public class VistaBajaaltaperiodistas extends LitTemplate {
 
-    public Element getLayoutdaraltaperiodista() {
+    public Element getLayoutbuscarperiodistabajaaltaperiodistas() {
+		return layoutbuscarperiodistabajaaltaperiodistas;
+	}
+
+	public void setLayoutbuscarperiodistabajaaltaperiodistas(Element layoutbuscarperiodistabajaaltaperiodistas) {
+		this.layoutbuscarperiodistabajaaltaperiodistas = layoutbuscarperiodistabajaaltaperiodistas;
+	}
+
+	public Element getLayoutdaraltaperiodista() {
 		return layoutdaraltaperiodista;
 	}
 
@@ -183,22 +191,6 @@ public class VistaBajaaltaperiodistas extends LitTemplate {
 		this.labeldarbajaperiodista = labeldarbajaperiodista;
 	}
 
-	public HorizontalLayout getLayoutvistadarbajaperiodista() {
-		return layoutvistadarbajaperiodista;
-	}
-
-	public void setLayoutvistadarbajaperiodista(HorizontalLayout layoutvistadarbajaperiodista) {
-		this.layoutvistadarbajaperiodista = layoutvistadarbajaperiodista;
-	}
-
-	public VistaBuscarperiodista getBusquedadarbajaperiodista() {
-		return busquedadarbajaperiodista;
-	}
-
-	public void setBusquedadarbajaperiodista(VistaBuscarperiodista busquedadarbajaperiodista) {
-		this.busquedadarbajaperiodista = busquedadarbajaperiodista;
-	}
-
 	public Button getButtondarbajaperiodista() {
 		return buttondarbajaperiodista;
 	}
@@ -249,12 +241,10 @@ public class VistaBajaaltaperiodistas extends LitTemplate {
 	private Element layoutdarbajaperiodista;
 	@Id("Labeldarbajaperiodista")
 	private Label labeldarbajaperiodista;
-	@Id("Layoutvistadarbajaperiodista")
-	private HorizontalLayout layoutvistadarbajaperiodista;
-	@Id("Busquedadarbajaperiodista")
-	private VistaBuscarperiodista busquedadarbajaperiodista;
 	@Id("Buttondarbajaperiodista")
 	private Button buttondarbajaperiodista;
+	@Id("Layoutbuscarperiodistabajaaltaperiodistas")
+	private Element layoutbuscarperiodistabajaaltaperiodistas;
 
 	public VistaBajaaltaperiodistas() {
         // You can initialise any data required for the connected UI components here.

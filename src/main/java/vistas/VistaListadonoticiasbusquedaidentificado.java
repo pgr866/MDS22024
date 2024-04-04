@@ -28,21 +28,11 @@ public class VistaListadonoticiasbusquedaidentificado extends LitTemplate {
 		this.comboboxlistadonoticiasbusquedaidentificado = comboboxlistadonoticiasbusquedaidentificado;
 	}
 
-	public Element getIronIcon() {
-		return ironIcon;
-	}
-
-	public void setIronIcon(Element ironIcon) {
-		this.ironIcon = ironIcon;
-	}
-
 	@Id("Layoutlistadonoticiasbusquedaidentificado")
 	private Element layoutlistadonoticiasbusquedaidentificado;
 	@Id("Comboboxlistadonoticiasbusquedaidentificado")
 	private ComboBox<String> comboboxlistadonoticiasbusquedaidentificado;
-	@Id("ironIcon")
-	private Element ironIcon;
-
+	
 	public VistaListadonoticiasbusquedaidentificado() {
         // You can initialise any data required for the connected UI components here.
     }
