@@ -128,14 +128,6 @@ public class VistaPaginanoticia extends LitTemplate {
 		this.vistaMostrarnoticiaextendida = vistaMostrarnoticiaextendida;
 	}
 
-	public Element getVaadinVerticalLayout1() {
-		return vaadinVerticalLayout1;
-	}
-
-	public void setVaadinVerticalLayout1(Element vaadinVerticalLayout1) {
-		this.vaadinVerticalLayout1 = vaadinVerticalLayout1;
-	}
-
 	public Element getVistaSeccioncomentarios() {
 		return vistaSeccioncomentarios;
 	}
@@ -172,11 +164,10 @@ public class VistaPaginanoticia extends LitTemplate {
 	private VistaMostrarnoticiaresumida vistaMostrarnoticiaresumida;
 	@Id("vistaMostrarnoticiaextendida")
 	private VistaMostrarnoticiaextendida vistaMostrarnoticiaextendida;
-	@Id("vaadinVerticalLayout1")
-	private Element vaadinVerticalLayout1;
-	@Id("vistaSeccioncomentarios")
+	@Id("vistaSeccioncomentarios")//Creo que cuelga
 	private Element vistaSeccioncomentarios;
-
+	@Id("Layoutseccioncomentariospaginanoticia")
+	private Element layoutseccioncomentariospaginanoticia;
 	public VistaPaginanoticia() {
         // You can initialise any data required for the connected UI components here.
     }

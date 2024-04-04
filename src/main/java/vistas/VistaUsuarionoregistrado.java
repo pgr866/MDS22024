@@ -87,22 +87,6 @@ public class VistaUsuarionoregistrado extends LitTemplate {
 		this.iniciarsesion = iniciarsesion;
 	}
 
-	public Element getLayoutanuncioizquierda() {
-		return layoutanuncioizquierda;
-	}
-
-	public void setLayoutanuncioizquierda(Element layoutanuncioizquierda) {
-		this.layoutanuncioizquierda = layoutanuncioizquierda;
-	}
-
-	public VistaMostrarpublicidad getAnuncioizquierda() {
-		return anuncioizquierda;
-	}
-
-	public void setAnuncioizquierda(VistaMostrarpublicidad anuncioizquierda) {
-		this.anuncioizquierda = anuncioizquierda;
-	}
-
 	public Element getLayoutnoticiasportadanoregistrado() {
 		return layoutnoticiasportadanoregistrado;
 	}
@@ -111,28 +95,12 @@ public class VistaUsuarionoregistrado extends LitTemplate {
 		this.layoutnoticiasportadanoregistrado = layoutnoticiasportadanoregistrado;
 	}
 
-	public Element getNoticiasportadanoregistrado() {
-		return noticiasportadanoregistrado;
-	}
-
-	public void setNoticiasportadanoregistrado(Element noticiasportadanoregistrado) {
-		this.noticiasportadanoregistrado = noticiasportadanoregistrado;
-	}
-
 	public Element getLayoutanuncioderecha() {
 		return layoutanuncioderecha;
 	}
 
 	public void setLayoutanuncioderecha(Element layoutanuncioderecha) {
 		this.layoutanuncioderecha = layoutanuncioderecha;
-	}
-
-	public VistaMostrarpublicidad getAnuncioderecha() {
-		return anuncioderecha;
-	}
-
-	public void setAnuncioderecha(VistaMostrarpublicidad anuncioderecha) {
-		this.anuncioderecha = anuncioderecha;
 	}
 
 	@Id("Layoutligonoregistrado")
@@ -153,19 +121,16 @@ public class VistaUsuarionoregistrado extends LitTemplate {
 	private Element layoutiniciarsesion;
 	@Id("Iniciarsesion")
 	private Button iniciarsesion;
-	@Id("Layoutanuncioizquierda")
-	private Element layoutanuncioizquierda;
-	@Id("Anuncioizquierda")
-	private VistaMostrarpublicidad anuncioizquierda;
 	@Id("Layoutnoticiasportadanoregistrado")
 	private Element layoutnoticiasportadanoregistrado;
-	@Id("Noticiasportadanoregistrado")
-	private Element noticiasportadanoregistrado;
 	@Id("Layoutanuncioderecha")
 	private Element layoutanuncioderecha;
-	@Id("Anuncioderecha")
-	private VistaMostrarpublicidad anuncioderecha;
-
+	@Id("Layoutanuncioderechausuarionoregistrado")
+	private Element layoutanuncioderechausuarionoregistrado;
+	@Id("Layoutnoticiasportadausuarionoregistrado")
+	private Element layoutnoticiasportadausuarionoregistrado;
+	@Id("Layoutanuncioizquierdausuarionoregistrado")
+	private Element layoutanuncioizquierdausuarionoregistrado;
 	public VistaUsuarionoregistrado() {
         // You can initialise any data required for the connected UI components here.
     }

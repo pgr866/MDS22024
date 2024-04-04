@@ -80,14 +80,6 @@ public class VistaIdentificado extends LitTemplate {
 		this.layoutvermisnoticiasidentificado = layoutvermisnoticiasidentificado;
 	}
 
-	public VistaMostrarmisnoticias getVistavermisnoticiasidentificado() {
-		return vistavermisnoticiasidentificado;
-	}
-
-	public void setVistavermisnoticiasidentificado(VistaMostrarmisnoticias vistavermisnoticiasidentificado) {
-		this.vistavermisnoticiasidentificado = vistavermisnoticiasidentificado;
-	}
-
 	public Element getLayoutcrearnuevanoticiaidentificado() {
 		return layoutcrearnuevanoticiaidentificado;
 	}
@@ -110,14 +102,6 @@ public class VistaIdentificado extends LitTemplate {
 
 	public void setLayoutvistanoticiasarevisaridentificado(Element layoutvistanoticiasarevisaridentificado) {
 		this.layoutvistanoticiasarevisaridentificado = layoutvistanoticiasarevisaridentificado;
-	}
-
-	public Element getVistanoticiasarevisaridentificado() {
-		return vistanoticiasarevisaridentificado;
-	}
-
-	public void setVistanoticiasarevisaridentificado(Element vistanoticiasarevisaridentificado) {
-		this.vistanoticiasarevisaridentificado = vistanoticiasarevisaridentificado;
 	}
 
 	public Element getLayoutdaraltabajaperiodistaidentificado() {
@@ -200,16 +184,12 @@ public class VistaIdentificado extends LitTemplate {
 	private Button explorarseccionesidentificado;
 	@Id("Layoutvermisnoticiasidentificado")
 	private Element layoutvermisnoticiasidentificado;
-	@Id("Vistavermisnoticiasidentificado")
-	private VistaMostrarmisnoticias vistavermisnoticiasidentificado;
 	@Id("Layoutcrearnuevanoticiaidentificado")
 	private Element layoutcrearnuevanoticiaidentificado;
 	@Id("Buttoncrearnuevanoticiaidentificado")
 	private Button buttoncrearnuevanoticiaidentificado;
 	@Id("Layoutvistanoticiasarevisaridentificado")
 	private Element layoutvistanoticiasarevisaridentificado;
-	@Id("Vistanoticiasarevisaridentificado")
-	private Element vistanoticiasarevisaridentificado;
 	@Id("Layoutdaraltabajaperiodistaidentificado")
 	private Element layoutdaraltabajaperiodistaidentificado;
 	@Id("Buttondaraltabajaperiodistaidentificado")

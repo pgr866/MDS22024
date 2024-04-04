@@ -1,8 +1,6 @@
 import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
-import './vista-mostrarmisnoticias';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
-import './vista-noticiasarevisar';
 import './vista-listadonoticiasportada';
 import './vista-logout';
 import '@vaadin/vaadin-button/src/vaadin-button.js';
@@ -38,17 +36,13 @@ export class VistaIdentificado extends LitElement {
        Explorar secciones 
      </vaadin-button>
     </vaadin-vertical-layout>
-    <vaadin-vertical-layout style="flex-shrink: 0; width: 30%; height: 100%;" id="Layoutvermisnoticiasidentificado">
-     <vista-mostrarmisnoticias style="width: 100%; height: 100%; flex-shrink: 0;" id="Vistavermisnoticiasidentificado"></vista-mostrarmisnoticias>
-    </vaadin-vertical-layout>
+    <vaadin-vertical-layout style="flex-shrink: 0; width: 30%; height: 100%;" id="Layoutvermisnoticiasidentificado"></vaadin-vertical-layout>
     <vaadin-vertical-layout style="flex-shrink: 0; width: 30%; height: 100%;" id="Layoutcrearnuevanoticiaidentificado">
      <vaadin-button style="width: 100%; height: 100%; flex-shrink: 1;" id="Buttoncrearnuevanoticiaidentificado">
        Crear nueva noticia 
      </vaadin-button>
     </vaadin-vertical-layout>
-    <vaadin-vertical-layout style="flex-shrink: 0; width: 30%; height: 100%;" id="Layoutvistanoticiasarevisaridentificado">
-     <vista-noticiasarevisar style="flex-shrink: 0; width: 100%; height: 100%;" id="Vistanoticiasarevisaridentificado"></vista-noticiasarevisar>
-    </vaadin-vertical-layout>
+    <vaadin-vertical-layout style="flex-shrink: 0; width: 30%; height: 100%;" id="Layoutvistanoticiasarevisaridentificado"></vaadin-vertical-layout>
     <vaadin-vertical-layout style="flex-shrink: 0; width: 30%; height: 100%;" id="Layoutdaraltabajaperiodistaidentificado">
      <vaadin-button style="width: 100%; height: 100%; flex-shrink: 1;" id="Buttondaraltabajaperiodistaidentificado">
        Dar Alta/Baja Periodista 

@@ -1,7 +1,6 @@
 import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
-import './vista-seccioncomentarios';
 import './vista-mostrarnoticiaresumida';
 import './vista-mostrarnoticiaextendida';
 import './vista-mostrarvaloracionnoticia';
@@ -43,9 +42,7 @@ export class VistaPaginanoticia extends LitElement {
    </vaadin-horizontal-layout>
   </vaadin-vertical-layout>
  </vaadin-vertical-layout>
- <vaadin-vertical-layout style="width: 100%; flex-shrink: 0; flex-grow: 1;" id="vaadinVerticalLayout1">
-  <vista-seccioncomentarios style="flex-shrink: 0; width: 100%; height: 100%;" id="vistaSeccioncomentarios"></vista-seccioncomentarios>
- </vaadin-vertical-layout>
+ <vaadin-vertical-layout style="width: 100%; flex-shrink: 0; flex-grow: 1;" id="Layoutseccioncomentariospaginanoticia"></vaadin-vertical-layout>
 </vaadin-vertical-layout>
 `;
   }

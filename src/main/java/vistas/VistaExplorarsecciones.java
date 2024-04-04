@@ -19,12 +19,7 @@ public class VistaExplorarsecciones extends LitTemplate {
 	public void setLayoutvistaseccionesexplorarsecciones(Element layoutvistaseccionesexplorarsecciones) {
 		this.layoutvistaseccionesexplorarsecciones = layoutvistaseccionesexplorarsecciones;
 	}
-	public Element getVistaseccionesexplorarsecciones() {
-		return vistaseccionesexplorarsecciones;
-	}
-	public void setVistaseccionesexplorarsecciones(Element vistaseccionesexplorarsecciones) {
-		this.vistaseccionesexplorarsecciones = vistaseccionesexplorarsecciones;
-	}
+	
 	public HorizontalLayout getLayoutnombrebotonesexplorarsecciones() {
 		return layoutnombrebotonesexplorarsecciones;
 	}
@@ -72,8 +67,6 @@ public class VistaExplorarsecciones extends LitTemplate {
 	}
 	@Id("Layoutvistaseccionesexplorarsecciones")
 	private Element layoutvistaseccionesexplorarsecciones;
-	@Id("vistaseccionesexplorarsecciones")
-	private Element vistaseccionesexplorarsecciones;
 	@Id("Layoutnombrebotonesexplorarsecciones")
 	private HorizontalLayout layoutnombrebotonesexplorarsecciones;
 	@Id("Textfieldnombreexplorarsecciones")
