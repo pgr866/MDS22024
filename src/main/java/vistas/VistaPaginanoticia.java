@@ -16,7 +16,15 @@ import vistas.VistaMostrarnoticiaextendida;
 @JsModule("./src/vista-paginanoticia.ts")
 public class VistaPaginanoticia extends LitTemplate {
 
-    public Element getVaadinVerticalLayout() {
+    public Element getLayoutseccioncomentariospaginanoticia() {
+		return layoutseccioncomentariospaginanoticia;
+	}
+
+	public void setLayoutseccioncomentariospaginanoticia(Element layoutseccioncomentariospaginanoticia) {
+		this.layoutseccioncomentariospaginanoticia = layoutseccioncomentariospaginanoticia;
+	}
+
+	public Element getVaadinVerticalLayout() {
 		return vaadinVerticalLayout;
 	}
 

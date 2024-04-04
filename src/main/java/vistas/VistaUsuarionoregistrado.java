@@ -15,6 +15,30 @@ import vistas.VistaMostrarpublicidad;
 @JsModule("./src/vista-usuarionoregistrado.ts")
 public class VistaUsuarionoregistrado extends LitTemplate {
 
+	public Element getLayoutanuncioderechausuarionoregistrado() {
+		return layoutanuncioderechausuarionoregistrado;
+	}
+
+	public void setLayoutanuncioderechausuarionoregistrado(Element layoutanuncioderechausuarionoregistrado) {
+		this.layoutanuncioderechausuarionoregistrado = layoutanuncioderechausuarionoregistrado;
+	}
+
+	public Element getLayoutnoticiasportadausuarionoregistrado() {
+		return layoutnoticiasportadausuarionoregistrado;
+	}
+
+	public void setLayoutnoticiasportadausuarionoregistrado(Element layoutnoticiasportadausuarionoregistrado) {
+		this.layoutnoticiasportadausuarionoregistrado = layoutnoticiasportadausuarionoregistrado;
+	}
+
+	public Element getLayoutanuncioizquierdausuarionoregistrado() {
+		return layoutanuncioizquierdausuarionoregistrado;
+	}
+
+	public void setLayoutanuncioizquierdausuarionoregistrado(Element layoutanuncioizquierdausuarionoregistrado) {
+		this.layoutanuncioizquierdausuarionoregistrado = layoutanuncioizquierdausuarionoregistrado;
+	}
+
 	public Element getLayoutligonoregistrado() {
 		return layoutligonoregistrado;
 	}

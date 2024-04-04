@@ -28,7 +28,7 @@ public class Identificado extends VistaIdentificado {
 	}
 
 	public void Buscar_Identificado() {
-		this.getLayoutvistabuscaridentificado().as(VerticalLayout.class).add(_buscar_periodista);
+		this.getLayoutvistabuscaridentificado().add(_buscar_Identificado);
 	}
 
 	public void Explorar_secciones_Identificado() {
