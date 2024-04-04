@@ -1,5 +1,7 @@
 package interfaz;
 
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+
 public class Buscar_periodista extends vistas.VistaBuscarperiodista {
 
 	public Baja_Alta_Periodistas _baja_Alta_Periodistas;
@@ -9,10 +11,10 @@ public class Buscar_periodista extends vistas.VistaBuscarperiodista {
 			interfaz.Lista_periodistas _lista_periodistas) {
 		super();
 		this._baja_Alta_Periodistas = _baja_Alta_Periodistas;
-		this._lista_periodistas = _lista_periodistas;
+		this._lista_periodistas = new Lista_periodistas(this);
 	}
-
+	
 	public void Lista_periodistas() {
-		throw new UnsupportedOperationException();
+		this.getLayoutbuscarperiodista().as(VerticalLayout.class).add(_lista_periodistas);
 	}
 }
