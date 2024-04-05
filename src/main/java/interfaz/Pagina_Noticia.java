@@ -10,12 +10,13 @@ public class Pagina_Noticia extends vistas.VistaPaginanoticia {
 //	private label _hashtags;
 	public Mostrar_valoracion_noticia _mostrar_valoracion_noticia;
 	
-	public Pagina_Noticia(Mostrar_valoracion_noticia _mostrar_valoracion_noticia) {
+	public Pagina_Noticia() {
 		super();
-		this._mostrar_valoracion_noticia = _mostrar_valoracion_noticia;
+		this._mostrar_valoracion_noticia = new Mostrar_valoracion_noticia(this);
+		Mostrar_valoracion_noticia();
 	}
 
 	public void Mostrar_valoracion_noticia() {
-		throw new UnsupportedOperationException();
+		this.getMostrarvaloracionnoticiapaginanoticia().add(_mostrar_valoracion_noticia);
 	}
 }

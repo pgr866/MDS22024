@@ -1,5 +1,7 @@
 package interfaz;
 
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+
 import vistas.VistaSeccioncomentarios_item;
 
 public class Seccion_comentarios_item extends VistaSeccioncomentarios_item {
@@ -7,21 +9,22 @@ public class Seccion_comentarios_item extends VistaSeccioncomentarios_item {
 	public Mostrar_comentario _mostrar_comentario;
 	public Mostrar_valoracion_comentario _mostrar_valoracion_comentario;
 	
-	public Seccion_comentarios_item(Seccion_comentarios _seccion_comentarios,
-			interfaz.Mostrar_comentario _mostrar_comentario,
-			interfaz.Mostrar_valoracion_comentario _mostrar_valoracion_comentario) {
+	public Seccion_comentarios_item(Seccion_comentarios _seccion_comentarios) {
 		super();
 		this._seccion_comentarios = _seccion_comentarios;
-		this._mostrar_comentario = _mostrar_comentario;
-		this._mostrar_valoracion_comentario = _mostrar_valoracion_comentario;
+		this._mostrar_comentario = new Mostrar_comentario(this);
+		this._mostrar_valoracion_comentario = new Mostrar_valoracion_comentario(this);
 		this.getLayoutborrarcomentarioseccioncomentariositem().setVisible(false);
+		Mostrar_comentario();
+		Mostrar_valoracion_comentario();
 	}
 
 	public void Mostrar_comentario() {
-		throw new UnsupportedOperationException();
+		this.getLayoutvistamostrarcomentarioseccioncomentariositem().as(VerticalLayout.class).add(_mostrar_comentario);
 	}
 
 	public void Mostrar_valoracion_comentario() {
-		throw new UnsupportedOperationException();
+		this.getLayoutvistamostrarvaloracioncomentarioseccioncomentariositem().as(VerticalLayout.class).add(_mostrar_valoracion_comentario);
+
 	}
 }

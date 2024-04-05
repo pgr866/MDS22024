@@ -16,7 +16,97 @@ import vistas.VistaMostrarnoticiaextendida;
 @JsModule("./src/vista-paginanoticia.ts")
 public class VistaPaginanoticia extends LitTemplate {
 
-    public Element getLayoutseccioncomentariospaginanoticia() {
+    
+	public Element getLayoutcontenedornoticiapaginanoticia() {
+		return layoutcontenedornoticiapaginanoticia;
+	}
+
+	public void setLayoutcontenedornoticiapaginanoticia(Element layoutcontenedornoticiapaginanoticia) {
+		this.layoutcontenedornoticiapaginanoticia = layoutcontenedornoticiapaginanoticia;
+	}
+
+	public Label getLabeltitulonoticiapaginanoticia() {
+		return labeltitulonoticiapaginanoticia;
+	}
+
+	public void setLabeltitulonoticiapaginanoticia(Label labeltitulonoticiapaginanoticia) {
+		this.labeltitulonoticiapaginanoticia = labeltitulonoticiapaginanoticia;
+	}
+
+	public Label getLabeltitulotematicapaginanoticia() {
+		return labeltitulotematicapaginanoticia;
+	}
+
+	public void setLabeltitulotematicapaginanoticia(Label labeltitulotematicapaginanoticia) {
+		this.labeltitulotematicapaginanoticia = labeltitulotematicapaginanoticia;
+	}
+
+	public HorizontalLayout getLayoutimagennoticiapaginanoticia() {
+		return layoutimagennoticiapaginanoticia;
+	}
+
+	public void setLayoutimagennoticiapaginanoticia(HorizontalLayout layoutimagennoticiapaginanoticia) {
+		this.layoutimagennoticiapaginanoticia = layoutimagennoticiapaginanoticia;
+	}
+
+	public Image getImagennoticiapaginanoticia() {
+		return imagennoticiapaginanoticia;
+	}
+
+	public void setImagennoticiapaginanoticia(Image imagennoticiapaginanoticia) {
+		this.imagennoticiapaginanoticia = imagennoticiapaginanoticia;
+	}
+
+	public HorizontalLayout getLayoutfechaautorlugarpaginanoticia() {
+		return layoutfechaautorlugarpaginanoticia;
+	}
+
+	public void setLayoutfechaautorlugarpaginanoticia(HorizontalLayout layoutfechaautorlugarpaginanoticia) {
+		this.layoutfechaautorlugarpaginanoticia = layoutfechaautorlugarpaginanoticia;
+	}
+
+	public Label getLayoutfechapaginanoticia() {
+		return layoutfechapaginanoticia;
+	}
+
+	public void setLayoutfechapaginanoticia(Label layoutfechapaginanoticia) {
+		this.layoutfechapaginanoticia = layoutfechapaginanoticia;
+	}
+
+	public Label getLayoutautorpaginanoticia() {
+		return layoutautorpaginanoticia;
+	}
+
+	public void setLayoutautorpaginanoticia(Label layoutautorpaginanoticia) {
+		this.layoutautorpaginanoticia = layoutautorpaginanoticia;
+	}
+
+	public Label getLayoutlugarpaginanoticia() {
+		return layoutlugarpaginanoticia;
+	}
+
+	public void setLayoutlugarpaginanoticia(Label layoutlugarpaginanoticia) {
+		this.layoutlugarpaginanoticia = layoutlugarpaginanoticia;
+	}
+
+	public HorizontalLayout getMostrarvaloracionnoticiapaginanoticia() {
+		return mostrarvaloracionnoticiapaginanoticia;
+	}
+
+	public void setMostrarvaloracionnoticiapaginanoticia(HorizontalLayout mostrarvaloracionnoticiapaginanoticia) {
+		this.mostrarvaloracionnoticiapaginanoticia = mostrarvaloracionnoticiapaginanoticia;
+	}
+
+	public HorizontalLayout getMostrarnoticiaresumidayextendidapaginanoticia() {
+		return mostrarnoticiaresumidayextendidapaginanoticia;
+	}
+
+	public void setMostrarnoticiaresumidayextendidapaginanoticia(
+			HorizontalLayout mostrarnoticiaresumidayextendidapaginanoticia) {
+		this.mostrarnoticiaresumidayextendidapaginanoticia = mostrarnoticiaresumidayextendidapaginanoticia;
+	}
+
+	public Element getLayoutseccioncomentariospaginanoticia() {
 		return layoutseccioncomentariospaginanoticia;
 	}
 
@@ -24,158 +114,31 @@ public class VistaPaginanoticia extends LitTemplate {
 		this.layoutseccioncomentariospaginanoticia = layoutseccioncomentariospaginanoticia;
 	}
 
-	public Element getVaadinVerticalLayout() {
-		return vaadinVerticalLayout;
-	}
-
-	public void setVaadinVerticalLayout(Element vaadinVerticalLayout) {
-		this.vaadinVerticalLayout = vaadinVerticalLayout;
-	}
-
-	public Label getLabel() {
-		return label;
-	}
-
-	public void setLabel(Label label) {
-		this.label = label;
-	}
-
-	public Label getLabel1() {
-		return label1;
-	}
-
-	public void setLabel1(Label label1) {
-		this.label1 = label1;
-	}
-
-	public HorizontalLayout getVaadinHorizontalLayout() {
-		return vaadinHorizontalLayout;
-	}
-
-	public void setVaadinHorizontalLayout(HorizontalLayout vaadinHorizontalLayout) {
-		this.vaadinHorizontalLayout = vaadinHorizontalLayout;
-	}
-
-	public Image getImg() {
-		return img;
-	}
-
-	public void setImg(Image img) {
-		this.img = img;
-	}
-
-	public HorizontalLayout getVaadinHorizontalLayout1() {
-		return vaadinHorizontalLayout1;
-	}
-
-	public void setVaadinHorizontalLayout1(HorizontalLayout vaadinHorizontalLayout1) {
-		this.vaadinHorizontalLayout1 = vaadinHorizontalLayout1;
-	}
-
-	public Label getLabel2() {
-		return label2;
-	}
-
-	public void setLabel2(Label label2) {
-		this.label2 = label2;
-	}
-
-	public Label getLabel3() {
-		return label3;
-	}
-
-	public void setLabel3(Label label3) {
-		this.label3 = label3;
-	}
-
-	public Label getLabel4() {
-		return label4;
-	}
-
-	public void setLabel4(Label label4) {
-		this.label4 = label4;
-	}
-
-	public HorizontalLayout getVaadinHorizontalLayout2() {
-		return vaadinHorizontalLayout2;
-	}
-
-	public void setVaadinHorizontalLayout2(HorizontalLayout vaadinHorizontalLayout2) {
-		this.vaadinHorizontalLayout2 = vaadinHorizontalLayout2;
-	}
-
-	public VistaMostrarvaloracionnoticia getVistaMostrarvaloracionnoticia() {
-		return vistaMostrarvaloracionnoticia;
-	}
-
-	public void setVistaMostrarvaloracionnoticia(VistaMostrarvaloracionnoticia vistaMostrarvaloracionnoticia) {
-		this.vistaMostrarvaloracionnoticia = vistaMostrarvaloracionnoticia;
-	}
-
-	public HorizontalLayout getVaadinHorizontalLayout3() {
-		return vaadinHorizontalLayout3;
-	}
-
-	public void setVaadinHorizontalLayout3(HorizontalLayout vaadinHorizontalLayout3) {
-		this.vaadinHorizontalLayout3 = vaadinHorizontalLayout3;
-	}
-
-	public VistaMostrarnoticiaresumida getVistaMostrarnoticiaresumida() {
-		return vistaMostrarnoticiaresumida;
-	}
-
-	public void setVistaMostrarnoticiaresumida(VistaMostrarnoticiaresumida vistaMostrarnoticiaresumida) {
-		this.vistaMostrarnoticiaresumida = vistaMostrarnoticiaresumida;
-	}
-
-	public VistaMostrarnoticiaextendida getVistaMostrarnoticiaextendida() {
-		return vistaMostrarnoticiaextendida;
-	}
-
-	public void setVistaMostrarnoticiaextendida(VistaMostrarnoticiaextendida vistaMostrarnoticiaextendida) {
-		this.vistaMostrarnoticiaextendida = vistaMostrarnoticiaextendida;
-	}
-
-	public Element getVistaSeccioncomentarios() {
-		return vistaSeccioncomentarios;
-	}
-
-	public void setVistaSeccioncomentarios(Element vistaSeccioncomentarios) {
-		this.vistaSeccioncomentarios = vistaSeccioncomentarios;
-	}
-
-	@Id("vaadinVerticalLayout")
-	private Element vaadinVerticalLayout;
-	@Id("label")
-	private Label label;
-	@Id("label1")
-	private Label label1;
-	@Id("vaadinHorizontalLayout")
-	private HorizontalLayout vaadinHorizontalLayout;
-	@Id("img")
-	private Image img;
-	@Id("vaadinHorizontalLayout1")
-	private HorizontalLayout vaadinHorizontalLayout1;
-	@Id("label2")
-	private Label label2;
-	@Id("label3")
-	private Label label3;
-	@Id("label4")
-	private Label label4;
-	@Id("vaadinHorizontalLayout2")
-	private HorizontalLayout vaadinHorizontalLayout2;
-	@Id("vistaMostrarvaloracionnoticia")
-	private VistaMostrarvaloracionnoticia vistaMostrarvaloracionnoticia;
-	@Id("vaadinHorizontalLayout3")
-	private HorizontalLayout vaadinHorizontalLayout3;
-	@Id("vistaMostrarnoticiaresumida")
-	private VistaMostrarnoticiaresumida vistaMostrarnoticiaresumida;
-	@Id("vistaMostrarnoticiaextendida")
-	private VistaMostrarnoticiaextendida vistaMostrarnoticiaextendida;
-	@Id("vistaSeccioncomentarios")//Creo que cuelga
-	private Element vistaSeccioncomentarios;
+	@Id("Layoutcontenedornoticiapaginanoticia")
+	private Element layoutcontenedornoticiapaginanoticia;
+	@Id("Labeltitulonoticiapaginanoticia")
+	private Label labeltitulonoticiapaginanoticia;
+	@Id("Labeltitulotematicapaginanoticia")
+	private Label labeltitulotematicapaginanoticia;
+	@Id("Layoutimagennoticiapaginanoticia")
+	private HorizontalLayout layoutimagennoticiapaginanoticia;
+	@Id("Imagennoticiapaginanoticia")
+	private Image imagennoticiapaginanoticia;
+	@Id("Layoutfechaautorlugarpaginanoticia")
+	private HorizontalLayout layoutfechaautorlugarpaginanoticia;
+	@Id("Layoutfechapaginanoticia")
+	private Label layoutfechapaginanoticia;
+	@Id("Layoutautorpaginanoticia")
+	private Label layoutautorpaginanoticia;
+	@Id("Layoutlugarpaginanoticia")
+	private Label layoutlugarpaginanoticia;
+	@Id("Mostrarvaloracionnoticiapaginanoticia")
+	private HorizontalLayout mostrarvaloracionnoticiapaginanoticia;
+	@Id("Mostrarnoticiaresumidayextendidapaginanoticia")
+	private HorizontalLayout mostrarnoticiaresumidayextendidapaginanoticia;
 	@Id("Layoutseccioncomentariospaginanoticia")
 	private Element layoutseccioncomentariospaginanoticia;
+
 	public VistaPaginanoticia() {
         // You can initialise any data required for the connected UI components here.
     }

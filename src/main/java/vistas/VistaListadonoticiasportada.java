@@ -13,12 +13,14 @@ import com.vaadin.flow.component.html.Label;
 @JsModule("./src/vista-listadonoticiasportada.ts")
 public class VistaListadonoticiasportada extends LitTemplate {
 
-	public Element getLayoutlistadonoticiasportada() {
-		return layoutlistadonoticiasportada;
+	
+
+	public Element getLayoutprincipallistadonoticiasportada() {
+		return layoutprincipallistadonoticiasportada;
 	}
 
-	public void setLayoutlistadonoticiasportada(Element layoutlistadonoticiasportada) {
-		this.layoutlistadonoticiasportada = layoutlistadonoticiasportada;
+	public void setLayoutprincipallistadonoticiasportada(Element layoutprincipallistadonoticiasportada) {
+		this.layoutprincipallistadonoticiasportada = layoutprincipallistadonoticiasportada;
 	}
 
 	public Label getLabelnoticiasactualidadlistadonoticiasportada() {
@@ -29,20 +31,20 @@ public class VistaListadonoticiasportada extends LitTemplate {
 		this.labelnoticiasactualidadlistadonoticiasportada = labelnoticiasactualidadlistadonoticiasportada;
 	}
 
-	public HorizontalLayout getLayoutlistadonoticiasportada1() {
-		return layoutlistadonoticiasportada1;
+	public HorizontalLayout getLayoutlistadonoticiasportada() {
+		return layoutlistadonoticiasportada;
 	}
 
-	public void setLayoutlistadonoticiasportada1(HorizontalLayout layoutlistadonoticiasportada1) {
-		this.layoutlistadonoticiasportada1 = layoutlistadonoticiasportada1;
+	public void setLayoutlistadonoticiasportada(HorizontalLayout layoutlistadonoticiasportada) {
+		this.layoutlistadonoticiasportada = layoutlistadonoticiasportada;
 	}
 
-	@Id("Layoutlistadonoticiasportada")
-	private Element layoutlistadonoticiasportada;
+	@Id("Layoutprincipallistadonoticiasportada")
+	private Element layoutprincipallistadonoticiasportada;
 	@Id("Labelnoticiasactualidadlistadonoticiasportada")
 	private Label labelnoticiasactualidadlistadonoticiasportada;
-	@Id("Layoutlistadonoticiasportada1")
-	private HorizontalLayout layoutlistadonoticiasportada1;
+	@Id("Layoutlistadonoticiasportada")
+	private HorizontalLayout layoutlistadonoticiasportada;
 
 	public VistaListadonoticiasportada() {
         // You can initialise any data required for the connected UI components here.

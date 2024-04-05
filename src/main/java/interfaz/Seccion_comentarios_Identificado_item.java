@@ -7,11 +7,8 @@ public class Seccion_comentarios_Identificado_item extends Seccion_comentarios_i
 //	private Button _no_me_gusta;
 	public Seccion_comentarios_Identificado _seccion_comentarios_Identificado;
 
-	public Seccion_comentarios_Identificado_item(Seccion_comentarios_Identificado _seccion_comentarios_Identificado,
-		interfaz.Mostrar_comentario _mostrar_comentario,
-		interfaz.Mostrar_valoracion_comentario _mostrar_valoracion_comentario) {
-	super(_seccion_comentarios_Identificado, _mostrar_comentario, _mostrar_valoracion_comentario);
-	this._seccion_comentarios_Identificado = _seccion_comentarios_Identificado;
+	public Seccion_comentarios_Identificado_item(Seccion_comentarios _seccion_comentarios) {
+	super(_seccion_comentarios);
 }
 
 	public void Valorar_comentario() {

@@ -24,18 +24,18 @@ public class Baja_Alta_Periodistas extends vistas.VistaBajaaltaperiodistas {
 	public Editor _editor;
 	public Buscar_periodista _buscar_periodista;
 	
-	public Baja_Alta_Periodistas(Editor _editor, interfaz.Buscar_periodista _buscar_periodista) {
+	public Baja_Alta_Periodistas(Editor _editor) {
 		super();
 		this._editor = _editor;
 		this._buscar_periodista = new Buscar_periodista(this);
 		Buscar_periodista();
 	}
 
-	public void Alta_periodista() {
-		throw new UnsupportedOperationException();
-	}
-
 	public void Buscar_periodista() {
 		this.getLayoutbuscarperiodistabajaaltaperiodistas().as(VerticalLayout.class).add(_buscar_periodista);
+	}
+	
+	public void Alta_periodista() {
+		throw new UnsupportedOperationException();
 	}
 }

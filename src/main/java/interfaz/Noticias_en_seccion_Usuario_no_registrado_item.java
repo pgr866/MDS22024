@@ -1,4 +1,4 @@
-package interfaz;
+package interfaz; //DINAMICO
 
 import vistas.VistaNoticiasenseccionusuarionoregistrado_item;
 
@@ -13,11 +13,9 @@ public class Noticias_en_seccion_Usuario_no_registrado_item extends VistaNoticia
 	public Pagina_noticia_Usuario_no_registrado _pagina_noticia_Usuario_no_registrado;
 
 	public Noticias_en_seccion_Usuario_no_registrado_item(
-			Noticias_en_seccion_Usuario_no_registrado _noticias_en_seccion_Usuario_no_registrado,
-			interfaz.Pagina_noticia_Usuario_no_registrado _pagina_noticia_Usuario_no_registrado) {
+			Noticias_en_seccion_Usuario_no_registrado _noticias_en_seccion_Usuario_no_registrado) {
 		super();
 		this._noticias_en_seccion_Usuario_no_registrado = _noticias_en_seccion_Usuario_no_registrado;
-		this._pagina_noticia_Usuario_no_registrado = _pagina_noticia_Usuario_no_registrado;
 	}
 
 

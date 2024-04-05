@@ -1,5 +1,7 @@
 package interfaz;
 
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+
 public class Explorar_secciones_Usuario_no_registrado extends Explorar_secciones {
 	
 	//	private Panel _panel_publicidad;
@@ -7,16 +9,15 @@ public class Explorar_secciones_Usuario_no_registrado extends Explorar_secciones
 	public Usuario_no_Registrado _usuario_no_Registrado;
 	public Noticias_en_seccion_Usuario_no_registrado _noticias_en_seccion_Usuario_no_registrado;
 
-	public Explorar_secciones_Usuario_no_registrado(interfaz.Secciones _secciones,
-			Usuario_no_Registrado _usuario_no_Registrado,
-			interfaz.Noticias_en_seccion_Usuario_no_registrado _noticias_en_seccion_Usuario_no_registrado) {
-		super(_secciones);
+	public Explorar_secciones_Usuario_no_registrado(Usuario_no_Registrado _usuario_no_Registrado) {
+		super();
 		this._usuario_no_Registrado = _usuario_no_Registrado;
-		this._noticias_en_seccion_Usuario_no_registrado = _noticias_en_seccion_Usuario_no_registrado;
+		this._noticias_en_seccion_Usuario_no_registrado = new Noticias_en_seccion_Usuario_no_registrado(this);
 		this.getLayoutnombrebotonesexplorarsecciones().setVisible(false);
+		Noticias_en_seccion_Usuario_no_registrado();
 	}
 	
 	public void Noticias_en_seccion_Usuario_no_registrado() {
-		throw new UnsupportedOperationException();
+		this.getLayoutvistasnoticiasenseccionexplorarsecciones().add(_noticias_en_seccion_Usuario_no_registrado);
 	}
 }

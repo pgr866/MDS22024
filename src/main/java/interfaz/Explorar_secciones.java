@@ -1,5 +1,7 @@
 package interfaz;
 
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+
 public class Explorar_secciones extends vistas.VistaExplorarsecciones {
 
 //	private Label _nombre_seccion;
@@ -7,13 +9,13 @@ public class Explorar_secciones extends vistas.VistaExplorarsecciones {
 //	private Button _pagina_seccion;
 	public Secciones _secciones;
 	
-	public Explorar_secciones(interfaz.Secciones _secciones) {
+	public Explorar_secciones() {
 		super();
-		this._secciones = _secciones;
-		//this.get
+		this._secciones = new Secciones(this);
+		Secciones();
 	}
 
 	public void Secciones() {
-		throw new UnsupportedOperationException();
+		this.getLayoutseccionesexplorarsecciones().as(VerticalLayout.class).add(_secciones);
 	}
 }

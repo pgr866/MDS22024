@@ -13,7 +13,13 @@ import com.vaadin.flow.component.button.Button;
 @JsModule("./src/vista-explorarsecciones.ts")
 public class VistaExplorarsecciones extends LitTemplate {
 
-    public Element getLayoutvistaseccionesexplorarsecciones() {
+    public Element getLayoutseccionesexplorarsecciones() {
+		return layoutseccionesexplorarsecciones;
+	}
+	public void setLayoutseccionesexplorarsecciones(Element layoutseccionesexplorarsecciones) {
+		this.layoutseccionesexplorarsecciones = layoutseccionesexplorarsecciones;
+	}
+	public Element getLayoutvistaseccionesexplorarsecciones() {
 		return layoutvistaseccionesexplorarsecciones;
 	}
 	public void setLayoutvistaseccionesexplorarsecciones(Element layoutvistaseccionesexplorarsecciones) {
@@ -51,20 +57,7 @@ public class VistaExplorarsecciones extends LitTemplate {
 			HorizontalLayout layoutvistasnoticiasenseccionexplorarsecciones) {
 		this.layoutvistasnoticiasenseccionexplorarsecciones = layoutvistasnoticiasenseccionexplorarsecciones;
 	}
-	public Element getVistanoticiasseccionusuarionoregistradoexplorarsecciones() {
-		return vistanoticiasseccionusuarionoregistradoexplorarsecciones;
-	}
-	public void setVistanoticiasseccionusuarionoregistradoexplorarsecciones(
-			Element vistanoticiasseccionusuarionoregistradoexplorarsecciones) {
-		this.vistanoticiasseccionusuarionoregistradoexplorarsecciones = vistanoticiasseccionusuarionoregistradoexplorarsecciones;
-	}
-	public Element getVistanoticiasseccionidentificadoexplorarsecciones() {
-		return vistanoticiasseccionidentificadoexplorarsecciones;
-	}
-	public void setVistanoticiasseccionidentificadoexplorarsecciones(
-			Element vistanoticiasseccionidentificadoexplorarsecciones) {
-		this.vistanoticiasseccionidentificadoexplorarsecciones = vistanoticiasseccionidentificadoexplorarsecciones;
-	}
+	
 	@Id("Layoutvistaseccionesexplorarsecciones")
 	private Element layoutvistaseccionesexplorarsecciones;
 	@Id("Layoutnombrebotonesexplorarsecciones")
@@ -77,10 +70,8 @@ public class VistaExplorarsecciones extends LitTemplate {
 	private Button buttoneliminarexplorarsecciones;
 	@Id("Layoutvistasnoticiasenseccionexplorarsecciones")
 	private HorizontalLayout layoutvistasnoticiasenseccionexplorarsecciones;
-	@Id("vistanoticiasseccionusuarionoregistradoexplorarsecciones")
-	private Element vistanoticiasseccionusuarionoregistradoexplorarsecciones;
-	@Id("vistanoticiasseccionidentificadoexplorarsecciones")
-	private Element vistanoticiasseccionidentificadoexplorarsecciones;
+	@Id("Layoutseccionesexplorarsecciones")
+	private Element layoutseccionesexplorarsecciones;
 	public VistaExplorarsecciones() {
         // You can initialise any data required for the connected UI components here.
     }

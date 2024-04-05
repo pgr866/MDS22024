@@ -18,20 +18,12 @@ import vistas.VistaMostrarvaloracioncomentario;
 @JsModule("./src/vista-seccioncomentarios_item.ts")
 public class VistaSeccioncomentarios_item extends LitTemplate {
 
-	public HorizontalLayout getVaadinHorizontalLayout() {
-		return vaadinHorizontalLayout;
+	public Element getLayoutfotousuarioseccioncomentariositem() {
+		return layoutfotousuarioseccioncomentariositem;
 	}
 
-	public void setVaadinHorizontalLayout(HorizontalLayout vaadinHorizontalLayout) {
-		this.vaadinHorizontalLayout = vaadinHorizontalLayout;
-	}
-
-	public Element getVaadinVerticalLayout() {
-		return vaadinVerticalLayout;
-	}
-
-	public void setVaadinVerticalLayout(Element vaadinVerticalLayout) {
-		this.vaadinVerticalLayout = vaadinVerticalLayout;
+	public void setLayoutfotousuarioseccioncomentariositem(Element layoutfotousuarioseccioncomentariositem) {
+		this.layoutfotousuarioseccioncomentariositem = layoutfotousuarioseccioncomentariositem;
 	}
 
 	public Image getFotousuarioseccioncomentariositem() {
@@ -58,14 +50,6 @@ public class VistaSeccioncomentarios_item extends LitTemplate {
 		this.labelnickusuarioseccioncomentariositem = labelnickusuarioseccioncomentariositem;
 	}
 
-	public HorizontalLayout getVaadinHorizontalLayout1() {
-		return vaadinHorizontalLayout1;
-	}
-
-	public void setVaadinHorizontalLayout1(HorizontalLayout vaadinHorizontalLayout1) {
-		this.vaadinHorizontalLayout1 = vaadinHorizontalLayout1;
-	}
-
 	public Element getLayoutvistamostrarcomentarioseccioncomentariositem() {
 		return layoutvistamostrarcomentarioseccioncomentariositem;
 	}
@@ -73,15 +57,6 @@ public class VistaSeccioncomentarios_item extends LitTemplate {
 	public void setLayoutvistamostrarcomentarioseccioncomentariositem(
 			Element layoutvistamostrarcomentarioseccioncomentariositem) {
 		this.layoutvistamostrarcomentarioseccioncomentariositem = layoutvistamostrarcomentarioseccioncomentariositem;
-	}
-
-	public VistaMostrarcomentario getVistamostrarcomentarioseccioncomentariositem() {
-		return vistamostrarcomentarioseccioncomentariositem;
-	}
-
-	public void setVistamostrarcomentarioseccioncomentariositem(
-			VistaMostrarcomentario vistamostrarcomentarioseccioncomentariositem) {
-		this.vistamostrarcomentarioseccioncomentariositem = vistamostrarcomentarioseccioncomentariositem;
 	}
 
 	public Element getLayoutborrarcomentarioseccioncomentariositem() {
@@ -117,31 +92,14 @@ public class VistaSeccioncomentarios_item extends LitTemplate {
 		this.layoutvistamostrarvaloracioncomentarioseccioncomentariositem = layoutvistamostrarvaloracioncomentarioseccioncomentariositem;
 	}
 
-	public VistaMostrarvaloracioncomentario getVistamostrarcomentarioseccioncomentariositem1() {
-		return vistamostrarcomentarioseccioncomentariositem1;
-	}
-
-	public void setVistamostrarcomentarioseccioncomentariositem1(
-			VistaMostrarvaloracioncomentario vistamostrarcomentarioseccioncomentariositem1) {
-		this.vistamostrarcomentarioseccioncomentariositem1 = vistamostrarcomentarioseccioncomentariositem1;
-	}
-
-	@Id("vaadinHorizontalLayout")
-	private HorizontalLayout vaadinHorizontalLayout;
-	@Id("vaadinVerticalLayout")
-	private Element vaadinVerticalLayout;
 	@Id("Fotousuarioseccioncomentariositem")
 	private Image fotousuarioseccioncomentariositem;
 	@Id("Layoutnickusuarioseccioncomentariositem")
 	private Element layoutnickusuarioseccioncomentariositem;
 	@Id("Labelnickusuarioseccioncomentariositem")
 	private Label labelnickusuarioseccioncomentariositem;
-	@Id("vaadinHorizontalLayout1")
-	private HorizontalLayout vaadinHorizontalLayout1;
 	@Id("Layoutvistamostrarcomentarioseccioncomentariositem")
 	private Element layoutvistamostrarcomentarioseccioncomentariositem;
-	@Id("Vistamostrarcomentarioseccioncomentariositem")
-	private VistaMostrarcomentario vistamostrarcomentarioseccioncomentariositem;
 	@Id("Layoutborrarcomentarioseccioncomentariositem")
 	private Element layoutborrarcomentarioseccioncomentariositem;
 	@Id("Imagenborrarcomentarioseccioncomentariositem")
@@ -150,9 +108,8 @@ public class VistaSeccioncomentarios_item extends LitTemplate {
 	private Button seccioncomentariositem;
 	@Id("Layoutvistamostrarvaloracioncomentarioseccioncomentariositem")
 	private Element layoutvistamostrarvaloracioncomentarioseccioncomentariositem;
-	@Id("Vistamostrarcomentarioseccioncomentariositem1")
-	private VistaMostrarvaloracioncomentario vistamostrarcomentarioseccioncomentariositem1;
-
+	@Id("Layoutfotousuarioseccioncomentariositem")
+	private Element layoutfotousuarioseccioncomentariositem;
 	public VistaSeccioncomentarios_item() {
         // You can initialise any data required for the connected UI components here.
     }

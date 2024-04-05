@@ -1,4 +1,4 @@
-package interfaz;
+package interfaz; //DINAMICO
 
 import vistas.VistaNoticiasenseccionidentificado_item;
 
@@ -12,10 +12,8 @@ public class Noticias_en_seccion_Identificado_item extends VistaNoticiasenseccio
 	public Noticias_en_seccion_Identificado _noticias_en_seccion_Identificado;
 	public Pagina_noticia_Identificado _pagina_noticia_Identificado;
 	
-	public Noticias_en_seccion_Identificado_item(Noticias_en_seccion_Identificado _noticias_en_seccion_Identificado,
-			Pagina_noticia_Identificado _pagina_noticia_Identificado) {
+	public Noticias_en_seccion_Identificado_item(Noticias_en_seccion_Identificado _noticias_en_seccion_Identificado) {
 		super();
 		this._noticias_en_seccion_Identificado = _noticias_en_seccion_Identificado;
-		this._pagina_noticia_Identificado = _pagina_noticia_Identificado;
 	}
 }
