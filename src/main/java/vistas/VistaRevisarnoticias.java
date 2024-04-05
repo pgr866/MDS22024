@@ -151,14 +151,6 @@ public class VistaRevisarnoticias extends LitTemplate {
 		this.layoutvistaseccionessrevisarnoticias = layoutvistaseccionessrevisarnoticias;
 	}
 
-	public Element getVistaseccionesrevisarnoticia() {
-		return vistaseccionesrevisarnoticia;
-	}
-
-	public void setVistaseccionesrevisarnoticia(Element vistaseccionesrevisarnoticia) {
-		this.vistaseccionesrevisarnoticia = vistaseccionesrevisarnoticia;
-	}
-
 	public HorizontalLayout getLayoutopcionesrevisarnoticia() {
 		return layoutopcionesrevisarnoticia;
 	}
@@ -217,8 +209,6 @@ public class VistaRevisarnoticias extends LitTemplate {
 	private TextField textfieldresumenrevisarnoticias;
 	@Id("Layoutvistaseccionessrevisarnoticias")
 	private HorizontalLayout layoutvistaseccionessrevisarnoticias;
-	@Id("vistaseccionesrevisarnoticia")
-	private Element vistaseccionesrevisarnoticia;
 	@Id("Layoutopcionesrevisarnoticia")
 	private HorizontalLayout layoutopcionesrevisarnoticia;
 	@Id("publicarrevisarnoticia")

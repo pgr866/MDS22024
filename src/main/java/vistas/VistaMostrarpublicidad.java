@@ -85,14 +85,14 @@ public class VistaMostrarpublicidad extends LitTemplate {
 	private Image imagenpublicidadsuperiormostrarpublidad;
 	@Id("Layoutpublicidadetiquetamostrarpublidad")
 	private HorizontalLayout layoutpublicidadetiquetamostrarpublidad;
-	@Id("Publicidadetiquetamostrarpublidad")
-	private TextField publicidadetiquetamostrarpublidad;
 	@Id("Layoutpublicidadinferiormostrarpublidad")
 	private HorizontalLayout layoutpublicidadinferiormostrarpublidad;
 	@Id("Publicidadinferiormostrarpublidad")
 	private Button publicidadinferiormostrarpublidad;
 	@Id("Imagenpublicidadinferiormostrarpublidad")
 	private Image imagenpublicidadinferiormostrarpublidad;
+	@Id("Publicidadetiquetamostrarpublidad")
+	private TextField publicidadetiquetamostrarpublidad;
 
 	public VistaMostrarpublicidad() {
         // You can initialise any data required for the connected UI components here.

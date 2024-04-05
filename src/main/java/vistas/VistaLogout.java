@@ -12,7 +12,15 @@ import com.vaadin.flow.component.html.Image;
 @JsModule("./src/vista-logout.ts")
 public class VistaLogout extends LitTemplate {
 
-    public Element getLayoutbotonlogout() {
+    public Image getImagenlogout() {
+		return imagenlogout;
+	}
+
+	public void setImagenlogout(Image imagenlogout) {
+		this.imagenlogout = imagenlogout;
+	}
+
+	public Element getLayoutbotonlogout() {
 		return layoutbotonlogout;
 	}
 
@@ -28,20 +36,12 @@ public class VistaLogout extends LitTemplate {
 		this.buttonlogout = buttonlogout;
 	}
 
-	public Image getImg() {
-		return img;
-	}
-
-	public void setImg(Image img) {
-		this.img = img;
-	}
-
 	@Id("Layoutbotonlogout")
 	private Element layoutbotonlogout;
 	@Id("Buttonlogout")
 	private Button buttonlogout;
-	@Id("img")
-	private Image img;
+	@Id("Imagenlogout")
+	private Image imagenlogout;
 
 	public VistaLogout() {
         // You can initialise any data required for the connected UI components here.

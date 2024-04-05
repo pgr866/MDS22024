@@ -48,14 +48,6 @@ public class VistaIdentificado extends LitTemplate {
 		this.layoutvistabuscaridentificado = layoutvistabuscaridentificado;
 	}
 
-	public VistaBuscar getVistabuscaridentificado() {
-		return vistabuscaridentificado;
-	}
-
-	public void setVistabuscaridentificado(VistaBuscar vistabuscaridentificado) {
-		this.vistabuscaridentificado = vistabuscaridentificado;
-	}
-
 	public Element getLayoutexplorarseccionesidentificado() {
 		return layoutexplorarseccionesidentificado;
 	}
@@ -160,14 +152,6 @@ public class VistaIdentificado extends LitTemplate {
 		this.layoutnoticiasportadaidentificado = layoutnoticiasportadaidentificado;
 	}
 
-	public Element getVistanoticiasportadaidentificado() {
-		return vistanoticiasportadaidentificado;
-	}
-
-	public void setVistanoticiasportadaidentificado(Element vistanoticiasportadaidentificado) {
-		this.vistanoticiasportadaidentificado = vistanoticiasportadaidentificado;
-	}
-
 	@Id("Layoutlogoidentificado")
 	private Element layoutlogoidentificado;
 	@Id("Buttonlogoidentificado")
@@ -176,8 +160,6 @@ public class VistaIdentificado extends LitTemplate {
 	private Image imagenlogoidentificado;
 	@Id("Layoutvistabuscaridentificado")
 	private HorizontalLayout layoutvistabuscaridentificado;
-	@Id("vistabuscaridentificado")
-	private VistaBuscar vistabuscaridentificado;
 	@Id("Layoutexplorarseccionesidentificado")
 	private Element layoutexplorarseccionesidentificado;
 	@Id("Explorarseccionesidentificado")
@@ -204,17 +186,6 @@ public class VistaIdentificado extends LitTemplate {
 	private HorizontalLayout vaadinHorizontalLayout;
 	@Id("Layoutnoticiasportadaidentificado")
 	private Element layoutnoticiasportadaidentificado;
-	@Id("vistanoticiasportadaidentificado")
-	private Element vistanoticiasportadaidentificado;
-	@Id("vistalogoutidentificado")
-	private Element vistalogoutidentificado;
-	public Element getVistalogoutidentificado() {
-		return vistalogoutidentificado;
-	}
-
-	public void setVistalogoutidentificado(Element vistalogoutidentificado) {
-		this.vistalogoutidentificado = vistalogoutidentificado;
-	}
 
 	public VistaIdentificado() {
         // You can initialise any data required for the connected UI components here.

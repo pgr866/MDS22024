@@ -144,8 +144,6 @@ public class VistaIniciarsesion extends LitTemplate {
 	private Image imagenlogologin;
 	@Id("Labellogin")
 	private Label labellogin;
-	@Id("Layoutopcioneslogin")
-	private Element layoutopcioneslogin;
 	@Id("Layoutusuariologin")
 	private HorizontalLayout layoutusuariologin;
 	@Id("Labelusuariologin")
@@ -166,6 +164,8 @@ public class VistaIniciarsesion extends LitTemplate {
 	private Label labelnoestasregistrado;
 	@Id("Buttonregistrarselogin")
 	private Button buttonregistrarselogin;
+	@Id("Layoutopcioneslogin")
+	private Element layoutopcioneslogin;
 
 	public VistaIniciarsesion() {
         // You can initialise any data required for the connected UI components here.

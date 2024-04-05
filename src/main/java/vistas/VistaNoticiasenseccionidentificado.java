@@ -13,20 +13,20 @@ import com.vaadin.flow.component.html.Label;
 @JsModule("./src/vista-noticiasenseccionidentificado.ts")
 public class VistaNoticiasenseccionidentificado extends LitTemplate {
 
+	public Label getLabelseccoinnoticiasenseccionidentificado() {
+		return labelseccoinnoticiasenseccionidentificado;
+	}
+
+	public void setLabelseccoinnoticiasenseccionidentificado(Label labelseccoinnoticiasenseccionidentificado) {
+		this.labelseccoinnoticiasenseccionidentificado = labelseccoinnoticiasenseccionidentificado;
+	}
+
 	public Element getLayoutnoticiasenseccionidentificado() {
 		return layoutnoticiasenseccionidentificado;
 	}
 
 	public void setLayoutnoticiasenseccionidentificado(Element layoutnoticiasenseccionidentificado) {
 		this.layoutnoticiasenseccionidentificado = layoutnoticiasenseccionidentificado;
-	}
-
-	public Label getLabel() {
-		return label;
-	}
-
-	public void setLabel(Label label) {
-		this.label = label;
 	}
 
 	public HorizontalLayout getNoticiasenseccionidentificado() {
@@ -39,10 +39,10 @@ public class VistaNoticiasenseccionidentificado extends LitTemplate {
 
 	@Id("Layoutnoticiasenseccionidentificado")
 	private Element layoutnoticiasenseccionidentificado;
-	@Id("label")
-	private Label label;
 	@Id("Noticiasenseccionidentificado")
 	private HorizontalLayout noticiasenseccionidentificado;
+	@Id("Labelseccoinnoticiasenseccionidentificado")
+	private Label labelseccoinnoticiasenseccionidentificado;
 
 	public VistaNoticiasenseccionidentificado() {
         // You can initialise any data required for the connected UI components here.

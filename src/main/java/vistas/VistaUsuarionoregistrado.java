@@ -71,14 +71,6 @@ public class VistaUsuarionoregistrado extends LitTemplate {
 		this.barrabusquedanoregistrado = barrabusquedanoregistrado;
 	}
 
-	public VistaBuscar getVistabuscarnoregistrado() {
-		return vistabuscarnoregistrado;
-	}
-
-	public void setVistabuscarnoregistrado(VistaBuscar vistabuscarnoregistrado) {
-		this.vistabuscarnoregistrado = vistabuscarnoregistrado;
-	}
-
 	public HorizontalLayout getLayoutexplorarseccionesnoregistrado() {
 		return layoutexplorarseccionesnoregistrado;
 	}
@@ -135,8 +127,6 @@ public class VistaUsuarionoregistrado extends LitTemplate {
 	private Image fotologonoregistrado;
 	@Id("Barrabusquedanoregistrado")
 	private HorizontalLayout barrabusquedanoregistrado;
-	@Id("Vistabuscarnoregistrado")
-	private VistaBuscar vistabuscarnoregistrado;
 	@Id("Layoutexplorarseccionesnoregistrado")
 	private HorizontalLayout layoutexplorarseccionesnoregistrado;
 	@Id("Explorarseccionesnoregistrado")

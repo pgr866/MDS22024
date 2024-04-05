@@ -24,7 +24,7 @@ export class VistaMostrarpublicidad extends LitElement {
   </vaadin-button>
  </vaadin-horizontal-layout>
  <vaadin-horizontal-layout style="width: 100%; height: 10%; flex-shrink: 0;" id="Layoutpublicidadetiquetamostrarpublidad">
-  <vaadin-text-field label="" placeholder="Publicidad" style="align-self: center; flex-grow: 1; width: 100%;" id="Publicidadetiquetamostrarpublidad"></vaadin-text-field>
+  <vaadin-text-field label="" placeholder="Textoetiquetapubliidadmostrarpublicidad" style="align-self: center; flex-grow: 1; width: 100%;" id="Publicidadetiquetamostrarpublidad"></vaadin-text-field>
  </vaadin-horizontal-layout>
  <vaadin-horizontal-layout style="width: 100%; height: 45%; flex-shrink: 0;" id="Layoutpublicidadinferiormostrarpublidad">
   <vaadin-button style="background-color: white; width: 100%; height: 100%; flex-shrink: 0; flex-grow: 0;" id="Publicidadinferiormostrarpublidad">

@@ -1,10 +1,7 @@
 import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
-import './vista-listadonoticiasportada';
-import './vista-logout';
 import '@vaadin/vaadin-button/src/vaadin-button.js';
-import './vista-buscar';
 
 @customElement('vista-identificado')
 export class VistaIdentificado extends LitElement {
@@ -27,9 +24,7 @@ export class VistaIdentificado extends LitElement {
    </vaadin-button>
   </vaadin-vertical-layout>
   <vaadin-vertical-layout style="flex-shrink: 1; width: 72%;">
-   <vaadin-horizontal-layout style="width: 100%; height: 50%; flex-shrink: 0; flex-grow: 0;" id="Layoutvistabuscaridentificado">
-    <vista-buscar style="flex-shrink: 0; width: 100%; height: 100%;" id="vistabuscaridentificado"></vista-buscar>
-   </vaadin-horizontal-layout>
+   <vaadin-horizontal-layout style="width: 100%; height: 50%; flex-shrink: 0; flex-grow: 0;" id="Layoutvistabuscaridentificado"></vaadin-horizontal-layout>
    <vaadin-horizontal-layout style="width: 100%; height: 50%; flex-shrink: 0; justify-content: space-between; flex-wrap: wrap;">
     <vaadin-vertical-layout style="flex-shrink: 1; width: 30%; height: 100%;" id="Layoutexplorarseccionesidentificado">
      <vaadin-button style="width: 100%; height: 100%; flex-shrink: 1;" id="Explorarseccionesidentificado">
@@ -54,13 +49,10 @@ export class VistaIdentificado extends LitElement {
    <vaadin-button style="height: 100%; flex-shrink: 0; width: 45%; align-self: center; background-color: #EBEBEB;" id="Configurarperfilidentificado">
     <img style="height: 100%; width: 100%;" src="../../src/main/resources/META-INF/resources/images/cuenta.png" id="Imagenconfigurarperfilidentificado">
    </vaadin-button>
-   <vista-logout style="flex-shrink: 0; width: 45%; height: 100%; align-self: center;" id="vistalogoutidentificado"></vista-logout>
   </vaadin-vertical-layout>
  </vaadin-horizontal-layout>
  <vaadin-horizontal-layout style="width: 100%; justify-content: space-between; flex-shrink: 0; flex-grow: 1; padding-top: var(--lumo-space-s); padding-bottom: var(--lumo-space-s); padding-right: var(--lumo-space-m); padding-left: var(--lumo-space-m);" id="vaadinHorizontalLayout">
-  <vaadin-vertical-layout style="width: 100%; flex-grow: 0; flex-shrink: 0; flex-direction: row; align-content: space-between; flex-wrap: wrap;" id="Layoutnoticiasportadaidentificado">
-   <vista-listadonoticiasportada style="width: 100%; flex-shrink: 0; height: 100%;" id="vistanoticiasportadaidentificado"></vista-listadonoticiasportada>
-  </vaadin-vertical-layout>
+  <vaadin-vertical-layout style="width: 100%; flex-grow: 0; flex-shrink: 0; flex-direction: row; align-content: space-between; flex-wrap: wrap;" id="Layoutnoticiasportadaidentificado"></vaadin-vertical-layout>
  </vaadin-horizontal-layout>
 </vaadin-vertical-layout>
 `;

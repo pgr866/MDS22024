@@ -4,7 +4,6 @@ import '@vaadin/vaadin-text-field/src/vaadin-text-field.js';
 import '@vaadin/vaadin-text-field/src/vaadin-text-area.js';
 import '@vaadin/vaadin-button/src/vaadin-button.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
-import './vista-secciones';
 
 @customElement('vista-revisarnoticias')
 export class VistaRevisarnoticias extends LitElement {
@@ -45,9 +44,7 @@ export class VistaRevisarnoticias extends LitElement {
    <vaadin-text-field placeholder="Resumen" style="flex-shrink: 0; flex-grow: 1;" id="Textfieldresumenrevisarnoticias"></vaadin-text-field>
   </vaadin-horizontal-layout>
   <vaadin-horizontal-layout style="flex-shrink: 0; width: 60%; height: 12%; justify-content: center; align-items: center; padding-left: var(--lumo-space-xl);">
-   <vaadin-horizontal-layout style="width: 40%;" id="Layoutvistaseccionessrevisarnoticias">
-    <vista-secciones id="vistaseccionesrevisarnoticia"></vista-secciones>
-   </vaadin-horizontal-layout>
+   <vaadin-horizontal-layout style="width: 40%;" id="Layoutvistaseccionessrevisarnoticias"></vaadin-horizontal-layout>
    <vaadin-horizontal-layout style="width: 55%; justify-content: space-between;" id="Layoutopcionesrevisarnoticia">
     <vaadin-button style="width: 48%;" id="publicarrevisarnoticia">
       Publicar Noticia 

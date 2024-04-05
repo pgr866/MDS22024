@@ -40,14 +40,6 @@ public class VistaConfigurarperfil extends LitTemplate {
 		this.fotoconfigurarperfil = fotoconfigurarperfil;
 	}
 
-	public Element getVaadinVerticalLayout() {
-		return vaadinVerticalLayout;
-	}
-
-	public void setVaadinVerticalLayout(Element vaadinVerticalLayout) {
-		this.vaadinVerticalLayout = vaadinVerticalLayout;
-	}
-
 	public HorizontalLayout getLayoutnombreconfigurarperfil() {
 		return layoutnombreconfigurarperfil;
 	}
@@ -198,8 +190,6 @@ public class VistaConfigurarperfil extends LitTemplate {
 	private Button buttonFotoconfigurarperfil;
 	@Id("Fotoconfigurarperfil")
 	private Image fotoconfigurarperfil;
-	@Id("vaadinVerticalLayout")
-	private Element vaadinVerticalLayout;
 	@Id("Layoutnombreconfigurarperfil")
 	private HorizontalLayout layoutnombreconfigurarperfil;
 	@Id("Labelnombreconfigurarperfil")

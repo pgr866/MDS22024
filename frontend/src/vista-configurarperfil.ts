@@ -22,7 +22,7 @@ export class VistaConfigurarperfil extends LitElement {
  <vaadin-button style="flex-shrink: 0; align-self: center; width: 40%; height: 40%;" id="ButtonFotoconfigurarperfil">
   <img style="width: 100%; height: 100%;" src="" id="Fotoconfigurarperfil">
  </vaadin-button>
- <vaadin-vertical-layout style="width: 40%; height: 40%; justify-content: space-between; flex-shrink: 0;" id="vaadinVerticalLayout">
+ <vaadin-vertical-layout style="width: 40%; height: 40%; justify-content: space-between; flex-shrink: 0;">
   <vaadin-horizontal-layout style="width: 100%; height: 15%; flex-shrink: 0; align-items: center;" id="Layoutnombreconfigurarperfil">
    <label style="flex-shrink: 0; width: 30%; flex-grow: 0;" id="Labelnombreconfigurarperfil">Nombre</label>
    <vaadin-text-field placeholder="Nombre" style="flex-shrink: 0; width: 70%;" id="Textfieldnombreconfigurarperfil"></vaadin-text-field>
