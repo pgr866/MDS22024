@@ -16,4 +16,8 @@ public class Noticias_en_seccion_Identificado_item extends VistaNoticiasenseccio
 		super();
 		this._noticias_en_seccion_Identificado = _noticias_en_seccion_Identificado;
 	}
+	
+	public void Pagina_noticia_Identificado() {
+		throw new UnsupportedOperationException();
+	}
 }

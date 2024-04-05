@@ -27,8 +27,6 @@ public class Pagina_noticia_Usuario_no_registrado extends Pagina_Noticia {
 		this._mostrar_valoracion_noticia.getNomegustamostrarvaloracionnoticia().setDisableOnClick(true);
 	}
 
-	
-	
 	public void Seccion_comentarios_Usuario_no_registrado() {
 		this.getLayoutseccioncomentariospaginanoticia().as(VerticalLayout.class).add(_seccion_comentarios_Usuario_no_registrado);
 	}

@@ -11,8 +11,6 @@ public class Noticias_a_revisar_item extends VistaNoticiasarevisar_item {
 		this._noticias_a_revisar = _noticias_a_revisar;
 	}
 
-
-
 	public void Revisar_noticias() {
 		throw new UnsupportedOperationException();
 	}

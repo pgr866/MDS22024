@@ -15,7 +15,7 @@ public class Pagina_noticia_Editor extends Pagina_noticia_Identificado {
 	}
 	
 	public void Seccion_comentarios_Editor() {
-		this.getLayoutseccioncomentariospaginanoticia().as(VerticalLayout.class).remove(_seccion_comentarios_Identificado);
+		this.getLayoutseccioncomentariospaginanoticia().as(VerticalLayout.class).remove(this._seccion_comentarios_Identificado);
 		this.getLayoutseccioncomentariospaginanoticia().as(VerticalLayout.class).add(_seccion_comentarios_Editor);
 	}
 }

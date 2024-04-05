@@ -18,8 +18,6 @@ public class Noticias_en_seccion_Usuario_no_registrado_item extends VistaNoticia
 		this._noticias_en_seccion_Usuario_no_registrado = _noticias_en_seccion_Usuario_no_registrado;
 	}
 
-
-
 	public void Pagina_noticia_Usuario_no_registrado() {
 		throw new UnsupportedOperationException();
 	}

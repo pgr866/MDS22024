@@ -1,6 +1,9 @@
 package interfaz;
 
 import vistas.VistaUsuarionoregistrado;
+
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+
 import proyectoMDS.MainView;
 
 //import basededatos.iUsuario_no_Registrado;
@@ -16,6 +19,12 @@ public class Usuario_no_Registrado extends VistaUsuarionoregistrado {
 	public MainView mainview;
 	public Usuario_no_Registrado(MainView mainview) {
 		this.mainview = mainview;
+		this._listado_noticias_portada_Usuario_no_registrado = new Listado_noticias_portada_Usuario_no_registrado(this);
+		this._mostrar_publicidad = new Mostrar_publicidad(this, null);
+		this._buscar_Usuario_no_registrado = new Buscar_Usuario_no_registrado(this);
+		Listado_noticias_portada_Usuario_no_registrado();
+		Mostrar_publicidad();
+		Buscar_Usuario_no_registrado();
 	}
 
 	public void Iniciar_Sesion() {
@@ -23,7 +32,7 @@ public class Usuario_no_Registrado extends VistaUsuarionoregistrado {
 	}
 
 	public void Listado_noticias_portada_Usuario_no_registrado() {
-		throw new UnsupportedOperationException();
+		this.getLayoutnoticiasportadausuarionoregistrado().as(VerticalLayout.class).add(_listado_noticias_portada_Usuario_no_registrado);
 	}
 
 	public void Explorar_secciones_Usuario_no_registrado() {
@@ -31,10 +40,11 @@ public class Usuario_no_Registrado extends VistaUsuarionoregistrado {
 	}
 
 	public void Mostrar_publicidad() {
-		throw new UnsupportedOperationException();
+		this.getLayoutanuncioizquierdausuarionoregistrado().as(VerticalLayout.class).add(_mostrar_publicidad);
+		this.getLayoutanuncioderechausuarionoregistrado().as(VerticalLayout.class).add(_mostrar_publicidad);
 	}
 
 	public void Buscar_Usuario_no_registrado() {
-		throw new UnsupportedOperationException();
+		this.getBarrabusquedanoregistrado().add(_buscar_Usuario_no_registrado);
 	}
 }

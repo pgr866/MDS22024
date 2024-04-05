@@ -9,7 +9,6 @@ public class Explorar_secciones_Identificado extends Explorar_secciones {
 		super();
 		this._identificado = _identificado;
 		this._noticias_en_seccion_Identificado = new Noticias_en_seccion_Identificado(this);
-		//this.get
 		this.getLayoutnombrebotonesexplorarsecciones().setVisible(false);
 		Noticias_en_seccion_Identificado();
 	}

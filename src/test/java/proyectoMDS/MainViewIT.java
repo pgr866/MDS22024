@@ -1,69 +1,81 @@
 package proyectoMDS;
 
-import com.vaadin.flow.component.textfield.testbench.TextFieldElement;
-import org.junit.Assert;
-import org.junit.Test;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
+import com.vaadin.flow.component.Key;
+import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.button.ButtonVariant;
+import com.vaadin.flow.component.dependency.CssImport;
+import com.vaadin.flow.component.notification.Notification;
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.textfield.TextField;
+import com.vaadin.flow.router.Route;
+import com.vaadin.flow.server.PWA;
+import org.springframework.beans.factory.annotation.Autowired;
+import interfaz.Usuario_no_Registrado;
+/**
+ * A sample Vaadin view class.
+ * <p>
+ * To implement a Vaadin view just extend any Vaadin component and
+ * use @Route annotation to announce it in a URL as a Spring managed
+ * bean.
+ * Use the @PWA annotation make the application installable on phones,
+ * tablets and some desktop browsers.
+ * <p>
+ * A new instance of this class is created for every new user and every
+ * browser tab/window.
+ */
+@Route
+@PWA(name = "Vaadin Application",
+        shortName = "Vaadin App",
+        description = "This is an example Vaadin application.",
+        enableInstallPrompt = false)
+@CssImport("./styles/shared-styles.css")
+@CssImport(value = "./styles/vaadin-text-field-styles.css", themeFor = "vaadin-text-field")
+public class MainView extends VerticalLayout {
 
-import com.vaadin.flow.component.button.testbench.ButtonElement;
-import com.vaadin.flow.component.notification.testbench.NotificationElement;
-import com.vaadin.flow.theme.lumo.Lumo;
+    /**
+     * Construct a new Vaadin view.
+     * <p>
+     * Build the initial UI state for the user accessing the application.
+     */
+    public MainView() {
 
-public class MainViewIT extends AbstractViewTest {
+        // Use TextField for standard text input
+        TextField textField = new TextField("Your name");
+        textField.addThemeName("bordered");
+        
+        //CLASE 15/03
+        Usuario_no_Registrado u = new Usuario_no_Registrado(this);
+        add(u);
 
-    @Test
-    public void clickingButtonShowsNotification() {
-        Assert.assertFalse($(NotificationElement.class).exists());
-        $(ButtonElement.class).waitForFirst().click();
-        Assert.assertTrue($(NotificationElement.class).waitForFirst().isOpen());
+        // Button click listeners can be defined as lambda expressions
+        Button button = new Button("Say hello",
+                e -> Notification.show(null));
+
+        // Theme variants give you predefined extra styles for components.
+        // Example: Primary button has a more prominent look.
+        button.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
+
+        // You can specify keyboard shortcuts for buttons.
+        // Example: Pressing enter in this view clicks the Button.
+        button.addClickShortcut(Key.ENTER);
+
+        // Use custom CSS classes to apply styling. This is defined in shared-styles.css.
+        addClassName("centered-content");
+
+        add(textField, button);
+        
+        
+//		this.getBotonlogin().addClickListener(event->
+//		{
+//			if (this.getUsernamelogin().getValue().equals("Usuario")) {
+//				this._usuario_no_Registrado.mainview.removeAll();
+//				Identificado identificado = new Identificado(this._usuario_no_Registrado.mainview);
+//				this._usuario_no_Registrado.mainview.add(identificado.mainview);
+//			} else 
+//				this._usuario_no_Registrado.mainview.removeAll();}
+//		);
+//	}
+        
     }
 
-    @Test
-    public void clickingButtonTwiceShowsTwoNotifications() {
-        Assert.assertFalse($(NotificationElement.class).exists());
-        ButtonElement button = $(ButtonElement.class).waitForFirst();
-        button.click();
-        button.click();
-        $(NotificationElement.class).waitForFirst();
-        Assert.assertEquals(2, $(NotificationElement.class).all().size());
-    }
-
-    @Test
-    public void buttonIsUsingLumoTheme() {
-        WebElement element = $(ButtonElement.class).waitForFirst();
-        assertThemePresentOnElement(element, Lumo.class);
-    }
-
-    @Test
-    public void testClickButtonShowsHelloAnonymousUserNotificationWhenUserNameIsEmpty() {
-        ButtonElement button = $(ButtonElement.class).waitForFirst();
-        button.click();
-        $(NotificationElement.class).waitForFirst();
-        Assert.assertTrue($(NotificationElement.class).exists());
-        NotificationElement notification = $(NotificationElement.class).first();
-        Assert.assertEquals("Hello anonymous user", notification.getText());
-    }
-
-    @Test
-    public void testClickButtonShowsHelloUserNotificationWhenUserIsNotEmpty() {
-        TextFieldElement textField = $(TextFieldElement.class).waitForFirst();
-        textField.setValue("Vaadiner");
-        $(ButtonElement.class).waitForFirst().click();
-        $(NotificationElement.class).waitForFirst();
-        Assert.assertTrue($(NotificationElement.class).exists());
-        NotificationElement notification = $(NotificationElement.class).first();
-        Assert.assertEquals("Hello Vaadiner", notification.getText());
-    }
-
-    @Test
-    public void testEnterShowsHelloUserNotificationWhenUserIsNotEmpty() {
-        TextFieldElement textField = $(TextFieldElement.class).waitForFirst();
-        textField.setValue("Vaadiner");
-        textField.sendKeys(Keys.ENTER);
-        $(NotificationElement.class).waitForFirst();
-        Assert.assertTrue($(NotificationElement.class).exists());
-        NotificationElement notification = $(NotificationElement.class).first();
-        Assert.assertEquals("Hello Vaadiner", notification.getText());
-    }
 }
