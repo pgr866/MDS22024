@@ -63,6 +63,19 @@ public class MainView extends VerticalLayout {
         addClassName("centered-content");
 
         add(textField, button);
+        
+        
+//		this.getBotonlogin().addClickListener(event->
+//		{
+//			if (this.getUsernamelogin().getValue().equals("Usuario")) {
+//				this._usuario_no_Registrado.mainview.removeAll();
+//				Identificado identificado = new Identificado(this._usuario_no_Registrado.mainview);
+//				this._usuario_no_Registrado.mainview.add(identificado.mainview);
+//			} else 
+//				this._usuario_no_Registrado.mainview.removeAll();}
+//		);
+//	}
+        
     }
 
 }
