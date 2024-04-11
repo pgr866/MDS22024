@@ -1,5 +1,7 @@
 package interfaz;
 
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+
 import vistas.VistaIniciarsesion;
 
 public class Iniciar_Sesion extends VistaIniciarsesion {
@@ -14,6 +16,8 @@ public class Iniciar_Sesion extends VistaIniciarsesion {
 	public Iniciar_Sesion(Usuario_no_Registrado _usuario_no_Registrado) {
 		super();
 		this._usuario_no_Registrado = _usuario_no_Registrado;
+		this.getButtonentrarlogin().addClickListener(event->{});
+		this.getButtonregistrarselogin().addClickListener(event->Registrarse());
 	}
 
 	public void Entrar() {
@@ -25,6 +29,7 @@ public class Iniciar_Sesion extends VistaIniciarsesion {
 	}
 
 	public void Registrarse() {
-		throw new UnsupportedOperationException();
-	}
+		//this._usuario_no_Registrado.getLayoutnoticiasportadausuarionoregistrado().as(VerticalLayout.class).removeAll();
+		_registrarse = new Registrarse(this);
+		this._usuario_no_Registrado.getLayoutnoticiasportadausuarionoregistrado().as(VerticalLayout.class).add(_registrarse);	}
 }
