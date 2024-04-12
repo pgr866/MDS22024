@@ -9,7 +9,10 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.PWA;
+
 import org.springframework.beans.factory.annotation.Autowired;
+
+import interfaz.Identificado;
 import interfaz.Usuario_no_Registrado;
 /**
  * A sample Vaadin view class.
@@ -31,13 +34,16 @@ import interfaz.Usuario_no_Registrado;
 @CssImport("./styles/shared-styles.css")
 @CssImport(value = "./styles/vaadin-text-field-styles.css", themeFor = "vaadin-text-field")
 public class MainView extends VerticalLayout {
-
+	
+	public Usuario_no_Registrado _usuario_no_registrado;
+	public Identificado _identificado;
+	
     /**
      * Construct a new Vaadin view.
      * <p>
      * Build the initial UI state for the user accessing the application.
      */
-    public MainView() {
+    public MainView(){
 
         // Use TextField for standard text input
         TextField textField = new TextField("Your name");

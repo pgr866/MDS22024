@@ -8,7 +8,10 @@ public class Seccion_comentarios_Identificado_item extends Seccion_comentarios_i
 	public Seccion_comentarios_Identificado _seccion_comentarios_Identificado;
 
 	public Seccion_comentarios_Identificado_item(Seccion_comentarios _seccion_comentarios) {
-	super(_seccion_comentarios);
+		super(_seccion_comentarios);
+		this._mostrar_valoracion_comentario.getMegustaseccioncomentariositem().addClickListener(event->{});
+		this._mostrar_valoracion_comentario.getNomegustaseccioncomentariositem().addClickListener(event->{});
+		this._seccion_comentarios_Identificado.getBotonanadircomentarioseccioncomentarios().addClickListener(event->Comentar());
 }
 
 	public void Valorar_comentario() {

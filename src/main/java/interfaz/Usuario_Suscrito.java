@@ -1,5 +1,7 @@
 package interfaz;
 
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+
 import proyectoMDS.MainView;
 
 //import basededatos.iUsuario_Suscrito;
@@ -14,9 +16,12 @@ public class Usuario_Suscrito extends Identificado {
 		this.getLayoutcrearnuevanoticiaidentificado().setVisible(false);
 		this.getLayoutvistanoticiasarevisaridentificado().setVisible(false);
 		this.getLayoutdaraltabajaperiodistaidentificado().setVisible(false);
+		this.getConfigurarperfilidentificado().addClickListener(event->Configurar_perfil_Usuario_suscrito());
 	}
 
 	public void Configurar_perfil_Usuario_suscrito() {
-		throw new UnsupportedOperationException();
+		this.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).removeAll();
+		_configurar_perfil_Usuario_suscrito = new Configurar_perfil_Usuario_suscrito(this);
+		this.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).add(_configurar_perfil_Usuario_suscrito);
 	}
 }

@@ -23,6 +23,12 @@ public class Identificado extends VistaIdentificado {
 		_log_out = new Log_out(this);
 		Buscar_Identificado();
 		Log_out();
+		this._log_out.getButtonlogout().addClickListener(event->{
+			mainview.remove(this);
+			mainview.add(mainview._usuario_no_registrado);
+		});
+		this.getExplorarseccionesidentificado().addClickListener(event->Explorar_secciones_Identificado());
+		this.getConfigurarperfilidentificado().addClickListener(event->Configurar_perfil());
 	}
 
 	public void Listado_noticias_portada_Identificado() {
@@ -34,16 +40,18 @@ public class Identificado extends VistaIdentificado {
 	}
 
 	public void Explorar_secciones_Identificado() {
-		throw new UnsupportedOperationException();
+		this.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).removeAll();
+		_explorar_secciones_Identificado = new Explorar_secciones_Identificado(this);
+		this.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).add(_explorar_secciones_Identificado);
 	}
 
 	public void Log_out() {
 		this.getOpcionescuentaidentificado().as(VerticalLayout.class).add(_log_out);
-//		mainview.remove(this);
-//		MainView.add(mainview.usuario_no_registrado);
 	}
 
 	public void Configurar_perfil() {
-		throw new UnsupportedOperationException();
+		this.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).removeAll();
+		_configurar_perfil = new Configurar_perfil(this);
+		this.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).add(_configurar_perfil);
 	}
 }
