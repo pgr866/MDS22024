@@ -23,14 +23,15 @@ public class Crear_noticias extends vistas.VistaCrearnoticias {
 	}
 
 	public void Asignar_tematicas() {
-		throw new UnsupportedOperationException();
+//		borrar
 	}
 
 	public void Crear_noticia() {
-		throw new UnsupportedOperationException();
+		this._periodista.remove(this);
+		this._periodista.add(mainview._usuario_no_registrado);
 	}
 
 	public void Rellenar_noticia() {
-		throw new UnsupportedOperationException();
+//		borrar
 	}
 }

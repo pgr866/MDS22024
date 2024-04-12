@@ -4,7 +4,6 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 public class Baja_Alta_Periodistas extends vistas.VistaBajaaltaperiodistas {
 
-
 //	private event _alta_periodista;
 //	private Label _nombre;
 //	private TextArea _introducir_nombre;

@@ -29,6 +29,6 @@ public class Configurar_perfil extends vistas.VistaConfigurarperfil {
 	}
 
 	public void Modificar_datos() {
-		throw new UnsupportedOperationException();
+//		borrarlo
 	}
 }

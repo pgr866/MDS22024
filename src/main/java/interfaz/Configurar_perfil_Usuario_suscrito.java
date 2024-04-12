@@ -10,7 +10,6 @@ public class Configurar_perfil_Usuario_suscrito extends Configurar_perfil {
 		this._usuario_Suscrito = _usuario_Suscrito;
 		this.getLayoutntarjetaconfigurarperfil().setVisible(true);
 		this.getButtoneliminarcuentaconfigurarperfil().setVisible(true);
-
 	}
 
 	public void Eliminar_cuenta() {

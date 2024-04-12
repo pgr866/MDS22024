@@ -29,6 +29,11 @@ public class Identificado extends VistaIdentificado {
 		});
 		this.getExplorarseccionesidentificado().addClickListener(event->Explorar_secciones_Identificado());
 		this.getConfigurarperfilidentificado().addClickListener(event->Configurar_perfil());
+		this._log_out.getButtonlogout().addClickListener(event->
+		{
+			this.mainview.remove(this);
+			this.mainview.add(mainview._usuario_no_registrado);
+		});
 	}
 
 	public void Listado_noticias_portada_Identificado() {
