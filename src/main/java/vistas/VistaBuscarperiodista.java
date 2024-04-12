@@ -19,19 +19,8 @@ public class VistaBuscarperiodista extends LitTemplate {
 		this.layoutbuscarperiodista = layoutbuscarperiodista;
 	}
 
-	public ComboBox<String> getComboboxbuscarperiodista() {
-		return comboboxbuscarperiodista;
-	}
-
-	public void setComboboxbuscarperiodista(ComboBox<String> comboboxbuscarperiodista) {
-		this.comboboxbuscarperiodista = comboboxbuscarperiodista;
-	}
-
 	@Id("Layoutbuscarperiodista")
 	private Element layoutbuscarperiodista;
-	@Id("Comboboxbuscarperiodista")
-	private ComboBox<String> comboboxbuscarperiodista;
-
 	public VistaBuscarperiodista() {
         // You can initialise any data required for the connected UI components here.
     }

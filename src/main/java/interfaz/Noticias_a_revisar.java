@@ -13,7 +13,5 @@ public class Noticias_a_revisar extends VistaNoticiasarevisar {
 	public Noticias_a_revisar(Editor _editor) {
 		super();
 		this._editor = _editor;
-		
-
 	}
 }

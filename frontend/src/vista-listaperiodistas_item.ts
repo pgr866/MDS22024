@@ -1,4 +1,5 @@
 import { LitElement, html, css, customElement } from 'lit-element';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 
 @customElement('vista-listaperiodistas_item')
 export class VistaListaperiodistas_item extends LitElement {
@@ -13,7 +14,9 @@ export class VistaListaperiodistas_item extends LitElement {
 
   render() {
     return html`
-Periodista
+<vaadin-vertical-layout id="Layoutlistaperiodistaitem" style="width: 100%; height: 100%;">
+  Text 
+</vaadin-vertical-layout>
 `;
   }
 

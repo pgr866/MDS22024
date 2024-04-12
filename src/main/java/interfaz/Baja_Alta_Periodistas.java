@@ -28,6 +28,7 @@ public class Baja_Alta_Periodistas extends vistas.VistaBajaaltaperiodistas {
 		this._editor = _editor;
 		this._buscar_periodista = new Buscar_periodista(this);
 		Buscar_periodista();
+		this.getButtondaraltaperiodista().addClickListener(event->Alta_periodista());
 	}
 
 	public void Buscar_periodista() {
@@ -35,6 +36,16 @@ public class Baja_Alta_Periodistas extends vistas.VistaBajaaltaperiodistas {
 	}
 	
 	public void Alta_periodista() {
-		throw new UnsupportedOperationException();
+		String nombre_periodista = this.getTextfieldnombredaraltaperiodista().getValue();
+		String apellidos_periodista = this.getTextfieldapellidosdaraltaperiodista().getValue();
+		String nick_periodista = this.getTextfieldnickdaraltaperiodista().getValue();
+		String dni_periodista = this.getTextfielddnidaraltaperiodista().getValue();
+		String email_periodista = this.getTextfieldemaildaraltaperiodista().getValue();
+		String telefono_periodista = this.getTextfieldtelefonodaraltaperiodista().getValue();
+		//Crear periodista BD
+		Lista_periodistas_item nuevo_periodista = new Lista_periodistas_item(this._buscar_periodista._lista_periodistas);
+		nuevo_periodista.getLayoutlistaperiodistaitem().setText(nombre_periodista);
+		this._buscar_periodista._lista_periodistas._item.add(nuevo_periodista);
+		this._editor.Baja_Alta_Periodistas(); // Refrescar pagina
 	}
 }

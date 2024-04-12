@@ -10,6 +10,17 @@ import com.vaadin.flow.component.template.Id;
 @JsModule("./src/vista-listaperiodistas_item.ts")
 public class VistaListaperiodistas_item extends LitTemplate {
 
+	public Element getLayoutlistaperiodistaitem() {
+		return layoutlistaperiodistaitem;
+	}
+
+	public void setLayoutlistaperiodistaitem(Element layoutlistaperiodistaitem) {
+		this.layoutlistaperiodistaitem = layoutlistaperiodistaitem;
+	}
+
+	@Id("Layoutlistaperiodistaitem")
+	private Element layoutlistaperiodistaitem;
+
 	public VistaListaperiodistas_item() {
         // You can initialise any data required for the connected UI components here.
     }

@@ -1,4 +1,4 @@
-package interfaz; //DINAMICO
+package interfaz;
 
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
@@ -15,8 +15,8 @@ public class Noticias_a_revisar_item extends VistaNoticiasarevisar_item {
 	}
 
 	public void Revisar_noticias() {
-		this._noticias_a_revisar._editor.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).removeAll();
 		if(this.getItemnoticiasarevisar().getText() == (String) this._noticias_a_revisar.getSelectnoticiasarevisar().getValue()) {
+			this._noticias_a_revisar._editor.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).removeAll();
 			_revisar_noticias = new Revisar_noticias(this);
 			this._noticias_a_revisar._editor.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).add(_revisar_noticias);
 		}

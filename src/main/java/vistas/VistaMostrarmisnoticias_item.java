@@ -10,6 +10,17 @@ import com.vaadin.flow.component.template.Id;
 @JsModule("./src/vista-mostrarmisnoticias_item.ts")
 public class VistaMostrarmisnoticias_item extends LitTemplate {
 
+	public Element getLayoutmostrarmisnoticiasitem() {
+		return layoutmostrarmisnoticiasitem;
+	}
+
+	public void setLayoutmostrarmisnoticiasitem(Element layoutmostrarmisnoticiasitem) {
+		this.layoutmostrarmisnoticiasitem = layoutmostrarmisnoticiasitem;
+	}
+
+	@Id("Layoutmostrarmisnoticiasitem")
+	private Element layoutmostrarmisnoticiasitem;
+	
 	public VistaMostrarmisnoticias_item() {
         // You can initialise any data required for the connected UI components here.
     }

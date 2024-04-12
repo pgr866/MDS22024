@@ -1,6 +1,5 @@
 import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
-import '@vaadin/vaadin-combo-box/src/vaadin-combo-box.js';
 
 @customElement('vista-buscarperiodista')
 export class VistaBuscarperiodista extends LitElement {
@@ -15,11 +14,7 @@ export class VistaBuscarperiodista extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout theme="" style="width: 100%; height: 100%; justify-content: center;" id="Layoutbuscarperiodista">
- <vaadin-combo-box style="width: 100%; flex-shrink: 1;" placeholder="Búsqueda Periodista" .items="${['Periodista1', 'Periodista2']}" id="Comboboxbuscarperiodista">
-  <iron-icon icon="lumo:search" slot="prefix"></iron-icon>
- </vaadin-combo-box>
-</vaadin-vertical-layout>
+<vaadin-vertical-layout theme="" style="width: 100%; height: 100%; justify-content: center;" id="Layoutbuscarperiodista"></vaadin-vertical-layout>
 `;
   }
 

@@ -19,7 +19,9 @@ public class Editor extends Identificado {
 		this.getLayoutvermisnoticiasidentificado().setVisible(false);
 		this.getLayoutcrearnuevanoticiaidentificado().setVisible(false);
 		this._listado_noticias_portada_Editor = new Listado_noticias_portada_Editor(this);
+		this._noticias_a_revisar = new Noticias_a_revisar(this);
 		Listado_noticias_portada_Editor();
+		Noticias_a_revisar();
 		this.getExplorarseccionesidentificado().addClickListener(event->Explorar_secciones_Editor());
 		this.getButtondaraltabajaperiodistaidentificado().addClickListener(event->Baja_Alta_Periodistas());
 	}
@@ -30,7 +32,7 @@ public class Editor extends Identificado {
 	}
 
 	public void Noticias_a_revisar() {
-		
+		this.getLayoutvistanoticiasarevisaridentificado().as(VerticalLayout.class).add(_noticias_a_revisar);
 	}
 
 	public void Baja_Alta_Periodistas() {

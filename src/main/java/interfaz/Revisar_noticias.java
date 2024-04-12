@@ -24,7 +24,8 @@ public class Revisar_noticias extends vistas.VistaRevisarnoticias {
 	public void Eliminar_noticia() {
 //		this.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).removeAll();
 //		_baja_Alta_Periodistas = new Baja_Alta_Periodistas(this);
-//		this.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).add(_baja_Alta_Periodistas);	}
+//		this.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).add(_baja_Alta_Periodistas);
+	}
 
 	public void Publicar_noticia() {
 		throw new UnsupportedOperationException();
@@ -32,7 +33,6 @@ public class Revisar_noticias extends vistas.VistaRevisarnoticias {
 
 	public void Realizar_resumen() {
 		//borrar
-		throw new UnsupportedOperationException();
 	}
 
 	public void Asignar_noticia_en_seccion() {
