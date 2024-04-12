@@ -25,10 +25,14 @@ public class Usuario_no_Registrado extends VistaUsuarionoregistrado {
 		Listado_noticias_portada_Usuario_no_registrado();
 		Mostrar_publicidad();
 		Buscar_Usuario_no_registrado();
+		this.getIniciarsesion().addClickListener(event->Iniciar_Sesion());
+		this.getExplorarseccionesnoregistrado().addClickListener(event->Explorar_secciones_Usuario_no_registrado());
 	}
 
 	public void Iniciar_Sesion() {
-		throw new UnsupportedOperationException();
+		this.getLayoutnoticiasportadausuarionoregistrado().as(VerticalLayout.class).removeAll();
+		_iniciar_Sesion = new Iniciar_Sesion(this);
+		this.getLayoutnoticiasportadausuarionoregistrado().as(VerticalLayout.class).add(_iniciar_Sesion);
 	}
 
 	public void Listado_noticias_portada_Usuario_no_registrado() {
@@ -36,7 +40,9 @@ public class Usuario_no_Registrado extends VistaUsuarionoregistrado {
 	}
 
 	public void Explorar_secciones_Usuario_no_registrado() {
-		throw new UnsupportedOperationException();
+		this.getLayoutnoticiasportadausuarionoregistrado().as(VerticalLayout.class).removeAll();
+		_explorar_secciones_Usuario_no_registrado = new Explorar_secciones_Usuario_no_registrado(this);
+		this.getLayoutnoticiasportadausuarionoregistrado().as(VerticalLayout.class).add(_explorar_secciones_Usuario_no_registrado);
 	}
 
 	public void Mostrar_publicidad() {

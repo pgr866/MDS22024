@@ -20,7 +20,8 @@ public class Editor extends Identificado {
 		this.getLayoutcrearnuevanoticiaidentificado().setVisible(false);
 		this._listado_noticias_portada_Editor = new Listado_noticias_portada_Editor(this);
 		Listado_noticias_portada_Editor();
-		;
+		this.getExplorarseccionesidentificado().addClickListener(event->Explorar_secciones_Editor());
+		this.getButtondaraltabajaperiodistaidentificado().addClickListener(event->Baja_Alta_Periodistas());
 	}
 
 	public void Listado_noticias_portada_Editor() {
@@ -33,10 +34,14 @@ public class Editor extends Identificado {
 	}
 
 	public void Baja_Alta_Periodistas() {
-		
+		this.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).removeAll();
+		_baja_Alta_Periodistas = new Baja_Alta_Periodistas(this);
+		this.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).add(_baja_Alta_Periodistas);
 	}
 
 	public void Explorar_secciones_Editor() {
-		
+		this.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).removeAll();
+		_explorar_secciones_Editor = new Explorar_secciones_Editor(this);
+		this.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).add(_explorar_secciones_Editor);
 	}
 }
