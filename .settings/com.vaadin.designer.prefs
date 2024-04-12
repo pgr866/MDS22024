@@ -1,11 +1,7 @@
 =\=\=\=\=\=\=
 <<<<<<<=HEAD
->>>>>>>=branch 'main' of git@github.com\:pgr866/fornielesgomez.git
+>>>>>>>=ffe74c2713ca3cc87a6a26f7a2dd1c9c179d517c
 eclipse.preferences.version=1
 paperSizePresets=[{"caption"\:"Phone","width"\:320,"height"\:568},{"caption"\:"Tablet","width"\:768,"height"\:1024}]
-<<<<<<< HEAD
-serverAddress=192.168.1.131
-=======
-serverAddress=192.168.1.132
->>>>>>> ffe74c2713ca3cc87a6a26f7a2dd1c9c179d517c
+serverAddress=172.20.33.140
 serverPort=56418
