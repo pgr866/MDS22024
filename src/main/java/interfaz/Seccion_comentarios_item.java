@@ -25,6 +25,5 @@ public class Seccion_comentarios_item extends VistaSeccioncomentarios_item {
 
 	public void Mostrar_valoracion_comentario() {
 		this.getLayoutvistamostrarvaloracioncomentarioseccioncomentariositem().as(VerticalLayout.class).add(_mostrar_valoracion_comentario);
-
 	}
 }

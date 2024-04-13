@@ -28,16 +28,20 @@ export class VistaRevisarnoticias extends LitElement {
    <label style="width: 20%; flex-shrink: 0; flex-grow: 0;" id="Labelurlimagenesrevisarnoticias">Url Imagenes</label>
    <vaadin-text-field style="flex-shrink: 0; flex-grow: 1;" disabled value="Url Imagenes" id="Textfieldurlimagenesrevisarnoticias" tabindex="" has-value></vaadin-text-field>
   </vaadin-horizontal-layout>
-  <vaadin-horizontal-layout style="flex-shrink: 0; width: 80%; height: 35%; justify-content: center; align-items: center;" id="Layoutcontenidonoticiarevisarnoticias">
+  <vaadin-horizontal-layout style="flex-shrink: 0; width: 80%; height: 30%; justify-content: center; align-items: center;" id="Layoutcontenidonoticiarevisarnoticias">
    <label style="width: 20%; flex-shrink: 0; flex-grow: 0; align-self: flex-start;" id="Labelcontenidonoticiarevisarnoticias">Contenido noticia</label>
    <vaadin-text-area style="flex-grow: 1; align-self: stretch; flex-shrink: 0;" disabled value="Contenido noticia" tabindex="" has-value id="Textareacontenidonoticiarevisarnoticias"></vaadin-text-area>
   </vaadin-horizontal-layout>
-  <vaadin-horizontal-layout style="flex-shrink: 0; width: 80%; height: 12%; justify-content: center; align-items: center;" id="Layoutfechaylugarrevisarnoticias">
+  <vaadin-horizontal-layout style="flex-shrink: 0; width: 80%; justify-content: center; align-items: center; height: 10%;" id="Layoutfechaylugarrevisarnoticias">
    <label style="width: 20%; flex-shrink: 0; flex-grow: 0;" id="Labelfechaylugarrevisarnoticias">Fecha y lugar</label>
    <vaadin-horizontal-layout style="width: 80%; flex-shrink: 0; justify-content: space-between;" id="Layouttextfieldsfechaylugarrevisarnoticias">
     <vaadin-text-field style="flex-shrink: 0; flex-grow: 0; width: 45%;" disabled value="Fecha" id="Textfieldfecharevisarnoticias" tabindex="" has-value></vaadin-text-field>
     <vaadin-text-field style="flex-shrink: 0; flex-grow: 0; width: 45%;" disabled value="Lugar" id="Textfieldlugarrevisarnoticias" tabindex="" has-value></vaadin-text-field>
    </vaadin-horizontal-layout>
+  </vaadin-horizontal-layout>
+  <vaadin-horizontal-layout style="flex-shrink: 0; width: 80%; height: 12%; justify-content: center; align-items: center;" id="Layouttematicarevisarnoticias">
+   <label style="width: 20%; flex-shrink: 0; flex-grow: 0;" id="Labeltematicarevisarnoticias">Temática</label>
+   <vaadin-text-field style="flex-shrink: 0; flex-grow: 1;" id="Textfieldtematicarevisarnoticias" disabled value="Temática"></vaadin-text-field>
   </vaadin-horizontal-layout>
   <vaadin-horizontal-layout style="flex-shrink: 0; width: 80%; height: 12%; justify-content: center; align-items: center;" id="Layoutresumenrevisarnoticias">
    <label style="width: 20%; flex-shrink: 0; flex-grow: 0;" id="Labelresumenrevisarnoticias">Resumen</label>

@@ -30,16 +30,17 @@ public class Registrarse extends vistas.VistaRegistrarse {
 	}
 
 	public void Cancelar() {
-		this._iniciar_Sesion._usuario_no_Registrado.getLayoutnoticiasportadausuarionoregistrado().as(VerticalLayout.class).removeAll();
+		this._iniciar_Sesion._usuario_no_Registrado.Iniciar_Sesion();
 	}
 
 	public void Comprobar_datos() {
-		throw new UnsupportedOperationException();
+		// borrar
 	}
 
 	public void Enviar() {
-	//CONSIDERAR hacer remove del iniciar sesion de la pagina que vengo (depende de lo que se haga en el mainview al cambiar de actor)
-		this._iniciar_Sesion._usuario_no_Registrado.getLayoutnoticiasportadausuarionoregistrado().as(VerticalLayout.class).removeAll();
+		// crear usuario registrado BD
+//		this._usuario_no_Registrado.mainview.remove(this);
+//		this._usuario_no_Registrado.mainview.add(this._usuario_no_Registrado.mainview._usuario_no_registrado);
 	}
 
 	public void Gestionar_pagos() {

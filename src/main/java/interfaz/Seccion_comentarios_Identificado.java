@@ -11,7 +11,6 @@ public class Seccion_comentarios_Identificado extends Seccion_comentarios {
 	public Seccion_comentarios_Identificado(Pagina_noticia_Identificado _pagina_noticia_Identificado) {
 		super();
 		this._pagina_noticia_Identificado = _pagina_noticia_Identificado;
+		this.getBotonanadircomentarioseccioncomentarios().addClickListener(event->Seccion_comentarios_Identificado_item.Comentar());
 	}
-	
-	
 }

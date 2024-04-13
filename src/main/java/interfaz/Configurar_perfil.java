@@ -22,13 +22,22 @@ public class Configurar_perfil extends vistas.VistaConfigurarperfil {
 		this._identificado = _identificado;
 		this.getLayoutntarjetaconfigurarperfil().setVisible(false);
 		this.getButtoneliminarcuentaconfigurarperfil().setVisible(false);
+		this.getButtonguardarcambiosconfigurarperfil().addClickListener(event->Guardar_cambios());
 	}
 	
 	public void Guardar_cambios() {
-		throw new UnsupportedOperationException();
+		String nombre = this.getTextfieldnombreconfigurarperfil().getValue();
+		String apodo = this.getTextfieldapodoconfigurarperfil().getValue();
+		String email = this.getTextfieldemailconfigurarperfil().getValue();
+		String contrasena = this.getPasswordfieldcontrasenaconfigurarperfil().getValue();
+		String tarjeta = "";
+		if (this.getLabelntarjetaconfigurarperfil().isVisible())
+			tarjeta = this.getTextfieldntarjetaconfigurarperfil().getValue();
+		// update usuario BD
+		this._identificado.Configurar_perfil(); // Refrescar pagina
 	}
-
+	
 	public void Modificar_datos() {
-//		borrarlo
+//		borrar
 	}
 }

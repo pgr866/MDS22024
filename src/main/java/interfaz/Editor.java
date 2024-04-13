@@ -27,7 +27,7 @@ public class Editor extends Identificado {
 	}
 
 	public void Listado_noticias_portada_Editor() {
-		this.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).remove(this._listado_noticias_portada_Identificado);
+		this.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).removeAll();
 		this.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).add(_listado_noticias_portada_Editor);
 	}
 

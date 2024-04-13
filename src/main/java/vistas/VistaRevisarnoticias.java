@@ -15,7 +15,31 @@ import com.vaadin.flow.component.button.Button;
 @JsModule("./src/vista-revisarnoticias.ts")
 public class VistaRevisarnoticias extends LitTemplate {
 
-    public HorizontalLayout getLayouttitulonoticiarevisarnoticias() {
+    public HorizontalLayout getLayouttematicarevisarnoticias() {
+		return layouttematicarevisarnoticias;
+	}
+
+	public void setLayouttematicarevisarnoticias(HorizontalLayout layouttematicarevisarnoticias) {
+		this.layouttematicarevisarnoticias = layouttematicarevisarnoticias;
+	}
+
+	public Label getLabeltematicarevisarnoticias() {
+		return labeltematicarevisarnoticias;
+	}
+
+	public void setLabeltematicarevisarnoticias(Label labeltematicarevisarnoticias) {
+		this.labeltematicarevisarnoticias = labeltematicarevisarnoticias;
+	}
+
+	public TextField getTextfieldtematicarevisarnoticias() {
+		return textfieldtematicarevisarnoticias;
+	}
+
+	public void setTextfieldtematicarevisarnoticias(TextField textfieldtematicarevisarnoticias) {
+		this.textfieldtematicarevisarnoticias = textfieldtematicarevisarnoticias;
+	}
+
+	public HorizontalLayout getLayouttitulonoticiarevisarnoticias() {
 		return layouttitulonoticiarevisarnoticias;
 	}
 
@@ -215,6 +239,12 @@ public class VistaRevisarnoticias extends LitTemplate {
 	private Button publicarrevisarnoticia;
 	@Id("eliminarrevisarnoticia")
 	private Button eliminarrevisarnoticia;
+	@Id("Layouttematicarevisarnoticias")
+	private HorizontalLayout layouttematicarevisarnoticias;
+	@Id("Labeltematicarevisarnoticias")
+	private Label labeltematicarevisarnoticias;
+	@Id("Textfieldtematicarevisarnoticias")
+	private TextField textfieldtematicarevisarnoticias;
 
 	public VistaRevisarnoticias() {
         // You can initialise any data required for the connected UI components here.

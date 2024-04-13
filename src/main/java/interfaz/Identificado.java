@@ -19,20 +19,18 @@ public class Identificado extends VistaIdentificado {
 	public MainView mainview;
 	public Identificado(MainView mainview) {
 		this.mainview = mainview;
-		_buscar_Identificado = new Buscar_Identificado(this);
-		_log_out = new Log_out(this);
+		this._listado_noticias_portada_Identificado = new Listado_noticias_portada_Identificado(this);
+		this._buscar_Identificado = new Buscar_Identificado(this);
+		this._log_out = new Log_out(this);
+		Listado_noticias_portada_Identificado();
 		Buscar_Identificado();
 		Log_out();
-		this._log_out.getButtonlogout().addClickListener(event->{
-			mainview.remove(this);
-			mainview.add(mainview._usuario_no_registrado);
-		});
 		this.getExplorarseccionesidentificado().addClickListener(event->Explorar_secciones_Identificado());
 		this.getConfigurarperfilidentificado().addClickListener(event->Configurar_perfil());
 		this._log_out.getButtonlogout().addClickListener(event->
 		{
 			this.mainview.remove(this);
-			this.mainview.add(mainview._usuario_no_registrado);
+			this.mainview.add(this.mainview._usuario_no_registrado);
 		});
 	}
 

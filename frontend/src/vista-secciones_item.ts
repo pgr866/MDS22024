@@ -14,7 +14,7 @@ export class VistaSecciones_item extends LitElement {
   render() {
     return html`
 <vaadin-item selected id="Itemsecciones">
-  Seccion1
+ nombre_seccion
 </vaadin-item>
 `;
   }

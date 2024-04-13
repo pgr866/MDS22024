@@ -1,5 +1,7 @@
 package interfaz;
 
+import java.util.ArrayList;
+
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 public class Baja_Alta_Periodistas extends vistas.VistaBajaaltaperiodistas {
@@ -36,16 +38,20 @@ public class Baja_Alta_Periodistas extends vistas.VistaBajaaltaperiodistas {
 	}
 	
 	public void Alta_periodista() {
-		String nombre_periodista = this.getTextfieldnombredaraltaperiodista().getValue();
-		String apellidos_periodista = this.getTextfieldapellidosdaraltaperiodista().getValue();
-		String nick_periodista = this.getTextfieldnickdaraltaperiodista().getValue();
-		String dni_periodista = this.getTextfielddnidaraltaperiodista().getValue();
-		String email_periodista = this.getTextfieldemaildaraltaperiodista().getValue();
-		String telefono_periodista = this.getTextfieldtelefonodaraltaperiodista().getValue();
-		//Crear periodista BD
+		String nombre = this.getTextfieldnombredaraltaperiodista().getValue();
+		String apellidos = this.getTextfieldapellidosdaraltaperiodista().getValue();
+		String nick = this.getTextfieldnickdaraltaperiodista().getValue();
+		String dni = this.getTextfielddnidaraltaperiodista().getValue();
+		String email = this.getTextfieldemaildaraltaperiodista().getValue();
+		String telefono = this.getTextfieldtelefonodaraltaperiodista().getValue();
+		// crear periodista BD
 		Lista_periodistas_item nuevo_periodista = new Lista_periodistas_item(this._buscar_periodista._lista_periodistas);
-		nuevo_periodista.getLayoutlistaperiodistaitem().setText(nombre_periodista);
+		nuevo_periodista.getLayoutlistaperiodistaitem().setText(nombre);
 		this._buscar_periodista._lista_periodistas._item.add(nuevo_periodista);
+		ArrayList<String> items = new ArrayList<String>();
+		for (Lista_periodistas_item periodista : this._buscar_periodista._lista_periodistas._item)
+			items.add(periodista.getLayoutlistaperiodistaitem().getText());
+		this._buscar_periodista._lista_periodistas.getComboboxlistaperiodistas().setItems(items);
 		this._editor.Baja_Alta_Periodistas(); // Refrescar pagina
 	}
 }

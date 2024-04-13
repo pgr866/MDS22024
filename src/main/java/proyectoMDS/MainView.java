@@ -12,7 +12,9 @@ import com.vaadin.flow.server.PWA;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import interfaz.Identificado;
+import interfaz.Editor;
+import interfaz.Periodista;
+import interfaz.Usuario_Suscrito;
 import interfaz.Usuario_no_Registrado;
 /**
  * A sample Vaadin view class.
@@ -36,7 +38,9 @@ import interfaz.Usuario_no_Registrado;
 public class MainView extends VerticalLayout {
 	
 	public Usuario_no_Registrado _usuario_no_registrado;
-	public Identificado _identificado;
+	public Usuario_Suscrito _usuario_suscrito;
+	public Periodista _periodista;
+	public Editor _editor;
 	
     /**
      * Construct a new Vaadin view.

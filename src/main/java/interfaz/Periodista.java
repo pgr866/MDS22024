@@ -1,5 +1,7 @@
 package interfaz;
 
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+
 import proyectoMDS.MainView;
 
 //import basededatos.iPeriodista;
@@ -13,13 +15,18 @@ public class Periodista extends Identificado {
 		super(mainview);
 		this.getLayoutvistanoticiasarevisaridentificado().setVisible(false);
 		this.getLayoutdaraltabajaperiodistaidentificado().setVisible(false);
+		this._mostrar_mis_noticias = new Mostrar_mis_noticias(this);
+		Mostrar_mis_noticias();
+		this.getButtoncrearnuevanoticiaidentificado().addClickListener(event->Crear_noticias());
 	}
 
 	public void Crear_noticias() {
-		throw new UnsupportedOperationException();
+		this.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).removeAll();
+		_crear_noticias = new Crear_noticias(this);
+		this.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).add(_crear_noticias);
 	}
 
 	public void Mostrar_mis_noticias() {
-		throw new UnsupportedOperationException();
+		this.getLayoutvermisnoticiasidentificado().as(VerticalLayout.class).add(_mostrar_mis_noticias);
 	}
 }

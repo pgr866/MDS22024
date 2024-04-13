@@ -10,6 +10,5 @@ public class Seccion_comentarios_Usuario_no_registrado extends Seccion_comentari
 		super();
 		this._pagina_noticia_Usuario_no_registrado = _pagina_noticia_Usuario_no_registrado;
 		this.getLayoutcomentarioseccioncomentarios().setVisible(false);
-
 	}
 }

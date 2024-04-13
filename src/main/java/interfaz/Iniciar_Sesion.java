@@ -16,20 +16,21 @@ public class Iniciar_Sesion extends VistaIniciarsesion {
 	public Iniciar_Sesion(Usuario_no_Registrado _usuario_no_Registrado) {
 		super();
 		this._usuario_no_Registrado = _usuario_no_Registrado;
-		this.getButtonentrarlogin().addClickListener(event->{});
+		this.getButtonentrarlogin().addClickListener(event->Entrar());
 		this.getButtonregistrarselogin().addClickListener(event->Registrarse());
 	}
 
 	public void Entrar() {
-		throw new UnsupportedOperationException();
+//		this._usuario_no_Registrado.mainview.remove(this);
+//		this._usuario_no_Registrado.mainview.add(this._usuario_no_Registrado.mainview._usuario_no_registrado);
 	}
 
 	public void Validar_datos() {
-		throw new UnsupportedOperationException();
+		// borrar
 	}
 
 	public void Registrarse() {
-		//this._usuario_no_Registrado.getLayoutnoticiasportadausuarionoregistrado().as(VerticalLayout.class).removeAll();
+		this._usuario_no_Registrado.getLayoutnoticiasportadausuarionoregistrado().as(VerticalLayout.class).removeAll();
 		_registrarse = new Registrarse(this);
 		this._usuario_no_Registrado.getLayoutnoticiasportadausuarionoregistrado().as(VerticalLayout.class).add(_registrarse);	}
 }
