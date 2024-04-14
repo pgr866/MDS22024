@@ -21,8 +21,9 @@ public class Iniciar_Sesion extends VistaIniciarsesion {
 	}
 
 	public void Entrar() {
-//		this._usuario_no_Registrado.mainview.remove(this);
-//		this._usuario_no_Registrado.mainview.add(this._usuario_no_Registrado.mainview._usuario_no_registrado);
+		// comprobar tipo de usuario y credenciales BD
+		this._usuario_no_Registrado.mainview.remove(this);
+		this._usuario_no_Registrado.mainview.add(this._usuario_no_Registrado.mainview._usuario_suscrito);
 	}
 
 	public void Validar_datos() {

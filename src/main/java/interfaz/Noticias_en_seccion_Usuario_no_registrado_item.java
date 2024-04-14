@@ -1,5 +1,7 @@
 package interfaz; //DINAMICO
 
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+
 import vistas.VistaNoticiasenseccionusuarionoregistrado_item;
 
 public class Noticias_en_seccion_Usuario_no_registrado_item extends VistaNoticiasenseccionusuarionoregistrado_item {
@@ -19,6 +21,8 @@ public class Noticias_en_seccion_Usuario_no_registrado_item extends VistaNoticia
 	}
 
 	public void Pagina_noticia_Usuario_no_registrado() {
-		throw new UnsupportedOperationException();
+		this._noticias_en_seccion_Usuario_no_registrado._explorar_secciones_Usuario_no_registrado._usuario_no_Registrado.getLayoutnoticiasportadausuarionoregistrado().as(VerticalLayout.class).removeAll();
+		this._pagina_noticia_Usuario_no_registrado = new Pagina_noticia_Usuario_no_registrado(null, null, this);
+		this._noticias_en_seccion_Usuario_no_registrado._explorar_secciones_Usuario_no_registrado._usuario_no_Registrado.getLayoutnoticiasportadausuarionoregistrado().as(VerticalLayout.class).add(_pagina_noticia_Usuario_no_registrado);
 	}
 }

@@ -1,7 +1,5 @@
 package interfaz;
 
-import com.vaadin.flow.component.listbox.MultiSelectListBox;
-
 public class Seccion_comentarios_Identificado_item extends Seccion_comentarios_item {
 //	private event _valorar_comentario;
 //	private Button _me_gusta;

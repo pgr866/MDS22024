@@ -1,4 +1,4 @@
-package interfaz; //DINAMICO
+package interfaz;
 
 import vistas.VistaListadonoticiasbusquedaidentificado_item;
 

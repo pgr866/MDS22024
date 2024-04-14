@@ -1,6 +1,5 @@
 package interfaz;
 
-import com.vaadin.flow.component.listbox.MultiSelectListBox;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 public class Pagina_noticia_Editor extends Pagina_noticia_Identificado {
@@ -18,14 +17,5 @@ public class Pagina_noticia_Editor extends Pagina_noticia_Identificado {
 	public void Seccion_comentarios_Editor() {
 		this.getLayoutseccioncomentariospaginanoticia().as(VerticalLayout.class).remove(this._seccion_comentarios_Identificado);
 		this.getLayoutseccioncomentariospaginanoticia().as(VerticalLayout.class).add(_seccion_comentarios_Editor);
-	}
-	
-	public void Comentar() {
-		String nombre_seccion = (String) this.getTextfieldnombreexplorarsecciones().getValue();
-		// crear comentario BD
-		Secciones_item nuevo_comentario = new Secciones_item(this._secciones);
-		this._secciones.getListboxsecciones().as(MultiSelectListBox.class).add(nueva_seccion);
-		this._secciones._item.add(nueva_seccion);
-		this._editor.Explorar_secciones_Editor(); // Refrescar pagina
 	}
 }

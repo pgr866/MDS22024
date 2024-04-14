@@ -15,7 +15,7 @@ export class VistaMostrarmisnoticias_item extends LitElement {
   render() {
     return html`
 <vaadin-vertical-layout id="Layoutmostrarmisnoticiasitem" style="width: 100%; height: 100%;">
-  Text 
+ Text
 </vaadin-vertical-layout>
 `;
   }

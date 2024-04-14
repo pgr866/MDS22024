@@ -15,6 +15,14 @@ import com.vaadin.flow.component.textfield.TextArea;
 @JsModule("./src/vista-seccioncomentarios.ts")
 public class VistaSeccioncomentarios extends LitTemplate {
 
+	public TextArea getTextareacomentarioseccioncomentarios() {
+		return textareacomentarioseccioncomentarios;
+	}
+
+	public void setTextareacomentarioseccioncomentarios(TextArea textareacomentarioseccioncomentarios) {
+		this.textareacomentarioseccioncomentarios = textareacomentarioseccioncomentarios;
+	}
+
 	public Element getLayoutseccioncomentarios() {
 		return layoutseccioncomentarios;
 	}
@@ -47,14 +55,6 @@ public class VistaSeccioncomentarios extends LitTemplate {
 		this.botonanadircomentarioseccioncomentarios = botonanadircomentarioseccioncomentarios;
 	}
 
-	public TextArea getVaadinTextArea() {
-		return vaadinTextArea;
-	}
-
-	public void setVaadinTextArea(TextArea vaadinTextArea) {
-		this.vaadinTextArea = vaadinTextArea;
-	}
-
 	public Element getLayoutvistaseccioncomentarios() {
 		return layoutvistaseccioncomentarios;
 	}
@@ -71,10 +71,10 @@ public class VistaSeccioncomentarios extends LitTemplate {
 	private HorizontalLayout layoutcomentarioseccioncomentarios;
 	@Id("Botonanadircomentarioseccioncomentarios")
 	private Button botonanadircomentarioseccioncomentarios;
-	@Id("vaadinTextArea")
-	private TextArea vaadinTextArea;
 	@Id("Layoutvistaseccioncomentarios")
 	private Element layoutvistaseccioncomentarios;
+	@Id("Textareacomentarioseccioncomentarios")
+	private TextArea textareacomentarioseccioncomentarios;
 
 	public VistaSeccioncomentarios() {
         // You can initialise any data required for the connected UI components here.

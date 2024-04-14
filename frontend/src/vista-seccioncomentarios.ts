@@ -23,7 +23,7 @@ export class VistaSeccioncomentarios extends LitElement {
   <vaadin-button style="flex-shrink: 0; flex-grow: 0; height: 100%; width: 12%; align-self: center;" id="Botonanadircomentarioseccioncomentarios">
     Añadir comentario 
   </vaadin-button>
-  <vaadin-text-area placeholder="Escriba un comentario..." style="width: 85%; height: 100%;" dir="Textareacomentarioseccioncomentarios" id="vaadinTextArea"></vaadin-text-area>
+  <vaadin-text-area placeholder="Escriba un comentario..." style="width: 85%; height: 100%;" id="Textareacomentarioseccioncomentarios"></vaadin-text-area>
  </vaadin-horizontal-layout>
  <vaadin-vertical-layout style="flex-grow: 1; flex-shrink: 0; width: 100%; padding-top: var(--lumo-space-s); padding-right: var(--lumo-space-s); padding-bottom: var(--lumo-space-s); padding-left: var(--lumo-space-s); padding: var(--lumo-space-s);" id="Layoutvistaseccioncomentarios"></vaadin-vertical-layout>
 </vaadin-vertical-layout>

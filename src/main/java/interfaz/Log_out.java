@@ -8,5 +8,4 @@ public class Log_out extends vistas.VistaLogout{
 		super();
 		this._identificado = _identificado;
 	}
-	
 }

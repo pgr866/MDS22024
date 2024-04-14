@@ -7,6 +7,4 @@ public class Mostrar_noticia_extendida extends vistas.VistaMostrarnoticiaextendi
 			super();
 			this._pagina_noticia_Identificado = _pagina_noticia_Identificado;
 		}
-
-
 }
