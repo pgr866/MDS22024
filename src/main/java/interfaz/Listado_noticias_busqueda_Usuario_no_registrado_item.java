@@ -1,5 +1,7 @@
 package interfaz;
 
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+
 import vistas.VistaListadonoticiasbusquedausuarionoregistrado_item;
 
 public class Listado_noticias_busqueda_Usuario_no_registrado_item extends VistaListadonoticiasbusquedausuarionoregistrado_item {
@@ -10,9 +12,14 @@ public class Listado_noticias_busqueda_Usuario_no_registrado_item extends VistaL
 			Listado_noticias_busqueda_Usuario_no_registrado _listado_noticias_busqueda_Usuario_no_registrado) {
 		super();
 		this._listado_noticias_busqueda_Usuario_no_registrado = _listado_noticias_busqueda_Usuario_no_registrado;
+		this._listado_noticias_busqueda_Usuario_no_registrado.getComboboxlistadonoticiasbusquedausuarionoregistrado().addValueChangeListener(event->Pagina_noticia_Usuario_no_registrado());
 	}
 
 	public void Pagina_noticia_Usuario_no_registrado() {
-		throw new UnsupportedOperationException();
+		if(this.getLayoutlistadonoticiasbusquedausuarionoregistradoitem().getText() == (String) this._listado_noticias_busqueda_Usuario_no_registrado.getComboboxlistadonoticiasbusquedausuarionoregistrado().getValue()) {
+			this._listado_noticias_busqueda_Usuario_no_registrado._buscar_Usuario_no_registrado._usuario_no_Registrado.getLayoutnoticiasportadausuarionoregistrado().as(VerticalLayout.class).removeAll();
+			this._pagina_noticia_Usuario_no_registrado = new Pagina_noticia_Usuario_no_registrado(null, this, null);
+			this._listado_noticias_busqueda_Usuario_no_registrado._buscar_Usuario_no_registrado._usuario_no_Registrado.getLayoutnoticiasportadausuarionoregistrado().as(VerticalLayout.class).add(this._pagina_noticia_Usuario_no_registrado);
+		}
 	}
 }

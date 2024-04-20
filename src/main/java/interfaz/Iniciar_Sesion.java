@@ -22,12 +22,15 @@ public class Iniciar_Sesion extends VistaIniciarsesion {
 
 	public void Entrar() {
 		// comprobar tipo de usuario y credenciales BD
-		this._usuario_no_Registrado.mainview.remove(this);
-		this._usuario_no_Registrado.mainview.add(this._usuario_no_Registrado.mainview._usuario_suscrito);
+			if (this.getTextfieldusuariologin().getValue().equals("Usuario")) {
+				this._usuario_no_Registrado.mainview.removeAll();
+				Identificado identificado = new Identificado(this._usuario_no_Registrado.mainview);
+				this._usuario_no_Registrado.mainview.add(identificado.mainview);
+			}
 	}
 
 	public void Validar_datos() {
-		// borrar
+		// business
 	}
 
 	public void Registrarse() {

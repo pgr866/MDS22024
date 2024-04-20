@@ -11,9 +11,8 @@ public class Listado_noticias_portada_Identificado_item extends Listado_noticias
 	}
 
 	public void Pagina_noticia_Identificado() {
-		Listado_noticias_portada_Identificado _listado_noticias_portada_identificado = ((Listado_noticias_portada_Identificado) this._listado_noticias_portada);
-		_listado_noticias_portada_identificado._identificado.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).removeAll();
+		((Listado_noticias_portada_Identificado) this._listado_noticias_portada)._identificado.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).removeAll();
 		this._pagina_noticia_Identificado = new Pagina_noticia_Identificado(this, null, null, null);
-		_listado_noticias_portada_identificado._identificado.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).add(_pagina_noticia_Identificado);
+		((Listado_noticias_portada_Identificado) this._listado_noticias_portada)._identificado.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).add(this._pagina_noticia_Identificado);
 	}
 }

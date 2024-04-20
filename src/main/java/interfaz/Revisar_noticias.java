@@ -38,14 +38,7 @@ public class Revisar_noticias extends vistas.VistaRevisarnoticias {
 	}
 
 	public void Publicar_noticia() {
-		// añadir a todas las listas de noticias...
+		// crear noticia BD
 	}
 
-	public void Realizar_resumen() {
-		// borrar
-	}
-
-	public void Asignar_noticia_en_seccion() {
-		// borrar
-	}
 }

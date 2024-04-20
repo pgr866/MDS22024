@@ -27,10 +27,6 @@ public class Crear_noticias extends vistas.VistaCrearnoticias {
 		this._periodista = _periodista;
 	}
 
-	public void Asignar_tematicas() {
-//		borrar
-	}
-
 	public void Crear_noticia() {
 		String titulo = this.getTextfieldtitulocrearnoticias().getValue();
 		String url = this.getTextfieldurlimagenescrearnoticias().getValue();
@@ -49,9 +45,5 @@ public class Crear_noticias extends vistas.VistaCrearnoticias {
 		this._periodista.mainview._editor._noticias_a_revisar._item.add(nueva_noticia);
 		this._periodista.mainview._editor._noticias_a_revisar.getListboxnoticiasarevisar().as(MultiSelectListBox.class).add(nueva_noticia);
 		this._periodista.Crear_noticias(); // Refrescar pagina
-	}
-
-	public void Rellenar_noticia() {
-//		borrar
 	}
 }

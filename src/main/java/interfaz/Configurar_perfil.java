@@ -36,8 +36,4 @@ public class Configurar_perfil extends vistas.VistaConfigurarperfil {
 		// update usuario BD
 		this._identificado.Configurar_perfil(); // Refrescar pagina
 	}
-	
-	public void Modificar_datos() {
-//		borrar
-	}
 }

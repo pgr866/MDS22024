@@ -16,8 +16,8 @@ public class Configurar_perfil_Usuario_suscrito extends Configurar_perfil {
 	}
 
 	public void Eliminar_cuenta() {
-		this._usuario_Suscrito.mainview.remove(this._usuario_Suscrito);
-		this._usuario_Suscrito.mainview.add(this._usuario_Suscrito.mainview._usuario_no_registrado);
-		// eliminar usuario suscrito BD
+//		this._usuario_Suscrito.mainview.remove(this._usuario_Suscrito);
+//		this._usuario_Suscrito.mainview.add(this._usuario_Suscrito.mainview._usuario_no_registrado);
+//		// eliminar usuario suscrito BD
 	}
 }

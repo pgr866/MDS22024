@@ -20,13 +20,13 @@ export class VistaMostrarvaloracioncomentario extends LitElement {
   <vaadin-button style="flex-shrink: 0; flex-grow: 0; align-self: center; background-color: #FFFFFF; width: 40%; height: 100%;" id="Megustaseccioncomentariositem">
    <img style="width: 100%; height: 100%;" src="https://cdn-icons-png.flaticon.com/512/126/126473.png" id="Imagenmegustaseccioncomentariositem">
   </vaadin-button>
-  <label style="width: 50%; flex-shrink: 1; align-self: center;" id="Numeromegustamostrarvaloracioncomentario">N</label>
+  <label style="width: 50%; flex-shrink: 1; align-self: center;" id="Numeromegustamostrarvaloracioncomentario">0</label>
  </vaadin-horizontal-layout>
  <vaadin-horizontal-layout id="Layoutnomegustamostrarvaloracioncomentario" style="justify-content: space-between;">
   <vaadin-button style="width: 40%; flex-shrink: 0; flex-grow: 0; align-self: center; background-color: #FFFFFF; height: 100%;" id="Nomegustaseccioncomentariositem">
    <img style="width: 100%; height: 100%;" src="https://cdn-icons-png.flaticon.com/512/126/126504.png" id="Imagennomegustaseccioncomentariositem">
   </vaadin-button>
-  <label style="width: 50%; flex-shrink: 0; align-self: center;" id="Numeronomegustamostrarvaloracioncomentario">N</label>
+  <label style="width: 50%; flex-shrink: 0; align-self: center;" id="Numeronomegustamostrarvaloracioncomentario">0</label>
  </vaadin-horizontal-layout>
 </vaadin-vertical-layout>
 `;
