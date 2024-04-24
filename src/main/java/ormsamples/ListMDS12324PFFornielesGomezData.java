@@ -147,7 +147,7 @@ public class ListMDS12324PFFornielesGomezData {
 		System.out.println("Listing Identificado by Criteria...");
 		base_de_datos.IdentificadoCriteria base_de_datosIdentificadoCriteria = new base_de_datos.IdentificadoCriteria();
 		// Please uncomment the follow line and fill in parameter(s) 
-		//base_de_datosIdentificadoCriteria.dni.eq();
+		//base_de_datosIdentificadoCriteria.id.eq();
 		base_de_datosIdentificadoCriteria.setMaxResults(ROW_COUNT);
 		base_de_datos.Identificado[] base_de_datosIdentificados = base_de_datosIdentificadoCriteria.listIdentificado();
 		length =base_de_datosIdentificados== null ? 0 : Math.min(base_de_datosIdentificados.length, ROW_COUNT); 
@@ -159,7 +159,7 @@ public class ListMDS12324PFFornielesGomezData {
 		System.out.println("Listing Editor by Criteria...");
 		base_de_datos.EditorCriteria base_de_datosEditorCriteria = new base_de_datos.EditorCriteria();
 		// Please uncomment the follow line and fill in parameter(s) 
-		//base_de_datosEditorCriteria.dni.eq();
+		//base_de_datosEditorCriteria.id.eq();
 		base_de_datosEditorCriteria.setMaxResults(ROW_COUNT);
 		base_de_datos.Editor[] base_de_datosEditors = base_de_datosEditorCriteria.listEditor();
 		length =base_de_datosEditors== null ? 0 : Math.min(base_de_datosEditors.length, ROW_COUNT); 
@@ -171,7 +171,7 @@ public class ListMDS12324PFFornielesGomezData {
 		System.out.println("Listing Periodista by Criteria...");
 		base_de_datos.PeriodistaCriteria base_de_datosPeriodistaCriteria = new base_de_datos.PeriodistaCriteria();
 		// Please uncomment the follow line and fill in parameter(s) 
-		//base_de_datosPeriodistaCriteria.dni.eq();
+		//base_de_datosPeriodistaCriteria.id.eq();
 		base_de_datosPeriodistaCriteria.setMaxResults(ROW_COUNT);
 		base_de_datos.Periodista[] base_de_datosPeriodistas = base_de_datosPeriodistaCriteria.listPeriodista();
 		length =base_de_datosPeriodistas== null ? 0 : Math.min(base_de_datosPeriodistas.length, ROW_COUNT); 
@@ -183,7 +183,7 @@ public class ListMDS12324PFFornielesGomezData {
 		System.out.println("Listing Usuario_suscrito by Criteria...");
 		base_de_datos.Usuario_suscritoCriteria base_de_datosUsuario_suscritoCriteria = new base_de_datos.Usuario_suscritoCriteria();
 		// Please uncomment the follow line and fill in parameter(s) 
-		//base_de_datosUsuario_suscritoCriteria.dni.eq();
+		//base_de_datosUsuario_suscritoCriteria.id.eq();
 		base_de_datosUsuario_suscritoCriteria.setMaxResults(ROW_COUNT);
 		base_de_datos.Usuario_suscrito[] base_de_datosUsuario_suscritos = base_de_datosUsuario_suscritoCriteria.listUsuario_suscrito();
 		length =base_de_datosUsuario_suscritos== null ? 0 : Math.min(base_de_datosUsuario_suscritos.length, ROW_COUNT); 

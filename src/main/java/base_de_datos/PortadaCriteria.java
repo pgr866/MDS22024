@@ -20,27 +20,27 @@ import org.orm.criteria.*;
 
 public class PortadaCriteria extends AbstractORMCriteria {
 	public final IntegerExpression id_seccion;
-	public final StringExpression eliminaId;
+	public final IntegerExpression eliminaId;
 	public final AssociationExpression elimina;
-	public final StringExpression creaId;
+	public final IntegerExpression creaId;
 	public final AssociationExpression crea;
 	public final StringExpression titulo_seccion;
 	public final CollectionExpression aparece_en;
 	public final CollectionExpression pertenece_a_seccion;
-	public final StringExpression ordenaId;
+	public final IntegerExpression ordenaId;
 	public final AssociationExpression ordena;
 	
 	public PortadaCriteria(Criteria criteria) {
 		super(criteria);
 		id_seccion = new IntegerExpression("id_seccion", this);
-		eliminaId = new StringExpression("elimina.dni", this);
+		eliminaId = new IntegerExpression("elimina.", this);
 		elimina = new AssociationExpression("elimina", this);
-		creaId = new StringExpression("crea.dni", this);
+		creaId = new IntegerExpression("crea.", this);
 		crea = new AssociationExpression("crea", this);
 		titulo_seccion = new StringExpression("titulo_seccion", this);
 		aparece_en = new CollectionExpression("ORM_aparece_en", this);
 		pertenece_a_seccion = new CollectionExpression("ORM_pertenece_a_seccion", this);
-		ordenaId = new StringExpression("ordena.dni", this);
+		ordenaId = new IntegerExpression("ordena.", this);
 		ordena = new AssociationExpression("ordena", this);
 	}
 	

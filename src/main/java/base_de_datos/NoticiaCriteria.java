@@ -20,19 +20,19 @@ import org.orm.criteria.*;
 
 public class NoticiaCriteria extends AbstractORMCriteria {
 	public final IntegerExpression id_noticia;
-	public final CollectionExpression publica;
+	public final IntegerExpression creaId;
+	public final AssociationExpression crea;
 	public final StringExpression titulo;
 	public final StringExpression url_imagen_noticia;
 	public final StringExpression fecha;
 	public final StringExpression lugar;
 	public final StringExpression resumen;
 	public final StringExpression contenido;
-	public final StringExpression autor;
+	public final IntegerExpression autor;
 	public final BooleanExpression publicada;
 	public final IntegerExpression valoraciones_positivas;
 	public final IntegerExpression valoraciones_negativas;
-	public final StringExpression creaId;
-	public final AssociationExpression crea;
+	public final CollectionExpression publica;
 	public final CollectionExpression valora;
 	public final CollectionExpression pertenece_a;
 	public final CollectionExpression seccion_contiene_noticias;
@@ -42,19 +42,19 @@ public class NoticiaCriteria extends AbstractORMCriteria {
 	public NoticiaCriteria(Criteria criteria) {
 		super(criteria);
 		id_noticia = new IntegerExpression("id_noticia", this);
-		publica = new CollectionExpression("ORM_publica", this);
+		creaId = new IntegerExpression("crea.", this);
+		crea = new AssociationExpression("crea", this);
 		titulo = new StringExpression("titulo", this);
 		url_imagen_noticia = new StringExpression("url_imagen_noticia", this);
 		fecha = new StringExpression("fecha", this);
 		lugar = new StringExpression("lugar", this);
 		resumen = new StringExpression("resumen", this);
 		contenido = new StringExpression("contenido", this);
-		autor = new StringExpression("autor", this);
+		autor = new IntegerExpression("autor", this);
 		publicada = new BooleanExpression("publicada", this);
 		valoraciones_positivas = new IntegerExpression("valoraciones_positivas", this);
 		valoraciones_negativas = new IntegerExpression("valoraciones_negativas", this);
-		creaId = new StringExpression("crea.dni", this);
-		crea = new AssociationExpression("crea", this);
+		publica = new CollectionExpression("ORM_publica", this);
 		valora = new CollectionExpression("ORM_valora", this);
 		pertenece_a = new CollectionExpression("ORM_pertenece_a", this);
 		seccion_contiene_noticias = new CollectionExpression("ORM_seccion_contiene_noticias", this);
@@ -70,12 +70,12 @@ public class NoticiaCriteria extends AbstractORMCriteria {
 		this(base_de_datos.MDS12324PFFornielesGomezPersistentManager.instance().getSession());
 	}
 	
-	public base_de_datos.EditorCriteria createPublicaCriteria() {
-		return new base_de_datos.EditorCriteria(createCriteria("ORM_publica"));
-	}
-	
 	public PeriodistaCriteria createCreaCriteria() {
 		return new PeriodistaCriteria(createCriteria("crea"));
+	}
+	
+	public base_de_datos.EditorCriteria createPublicaCriteria() {
+		return new base_de_datos.EditorCriteria(createCriteria("ORM_publica"));
 	}
 	
 	public base_de_datos.IdentificadoCriteria createValoraCriteria() {

@@ -70,6 +70,7 @@ public class IdentificadoSetCollection extends org.orm.util.ORMSet {
 	/**
 	 * Return an sorted array containing all of the persistent objects in ORMSet
 	 * @param propertyName Name of the property for sorting:<ul>
+	 * <li>id</li>
 	 * <li>dni</li>
 	 * <li>nombre</li>
 	 * <li>apellidos</li>
@@ -89,6 +90,7 @@ public class IdentificadoSetCollection extends org.orm.util.ORMSet {
 	/**
 	 * Return an sorted array containing all of the persistent objects in ORMSet
 	 * @param propertyName Name of the property for sorting:<ul>
+	 * <li>id</li>
 	 * <li>dni</li>
 	 * <li>nombre</li>
 	 * <li>apellidos</li>

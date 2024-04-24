@@ -20,9 +20,9 @@ import org.orm.criteria.*;
 
 public class SeccionDetachedCriteria extends AbstractORMDetachedCriteria {
 	public final IntegerExpression id_seccion;
-	public final StringExpression eliminaId;
+	public final IntegerExpression eliminaId;
 	public final AssociationExpression elimina;
-	public final StringExpression creaId;
+	public final IntegerExpression creaId;
 	public final AssociationExpression crea;
 	public final StringExpression titulo_seccion;
 	public final CollectionExpression aparece_en;
@@ -31,9 +31,9 @@ public class SeccionDetachedCriteria extends AbstractORMDetachedCriteria {
 	public SeccionDetachedCriteria() {
 		super(base_de_datos.Seccion.class, base_de_datos.SeccionCriteria.class);
 		id_seccion = new IntegerExpression("id_seccion", this.getDetachedCriteria());
-		eliminaId = new StringExpression("elimina.dni", this.getDetachedCriteria());
+		eliminaId = new IntegerExpression("elimina.", this.getDetachedCriteria());
 		elimina = new AssociationExpression("elimina", this.getDetachedCriteria());
-		creaId = new StringExpression("crea.dni", this.getDetachedCriteria());
+		creaId = new IntegerExpression("crea.", this.getDetachedCriteria());
 		crea = new AssociationExpression("crea", this.getDetachedCriteria());
 		titulo_seccion = new StringExpression("titulo_seccion", this.getDetachedCriteria());
 		aparece_en = new CollectionExpression("ORM_aparece_en", this.getDetachedCriteria());
@@ -43,9 +43,9 @@ public class SeccionDetachedCriteria extends AbstractORMDetachedCriteria {
 	public SeccionDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, base_de_datos.SeccionCriteria.class);
 		id_seccion = new IntegerExpression("id_seccion", this.getDetachedCriteria());
-		eliminaId = new StringExpression("elimina.dni", this.getDetachedCriteria());
+		eliminaId = new IntegerExpression("elimina.", this.getDetachedCriteria());
 		elimina = new AssociationExpression("elimina", this.getDetachedCriteria());
-		creaId = new StringExpression("crea.dni", this.getDetachedCriteria());
+		creaId = new IntegerExpression("crea.", this.getDetachedCriteria());
 		crea = new AssociationExpression("crea", this.getDetachedCriteria());
 		titulo_seccion = new StringExpression("titulo_seccion", this.getDetachedCriteria());
 		aparece_en = new CollectionExpression("ORM_aparece_en", this.getDetachedCriteria());

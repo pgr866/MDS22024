@@ -19,6 +19,7 @@ import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
 public class PeriodistaDetachedCriteria extends AbstractORMDetachedCriteria {
+	public final IntegerExpression id;
 	public final StringExpression dni;
 	public final StringExpression nombre;
 	public final StringExpression apellidos;
@@ -32,11 +33,12 @@ public class PeriodistaDetachedCriteria extends AbstractORMDetachedCriteria {
 	public final CollectionExpression es_valorado_por;
 	public final CollectionExpression es_valorada_por;
 	public final BooleanExpression esEliminado;
-	public final StringExpression es_creadaId;
+	public final IntegerExpression es_creadaId;
 	public final AssociationExpression es_creada;
 	
 	public PeriodistaDetachedCriteria() {
 		super(base_de_datos.Periodista.class, base_de_datos.PeriodistaCriteria.class);
+		id = new IntegerExpression("id", this.getDetachedCriteria());
 		dni = new StringExpression("dni", this.getDetachedCriteria());
 		nombre = new StringExpression("nombre", this.getDetachedCriteria());
 		apellidos = new StringExpression("apellidos", this.getDetachedCriteria());
@@ -50,12 +52,13 @@ public class PeriodistaDetachedCriteria extends AbstractORMDetachedCriteria {
 		es_valorado_por = new CollectionExpression("ORM_es_valorado_por", this.getDetachedCriteria());
 		es_valorada_por = new CollectionExpression("ORM_es_valorada_por", this.getDetachedCriteria());
 		esEliminado = new BooleanExpression("esEliminado", this.getDetachedCriteria());
-		es_creadaId = new StringExpression("es_creada.dni", this.getDetachedCriteria());
+		es_creadaId = new IntegerExpression("es_creada.", this.getDetachedCriteria());
 		es_creada = new AssociationExpression("es_creada", this.getDetachedCriteria());
 	}
 	
 	public PeriodistaDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, base_de_datos.PeriodistaCriteria.class);
+		id = new IntegerExpression("id", this.getDetachedCriteria());
 		dni = new StringExpression("dni", this.getDetachedCriteria());
 		nombre = new StringExpression("nombre", this.getDetachedCriteria());
 		apellidos = new StringExpression("apellidos", this.getDetachedCriteria());
@@ -69,7 +72,7 @@ public class PeriodistaDetachedCriteria extends AbstractORMDetachedCriteria {
 		es_valorado_por = new CollectionExpression("ORM_es_valorado_por", this.getDetachedCriteria());
 		es_valorada_por = new CollectionExpression("ORM_es_valorada_por", this.getDetachedCriteria());
 		esEliminado = new BooleanExpression("esEliminado", this.getDetachedCriteria());
-		es_creadaId = new StringExpression("es_creada.dni", this.getDetachedCriteria());
+		es_creadaId = new IntegerExpression("es_creada.", this.getDetachedCriteria());
 		es_creada = new AssociationExpression("es_creada", this.getDetachedCriteria());
 	}
 	

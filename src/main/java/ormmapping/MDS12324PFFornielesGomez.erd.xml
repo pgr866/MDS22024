@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Model quotesql="1" tablecharset="" mysql_version="504" mssql_version="2005" derby_version="106" ingres_version="9">
+  <Entity name="Portada" Unlogged="false" PKClustered="0" Temporal="false" TemporalStartTimeColumn="null" TemporalEndTimeColumn="null" TemporalHistoryTable="null">
+    <Column name="SeccionId_seccion">
+      <PrimaryKey>true</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>Base de datos.Seccion.Id_seccion</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="EditorIdentificadoId">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>Base de datos.Editor.IdentificadoId</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+  </Entity>
   <Entity name="Seccion" Unlogged="false" PKClustered="0" Temporal="false" TemporalStartTimeColumn="null" TemporalEndTimeColumn="null" TemporalHistoryTable="null">
     <Column name="Id_seccion">
       <PrimaryKey>true</PrimaryKey>
@@ -13,36 +39,24 @@
       <Index>false</Index>
       <UserTypes/>
     </Column>
-    <Column name="IdentificadoDni3">
+    <Column name="EditorIdentificadoId2">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Base de datos.Identificado.Dni</ReferencedColumn>
-      <Type>27</Type>
-      <Length>255</Length>
+      <ReferencedColumn>Base de datos.Editor.IdentificadoId</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
       <Index>false</Index>
       <UserTypes/>
     </Column>
-    <Column name="IdentificadoDni2">
+    <Column name="EditorIdentificadoId">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Base de datos.Identificado.Dni</ReferencedColumn>
-      <Type>27</Type>
-      <Length>255</Length>
-      <Nullable>false</Nullable>
-      <IDGenerator>native</IDGenerator>
-      <Unique>false</Unique>
-      <Index>false</Index>
-      <UserTypes/>
-    </Column>
-    <Column name="IdentificadoDni">
-      <PrimaryKey>false</PrimaryKey>
-      <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Base de datos.Identificado.Dni</ReferencedColumn>
-      <Type>27</Type>
-      <Length>255</Length>
+      <ReferencedColumn>Base de datos.Editor.IdentificadoId</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -55,17 +69,6 @@
       <Type>27</Type>
       <Length>255</Length>
       <Nullable>true</Nullable>
-      <IDGenerator>native</IDGenerator>
-      <Unique>false</Unique>
-      <Index>false</Index>
-      <UserTypes/>
-    </Column>
-    <Column name="Discriminator">
-      <PrimaryKey>false</PrimaryKey>
-      <ForeignKey>false</ForeignKey>
-      <Type>27</Type>
-      <Length>255</Length>
-      <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
       <Index>false</Index>
@@ -108,12 +111,12 @@
       <Index>false</Index>
       <UserTypes/>
     </Column>
-    <Column name="IdentificadoDni">
+    <Column name="PeriodistaIdentificadoId">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Base de datos.Identificado.Dni</ReferencedColumn>
-      <Type>27</Type>
-      <Length>255</Length>
+      <ReferencedColumn>Base de datos.Periodista.IdentificadoId</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -189,8 +192,8 @@
     <Column name="Autor">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>false</ForeignKey>
-      <Type>27</Type>
-      <Length>255</Length>
+      <Type>9</Type>
+      <Length>10</Length>
       <Nullable>true</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -243,24 +246,24 @@
       <Index>false</Index>
       <UserTypes/>
     </Column>
-    <Column name="IdentificadoDni2">
+    <Column name="IdentificadoId">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Base de datos.Identificado.Dni</ReferencedColumn>
-      <Type>27</Type>
-      <Length>255</Length>
+      <ReferencedColumn>Base de datos.Identificado.Id</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
       <Index>false</Index>
       <UserTypes/>
     </Column>
-    <Column name="IdentificadoDni">
+    <Column name="EditorIdentificadoId">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Base de datos.Identificado.Dni</ReferencedColumn>
-      <Type>27</Type>
-      <Length>255</Length>
+      <ReferencedColumn>Base de datos.Editor.IdentificadoId</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -282,8 +285,8 @@
     <Column name="Propietario">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>false</ForeignKey>
-      <Type>27</Type>
-      <Length>255</Length>
+      <Type>9</Type>
+      <Length>10</Length>
       <Nullable>true</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -325,13 +328,24 @@
     </Column>
   </Entity>
   <Entity name="Identificado" Unlogged="false" PKClustered="0" Temporal="false" TemporalStartTimeColumn="null" TemporalEndTimeColumn="null" TemporalHistoryTable="null">
-    <Column name="Dni">
+    <Column name="Id">
       <PrimaryKey>true</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="Dni">
+      <PrimaryKey>false</PrimaryKey>
       <ForeignKey>false</ForeignKey>
       <Type>27</Type>
       <Length>255</Length>
       <Nullable>false</Nullable>
-      <IDGenerator>assigned</IDGenerator>
+      <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
       <Index>false</Index>
       <UserTypes/>
@@ -424,6 +438,47 @@
       <Index>false</Index>
       <UserTypes/>
     </Column>
+  </Entity>
+  <Entity name="Editor" Unlogged="false" PKClustered="0" Temporal="false" TemporalStartTimeColumn="null" TemporalEndTimeColumn="null" TemporalHistoryTable="null">
+    <Column name="IdentificadoId">
+      <PrimaryKey>true</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>Base de datos.Identificado.Id</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+  </Entity>
+  <Entity name="Periodista" Unlogged="false" PKClustered="0" Temporal="false" TemporalStartTimeColumn="null" TemporalEndTimeColumn="null" TemporalHistoryTable="null">
+    <Column name="EsEliminado">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>1</Type>
+      <Length>1</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="IdentificadoId">
+      <PrimaryKey>true</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>Base de datos.Identificado.Id</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+  </Entity>
+  <Entity name="Usuario_suscrito" Unlogged="false" PKClustered="0" Temporal="false" TemporalStartTimeColumn="null" TemporalEndTimeColumn="null" TemporalHistoryTable="null">
     <Column name="Num_tarjeta">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>false</ForeignKey>
@@ -435,22 +490,12 @@
       <Index>false</Index>
       <UserTypes/>
     </Column>
-    <Column name="EsEliminado">
-      <PrimaryKey>false</PrimaryKey>
-      <ForeignKey>false</ForeignKey>
-      <Type>1</Type>
-      <Length>1</Length>
-      <Nullable>true</Nullable>
-      <IDGenerator>native</IDGenerator>
-      <Unique>false</Unique>
-      <Index>false</Index>
-      <UserTypes/>
-    </Column>
-    <Column name="Discriminator">
-      <PrimaryKey>false</PrimaryKey>
-      <ForeignKey>false</ForeignKey>
-      <Type>27</Type>
-      <Length>255</Length>
+    <Column name="IdentificadoId">
+      <PrimaryKey>true</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>Base de datos.Identificado.Id</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -485,12 +530,12 @@
     </Column>
   </Entity>
   <Entity name="Identificado_Noticia" Unlogged="false" PKClustered="0" Temporal="false" TemporalStartTimeColumn="null" TemporalEndTimeColumn="null" TemporalHistoryTable="null">
-    <Column name="IdentificadoDni">
+    <Column name="IdentificadoId">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Base de datos.Identificado.Dni</ReferencedColumn>
-      <Type>27</Type>
-      <Length>255</Length>
+      <ReferencedColumn>Base de datos.Identificado.Id</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
       <Nullable>false</Nullable>
       <IDGenerator>assigned</IDGenerator>
       <Unique>false</Unique>
@@ -549,12 +594,12 @@
       <Index>false</Index>
       <UserTypes/>
     </Column>
-    <Column name="IdentificadoDni">
+    <Column name="IdentificadoId">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Base de datos.Identificado.Dni</ReferencedColumn>
-      <Type>27</Type>
-      <Length>255</Length>
+      <ReferencedColumn>Base de datos.Identificado.Id</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
       <Nullable>false</Nullable>
       <IDGenerator>assigned</IDGenerator>
       <Unique>false</Unique>
@@ -588,7 +633,7 @@
       <UserTypes/>
     </Column>
   </Entity>
-  <Entity name="Noticia_Identificado" Unlogged="false" PKClustered="0" Temporal="false" TemporalStartTimeColumn="null" TemporalEndTimeColumn="null" TemporalHistoryTable="null">
+  <Entity name="Noticia_Editor" Unlogged="false" PKClustered="0" Temporal="false" TemporalStartTimeColumn="null" TemporalEndTimeColumn="null" TemporalHistoryTable="null">
     <Column name="NoticiaId_noticia">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
@@ -601,12 +646,12 @@
       <Index>false</Index>
       <UserTypes/>
     </Column>
-    <Column name="IdentificadoDni">
+    <Column name="EditorIdentificadoId">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Base de datos.Identificado.Dni</ReferencedColumn>
-      <Type>27</Type>
-      <Length>255</Length>
+      <ReferencedColumn>Base de datos.Editor.IdentificadoId</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
       <Nullable>false</Nullable>
       <IDGenerator>assigned</IDGenerator>
       <Unique>false</Unique>
@@ -614,13 +659,13 @@
       <UserTypes/>
     </Column>
   </Entity>
-  <Entity name="Identificado_Noticia2" Unlogged="false" PKClustered="0" Temporal="false" TemporalStartTimeColumn="null" TemporalEndTimeColumn="null" TemporalHistoryTable="null">
-    <Column name="IdentificadoDni">
+  <Entity name="Editor_Noticia" Unlogged="false" PKClustered="0" Temporal="false" TemporalStartTimeColumn="null" TemporalEndTimeColumn="null" TemporalHistoryTable="null">
+    <Column name="EditorIdentificadoId">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Base de datos.Identificado.Dni</ReferencedColumn>
-      <Type>27</Type>
-      <Length>255</Length>
+      <ReferencedColumn>Base de datos.Editor.IdentificadoId</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
       <Nullable>false</Nullable>
       <IDGenerator>assigned</IDGenerator>
       <Unique>false</Unique>
@@ -640,14 +685,54 @@
       <UserTypes/>
     </Column>
   </Entity>
-  <ForeignKey name="FKSeccion63691">
-    <ReferenceTable>Seccion</ReferenceTable>
-    <ReferencedTable>Identificado</ReferencedTable>
+  <ForeignKey name="FKPortada14639">
+    <ReferenceTable>Portada</ReferenceTable>
+    <ReferencedTable>Seccion</ReferencedTable>
     <Columns>
-      <Column>IdentificadoDni</Column>
+      <Column>SeccionId_seccion</Column>
     </Columns>
     <RefColumns>
-      <Column>Dni</Column>
+      <Column>Id_seccion</Column>
+    </RefColumns>
+  </ForeignKey>
+  <ForeignKey name="FKEditor842080">
+    <ReferenceTable>Editor</ReferenceTable>
+    <ReferencedTable>Identificado</ReferencedTable>
+    <Columns>
+      <Column>IdentificadoId</Column>
+    </Columns>
+    <RefColumns>
+      <Column>Id</Column>
+    </RefColumns>
+  </ForeignKey>
+  <ForeignKey name="FKPeriodista268927">
+    <ReferenceTable>Periodista</ReferenceTable>
+    <ReferencedTable>Identificado</ReferencedTable>
+    <Columns>
+      <Column>IdentificadoId</Column>
+    </Columns>
+    <RefColumns>
+      <Column>Id</Column>
+    </RefColumns>
+  </ForeignKey>
+  <ForeignKey name="FKUsuario_su930356">
+    <ReferenceTable>Usuario_suscrito</ReferenceTable>
+    <ReferencedTable>Identificado</ReferencedTable>
+    <Columns>
+      <Column>IdentificadoId</Column>
+    </Columns>
+    <RefColumns>
+      <Column>Id</Column>
+    </RefColumns>
+  </ForeignKey>
+  <ForeignKey name="FKPortada628279">
+    <ReferenceTable>Portada</ReferenceTable>
+    <ReferencedTable>Editor</ReferencedTable>
+    <Columns>
+      <Column>EditorIdentificadoId</Column>
+    </Columns>
+    <RefColumns>
+      <Column>IdentificadoId</Column>
     </RefColumns>
   </ForeignKey>
   <ForeignKey name="FKTematica_N660062">
@@ -680,24 +765,24 @@
       <Column>Id_noticia</Column>
     </RefColumns>
   </ForeignKey>
-  <ForeignKey name="FKNoticia294701">
+  <ForeignKey name="FKNoticia644303">
     <ReferenceTable>Noticia</ReferenceTable>
-    <ReferencedTable>Identificado</ReferencedTable>
+    <ReferencedTable>Periodista</ReferencedTable>
     <Columns>
-      <Column>IdentificadoDni</Column>
+      <Column>PeriodistaIdentificadoId</Column>
     </Columns>
     <RefColumns>
-      <Column>Dni</Column>
+      <Column>IdentificadoId</Column>
     </RefColumns>
   </ForeignKey>
-  <ForeignKey name="FKIdentifica145023">
+  <ForeignKey name="FKIdentifica983588">
     <ReferenceTable>Identificado_Noticia</ReferenceTable>
     <ReferencedTable>Identificado</ReferencedTable>
     <Columns>
-      <Column>IdentificadoDni</Column>
+      <Column>IdentificadoId</Column>
     </Columns>
     <RefColumns>
-      <Column>Dni</Column>
+      <Column>Id</Column>
     </RefColumns>
   </ForeignKey>
   <ForeignKey name="FKIdentifica822597">
@@ -730,24 +815,24 @@
       <Column>Id_seccion</Column>
     </RefColumns>
   </ForeignKey>
-  <ForeignKey name="FKComentario118654">
+  <ForeignKey name="FKComentario316609">
     <ReferenceTable>Comentario</ReferenceTable>
-    <ReferencedTable>Identificado</ReferencedTable>
+    <ReferencedTable>Editor</ReferencedTable>
     <Columns>
-      <Column>IdentificadoDni</Column>
+      <Column>EditorIdentificadoId</Column>
     </Columns>
     <RefColumns>
-      <Column>Dni</Column>
+      <Column>IdentificadoId</Column>
     </RefColumns>
   </ForeignKey>
-  <ForeignKey name="FKSeccion888533">
+  <ForeignKey name="FKSeccion472636">
     <ReferenceTable>Seccion</ReferenceTable>
-    <ReferencedTable>Identificado</ReferencedTable>
+    <ReferencedTable>Editor</ReferencedTable>
     <Columns>
-      <Column>IdentificadoDni2</Column>
+      <Column>EditorIdentificadoId</Column>
     </Columns>
     <RefColumns>
-      <Column>Dni</Column>
+      <Column>IdentificadoId</Column>
     </RefColumns>
   </ForeignKey>
   <ForeignKey name="FKComentario620734">
@@ -760,24 +845,24 @@
       <Column>Id_comentario</Column>
     </RefColumns>
   </ForeignKey>
-  <ForeignKey name="FKComentario125334">
+  <ForeignKey name="FKComentario963899">
     <ReferenceTable>Comentario_Identificado</ReferenceTable>
     <ReferencedTable>Identificado</ReferencedTable>
     <Columns>
-      <Column>IdentificadoDni</Column>
+      <Column>IdentificadoId</Column>
     </Columns>
     <RefColumns>
-      <Column>Dni</Column>
+      <Column>Id</Column>
     </RefColumns>
   </ForeignKey>
-  <ForeignKey name="FKComentario293811">
+  <ForeignKey name="FKComentario957219">
     <ReferenceTable>Comentario</ReferenceTable>
     <ReferencedTable>Identificado</ReferencedTable>
     <Columns>
-      <Column>IdentificadoDni2</Column>
+      <Column>IdentificadoId</Column>
     </Columns>
     <RefColumns>
-      <Column>Dni</Column>
+      <Column>Id</Column>
     </RefColumns>
   </ForeignKey>
   <ForeignKey name="FKTematica_S273261">
@@ -800,18 +885,18 @@
       <Column>Id_seccion</Column>
     </RefColumns>
   </ForeignKey>
-  <ForeignKey name="FKSeccion888534">
+  <ForeignKey name="FKSeccion718434">
     <ReferenceTable>Seccion</ReferenceTable>
-    <ReferencedTable>Identificado</ReferencedTable>
+    <ReferencedTable>Editor</ReferencedTable>
     <Columns>
-      <Column>IdentificadoDni3</Column>
+      <Column>EditorIdentificadoId2</Column>
     </Columns>
     <RefColumns>
-      <Column>Dni</Column>
+      <Column>IdentificadoId</Column>
     </RefColumns>
   </ForeignKey>
-  <ForeignKey name="FKNoticia_Id51655">
-    <ReferenceTable>Noticia_Identificado</ReferenceTable>
+  <ForeignKey name="FKNoticia_Ed759029">
+    <ReferenceTable>Noticia_Editor</ReferenceTable>
     <ReferencedTable>Noticia</ReferencedTable>
     <Columns>
       <Column>NoticiaId_noticia</Column>
@@ -820,28 +905,28 @@
       <Column>Id_noticia</Column>
     </RefColumns>
   </ForeignKey>
-  <ForeignKey name="FKNoticia_Id374080">
-    <ReferenceTable>Noticia_Identificado</ReferenceTable>
-    <ReferencedTable>Identificado</ReferencedTable>
+  <ForeignKey name="FKNoticia_Ed99723">
+    <ReferenceTable>Noticia_Editor</ReferenceTable>
+    <ReferencedTable>Editor</ReferencedTable>
     <Columns>
-      <Column>IdentificadoDni</Column>
+      <Column>EditorIdentificadoId</Column>
     </Columns>
     <RefColumns>
-      <Column>Dni</Column>
+      <Column>IdentificadoId</Column>
     </RefColumns>
   </ForeignKey>
-  <ForeignKey name="FKIdentifica345212">
-    <ReferenceTable>Identificado_Noticia2</ReferenceTable>
-    <ReferencedTable>Identificado</ReferencedTable>
+  <ForeignKey name="FKEditor_Not344486">
+    <ReferenceTable>Editor_Noticia</ReferenceTable>
+    <ReferencedTable>Editor</ReferencedTable>
     <Columns>
-      <Column>IdentificadoDni</Column>
+      <Column>EditorIdentificadoId</Column>
     </Columns>
     <RefColumns>
-      <Column>Dni</Column>
+      <Column>IdentificadoId</Column>
     </RefColumns>
   </ForeignKey>
-  <ForeignKey name="FKIdentifica303953">
-    <ReferenceTable>Identificado_Noticia2</ReferenceTable>
+  <ForeignKey name="FKEditor_Not768351">
+    <ReferenceTable>Editor_Noticia</ReferenceTable>
     <ReferencedTable>Noticia</ReferencedTable>
     <Columns>
       <Column>NoticiaId_noticia</Column>

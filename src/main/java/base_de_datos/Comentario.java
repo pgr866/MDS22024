@@ -462,21 +462,24 @@ public class Comentario implements Serializable {
 	
 	@ManyToOne(targetEntity=base_de_datos.Identificado.class, fetch=FetchType.LAZY)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.LOCK})	
-	@JoinColumns(value={ @JoinColumn(name="IdentificadoDni2", referencedColumnName="Dni", nullable=false) }, foreignKey=@ForeignKey(name="FKComentario293811"))	
+	@JoinColumns(value={ @JoinColumn(name="IdentificadoId", referencedColumnName="Id", nullable=false) }, foreignKey=@ForeignKey(name="FKComentario957219"))	
+	@org.hibernate.annotations.LazyToOne(value=org.hibernate.annotations.LazyToOneOption.NO_PROXY)	
 	private base_de_datos.Identificado escribe;
 	
 	@ManyToOne(targetEntity=base_de_datos.Editor.class, fetch=FetchType.LAZY)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.LOCK})	
-	@JoinColumns(value={ @JoinColumn(name="IdentificadoDni", referencedColumnName="Dni", nullable=false) }, foreignKey=@ForeignKey(name="FKComentario118654"))	
+	@JoinColumns(value={ @JoinColumn(name="EditorIdentificadoId", referencedColumnName="IdentificadoId", nullable=false) }, foreignKey=@ForeignKey(name="FKComentario316609"))	
+	@org.hibernate.annotations.LazyToOne(value=org.hibernate.annotations.LazyToOneOption.NO_PROXY)	
 	private base_de_datos.Editor elimina;
 	
 	@ManyToOne(targetEntity=base_de_datos.Noticia.class, fetch=FetchType.LAZY)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.LOCK})	
 	@JoinColumns(value={ @JoinColumn(name="NoticiaId_noticia", referencedColumnName="Id_noticia", nullable=false) }, foreignKey=@ForeignKey(name="FKComentario796228"))	
+	@org.hibernate.annotations.LazyToOne(value=org.hibernate.annotations.LazyToOneOption.NO_PROXY)	
 	private base_de_datos.Noticia noticia_contiene_comentarios;
 	
-	@Column(name="Propietario", nullable=true, length=255)	
-	private String propietario;
+	@Column(name="Propietario", nullable=true, length=10)	
+	private int propietario;
 	
 	@Column(name="Contenido", nullable=true, length=255)	
 	private String contenido;
@@ -504,11 +507,11 @@ public class Comentario implements Serializable {
 		return getId_comentario();
 	}
 	
-	public void setPropietario(String value) {
+	public void setPropietario(int value) {
 		this.propietario = value;
 	}
 	
-	public String getPropietario() {
+	public int getPropietario() {
 		return propietario;
 	}
 	

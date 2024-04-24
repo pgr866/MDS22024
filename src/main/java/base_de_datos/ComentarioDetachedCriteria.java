@@ -20,13 +20,13 @@ import org.orm.criteria.*;
 
 public class ComentarioDetachedCriteria extends AbstractORMDetachedCriteria {
 	public final IntegerExpression id_comentario;
-	public final StringExpression escribeId;
+	public final IntegerExpression escribeId;
 	public final AssociationExpression escribe;
-	public final StringExpression eliminaId;
+	public final IntegerExpression eliminaId;
 	public final AssociationExpression elimina;
 	public final IntegerExpression noticia_contiene_comentariosId;
 	public final AssociationExpression noticia_contiene_comentarios;
-	public final StringExpression propietario;
+	public final IntegerExpression propietario;
 	public final StringExpression contenido;
 	public final IntegerExpression valoraciones_positivas;
 	public final IntegerExpression valoraciones_negativas;
@@ -35,13 +35,13 @@ public class ComentarioDetachedCriteria extends AbstractORMDetachedCriteria {
 	public ComentarioDetachedCriteria() {
 		super(base_de_datos.Comentario.class, base_de_datos.ComentarioCriteria.class);
 		id_comentario = new IntegerExpression("id_comentario", this.getDetachedCriteria());
-		escribeId = new StringExpression("escribe.dni", this.getDetachedCriteria());
+		escribeId = new IntegerExpression("escribe.id", this.getDetachedCriteria());
 		escribe = new AssociationExpression("escribe", this.getDetachedCriteria());
-		eliminaId = new StringExpression("elimina.dni", this.getDetachedCriteria());
+		eliminaId = new IntegerExpression("elimina.", this.getDetachedCriteria());
 		elimina = new AssociationExpression("elimina", this.getDetachedCriteria());
 		noticia_contiene_comentariosId = new IntegerExpression("noticia_contiene_comentarios.id_noticia", this.getDetachedCriteria());
 		noticia_contiene_comentarios = new AssociationExpression("noticia_contiene_comentarios", this.getDetachedCriteria());
-		propietario = new StringExpression("propietario", this.getDetachedCriteria());
+		propietario = new IntegerExpression("propietario", this.getDetachedCriteria());
 		contenido = new StringExpression("contenido", this.getDetachedCriteria());
 		valoraciones_positivas = new IntegerExpression("valoraciones_positivas", this.getDetachedCriteria());
 		valoraciones_negativas = new IntegerExpression("valoraciones_negativas", this.getDetachedCriteria());
@@ -51,13 +51,13 @@ public class ComentarioDetachedCriteria extends AbstractORMDetachedCriteria {
 	public ComentarioDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, base_de_datos.ComentarioCriteria.class);
 		id_comentario = new IntegerExpression("id_comentario", this.getDetachedCriteria());
-		escribeId = new StringExpression("escribe.dni", this.getDetachedCriteria());
+		escribeId = new IntegerExpression("escribe.id", this.getDetachedCriteria());
 		escribe = new AssociationExpression("escribe", this.getDetachedCriteria());
-		eliminaId = new StringExpression("elimina.dni", this.getDetachedCriteria());
+		eliminaId = new IntegerExpression("elimina.", this.getDetachedCriteria());
 		elimina = new AssociationExpression("elimina", this.getDetachedCriteria());
 		noticia_contiene_comentariosId = new IntegerExpression("noticia_contiene_comentarios.id_noticia", this.getDetachedCriteria());
 		noticia_contiene_comentarios = new AssociationExpression("noticia_contiene_comentarios", this.getDetachedCriteria());
-		propietario = new StringExpression("propietario", this.getDetachedCriteria());
+		propietario = new IntegerExpression("propietario", this.getDetachedCriteria());
 		contenido = new StringExpression("contenido", this.getDetachedCriteria());
 		valoraciones_positivas = new IntegerExpression("valoraciones_positivas", this.getDetachedCriteria());
 		valoraciones_negativas = new IntegerExpression("valoraciones_negativas", this.getDetachedCriteria());

@@ -19,6 +19,7 @@ import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
 public class Usuario_suscritoCriteria extends AbstractORMCriteria {
+	public final IntegerExpression id;
 	public final StringExpression dni;
 	public final StringExpression nombre;
 	public final StringExpression apellidos;
@@ -35,6 +36,7 @@ public class Usuario_suscritoCriteria extends AbstractORMCriteria {
 	
 	public Usuario_suscritoCriteria(Criteria criteria) {
 		super(criteria);
+		id = new IntegerExpression("id", this);
 		dni = new StringExpression("dni", this);
 		nombre = new StringExpression("nombre", this);
 		apellidos = new StringExpression("apellidos", this);

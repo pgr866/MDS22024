@@ -365,14 +365,14 @@ public class Noticia implements Serializable {
 	
 	public boolean deleteAndDissociate()throws PersistentException {
 		try {
-			base_de_datos.Editor[] lPublicas = publica.toArray();
-			for(int i = 0; i < lPublicas.length; i++) {
-				lPublicas[i].es_publicada_por.remove(this);
-			}
 			if(getCrea() != null) {
 				getCrea().setEs_creada(null);
 			}
 			
+			base_de_datos.Editor[] lPublicas = publica.toArray();
+			for(int i = 0; i < lPublicas.length; i++) {
+				lPublicas[i].es_publicada_por.remove(this);
+			}
 			base_de_datos.Identificado[] lValoras = valora.toArray();
 			for(int i = 0; i < lValoras.length; i++) {
 				lValoras[i].es_valorada_por.remove(this);
@@ -403,14 +403,14 @@ public class Noticia implements Serializable {
 	
 	public boolean deleteAndDissociate(org.orm.PersistentSession session)throws PersistentException {
 		try {
-			base_de_datos.Editor[] lPublicas = publica.toArray();
-			for(int i = 0; i < lPublicas.length; i++) {
-				lPublicas[i].es_publicada_por.remove(this);
-			}
 			if(getCrea() != null) {
 				getCrea().setEs_creada(null);
 			}
 			
+			base_de_datos.Editor[] lPublicas = publica.toArray();
+			for(int i = 0; i < lPublicas.length; i++) {
+				lPublicas[i].es_publicada_por.remove(this);
+			}
 			base_de_datos.Identificado[] lValoras = valora.toArray();
 			for(int i = 0; i < lValoras.length; i++) {
 				lValoras[i].es_valorada_por.remove(this);
@@ -491,11 +491,11 @@ public class Noticia implements Serializable {
 	@org.hibernate.annotations.GenericGenerator(name="BASE_DE_DATOS_NOTICIA_ID_NOTICIA_GENERATOR", strategy="native")	
 	private int id_noticia;
 	
-	@ManyToMany(targetEntity=base_de_datos.Editor.class)	
+	@OneToOne(optional=false, targetEntity=base_de_datos.Periodista.class, fetch=FetchType.LAZY)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
-	@JoinTable(name="Identificado_Noticia2", joinColumns={ @JoinColumn(name="NoticiaId_noticia") }, inverseJoinColumns={ @JoinColumn(name="IdentificadoDni") })	
-	@org.hibernate.annotations.LazyCollection(org.hibernate.annotations.LazyCollectionOption.TRUE)	
-	private java.util.Set ORM_publica = new java.util.HashSet();
+	@JoinColumns(value={ @JoinColumn(name="PeriodistaIdentificadoId", referencedColumnName="IdentificadoId", nullable=false) }, foreignKey=@ForeignKey(name="FKNoticia644303"))	
+	@org.hibernate.annotations.LazyToOne(value=org.hibernate.annotations.LazyToOneOption.NO_PROXY)	
+	private base_de_datos.Periodista crea;
 	
 	@Column(name="Titulo", nullable=true, length=255)	
 	private String titulo;
@@ -515,8 +515,8 @@ public class Noticia implements Serializable {
 	@Column(name="Contenido", nullable=true, length=255)	
 	private String contenido;
 	
-	@Column(name="Autor", nullable=true, length=255)	
-	private String autor;
+	@Column(name="Autor", nullable=true, length=10)	
+	private int autor;
 	
 	@Column(name="Publicada", nullable=false, length=1)	
 	private boolean publicada;
@@ -527,14 +527,15 @@ public class Noticia implements Serializable {
 	@Column(name="Valoraciones_negativas", nullable=false, length=10)	
 	private int valoraciones_negativas;
 	
-	@OneToOne(optional=false, targetEntity=base_de_datos.Periodista.class, fetch=FetchType.LAZY)	
+	@ManyToMany(targetEntity=base_de_datos.Editor.class)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
-	@JoinColumns(value={ @JoinColumn(name="IdentificadoDni", referencedColumnName="Dni", nullable=false) }, foreignKey=@ForeignKey(name="FKNoticia294701"))	
-	private base_de_datos.Periodista crea;
+	@JoinTable(name="Editor_Noticia", joinColumns={ @JoinColumn(name="NoticiaId_noticia") }, inverseJoinColumns={ @JoinColumn(name="EditorIdentificadoId") })	
+	@org.hibernate.annotations.LazyCollection(org.hibernate.annotations.LazyCollectionOption.TRUE)	
+	private java.util.Set ORM_publica = new java.util.HashSet();
 	
 	@ManyToMany(targetEntity=base_de_datos.Identificado.class)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
-	@JoinTable(name="Identificado_Noticia", joinColumns={ @JoinColumn(name="NoticiaId_noticia") }, inverseJoinColumns={ @JoinColumn(name="IdentificadoDni") })	
+	@JoinTable(name="Identificado_Noticia", joinColumns={ @JoinColumn(name="NoticiaId_noticia") }, inverseJoinColumns={ @JoinColumn(name="IdentificadoId") })	
 	@org.hibernate.annotations.LazyCollection(org.hibernate.annotations.LazyCollectionOption.TRUE)	
 	private java.util.Set ORM_valora = new java.util.HashSet();
 	
@@ -619,11 +620,11 @@ public class Noticia implements Serializable {
 		return contenido;
 	}
 	
-	public void setAutor(String value) {
+	public void setAutor(int value) {
 		this.autor = value;
 	}
 	
-	public String getAutor() {
+	public int getAutor() {
 		return autor;
 	}
 	

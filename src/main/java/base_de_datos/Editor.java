@@ -22,16 +22,18 @@ import java.io.Serializable;
 import javax.persistence.*;
 @Entity
 @org.hibernate.annotations.Proxy(lazy=false)
-@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
+@Table(name="Editor")
+@Inheritance(strategy=InheritanceType.JOINED)
 @DiscriminatorValue("Editor")
+@PrimaryKeyJoinColumn(name="IdentificadoId", referencedColumnName="Id")
 public class Editor extends base_de_datos.Identificado implements Serializable {
 	public Editor() {
 	}
 	
-	public static Editor loadEditorByORMID(String dni) throws PersistentException {
+	public static Editor loadEditorByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = base_de_datos.MDS12324PFFornielesGomezPersistentManager.instance().getSession();
-			return loadEditorByORMID(session, dni);
+			return loadEditorByORMID(session, id);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -39,10 +41,10 @@ public class Editor extends base_de_datos.Identificado implements Serializable {
 		}
 	}
 	
-	public static Editor getEditorByORMID(String dni) throws PersistentException {
+	public static Editor getEditorByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = base_de_datos.MDS12324PFFornielesGomezPersistentManager.instance().getSession();
-			return getEditorByORMID(session, dni);
+			return getEditorByORMID(session, id);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -50,10 +52,10 @@ public class Editor extends base_de_datos.Identificado implements Serializable {
 		}
 	}
 	
-	public static Editor loadEditorByORMID(String dni, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Editor loadEditorByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = base_de_datos.MDS12324PFFornielesGomezPersistentManager.instance().getSession();
-			return loadEditorByORMID(session, dni, lockMode);
+			return loadEditorByORMID(session, id, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -61,10 +63,10 @@ public class Editor extends base_de_datos.Identificado implements Serializable {
 		}
 	}
 	
-	public static Editor getEditorByORMID(String dni, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Editor getEditorByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = base_de_datos.MDS12324PFFornielesGomezPersistentManager.instance().getSession();
-			return getEditorByORMID(session, dni, lockMode);
+			return getEditorByORMID(session, id, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -72,9 +74,9 @@ public class Editor extends base_de_datos.Identificado implements Serializable {
 		}
 	}
 	
-	public static Editor loadEditorByORMID(PersistentSession session, String dni) throws PersistentException {
+	public static Editor loadEditorByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
-			return (Editor) session.load(base_de_datos.Editor.class, dni);
+			return (Editor) session.load(base_de_datos.Editor.class, Integer.valueOf(id));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -82,9 +84,9 @@ public class Editor extends base_de_datos.Identificado implements Serializable {
 		}
 	}
 	
-	public static Editor getEditorByORMID(PersistentSession session, String dni) throws PersistentException {
+	public static Editor getEditorByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
-			return (Editor) session.get(base_de_datos.Editor.class, dni);
+			return (Editor) session.get(base_de_datos.Editor.class, Integer.valueOf(id));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -92,9 +94,9 @@ public class Editor extends base_de_datos.Identificado implements Serializable {
 		}
 	}
 	
-	public static Editor loadEditorByORMID(PersistentSession session, String dni, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Editor loadEditorByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Editor) session.load(base_de_datos.Editor.class, dni, lockMode);
+			return (Editor) session.load(base_de_datos.Editor.class, Integer.valueOf(id), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -102,9 +104,9 @@ public class Editor extends base_de_datos.Identificado implements Serializable {
 		}
 	}
 	
-	public static Editor getEditorByORMID(PersistentSession session, String dni, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Editor getEditorByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Editor) session.get(base_de_datos.Editor.class, dni, lockMode);
+			return (Editor) session.get(base_de_datos.Editor.class, Integer.valueOf(id), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -462,7 +464,7 @@ public class Editor extends base_de_datos.Identificado implements Serializable {
 	
 	@ManyToMany(targetEntity=base_de_datos.Noticia.class)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
-	@JoinTable(name="Noticia_Identificado", joinColumns={ @JoinColumn(name="IdentificadoDni") }, inverseJoinColumns={ @JoinColumn(name="NoticiaId_noticia") })	
+	@JoinTable(name="Noticia_Editor", joinColumns={ @JoinColumn(name="EditorIdentificadoId") }, inverseJoinColumns={ @JoinColumn(name="NoticiaId_noticia") })	
 	@org.hibernate.annotations.LazyCollection(org.hibernate.annotations.LazyCollectionOption.TRUE)	
 	private java.util.Set ORM_es_eliminada_por_editor = new java.util.HashSet();
 	
@@ -483,6 +485,7 @@ public class Editor extends base_de_datos.Identificado implements Serializable {
 	
 	@OneToOne(mappedBy="ordena", targetEntity=base_de_datos.Portada.class, fetch=FetchType.LAZY)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
+	@org.hibernate.annotations.LazyToOne(value=org.hibernate.annotations.LazyToOneOption.NO_PROXY)	
 	private base_de_datos.Portada es_ordenada;
 	
 	private void setORM_Es_eliminado_por(java.util.Set value) {

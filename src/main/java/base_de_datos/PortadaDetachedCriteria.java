@@ -20,41 +20,41 @@ import org.orm.criteria.*;
 
 public class PortadaDetachedCriteria extends AbstractORMDetachedCriteria {
 	public final IntegerExpression id_seccion;
-	public final StringExpression eliminaId;
+	public final IntegerExpression eliminaId;
 	public final AssociationExpression elimina;
-	public final StringExpression creaId;
+	public final IntegerExpression creaId;
 	public final AssociationExpression crea;
 	public final StringExpression titulo_seccion;
 	public final CollectionExpression aparece_en;
 	public final CollectionExpression pertenece_a_seccion;
-	public final StringExpression ordenaId;
+	public final IntegerExpression ordenaId;
 	public final AssociationExpression ordena;
 	
 	public PortadaDetachedCriteria() {
 		super(base_de_datos.Portada.class, base_de_datos.PortadaCriteria.class);
 		id_seccion = new IntegerExpression("id_seccion", this.getDetachedCriteria());
-		eliminaId = new StringExpression("elimina.dni", this.getDetachedCriteria());
+		eliminaId = new IntegerExpression("elimina.", this.getDetachedCriteria());
 		elimina = new AssociationExpression("elimina", this.getDetachedCriteria());
-		creaId = new StringExpression("crea.dni", this.getDetachedCriteria());
+		creaId = new IntegerExpression("crea.", this.getDetachedCriteria());
 		crea = new AssociationExpression("crea", this.getDetachedCriteria());
 		titulo_seccion = new StringExpression("titulo_seccion", this.getDetachedCriteria());
 		aparece_en = new CollectionExpression("ORM_aparece_en", this.getDetachedCriteria());
 		pertenece_a_seccion = new CollectionExpression("ORM_pertenece_a_seccion", this.getDetachedCriteria());
-		ordenaId = new StringExpression("ordena.dni", this.getDetachedCriteria());
+		ordenaId = new IntegerExpression("ordena.", this.getDetachedCriteria());
 		ordena = new AssociationExpression("ordena", this.getDetachedCriteria());
 	}
 	
 	public PortadaDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, base_de_datos.PortadaCriteria.class);
 		id_seccion = new IntegerExpression("id_seccion", this.getDetachedCriteria());
-		eliminaId = new StringExpression("elimina.dni", this.getDetachedCriteria());
+		eliminaId = new IntegerExpression("elimina.", this.getDetachedCriteria());
 		elimina = new AssociationExpression("elimina", this.getDetachedCriteria());
-		creaId = new StringExpression("crea.dni", this.getDetachedCriteria());
+		creaId = new IntegerExpression("crea.", this.getDetachedCriteria());
 		crea = new AssociationExpression("crea", this.getDetachedCriteria());
 		titulo_seccion = new StringExpression("titulo_seccion", this.getDetachedCriteria());
 		aparece_en = new CollectionExpression("ORM_aparece_en", this.getDetachedCriteria());
 		pertenece_a_seccion = new CollectionExpression("ORM_pertenece_a_seccion", this.getDetachedCriteria());
-		ordenaId = new StringExpression("ordena.dni", this.getDetachedCriteria());
+		ordenaId = new IntegerExpression("ordena.", this.getDetachedCriteria());
 		ordena = new AssociationExpression("ordena", this.getDetachedCriteria());
 	}
 	

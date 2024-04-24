@@ -19,6 +19,7 @@ import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
 public class Usuario_suscritoDetachedCriteria extends AbstractORMDetachedCriteria {
+	public final IntegerExpression id;
 	public final StringExpression dni;
 	public final StringExpression nombre;
 	public final StringExpression apellidos;
@@ -35,6 +36,7 @@ public class Usuario_suscritoDetachedCriteria extends AbstractORMDetachedCriteri
 	
 	public Usuario_suscritoDetachedCriteria() {
 		super(base_de_datos.Usuario_suscrito.class, base_de_datos.Usuario_suscritoCriteria.class);
+		id = new IntegerExpression("id", this.getDetachedCriteria());
 		dni = new StringExpression("dni", this.getDetachedCriteria());
 		nombre = new StringExpression("nombre", this.getDetachedCriteria());
 		apellidos = new StringExpression("apellidos", this.getDetachedCriteria());
@@ -52,6 +54,7 @@ public class Usuario_suscritoDetachedCriteria extends AbstractORMDetachedCriteri
 	
 	public Usuario_suscritoDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, base_de_datos.Usuario_suscritoCriteria.class);
+		id = new IntegerExpression("id", this.getDetachedCriteria());
 		dni = new StringExpression("dni", this.getDetachedCriteria());
 		nombre = new StringExpression("nombre", this.getDetachedCriteria());
 		apellidos = new StringExpression("apellidos", this.getDetachedCriteria());

@@ -23,8 +23,7 @@ import javax.persistence.*;
 @Entity
 @org.hibernate.annotations.Proxy(lazy=false)
 @Table(name="Seccion")
-@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name="Discriminator", discriminatorType=DiscriminatorType.STRING)
+@Inheritance(strategy=InheritanceType.JOINED)
 @DiscriminatorValue("Seccion")
 public class Seccion implements Serializable {
 	public Seccion() {
@@ -464,12 +463,14 @@ public class Seccion implements Serializable {
 	
 	@ManyToOne(targetEntity=base_de_datos.Editor.class, fetch=FetchType.LAZY)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.LOCK})	
-	@JoinColumns(value={ @JoinColumn(name="IdentificadoDni3", referencedColumnName="Dni", nullable=false) }, foreignKey=@ForeignKey(name="FKSeccion888534"))	
+	@JoinColumns(value={ @JoinColumn(name="EditorIdentificadoId2", referencedColumnName="IdentificadoId", nullable=false) }, foreignKey=@ForeignKey(name="FKSeccion718434"))	
+	@org.hibernate.annotations.LazyToOne(value=org.hibernate.annotations.LazyToOneOption.NO_PROXY)	
 	private base_de_datos.Editor elimina;
 	
 	@ManyToOne(targetEntity=base_de_datos.Editor.class, fetch=FetchType.LAZY)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.LOCK})	
-	@JoinColumns(value={ @JoinColumn(name="IdentificadoDni2", referencedColumnName="Dni", nullable=false) }, foreignKey=@ForeignKey(name="FKSeccion888533"))	
+	@JoinColumns(value={ @JoinColumn(name="EditorIdentificadoId", referencedColumnName="IdentificadoId", nullable=false) }, foreignKey=@ForeignKey(name="FKSeccion472636"))	
+	@org.hibernate.annotations.LazyToOne(value=org.hibernate.annotations.LazyToOneOption.NO_PROXY)	
 	private base_de_datos.Editor crea;
 	
 	@Column(name="Titulo_seccion", nullable=true, length=255)	

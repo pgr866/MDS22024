@@ -19,6 +19,7 @@ import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
 public class EditorCriteria extends AbstractORMCriteria {
+	public final IntegerExpression id;
 	public final StringExpression dni;
 	public final StringExpression nombre;
 	public final StringExpression apellidos;
@@ -36,11 +37,12 @@ public class EditorCriteria extends AbstractORMCriteria {
 	public final CollectionExpression es_creada_por;
 	public final CollectionExpression es_eliminada_por;
 	public final CollectionExpression es_publicada_por;
-	public final StringExpression es_ordenadaId;
+	public final IntegerExpression es_ordenadaId;
 	public final AssociationExpression es_ordenada;
 	
 	public EditorCriteria(Criteria criteria) {
 		super(criteria);
+		id = new IntegerExpression("id", this);
 		dni = new StringExpression("dni", this);
 		nombre = new StringExpression("nombre", this);
 		apellidos = new StringExpression("apellidos", this);
@@ -58,7 +60,7 @@ public class EditorCriteria extends AbstractORMCriteria {
 		es_creada_por = new CollectionExpression("ORM_es_creada_por", this);
 		es_eliminada_por = new CollectionExpression("ORM_es_eliminada_por", this);
 		es_publicada_por = new CollectionExpression("ORM_es_publicada_por", this);
-		es_ordenadaId = new StringExpression("es_ordenada.dni", this);
+		es_ordenadaId = new IntegerExpression("es_ordenada.", this);
 		es_ordenada = new AssociationExpression("es_ordenada", this);
 	}
 	

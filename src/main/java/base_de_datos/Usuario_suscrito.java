@@ -22,16 +22,18 @@ import java.io.Serializable;
 import javax.persistence.*;
 @Entity
 @org.hibernate.annotations.Proxy(lazy=false)
-@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
+@Table(name="Usuario_suscrito")
+@Inheritance(strategy=InheritanceType.JOINED)
 @DiscriminatorValue("Usuario_suscrito")
+@PrimaryKeyJoinColumn(name="IdentificadoId", referencedColumnName="Id")
 public class Usuario_suscrito extends base_de_datos.Identificado implements Serializable {
 	public Usuario_suscrito() {
 	}
 	
-	public static Usuario_suscrito loadUsuario_suscritoByORMID(String dni) throws PersistentException {
+	public static Usuario_suscrito loadUsuario_suscritoByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = base_de_datos.MDS12324PFFornielesGomezPersistentManager.instance().getSession();
-			return loadUsuario_suscritoByORMID(session, dni);
+			return loadUsuario_suscritoByORMID(session, id);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -39,10 +41,10 @@ public class Usuario_suscrito extends base_de_datos.Identificado implements Seri
 		}
 	}
 	
-	public static Usuario_suscrito getUsuario_suscritoByORMID(String dni) throws PersistentException {
+	public static Usuario_suscrito getUsuario_suscritoByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = base_de_datos.MDS12324PFFornielesGomezPersistentManager.instance().getSession();
-			return getUsuario_suscritoByORMID(session, dni);
+			return getUsuario_suscritoByORMID(session, id);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -50,10 +52,10 @@ public class Usuario_suscrito extends base_de_datos.Identificado implements Seri
 		}
 	}
 	
-	public static Usuario_suscrito loadUsuario_suscritoByORMID(String dni, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Usuario_suscrito loadUsuario_suscritoByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = base_de_datos.MDS12324PFFornielesGomezPersistentManager.instance().getSession();
-			return loadUsuario_suscritoByORMID(session, dni, lockMode);
+			return loadUsuario_suscritoByORMID(session, id, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -61,10 +63,10 @@ public class Usuario_suscrito extends base_de_datos.Identificado implements Seri
 		}
 	}
 	
-	public static Usuario_suscrito getUsuario_suscritoByORMID(String dni, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Usuario_suscrito getUsuario_suscritoByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = base_de_datos.MDS12324PFFornielesGomezPersistentManager.instance().getSession();
-			return getUsuario_suscritoByORMID(session, dni, lockMode);
+			return getUsuario_suscritoByORMID(session, id, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -72,9 +74,9 @@ public class Usuario_suscrito extends base_de_datos.Identificado implements Seri
 		}
 	}
 	
-	public static Usuario_suscrito loadUsuario_suscritoByORMID(PersistentSession session, String dni) throws PersistentException {
+	public static Usuario_suscrito loadUsuario_suscritoByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
-			return (Usuario_suscrito) session.load(base_de_datos.Usuario_suscrito.class, dni);
+			return (Usuario_suscrito) session.load(base_de_datos.Usuario_suscrito.class, Integer.valueOf(id));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -82,9 +84,9 @@ public class Usuario_suscrito extends base_de_datos.Identificado implements Seri
 		}
 	}
 	
-	public static Usuario_suscrito getUsuario_suscritoByORMID(PersistentSession session, String dni) throws PersistentException {
+	public static Usuario_suscrito getUsuario_suscritoByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
-			return (Usuario_suscrito) session.get(base_de_datos.Usuario_suscrito.class, dni);
+			return (Usuario_suscrito) session.get(base_de_datos.Usuario_suscrito.class, Integer.valueOf(id));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -92,9 +94,9 @@ public class Usuario_suscrito extends base_de_datos.Identificado implements Seri
 		}
 	}
 	
-	public static Usuario_suscrito loadUsuario_suscritoByORMID(PersistentSession session, String dni, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Usuario_suscrito loadUsuario_suscritoByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Usuario_suscrito) session.load(base_de_datos.Usuario_suscrito.class, dni, lockMode);
+			return (Usuario_suscrito) session.load(base_de_datos.Usuario_suscrito.class, Integer.valueOf(id), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -102,9 +104,9 @@ public class Usuario_suscrito extends base_de_datos.Identificado implements Seri
 		}
 	}
 	
-	public static Usuario_suscrito getUsuario_suscritoByORMID(PersistentSession session, String dni, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Usuario_suscrito getUsuario_suscritoByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Usuario_suscrito) session.get(base_de_datos.Usuario_suscrito.class, dni, lockMode);
+			return (Usuario_suscrito) session.get(base_de_datos.Usuario_suscrito.class, Integer.valueOf(id), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();

@@ -22,8 +22,10 @@ import java.io.Serializable;
 import javax.persistence.*;
 @Entity
 @org.hibernate.annotations.Proxy(lazy=false)
-@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
+@Table(name="Portada")
+@Inheritance(strategy=InheritanceType.JOINED)
 @DiscriminatorValue("Portada")
+@PrimaryKeyJoinColumn(name="SeccionId_seccion", referencedColumnName="Id_seccion")
 public class Portada extends base_de_datos.Seccion implements Serializable {
 	public Portada() {
 	}
@@ -387,7 +389,8 @@ public class Portada extends base_de_datos.Seccion implements Serializable {
 	
 	@OneToOne(optional=false, targetEntity=base_de_datos.Editor.class, fetch=FetchType.LAZY)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
-	@JoinColumns(value={ @JoinColumn(name="IdentificadoDni", referencedColumnName="Dni", nullable=false) }, foreignKey=@ForeignKey(name="FKSeccion63691"))	
+	@JoinColumns(value={ @JoinColumn(name="EditorIdentificadoId", referencedColumnName="IdentificadoId", nullable=false) }, foreignKey=@ForeignKey(name="FKPortada628279"))	
+	@org.hibernate.annotations.LazyToOne(value=org.hibernate.annotations.LazyToOneOption.NO_PROXY)	
 	private base_de_datos.Editor ordena;
 	
 	public void setOrdena(base_de_datos.Editor value) {

@@ -19,7 +19,7 @@ public class CreateMDS12324PFFornielesGomezData {
 			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : contiene, seccion_contiene_tematicas
 			base_de_datosTematica.save();
 			base_de_datos.Noticia base_de_datosNoticia = base_de_datos.Noticia.createNoticia();
-			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : elimina, pertenece_a_noticia, seccion_contiene_noticias, pertenece_a, valora, crea, valoraciones_negativas, valoraciones_positivas, publicada, publica
+			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : elimina, pertenece_a_noticia, seccion_contiene_noticias, pertenece_a, valora, publica, valoraciones_negativas, valoraciones_positivas, publicada, crea
 			base_de_datosNoticia.save();
 			base_de_datos.Comentario base_de_datosComentario = base_de_datos.Comentario.createComentario();
 			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : valora, valoraciones_negativas, valoraciones_positivas, noticia_contiene_comentarios, elimina, escribe
@@ -31,7 +31,7 @@ public class CreateMDS12324PFFornielesGomezData {
 			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : es_ordenada, es_publicada_por, es_eliminada_por, es_creada_por, es_eliminada_por_editor, es_eliminado_por
 			base_de_datosEditor.save();
 			base_de_datos.Periodista base_de_datosPeriodista = base_de_datos.Periodista.createPeriodista();
-			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : es_creada
+			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : es_creada, esEliminado
 			base_de_datosPeriodista.save();
 			base_de_datos.Usuario_suscrito base_de_datosUsuario_suscrito = base_de_datos.Usuario_suscrito.createUsuario_suscrito();
 			// Initialize the properties of the persistent object here

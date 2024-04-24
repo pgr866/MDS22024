@@ -20,13 +20,13 @@ import org.orm.criteria.*;
 
 public class ComentarioCriteria extends AbstractORMCriteria {
 	public final IntegerExpression id_comentario;
-	public final StringExpression escribeId;
+	public final IntegerExpression escribeId;
 	public final AssociationExpression escribe;
-	public final StringExpression eliminaId;
+	public final IntegerExpression eliminaId;
 	public final AssociationExpression elimina;
 	public final IntegerExpression noticia_contiene_comentariosId;
 	public final AssociationExpression noticia_contiene_comentarios;
-	public final StringExpression propietario;
+	public final IntegerExpression propietario;
 	public final StringExpression contenido;
 	public final IntegerExpression valoraciones_positivas;
 	public final IntegerExpression valoraciones_negativas;
@@ -35,13 +35,13 @@ public class ComentarioCriteria extends AbstractORMCriteria {
 	public ComentarioCriteria(Criteria criteria) {
 		super(criteria);
 		id_comentario = new IntegerExpression("id_comentario", this);
-		escribeId = new StringExpression("escribe.dni", this);
+		escribeId = new IntegerExpression("escribe.id", this);
 		escribe = new AssociationExpression("escribe", this);
-		eliminaId = new StringExpression("elimina.dni", this);
+		eliminaId = new IntegerExpression("elimina.", this);
 		elimina = new AssociationExpression("elimina", this);
 		noticia_contiene_comentariosId = new IntegerExpression("noticia_contiene_comentarios.id_noticia", this);
 		noticia_contiene_comentarios = new AssociationExpression("noticia_contiene_comentarios", this);
-		propietario = new StringExpression("propietario", this);
+		propietario = new IntegerExpression("propietario", this);
 		contenido = new StringExpression("contenido", this);
 		valoraciones_positivas = new IntegerExpression("valoraciones_positivas", this);
 		valoraciones_negativas = new IntegerExpression("valoraciones_negativas", this);

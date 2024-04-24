@@ -23,17 +23,16 @@ import javax.persistence.*;
 @Entity
 @org.hibernate.annotations.Proxy(lazy=false)
 @Table(name="Identificado")
-@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name="Discriminator", discriminatorType=DiscriminatorType.STRING)
+@Inheritance(strategy=InheritanceType.JOINED)
 @DiscriminatorValue("Identificado")
 public class Identificado implements Serializable {
 	public Identificado() {
 	}
 	
-	public static Identificado loadIdentificadoByORMID(String dni) throws PersistentException {
+	public static Identificado loadIdentificadoByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = base_de_datos.MDS12324PFFornielesGomezPersistentManager.instance().getSession();
-			return loadIdentificadoByORMID(session, dni);
+			return loadIdentificadoByORMID(session, id);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -41,10 +40,10 @@ public class Identificado implements Serializable {
 		}
 	}
 	
-	public static Identificado getIdentificadoByORMID(String dni) throws PersistentException {
+	public static Identificado getIdentificadoByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = base_de_datos.MDS12324PFFornielesGomezPersistentManager.instance().getSession();
-			return getIdentificadoByORMID(session, dni);
+			return getIdentificadoByORMID(session, id);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -52,10 +51,10 @@ public class Identificado implements Serializable {
 		}
 	}
 	
-	public static Identificado loadIdentificadoByORMID(String dni, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Identificado loadIdentificadoByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = base_de_datos.MDS12324PFFornielesGomezPersistentManager.instance().getSession();
-			return loadIdentificadoByORMID(session, dni, lockMode);
+			return loadIdentificadoByORMID(session, id, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -63,10 +62,10 @@ public class Identificado implements Serializable {
 		}
 	}
 	
-	public static Identificado getIdentificadoByORMID(String dni, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Identificado getIdentificadoByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = base_de_datos.MDS12324PFFornielesGomezPersistentManager.instance().getSession();
-			return getIdentificadoByORMID(session, dni, lockMode);
+			return getIdentificadoByORMID(session, id, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -74,9 +73,9 @@ public class Identificado implements Serializable {
 		}
 	}
 	
-	public static Identificado loadIdentificadoByORMID(PersistentSession session, String dni) throws PersistentException {
+	public static Identificado loadIdentificadoByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
-			return (Identificado) session.load(base_de_datos.Identificado.class, dni);
+			return (Identificado) session.load(base_de_datos.Identificado.class, Integer.valueOf(id));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -84,9 +83,9 @@ public class Identificado implements Serializable {
 		}
 	}
 	
-	public static Identificado getIdentificadoByORMID(PersistentSession session, String dni) throws PersistentException {
+	public static Identificado getIdentificadoByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
-			return (Identificado) session.get(base_de_datos.Identificado.class, dni);
+			return (Identificado) session.get(base_de_datos.Identificado.class, Integer.valueOf(id));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -94,9 +93,9 @@ public class Identificado implements Serializable {
 		}
 	}
 	
-	public static Identificado loadIdentificadoByORMID(PersistentSession session, String dni, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Identificado loadIdentificadoByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Identificado) session.load(base_de_datos.Identificado.class, dni, lockMode);
+			return (Identificado) session.load(base_de_datos.Identificado.class, Integer.valueOf(id), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -104,9 +103,9 @@ public class Identificado implements Serializable {
 		}
 	}
 	
-	public static Identificado getIdentificadoByORMID(PersistentSession session, String dni, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Identificado getIdentificadoByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Identificado) session.get(base_de_datos.Identificado.class, dni, lockMode);
+			return (Identificado) session.get(base_de_datos.Identificado.class, Integer.valueOf(id), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -318,23 +317,6 @@ public class Identificado implements Serializable {
 		return identificadoCriteria.listIdentificado();
 	}
 	
-	public boolean equals(Object aObj) {
-		if (aObj == this)
-			return true;
-		if (!(aObj instanceof Identificado))
-			return false;
-		Identificado identificado = (Identificado)aObj;
-		if ((getDni() != null && !getDni().equals(identificado.getDni())) || (getDni() == null && identificado.getDni() != null))
-			return false;
-		return true;
-	}
-	
-	public int hashCode() {
-		int hashcode = 0;
-		hashcode = hashcode + (getDni() == null ? 0 : getDni().hashCode());
-		return hashcode;
-	}
-	
 	public static Identificado createIdentificado() {
 		return new base_de_datos.Identificado();
 	}
@@ -454,8 +436,13 @@ public class Identificado implements Serializable {
 		
 	};
 	
-	@Column(name="Dni", nullable=false, length=255)	
+	@Column(name="Id", nullable=false, length=10)	
 	@Id	
+	@GeneratedValue(generator="BASE_DE_DATOS_IDENTIFICADO_ID_GENERATOR")	
+	@org.hibernate.annotations.GenericGenerator(name="BASE_DE_DATOS_IDENTIFICADO_ID_GENERATOR", strategy="native")	
+	private int id;
+	
+	@Column(name="Dni", nullable=false, length=255)	
 	private String dni;
 	
 	@Column(name="Nombre", nullable=true, length=255)	
@@ -489,7 +476,7 @@ public class Identificado implements Serializable {
 	
 	@ManyToMany(targetEntity=base_de_datos.Comentario.class)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
-	@JoinTable(name="Comentario_Identificado", joinColumns={ @JoinColumn(name="IdentificadoDni") }, inverseJoinColumns={ @JoinColumn(name="ComentarioId_comentario") })	
+	@JoinTable(name="Comentario_Identificado", joinColumns={ @JoinColumn(name="IdentificadoId") }, inverseJoinColumns={ @JoinColumn(name="ComentarioId_comentario") })	
 	@org.hibernate.annotations.LazyCollection(org.hibernate.annotations.LazyCollectionOption.TRUE)	
 	private java.util.Set ORM_es_valorado_por = new java.util.HashSet();
 	
@@ -498,16 +485,24 @@ public class Identificado implements Serializable {
 	@org.hibernate.annotations.LazyCollection(org.hibernate.annotations.LazyCollectionOption.TRUE)	
 	private java.util.Set ORM_es_valorada_por = new java.util.HashSet();
 	
+	private void setId(int value) {
+		this.id = value;
+	}
+	
+	public int getId() {
+		return id;
+	}
+	
+	public int getORMID() {
+		return getId();
+	}
+	
 	public void setDni(String value) {
 		this.dni = value;
 	}
 	
 	public String getDni() {
 		return dni;
-	}
-	
-	public String getORMID() {
-		return getDni();
 	}
 	
 	public void setNombre(String value) {
@@ -608,7 +603,7 @@ public class Identificado implements Serializable {
 	public final base_de_datos.NoticiaSetCollection es_valorada_por = new base_de_datos.NoticiaSetCollection(this, _ormAdapter, base_de_datos.ORMConstants.KEY_IDENTIFICADO_ES_VALORADA_POR, base_de_datos.ORMConstants.KEY_NOTICIA_VALORA, base_de_datos.ORMConstants.KEY_MUL_MANY_TO_MANY);
 	
 	public String toString() {
-		return String.valueOf(getDni());
+		return String.valueOf(getId());
 	}
 	
 }

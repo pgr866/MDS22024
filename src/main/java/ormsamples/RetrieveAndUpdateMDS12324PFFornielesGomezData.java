@@ -78,25 +78,25 @@ public class RetrieveAndUpdateMDS12324PFFornielesGomezData {
 		System.out.println("Retrieving Identificado by IdentificadoCriteria");
 		base_de_datos.IdentificadoCriteria base_de_datosIdentificadoCriteria = new base_de_datos.IdentificadoCriteria();
 		// Please uncomment the follow line and fill in parameter(s)
-		//base_de_datosIdentificadoCriteria.dni.eq();
+		//base_de_datosIdentificadoCriteria.id.eq();
 		System.out.println(base_de_datosIdentificadoCriteria.uniqueIdentificado());
 		
 		System.out.println("Retrieving Editor by EditorCriteria");
 		base_de_datos.EditorCriteria base_de_datosEditorCriteria = new base_de_datos.EditorCriteria();
 		// Please uncomment the follow line and fill in parameter(s)
-		//base_de_datosEditorCriteria.dni.eq();
+		//base_de_datosEditorCriteria.id.eq();
 		System.out.println(base_de_datosEditorCriteria.uniqueEditor());
 		
 		System.out.println("Retrieving Periodista by PeriodistaCriteria");
 		base_de_datos.PeriodistaCriteria base_de_datosPeriodistaCriteria = new base_de_datos.PeriodistaCriteria();
 		// Please uncomment the follow line and fill in parameter(s)
-		//base_de_datosPeriodistaCriteria.dni.eq();
+		//base_de_datosPeriodistaCriteria.id.eq();
 		System.out.println(base_de_datosPeriodistaCriteria.uniquePeriodista());
 		
 		System.out.println("Retrieving Usuario_suscrito by Usuario_suscritoCriteria");
 		base_de_datos.Usuario_suscritoCriteria base_de_datosUsuario_suscritoCriteria = new base_de_datos.Usuario_suscritoCriteria();
 		// Please uncomment the follow line and fill in parameter(s)
-		//base_de_datosUsuario_suscritoCriteria.dni.eq();
+		//base_de_datosUsuario_suscritoCriteria.id.eq();
 		System.out.println(base_de_datosUsuario_suscritoCriteria.uniqueUsuario_suscrito());
 		
 	}

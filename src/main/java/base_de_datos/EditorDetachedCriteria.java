@@ -19,6 +19,7 @@ import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
 public class EditorDetachedCriteria extends AbstractORMDetachedCriteria {
+	public final IntegerExpression id;
 	public final StringExpression dni;
 	public final StringExpression nombre;
 	public final StringExpression apellidos;
@@ -36,11 +37,12 @@ public class EditorDetachedCriteria extends AbstractORMDetachedCriteria {
 	public final CollectionExpression es_creada_por;
 	public final CollectionExpression es_eliminada_por;
 	public final CollectionExpression es_publicada_por;
-	public final StringExpression es_ordenadaId;
+	public final IntegerExpression es_ordenadaId;
 	public final AssociationExpression es_ordenada;
 	
 	public EditorDetachedCriteria() {
 		super(base_de_datos.Editor.class, base_de_datos.EditorCriteria.class);
+		id = new IntegerExpression("id", this.getDetachedCriteria());
 		dni = new StringExpression("dni", this.getDetachedCriteria());
 		nombre = new StringExpression("nombre", this.getDetachedCriteria());
 		apellidos = new StringExpression("apellidos", this.getDetachedCriteria());
@@ -58,12 +60,13 @@ public class EditorDetachedCriteria extends AbstractORMDetachedCriteria {
 		es_creada_por = new CollectionExpression("ORM_es_creada_por", this.getDetachedCriteria());
 		es_eliminada_por = new CollectionExpression("ORM_es_eliminada_por", this.getDetachedCriteria());
 		es_publicada_por = new CollectionExpression("ORM_es_publicada_por", this.getDetachedCriteria());
-		es_ordenadaId = new StringExpression("es_ordenada.dni", this.getDetachedCriteria());
+		es_ordenadaId = new IntegerExpression("es_ordenada.", this.getDetachedCriteria());
 		es_ordenada = new AssociationExpression("es_ordenada", this.getDetachedCriteria());
 	}
 	
 	public EditorDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, base_de_datos.EditorCriteria.class);
+		id = new IntegerExpression("id", this.getDetachedCriteria());
 		dni = new StringExpression("dni", this.getDetachedCriteria());
 		nombre = new StringExpression("nombre", this.getDetachedCriteria());
 		apellidos = new StringExpression("apellidos", this.getDetachedCriteria());
@@ -81,7 +84,7 @@ public class EditorDetachedCriteria extends AbstractORMDetachedCriteria {
 		es_creada_por = new CollectionExpression("ORM_es_creada_por", this.getDetachedCriteria());
 		es_eliminada_por = new CollectionExpression("ORM_es_eliminada_por", this.getDetachedCriteria());
 		es_publicada_por = new CollectionExpression("ORM_es_publicada_por", this.getDetachedCriteria());
-		es_ordenadaId = new StringExpression("es_ordenada.dni", this.getDetachedCriteria());
+		es_ordenadaId = new IntegerExpression("es_ordenada.", this.getDetachedCriteria());
 		es_ordenada = new AssociationExpression("es_ordenada", this.getDetachedCriteria());
 	}
 	

@@ -22,16 +22,18 @@ import java.io.Serializable;
 import javax.persistence.*;
 @Entity
 @org.hibernate.annotations.Proxy(lazy=false)
-@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
+@Table(name="Periodista")
+@Inheritance(strategy=InheritanceType.JOINED)
 @DiscriminatorValue("Periodista")
+@PrimaryKeyJoinColumn(name="IdentificadoId", referencedColumnName="Id")
 public class Periodista extends base_de_datos.Identificado implements Serializable {
 	public Periodista() {
 	}
 	
-	public static Periodista loadPeriodistaByORMID(String dni) throws PersistentException {
+	public static Periodista loadPeriodistaByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = base_de_datos.MDS12324PFFornielesGomezPersistentManager.instance().getSession();
-			return loadPeriodistaByORMID(session, dni);
+			return loadPeriodistaByORMID(session, id);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -39,10 +41,10 @@ public class Periodista extends base_de_datos.Identificado implements Serializab
 		}
 	}
 	
-	public static Periodista getPeriodistaByORMID(String dni) throws PersistentException {
+	public static Periodista getPeriodistaByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = base_de_datos.MDS12324PFFornielesGomezPersistentManager.instance().getSession();
-			return getPeriodistaByORMID(session, dni);
+			return getPeriodistaByORMID(session, id);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -50,10 +52,10 @@ public class Periodista extends base_de_datos.Identificado implements Serializab
 		}
 	}
 	
-	public static Periodista loadPeriodistaByORMID(String dni, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Periodista loadPeriodistaByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = base_de_datos.MDS12324PFFornielesGomezPersistentManager.instance().getSession();
-			return loadPeriodistaByORMID(session, dni, lockMode);
+			return loadPeriodistaByORMID(session, id, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -61,10 +63,10 @@ public class Periodista extends base_de_datos.Identificado implements Serializab
 		}
 	}
 	
-	public static Periodista getPeriodistaByORMID(String dni, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Periodista getPeriodistaByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = base_de_datos.MDS12324PFFornielesGomezPersistentManager.instance().getSession();
-			return getPeriodistaByORMID(session, dni, lockMode);
+			return getPeriodistaByORMID(session, id, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -72,9 +74,9 @@ public class Periodista extends base_de_datos.Identificado implements Serializab
 		}
 	}
 	
-	public static Periodista loadPeriodistaByORMID(PersistentSession session, String dni) throws PersistentException {
+	public static Periodista loadPeriodistaByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
-			return (Periodista) session.load(base_de_datos.Periodista.class, dni);
+			return (Periodista) session.load(base_de_datos.Periodista.class, Integer.valueOf(id));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -82,9 +84,9 @@ public class Periodista extends base_de_datos.Identificado implements Serializab
 		}
 	}
 	
-	public static Periodista getPeriodistaByORMID(PersistentSession session, String dni) throws PersistentException {
+	public static Periodista getPeriodistaByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
-			return (Periodista) session.get(base_de_datos.Periodista.class, dni);
+			return (Periodista) session.get(base_de_datos.Periodista.class, Integer.valueOf(id));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -92,9 +94,9 @@ public class Periodista extends base_de_datos.Identificado implements Serializab
 		}
 	}
 	
-	public static Periodista loadPeriodistaByORMID(PersistentSession session, String dni, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Periodista loadPeriodistaByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Periodista) session.load(base_de_datos.Periodista.class, dni, lockMode);
+			return (Periodista) session.load(base_de_datos.Periodista.class, Integer.valueOf(id), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -102,9 +104,9 @@ public class Periodista extends base_de_datos.Identificado implements Serializab
 		}
 	}
 	
-	public static Periodista getPeriodistaByORMID(PersistentSession session, String dni, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Periodista getPeriodistaByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Periodista) session.get(base_de_datos.Periodista.class, dni, lockMode);
+			return (Periodista) session.get(base_de_datos.Periodista.class, Integer.valueOf(id), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -377,11 +379,12 @@ public class Periodista extends base_de_datos.Identificado implements Serializab
 		}
 	}
 	
-	@Column(name="EsEliminado", nullable=true, length=1)	
+	@Column(name="EsEliminado", nullable=false, length=1)	
 	private boolean esEliminado;
 	
 	@OneToOne(mappedBy="crea", targetEntity=base_de_datos.Noticia.class, fetch=FetchType.LAZY)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
+	@org.hibernate.annotations.LazyToOne(value=org.hibernate.annotations.LazyToOneOption.NO_PROXY)	
 	private base_de_datos.Noticia es_creada;
 	
 	public void setEsEliminado(boolean value) {

@@ -20,19 +20,19 @@ import org.orm.criteria.*;
 
 public class NoticiaDetachedCriteria extends AbstractORMDetachedCriteria {
 	public final IntegerExpression id_noticia;
-	public final CollectionExpression publica;
+	public final IntegerExpression creaId;
+	public final AssociationExpression crea;
 	public final StringExpression titulo;
 	public final StringExpression url_imagen_noticia;
 	public final StringExpression fecha;
 	public final StringExpression lugar;
 	public final StringExpression resumen;
 	public final StringExpression contenido;
-	public final StringExpression autor;
+	public final IntegerExpression autor;
 	public final BooleanExpression publicada;
 	public final IntegerExpression valoraciones_positivas;
 	public final IntegerExpression valoraciones_negativas;
-	public final StringExpression creaId;
-	public final AssociationExpression crea;
+	public final CollectionExpression publica;
 	public final CollectionExpression valora;
 	public final CollectionExpression pertenece_a;
 	public final CollectionExpression seccion_contiene_noticias;
@@ -42,19 +42,19 @@ public class NoticiaDetachedCriteria extends AbstractORMDetachedCriteria {
 	public NoticiaDetachedCriteria() {
 		super(base_de_datos.Noticia.class, base_de_datos.NoticiaCriteria.class);
 		id_noticia = new IntegerExpression("id_noticia", this.getDetachedCriteria());
-		publica = new CollectionExpression("ORM_publica", this.getDetachedCriteria());
+		creaId = new IntegerExpression("crea.", this.getDetachedCriteria());
+		crea = new AssociationExpression("crea", this.getDetachedCriteria());
 		titulo = new StringExpression("titulo", this.getDetachedCriteria());
 		url_imagen_noticia = new StringExpression("url_imagen_noticia", this.getDetachedCriteria());
 		fecha = new StringExpression("fecha", this.getDetachedCriteria());
 		lugar = new StringExpression("lugar", this.getDetachedCriteria());
 		resumen = new StringExpression("resumen", this.getDetachedCriteria());
 		contenido = new StringExpression("contenido", this.getDetachedCriteria());
-		autor = new StringExpression("autor", this.getDetachedCriteria());
+		autor = new IntegerExpression("autor", this.getDetachedCriteria());
 		publicada = new BooleanExpression("publicada", this.getDetachedCriteria());
 		valoraciones_positivas = new IntegerExpression("valoraciones_positivas", this.getDetachedCriteria());
 		valoraciones_negativas = new IntegerExpression("valoraciones_negativas", this.getDetachedCriteria());
-		creaId = new StringExpression("crea.dni", this.getDetachedCriteria());
-		crea = new AssociationExpression("crea", this.getDetachedCriteria());
+		publica = new CollectionExpression("ORM_publica", this.getDetachedCriteria());
 		valora = new CollectionExpression("ORM_valora", this.getDetachedCriteria());
 		pertenece_a = new CollectionExpression("ORM_pertenece_a", this.getDetachedCriteria());
 		seccion_contiene_noticias = new CollectionExpression("ORM_seccion_contiene_noticias", this.getDetachedCriteria());
@@ -65,19 +65,19 @@ public class NoticiaDetachedCriteria extends AbstractORMDetachedCriteria {
 	public NoticiaDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, base_de_datos.NoticiaCriteria.class);
 		id_noticia = new IntegerExpression("id_noticia", this.getDetachedCriteria());
-		publica = new CollectionExpression("ORM_publica", this.getDetachedCriteria());
+		creaId = new IntegerExpression("crea.", this.getDetachedCriteria());
+		crea = new AssociationExpression("crea", this.getDetachedCriteria());
 		titulo = new StringExpression("titulo", this.getDetachedCriteria());
 		url_imagen_noticia = new StringExpression("url_imagen_noticia", this.getDetachedCriteria());
 		fecha = new StringExpression("fecha", this.getDetachedCriteria());
 		lugar = new StringExpression("lugar", this.getDetachedCriteria());
 		resumen = new StringExpression("resumen", this.getDetachedCriteria());
 		contenido = new StringExpression("contenido", this.getDetachedCriteria());
-		autor = new StringExpression("autor", this.getDetachedCriteria());
+		autor = new IntegerExpression("autor", this.getDetachedCriteria());
 		publicada = new BooleanExpression("publicada", this.getDetachedCriteria());
 		valoraciones_positivas = new IntegerExpression("valoraciones_positivas", this.getDetachedCriteria());
 		valoraciones_negativas = new IntegerExpression("valoraciones_negativas", this.getDetachedCriteria());
-		creaId = new StringExpression("crea.dni", this.getDetachedCriteria());
-		crea = new AssociationExpression("crea", this.getDetachedCriteria());
+		publica = new CollectionExpression("ORM_publica", this.getDetachedCriteria());
 		valora = new CollectionExpression("ORM_valora", this.getDetachedCriteria());
 		pertenece_a = new CollectionExpression("ORM_pertenece_a", this.getDetachedCriteria());
 		seccion_contiene_noticias = new CollectionExpression("ORM_seccion_contiene_noticias", this.getDetachedCriteria());
@@ -85,12 +85,12 @@ public class NoticiaDetachedCriteria extends AbstractORMDetachedCriteria {
 		elimina = new CollectionExpression("ORM_elimina", this.getDetachedCriteria());
 	}
 	
-	public base_de_datos.EditorDetachedCriteria createPublicaCriteria() {
-		return new base_de_datos.EditorDetachedCriteria(createCriteria("ORM_publica"));
-	}
-	
 	public PeriodistaDetachedCriteria createCreaCriteria() {
 		return new PeriodistaDetachedCriteria(createCriteria("crea"));
+	}
+	
+	public base_de_datos.EditorDetachedCriteria createPublicaCriteria() {
+		return new base_de_datos.EditorDetachedCriteria(createCriteria("ORM_publica"));
 	}
 	
 	public base_de_datos.IdentificadoDetachedCriteria createValoraCriteria() {
