@@ -16,7 +16,47 @@ import com.vaadin.flow.component.textfield.PasswordField;
 @JsModule("./src/vista-iniciarsesion.ts")
 public class VistaIniciarsesion extends LitTemplate {
 
-    public HorizontalLayout getLayoutlogin() {
+    public HorizontalLayout getLayoutmensajeerrorlogin() {
+		return layoutmensajeerrorlogin;
+	}
+
+	public void setLayoutmensajeerrorlogin(HorizontalLayout layoutmensajeerrorlogin) {
+		this.layoutmensajeerrorlogin = layoutmensajeerrorlogin;
+	}
+
+	public Label getLabelmensajeerrorlogin() {
+		return labelmensajeerrorlogin;
+	}
+
+	public void setLabelmensajeerrorlogin(Label labelmensajeerrorlogin) {
+		this.labelmensajeerrorlogin = labelmensajeerrorlogin;
+	}
+
+	public HorizontalLayout getLayoutemaillogin() {
+		return layoutemaillogin;
+	}
+
+	public void setLayoutemaillogin(HorizontalLayout layoutemaillogin) {
+		this.layoutemaillogin = layoutemaillogin;
+	}
+
+	public Label getLabelemaillogin() {
+		return labelemaillogin;
+	}
+
+	public void setLabelemaillogin(Label labelemaillogin) {
+		this.labelemaillogin = labelemaillogin;
+	}
+
+	public TextField getTextfieldemaillogin() {
+		return textfieldemaillogin;
+	}
+
+	public void setTextfieldemaillogin(TextField textfieldemaillogin) {
+		this.textfieldemaillogin = textfieldemaillogin;
+	}
+
+	public HorizontalLayout getLayoutlogin() {
 		return layoutlogin;
 	}
 
@@ -38,30 +78,6 @@ public class VistaIniciarsesion extends LitTemplate {
 
 	public void setLayoutopcioneslogin(Element layoutopcioneslogin) {
 		this.layoutopcioneslogin = layoutopcioneslogin;
-	}
-
-	public HorizontalLayout getLayoutusuariologin() {
-		return layoutusuariologin;
-	}
-
-	public void setLayoutusuariologin(HorizontalLayout layoutusuariologin) {
-		this.layoutusuariologin = layoutusuariologin;
-	}
-
-	public Label getLabelusuariologin() {
-		return labelusuariologin;
-	}
-
-	public void setLabelusuariologin(Label labelusuariologin) {
-		this.labelusuariologin = labelusuariologin;
-	}
-
-	public TextField getTextfieldusuariologin() {
-		return textfieldusuariologin;
-	}
-
-	public void setTextfieldusuariologin(TextField textfieldusuariologin) {
-		this.textfieldusuariologin = textfieldusuariologin;
 	}
 
 	public HorizontalLayout getLayoutcontrasenalogin() {
@@ -124,12 +140,6 @@ public class VistaIniciarsesion extends LitTemplate {
 	private HorizontalLayout layoutlogin;
 	@Id("Labellogin")
 	private Label labellogin;
-	@Id("Layoutusuariologin")
-	private HorizontalLayout layoutusuariologin;
-	@Id("Labelusuariologin")
-	private Label labelusuariologin;
-	@Id("Textfieldusuariologin")
-	private TextField textfieldusuariologin;
 	@Id("Layoutcontrasenalogin")
 	private HorizontalLayout layoutcontrasenalogin;
 	@Id("Labelcontrasenalogin")
@@ -146,6 +156,16 @@ public class VistaIniciarsesion extends LitTemplate {
 	private Button buttonregistrarselogin;
 	@Id("Layoutopcioneslogin")
 	private Element layoutopcioneslogin;
+	@Id("Layoutemaillogin")
+	private HorizontalLayout layoutemaillogin;
+	@Id("Labelemaillogin")
+	private Label labelemaillogin;
+	@Id("Textfieldemaillogin")
+	private TextField textfieldemaillogin;
+	@Id("Layoutmensajeerrorlogin")
+	private HorizontalLayout layoutmensajeerrorlogin;
+	@Id("Labelmensajeerrorlogin")
+	private Label labelmensajeerrorlogin;
 
 	public VistaIniciarsesion() {
         // You can initialise any data required for the connected UI components here.

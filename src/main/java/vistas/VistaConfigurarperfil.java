@@ -16,7 +16,31 @@ import com.vaadin.flow.component.textfield.PasswordField;
 @JsModule("./src/vista-configurarperfil.ts")
 public class VistaConfigurarperfil extends LitTemplate {
 
-    public Element getLayoutconfigurarperfil() {
+	public TextField getTextfieldapellidosconfigurarperfil() {
+		return textfieldapellidosconfigurarperfil;
+	}
+
+	public void setTextfieldapellidosconfigurarperfil(TextField textfieldapellidosconfigurarperfil) {
+		this.textfieldapellidosconfigurarperfil = textfieldapellidosconfigurarperfil;
+	}
+
+	public HorizontalLayout getLayoutapellidosconfigurarperfil() {
+		return layoutapellidosconfigurarperfil;
+	}
+
+	public void setLayoutapellidosconfigurarperfil(HorizontalLayout layoutapellidosconfigurarperfil) {
+		this.layoutapellidosconfigurarperfil = layoutapellidosconfigurarperfil;
+	}
+
+	public Label getLabelapellidosconfigurarperfil() {
+		return labelapellidosconfigurarperfil;
+	}
+
+	public void setLabelapellidosconfigurarperfil(Label labelapellidosconfigurarperfil) {
+		this.labelapellidosconfigurarperfil = labelapellidosconfigurarperfil;
+	}
+
+	public Element getLayoutconfigurarperfil() {
 		return layoutconfigurarperfil;
 	}
 
@@ -190,12 +214,6 @@ public class VistaConfigurarperfil extends LitTemplate {
 	private Button buttonFotoconfigurarperfil;
 	@Id("Fotoconfigurarperfil")
 	private Image fotoconfigurarperfil;
-	@Id("Layoutnombreconfigurarperfil")
-	private HorizontalLayout layoutnombreconfigurarperfil;
-	@Id("Labelnombreconfigurarperfil")
-	private Label labelnombreconfigurarperfil;
-	@Id("Textfieldnombreconfigurarperfil")
-	private TextField textfieldnombreconfigurarperfil;
 	@Id("Layoutapodoconfigurarperfil")
 	private HorizontalLayout layoutapodoconfigurarperfil;
 	@Id("Labelapodoconfigurarperfil")
@@ -226,6 +244,18 @@ public class VistaConfigurarperfil extends LitTemplate {
 	private Button buttonguardarcambiosconfigurarperfil;
 	@Id("Buttoneliminarcuentaconfigurarperfil")
 	private Button buttoneliminarcuentaconfigurarperfil;
+	@Id("Layoutnombreconfigurarperfil")
+	private HorizontalLayout layoutnombreconfigurarperfil;
+	@Id("Labelnombreconfigurarperfil")
+	private Label labelnombreconfigurarperfil;
+	@Id("Textfieldnombreconfigurarperfil")
+	private TextField textfieldnombreconfigurarperfil;
+	@Id("Layoutapellidosconfigurarperfil")
+	private HorizontalLayout layoutapellidosconfigurarperfil;
+	@Id("Labelapellidosconfigurarperfil")
+	private Label labelapellidosconfigurarperfil;
+	@Id("Textfieldapellidosconfigurarperfil")
+	private TextField textfieldapellidosconfigurarperfil;
 
 	public VistaConfigurarperfil() {
         // You can initialise any data required for the connected UI components here.

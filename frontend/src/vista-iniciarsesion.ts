@@ -24,13 +24,16 @@ export class VistaIniciarsesion extends LitElement {
  </vaadin-horizontal-layout>
  <vaadin-vertical-layout style="flex-shrink: 0; align-self: center; width: 80%; flex-grow: 0; justify-content: space-evenly; height: 50%; padding-top: var(--lumo-space-xl);" id="Layoutopcioneslogin">
   <vaadin-vertical-layout style="width: 100%; flex-shrink: 0;">
-   <vaadin-horizontal-layout style="width: 100%; flex-shrink: 0;" id="Layoutusuariologin">
-    <label style="width: 35%; flex-shrink: 0; align-self: center; font-size: 120%;" id="Labelusuariologin">Usuario </label>
-    <vaadin-text-field placeholder="Nombre Usuario" id="Textfieldusuariologin" style="flex-shrink: 0; width: 50%;"></vaadin-text-field>
+   <vaadin-horizontal-layout style="width: 100%; flex-shrink: 0;" id="Layoutemaillogin">
+    <label style="width: 35%; flex-shrink: 0; align-self: center; font-size: 120%;" id="Labelemaillogin">Email </label>
+    <vaadin-text-field placeholder="Email" id="Textfieldemaillogin" style="flex-shrink: 0; width: 50%;"></vaadin-text-field>
    </vaadin-horizontal-layout>
-   <vaadin-horizontal-layout style="width: 100%; padding-bottom: var(--lumo-space-xl);" id="Layoutcontrasenalogin">
+   <vaadin-horizontal-layout style="width: 100%;" id="Layoutcontrasenalogin">
     <label style="width: 35%; flex-shrink: 0; align-self: center; font-size: 120%;" id="Labelcontrasenalogin">Contraseña</label>
     <vaadin-password-field placeholder="Contraseña" style="flex-shrink: 0; width: 50%;" has-value id="Passwordfieldogin"></vaadin-password-field>
+   </vaadin-horizontal-layout>
+   <vaadin-horizontal-layout style="width: 100%; flex-shrink: 1; justify-content: center; flex-direction: column;" id="Layoutmensajeerrorlogin">
+    <label style="flex-shrink: 0; font-size: 120%; width: 100%; align-self: center; font-size: 100%; text-align: center; color: #FF0000;" id="Labelmensajeerrorlogin">Email y contraseña no coinciden, inténtelo de nuevo</label>
    </vaadin-horizontal-layout>
   </vaadin-vertical-layout>
   <vaadin-button style="flex-shrink: 0; align-self: center; width: 20%;" id="Buttonentrarlogin">

@@ -2,6 +2,10 @@ package interfaz;
 
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
+import java.util.List;
+
+import org.orm.PersistentException;
+
 import vistas.VistaIniciarsesion;
 
 public class Iniciar_Sesion extends VistaIniciarsesion {
@@ -16,21 +20,25 @@ public class Iniciar_Sesion extends VistaIniciarsesion {
 	public Iniciar_Sesion(Usuario_no_Registrado _usuario_no_Registrado) {
 		super();
 		this._usuario_no_Registrado = _usuario_no_Registrado;
+		this.getLabelmensajeerrorlogin().setVisible(false);
 		this.getButtonentrarlogin().addClickListener(event->Entrar());
 		this.getButtonregistrarselogin().addClickListener(event->Registrarse());
 	}
 
 	public void Entrar() {
 		// comprobar tipo de usuario y credenciales BD
-			if (this.getTextfieldusuariologin().getValue().equals("Usuario")) {
-				this._usuario_no_Registrado.mainview.removeAll();
-				Identificado identificado = new Identificado(this._usuario_no_Registrado.mainview);
-				this._usuario_no_Registrado.mainview.add(identificado);
-			}
-	}
-
-	public void Validar_datos() {
-		// business
+		String email = this.getTextfieldemaillogin().getValue();
+		String contrasena = this.getPasswordfieldogin().getValue();
+		
+		String condition = "Email = '" + email + "' AND Contraseña = '" + contrasena + "'";
+		try {
+			basededatos.Identificado result = (basededatos.Identificado) basededatos.Identificado.queryIdentificado(condition, "").get(0);
+			this._usuario_no_Registrado.mainview.removeAll();
+			Identificado identificado = new Identificado(this._usuario_no_Registrado.mainview, result);
+			this._usuario_no_Registrado.mainview.add(identificado);
+		} catch (PersistentException e) {
+			this.getLabelmensajeerrorlogin().setVisible(true);
+		}
 	}
 
 	public void Registrarse() {
