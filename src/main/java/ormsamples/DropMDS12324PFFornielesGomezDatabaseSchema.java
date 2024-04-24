@@ -11,8 +11,8 @@ public class DropMDS12324PFFornielesGomezDatabaseSchema {
 			System.out.println("Are you sure to drop table(s)? (Y/N)");
 			java.io.BufferedReader reader = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));
 			if (reader.readLine().trim().toUpperCase().equals("Y")) {
-				ORMDatabaseInitiator.dropSchema(base_de_datos.MDS12324PFFornielesGomezPersistentManager.instance());
-				base_de_datos.MDS12324PFFornielesGomezPersistentManager.instance().disposePersistentManager();
+				ORMDatabaseInitiator.dropSchema(basededatos.MDS12324PFFornielesGomezPersistentManager.instance());
+				basededatos.MDS12324PFFornielesGomezPersistentManager.instance().disposePersistentManager();
 			}
 			
 		}
