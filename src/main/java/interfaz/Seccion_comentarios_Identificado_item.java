@@ -6,8 +6,8 @@ public class Seccion_comentarios_Identificado_item extends Seccion_comentarios_i
 //	private Button _no_me_gusta;
 	public Seccion_comentarios_Identificado _seccion_comentarios_Identificado;
 
-	public Seccion_comentarios_Identificado_item(Seccion_comentarios _seccion_comentarios) {
-		super(_seccion_comentarios);
+	public Seccion_comentarios_Identificado_item(Seccion_comentarios _seccion_comentarios, basededatos.Comentario comentario) {
+		super(_seccion_comentarios, comentario);
 		this._mostrar_valoracion_comentario.getMegustaseccioncomentariositem().addClickListener(event->Valorar_comentario(false));
 		this._mostrar_valoracion_comentario.getNomegustaseccioncomentariositem().addClickListener(event->Valorar_comentario(true));
 	}

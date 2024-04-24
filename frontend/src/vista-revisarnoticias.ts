@@ -41,7 +41,7 @@ export class VistaRevisarnoticias extends LitElement {
   </vaadin-horizontal-layout>
   <vaadin-horizontal-layout style="flex-shrink: 0; width: 80%; height: 12%; justify-content: center; align-items: center;" id="Layouttematicarevisarnoticias">
    <label style="width: 20%; flex-shrink: 0; flex-grow: 0;" id="Labeltematicarevisarnoticias">Temática</label>
-   <vaadin-text-field style="flex-shrink: 0; flex-grow: 1;" id="Textfieldtematicarevisarnoticias" disabled value="Temática"></vaadin-text-field>
+   <vaadin-text-field style="flex-shrink: 0; flex-grow: 1;" id="Textfieldtematicarevisarnoticias" disabled value="Temática" tabindex="" has-value></vaadin-text-field>
   </vaadin-horizontal-layout>
   <vaadin-horizontal-layout style="flex-shrink: 0; width: 80%; height: 12%; justify-content: center; align-items: center;" id="Layoutresumenrevisarnoticias">
    <label style="width: 20%; flex-shrink: 0; flex-grow: 0;" id="Labelresumenrevisarnoticias">Resumen</label>

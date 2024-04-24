@@ -15,18 +15,24 @@ public class Revisar_noticias extends vistas.VistaRevisarnoticias {
 //	private Label _lugar;
 //	private TextArea _resumen;
 	public Noticias_a_revisar_item _noticias_a_revisar;
+	basededatos.Noticia noticia;
 	
-	public Revisar_noticias(Noticias_a_revisar_item _noticias_a_revisar) {
+	public Revisar_noticias(Noticias_a_revisar_item _noticias_a_revisar, basededatos.Noticia noticia) {
 		super();
 		this._noticias_a_revisar = _noticias_a_revisar;
-		this.getTextfieldtitulonoticiarevisarnoticias().setValue(_noticias_a_revisar.getLayouttituloitemnoticiasarevisar().getText());
-		this.getTextfieldurlimagenesrevisarnoticias().setValue(_noticias_a_revisar.getLayouturlitemnoticiasarevisar().getText());
-		this.getTextareacontenidonoticiarevisarnoticias().setValue(_noticias_a_revisar.getLayoutcontenidoitemnoticiasarevisar().getText());
-		this.getTextfieldfecharevisarnoticias().setValue(_noticias_a_revisar.getLayoutfechaitemnoticiasarevisar().getText());
-		this.getTextfieldlugarrevisarnoticias().setValue(_noticias_a_revisar.getLayoutlugaritemnoticiasarevisar().getText());
-		this.getTextfieldtematicarevisarnoticias().setValue(_noticias_a_revisar.getLayouttematicaitemnoticiasarevisar().getText());
+		this.getTextfieldtitulonoticiarevisarnoticias().setValue(_noticias_a_revisar.getItemnoticiasarevisar().getText());
+		
 		this.getEliminarrevisarnoticia().addClickListener(event->Eliminar_noticia());
 		this.getPublicarrevisarnoticia().addClickListener(event->Publicar_noticia());
+		
+		this.noticia = noticia;
+	    this.getTextfieldtitulonoticiarevisarnoticias().setValue(noticia.getTitulo());
+	    this.getTextfieldurlimagenesrevisarnoticias().setValue(noticia.getUrl_imagen_noticia());
+	    this.getTextareacontenidonoticiarevisarnoticias().setValue(noticia.getContenido());
+	    this.getTextfieldfecharevisarnoticias().setValue(noticia.getFecha());
+	    this.getTextfieldfecharevisarnoticias().setValue(noticia.getLugar());
+	    //this.getTextfieldtematicarevisarnoticias().setValue(noticia.getTematica);
+	    
 	}
 
 	public void Eliminar_noticia() {

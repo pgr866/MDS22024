@@ -16,8 +16,8 @@ public class Pagina_noticia_Identificado extends Pagina_Noticia {
 	public Pagina_noticia_Identificado(Listado_noticias_portada_Identificado_item _listado_noticias_portada_Identificado,
 			Listado_noticias_busqueda_Identificado_item _listado_noticias_busqueda_Identificado,
 			Noticias_en_seccion_Identificado_item _noticias_en_seccion_Identificado,
-			Mostrar_mis_noticias_item _mostrar_mis_noticias) {
-		super();
+			Mostrar_mis_noticias_item _mostrar_mis_noticias, basededatos.Noticia noticia) {
+		super(noticia);
 		this._listado_noticias_portada_Identificado = _listado_noticias_portada_Identificado;
 		this._listado_noticias_busqueda_Identificado = _listado_noticias_busqueda_Identificado;
 		this._noticias_en_seccion_Identificado =_noticias_en_seccion_Identificado;
