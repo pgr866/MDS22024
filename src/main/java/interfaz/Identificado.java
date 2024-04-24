@@ -15,9 +15,10 @@ public class Identificado extends VistaIdentificado {
 	public Explorar_secciones_Identificado _explorar_secciones_Identificado;
 	public Log_out _log_out;
 	public Configurar_perfil _configurar_perfil;
+	basededatos.Identificado identificado;
 	
 	public MainView mainview;
-	public Identificado(MainView mainview) {
+	public Identificado(MainView mainview, basededatos.Identificado identificado) {
 		this.mainview = mainview;
 		this._listado_noticias_portada_Identificado = new Listado_noticias_portada_Identificado(this);
 		this._buscar_Identificado = new Buscar_Identificado(this);
@@ -32,6 +33,7 @@ public class Identificado extends VistaIdentificado {
 			this.mainview.removeAll();
 			this.mainview.add(this.mainview._usuario_no_registrado);
 		});
+		this.identificado = identificado;
 	}
 
 	public void Listado_noticias_portada_Identificado() {

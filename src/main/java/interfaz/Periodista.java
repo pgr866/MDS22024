@@ -11,8 +11,8 @@ public class Periodista extends Identificado {
 	public Crear_noticias _crear_noticias;
 	public Mostrar_mis_noticias _mostrar_mis_noticias;
 	
-	public Periodista (MainView mainview) {
-		super(mainview);
+	public Periodista (MainView mainview, basededatos.Periodista periodista) {
+		super(mainview, periodista);
 		this.getLayoutvistanoticiasarevisaridentificado().setVisible(false);
 		this.getLayoutdaraltabajaperiodistaidentificado().setVisible(false);
 		this._mostrar_mis_noticias = new Mostrar_mis_noticias(this);

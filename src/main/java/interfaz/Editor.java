@@ -14,8 +14,8 @@ public class Editor extends Identificado {
 	public Baja_Alta_Periodistas _baja_Alta_Periodistas;
 	public Explorar_secciones_Editor _explorar_secciones_Editor;
 	
-	public Editor (MainView mainview) {
-		super(mainview);
+	public Editor (MainView mainview, basededatos.Editor editor) {
+		super(mainview, editor);
 		this.getLayoutvermisnoticiasidentificado().setVisible(false);
 		this.getLayoutcrearnuevanoticiaidentificado().setVisible(false);
 		this._listado_noticias_portada_Editor = new Listado_noticias_portada_Editor(this);
