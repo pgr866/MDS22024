@@ -24,22 +24,6 @@ public class VistaIniciarsesion extends LitTemplate {
 		this.layoutlogin = layoutlogin;
 	}
 
-	public Button getButtonlogologin() {
-		return buttonlogologin;
-	}
-
-	public void setButtonlogologin(Button buttonlogologin) {
-		this.buttonlogologin = buttonlogologin;
-	}
-
-	public Image getImagenlogologin() {
-		return imagenlogologin;
-	}
-
-	public void setImagenlogologin(Image imagenlogologin) {
-		this.imagenlogologin = imagenlogologin;
-	}
-
 	public Label getLabellogin() {
 		return labellogin;
 	}
@@ -138,10 +122,6 @@ public class VistaIniciarsesion extends LitTemplate {
 
 	@Id("Layoutlogin")
 	private HorizontalLayout layoutlogin;
-	@Id("Buttonlogologin")
-	private Button buttonlogologin;
-	@Id("Imagenlogologin")
-	private Image imagenlogologin;
 	@Id("Labellogin")
 	private Label labellogin;
 	@Id("Layoutusuariologin")

@@ -24,7 +24,7 @@ export class VistaUsuarionoregistrado extends LitElement {
    </vaadin-button>
   </vaadin-vertical-layout>
   <vaadin-vertical-layout style="flex-shrink: 1; width: 72%;">
-   <vaadin-horizontal-layout style="width: 100%; height: 50%; flex-shrink: 0;" id="Barrabusquedanoregistrado"></vaadin-horizontal-layout>
+   <vaadin-horizontal-layout style="width: 100%; height: 50%; flex-shrink: 0; align-self: stretch; justify-content: center;" id="Barrabusquedanoregistrado"></vaadin-horizontal-layout>
    <vaadin-horizontal-layout style="width: 100%; height: 50%; flex-shrink: 0; justify-content: space-between;" id="Layoutexplorarseccionesnoregistrado">
     <vaadin-button style="width: 100%; height: 100%; flex-shrink: 0;" id="Explorarseccionesnoregistrado">
       Explorar secciones 
@@ -37,10 +37,10 @@ export class VistaUsuarionoregistrado extends LitElement {
    </vaadin-button>
   </vaadin-vertical-layout>
  </vaadin-horizontal-layout>
- <vaadin-horizontal-layout style="width: 100%; justify-content: space-between; flex-shrink: 0; flex-grow: 1; padding-top: var(--lumo-space-s);">
-  <vaadin-vertical-layout style="width: 15%; flex-shrink: 0; flex-grow: 0; height: 100%;" id="Layoutanuncioizquierdausuarionoregistrado"></vaadin-vertical-layout>
-  <vaadin-vertical-layout style="width: 70%; flex-grow: 0; flex-shrink: 0; flex-direction: row; align-content: space-between; flex-wrap: wrap;" id="Layoutnoticiasportadausuarionoregistrado"></vaadin-vertical-layout>
-  <vaadin-vertical-layout style="width: 15%; flex-shrink: 0;" id="Layoutanuncioderechausuarionoregistrado"></vaadin-vertical-layout>
+ <vaadin-horizontal-layout style="width: 100%; justify-content: space-around; flex-shrink: 0; flex-grow: 1; padding-top: var(--lumo-space-s);">
+  <vaadin-vertical-layout style="width: 15%; flex-shrink: 1; flex-grow: 0;" id="Layoutanuncioizquierdausuarionoregistrado"></vaadin-vertical-layout>
+  <vaadin-vertical-layout style="width: 70%; flex-grow: 0; flex-shrink: 1; flex-wrap: wrap;" id="Layoutnoticiasportadausuarionoregistrado"></vaadin-vertical-layout>
+  <vaadin-vertical-layout style="width: 15%; flex-shrink: 1;" id="Layoutanuncioderechausuarionoregistrado"></vaadin-vertical-layout>
  </vaadin-horizontal-layout>
 </vaadin-vertical-layout>
 `;

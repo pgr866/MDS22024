@@ -24,22 +24,6 @@ public class VistaRegistrarse extends LitTemplate {
 		this.layoutregistrarse = layoutregistrarse;
 	}
 
-	public Button getLogoregistrarse() {
-		return logoregistrarse;
-	}
-
-	public void setLogoregistrarse(Button logoregistrarse) {
-		this.logoregistrarse = logoregistrarse;
-	}
-
-	public Image getImagenlogoregistrarse() {
-		return imagenlogoregistrarse;
-	}
-
-	public void setImagenlogoregistrarse(Image imagenlogoregistrarse) {
-		this.imagenlogoregistrarse = imagenlogoregistrarse;
-	}
-
 	public Label getLabelregistrarse() {
 		return labelregistrarse;
 	}
@@ -290,10 +274,6 @@ public class VistaRegistrarse extends LitTemplate {
 
 	@Id("Layoutregistrarse")
 	private HorizontalLayout layoutregistrarse;
-	@Id("Logoregistrarse")
-	private Button logoregistrarse;
-	@Id("Imagenlogoregistrarse")
-	private Image imagenlogoregistrarse;
 	@Id("Labelregistrarse")
 	private Label labelregistrarse;
 	@Id("Layoutemailregistrarse")
