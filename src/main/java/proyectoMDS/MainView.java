@@ -50,6 +50,7 @@ public class MainView extends VerticalLayout {
     public MainView(){
         
         this._usuario_no_registrado = new Usuario_no_Registrado(this);
+        this.add(_usuario_no_registrado);
     	
 //		this.getBotonlogin().addClickListener(event->
 //		{

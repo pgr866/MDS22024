@@ -29,7 +29,7 @@ public class Identificado extends VistaIdentificado {
 		this.getConfigurarperfilidentificado().addClickListener(event->Configurar_perfil());
 		this._log_out.getButtonlogout().addClickListener(event->
 		{
-			this.mainview.remove(this);
+			this.mainview.removeAll();
 			this.mainview.add(this.mainview._usuario_no_registrado);
 		});
 	}

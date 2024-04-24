@@ -15,112 +15,72 @@ import vistas.VistaMostrarpublicidad;
 @JsModule("./src/vista-usuarionoregistrado.ts")
 public class VistaUsuarionoregistrado extends LitTemplate {
 
-	public Element getLayoutanuncioderechausuarionoregistrado() {
-		return layoutanuncioderechausuarionoregistrado;
-	}
-
-	public void setLayoutanuncioderechausuarionoregistrado(Element layoutanuncioderechausuarionoregistrado) {
-		this.layoutanuncioderechausuarionoregistrado = layoutanuncioderechausuarionoregistrado;
-	}
-
-	public Element getLayoutnoticiasportadausuarionoregistrado() {
-		return layoutnoticiasportadausuarionoregistrado;
-	}
-
-	public void setLayoutnoticiasportadausuarionoregistrado(Element layoutnoticiasportadausuarionoregistrado) {
-		this.layoutnoticiasportadausuarionoregistrado = layoutnoticiasportadausuarionoregistrado;
-	}
-
-	public Element getLayoutanuncioizquierdausuarionoregistrado() {
-		return layoutanuncioizquierdausuarionoregistrado;
-	}
-
-	public void setLayoutanuncioizquierdausuarionoregistrado(Element layoutanuncioizquierdausuarionoregistrado) {
-		this.layoutanuncioizquierdausuarionoregistrado = layoutanuncioizquierdausuarionoregistrado;
-	}
-
-	public Element getLayoutligonoregistrado() {
-		return layoutligonoregistrado;
-	}
-
-	public void setLayoutligonoregistrado(Element layoutligonoregistrado) {
-		this.layoutligonoregistrado = layoutligonoregistrado;
-	}
-
 	public Button getLogonoregistrado() {
 		return logonoregistrado;
 	}
-
 	public void setLogonoregistrado(Button logonoregistrado) {
 		this.logonoregistrado = logonoregistrado;
 	}
-
 	public Image getFotologonoregistrado() {
 		return fotologonoregistrado;
 	}
-
 	public void setFotologonoregistrado(Image fotologonoregistrado) {
 		this.fotologonoregistrado = fotologonoregistrado;
 	}
-
 	public HorizontalLayout getBarrabusquedanoregistrado() {
 		return barrabusquedanoregistrado;
 	}
-
 	public void setBarrabusquedanoregistrado(HorizontalLayout barrabusquedanoregistrado) {
 		this.barrabusquedanoregistrado = barrabusquedanoregistrado;
 	}
-
 	public HorizontalLayout getLayoutexplorarseccionesnoregistrado() {
 		return layoutexplorarseccionesnoregistrado;
 	}
-
 	public void setLayoutexplorarseccionesnoregistrado(HorizontalLayout layoutexplorarseccionesnoregistrado) {
 		this.layoutexplorarseccionesnoregistrado = layoutexplorarseccionesnoregistrado;
 	}
-
 	public Button getExplorarseccionesnoregistrado() {
 		return explorarseccionesnoregistrado;
 	}
-
 	public void setExplorarseccionesnoregistrado(Button explorarseccionesnoregistrado) {
 		this.explorarseccionesnoregistrado = explorarseccionesnoregistrado;
 	}
-
 	public Element getLayoutiniciarsesion() {
 		return layoutiniciarsesion;
 	}
-
 	public void setLayoutiniciarsesion(Element layoutiniciarsesion) {
 		this.layoutiniciarsesion = layoutiniciarsesion;
 	}
-
 	public Button getIniciarsesion() {
 		return iniciarsesion;
 	}
-
 	public void setIniciarsesion(Button iniciarsesion) {
 		this.iniciarsesion = iniciarsesion;
 	}
-
-	public Element getLayoutnoticiasportadanoregistrado() {
-		return layoutnoticiasportadanoregistrado;
+	public Element getLayoutanuncioderechausuarionoregistrado() {
+		return layoutanuncioderechausuarionoregistrado;
 	}
-
-	public void setLayoutnoticiasportadanoregistrado(Element layoutnoticiasportadanoregistrado) {
-		this.layoutnoticiasportadanoregistrado = layoutnoticiasportadanoregistrado;
+	public void setLayoutanuncioderechausuarionoregistrado(Element layoutanuncioderechausuarionoregistrado) {
+		this.layoutanuncioderechausuarionoregistrado = layoutanuncioderechausuarionoregistrado;
 	}
-
-	public Element getLayoutanuncioderecha() {
-		return layoutanuncioderecha;
+	public Element getLayoutanuncioizquierdausuarionoregistrado() {
+		return layoutanuncioizquierdausuarionoregistrado;
 	}
-
-	public void setLayoutanuncioderecha(Element layoutanuncioderecha) {
-		this.layoutanuncioderecha = layoutanuncioderecha;
+	public void setLayoutanuncioizquierdausuarionoregistrado(Element layoutanuncioizquierdausuarionoregistrado) {
+		this.layoutanuncioizquierdausuarionoregistrado = layoutanuncioizquierdausuarionoregistrado;
 	}
-
-	@Id("Layoutligonoregistrado")
-	private Element layoutligonoregistrado;
+	public Element getLayoutnoticiasportadausuarionoregistrado() {
+		return layoutnoticiasportadausuarionoregistrado;
+	}
+	public void setLayoutnoticiasportadausuarionoregistrado(Element layoutnoticiasportadausuarionoregistrado) {
+		this.layoutnoticiasportadausuarionoregistrado = layoutnoticiasportadausuarionoregistrado;
+	}
+	public Element getLayoutlogonoregistrado() {
+		return layoutlogonoregistrado;
+	}
+	public void setLayoutlogonoregistrado(Element layoutlogonoregistrado) {
+		this.layoutlogonoregistrado = layoutlogonoregistrado;
+	}
 	@Id("Logonoregistrado")
 	private Button logonoregistrado;
 	@Id("Fotologonoregistrado")
@@ -135,16 +95,14 @@ public class VistaUsuarionoregistrado extends LitTemplate {
 	private Element layoutiniciarsesion;
 	@Id("Iniciarsesion")
 	private Button iniciarsesion;
-	@Id("Layoutnoticiasportadanoregistrado")
-	private Element layoutnoticiasportadanoregistrado;
-	@Id("Layoutanuncioderecha")
-	private Element layoutanuncioderecha;
 	@Id("Layoutanuncioderechausuarionoregistrado")
 	private Element layoutanuncioderechausuarionoregistrado;
-	@Id("Layoutnoticiasportadausuarionoregistrado")
-	private Element layoutnoticiasportadausuarionoregistrado;
 	@Id("Layoutanuncioizquierdausuarionoregistrado")
 	private Element layoutanuncioizquierdausuarionoregistrado;
+	@Id("Layoutnoticiasportadausuarionoregistrado")
+	private Element layoutnoticiasportadausuarionoregistrado;
+	@Id("Layoutlogonoregistrado")
+	private Element layoutlogonoregistrado;
 	public VistaUsuarionoregistrado() {
         // You can initialise any data required for the connected UI components here.
     }

@@ -25,7 +25,7 @@ public class Iniciar_Sesion extends VistaIniciarsesion {
 			if (this.getTextfieldusuariologin().getValue().equals("Usuario")) {
 				this._usuario_no_Registrado.mainview.removeAll();
 				Identificado identificado = new Identificado(this._usuario_no_Registrado.mainview);
-				this._usuario_no_Registrado.mainview.add(identificado.mainview);
+				this._usuario_no_Registrado.mainview.add(identificado);
 			}
 	}
 

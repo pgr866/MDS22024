@@ -18,7 +18,7 @@ export class VistaUsuarionoregistrado extends LitElement {
     return html`
 <vaadin-vertical-layout style="width: 100%; height: 100%; padding-bottom: var(--lumo-space-s); position: absolute;">
  <vaadin-horizontal-layout class="header" style="background-color: #EBEBEB; width: 100%; flex-shrink: 0; padding-top: var(--lumo-space-s); padding-right: var(--lumo-space-m); padding-left: var(--lumo-space-m); padding-bottom: var(--lumo-space-s); flex-grow: 0; justify-content: space-between; height: 15%;">
-  <vaadin-vertical-layout style="width: 12%; height: 100%; flex-shrink: 0;" id="Layoutligonoregistrado">
+  <vaadin-vertical-layout style="width: 12%; height: 100%; flex-shrink: 0;" id="Layoutlogonoregistrado">
    <vaadin-button theme="icon" ; style="height: 100%; width: 100%; flex-shrink: 1; background-color: #EBEBEB;" id="Logonoregistrado">
     <img src="../../src/main/resources/META-INF/resources/images/logo.svg" width="" alt="logo" style="width: 100%; height: 100%;" id="Fotologonoregistrado">
    </vaadin-button>
