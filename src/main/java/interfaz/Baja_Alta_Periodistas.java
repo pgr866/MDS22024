@@ -44,14 +44,16 @@ public class Baja_Alta_Periodistas extends vistas.VistaBajaaltaperiodistas {
 		String dni = this.getTextfielddnidaraltaperiodista().getValue();
 		String email = this.getTextfieldemaildaraltaperiodista().getValue();
 		String telefono = this.getTextfieldtelefonodaraltaperiodista().getValue();
+		String contrasena = this.getTextfieldcontrasenadaraltaperiodista().getValue();
+		String fecha_nacimiento = this.getTextfieldfechanacimientodaraltaperiodista().getValue();
 		// crear periodista BD
-		Lista_periodistas_item nuevo_periodista = new Lista_periodistas_item(this._buscar_periodista._lista_periodistas);
-		nuevo_periodista.getLayoutlistaperiodistaitem().setText(nombre);
-		this._buscar_periodista._lista_periodistas._item.add(nuevo_periodista);
-		ArrayList<String> items = new ArrayList<String>();
-		for (Lista_periodistas_item periodista : this._buscar_periodista._lista_periodistas._item)
-			items.add(periodista.getLayoutlistaperiodistaitem().getText());
-		this._buscar_periodista._lista_periodistas.getComboboxlistaperiodistas().setItems(items);
+//		Lista_periodistas_item nuevo_periodista = new Lista_periodistas_item(this._buscar_periodista._lista_periodistas);
+//		nuevo_periodista.getLayoutlistaperiodistaitem().setText(nombre);
+//		this._buscar_periodista._lista_periodistas._item.add(nuevo_periodista);
+//		ArrayList<String> items = new ArrayList<String>();
+//		for (Lista_periodistas_item periodista : this._buscar_periodista._lista_periodistas._item)
+//			items.add(periodista.getLayoutlistaperiodistaitem().getText());
+//		this._buscar_periodista._lista_periodistas.getComboboxlistaperiodistas().setItems(items);
 		this._editor.Baja_Alta_Periodistas(); // Refrescar pagina
 	}
 }

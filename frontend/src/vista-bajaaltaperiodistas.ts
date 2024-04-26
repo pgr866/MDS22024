@@ -38,6 +38,12 @@ export class VistaBajaaltaperiodistas extends LitElement {
    <label style="width: 20%; height: 100%; text-align: center; flex-shrink: 0; font-size: 120%;" id="Labeltelefonodaraltaperiodista">Telefono</label>
    <vaadin-text-field placeholder="Telefono" style="flex-shrink: 0; align-self: center;" id="Textfieldtelefonodaraltaperiodista"></vaadin-text-field>
   </vaadin-horizontal-layout>
+  <vaadin-horizontal-layout style="width: 58%; height: 10%; justify-content: space-between; align-self: center; flex-shrink: 0;" id="contrasenafehcanacimientodaraltaperiodista">
+   <label style="width: 20%; height: 100%; text-align: center; flex-shrink: 0; font-size: 120%;" id="Labelcontrasenadaraltaperiodista">Contraseña</label>
+   <vaadin-text-field placeholder="Contraseña" style="flex-shrink: 0; align-self: center;" id="Textfieldcontrasenadaraltaperiodista"></vaadin-text-field>
+   <label style="width: 20%; height: 100%; text-align: center; flex-shrink: 0; font-size: 110%;" id="Labelfechanacimientodaraltaperiodista">Fecha nacimiento</label>
+   <vaadin-text-field placeholder="Fecha nacimiento" style="flex-shrink: 0; align-self: center;" id="Textfieldfechanacimientodaraltaperiodista"></vaadin-text-field>
+  </vaadin-horizontal-layout>
   <vaadin-horizontal-layout style="width: 30%; height: 10%; justify-content: space-between; flex-shrink: 0; align-self: center;" id="Layoutbotondaraltaperiodista">
    <vaadin-button style="width: 100%; height: 100%; flex-shrink: 0; align-self: center;" id="Buttondaraltaperiodista">
      Dar de alta 

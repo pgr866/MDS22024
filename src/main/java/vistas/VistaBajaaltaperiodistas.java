@@ -15,7 +15,47 @@ import vistas.VistaBuscarperiodista;
 @JsModule("./src/vista-bajaaltaperiodistas.ts")
 public class VistaBajaaltaperiodistas extends LitTemplate {
 
-    public Element getLayoutbuscarperiodistabajaaltaperiodistas() {
+    public HorizontalLayout getContrasenafehcanacimientodaraltaperiodista() {
+		return contrasenafehcanacimientodaraltaperiodista;
+	}
+
+	public void setContrasenafehcanacimientodaraltaperiodista(HorizontalLayout contrasenafehcanacimientodaraltaperiodista) {
+		this.contrasenafehcanacimientodaraltaperiodista = contrasenafehcanacimientodaraltaperiodista;
+	}
+
+	public Label getLabelcontrasenadaraltaperiodista() {
+		return labelcontrasenadaraltaperiodista;
+	}
+
+	public void setLabelcontrasenadaraltaperiodista(Label labelcontrasenadaraltaperiodista) {
+		this.labelcontrasenadaraltaperiodista = labelcontrasenadaraltaperiodista;
+	}
+
+	public Label getLabelfechanacimientodaraltaperiodista() {
+		return labelfechanacimientodaraltaperiodista;
+	}
+
+	public void setLabelfechanacimientodaraltaperiodista(Label labelfechanacimientodaraltaperiodista) {
+		this.labelfechanacimientodaraltaperiodista = labelfechanacimientodaraltaperiodista;
+	}
+
+	public TextField getTextfieldcontrasenadaraltaperiodista() {
+		return textfieldcontrasenadaraltaperiodista;
+	}
+
+	public void setTextfieldcontrasenadaraltaperiodista(TextField textfieldcontrasenadaraltaperiodista) {
+		this.textfieldcontrasenadaraltaperiodista = textfieldcontrasenadaraltaperiodista;
+	}
+
+	public TextField getTextfieldfechanacimientodaraltaperiodista() {
+		return textfieldfechanacimientodaraltaperiodista;
+	}
+
+	public void setTextfieldfechanacimientodaraltaperiodista(TextField textfieldfechanacimientodaraltaperiodista) {
+		this.textfieldfechanacimientodaraltaperiodista = textfieldfechanacimientodaraltaperiodista;
+	}
+
+	public Element getLayoutbuscarperiodistabajaaltaperiodistas() {
 		return layoutbuscarperiodistabajaaltaperiodistas;
 	}
 
@@ -245,6 +285,16 @@ public class VistaBajaaltaperiodistas extends LitTemplate {
 	private Button buttondarbajaperiodista;
 	@Id("Layoutbuscarperiodistabajaaltaperiodistas")
 	private Element layoutbuscarperiodistabajaaltaperiodistas;
+	@Id("contrasenafehcanacimientodaraltaperiodista")
+	private HorizontalLayout contrasenafehcanacimientodaraltaperiodista;
+	@Id("Labelcontrasenadaraltaperiodista")
+	private Label labelcontrasenadaraltaperiodista;
+	@Id("Labelfechanacimientodaraltaperiodista")
+	private Label labelfechanacimientodaraltaperiodista;
+	@Id("Textfieldcontrasenadaraltaperiodista")
+	private TextField textfieldcontrasenadaraltaperiodista;
+	@Id("Textfieldfechanacimientodaraltaperiodista")
+	private TextField textfieldfechanacimientodaraltaperiodista;
 
 	public VistaBajaaltaperiodistas() {
         // You can initialise any data required for the connected UI components here.

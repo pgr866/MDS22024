@@ -34,16 +34,9 @@ public class Crear_noticias extends vistas.VistaCrearnoticias {
 		String fecha = this.getTextfieldfechacrearnoticias().getValue();
 		String lugar = this.getTextfiedlugarcrearnoticias().getValue();
 		String tematica = this.getTextfieldtematicacrearnoticias().getValue();
+		// crear tematica BD si no existe
+		// crear tematica_noticia BD
 		// crear noticia a revisar BD
-		Noticias_a_revisar_item nueva_noticia = new Noticias_a_revisar_item(this._periodista.mainview._editor._noticias_a_revisar);
-		nueva_noticia.getLayouttituloitemnoticiasarevisar().setText(titulo);
-		nueva_noticia.getLayouturlitemnoticiasarevisar().setText(url);
-		nueva_noticia.getLayoutcontenidoitemnoticiasarevisar().setText(contenido);
-		nueva_noticia.getLayoutfechaitemnoticiasarevisar().setText(fecha);
-		nueva_noticia.getLayoutlugaritemnoticiasarevisar().setText(lugar);
-		nueva_noticia.getLayouttematicaitemnoticiasarevisar().setText(tematica);
-		this._periodista.mainview._editor._noticias_a_revisar._item.add(nueva_noticia);
-		this._periodista.mainview._editor._noticias_a_revisar.getListboxnoticiasarevisar().as(MultiSelectListBox.class).add(nueva_noticia);
 		this._periodista.Crear_noticias(); // Refrescar pagina
 	}
 }

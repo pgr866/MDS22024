@@ -31,13 +31,12 @@ public class Revisar_noticias extends vistas.VistaRevisarnoticias {
 	    this.getTextareacontenidonoticiarevisarnoticias().setValue(noticia.getContenido());
 	    this.getTextfieldfecharevisarnoticias().setValue(noticia.getFecha());
 	    this.getTextfieldfecharevisarnoticias().setValue(noticia.getLugar());
-	    //this.getTextfieldtematicarevisarnoticias().setValue(noticia.getTematica);
-	    
+	    // crear 
 	}
 
 	public void Eliminar_noticia() {
 		String titulo = this.getTextfieldtitulonoticiarevisarnoticias().getValue();
-		// eliminar noticia a revisar BD
+		// eliminar noticia BD
 		this._noticias_a_revisar._noticias_a_revisar.getListboxnoticiasarevisar().as(MultiSelectListBox.class).remove(this._noticias_a_revisar);
 		this._noticias_a_revisar._noticias_a_revisar._item.remove(this._noticias_a_revisar);
 		this._noticias_a_revisar._noticias_a_revisar._editor.Listado_noticias_portada_Editor(); // Refrescar pagina

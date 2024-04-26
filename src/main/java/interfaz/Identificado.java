@@ -56,7 +56,7 @@ public class Identificado extends VistaIdentificado {
 
 	public void Configurar_perfil() {
 		this.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).removeAll();
-		_configurar_perfil = new Configurar_perfil(this);
+		_configurar_perfil = new Configurar_perfil(this, identificado);
 		this.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).add(_configurar_perfil);
 	}
 }

@@ -16,6 +16,30 @@ import com.vaadin.flow.component.textfield.PasswordField;
 @JsModule("./src/vista-configurarperfil.ts")
 public class VistaConfigurarperfil extends LitTemplate {
 
+	public HorizontalLayout getLayouturlimagenconfigurarperfil() {
+		return layouturlimagenconfigurarperfil;
+	}
+
+	public void setLayouturlimagenconfigurarperfil(HorizontalLayout layouturlimagenconfigurarperfil) {
+		this.layouturlimagenconfigurarperfil = layouturlimagenconfigurarperfil;
+	}
+
+	public Label getLabelurlimagenconfigurarperfil() {
+		return labelurlimagenconfigurarperfil;
+	}
+
+	public void setLabelurlimagenconfigurarperfil(Label labelurlimagenconfigurarperfil) {
+		this.labelurlimagenconfigurarperfil = labelurlimagenconfigurarperfil;
+	}
+
+	public TextField getTextfieldurlimagenconfigurarperfil() {
+		return textfieldurlimagenconfigurarperfil;
+	}
+
+	public void setTextfieldurlimagenconfigurarperfil(TextField textfieldurlimagenconfigurarperfil) {
+		this.textfieldurlimagenconfigurarperfil = textfieldurlimagenconfigurarperfil;
+	}
+
 	public TextField getTextfieldapellidosconfigurarperfil() {
 		return textfieldapellidosconfigurarperfil;
 	}
@@ -46,14 +70,6 @@ public class VistaConfigurarperfil extends LitTemplate {
 
 	public void setLayoutconfigurarperfil(Element layoutconfigurarperfil) {
 		this.layoutconfigurarperfil = layoutconfigurarperfil;
-	}
-
-	public Button getButtonFotoconfigurarperfil() {
-		return buttonFotoconfigurarperfil;
-	}
-
-	public void setButtonFotoconfigurarperfil(Button buttonFotoconfigurarperfil) {
-		this.buttonFotoconfigurarperfil = buttonFotoconfigurarperfil;
 	}
 
 	public Image getFotoconfigurarperfil() {
@@ -210,8 +226,6 @@ public class VistaConfigurarperfil extends LitTemplate {
 
 	@Id("Layoutconfigurarperfil")
 	private Element layoutconfigurarperfil;
-	@Id("ButtonFotoconfigurarperfil")
-	private Button buttonFotoconfigurarperfil;
 	@Id("Fotoconfigurarperfil")
 	private Image fotoconfigurarperfil;
 	@Id("Layoutapodoconfigurarperfil")
@@ -256,6 +270,12 @@ public class VistaConfigurarperfil extends LitTemplate {
 	private Label labelapellidosconfigurarperfil;
 	@Id("Textfieldapellidosconfigurarperfil")
 	private TextField textfieldapellidosconfigurarperfil;
+	@Id("Layouturlimagenconfigurarperfil")
+	private HorizontalLayout layouturlimagenconfigurarperfil;
+	@Id("Labelurlimagenconfigurarperfil")
+	private Label labelurlimagenconfigurarperfil;
+	@Id("Textfieldurlimagenconfigurarperfil")
+	private TextField textfieldurlimagenconfigurarperfil;
 
 	public VistaConfigurarperfil() {
         // You can initialise any data required for the connected UI components here.

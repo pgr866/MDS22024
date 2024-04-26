@@ -2,6 +2,7 @@ package interfaz;
 
 import java.util.Vector;
 
+import com.vaadin.flow.component.listbox.MultiSelectListBox;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 import vistas.VistaNoticiasarevisar;
