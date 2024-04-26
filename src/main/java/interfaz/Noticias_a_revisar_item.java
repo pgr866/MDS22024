@@ -18,7 +18,8 @@ public class Noticias_a_revisar_item extends VistaNoticiasarevisar_item {
 		if(this.getItemnoticiasarevisar().getText() == (String) this._noticias_a_revisar.getSelectnoticiasarevisar().getValue()) {
 			this._noticias_a_revisar._editor.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).removeAll();
 			// crear noticia BD con Publicada 0 y Resumen vacio
-			_revisar_noticias = new Revisar_noticias(this, noticia);
+			basededatos.Noticia n = new basededatos.Noticia();
+			_revisar_noticias = new Revisar_noticias(this, n);
 			this._noticias_a_revisar._editor.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).add(_revisar_noticias);
 		}
 	}

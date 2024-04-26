@@ -25,12 +25,6 @@ public class Explorar_secciones_Editor extends Explorar_secciones_Identificado {
 	public void Borrar_seccion() {
 		String nombre_seccion = (String) this._secciones.getDesplegablesecciones().getValue();
 		// eliminar seccion BD
-//		for (Secciones_item seccion : this._secciones._item) {
-//			if (seccion.getItemsecciones().getText() == nombre_seccion) {
-//				this._secciones.getListboxsecciones().as(MultiSelectListBox.class).remove(seccion);
-//				this._secciones._item.remove(seccion);
-//			}
-//		}
 		this._editor.Explorar_secciones_Editor(); // Refrescar pagina
 	}
 }
