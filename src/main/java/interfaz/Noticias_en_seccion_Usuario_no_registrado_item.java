@@ -13,16 +13,27 @@ public class Noticias_en_seccion_Usuario_no_registrado_item extends VistaNoticia
 //	private Image _imagen_noticia;
 	public Noticias_en_seccion_Usuario_no_registrado _noticias_en_seccion_Usuario_no_registrado;
 	public Pagina_noticia_Usuario_no_registrado _pagina_noticia_Usuario_no_registrado;
+	basededatos.Noticia noticia;
 
 	public Noticias_en_seccion_Usuario_no_registrado_item(
-			Noticias_en_seccion_Usuario_no_registrado _noticias_en_seccion_Usuario_no_registrado) {
+			Noticias_en_seccion_Usuario_no_registrado _noticias_en_seccion_Usuario_no_registrado,
+			basededatos.Noticia noticia) {
 		super();
 		this._noticias_en_seccion_Usuario_no_registrado = _noticias_en_seccion_Usuario_no_registrado;
+		this.getTitulonoticiasenseccionusuarionoregistrado().addClickListener(event->Pagina_noticia_Usuario_no_registrado());
+		this.noticia = noticia;
+		this.getTitulonoticiasenseccionusuarionoregistrado().setText(noticia.getTitulo());;
+		this.getImagennoticiasenseccionusuarionoregistrado().setSrc(noticia.getUrl_imagen_noticia());
+		this.getFechanoticiasenseccionusuarionoregistrado().setText(noticia.getFecha());
+		basededatos.Periodista periodista = new basededatos.Periodista();
+		this.getAutornoticiasenseccionusuarionoregistrado().setText(periodista.getNombre() + " " + periodista.getApellidos());
+		this.getLugarnoticiasenseccionusuarionoregistrado().setText(noticia.getLugar());
+		this.getContenidonoticiasenseccionusuarionoregistrado().setValue(noticia.getResumen());;
 	}
 
 	public void Pagina_noticia_Usuario_no_registrado() {
 		this._noticias_en_seccion_Usuario_no_registrado._explorar_secciones_Usuario_no_registrado._usuario_no_Registrado.getLayoutnoticiasportadausuarionoregistrado().as(VerticalLayout.class).removeAll();
-		this._pagina_noticia_Usuario_no_registrado = new Pagina_noticia_Usuario_no_registrado(null, null, this);
+		this._pagina_noticia_Usuario_no_registrado = new Pagina_noticia_Usuario_no_registrado(this, noticia);
 		this._noticias_en_seccion_Usuario_no_registrado._explorar_secciones_Usuario_no_registrado._usuario_no_Registrado.getLayoutnoticiasportadausuarionoregistrado().as(VerticalLayout.class).add(_pagina_noticia_Usuario_no_registrado);
 	}
 }

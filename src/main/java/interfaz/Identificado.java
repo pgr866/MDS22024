@@ -28,12 +28,8 @@ public class Identificado extends VistaIdentificado {
 		Log_out();
 		this.getExplorarseccionesidentificado().addClickListener(event->Explorar_secciones_Identificado());
 		this.getConfigurarperfilidentificado().addClickListener(event->Configurar_perfil());
-		this._log_out.getButtonlogout().addClickListener(event->
-		{
-			this.mainview.removeAll();
-			this.mainview.add(this.mainview._usuario_no_registrado);
-		});
 		this.identificado = identificado;
+		this.getImagenconfigurarperfilidentificado().setSrc(identificado.getUrl_foto_perfil());
 	}
 
 	public void Listado_noticias_portada_Identificado() {

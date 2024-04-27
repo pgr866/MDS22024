@@ -36,7 +36,7 @@ public class Crear_noticias extends vistas.VistaCrearnoticias {
 		String tematica = this.getTextfieldtematicacrearnoticias().getValue();
 		// crear tematica BD si no existe
 		// crear tematica_noticia BD
-		// crear noticia a revisar BD
+		// crear noticia con Publicada 0 BD
 		this._periodista.Crear_noticias(); // Refrescar pagina
 	}
 }

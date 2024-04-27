@@ -15,23 +15,15 @@ public class Pagina_Noticia extends vistas.VistaPaginanoticia {
 
 	public Pagina_Noticia(basededatos.Noticia noticia) {
 		super();
-		this._mostrar_valoracion_noticia = new Mostrar_valoracion_noticia(this);
+		this._mostrar_valoracion_noticia = new Mostrar_valoracion_noticia(this, this.noticia);
 		Mostrar_valoracion_noticia();
-		
-		this.noticia = noticia;
-	   
-	    String nombre_autor;
-	    try {
-	    	nombre_autor = basededatos.Periodista.getPeriodistaByORMID(noticia.getAutor()).getNombre(); 
-		} catch (PersistentException e) {
-			nombre_autor = "Desconocido";
-		}
-	    
 	    this.getLabeltitulonoticiapaginanoticia().setText(noticia.getTitulo());
-	    //this.getLabeltitulotematicapaginanoticia().setText(noticia.getTematica());
+		basededatos.Tematica tematica = new basededatos.Tematica();
+	    this.getLabeltitulotematicapaginanoticia().setText(tematica.getTitulo_tematica());
 	    this.getImagennoticiapaginanoticia().setSrc(noticia.getUrl_imagen_noticia());
 	    this.getLayoutfechapaginanoticia().setText(noticia.getFecha());
-	    this.getLayoutautorpaginanoticia().setText(nombre_autor);
+	    basededatos.Periodista periodista = new basededatos.Periodista();
+	    this.getLayoutautorpaginanoticia().setText(periodista.getNombre() + " " + periodista.getApellidos());
 	    this.getLayoutlugarpaginanoticia().setText(noticia.getLugar());
 	}
 

@@ -7,5 +7,10 @@ public class Log_out extends vistas.VistaLogout{
 	public Log_out(Identificado _identificado) {
 		super();
 		this._identificado = _identificado;
+		this.getButtonlogout().addClickListener(event->
+		{
+			this._identificado.mainview.removeAll();
+			this._identificado.mainview.add(this._identificado.mainview._usuario_no_registrado);
+		});
 	}
 }

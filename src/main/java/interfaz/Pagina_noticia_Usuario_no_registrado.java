@@ -13,18 +13,39 @@ public class Pagina_noticia_Usuario_no_registrado extends Pagina_Noticia {
 	public Mostrar_noticia_resumida _mostrar_noticia_resumida;
 		
 	public Pagina_noticia_Usuario_no_registrado(Listado_noticias_portada_Usuario_no_registrado_item _listado_noticias_portada_Usuario_no_registrado,
-				Listado_noticias_busqueda_Usuario_no_registrado_item _listado_noticias_busqueda_Usuario_no_registrado,
-				Noticias_en_seccion_Usuario_no_registrado_item _noticias_en_seccion_Usuario_no_registrado, basededatos.Noticia noticia) {
+				basededatos.Noticia noticia) {
 		super(noticia);
 		this._listado_noticias_portada_Usuario_no_registrado = _listado_noticias_portada_Usuario_no_registrado;
-		this._listado_noticias_busqueda_Usuario_no_registrado = _listado_noticias_busqueda_Usuario_no_registrado;
-		this._noticias_en_seccion_Usuario_no_registrado =_noticias_en_seccion_Usuario_no_registrado;
-		this._mostrar_noticia_resumida = new Mostrar_noticia_resumida(this);
+		this._mostrar_noticia_resumida = new Mostrar_noticia_resumida(this, noticia);
 		this._seccion_comentarios_Usuario_no_registrado = new Seccion_comentarios_Usuario_no_registrado(this);
 		Seccion_comentarios_Usuario_no_registrado();
 		Mostrar_noticia_resumida();		
 		this._mostrar_valoracion_noticia.getMegustamostrarvaloracionnoticia().setDisableOnClick(true);
 		this._mostrar_valoracion_noticia.getNomegustamostrarvaloracionnoticia().setDisableOnClick(true);
+	}
+	
+	public Pagina_noticia_Usuario_no_registrado(Listado_noticias_busqueda_Usuario_no_registrado_item _listado_noticias_busqueda_Usuario_no_registrado,
+			basededatos.Noticia noticia) {
+	super(noticia);
+	this._listado_noticias_busqueda_Usuario_no_registrado = _listado_noticias_busqueda_Usuario_no_registrado;
+	this._mostrar_noticia_resumida = new Mostrar_noticia_resumida(this, noticia);
+	this._seccion_comentarios_Usuario_no_registrado = new Seccion_comentarios_Usuario_no_registrado(this);
+	Seccion_comentarios_Usuario_no_registrado();
+	Mostrar_noticia_resumida();		
+	this._mostrar_valoracion_noticia.getMegustamostrarvaloracionnoticia().setDisableOnClick(true);
+	this._mostrar_valoracion_noticia.getNomegustamostrarvaloracionnoticia().setDisableOnClick(true);
+	}
+	
+	public Pagina_noticia_Usuario_no_registrado(Noticias_en_seccion_Usuario_no_registrado_item _noticias_en_seccion_Usuario_no_registrado,
+			basededatos.Noticia noticia) {
+	super(noticia);
+	this._noticias_en_seccion_Usuario_no_registrado =_noticias_en_seccion_Usuario_no_registrado;
+	this._mostrar_noticia_resumida = new Mostrar_noticia_resumida(this, noticia);
+	this._seccion_comentarios_Usuario_no_registrado = new Seccion_comentarios_Usuario_no_registrado(this);
+	Seccion_comentarios_Usuario_no_registrado();
+	Mostrar_noticia_resumida();		
+	this._mostrar_valoracion_noticia.getMegustamostrarvaloracionnoticia().setDisableOnClick(true);
+	this._mostrar_valoracion_noticia.getNomegustamostrarvaloracionnoticia().setDisableOnClick(true);
 	}
 
 	public void Seccion_comentarios_Usuario_no_registrado() {

@@ -47,6 +47,7 @@ public class Baja_Alta_Periodistas extends vistas.VistaBajaaltaperiodistas {
 		String contrasena = this.getTextfieldcontrasenadaraltaperiodista().getValue();
 		String fecha_nacimiento = this.getTextfieldfechanacimientodaraltaperiodista().getValue();
 		// crear periodista BD
+		
 //		Lista_periodistas_item nuevo_periodista = new Lista_periodistas_item(this._buscar_periodista._lista_periodistas);
 //		nuevo_periodista.getLayoutlistaperiodistaitem().setText(nombre);
 //		this._buscar_periodista._lista_periodistas._item.add(nuevo_periodista);

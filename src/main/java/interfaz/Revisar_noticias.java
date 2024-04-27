@@ -31,7 +31,6 @@ public class Revisar_noticias extends vistas.VistaRevisarnoticias {
 	    this.getTextareacontenidonoticiarevisarnoticias().setValue(noticia.getContenido());
 	    this.getTextfieldfecharevisarnoticias().setValue(noticia.getFecha());
 	    this.getTextfieldfecharevisarnoticias().setValue(noticia.getLugar());
-	    // crear 
 	}
 
 	public void Eliminar_noticia() {
@@ -43,7 +42,7 @@ public class Revisar_noticias extends vistas.VistaRevisarnoticias {
 	}
 
 	public void Publicar_noticia() {
-		// crear noticia BD
+		// update noticia Publicada a 1 BD
 	}
 
 }

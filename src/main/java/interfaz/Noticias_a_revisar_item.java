@@ -7,19 +7,20 @@ import vistas.VistaNoticiasarevisar_item;
 public class Noticias_a_revisar_item extends VistaNoticiasarevisar_item {
 	public Noticias_a_revisar _noticias_a_revisar;
 	public Revisar_noticias _revisar_noticias;
+	basededatos.Noticia noticia;
 	
-	public Noticias_a_revisar_item(Noticias_a_revisar _noticias_a_revisar) {
+	public Noticias_a_revisar_item(Noticias_a_revisar _noticias_a_revisar, basededatos.Noticia noticia) {
 		super();
 		this._noticias_a_revisar = _noticias_a_revisar;
 		this._noticias_a_revisar.getSelectnoticiasarevisar().addValueChangeListener(event->Revisar_noticias());
+		this.noticia = noticia;
+		this.getItemnoticiasarevisar().setText(noticia.getTitulo());
 	}
 
 	public void Revisar_noticias() {
 		if(this.getItemnoticiasarevisar().getText() == (String) this._noticias_a_revisar.getSelectnoticiasarevisar().getValue()) {
 			this._noticias_a_revisar._editor.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).removeAll();
-			// crear noticia BD con Publicada 0 y Resumen vacio
-			basededatos.Noticia n = new basededatos.Noticia();
-			_revisar_noticias = new Revisar_noticias(this, n);
+			_revisar_noticias = new Revisar_noticias(this, this.noticia);
 			this._noticias_a_revisar._editor.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).add(_revisar_noticias);
 		}
 	}

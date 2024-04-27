@@ -21,7 +21,7 @@ public class Usuario_Suscrito extends Identificado {
 
 	public void Configurar_perfil_Usuario_suscrito() {
 		this.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).removeAll();
-		_configurar_perfil_Usuario_suscrito = new Configurar_perfil_Usuario_suscrito(this);
+		_configurar_perfil_Usuario_suscrito = new Configurar_perfil_Usuario_suscrito(this, (basededatos.Usuario_suscrito) this.identificado);
 		this.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).add(_configurar_perfil_Usuario_suscrito);
 	}
 }

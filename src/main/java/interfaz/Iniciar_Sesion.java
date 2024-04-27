@@ -2,10 +2,6 @@ package interfaz;
 
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
-import java.util.List;
-
-import org.orm.PersistentException;
-
 import vistas.VistaIniciarsesion;
 
 public class Iniciar_Sesion extends VistaIniciarsesion {
@@ -26,23 +22,24 @@ public class Iniciar_Sesion extends VistaIniciarsesion {
 	}
 
 	public void Entrar() {
-		// comprobar tipo de usuario y credenciales BD
 		String email = this.getTextfieldemaillogin().getValue();
 		String contrasena = this.getPasswordfieldogin().getValue();
+		// comprobar tipo de usuario y credenciales BD
 		
-		String condition = "Email = '" + email + "' AND Contraseña = '" + contrasena + "'";
-		try {
-			basededatos.Identificado result = (basededatos.Identificado) basededatos.Identificado.queryIdentificado(condition, "").get(0);
-			this._usuario_no_Registrado.mainview.removeAll();
-			Identificado identificado = new Identificado(this._usuario_no_Registrado.mainview, result);
-			this._usuario_no_Registrado.mainview.add(identificado);
-		} catch (PersistentException e) {
-			this.getLabelmensajeerrorlogin().setVisible(true);
-		}
+//		String condition = "Email = '" + email + "' AND Contraseña = '" + contrasena + "'";
+//		try {
+//			basededatos.Identificado result = (basededatos.Identificado) basededatos.Identificado.queryIdentificado(condition, "").get(0);
+//			this._usuario_no_Registrado.mainview.removeAll();
+//			Identificado identificado = new Identificado(this._usuario_no_Registrado.mainview, result);
+//			this._usuario_no_Registrado.mainview.add(identificado);
+//		} catch (PersistentException e) {
+//			this.getLabelmensajeerrorlogin().setVisible(true);
+//		}
 	}
 
 	public void Registrarse() {
 		this._usuario_no_Registrado.getLayoutnoticiasportadausuarionoregistrado().as(VerticalLayout.class).removeAll();
 		_registrarse = new Registrarse(this);
-		this._usuario_no_Registrado.getLayoutnoticiasportadausuarionoregistrado().as(VerticalLayout.class).add(_registrarse);	}
+		this._usuario_no_Registrado.getLayoutnoticiasportadausuarionoregistrado().as(VerticalLayout.class).add(_registrarse);
+	}
 }

@@ -1,7 +1,5 @@
 package interfaz;
 
-import com.vaadin.flow.component.orderedlayout.VerticalLayout;
-
 public class Explorar_secciones_Usuario_no_registrado extends Explorar_secciones {
 	
 	//	private Panel _panel_publicidad;

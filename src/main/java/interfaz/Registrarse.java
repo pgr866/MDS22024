@@ -33,13 +33,11 @@ public class Registrarse extends vistas.VistaRegistrarse {
 		this._iniciar_Sesion._usuario_no_Registrado.Iniciar_Sesion();
 	}
 
-	public void Comprobar_datos() {
-		// borrar
-	}
-
 	public void Enviar() {
+		this._iniciar_Sesion._usuario_no_Registrado.mainview.removeAll();
 		// crear usuario suscrito BD
-		this._iniciar_Sesion._usuario_no_Registrado.mainview.remove(this._iniciar_Sesion._usuario_no_Registrado);
+		basededatos.Usuario_suscrito suscrito = new basededatos.Usuario_suscrito();
+		this._iniciar_Sesion._usuario_no_Registrado.mainview._usuario_suscrito = new Usuario_Suscrito(this._iniciar_Sesion._usuario_no_Registrado.mainview, suscrito);
 		this._iniciar_Sesion._usuario_no_Registrado.mainview.add(this._iniciar_Sesion._usuario_no_Registrado.mainview._usuario_suscrito);
 	}
 

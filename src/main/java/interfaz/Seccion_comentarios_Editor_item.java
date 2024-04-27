@@ -3,8 +3,8 @@ package interfaz;
 public class Seccion_comentarios_Editor_item extends Seccion_comentarios_Identificado_item {
 //	private event _eliminar_comentario;
 
-	public Seccion_comentarios_Editor_item(Seccion_comentarios _seccion_comentarios, basededatos.Comentario comentario) {
-	super(_seccion_comentarios, comentario);
+	public Seccion_comentarios_Editor_item(Seccion_comentarios _seccion_comentarios, basededatos.Identificado identificado) {
+	super(_seccion_comentarios, identificado);
 	this.getLayoutborrarcomentarioseccioncomentariositem().setVisible(true);
 	this.getSeccioncomentariositem().addClickListener(event->Eliminar_comentario());
 }
