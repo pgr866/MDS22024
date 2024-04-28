@@ -37,8 +37,8 @@ public class MDS12324PFFornielesGomezPersistentManager extends PersistentManager
 	@Override
 	protected void configureMetadataSources(MetadataSources aMetadataSources) {
 		super.configureMetadataSources(aMetadataSources);
-		aMetadataSources.addAnnotatedClass(basededatos.Seccion.class);
 		aMetadataSources.addAnnotatedClass(basededatos.Portada.class);
+		aMetadataSources.addAnnotatedClass(basededatos.Seccion.class);
 		aMetadataSources.addAnnotatedClass(basededatos.Tematica.class);
 		aMetadataSources.addAnnotatedClass(basededatos.Noticia.class);
 		aMetadataSources.addAnnotatedClass(basededatos.Comentario.class);

@@ -9,33 +9,33 @@ public class RetrieveAndUpdateMDS12324PFFornielesGomezData {
 	public void retrieveAndUpdateTestData() throws PersistentException {
 		PersistentTransaction t = basededatos.MDS12324PFFornielesGomezPersistentManager.instance().getSession().beginTransaction();
 		try {
-			basededatos.Seccion base_de_datosSeccion = basededatos.Seccion.loadSeccionByQuery(null, null);
+			basededatos.Portada lbasededatosPortada = basededatos.PortadaDAO.loadPortadaByQuery(null, null);
 			// Update the properties of the persistent object
-			base_de_datosSeccion.save();
-			basededatos.Portada base_de_datosPortada = basededatos.Portada.loadPortadaByQuery(null, null);
+			basededatos.PortadaDAO.save(lbasededatosPortada);
+			basededatos.Seccion lbasededatosSeccion = basededatos.SeccionDAO.loadSeccionByQuery(null, null);
 			// Update the properties of the persistent object
-			base_de_datosPortada.save();
-			basededatos.Tematica base_de_datosTematica = basededatos.Tematica.loadTematicaByQuery(null, null);
+			basededatos.SeccionDAO.save(lbasededatosSeccion);
+			basededatos.Tematica lbasededatosTematica = basededatos.TematicaDAO.loadTematicaByQuery(null, null);
 			// Update the properties of the persistent object
-			base_de_datosTematica.save();
-			basededatos.Noticia base_de_datosNoticia = basededatos.Noticia.loadNoticiaByQuery(null, null);
+			basededatos.TematicaDAO.save(lbasededatosTematica);
+			basededatos.Noticia lbasededatosNoticia = basededatos.NoticiaDAO.loadNoticiaByQuery(null, null);
 			// Update the properties of the persistent object
-			base_de_datosNoticia.save();
-			basededatos.Comentario base_de_datosComentario = basededatos.Comentario.loadComentarioByQuery(null, null);
+			basededatos.NoticiaDAO.save(lbasededatosNoticia);
+			basededatos.Comentario lbasededatosComentario = basededatos.ComentarioDAO.loadComentarioByQuery(null, null);
 			// Update the properties of the persistent object
-			base_de_datosComentario.save();
-			basededatos.Identificado base_de_datosIdentificado = basededatos.Identificado.loadIdentificadoByQuery(null, null);
+			basededatos.ComentarioDAO.save(lbasededatosComentario);
+			basededatos.Identificado lbasededatosIdentificado = basededatos.IdentificadoDAO.loadIdentificadoByQuery(null, null);
 			// Update the properties of the persistent object
-			base_de_datosIdentificado.save();
-			basededatos.Editor base_de_datosEditor = basededatos.Editor.loadEditorByQuery(null, null);
+			basededatos.IdentificadoDAO.save(lbasededatosIdentificado);
+			basededatos.Editor lbasededatosEditor = basededatos.EditorDAO.loadEditorByQuery(null, null);
 			// Update the properties of the persistent object
-			base_de_datosEditor.save();
-			basededatos.Periodista base_de_datosPeriodista = basededatos.Periodista.loadPeriodistaByQuery(null, null);
+			basededatos.EditorDAO.save(lbasededatosEditor);
+			basededatos.Periodista lbasededatosPeriodista = basededatos.PeriodistaDAO.loadPeriodistaByQuery(null, null);
 			// Update the properties of the persistent object
-			base_de_datosPeriodista.save();
-			basededatos.Usuario_suscrito base_de_datosUsuario_suscrito = basededatos.Usuario_suscrito.loadUsuario_suscritoByQuery(null, null);
+			basededatos.PeriodistaDAO.save(lbasededatosPeriodista);
+			basededatos.Usuario_suscrito lbasededatosUsuario_suscrito = basededatos.Usuario_suscritoDAO.loadUsuario_suscritoByQuery(null, null);
 			// Update the properties of the persistent object
-			base_de_datosUsuario_suscrito.save();
+			basededatos.Usuario_suscritoDAO.save(lbasededatosUsuario_suscrito);
 			t.commit();
 		}
 		catch (Exception e) {
@@ -45,59 +45,59 @@ public class RetrieveAndUpdateMDS12324PFFornielesGomezData {
 	}
 	
 	public void retrieveByCriteria() throws PersistentException {
-		System.out.println("Retrieving Seccion by SeccionCriteria");
-		basededatos.SeccionCriteria base_de_datosSeccionCriteria = new basededatos.SeccionCriteria();
-		// Please uncomment the follow line and fill in parameter(s)
-		//base_de_datosSeccionCriteria.id_seccion.eq();
-		System.out.println(base_de_datosSeccionCriteria.uniqueSeccion());
-		
 		System.out.println("Retrieving Portada by PortadaCriteria");
-		basededatos.PortadaCriteria base_de_datosPortadaCriteria = new basededatos.PortadaCriteria();
+		basededatos.PortadaCriteria lbasededatosPortadaCriteria = new basededatos.PortadaCriteria();
 		// Please uncomment the follow line and fill in parameter(s)
-		//base_de_datosPortadaCriteria.id_seccion.eq();
-		System.out.println(base_de_datosPortadaCriteria.uniquePortada());
+		//lbasededatosPortadaCriteria.id_portada.eq();
+		System.out.println(lbasededatosPortadaCriteria.uniquePortada());
+		
+		System.out.println("Retrieving Seccion by SeccionCriteria");
+		basededatos.SeccionCriteria lbasededatosSeccionCriteria = new basededatos.SeccionCriteria();
+		// Please uncomment the follow line and fill in parameter(s)
+		//lbasededatosSeccionCriteria.id_seccion.eq();
+		System.out.println(lbasededatosSeccionCriteria.uniqueSeccion());
 		
 		System.out.println("Retrieving Tematica by TematicaCriteria");
-		basededatos.TematicaCriteria base_de_datosTematicaCriteria = new basededatos.TematicaCriteria();
+		basededatos.TematicaCriteria lbasededatosTematicaCriteria = new basededatos.TematicaCriteria();
 		// Please uncomment the follow line and fill in parameter(s)
-		//base_de_datosTematicaCriteria.id_tematica.eq();
-		System.out.println(base_de_datosTematicaCriteria.uniqueTematica());
+		//lbasededatosTematicaCriteria.id_tematica.eq();
+		System.out.println(lbasededatosTematicaCriteria.uniqueTematica());
 		
 		System.out.println("Retrieving Noticia by NoticiaCriteria");
-		basededatos.NoticiaCriteria base_de_datosNoticiaCriteria = new basededatos.NoticiaCriteria();
+		basededatos.NoticiaCriteria lbasededatosNoticiaCriteria = new basededatos.NoticiaCriteria();
 		// Please uncomment the follow line and fill in parameter(s)
-		//base_de_datosNoticiaCriteria.id_noticia.eq();
-		System.out.println(base_de_datosNoticiaCriteria.uniqueNoticia());
+		//lbasededatosNoticiaCriteria.id_noticia.eq();
+		System.out.println(lbasededatosNoticiaCriteria.uniqueNoticia());
 		
 		System.out.println("Retrieving Comentario by ComentarioCriteria");
-		basededatos.ComentarioCriteria base_de_datosComentarioCriteria = new basededatos.ComentarioCriteria();
+		basededatos.ComentarioCriteria lbasededatosComentarioCriteria = new basededatos.ComentarioCriteria();
 		// Please uncomment the follow line and fill in parameter(s)
-		//base_de_datosComentarioCriteria.id_comentario.eq();
-		System.out.println(base_de_datosComentarioCriteria.uniqueComentario());
+		//lbasededatosComentarioCriteria.id_comentario.eq();
+		System.out.println(lbasededatosComentarioCriteria.uniqueComentario());
 		
 		System.out.println("Retrieving Identificado by IdentificadoCriteria");
-		basededatos.IdentificadoCriteria base_de_datosIdentificadoCriteria = new basededatos.IdentificadoCriteria();
+		basededatos.IdentificadoCriteria lbasededatosIdentificadoCriteria = new basededatos.IdentificadoCriteria();
 		// Please uncomment the follow line and fill in parameter(s)
-		//base_de_datosIdentificadoCriteria.id.eq();
-		System.out.println(base_de_datosIdentificadoCriteria.uniqueIdentificado());
+		//lbasededatosIdentificadoCriteria.id.eq();
+		System.out.println(lbasededatosIdentificadoCriteria.uniqueIdentificado());
 		
 		System.out.println("Retrieving Editor by EditorCriteria");
-		basededatos.EditorCriteria base_de_datosEditorCriteria = new basededatos.EditorCriteria();
+		basededatos.EditorCriteria lbasededatosEditorCriteria = new basededatos.EditorCriteria();
 		// Please uncomment the follow line and fill in parameter(s)
-		//base_de_datosEditorCriteria.id.eq();
-		System.out.println(base_de_datosEditorCriteria.uniqueEditor());
+		//lbasededatosEditorCriteria.id.eq();
+		System.out.println(lbasededatosEditorCriteria.uniqueEditor());
 		
 		System.out.println("Retrieving Periodista by PeriodistaCriteria");
-		basededatos.PeriodistaCriteria base_de_datosPeriodistaCriteria = new basededatos.PeriodistaCriteria();
+		basededatos.PeriodistaCriteria lbasededatosPeriodistaCriteria = new basededatos.PeriodistaCriteria();
 		// Please uncomment the follow line and fill in parameter(s)
-		//base_de_datosPeriodistaCriteria.id.eq();
-		System.out.println(base_de_datosPeriodistaCriteria.uniquePeriodista());
+		//lbasededatosPeriodistaCriteria.id.eq();
+		System.out.println(lbasededatosPeriodistaCriteria.uniquePeriodista());
 		
 		System.out.println("Retrieving Usuario_suscrito by Usuario_suscritoCriteria");
-		basededatos.Usuario_suscritoCriteria base_de_datosUsuario_suscritoCriteria = new basededatos.Usuario_suscritoCriteria();
+		basededatos.Usuario_suscritoCriteria lbasededatosUsuario_suscritoCriteria = new basededatos.Usuario_suscritoCriteria();
 		// Please uncomment the follow line and fill in parameter(s)
-		//base_de_datosUsuario_suscritoCriteria.id.eq();
-		System.out.println(base_de_datosUsuario_suscritoCriteria.uniqueUsuario_suscrito());
+		//lbasededatosUsuario_suscritoCriteria.id.eq();
+		System.out.println(lbasededatosUsuario_suscritoCriteria.uniqueUsuario_suscrito());
 		
 	}
 	

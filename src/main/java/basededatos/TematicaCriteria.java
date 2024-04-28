@@ -21,14 +21,12 @@ import org.orm.criteria.*;
 public class TematicaCriteria extends AbstractORMCriteria {
 	public final IntegerExpression id_tematica;
 	public final StringExpression titulo_tematica;
-	public final CollectionExpression seccion_contiene_tematicas;
 	public final CollectionExpression contiene;
 	
 	public TematicaCriteria(Criteria criteria) {
 		super(criteria);
 		id_tematica = new IntegerExpression("id_tematica", this);
 		titulo_tematica = new StringExpression("titulo_tematica", this);
-		seccion_contiene_tematicas = new CollectionExpression("ORM_seccion_contiene_tematicas", this);
 		contiene = new CollectionExpression("ORM_contiene", this);
 	}
 	
@@ -37,15 +35,11 @@ public class TematicaCriteria extends AbstractORMCriteria {
 	}
 	
 	public TematicaCriteria() throws PersistentException {
-		this(basededatos.MDS12324PFFornielesGomezPersistentManager.instance().getSession());
+		this(MDS12324PFFornielesGomezPersistentManager.instance().getSession());
 	}
 	
-	public basededatos.SeccionCriteria createSeccion_contiene_tematicasCriteria() {
-		return new basededatos.SeccionCriteria(createCriteria("ORM_seccion_contiene_tematicas"));
-	}
-	
-	public basededatos.NoticiaCriteria createContieneCriteria() {
-		return new basededatos.NoticiaCriteria(createCriteria("ORM_contiene"));
+	public NoticiaCriteria createContieneCriteria() {
+		return new NoticiaCriteria(createCriteria("ORM_contiene"));
 	}
 	
 	public Tematica uniqueTematica() {

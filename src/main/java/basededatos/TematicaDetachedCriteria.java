@@ -21,14 +21,12 @@ import org.orm.criteria.*;
 public class TematicaDetachedCriteria extends AbstractORMDetachedCriteria {
 	public final IntegerExpression id_tematica;
 	public final StringExpression titulo_tematica;
-	public final CollectionExpression seccion_contiene_tematicas;
 	public final CollectionExpression contiene;
 	
 	public TematicaDetachedCriteria() {
 		super(basededatos.Tematica.class, basededatos.TematicaCriteria.class);
 		id_tematica = new IntegerExpression("id_tematica", this.getDetachedCriteria());
 		titulo_tematica = new StringExpression("titulo_tematica", this.getDetachedCriteria());
-		seccion_contiene_tematicas = new CollectionExpression("ORM_seccion_contiene_tematicas", this.getDetachedCriteria());
 		contiene = new CollectionExpression("ORM_contiene", this.getDetachedCriteria());
 	}
 	
@@ -36,16 +34,11 @@ public class TematicaDetachedCriteria extends AbstractORMDetachedCriteria {
 		super(aDetachedCriteria, basededatos.TematicaCriteria.class);
 		id_tematica = new IntegerExpression("id_tematica", this.getDetachedCriteria());
 		titulo_tematica = new StringExpression("titulo_tematica", this.getDetachedCriteria());
-		seccion_contiene_tematicas = new CollectionExpression("ORM_seccion_contiene_tematicas", this.getDetachedCriteria());
 		contiene = new CollectionExpression("ORM_contiene", this.getDetachedCriteria());
 	}
 	
-	public basededatos.SeccionDetachedCriteria createSeccion_contiene_tematicasCriteria() {
-		return new basededatos.SeccionDetachedCriteria(createCriteria("ORM_seccion_contiene_tematicas"));
-	}
-	
-	public basededatos.NoticiaDetachedCriteria createContieneCriteria() {
-		return new basededatos.NoticiaDetachedCriteria(createCriteria("ORM_contiene"));
+	public NoticiaDetachedCriteria createContieneCriteria() {
+		return new NoticiaDetachedCriteria(createCriteria("ORM_contiene"));
 	}
 	
 	public Tematica uniqueTematica(PersistentSession session) {

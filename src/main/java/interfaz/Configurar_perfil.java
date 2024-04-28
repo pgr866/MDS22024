@@ -35,15 +35,13 @@ public class Configurar_perfil extends vistas.VistaConfigurarperfil {
 	}
 	
 	public void Guardar_cambios() {
-		String nombre = this.getTextfieldnombreconfigurarperfil().getValue();
-		String apodo = this.getTextfieldapodoconfigurarperfil().getValue();
-		String email = this.getTextfieldemailconfigurarperfil().getValue();
-		String contrasena = this.getPasswordfieldcontrasenaconfigurarperfil().getValue();
-		String url_imagen = this.getTextfieldurlimagenconfigurarperfil().getValue();
-		String tarjeta;
+		this.identificado.setNombre(this.getTextfieldnombreconfigurarperfil().getValue());
+		this.identificado.setNick_apodo(this.getTextfieldapodoconfigurarperfil().getValue());
+		this.identificado.setEmail(this.getTextfieldemailconfigurarperfil().getValue());;
+		this.identificado.setContrasena(this.getPasswordfieldcontrasenaconfigurarperfil().getValue());
+		this.identificado.setUrl_foto_perfil(this.getTextfieldurlimagenconfigurarperfil().getValue());
 		if (this.getLabelntarjetaconfigurarperfil().isVisible())
-			tarjeta = this.getTextfieldntarjetaconfigurarperfil().getValue();
-		// update usuario BD
+			((basededatos.Usuario_suscrito) this.identificado).setNum_tarjeta(this.getTextfieldntarjetaconfigurarperfil().getValue());
 		this._identificado.Configurar_perfil(); // Refrescar pagina
 	}
 }

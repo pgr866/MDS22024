@@ -19,63 +19,33 @@ import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
 public class PortadaDetachedCriteria extends AbstractORMDetachedCriteria {
-	public final IntegerExpression id_seccion;
-	public final IntegerExpression eliminaId;
-	public final AssociationExpression elimina;
-	public final IntegerExpression creaId;
-	public final AssociationExpression crea;
-	public final StringExpression titulo_seccion;
-	public final CollectionExpression aparece_en;
-	public final CollectionExpression pertenece_a_seccion;
+	public final IntegerExpression id_portada;
 	public final IntegerExpression ordenaId;
 	public final AssociationExpression ordena;
+	public final CollectionExpression aparece_en_portada;
 	
 	public PortadaDetachedCriteria() {
 		super(basededatos.Portada.class, basededatos.PortadaCriteria.class);
-		id_seccion = new IntegerExpression("id_seccion", this.getDetachedCriteria());
-		eliminaId = new IntegerExpression("elimina.", this.getDetachedCriteria());
-		elimina = new AssociationExpression("elimina", this.getDetachedCriteria());
-		creaId = new IntegerExpression("crea.", this.getDetachedCriteria());
-		crea = new AssociationExpression("crea", this.getDetachedCriteria());
-		titulo_seccion = new StringExpression("titulo_seccion", this.getDetachedCriteria());
-		aparece_en = new CollectionExpression("ORM_aparece_en", this.getDetachedCriteria());
-		pertenece_a_seccion = new CollectionExpression("ORM_pertenece_a_seccion", this.getDetachedCriteria());
+		id_portada = new IntegerExpression("id_portada", this.getDetachedCriteria());
 		ordenaId = new IntegerExpression("ordena.", this.getDetachedCriteria());
 		ordena = new AssociationExpression("ordena", this.getDetachedCriteria());
+		aparece_en_portada = new CollectionExpression("ORM_aparece_en_portada", this.getDetachedCriteria());
 	}
 	
 	public PortadaDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, basededatos.PortadaCriteria.class);
-		id_seccion = new IntegerExpression("id_seccion", this.getDetachedCriteria());
-		eliminaId = new IntegerExpression("elimina.", this.getDetachedCriteria());
-		elimina = new AssociationExpression("elimina", this.getDetachedCriteria());
-		creaId = new IntegerExpression("crea.", this.getDetachedCriteria());
-		crea = new AssociationExpression("crea", this.getDetachedCriteria());
-		titulo_seccion = new StringExpression("titulo_seccion", this.getDetachedCriteria());
-		aparece_en = new CollectionExpression("ORM_aparece_en", this.getDetachedCriteria());
-		pertenece_a_seccion = new CollectionExpression("ORM_pertenece_a_seccion", this.getDetachedCriteria());
+		id_portada = new IntegerExpression("id_portada", this.getDetachedCriteria());
 		ordenaId = new IntegerExpression("ordena.", this.getDetachedCriteria());
 		ordena = new AssociationExpression("ordena", this.getDetachedCriteria());
+		aparece_en_portada = new CollectionExpression("ORM_aparece_en_portada", this.getDetachedCriteria());
 	}
 	
 	public EditorDetachedCriteria createOrdenaCriteria() {
 		return new EditorDetachedCriteria(createCriteria("ordena"));
 	}
 	
-	public EditorDetachedCriteria createEliminaCriteria() {
-		return new EditorDetachedCriteria(createCriteria("elimina"));
-	}
-	
-	public EditorDetachedCriteria createCreaCriteria() {
-		return new EditorDetachedCriteria(createCriteria("crea"));
-	}
-	
-	public basededatos.NoticiaDetachedCriteria createAparece_enCriteria() {
-		return new basededatos.NoticiaDetachedCriteria(createCriteria("ORM_aparece_en"));
-	}
-	
-	public basededatos.TematicaDetachedCriteria createPertenece_a_seccionCriteria() {
-		return new basededatos.TematicaDetachedCriteria(createCriteria("ORM_pertenece_a_seccion"));
+	public NoticiaDetachedCriteria createAparece_en_portadaCriteria() {
+		return new NoticiaDetachedCriteria(createCriteria("ORM_aparece_en_portada"));
 	}
 	
 	public Portada uniquePortada(PersistentSession session) {

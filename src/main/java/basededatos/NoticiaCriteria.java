@@ -20,6 +20,8 @@ import org.orm.criteria.*;
 
 public class NoticiaCriteria extends AbstractORMCriteria {
 	public final IntegerExpression id_noticia;
+	public final IntegerExpression portada_contiene_noticiasId;
+	public final AssociationExpression portada_contiene_noticias;
 	public final IntegerExpression creaId;
 	public final AssociationExpression crea;
 	public final StringExpression titulo;
@@ -28,13 +30,13 @@ public class NoticiaCriteria extends AbstractORMCriteria {
 	public final StringExpression lugar;
 	public final StringExpression resumen;
 	public final StringExpression contenido;
-	public final IntegerExpression autor;
 	public final BooleanExpression publicada;
 	public final IntegerExpression valoraciones_positivas;
 	public final IntegerExpression valoraciones_negativas;
 	public final CollectionExpression publica;
-	public final CollectionExpression valora;
+	public final CollectionExpression valora_positiva;
 	public final CollectionExpression pertenece_a;
+	public final CollectionExpression valora_negativa;
 	public final CollectionExpression seccion_contiene_noticias;
 	public final CollectionExpression pertenece_a_noticia;
 	public final CollectionExpression elimina;
@@ -42,6 +44,8 @@ public class NoticiaCriteria extends AbstractORMCriteria {
 	public NoticiaCriteria(Criteria criteria) {
 		super(criteria);
 		id_noticia = new IntegerExpression("id_noticia", this);
+		portada_contiene_noticiasId = new IntegerExpression("portada_contiene_noticias.id_portada", this);
+		portada_contiene_noticias = new AssociationExpression("portada_contiene_noticias", this);
 		creaId = new IntegerExpression("crea.", this);
 		crea = new AssociationExpression("crea", this);
 		titulo = new StringExpression("titulo", this);
@@ -50,13 +54,13 @@ public class NoticiaCriteria extends AbstractORMCriteria {
 		lugar = new StringExpression("lugar", this);
 		resumen = new StringExpression("resumen", this);
 		contenido = new StringExpression("contenido", this);
-		autor = new IntegerExpression("autor", this);
 		publicada = new BooleanExpression("publicada", this);
 		valoraciones_positivas = new IntegerExpression("valoraciones_positivas", this);
 		valoraciones_negativas = new IntegerExpression("valoraciones_negativas", this);
 		publica = new CollectionExpression("ORM_publica", this);
-		valora = new CollectionExpression("ORM_valora", this);
+		valora_positiva = new CollectionExpression("ORM_valora_positiva", this);
 		pertenece_a = new CollectionExpression("ORM_pertenece_a", this);
+		valora_negativa = new CollectionExpression("ORM_valora_negativa", this);
 		seccion_contiene_noticias = new CollectionExpression("ORM_seccion_contiene_noticias", this);
 		pertenece_a_noticia = new CollectionExpression("ORM_pertenece_a_noticia", this);
 		elimina = new CollectionExpression("ORM_elimina", this);
@@ -67,35 +71,43 @@ public class NoticiaCriteria extends AbstractORMCriteria {
 	}
 	
 	public NoticiaCriteria() throws PersistentException {
-		this(basededatos.MDS12324PFFornielesGomezPersistentManager.instance().getSession());
+		this(MDS12324PFFornielesGomezPersistentManager.instance().getSession());
+	}
+	
+	public PortadaCriteria createPortada_contiene_noticiasCriteria() {
+		return new PortadaCriteria(createCriteria("portada_contiene_noticias"));
 	}
 	
 	public PeriodistaCriteria createCreaCriteria() {
 		return new PeriodistaCriteria(createCriteria("crea"));
 	}
 	
-	public basededatos.EditorCriteria createPublicaCriteria() {
-		return new basededatos.EditorCriteria(createCriteria("ORM_publica"));
+	public EditorCriteria createPublicaCriteria() {
+		return new EditorCriteria(createCriteria("ORM_publica"));
 	}
 	
-	public basededatos.IdentificadoCriteria createValoraCriteria() {
-		return new basededatos.IdentificadoCriteria(createCriteria("ORM_valora"));
+	public IdentificadoCriteria createValora_positivaCriteria() {
+		return new IdentificadoCriteria(createCriteria("ORM_valora_positiva"));
 	}
 	
-	public basededatos.TematicaCriteria createPertenece_aCriteria() {
-		return new basededatos.TematicaCriteria(createCriteria("ORM_pertenece_a"));
+	public TematicaCriteria createPertenece_aCriteria() {
+		return new TematicaCriteria(createCriteria("ORM_pertenece_a"));
 	}
 	
-	public basededatos.SeccionCriteria createSeccion_contiene_noticiasCriteria() {
-		return new basededatos.SeccionCriteria(createCriteria("ORM_seccion_contiene_noticias"));
+	public IdentificadoCriteria createValora_negativaCriteria() {
+		return new IdentificadoCriteria(createCriteria("ORM_valora_negativa"));
 	}
 	
-	public basededatos.ComentarioCriteria createPertenece_a_noticiaCriteria() {
-		return new basededatos.ComentarioCriteria(createCriteria("ORM_pertenece_a_noticia"));
+	public SeccionCriteria createSeccion_contiene_noticiasCriteria() {
+		return new SeccionCriteria(createCriteria("ORM_seccion_contiene_noticias"));
 	}
 	
-	public basededatos.EditorCriteria createEliminaCriteria() {
-		return new basededatos.EditorCriteria(createCriteria("ORM_elimina"));
+	public ComentarioCriteria createPertenece_a_noticiaCriteria() {
+		return new ComentarioCriteria(createCriteria("ORM_pertenece_a_noticia"));
+	}
+	
+	public EditorCriteria createEliminaCriteria() {
+		return new EditorCriteria(createCriteria("ORM_elimina"));
 	}
 	
 	public Noticia uniqueNoticia() {

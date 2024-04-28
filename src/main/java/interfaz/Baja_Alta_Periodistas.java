@@ -38,23 +38,17 @@ public class Baja_Alta_Periodistas extends vistas.VistaBajaaltaperiodistas {
 	}
 	
 	public void Alta_periodista() {
-		String nombre = this.getTextfieldnombredaraltaperiodista().getValue();
-		String apellidos = this.getTextfieldapellidosdaraltaperiodista().getValue();
-		String nick = this.getTextfieldnickdaraltaperiodista().getValue();
-		String dni = this.getTextfielddnidaraltaperiodista().getValue();
-		String email = this.getTextfieldemaildaraltaperiodista().getValue();
-		String telefono = this.getTextfieldtelefonodaraltaperiodista().getValue();
-		String contrasena = this.getTextfieldcontrasenadaraltaperiodista().getValue();
-		String fecha_nacimiento = this.getTextfieldfechanacimientodaraltaperiodista().getValue();
 		// crear periodista BD
-		
-//		Lista_periodistas_item nuevo_periodista = new Lista_periodistas_item(this._buscar_periodista._lista_periodistas);
-//		nuevo_periodista.getLayoutlistaperiodistaitem().setText(nombre);
-//		this._buscar_periodista._lista_periodistas._item.add(nuevo_periodista);
-//		ArrayList<String> items = new ArrayList<String>();
-//		for (Lista_periodistas_item periodista : this._buscar_periodista._lista_periodistas._item)
-//			items.add(periodista.getLayoutlistaperiodistaitem().getText());
-//		this._buscar_periodista._lista_periodistas.getComboboxlistaperiodistas().setItems(items);
+		basededatos.Periodista nuevo_periodista = new basededatos.Periodista();
+		nuevo_periodista.setNombre(this.getTextfieldnombredaraltaperiodista().getValue());
+		nuevo_periodista.setApellidos(this.getTextfieldapellidosdaraltaperiodista().getValue());
+		nuevo_periodista.setNick_apodo(this.getTextfieldnickdaraltaperiodista().getValue());
+		nuevo_periodista.setDni(this.getTextfielddnidaraltaperiodista().getValue());
+		nuevo_periodista.setEmail(this.getTextfieldemaildaraltaperiodista().getValue());
+		nuevo_periodista.setTelefono(Integer.parseInt(this.getTextfieldtelefonodaraltaperiodista().getValue()));
+		nuevo_periodista.setContrasena(this.getTextfieldcontrasenadaraltaperiodista().getValue());
+		nuevo_periodista.setFecha_nacimiento(this.getTextfieldfechanacimientodaraltaperiodista().getValue());
+		nuevo_periodista.setEsEliminado(false);
 		this._editor.Baja_Alta_Periodistas(); // Refrescar pagina
 	}
 }

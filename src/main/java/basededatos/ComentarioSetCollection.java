@@ -71,7 +71,6 @@ public class ComentarioSetCollection extends org.orm.util.ORMSet {
 	 * Return an sorted array containing all of the persistent objects in ORMSet
 	 * @param propertyName Name of the property for sorting:<ul>
 	 * <li>id_comentario</li>
-	 * <li>propietario</li>
 	 * <li>contenido</li>
 	 * <li>valoraciones_positivas</li>
 	 * <li>valoraciones_negativas</li>
@@ -86,7 +85,6 @@ public class ComentarioSetCollection extends org.orm.util.ORMSet {
 	 * Return an sorted array containing all of the persistent objects in ORMSet
 	 * @param propertyName Name of the property for sorting:<ul>
 	 * <li>id_comentario</li>
-	 * <li>propietario</li>
 	 * <li>contenido</li>
 	 * <li>valoraciones_positivas</li>
 	 * <li>valoraciones_negativas</li>
@@ -99,7 +97,7 @@ public class ComentarioSetCollection extends org.orm.util.ORMSet {
 	}
 	
 	protected PersistentManager getPersistentManager() throws PersistentException {
-		return basededatos.MDS12324PFFornielesGomezPersistentManager.instance();
+		return MDS12324PFFornielesGomezPersistentManager.instance();
 	}
 	
 }

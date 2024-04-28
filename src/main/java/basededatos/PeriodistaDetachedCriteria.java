@@ -30,11 +30,12 @@ public class PeriodistaDetachedCriteria extends AbstractORMDetachedCriteria {
 	public final IntegerExpression telefono;
 	public final StringExpression url_foto_perfil;
 	public final CollectionExpression pertenece_a_identificado;
-	public final CollectionExpression es_valorado_por;
-	public final CollectionExpression es_valorada_por;
+	public final CollectionExpression es_valorado_positiva;
+	public final CollectionExpression es_valorado_negativa;
+	public final CollectionExpression es_valorada_positiva_por;
+	public final CollectionExpression es_valorada_negativa_por;
 	public final BooleanExpression esEliminado;
-	public final IntegerExpression es_creadaId;
-	public final AssociationExpression es_creada;
+	public final CollectionExpression es_creada;
 	
 	public PeriodistaDetachedCriteria() {
 		super(basededatos.Periodista.class, basededatos.PeriodistaCriteria.class);
@@ -49,11 +50,12 @@ public class PeriodistaDetachedCriteria extends AbstractORMDetachedCriteria {
 		telefono = new IntegerExpression("telefono", this.getDetachedCriteria());
 		url_foto_perfil = new StringExpression("url_foto_perfil", this.getDetachedCriteria());
 		pertenece_a_identificado = new CollectionExpression("ORM_pertenece_a_identificado", this.getDetachedCriteria());
-		es_valorado_por = new CollectionExpression("ORM_es_valorado_por", this.getDetachedCriteria());
-		es_valorada_por = new CollectionExpression("ORM_es_valorada_por", this.getDetachedCriteria());
+		es_valorado_positiva = new CollectionExpression("ORM_es_valorado_positiva", this.getDetachedCriteria());
+		es_valorado_negativa = new CollectionExpression("ORM_es_valorado_negativa", this.getDetachedCriteria());
+		es_valorada_positiva_por = new CollectionExpression("ORM_es_valorada_positiva_por", this.getDetachedCriteria());
+		es_valorada_negativa_por = new CollectionExpression("ORM_es_valorada_negativa_por", this.getDetachedCriteria());
 		esEliminado = new BooleanExpression("esEliminado", this.getDetachedCriteria());
-		es_creadaId = new IntegerExpression("es_creada.", this.getDetachedCriteria());
-		es_creada = new AssociationExpression("es_creada", this.getDetachedCriteria());
+		es_creada = new CollectionExpression("ORM_es_creada", this.getDetachedCriteria());
 	}
 	
 	public PeriodistaDetachedCriteria(DetachedCriteria aDetachedCriteria) {
@@ -69,27 +71,36 @@ public class PeriodistaDetachedCriteria extends AbstractORMDetachedCriteria {
 		telefono = new IntegerExpression("telefono", this.getDetachedCriteria());
 		url_foto_perfil = new StringExpression("url_foto_perfil", this.getDetachedCriteria());
 		pertenece_a_identificado = new CollectionExpression("ORM_pertenece_a_identificado", this.getDetachedCriteria());
-		es_valorado_por = new CollectionExpression("ORM_es_valorado_por", this.getDetachedCriteria());
-		es_valorada_por = new CollectionExpression("ORM_es_valorada_por", this.getDetachedCriteria());
+		es_valorado_positiva = new CollectionExpression("ORM_es_valorado_positiva", this.getDetachedCriteria());
+		es_valorado_negativa = new CollectionExpression("ORM_es_valorado_negativa", this.getDetachedCriteria());
+		es_valorada_positiva_por = new CollectionExpression("ORM_es_valorada_positiva_por", this.getDetachedCriteria());
+		es_valorada_negativa_por = new CollectionExpression("ORM_es_valorada_negativa_por", this.getDetachedCriteria());
 		esEliminado = new BooleanExpression("esEliminado", this.getDetachedCriteria());
-		es_creadaId = new IntegerExpression("es_creada.", this.getDetachedCriteria());
-		es_creada = new AssociationExpression("es_creada", this.getDetachedCriteria());
+		es_creada = new CollectionExpression("ORM_es_creada", this.getDetachedCriteria());
 	}
 	
 	public NoticiaDetachedCriteria createEs_creadaCriteria() {
-		return new NoticiaDetachedCriteria(createCriteria("es_creada"));
+		return new NoticiaDetachedCriteria(createCriteria("ORM_es_creada"));
 	}
 	
-	public basededatos.ComentarioDetachedCriteria createPertenece_a_identificadoCriteria() {
-		return new basededatos.ComentarioDetachedCriteria(createCriteria("ORM_pertenece_a_identificado"));
+	public ComentarioDetachedCriteria createPertenece_a_identificadoCriteria() {
+		return new ComentarioDetachedCriteria(createCriteria("ORM_pertenece_a_identificado"));
 	}
 	
-	public basededatos.ComentarioDetachedCriteria createEs_valorado_porCriteria() {
-		return new basededatos.ComentarioDetachedCriteria(createCriteria("ORM_es_valorado_por"));
+	public ComentarioDetachedCriteria createEs_valorado_positivaCriteria() {
+		return new ComentarioDetachedCriteria(createCriteria("ORM_es_valorado_positiva"));
 	}
 	
-	public basededatos.NoticiaDetachedCriteria createEs_valorada_porCriteria() {
-		return new basededatos.NoticiaDetachedCriteria(createCriteria("ORM_es_valorada_por"));
+	public ComentarioDetachedCriteria createEs_valorado_negativaCriteria() {
+		return new ComentarioDetachedCriteria(createCriteria("ORM_es_valorado_negativa"));
+	}
+	
+	public NoticiaDetachedCriteria createEs_valorada_positiva_porCriteria() {
+		return new NoticiaDetachedCriteria(createCriteria("ORM_es_valorada_positiva_por"));
+	}
+	
+	public NoticiaDetachedCriteria createEs_valorada_negativa_porCriteria() {
+		return new NoticiaDetachedCriteria(createCriteria("ORM_es_valorada_negativa_por"));
 	}
 	
 	public Periodista uniquePeriodista(PersistentSession session) {

@@ -89,7 +89,7 @@ public class EditorSetCollection extends org.orm.util.ORMSet {
 	}
 	
 	protected PersistentManager getPersistentManager() throws PersistentException {
-		return basededatos.MDS12324PFFornielesGomezPersistentManager.instance();
+		return MDS12324PFFornielesGomezPersistentManager.instance();
 	}
 	
 }

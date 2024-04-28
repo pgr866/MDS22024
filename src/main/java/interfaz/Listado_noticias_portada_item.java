@@ -15,8 +15,7 @@ public class Listado_noticias_portada_item extends VistaListadonoticiasportada_i
 		this.getTitulolistadonoticiasportada().setText(noticia.getTitulo());
 		this.getImagenlistadonoticiasportada().setSrc(noticia.getUrl_imagen_noticia());
 		this.getLabelfechalistadonoticiasportada().setText(noticia.getFecha());
-		basededatos.Periodista periodista = new basededatos.Periodista();
-		this.getLabelautorlistadonoticiasportada().setText(periodista.getNombre() + " " + periodista.getApellidos());
+		this.getLabelautorlistadonoticiasportada().setText(noticia.getCrea().getNombre() + " " + noticia.getCrea().getApellidos());
 		this.getLabellugarlistadonoticiasportada().setText(noticia.getLugar());
 		this.getTextarearesumenlistadonoticiasportada().setValue(noticia.getResumen());
 	}

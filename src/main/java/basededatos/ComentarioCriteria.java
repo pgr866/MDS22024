@@ -26,11 +26,11 @@ public class ComentarioCriteria extends AbstractORMCriteria {
 	public final AssociationExpression elimina;
 	public final IntegerExpression noticia_contiene_comentariosId;
 	public final AssociationExpression noticia_contiene_comentarios;
-	public final IntegerExpression propietario;
 	public final StringExpression contenido;
 	public final IntegerExpression valoraciones_positivas;
 	public final IntegerExpression valoraciones_negativas;
-	public final CollectionExpression valora;
+	public final CollectionExpression valora_positivamente;
+	public final CollectionExpression valora_negativamente;
 	
 	public ComentarioCriteria(Criteria criteria) {
 		super(criteria);
@@ -41,11 +41,11 @@ public class ComentarioCriteria extends AbstractORMCriteria {
 		elimina = new AssociationExpression("elimina", this);
 		noticia_contiene_comentariosId = new IntegerExpression("noticia_contiene_comentarios.id_noticia", this);
 		noticia_contiene_comentarios = new AssociationExpression("noticia_contiene_comentarios", this);
-		propietario = new IntegerExpression("propietario", this);
 		contenido = new StringExpression("contenido", this);
 		valoraciones_positivas = new IntegerExpression("valoraciones_positivas", this);
 		valoraciones_negativas = new IntegerExpression("valoraciones_negativas", this);
-		valora = new CollectionExpression("ORM_valora", this);
+		valora_positivamente = new CollectionExpression("ORM_valora_positivamente", this);
+		valora_negativamente = new CollectionExpression("ORM_valora_negativamente", this);
 	}
 	
 	public ComentarioCriteria(PersistentSession session) {
@@ -53,7 +53,7 @@ public class ComentarioCriteria extends AbstractORMCriteria {
 	}
 	
 	public ComentarioCriteria() throws PersistentException {
-		this(basededatos.MDS12324PFFornielesGomezPersistentManager.instance().getSession());
+		this(MDS12324PFFornielesGomezPersistentManager.instance().getSession());
 	}
 	
 	public IdentificadoCriteria createEscribeCriteria() {
@@ -68,8 +68,12 @@ public class ComentarioCriteria extends AbstractORMCriteria {
 		return new NoticiaCriteria(createCriteria("noticia_contiene_comentarios"));
 	}
 	
-	public basededatos.IdentificadoCriteria createValoraCriteria() {
-		return new basededatos.IdentificadoCriteria(createCriteria("ORM_valora"));
+	public IdentificadoCriteria createValora_positivamenteCriteria() {
+		return new IdentificadoCriteria(createCriteria("ORM_valora_positivamente"));
+	}
+	
+	public IdentificadoCriteria createValora_negativamenteCriteria() {
+		return new IdentificadoCriteria(createCriteria("ORM_valora_negativamente"));
 	}
 	
 	public Comentario uniqueComentario() {

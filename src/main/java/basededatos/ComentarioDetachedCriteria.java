@@ -26,11 +26,11 @@ public class ComentarioDetachedCriteria extends AbstractORMDetachedCriteria {
 	public final AssociationExpression elimina;
 	public final IntegerExpression noticia_contiene_comentariosId;
 	public final AssociationExpression noticia_contiene_comentarios;
-	public final IntegerExpression propietario;
 	public final StringExpression contenido;
 	public final IntegerExpression valoraciones_positivas;
 	public final IntegerExpression valoraciones_negativas;
-	public final CollectionExpression valora;
+	public final CollectionExpression valora_positivamente;
+	public final CollectionExpression valora_negativamente;
 	
 	public ComentarioDetachedCriteria() {
 		super(basededatos.Comentario.class, basededatos.ComentarioCriteria.class);
@@ -41,11 +41,11 @@ public class ComentarioDetachedCriteria extends AbstractORMDetachedCriteria {
 		elimina = new AssociationExpression("elimina", this.getDetachedCriteria());
 		noticia_contiene_comentariosId = new IntegerExpression("noticia_contiene_comentarios.id_noticia", this.getDetachedCriteria());
 		noticia_contiene_comentarios = new AssociationExpression("noticia_contiene_comentarios", this.getDetachedCriteria());
-		propietario = new IntegerExpression("propietario", this.getDetachedCriteria());
 		contenido = new StringExpression("contenido", this.getDetachedCriteria());
 		valoraciones_positivas = new IntegerExpression("valoraciones_positivas", this.getDetachedCriteria());
 		valoraciones_negativas = new IntegerExpression("valoraciones_negativas", this.getDetachedCriteria());
-		valora = new CollectionExpression("ORM_valora", this.getDetachedCriteria());
+		valora_positivamente = new CollectionExpression("ORM_valora_positivamente", this.getDetachedCriteria());
+		valora_negativamente = new CollectionExpression("ORM_valora_negativamente", this.getDetachedCriteria());
 	}
 	
 	public ComentarioDetachedCriteria(DetachedCriteria aDetachedCriteria) {
@@ -57,11 +57,11 @@ public class ComentarioDetachedCriteria extends AbstractORMDetachedCriteria {
 		elimina = new AssociationExpression("elimina", this.getDetachedCriteria());
 		noticia_contiene_comentariosId = new IntegerExpression("noticia_contiene_comentarios.id_noticia", this.getDetachedCriteria());
 		noticia_contiene_comentarios = new AssociationExpression("noticia_contiene_comentarios", this.getDetachedCriteria());
-		propietario = new IntegerExpression("propietario", this.getDetachedCriteria());
 		contenido = new StringExpression("contenido", this.getDetachedCriteria());
 		valoraciones_positivas = new IntegerExpression("valoraciones_positivas", this.getDetachedCriteria());
 		valoraciones_negativas = new IntegerExpression("valoraciones_negativas", this.getDetachedCriteria());
-		valora = new CollectionExpression("ORM_valora", this.getDetachedCriteria());
+		valora_positivamente = new CollectionExpression("ORM_valora_positivamente", this.getDetachedCriteria());
+		valora_negativamente = new CollectionExpression("ORM_valora_negativamente", this.getDetachedCriteria());
 	}
 	
 	public IdentificadoDetachedCriteria createEscribeCriteria() {
@@ -76,8 +76,12 @@ public class ComentarioDetachedCriteria extends AbstractORMDetachedCriteria {
 		return new NoticiaDetachedCriteria(createCriteria("noticia_contiene_comentarios"));
 	}
 	
-	public basededatos.IdentificadoDetachedCriteria createValoraCriteria() {
-		return new basededatos.IdentificadoDetachedCriteria(createCriteria("ORM_valora"));
+	public IdentificadoDetachedCriteria createValora_positivamenteCriteria() {
+		return new IdentificadoDetachedCriteria(createCriteria("ORM_valora_positivamente"));
+	}
+	
+	public IdentificadoDetachedCriteria createValora_negativamenteCriteria() {
+		return new IdentificadoDetachedCriteria(createCriteria("ORM_valora_negativamente"));
 	}
 	
 	public Comentario uniqueComentario(PersistentSession session) {

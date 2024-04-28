@@ -17,8 +17,18 @@ public class Configurar_perfil_Usuario_suscrito extends Configurar_perfil {
 	}
 
 	public void Eliminar_cuenta() {
+		//eliminar usuario suscrito BD
+		((basededatos.Usuario_suscrito) this.identificado).setEsEliminado(true);
+		((basededatos.Usuario_suscrito) this.identificado).setApellidos("");
+		((basededatos.Usuario_suscrito) this.identificado).setContrasena("");
+		((basededatos.Usuario_suscrito) this.identificado).setDni("");
+		((basededatos.Usuario_suscrito) this.identificado).setEmail("");
+		((basededatos.Usuario_suscrito) this.identificado).setFecha_nacimiento("");
+		((basededatos.Usuario_suscrito) this.identificado).setNombre("");
+		((basededatos.Usuario_suscrito) this.identificado).setNum_tarjeta("");
+		((basededatos.Usuario_suscrito) this.identificado).setTelefono(-1);
+		((basededatos.Usuario_suscrito) this.identificado).setUrl_foto_perfil("");
 		this._usuario_Suscrito.mainview.removeAll();
 		this._usuario_Suscrito.mainview.add(this._usuario_Suscrito.mainview._usuario_no_registrado);
-//		eliminar usuario suscrito BD
 	}
 }

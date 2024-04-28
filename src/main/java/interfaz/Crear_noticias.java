@@ -28,15 +28,21 @@ public class Crear_noticias extends vistas.VistaCrearnoticias {
 	}
 
 	public void Crear_noticia() {
-		String titulo = this.getTextfieldtitulocrearnoticias().getValue();
-		String url = this.getTextfieldurlimagenescrearnoticias().getValue();
-		String contenido = this.getTextareacontenidocrearnoticias().getValue();
-		String fecha = this.getTextfieldfechacrearnoticias().getValue();
-		String lugar = this.getTextfiedlugarcrearnoticias().getValue();
-		String tematica = this.getTextfieldtematicacrearnoticias().getValue();
-		// crear tematica BD si no existe
-		// crear tematica_noticia BD
-		// crear noticia con Publicada 0 BD
+		basededatos.Noticia nueva_noticia = new basededatos.Noticia();
+		nueva_noticia.setTitulo(this.getTextfieldtitulocrearnoticias().getValue());
+		nueva_noticia.setUrl_imagen_noticia(this.getTextfieldurlimagenescrearnoticias().getValue());
+		nueva_noticia.setContenido(this.getTextareacontenidocrearnoticias().getValue());
+		nueva_noticia.setFecha(this.getTextfieldfechacrearnoticias().getValue());
+		nueva_noticia.setLugar(this.getTextfiedlugarcrearnoticias().getValue());
+		nueva_noticia.setCrea((basededatos.Periodista) this._periodista.identificado);
+		nueva_noticia.setPublicada(false);
+		nueva_noticia.setValoraciones_positivas(0);
+		nueva_noticia.setValoraciones_negativas(0);
+		nueva_noticia.setResumen("");
+		// hacer consulta, y si no existe se crea
+		basededatos.Tematica tematica = new basededatos.Tematica();
+		tematica.setTitulo_tematica(this.getTextfieldtematicacrearnoticias().getValue());
+		nueva_noticia.pertenece_a.add(tematica);
 		this._periodista.Crear_noticias(); // Refrescar pagina
 	}
 }

@@ -26,7 +26,6 @@ public class SeccionCriteria extends AbstractORMCriteria {
 	public final AssociationExpression crea;
 	public final StringExpression titulo_seccion;
 	public final CollectionExpression aparece_en;
-	public final CollectionExpression pertenece_a_seccion;
 	
 	public SeccionCriteria(Criteria criteria) {
 		super(criteria);
@@ -37,7 +36,6 @@ public class SeccionCriteria extends AbstractORMCriteria {
 		crea = new AssociationExpression("crea", this);
 		titulo_seccion = new StringExpression("titulo_seccion", this);
 		aparece_en = new CollectionExpression("ORM_aparece_en", this);
-		pertenece_a_seccion = new CollectionExpression("ORM_pertenece_a_seccion", this);
 	}
 	
 	public SeccionCriteria(PersistentSession session) {
@@ -45,7 +43,7 @@ public class SeccionCriteria extends AbstractORMCriteria {
 	}
 	
 	public SeccionCriteria() throws PersistentException {
-		this(basededatos.MDS12324PFFornielesGomezPersistentManager.instance().getSession());
+		this(MDS12324PFFornielesGomezPersistentManager.instance().getSession());
 	}
 	
 	public EditorCriteria createEliminaCriteria() {
@@ -56,12 +54,8 @@ public class SeccionCriteria extends AbstractORMCriteria {
 		return new EditorCriteria(createCriteria("crea"));
 	}
 	
-	public basededatos.NoticiaCriteria createAparece_enCriteria() {
-		return new basededatos.NoticiaCriteria(createCriteria("ORM_aparece_en"));
-	}
-	
-	public basededatos.TematicaCriteria createPertenece_a_seccionCriteria() {
-		return new basededatos.TematicaCriteria(createCriteria("ORM_pertenece_a_seccion"));
+	public NoticiaCriteria createAparece_enCriteria() {
+		return new NoticiaCriteria(createCriteria("ORM_aparece_en"));
 	}
 	
 	public Seccion uniqueSeccion() {

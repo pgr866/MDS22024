@@ -30,8 +30,10 @@ public class EditorDetachedCriteria extends AbstractORMDetachedCriteria {
 	public final IntegerExpression telefono;
 	public final StringExpression url_foto_perfil;
 	public final CollectionExpression pertenece_a_identificado;
-	public final CollectionExpression es_valorado_por;
-	public final CollectionExpression es_valorada_por;
+	public final CollectionExpression es_valorado_positiva;
+	public final CollectionExpression es_valorado_negativa;
+	public final CollectionExpression es_valorada_positiva_por;
+	public final CollectionExpression es_valorada_negativa_por;
 	public final CollectionExpression es_eliminado_por;
 	public final CollectionExpression es_eliminada_por_editor;
 	public final CollectionExpression es_creada_por;
@@ -53,8 +55,10 @@ public class EditorDetachedCriteria extends AbstractORMDetachedCriteria {
 		telefono = new IntegerExpression("telefono", this.getDetachedCriteria());
 		url_foto_perfil = new StringExpression("url_foto_perfil", this.getDetachedCriteria());
 		pertenece_a_identificado = new CollectionExpression("ORM_pertenece_a_identificado", this.getDetachedCriteria());
-		es_valorado_por = new CollectionExpression("ORM_es_valorado_por", this.getDetachedCriteria());
-		es_valorada_por = new CollectionExpression("ORM_es_valorada_por", this.getDetachedCriteria());
+		es_valorado_positiva = new CollectionExpression("ORM_es_valorado_positiva", this.getDetachedCriteria());
+		es_valorado_negativa = new CollectionExpression("ORM_es_valorado_negativa", this.getDetachedCriteria());
+		es_valorada_positiva_por = new CollectionExpression("ORM_es_valorada_positiva_por", this.getDetachedCriteria());
+		es_valorada_negativa_por = new CollectionExpression("ORM_es_valorada_negativa_por", this.getDetachedCriteria());
 		es_eliminado_por = new CollectionExpression("ORM_es_eliminado_por", this.getDetachedCriteria());
 		es_eliminada_por_editor = new CollectionExpression("ORM_es_eliminada_por_editor", this.getDetachedCriteria());
 		es_creada_por = new CollectionExpression("ORM_es_creada_por", this.getDetachedCriteria());
@@ -77,8 +81,10 @@ public class EditorDetachedCriteria extends AbstractORMDetachedCriteria {
 		telefono = new IntegerExpression("telefono", this.getDetachedCriteria());
 		url_foto_perfil = new StringExpression("url_foto_perfil", this.getDetachedCriteria());
 		pertenece_a_identificado = new CollectionExpression("ORM_pertenece_a_identificado", this.getDetachedCriteria());
-		es_valorado_por = new CollectionExpression("ORM_es_valorado_por", this.getDetachedCriteria());
-		es_valorada_por = new CollectionExpression("ORM_es_valorada_por", this.getDetachedCriteria());
+		es_valorado_positiva = new CollectionExpression("ORM_es_valorado_positiva", this.getDetachedCriteria());
+		es_valorado_negativa = new CollectionExpression("ORM_es_valorado_negativa", this.getDetachedCriteria());
+		es_valorada_positiva_por = new CollectionExpression("ORM_es_valorada_positiva_por", this.getDetachedCriteria());
+		es_valorada_negativa_por = new CollectionExpression("ORM_es_valorada_negativa_por", this.getDetachedCriteria());
 		es_eliminado_por = new CollectionExpression("ORM_es_eliminado_por", this.getDetachedCriteria());
 		es_eliminada_por_editor = new CollectionExpression("ORM_es_eliminada_por_editor", this.getDetachedCriteria());
 		es_creada_por = new CollectionExpression("ORM_es_creada_por", this.getDetachedCriteria());
@@ -88,40 +94,48 @@ public class EditorDetachedCriteria extends AbstractORMDetachedCriteria {
 		es_ordenada = new AssociationExpression("es_ordenada", this.getDetachedCriteria());
 	}
 	
-	public basededatos.ComentarioDetachedCriteria createEs_eliminado_porCriteria() {
-		return new basededatos.ComentarioDetachedCriteria(createCriteria("ORM_es_eliminado_por"));
+	public ComentarioDetachedCriteria createEs_eliminado_porCriteria() {
+		return new ComentarioDetachedCriteria(createCriteria("ORM_es_eliminado_por"));
 	}
 	
-	public basededatos.NoticiaDetachedCriteria createEs_eliminada_por_editorCriteria() {
-		return new basededatos.NoticiaDetachedCriteria(createCriteria("ORM_es_eliminada_por_editor"));
+	public NoticiaDetachedCriteria createEs_eliminada_por_editorCriteria() {
+		return new NoticiaDetachedCriteria(createCriteria("ORM_es_eliminada_por_editor"));
 	}
 	
-	public basededatos.SeccionDetachedCriteria createEs_creada_porCriteria() {
-		return new basededatos.SeccionDetachedCriteria(createCriteria("ORM_es_creada_por"));
+	public SeccionDetachedCriteria createEs_creada_porCriteria() {
+		return new SeccionDetachedCriteria(createCriteria("ORM_es_creada_por"));
 	}
 	
-	public basededatos.SeccionDetachedCriteria createEs_eliminada_porCriteria() {
-		return new basededatos.SeccionDetachedCriteria(createCriteria("ORM_es_eliminada_por"));
+	public SeccionDetachedCriteria createEs_eliminada_porCriteria() {
+		return new SeccionDetachedCriteria(createCriteria("ORM_es_eliminada_por"));
 	}
 	
-	public basededatos.NoticiaDetachedCriteria createEs_publicada_porCriteria() {
-		return new basededatos.NoticiaDetachedCriteria(createCriteria("ORM_es_publicada_por"));
+	public NoticiaDetachedCriteria createEs_publicada_porCriteria() {
+		return new NoticiaDetachedCriteria(createCriteria("ORM_es_publicada_por"));
 	}
 	
 	public PortadaDetachedCriteria createEs_ordenadaCriteria() {
 		return new PortadaDetachedCriteria(createCriteria("es_ordenada"));
 	}
 	
-	public basededatos.ComentarioDetachedCriteria createPertenece_a_identificadoCriteria() {
-		return new basededatos.ComentarioDetachedCriteria(createCriteria("ORM_pertenece_a_identificado"));
+	public ComentarioDetachedCriteria createPertenece_a_identificadoCriteria() {
+		return new ComentarioDetachedCriteria(createCriteria("ORM_pertenece_a_identificado"));
 	}
 	
-	public basededatos.ComentarioDetachedCriteria createEs_valorado_porCriteria() {
-		return new basededatos.ComentarioDetachedCriteria(createCriteria("ORM_es_valorado_por"));
+	public ComentarioDetachedCriteria createEs_valorado_positivaCriteria() {
+		return new ComentarioDetachedCriteria(createCriteria("ORM_es_valorado_positiva"));
 	}
 	
-	public basededatos.NoticiaDetachedCriteria createEs_valorada_porCriteria() {
-		return new basededatos.NoticiaDetachedCriteria(createCriteria("ORM_es_valorada_por"));
+	public ComentarioDetachedCriteria createEs_valorado_negativaCriteria() {
+		return new ComentarioDetachedCriteria(createCriteria("ORM_es_valorado_negativa"));
+	}
+	
+	public NoticiaDetachedCriteria createEs_valorada_positiva_porCriteria() {
+		return new NoticiaDetachedCriteria(createCriteria("ORM_es_valorada_positiva_por"));
+	}
+	
+	public NoticiaDetachedCriteria createEs_valorada_negativa_porCriteria() {
+		return new NoticiaDetachedCriteria(createCriteria("ORM_es_valorada_negativa_por"));
 	}
 	
 	public Editor uniqueEditor(PersistentSession session) {

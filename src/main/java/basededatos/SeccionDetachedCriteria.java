@@ -26,7 +26,6 @@ public class SeccionDetachedCriteria extends AbstractORMDetachedCriteria {
 	public final AssociationExpression crea;
 	public final StringExpression titulo_seccion;
 	public final CollectionExpression aparece_en;
-	public final CollectionExpression pertenece_a_seccion;
 	
 	public SeccionDetachedCriteria() {
 		super(basededatos.Seccion.class, basededatos.SeccionCriteria.class);
@@ -37,7 +36,6 @@ public class SeccionDetachedCriteria extends AbstractORMDetachedCriteria {
 		crea = new AssociationExpression("crea", this.getDetachedCriteria());
 		titulo_seccion = new StringExpression("titulo_seccion", this.getDetachedCriteria());
 		aparece_en = new CollectionExpression("ORM_aparece_en", this.getDetachedCriteria());
-		pertenece_a_seccion = new CollectionExpression("ORM_pertenece_a_seccion", this.getDetachedCriteria());
 	}
 	
 	public SeccionDetachedCriteria(DetachedCriteria aDetachedCriteria) {
@@ -49,7 +47,6 @@ public class SeccionDetachedCriteria extends AbstractORMDetachedCriteria {
 		crea = new AssociationExpression("crea", this.getDetachedCriteria());
 		titulo_seccion = new StringExpression("titulo_seccion", this.getDetachedCriteria());
 		aparece_en = new CollectionExpression("ORM_aparece_en", this.getDetachedCriteria());
-		pertenece_a_seccion = new CollectionExpression("ORM_pertenece_a_seccion", this.getDetachedCriteria());
 	}
 	
 	public EditorDetachedCriteria createEliminaCriteria() {
@@ -60,12 +57,8 @@ public class SeccionDetachedCriteria extends AbstractORMDetachedCriteria {
 		return new EditorDetachedCriteria(createCriteria("crea"));
 	}
 	
-	public basededatos.NoticiaDetachedCriteria createAparece_enCriteria() {
-		return new basededatos.NoticiaDetachedCriteria(createCriteria("ORM_aparece_en"));
-	}
-	
-	public basededatos.TematicaDetachedCriteria createPertenece_a_seccionCriteria() {
-		return new basededatos.TematicaDetachedCriteria(createCriteria("ORM_pertenece_a_seccion"));
+	public NoticiaDetachedCriteria createAparece_enCriteria() {
+		return new NoticiaDetachedCriteria(createCriteria("ORM_aparece_en"));
 	}
 	
 	public Seccion uniqueSeccion(PersistentSession session) {

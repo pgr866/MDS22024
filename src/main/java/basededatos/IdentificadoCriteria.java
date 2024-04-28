@@ -30,8 +30,10 @@ public class IdentificadoCriteria extends AbstractORMCriteria {
 	public final IntegerExpression telefono;
 	public final StringExpression url_foto_perfil;
 	public final CollectionExpression pertenece_a_identificado;
-	public final CollectionExpression es_valorado_por;
-	public final CollectionExpression es_valorada_por;
+	public final CollectionExpression es_valorado_positiva;
+	public final CollectionExpression es_valorado_negativa;
+	public final CollectionExpression es_valorada_positiva_por;
+	public final CollectionExpression es_valorada_negativa_por;
 	
 	public IdentificadoCriteria(Criteria criteria) {
 		super(criteria);
@@ -46,8 +48,10 @@ public class IdentificadoCriteria extends AbstractORMCriteria {
 		telefono = new IntegerExpression("telefono", this);
 		url_foto_perfil = new StringExpression("url_foto_perfil", this);
 		pertenece_a_identificado = new CollectionExpression("ORM_pertenece_a_identificado", this);
-		es_valorado_por = new CollectionExpression("ORM_es_valorado_por", this);
-		es_valorada_por = new CollectionExpression("ORM_es_valorada_por", this);
+		es_valorado_positiva = new CollectionExpression("ORM_es_valorado_positiva", this);
+		es_valorado_negativa = new CollectionExpression("ORM_es_valorado_negativa", this);
+		es_valorada_positiva_por = new CollectionExpression("ORM_es_valorada_positiva_por", this);
+		es_valorada_negativa_por = new CollectionExpression("ORM_es_valorada_negativa_por", this);
 	}
 	
 	public IdentificadoCriteria(PersistentSession session) {
@@ -55,19 +59,27 @@ public class IdentificadoCriteria extends AbstractORMCriteria {
 	}
 	
 	public IdentificadoCriteria() throws PersistentException {
-		this(basededatos.MDS12324PFFornielesGomezPersistentManager.instance().getSession());
+		this(MDS12324PFFornielesGomezPersistentManager.instance().getSession());
 	}
 	
-	public basededatos.ComentarioCriteria createPertenece_a_identificadoCriteria() {
-		return new basededatos.ComentarioCriteria(createCriteria("ORM_pertenece_a_identificado"));
+	public ComentarioCriteria createPertenece_a_identificadoCriteria() {
+		return new ComentarioCriteria(createCriteria("ORM_pertenece_a_identificado"));
 	}
 	
-	public basededatos.ComentarioCriteria createEs_valorado_porCriteria() {
-		return new basededatos.ComentarioCriteria(createCriteria("ORM_es_valorado_por"));
+	public ComentarioCriteria createEs_valorado_positivaCriteria() {
+		return new ComentarioCriteria(createCriteria("ORM_es_valorado_positiva"));
 	}
 	
-	public basededatos.NoticiaCriteria createEs_valorada_porCriteria() {
-		return new basededatos.NoticiaCriteria(createCriteria("ORM_es_valorada_por"));
+	public ComentarioCriteria createEs_valorado_negativaCriteria() {
+		return new ComentarioCriteria(createCriteria("ORM_es_valorado_negativa"));
+	}
+	
+	public NoticiaCriteria createEs_valorada_positiva_porCriteria() {
+		return new NoticiaCriteria(createCriteria("ORM_es_valorada_positiva_por"));
+	}
+	
+	public NoticiaCriteria createEs_valorada_negativa_porCriteria() {
+		return new NoticiaCriteria(createCriteria("ORM_es_valorada_negativa_por"));
 	}
 	
 	public Identificado uniqueIdentificado() {

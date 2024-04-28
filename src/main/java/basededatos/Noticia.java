@@ -13,11 +13,6 @@
  */
 package basededatos;
 
-import org.orm.*;
-import org.hibernate.Query;
-import org.hibernate.LockMode;
-import java.util.List;
-
 import java.io.Serializable;
 import javax.persistence.*;
 @Entity
@@ -27,440 +22,26 @@ public class Noticia implements Serializable {
 	public Noticia() {
 	}
 	
-	public static Noticia loadNoticiaByORMID(int id_noticia) throws PersistentException {
-		try {
-			PersistentSession session = basededatos.MDS12324PFFornielesGomezPersistentManager.instance().getSession();
-			return loadNoticiaByORMID(session, id_noticia);
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			throw new PersistentException(e);
-		}
-	}
-	
-	public static Noticia getNoticiaByORMID(int id_noticia) throws PersistentException {
-		try {
-			PersistentSession session = basededatos.MDS12324PFFornielesGomezPersistentManager.instance().getSession();
-			return getNoticiaByORMID(session, id_noticia);
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			throw new PersistentException(e);
-		}
-	}
-	
-	public static Noticia loadNoticiaByORMID(int id_noticia, org.hibernate.LockMode lockMode) throws PersistentException {
-		try {
-			PersistentSession session = basededatos.MDS12324PFFornielesGomezPersistentManager.instance().getSession();
-			return loadNoticiaByORMID(session, id_noticia, lockMode);
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			throw new PersistentException(e);
-		}
-	}
-	
-	public static Noticia getNoticiaByORMID(int id_noticia, org.hibernate.LockMode lockMode) throws PersistentException {
-		try {
-			PersistentSession session = basededatos.MDS12324PFFornielesGomezPersistentManager.instance().getSession();
-			return getNoticiaByORMID(session, id_noticia, lockMode);
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			throw new PersistentException(e);
-		}
-	}
-	
-	public static Noticia loadNoticiaByORMID(PersistentSession session, int id_noticia) throws PersistentException {
-		try {
-			return (Noticia) session.load(basededatos.Noticia.class, Integer.valueOf(id_noticia));
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			throw new PersistentException(e);
-		}
-	}
-	
-	public static Noticia getNoticiaByORMID(PersistentSession session, int id_noticia) throws PersistentException {
-		try {
-			return (Noticia) session.get(basededatos.Noticia.class, Integer.valueOf(id_noticia));
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			throw new PersistentException(e);
-		}
-	}
-	
-	public static Noticia loadNoticiaByORMID(PersistentSession session, int id_noticia, org.hibernate.LockMode lockMode) throws PersistentException {
-		try {
-			return (Noticia) session.load(basededatos.Noticia.class, Integer.valueOf(id_noticia), lockMode);
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			throw new PersistentException(e);
-		}
-	}
-	
-	public static Noticia getNoticiaByORMID(PersistentSession session, int id_noticia, org.hibernate.LockMode lockMode) throws PersistentException {
-		try {
-			return (Noticia) session.get(basededatos.Noticia.class, Integer.valueOf(id_noticia), lockMode);
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			throw new PersistentException(e);
-		}
-	}
-	
-	public static List queryNoticia(String condition, String orderBy) throws PersistentException {
-		try {
-			PersistentSession session = basededatos.MDS12324PFFornielesGomezPersistentManager.instance().getSession();
-			return queryNoticia(session, condition, orderBy);
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			throw new PersistentException(e);
-		}
-	}
-	
-	public static List queryNoticia(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
-		try {
-			PersistentSession session = basededatos.MDS12324PFFornielesGomezPersistentManager.instance().getSession();
-			return queryNoticia(session, condition, orderBy, lockMode);
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			throw new PersistentException(e);
-		}
-	}
-	
-	public static Noticia[] listNoticiaByQuery(String condition, String orderBy) throws PersistentException {
-		try {
-			PersistentSession session = basededatos.MDS12324PFFornielesGomezPersistentManager.instance().getSession();
-			return listNoticiaByQuery(session, condition, orderBy);
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			throw new PersistentException(e);
-		}
-	}
-	
-	public static Noticia[] listNoticiaByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
-		try {
-			PersistentSession session = basededatos.MDS12324PFFornielesGomezPersistentManager.instance().getSession();
-			return listNoticiaByQuery(session, condition, orderBy, lockMode);
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			throw new PersistentException(e);
-		}
-	}
-	
-	public static List queryNoticia(PersistentSession session, String condition, String orderBy) throws PersistentException {
-		StringBuffer sb = new StringBuffer("From base_de_datos.Noticia as Noticia");
-		if (condition != null)
-			sb.append(" Where ").append(condition);
-		if (orderBy != null)
-			sb.append(" Order By ").append(orderBy);
-		try {
-			Query query = session.createQuery(sb.toString());
-			return query.list();
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			throw new PersistentException(e);
-		}
-	}
-	
-	public static List queryNoticia(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
-		StringBuffer sb = new StringBuffer("From base_de_datos.Noticia as Noticia");
-		if (condition != null)
-			sb.append(" Where ").append(condition);
-		if (orderBy != null)
-			sb.append(" Order By ").append(orderBy);
-		try {
-			Query query = session.createQuery(sb.toString());
-			query.setLockMode("Noticia", lockMode);
-			return query.list();
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			throw new PersistentException(e);
-		}
-	}
-	
-	public static Noticia[] listNoticiaByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
-		try {
-			List list = queryNoticia(session, condition, orderBy);
-			return (Noticia[]) list.toArray(new Noticia[list.size()]);
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			throw new PersistentException(e);
-		}
-	}
-	
-	public static Noticia[] listNoticiaByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
-		try {
-			List list = queryNoticia(session, condition, orderBy, lockMode);
-			return (Noticia[]) list.toArray(new Noticia[list.size()]);
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			throw new PersistentException(e);
-		}
-	}
-	
-	public static Noticia loadNoticiaByQuery(String condition, String orderBy) throws PersistentException {
-		try {
-			PersistentSession session = basededatos.MDS12324PFFornielesGomezPersistentManager.instance().getSession();
-			return loadNoticiaByQuery(session, condition, orderBy);
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			throw new PersistentException(e);
-		}
-	}
-	
-	public static Noticia loadNoticiaByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
-		try {
-			PersistentSession session = basededatos.MDS12324PFFornielesGomezPersistentManager.instance().getSession();
-			return loadNoticiaByQuery(session, condition, orderBy, lockMode);
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			throw new PersistentException(e);
-		}
-	}
-	
-	public static Noticia loadNoticiaByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
-		Noticia[] noticias = listNoticiaByQuery(session, condition, orderBy);
-		if (noticias != null && noticias.length > 0)
-			return noticias[0];
-		else
-			return null;
-	}
-	
-	public static Noticia loadNoticiaByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
-		Noticia[] noticias = listNoticiaByQuery(session, condition, orderBy, lockMode);
-		if (noticias != null && noticias.length > 0)
-			return noticias[0];
-		else
-			return null;
-	}
-	
-	public static java.util.Iterator iterateNoticiaByQuery(String condition, String orderBy) throws PersistentException {
-		try {
-			PersistentSession session = basededatos.MDS12324PFFornielesGomezPersistentManager.instance().getSession();
-			return iterateNoticiaByQuery(session, condition, orderBy);
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			throw new PersistentException(e);
-		}
-	}
-	
-	public static java.util.Iterator iterateNoticiaByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
-		try {
-			PersistentSession session = basededatos.MDS12324PFFornielesGomezPersistentManager.instance().getSession();
-			return iterateNoticiaByQuery(session, condition, orderBy, lockMode);
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			throw new PersistentException(e);
-		}
-	}
-	
-	public static java.util.Iterator iterateNoticiaByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
-		StringBuffer sb = new StringBuffer("From base_de_datos.Noticia as Noticia");
-		if (condition != null)
-			sb.append(" Where ").append(condition);
-		if (orderBy != null)
-			sb.append(" Order By ").append(orderBy);
-		try {
-			Query query = session.createQuery(sb.toString());
-			return query.iterate();
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			throw new PersistentException(e);
-		}
-	}
-	
-	public static java.util.Iterator iterateNoticiaByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
-		StringBuffer sb = new StringBuffer("From base_de_datos.Noticia as Noticia");
-		if (condition != null)
-			sb.append(" Where ").append(condition);
-		if (orderBy != null)
-			sb.append(" Order By ").append(orderBy);
-		try {
-			Query query = session.createQuery(sb.toString());
-			query.setLockMode("Noticia", lockMode);
-			return query.iterate();
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			throw new PersistentException(e);
-		}
-	}
-	
-	public static Noticia loadNoticiaByCriteria(NoticiaCriteria noticiaCriteria) {
-		Noticia[] noticias = listNoticiaByCriteria(noticiaCriteria);
-		if(noticias == null || noticias.length == 0) {
-			return null;
-		}
-		return noticias[0];
-	}
-	
-	public static Noticia[] listNoticiaByCriteria(NoticiaCriteria noticiaCriteria) {
-		return noticiaCriteria.listNoticia();
-	}
-	
-	public static Noticia createNoticia() {
-		return new basededatos.Noticia();
-	}
-	
-	public boolean save() throws PersistentException {
-		try {
-			basededatos.MDS12324PFFornielesGomezPersistentManager.instance().saveObject(this);
-			return true;
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			throw new PersistentException(e);
-		}
-	}
-	
-	public boolean delete() throws PersistentException {
-		try {
-			basededatos.MDS12324PFFornielesGomezPersistentManager.instance().deleteObject(this);
-			return true;
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			throw new PersistentException(e);
-		}
-	}
-	
-	public boolean refresh() throws PersistentException {
-		try {
-			basededatos.MDS12324PFFornielesGomezPersistentManager.instance().getSession().refresh(this);
-			return true;
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			throw new PersistentException(e);
-		}
-	}
-	
-	public boolean evict() throws PersistentException {
-		try {
-			basededatos.MDS12324PFFornielesGomezPersistentManager.instance().getSession().evict(this);
-			return true;
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			throw new PersistentException(e);
-		}
-	}
-	
-	public boolean deleteAndDissociate()throws PersistentException {
-		try {
-			if(getCrea() != null) {
-				getCrea().setEs_creada(null);
-			}
-			
-			basededatos.Editor[] lPublicas = publica.toArray();
-			for(int i = 0; i < lPublicas.length; i++) {
-				lPublicas[i].es_publicada_por.remove(this);
-			}
-			basededatos.Identificado[] lValoras = valora.toArray();
-			for(int i = 0; i < lValoras.length; i++) {
-				lValoras[i].es_valorada_por.remove(this);
-			}
-			basededatos.Tematica[] lPertenece_as = pertenece_a.toArray();
-			for(int i = 0; i < lPertenece_as.length; i++) {
-				lPertenece_as[i].contiene.remove(this);
-			}
-			basededatos.Seccion[] lSeccion_contiene_noticiass = seccion_contiene_noticias.toArray();
-			for(int i = 0; i < lSeccion_contiene_noticiass.length; i++) {
-				lSeccion_contiene_noticiass[i].aparece_en.remove(this);
-			}
-			basededatos.Comentario[] lPertenece_a_noticias = pertenece_a_noticia.toArray();
-			for(int i = 0; i < lPertenece_a_noticias.length; i++) {
-				lPertenece_a_noticias[i].setNoticia_contiene_comentarios(null);
-			}
-			basededatos.Editor[] lEliminas = elimina.toArray();
-			for(int i = 0; i < lEliminas.length; i++) {
-				lEliminas[i].es_eliminada_por_editor.remove(this);
-			}
-			return delete();
-		}
-		catch(Exception e) {
-			e.printStackTrace();
-			throw new PersistentException(e);
-		}
-	}
-	
-	public boolean deleteAndDissociate(org.orm.PersistentSession session)throws PersistentException {
-		try {
-			if(getCrea() != null) {
-				getCrea().setEs_creada(null);
-			}
-			
-			basededatos.Editor[] lPublicas = publica.toArray();
-			for(int i = 0; i < lPublicas.length; i++) {
-				lPublicas[i].es_publicada_por.remove(this);
-			}
-			basededatos.Identificado[] lValoras = valora.toArray();
-			for(int i = 0; i < lValoras.length; i++) {
-				lValoras[i].es_valorada_por.remove(this);
-			}
-			basededatos.Tematica[] lPertenece_as = pertenece_a.toArray();
-			for(int i = 0; i < lPertenece_as.length; i++) {
-				lPertenece_as[i].contiene.remove(this);
-			}
-			basededatos.Seccion[] lSeccion_contiene_noticiass = seccion_contiene_noticias.toArray();
-			for(int i = 0; i < lSeccion_contiene_noticiass.length; i++) {
-				lSeccion_contiene_noticiass[i].aparece_en.remove(this);
-			}
-			basededatos.Comentario[] lPertenece_a_noticias = pertenece_a_noticia.toArray();
-			for(int i = 0; i < lPertenece_a_noticias.length; i++) {
-				lPertenece_a_noticias[i].setNoticia_contiene_comentarios(null);
-			}
-			basededatos.Editor[] lEliminas = elimina.toArray();
-			for(int i = 0; i < lEliminas.length; i++) {
-				lEliminas[i].es_eliminada_por_editor.remove(this);
-			}
-			try {
-				session.delete(this);
-				return true;
-			} catch (Exception e) {
-				return false;
-			}
-		}
-		catch(Exception e) {
-			e.printStackTrace();
-			throw new PersistentException(e);
-		}
-	}
-	
 	private java.util.Set this_getSet (int key) {
-		if (key == basededatos.ORMConstants.KEY_NOTICIA_PUBLICA) {
+		if (key == ORMConstants.KEY_NOTICIA_PUBLICA) {
 			return ORM_publica;
 		}
-		else if (key == basededatos.ORMConstants.KEY_NOTICIA_VALORA) {
-			return ORM_valora;
+		else if (key == ORMConstants.KEY_NOTICIA_VALORA_POSITIVA) {
+			return ORM_valora_positiva;
 		}
-		else if (key == basededatos.ORMConstants.KEY_NOTICIA_PERTENECE_A) {
+		else if (key == ORMConstants.KEY_NOTICIA_PERTENECE_A) {
 			return ORM_pertenece_a;
 		}
-		else if (key == basededatos.ORMConstants.KEY_NOTICIA_SECCION_CONTIENE_NOTICIAS) {
+		else if (key == ORMConstants.KEY_NOTICIA_VALORA_NEGATIVA) {
+			return ORM_valora_negativa;
+		}
+		else if (key == ORMConstants.KEY_NOTICIA_SECCION_CONTIENE_NOTICIAS) {
 			return ORM_seccion_contiene_noticias;
 		}
-		else if (key == basededatos.ORMConstants.KEY_NOTICIA_PERTENECE_A_NOTICIA) {
+		else if (key == ORMConstants.KEY_NOTICIA_PERTENECE_A_NOTICIA) {
 			return ORM_pertenece_a_noticia;
 		}
-		else if (key == basededatos.ORMConstants.KEY_NOTICIA_ELIMINA) {
+		else if (key == ORMConstants.KEY_NOTICIA_ELIMINA) {
 			return ORM_elimina;
 		}
 		
@@ -468,8 +49,12 @@ public class Noticia implements Serializable {
 	}
 	
 	private void this_setOwner(Object owner, int key) {
-		if (key == basededatos.ORMConstants.KEY_NOTICIA_CREA) {
+		if (key == ORMConstants.KEY_NOTICIA_CREA) {
 			this.crea = (basededatos.Periodista) owner;
+		}
+		
+		else if (key == ORMConstants.KEY_NOTICIA_PORTADA_CONTIENE_NOTICIAS) {
+			this.portada_contiene_noticias = (basededatos.Portada) owner;
 		}
 	}
 	
@@ -487,12 +72,18 @@ public class Noticia implements Serializable {
 	
 	@Column(name="Id_noticia", nullable=false, length=10)	
 	@Id	
-	@GeneratedValue(generator="BASE_DE_DATOS_NOTICIA_ID_NOTICIA_GENERATOR")	
-	@org.hibernate.annotations.GenericGenerator(name="BASE_DE_DATOS_NOTICIA_ID_NOTICIA_GENERATOR", strategy="native")	
+	@GeneratedValue(generator="BASEDEDATOS_NOTICIA_ID_NOTICIA_GENERATOR")	
+	@org.hibernate.annotations.GenericGenerator(name="BASEDEDATOS_NOTICIA_ID_NOTICIA_GENERATOR", strategy="native")	
 	private int id_noticia;
 	
-	@OneToOne(optional=false, targetEntity=basededatos.Periodista.class, fetch=FetchType.LAZY)	
-	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
+	@ManyToOne(targetEntity=basededatos.Portada.class, fetch=FetchType.LAZY)	
+	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.LOCK})	
+	@JoinColumns(value={ @JoinColumn(name="PortadaId_portada", referencedColumnName="Id_portada", nullable=false) }, foreignKey=@ForeignKey(name="FKNoticia219859"))	
+	@org.hibernate.annotations.LazyToOne(value=org.hibernate.annotations.LazyToOneOption.NO_PROXY)	
+	private basededatos.Portada portada_contiene_noticias;
+	
+	@ManyToOne(targetEntity=basededatos.Periodista.class, fetch=FetchType.LAZY)	
+	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.LOCK})	
 	@JoinColumns(value={ @JoinColumn(name="PeriodistaIdentificadoId", referencedColumnName="IdentificadoId", nullable=false) }, foreignKey=@ForeignKey(name="FKNoticia644303"))	
 	@org.hibernate.annotations.LazyToOne(value=org.hibernate.annotations.LazyToOneOption.NO_PROXY)	
 	private basededatos.Periodista crea;
@@ -515,9 +106,6 @@ public class Noticia implements Serializable {
 	@Column(name="Contenido", nullable=true, length=255)	
 	private String contenido;
 	
-	@Column(name="Autor", nullable=true, length=10)	
-	private int autor;
-	
 	@Column(name="Publicada", nullable=false, length=1)	
 	private boolean publicada;
 	
@@ -537,13 +125,19 @@ public class Noticia implements Serializable {
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
 	@JoinTable(name="Identificado_Noticia", joinColumns={ @JoinColumn(name="NoticiaId_noticia") }, inverseJoinColumns={ @JoinColumn(name="IdentificadoId") })	
 	@org.hibernate.annotations.LazyCollection(org.hibernate.annotations.LazyCollectionOption.TRUE)	
-	private java.util.Set ORM_valora = new java.util.HashSet();
+	private java.util.Set ORM_valora_positiva = new java.util.HashSet();
 	
 	@ManyToMany(targetEntity=basededatos.Tematica.class)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
 	@JoinTable(name="Tematica_Noticia", joinColumns={ @JoinColumn(name="NoticiaId_noticia") }, inverseJoinColumns={ @JoinColumn(name="TematicaId_tematica") })	
 	@org.hibernate.annotations.LazyCollection(org.hibernate.annotations.LazyCollectionOption.TRUE)	
 	private java.util.Set ORM_pertenece_a = new java.util.HashSet();
+	
+	@ManyToMany(targetEntity=basededatos.Identificado.class)	
+	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
+	@JoinTable(name="Identificado_Noticia2", joinColumns={ @JoinColumn(name="NoticiaId_noticia") }, inverseJoinColumns={ @JoinColumn(name="IdentificadoId") })	
+	@org.hibernate.annotations.LazyCollection(org.hibernate.annotations.LazyCollectionOption.TRUE)	
+	private java.util.Set ORM_valora_negativa = new java.util.HashSet();
 	
 	@ManyToMany(mappedBy="ORM_aparece_en", targetEntity=basededatos.Seccion.class)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
@@ -620,14 +214,6 @@ public class Noticia implements Serializable {
 		return contenido;
 	}
 	
-	public void setAutor(int value) {
-		this.autor = value;
-	}
-	
-	public int getAutor() {
-		return autor;
-	}
-	
 	public void setPublicada(boolean value) {
 		this.publicada = value;
 	}
@@ -661,18 +247,14 @@ public class Noticia implements Serializable {
 	}
 	
 	@Transient	
-	public final basededatos.EditorSetCollection publica = new basededatos.EditorSetCollection(this, _ormAdapter, basededatos.ORMConstants.KEY_NOTICIA_PUBLICA, basededatos.ORMConstants.KEY_EDITOR_ES_PUBLICADA_POR, basededatos.ORMConstants.KEY_MUL_MANY_TO_MANY);
+	public final basededatos.EditorSetCollection publica = new basededatos.EditorSetCollection(this, _ormAdapter, ORMConstants.KEY_NOTICIA_PUBLICA, ORMConstants.KEY_EDITOR_ES_PUBLICADA_POR, ORMConstants.KEY_MUL_MANY_TO_MANY);
 	
 	public void setCrea(basededatos.Periodista value) {
-		if (this.crea != value) {
-			basededatos.Periodista lcrea = this.crea;
-			this.crea = value;
-			if (value != null) {
-				crea.setEs_creada(this);
-			}
-			if (lcrea != null && lcrea.getEs_creada() == this) {
-				lcrea.setEs_creada(null);
-			}
+		if (crea != null) {
+			crea.es_creada.remove(this);
+		}
+		if (value != null) {
+			value.es_creada.add(this);
 		}
 	}
 	
@@ -680,16 +262,27 @@ public class Noticia implements Serializable {
 		return crea;
 	}
 	
-	private void setORM_Valora(java.util.Set value) {
-		this.ORM_valora = value;
+	/**
+	 * This method is for internal use only.
+	 */
+	public void setORM_Crea(basededatos.Periodista value) {
+		this.crea = value;
 	}
 	
-	private java.util.Set getORM_Valora() {
-		return ORM_valora;
+	private basededatos.Periodista getORM_Crea() {
+		return crea;
+	}
+	
+	private void setORM_Valora_positiva(java.util.Set value) {
+		this.ORM_valora_positiva = value;
+	}
+	
+	private java.util.Set getORM_Valora_positiva() {
+		return ORM_valora_positiva;
 	}
 	
 	@Transient	
-	public final basededatos.IdentificadoSetCollection valora = new basededatos.IdentificadoSetCollection(this, _ormAdapter, basededatos.ORMConstants.KEY_NOTICIA_VALORA, basededatos.ORMConstants.KEY_IDENTIFICADO_ES_VALORADA_POR, basededatos.ORMConstants.KEY_MUL_MANY_TO_MANY);
+	public final basededatos.IdentificadoSetCollection valora_positiva = new basededatos.IdentificadoSetCollection(this, _ormAdapter, ORMConstants.KEY_NOTICIA_VALORA_POSITIVA, ORMConstants.KEY_IDENTIFICADO_ES_VALORADA_POSITIVA_POR, ORMConstants.KEY_MUL_MANY_TO_MANY);
 	
 	private void setORM_Pertenece_a(java.util.Set value) {
 		this.ORM_pertenece_a = value;
@@ -700,7 +293,18 @@ public class Noticia implements Serializable {
 	}
 	
 	@Transient	
-	public final basededatos.TematicaSetCollection pertenece_a = new basededatos.TematicaSetCollection(this, _ormAdapter, basededatos.ORMConstants.KEY_NOTICIA_PERTENECE_A, basededatos.ORMConstants.KEY_TEMATICA_CONTIENE, basededatos.ORMConstants.KEY_MUL_MANY_TO_MANY);
+	public final basededatos.TematicaSetCollection pertenece_a = new basededatos.TematicaSetCollection(this, _ormAdapter, ORMConstants.KEY_NOTICIA_PERTENECE_A, ORMConstants.KEY_TEMATICA_CONTIENE, ORMConstants.KEY_MUL_MANY_TO_MANY);
+	
+	private void setORM_Valora_negativa(java.util.Set value) {
+		this.ORM_valora_negativa = value;
+	}
+	
+	private java.util.Set getORM_Valora_negativa() {
+		return ORM_valora_negativa;
+	}
+	
+	@Transient	
+	public final basededatos.IdentificadoSetCollection valora_negativa = new basededatos.IdentificadoSetCollection(this, _ormAdapter, ORMConstants.KEY_NOTICIA_VALORA_NEGATIVA, ORMConstants.KEY_IDENTIFICADO_ES_VALORADA_NEGATIVA_POR, ORMConstants.KEY_MUL_MANY_TO_MANY);
 	
 	private void setORM_Seccion_contiene_noticias(java.util.Set value) {
 		this.ORM_seccion_contiene_noticias = value;
@@ -711,7 +315,7 @@ public class Noticia implements Serializable {
 	}
 	
 	@Transient	
-	public final basededatos.SeccionSetCollection seccion_contiene_noticias = new basededatos.SeccionSetCollection(this, _ormAdapter, basededatos.ORMConstants.KEY_NOTICIA_SECCION_CONTIENE_NOTICIAS, basededatos.ORMConstants.KEY_SECCION_APARECE_EN, basededatos.ORMConstants.KEY_MUL_MANY_TO_MANY);
+	public final basededatos.SeccionSetCollection seccion_contiene_noticias = new basededatos.SeccionSetCollection(this, _ormAdapter, ORMConstants.KEY_NOTICIA_SECCION_CONTIENE_NOTICIAS, ORMConstants.KEY_SECCION_APARECE_EN, ORMConstants.KEY_MUL_MANY_TO_MANY);
 	
 	private void setORM_Pertenece_a_noticia(java.util.Set value) {
 		this.ORM_pertenece_a_noticia = value;
@@ -722,7 +326,7 @@ public class Noticia implements Serializable {
 	}
 	
 	@Transient	
-	public final basededatos.ComentarioSetCollection pertenece_a_noticia = new basededatos.ComentarioSetCollection(this, _ormAdapter, basededatos.ORMConstants.KEY_NOTICIA_PERTENECE_A_NOTICIA, basededatos.ORMConstants.KEY_COMENTARIO_NOTICIA_CONTIENE_COMENTARIOS, basededatos.ORMConstants.KEY_MUL_ONE_TO_MANY);
+	public final basededatos.ComentarioSetCollection pertenece_a_noticia = new basededatos.ComentarioSetCollection(this, _ormAdapter, ORMConstants.KEY_NOTICIA_PERTENECE_A_NOTICIA, ORMConstants.KEY_COMENTARIO_NOTICIA_CONTIENE_COMENTARIOS, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	private void setORM_Elimina(java.util.Set value) {
 		this.ORM_elimina = value;
@@ -733,7 +337,31 @@ public class Noticia implements Serializable {
 	}
 	
 	@Transient	
-	public final basededatos.EditorSetCollection elimina = new basededatos.EditorSetCollection(this, _ormAdapter, basededatos.ORMConstants.KEY_NOTICIA_ELIMINA, basededatos.ORMConstants.KEY_EDITOR_ES_ELIMINADA_POR_EDITOR, basededatos.ORMConstants.KEY_MUL_MANY_TO_MANY);
+	public final basededatos.EditorSetCollection elimina = new basededatos.EditorSetCollection(this, _ormAdapter, ORMConstants.KEY_NOTICIA_ELIMINA, ORMConstants.KEY_EDITOR_ES_ELIMINADA_POR_EDITOR, ORMConstants.KEY_MUL_MANY_TO_MANY);
+	
+	public void setPortada_contiene_noticias(basededatos.Portada value) {
+		if (portada_contiene_noticias != null) {
+			portada_contiene_noticias.aparece_en_portada.remove(this);
+		}
+		if (value != null) {
+			value.aparece_en_portada.add(this);
+		}
+	}
+	
+	public basededatos.Portada getPortada_contiene_noticias() {
+		return portada_contiene_noticias;
+	}
+	
+	/**
+	 * This method is for internal use only.
+	 */
+	public void setORM_Portada_contiene_noticias(basededatos.Portada value) {
+		this.portada_contiene_noticias = value;
+	}
+	
+	private basededatos.Portada getORM_Portada_contiene_noticias() {
+		return portada_contiene_noticias;
+	}
 	
 	public String toString() {
 		return String.valueOf(getId_noticia());

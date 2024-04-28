@@ -20,6 +20,8 @@ import org.orm.criteria.*;
 
 public class NoticiaDetachedCriteria extends AbstractORMDetachedCriteria {
 	public final IntegerExpression id_noticia;
+	public final IntegerExpression portada_contiene_noticiasId;
+	public final AssociationExpression portada_contiene_noticias;
 	public final IntegerExpression creaId;
 	public final AssociationExpression crea;
 	public final StringExpression titulo;
@@ -28,13 +30,13 @@ public class NoticiaDetachedCriteria extends AbstractORMDetachedCriteria {
 	public final StringExpression lugar;
 	public final StringExpression resumen;
 	public final StringExpression contenido;
-	public final IntegerExpression autor;
 	public final BooleanExpression publicada;
 	public final IntegerExpression valoraciones_positivas;
 	public final IntegerExpression valoraciones_negativas;
 	public final CollectionExpression publica;
-	public final CollectionExpression valora;
+	public final CollectionExpression valora_positiva;
 	public final CollectionExpression pertenece_a;
+	public final CollectionExpression valora_negativa;
 	public final CollectionExpression seccion_contiene_noticias;
 	public final CollectionExpression pertenece_a_noticia;
 	public final CollectionExpression elimina;
@@ -42,6 +44,8 @@ public class NoticiaDetachedCriteria extends AbstractORMDetachedCriteria {
 	public NoticiaDetachedCriteria() {
 		super(basededatos.Noticia.class, basededatos.NoticiaCriteria.class);
 		id_noticia = new IntegerExpression("id_noticia", this.getDetachedCriteria());
+		portada_contiene_noticiasId = new IntegerExpression("portada_contiene_noticias.id_portada", this.getDetachedCriteria());
+		portada_contiene_noticias = new AssociationExpression("portada_contiene_noticias", this.getDetachedCriteria());
 		creaId = new IntegerExpression("crea.", this.getDetachedCriteria());
 		crea = new AssociationExpression("crea", this.getDetachedCriteria());
 		titulo = new StringExpression("titulo", this.getDetachedCriteria());
@@ -50,13 +54,13 @@ public class NoticiaDetachedCriteria extends AbstractORMDetachedCriteria {
 		lugar = new StringExpression("lugar", this.getDetachedCriteria());
 		resumen = new StringExpression("resumen", this.getDetachedCriteria());
 		contenido = new StringExpression("contenido", this.getDetachedCriteria());
-		autor = new IntegerExpression("autor", this.getDetachedCriteria());
 		publicada = new BooleanExpression("publicada", this.getDetachedCriteria());
 		valoraciones_positivas = new IntegerExpression("valoraciones_positivas", this.getDetachedCriteria());
 		valoraciones_negativas = new IntegerExpression("valoraciones_negativas", this.getDetachedCriteria());
 		publica = new CollectionExpression("ORM_publica", this.getDetachedCriteria());
-		valora = new CollectionExpression("ORM_valora", this.getDetachedCriteria());
+		valora_positiva = new CollectionExpression("ORM_valora_positiva", this.getDetachedCriteria());
 		pertenece_a = new CollectionExpression("ORM_pertenece_a", this.getDetachedCriteria());
+		valora_negativa = new CollectionExpression("ORM_valora_negativa", this.getDetachedCriteria());
 		seccion_contiene_noticias = new CollectionExpression("ORM_seccion_contiene_noticias", this.getDetachedCriteria());
 		pertenece_a_noticia = new CollectionExpression("ORM_pertenece_a_noticia", this.getDetachedCriteria());
 		elimina = new CollectionExpression("ORM_elimina", this.getDetachedCriteria());
@@ -65,6 +69,8 @@ public class NoticiaDetachedCriteria extends AbstractORMDetachedCriteria {
 	public NoticiaDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, basededatos.NoticiaCriteria.class);
 		id_noticia = new IntegerExpression("id_noticia", this.getDetachedCriteria());
+		portada_contiene_noticiasId = new IntegerExpression("portada_contiene_noticias.id_portada", this.getDetachedCriteria());
+		portada_contiene_noticias = new AssociationExpression("portada_contiene_noticias", this.getDetachedCriteria());
 		creaId = new IntegerExpression("crea.", this.getDetachedCriteria());
 		crea = new AssociationExpression("crea", this.getDetachedCriteria());
 		titulo = new StringExpression("titulo", this.getDetachedCriteria());
@@ -73,44 +79,52 @@ public class NoticiaDetachedCriteria extends AbstractORMDetachedCriteria {
 		lugar = new StringExpression("lugar", this.getDetachedCriteria());
 		resumen = new StringExpression("resumen", this.getDetachedCriteria());
 		contenido = new StringExpression("contenido", this.getDetachedCriteria());
-		autor = new IntegerExpression("autor", this.getDetachedCriteria());
 		publicada = new BooleanExpression("publicada", this.getDetachedCriteria());
 		valoraciones_positivas = new IntegerExpression("valoraciones_positivas", this.getDetachedCriteria());
 		valoraciones_negativas = new IntegerExpression("valoraciones_negativas", this.getDetachedCriteria());
 		publica = new CollectionExpression("ORM_publica", this.getDetachedCriteria());
-		valora = new CollectionExpression("ORM_valora", this.getDetachedCriteria());
+		valora_positiva = new CollectionExpression("ORM_valora_positiva", this.getDetachedCriteria());
 		pertenece_a = new CollectionExpression("ORM_pertenece_a", this.getDetachedCriteria());
+		valora_negativa = new CollectionExpression("ORM_valora_negativa", this.getDetachedCriteria());
 		seccion_contiene_noticias = new CollectionExpression("ORM_seccion_contiene_noticias", this.getDetachedCriteria());
 		pertenece_a_noticia = new CollectionExpression("ORM_pertenece_a_noticia", this.getDetachedCriteria());
 		elimina = new CollectionExpression("ORM_elimina", this.getDetachedCriteria());
+	}
+	
+	public PortadaDetachedCriteria createPortada_contiene_noticiasCriteria() {
+		return new PortadaDetachedCriteria(createCriteria("portada_contiene_noticias"));
 	}
 	
 	public PeriodistaDetachedCriteria createCreaCriteria() {
 		return new PeriodistaDetachedCriteria(createCriteria("crea"));
 	}
 	
-	public basededatos.EditorDetachedCriteria createPublicaCriteria() {
-		return new basededatos.EditorDetachedCriteria(createCriteria("ORM_publica"));
+	public EditorDetachedCriteria createPublicaCriteria() {
+		return new EditorDetachedCriteria(createCriteria("ORM_publica"));
 	}
 	
-	public basededatos.IdentificadoDetachedCriteria createValoraCriteria() {
-		return new basededatos.IdentificadoDetachedCriteria(createCriteria("ORM_valora"));
+	public IdentificadoDetachedCriteria createValora_positivaCriteria() {
+		return new IdentificadoDetachedCriteria(createCriteria("ORM_valora_positiva"));
 	}
 	
-	public basededatos.TematicaDetachedCriteria createPertenece_aCriteria() {
-		return new basededatos.TematicaDetachedCriteria(createCriteria("ORM_pertenece_a"));
+	public TematicaDetachedCriteria createPertenece_aCriteria() {
+		return new TematicaDetachedCriteria(createCriteria("ORM_pertenece_a"));
 	}
 	
-	public basededatos.SeccionDetachedCriteria createSeccion_contiene_noticiasCriteria() {
-		return new basededatos.SeccionDetachedCriteria(createCriteria("ORM_seccion_contiene_noticias"));
+	public IdentificadoDetachedCriteria createValora_negativaCriteria() {
+		return new IdentificadoDetachedCriteria(createCriteria("ORM_valora_negativa"));
 	}
 	
-	public basededatos.ComentarioDetachedCriteria createPertenece_a_noticiaCriteria() {
-		return new basededatos.ComentarioDetachedCriteria(createCriteria("ORM_pertenece_a_noticia"));
+	public SeccionDetachedCriteria createSeccion_contiene_noticiasCriteria() {
+		return new SeccionDetachedCriteria(createCriteria("ORM_seccion_contiene_noticias"));
 	}
 	
-	public basededatos.EditorDetachedCriteria createEliminaCriteria() {
-		return new basededatos.EditorDetachedCriteria(createCriteria("ORM_elimina"));
+	public ComentarioDetachedCriteria createPertenece_a_noticiaCriteria() {
+		return new ComentarioDetachedCriteria(createCriteria("ORM_pertenece_a_noticia"));
+	}
+	
+	public EditorDetachedCriteria createEliminaCriteria() {
+		return new EditorDetachedCriteria(createCriteria("ORM_elimina"));
 	}
 	
 	public Noticia uniqueNoticia(PersistentSession session) {

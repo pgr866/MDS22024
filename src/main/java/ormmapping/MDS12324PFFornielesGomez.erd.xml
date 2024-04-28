@@ -2,10 +2,9 @@
 
 <Model quotesql="1" tablecharset="" mysql_version="504" mssql_version="2005" derby_version="106" ingres_version="9">
   <Entity name="Portada" Unlogged="false" PKClustered="0" Temporal="false" TemporalStartTimeColumn="null" TemporalEndTimeColumn="null" TemporalHistoryTable="null">
-    <Column name="SeccionId_seccion">
+    <Column name="Id_portada">
       <PrimaryKey>true</PrimaryKey>
-      <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Base de datos.Seccion.Id_seccion</ReferencedColumn>
+      <ForeignKey>false</ForeignKey>
       <Type>9</Type>
       <Length>10</Length>
       <Nullable>false</Nullable>
@@ -17,7 +16,7 @@
     <Column name="EditorIdentificadoId">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Base de datos.Editor.IdentificadoId</ReferencedColumn>
+      <ReferencedColumn>basededatos.Editor.IdentificadoId</ReferencedColumn>
       <Type>9</Type>
       <Length>10</Length>
       <Nullable>false</Nullable>
@@ -42,7 +41,7 @@
     <Column name="EditorIdentificadoId2">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Base de datos.Editor.IdentificadoId</ReferencedColumn>
+      <ReferencedColumn>basededatos.Editor.IdentificadoId</ReferencedColumn>
       <Type>9</Type>
       <Length>10</Length>
       <Nullable>false</Nullable>
@@ -54,7 +53,7 @@
     <Column name="EditorIdentificadoId">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Base de datos.Editor.IdentificadoId</ReferencedColumn>
+      <ReferencedColumn>basededatos.Editor.IdentificadoId</ReferencedColumn>
       <Type>9</Type>
       <Length>10</Length>
       <Nullable>false</Nullable>
@@ -111,10 +110,22 @@
       <Index>false</Index>
       <UserTypes/>
     </Column>
+    <Column name="PortadaId_portada">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>basededatos.Portada.Id_portada</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
     <Column name="PeriodistaIdentificadoId">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Base de datos.Periodista.IdentificadoId</ReferencedColumn>
+      <ReferencedColumn>basededatos.Periodista.IdentificadoId</ReferencedColumn>
       <Type>9</Type>
       <Length>10</Length>
       <Nullable>false</Nullable>
@@ -189,17 +200,6 @@
       <Index>false</Index>
       <UserTypes/>
     </Column>
-    <Column name="Autor">
-      <PrimaryKey>false</PrimaryKey>
-      <ForeignKey>false</ForeignKey>
-      <Type>9</Type>
-      <Length>10</Length>
-      <Nullable>true</Nullable>
-      <IDGenerator>native</IDGenerator>
-      <Unique>false</Unique>
-      <Index>false</Index>
-      <UserTypes/>
-    </Column>
     <Column name="Publicada">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>false</ForeignKey>
@@ -249,7 +249,7 @@
     <Column name="IdentificadoId">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Base de datos.Identificado.Id</ReferencedColumn>
+      <ReferencedColumn>basededatos.Identificado.Id</ReferencedColumn>
       <Type>9</Type>
       <Length>10</Length>
       <Nullable>false</Nullable>
@@ -261,7 +261,7 @@
     <Column name="EditorIdentificadoId">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Base de datos.Editor.IdentificadoId</ReferencedColumn>
+      <ReferencedColumn>basededatos.Editor.IdentificadoId</ReferencedColumn>
       <Type>9</Type>
       <Length>10</Length>
       <Nullable>false</Nullable>
@@ -273,21 +273,10 @@
     <Column name="NoticiaId_noticia">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Base de datos.Noticia.Id_noticia</ReferencedColumn>
+      <ReferencedColumn>basededatos.Noticia.Id_noticia</ReferencedColumn>
       <Type>9</Type>
       <Length>10</Length>
       <Nullable>false</Nullable>
-      <IDGenerator>native</IDGenerator>
-      <Unique>false</Unique>
-      <Index>false</Index>
-      <UserTypes/>
-    </Column>
-    <Column name="Propietario">
-      <PrimaryKey>false</PrimaryKey>
-      <ForeignKey>false</ForeignKey>
-      <Type>9</Type>
-      <Length>10</Length>
-      <Nullable>true</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
       <Index>false</Index>
@@ -443,7 +432,7 @@
     <Column name="IdentificadoId">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Base de datos.Identificado.Id</ReferencedColumn>
+      <ReferencedColumn>basededatos.Identificado.Id</ReferencedColumn>
       <Type>9</Type>
       <Length>10</Length>
       <Nullable>false</Nullable>
@@ -468,7 +457,7 @@
     <Column name="IdentificadoId">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Base de datos.Identificado.Id</ReferencedColumn>
+      <ReferencedColumn>basededatos.Identificado.Id</ReferencedColumn>
       <Type>9</Type>
       <Length>10</Length>
       <Nullable>false</Nullable>
@@ -490,10 +479,21 @@
       <Index>false</Index>
       <UserTypes/>
     </Column>
+    <Column name="EsEliminado">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>1</Type>
+      <Length>1</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
     <Column name="IdentificadoId">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Base de datos.Identificado.Id</ReferencedColumn>
+      <ReferencedColumn>basededatos.Identificado.Id</ReferencedColumn>
       <Type>9</Type>
       <Length>10</Length>
       <Nullable>false</Nullable>
@@ -507,7 +507,7 @@
     <Column name="TematicaId_tematica">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Base de datos.Tematica.Id_tematica</ReferencedColumn>
+      <ReferencedColumn>basededatos.Tematica.Id_tematica</ReferencedColumn>
       <Type>9</Type>
       <Length>10</Length>
       <Nullable>false</Nullable>
@@ -519,7 +519,7 @@
     <Column name="NoticiaId_noticia">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Base de datos.Noticia.Id_noticia</ReferencedColumn>
+      <ReferencedColumn>basededatos.Noticia.Id_noticia</ReferencedColumn>
       <Type>9</Type>
       <Length>10</Length>
       <Nullable>false</Nullable>
@@ -533,7 +533,7 @@
     <Column name="IdentificadoId">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Base de datos.Identificado.Id</ReferencedColumn>
+      <ReferencedColumn>basededatos.Identificado.Id</ReferencedColumn>
       <Type>9</Type>
       <Length>10</Length>
       <Nullable>false</Nullable>
@@ -545,7 +545,7 @@
     <Column name="NoticiaId_noticia">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Base de datos.Noticia.Id_noticia</ReferencedColumn>
+      <ReferencedColumn>basededatos.Noticia.Id_noticia</ReferencedColumn>
       <Type>9</Type>
       <Length>10</Length>
       <Nullable>false</Nullable>
@@ -559,7 +559,7 @@
     <Column name="NoticiaId_noticia">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Base de datos.Noticia.Id_noticia</ReferencedColumn>
+      <ReferencedColumn>basededatos.Noticia.Id_noticia</ReferencedColumn>
       <Type>9</Type>
       <Length>10</Length>
       <Nullable>false</Nullable>
@@ -571,7 +571,7 @@
     <Column name="SeccionId_seccion">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Base de datos.Seccion.Id_seccion</ReferencedColumn>
+      <ReferencedColumn>basededatos.Seccion.Id_seccion</ReferencedColumn>
       <Type>9</Type>
       <Length>10</Length>
       <Nullable>false</Nullable>
@@ -585,7 +585,7 @@
     <Column name="ComentarioId_comentario">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Base de datos.Comentario.Id_comentario</ReferencedColumn>
+      <ReferencedColumn>basededatos.Comentario.Id_comentario</ReferencedColumn>
       <Type>9</Type>
       <Length>10</Length>
       <Nullable>false</Nullable>
@@ -597,33 +597,7 @@
     <Column name="IdentificadoId">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Base de datos.Identificado.Id</ReferencedColumn>
-      <Type>9</Type>
-      <Length>10</Length>
-      <Nullable>false</Nullable>
-      <IDGenerator>assigned</IDGenerator>
-      <Unique>false</Unique>
-      <Index>false</Index>
-      <UserTypes/>
-    </Column>
-  </Entity>
-  <Entity name="Tematica_Seccion" Unlogged="false" PKClustered="0" Temporal="false" TemporalStartTimeColumn="null" TemporalEndTimeColumn="null" TemporalHistoryTable="null">
-    <Column name="TematicaId_tematica">
-      <PrimaryKey>true</PrimaryKey>
-      <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Base de datos.Tematica.Id_tematica</ReferencedColumn>
-      <Type>9</Type>
-      <Length>10</Length>
-      <Nullable>false</Nullable>
-      <IDGenerator>assigned</IDGenerator>
-      <Unique>false</Unique>
-      <Index>false</Index>
-      <UserTypes/>
-    </Column>
-    <Column name="SeccionId_seccion">
-      <PrimaryKey>true</PrimaryKey>
-      <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Base de datos.Seccion.Id_seccion</ReferencedColumn>
+      <ReferencedColumn>basededatos.Identificado.Id</ReferencedColumn>
       <Type>9</Type>
       <Length>10</Length>
       <Nullable>false</Nullable>
@@ -637,7 +611,7 @@
     <Column name="NoticiaId_noticia">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Base de datos.Noticia.Id_noticia</ReferencedColumn>
+      <ReferencedColumn>basededatos.Noticia.Id_noticia</ReferencedColumn>
       <Type>9</Type>
       <Length>10</Length>
       <Nullable>false</Nullable>
@@ -649,7 +623,7 @@
     <Column name="EditorIdentificadoId">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Base de datos.Editor.IdentificadoId</ReferencedColumn>
+      <ReferencedColumn>basededatos.Editor.IdentificadoId</ReferencedColumn>
       <Type>9</Type>
       <Length>10</Length>
       <Nullable>false</Nullable>
@@ -663,7 +637,7 @@
     <Column name="EditorIdentificadoId">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Base de datos.Editor.IdentificadoId</ReferencedColumn>
+      <ReferencedColumn>basededatos.Editor.IdentificadoId</ReferencedColumn>
       <Type>9</Type>
       <Length>10</Length>
       <Nullable>false</Nullable>
@@ -675,7 +649,7 @@
     <Column name="NoticiaId_noticia">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Base de datos.Noticia.Id_noticia</ReferencedColumn>
+      <ReferencedColumn>basededatos.Noticia.Id_noticia</ReferencedColumn>
       <Type>9</Type>
       <Length>10</Length>
       <Nullable>false</Nullable>
@@ -685,16 +659,58 @@
       <UserTypes/>
     </Column>
   </Entity>
-  <ForeignKey name="FKPortada14639">
-    <ReferenceTable>Portada</ReferenceTable>
-    <ReferencedTable>Seccion</ReferencedTable>
-    <Columns>
-      <Column>SeccionId_seccion</Column>
-    </Columns>
-    <RefColumns>
-      <Column>Id_seccion</Column>
-    </RefColumns>
-  </ForeignKey>
+  <Entity name="Comentario_Identificado2" Unlogged="false" PKClustered="0" Temporal="false" TemporalStartTimeColumn="null" TemporalEndTimeColumn="null" TemporalHistoryTable="null">
+    <Column name="ComentarioId_comentario">
+      <PrimaryKey>true</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>basededatos.Comentario.Id_comentario</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>assigned</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="IdentificadoId">
+      <PrimaryKey>true</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>basededatos.Identificado.Id</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>assigned</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+  </Entity>
+  <Entity name="Identificado_Noticia2" Unlogged="false" PKClustered="0" Temporal="false" TemporalStartTimeColumn="null" TemporalEndTimeColumn="null" TemporalHistoryTable="null">
+    <Column name="IdentificadoId">
+      <PrimaryKey>true</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>basededatos.Identificado.Id</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>assigned</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="NoticiaId_noticia">
+      <PrimaryKey>true</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>basededatos.Noticia.Id_noticia</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>assigned</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+  </Entity>
   <ForeignKey name="FKEditor842080">
     <ReferenceTable>Editor</ReferenceTable>
     <ReferencedTable>Identificado</ReferencedTable>
@@ -865,26 +881,6 @@
       <Column>Id</Column>
     </RefColumns>
   </ForeignKey>
-  <ForeignKey name="FKTematica_S273261">
-    <ReferenceTable>Tematica_Seccion</ReferenceTable>
-    <ReferencedTable>Tematica</ReferencedTable>
-    <Columns>
-      <Column>TematicaId_tematica</Column>
-    </Columns>
-    <RefColumns>
-      <Column>Id_tematica</Column>
-    </RefColumns>
-  </ForeignKey>
-  <ForeignKey name="FKTematica_S158825">
-    <ReferenceTable>Tematica_Seccion</ReferenceTable>
-    <ReferencedTable>Seccion</ReferencedTable>
-    <Columns>
-      <Column>SeccionId_seccion</Column>
-    </Columns>
-    <RefColumns>
-      <Column>Id_seccion</Column>
-    </RefColumns>
-  </ForeignKey>
   <ForeignKey name="FKSeccion718434">
     <ReferenceTable>Seccion</ReferenceTable>
     <ReferencedTable>Editor</ReferencedTable>
@@ -927,6 +923,56 @@
   </ForeignKey>
   <ForeignKey name="FKEditor_Not768351">
     <ReferenceTable>Editor_Noticia</ReferenceTable>
+    <ReferencedTable>Noticia</ReferencedTable>
+    <Columns>
+      <Column>NoticiaId_noticia</Column>
+    </Columns>
+    <RefColumns>
+      <Column>Id_noticia</Column>
+    </RefColumns>
+  </ForeignKey>
+  <ForeignKey name="FKNoticia219859">
+    <ReferenceTable>Noticia</ReferenceTable>
+    <ReferencedTable>Portada</ReferencedTable>
+    <Columns>
+      <Column>PortadaId_portada</Column>
+    </Columns>
+    <RefColumns>
+      <Column>Id_portada</Column>
+    </RefColumns>
+  </ForeignKey>
+  <ForeignKey name="FKComentario397783">
+    <ReferenceTable>Comentario_Identificado2</ReferenceTable>
+    <ReferencedTable>Comentario</ReferencedTable>
+    <Columns>
+      <Column>ComentarioId_comentario</Column>
+    </Columns>
+    <RefColumns>
+      <Column>Id_comentario</Column>
+    </RefColumns>
+  </ForeignKey>
+  <ForeignKey name="FKComentario740948">
+    <ReferenceTable>Comentario_Identificado2</ReferenceTable>
+    <ReferencedTable>Identificado</ReferencedTable>
+    <Columns>
+      <Column>IdentificadoId</Column>
+    </Columns>
+    <RefColumns>
+      <Column>Id</Column>
+    </RefColumns>
+  </ForeignKey>
+  <ForeignKey name="FKIdentifica464944">
+    <ReferenceTable>Identificado_Noticia2</ReferenceTable>
+    <ReferencedTable>Identificado</ReferencedTable>
+    <Columns>
+      <Column>IdentificadoId</Column>
+    </Columns>
+    <RefColumns>
+      <Column>Id</Column>
+    </RefColumns>
+  </ForeignKey>
+  <ForeignKey name="FKIdentifica303953">
+    <ReferenceTable>Identificado_Noticia2</ReferenceTable>
     <ReferencedTable>Noticia</ReferencedTable>
     <Columns>
       <Column>NoticiaId_noticia</Column>

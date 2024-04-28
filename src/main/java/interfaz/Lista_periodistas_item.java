@@ -18,13 +18,16 @@ public class Lista_periodistas_item extends VistaListaperiodistas_item {
 	}
 
 	public void Baja_periodista() {
-		String nombre_periodista = this._lista_periodistas.getComboboxlistaperiodistas().getValue();
-		// update periodista a EsEliminado 1 BD
-//		this._lista_periodistas._item.remove(this);
-//		ArrayList<String> items = new ArrayList<String>();
-//		for (Lista_periodistas_item periodista : this._lista_periodistas._item)
-//			items.add(periodista.getLayoutlistaperiodistaitem().getText());
-//		this._lista_periodistas.getComboboxlistaperiodistas().setItems(items);
-		this._lista_periodistas._buscar_periodista._baja_Alta_Periodistas._editor.Baja_Alta_Periodistas(); // Refrescar pagina
+		if (this.getLayoutlistaperiodistaitem().getText() == this._lista_periodistas.getComboboxlistaperiodistas().getValue()) {
+			// update periodista a EsEliminado 1 BD
+			periodista.setEsEliminado(true);
+			periodista.setContrasena("");
+			periodista.setDni("");
+			periodista.setEmail("");
+			periodista.setFecha_nacimiento("");
+			periodista.setTelefono(-1);
+			periodista.setUrl_foto_perfil("");
+			this._lista_periodistas._buscar_periodista._baja_Alta_Periodistas._editor.Baja_Alta_Periodistas(); // Refrescar pagina
+		}
 	}
 }
