@@ -325,15 +325,15 @@ public class EditorDAO {
 		try {
 			basededatos.Comentario[] lEs_eliminado_pors = editor.es_eliminado_por.toArray();
 			for(int i = 0; i < lEs_eliminado_pors.length; i++) {
-				lEs_eliminado_pors[i].setElimina(null);
+				lEs_eliminado_pors[i].setElimina_comentario(null);
 			}
-			basededatos.Noticia[] lEs_eliminada_por_editors = editor.es_eliminada_por_editor.toArray();
-			for(int i = 0; i < lEs_eliminada_por_editors.length; i++) {
-				lEs_eliminada_por_editors[i].elimina.remove(editor);
+			basededatos.Noticia[] lNoticia_es_eliminada_por_s = editor.noticia_es_eliminada_por_.toArray();
+			for(int i = 0; i < lNoticia_es_eliminada_por_s.length; i++) {
+				lNoticia_es_eliminada_por_s[i].setElimina_noticia(null);
 			}
 			basededatos.Seccion[] lEs_creada_pors = editor.es_creada_por.toArray();
 			for(int i = 0; i < lEs_creada_pors.length; i++) {
-				lEs_creada_pors[i].setCrea(null);
+				lEs_creada_pors[i].setCrea_seccion(null);
 			}
 			basededatos.Seccion[] lEs_eliminada_pors = editor.es_eliminada_por.toArray();
 			for(int i = 0; i < lEs_eliminada_pors.length; i++) {
@@ -341,12 +341,20 @@ public class EditorDAO {
 			}
 			basededatos.Noticia[] lEs_publicada_pors = editor.es_publicada_por.toArray();
 			for(int i = 0; i < lEs_publicada_pors.length; i++) {
-				lEs_publicada_pors[i].publica.remove(editor);
+				lEs_publicada_pors[i].setPublica(null);
 			}
 			if (editor.getEs_ordenada() != null) {
 				editor.getEs_ordenada().setOrdena(null);
 			}
 			
+			basededatos.Periodista[] lEs_dado_de_altas = editor.es_dado_de_alta.toArray();
+			for(int i = 0; i < lEs_dado_de_altas.length; i++) {
+				lEs_dado_de_altas[i].setDa_de_alta(null);
+			}
+			basededatos.Periodista[] lEs_dado_de_bajas = editor.es_dado_de_baja.toArray();
+			for(int i = 0; i < lEs_dado_de_bajas.length; i++) {
+				lEs_dado_de_bajas[i].setDa_de_baja(null);
+			}
 			basededatos.Comentario[] lPertenece_a_identificados = editor.pertenece_a_identificado.toArray();
 			for(int i = 0; i < lPertenece_a_identificados.length; i++) {
 				lPertenece_a_identificados[i].setEscribe(null);
@@ -379,15 +387,15 @@ public class EditorDAO {
 		try {
 			basededatos.Comentario[] lEs_eliminado_pors = editor.es_eliminado_por.toArray();
 			for(int i = 0; i < lEs_eliminado_pors.length; i++) {
-				lEs_eliminado_pors[i].setElimina(null);
+				lEs_eliminado_pors[i].setElimina_comentario(null);
 			}
-			basededatos.Noticia[] lEs_eliminada_por_editors = editor.es_eliminada_por_editor.toArray();
-			for(int i = 0; i < lEs_eliminada_por_editors.length; i++) {
-				lEs_eliminada_por_editors[i].elimina.remove(editor);
+			basededatos.Noticia[] lNoticia_es_eliminada_por_s = editor.noticia_es_eliminada_por_.toArray();
+			for(int i = 0; i < lNoticia_es_eliminada_por_s.length; i++) {
+				lNoticia_es_eliminada_por_s[i].setElimina_noticia(null);
 			}
 			basededatos.Seccion[] lEs_creada_pors = editor.es_creada_por.toArray();
 			for(int i = 0; i < lEs_creada_pors.length; i++) {
-				lEs_creada_pors[i].setCrea(null);
+				lEs_creada_pors[i].setCrea_seccion(null);
 			}
 			basededatos.Seccion[] lEs_eliminada_pors = editor.es_eliminada_por.toArray();
 			for(int i = 0; i < lEs_eliminada_pors.length; i++) {
@@ -395,12 +403,20 @@ public class EditorDAO {
 			}
 			basededatos.Noticia[] lEs_publicada_pors = editor.es_publicada_por.toArray();
 			for(int i = 0; i < lEs_publicada_pors.length; i++) {
-				lEs_publicada_pors[i].publica.remove(editor);
+				lEs_publicada_pors[i].setPublica(null);
 			}
 			if (editor.getEs_ordenada() != null) {
 				editor.getEs_ordenada().setOrdena(null);
 			}
 			
+			basededatos.Periodista[] lEs_dado_de_altas = editor.es_dado_de_alta.toArray();
+			for(int i = 0; i < lEs_dado_de_altas.length; i++) {
+				lEs_dado_de_altas[i].setDa_de_alta(null);
+			}
+			basededatos.Periodista[] lEs_dado_de_bajas = editor.es_dado_de_baja.toArray();
+			for(int i = 0; i < lEs_dado_de_bajas.length; i++) {
+				lEs_dado_de_bajas[i].setDa_de_baja(null);
+			}
 			basededatos.Comentario[] lPertenece_a_identificados = editor.pertenece_a_identificado.toArray();
 			for(int i = 0; i < lPertenece_a_identificados.length; i++) {
 				lPertenece_a_identificados[i].setEscribe(null);

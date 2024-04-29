@@ -1,10 +1,13 @@
 package interfaz;
 
+import org.orm.PersistentException;
+
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 import vistas.VistaIniciarsesion;
 
 public class Iniciar_Sesion extends VistaIniciarsesion {
+	
 //	private event _entrar;
 //	private Label _usuario;
 //	private Label _contrasena;
@@ -24,17 +27,36 @@ public class Iniciar_Sesion extends VistaIniciarsesion {
 	public void Entrar() {
 		String email = this.getTextfieldemaillogin().getValue();
 		String contrasena = this.getPasswordfieldogin().getValue();
-		// comprobar tipo de usuario y credenciales BD
-		
-//		String condition = "Email = '" + email + "' AND Contraseña = '" + contrasena + "'";
-//		try {
-//			basededatos.Identificado result = (basededatos.Identificado) basededatos.Identificado.queryIdentificado(condition, "").get(0);
-//			this._usuario_no_Registrado.mainview.removeAll();
-//			Identificado identificado = new Identificado(this._usuario_no_Registrado.mainview, result);
-//			this._usuario_no_Registrado.mainview.add(identificado);
-//		} catch (PersistentException e) {
-//			this.getLabelmensajeerrorlogin().setVisible(true);
-//		}
+		try {
+			basededatos.Identificado[] consulta = basededatos.IdentificadoDAO.listIdentificadoByQuery(
+					"Email = '" + email + "' AND Contrasena = '" + contrasena + "'", "");
+			if (consulta.length > 0) {
+				basededatos.Identificado result = consulta[0];
+				this._usuario_no_Registrado.mainview.removeAll();
+				if (result instanceof basededatos.Editor) {
+					this._usuario_no_Registrado.mainview._editor = new Editor(this._usuario_no_Registrado.mainview, (basededatos.Editor) result);
+					this._usuario_no_Registrado.mainview.add(this._usuario_no_Registrado.mainview._editor);
+				} else if (result instanceof basededatos.Periodista) {
+					if (((basededatos.Periodista) result).getEsEliminado()) {
+						this.getLabelmensajeerrorlogin().setVisible(true);
+					} else {
+						this._usuario_no_Registrado.mainview._periodista = new Periodista(this._usuario_no_Registrado.mainview, (basededatos.Periodista) result);
+						this._usuario_no_Registrado.mainview.add(this._usuario_no_Registrado.mainview._periodista);
+					}
+				} else if (result instanceof basededatos.Usuario_suscrito) {
+					if (((basededatos.Usuario_suscrito) result).getEsEliminado()) {
+						this.getLabelmensajeerrorlogin().setVisible(true);
+					} else {
+						this._usuario_no_Registrado.mainview._usuario_suscrito = new Usuario_Suscrito(this._usuario_no_Registrado.mainview, (basededatos.Usuario_suscrito) result);
+						this._usuario_no_Registrado.mainview.add(this._usuario_no_Registrado.mainview._usuario_suscrito);
+					}
+				}
+			} else {
+				this.getLabelmensajeerrorlogin().setVisible(true);
+			}
+		} catch (PersistentException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public void Registrarse() {

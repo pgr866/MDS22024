@@ -35,12 +35,14 @@ public class EditorCriteria extends AbstractORMCriteria {
 	public final CollectionExpression es_valorada_positiva_por;
 	public final CollectionExpression es_valorada_negativa_por;
 	public final CollectionExpression es_eliminado_por;
-	public final CollectionExpression es_eliminada_por_editor;
+	public final CollectionExpression noticia_es_eliminada_por_;
 	public final CollectionExpression es_creada_por;
 	public final CollectionExpression es_eliminada_por;
 	public final CollectionExpression es_publicada_por;
 	public final IntegerExpression es_ordenadaId;
 	public final AssociationExpression es_ordenada;
+	public final CollectionExpression es_dado_de_alta;
+	public final CollectionExpression es_dado_de_baja;
 	
 	public EditorCriteria(Criteria criteria) {
 		super(criteria);
@@ -60,12 +62,14 @@ public class EditorCriteria extends AbstractORMCriteria {
 		es_valorada_positiva_por = new CollectionExpression("ORM_es_valorada_positiva_por", this);
 		es_valorada_negativa_por = new CollectionExpression("ORM_es_valorada_negativa_por", this);
 		es_eliminado_por = new CollectionExpression("ORM_es_eliminado_por", this);
-		es_eliminada_por_editor = new CollectionExpression("ORM_es_eliminada_por_editor", this);
+		noticia_es_eliminada_por_ = new CollectionExpression("ORM_noticia_es_eliminada_por_", this);
 		es_creada_por = new CollectionExpression("ORM_es_creada_por", this);
 		es_eliminada_por = new CollectionExpression("ORM_es_eliminada_por", this);
 		es_publicada_por = new CollectionExpression("ORM_es_publicada_por", this);
 		es_ordenadaId = new IntegerExpression("es_ordenada.", this);
 		es_ordenada = new AssociationExpression("es_ordenada", this);
+		es_dado_de_alta = new CollectionExpression("ORM_es_dado_de_alta", this);
+		es_dado_de_baja = new CollectionExpression("ORM_es_dado_de_baja", this);
 	}
 	
 	public EditorCriteria(PersistentSession session) {
@@ -80,8 +84,8 @@ public class EditorCriteria extends AbstractORMCriteria {
 		return new ComentarioCriteria(createCriteria("ORM_es_eliminado_por"));
 	}
 	
-	public NoticiaCriteria createEs_eliminada_por_editorCriteria() {
-		return new NoticiaCriteria(createCriteria("ORM_es_eliminada_por_editor"));
+	public NoticiaCriteria createNoticia_es_eliminada_por_Criteria() {
+		return new NoticiaCriteria(createCriteria("ORM_noticia_es_eliminada_por_"));
 	}
 	
 	public SeccionCriteria createEs_creada_porCriteria() {
@@ -98,6 +102,14 @@ public class EditorCriteria extends AbstractORMCriteria {
 	
 	public PortadaCriteria createEs_ordenadaCriteria() {
 		return new PortadaCriteria(createCriteria("es_ordenada"));
+	}
+	
+	public PeriodistaCriteria createEs_dado_de_altaCriteria() {
+		return new PeriodistaCriteria(createCriteria("ORM_es_dado_de_alta"));
+	}
+	
+	public PeriodistaCriteria createEs_dado_de_bajaCriteria() {
+		return new PeriodistaCriteria(createCriteria("ORM_es_dado_de_baja"));
 	}
 	
 	public ComentarioCriteria createPertenece_a_identificadoCriteria() {

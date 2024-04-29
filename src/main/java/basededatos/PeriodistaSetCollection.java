@@ -15,12 +15,12 @@ package basededatos;
 
 import org.orm.*;
 
-public class EditorSetCollection extends org.orm.util.ORMSet {
-	public EditorSetCollection(Object owner, org.orm.util.ORMAdapter adapter, int ownerKey, int targetKey, int collType) {
+public class PeriodistaSetCollection extends org.orm.util.ORMSet {
+	public PeriodistaSetCollection(Object owner, org.orm.util.ORMAdapter adapter, int ownerKey, int targetKey, int collType) {
 		super(owner, adapter, ownerKey, targetKey, true, collType);
 	}
 	
-	public EditorSetCollection(Object owner, org.orm.util.ORMAdapter adapter, int ownerKey, int collType) {
+	public PeriodistaSetCollection(Object owner, org.orm.util.ORMAdapter adapter, int ownerKey, int collType) {
 		super(owner, adapter, ownerKey, -1, false, collType);
 	}
 	
@@ -36,7 +36,7 @@ public class EditorSetCollection extends org.orm.util.ORMSet {
 	 * Add the specified persistent object to ORMSet
 	 * @param value the persistent object
 	 */
-	public void add(Editor value) {
+	public void add(Periodista value) {
 		if (value != null) {
 			super.add(value, value._ormAdapter);
 		}
@@ -46,7 +46,7 @@ public class EditorSetCollection extends org.orm.util.ORMSet {
 	 * Remove the specified persistent object from ORMSet
 	 * @param value the persistent object
 	 */
-	public void remove(Editor value) {
+	public void remove(Periodista value) {
 		super.remove(value, value._ormAdapter);
 	}
 	
@@ -55,7 +55,7 @@ public class EditorSetCollection extends org.orm.util.ORMSet {
 	 * @param value the persistent object
 	 * @return True if this contains the specified persistent object
 	 */
-	public boolean contains(Editor value) {
+	public boolean contains(Periodista value) {
 		return super.contains(value);
 	}
 	
@@ -63,29 +63,31 @@ public class EditorSetCollection extends org.orm.util.ORMSet {
 	 * Return an array containing all of the persistent objects in ORMSet
 	 * @return The persistent objects array
 	 */
-	public Editor[] toArray() {
-		return (Editor[]) super.toArray(new Editor[size()]);
+	public Periodista[] toArray() {
+		return (Periodista[]) super.toArray(new Periodista[size()]);
 	}
 	
 	/**
 	 * Return an sorted array containing all of the persistent objects in ORMSet
 	 * @param propertyName Name of the property for sorting:<ul>
+	 * <li>esEliminado</li>
 	 * </ul>
 	 * @return The persistent objects sorted array
 	 */
-	public Editor[] toArray(String propertyName) {
+	public Periodista[] toArray(String propertyName) {
 		return toArray(propertyName, true);
 	}
 	
 	/**
 	 * Return an sorted array containing all of the persistent objects in ORMSet
 	 * @param propertyName Name of the property for sorting:<ul>
+	 * <li>esEliminado</li>
 	 * </ul>
 	 * @param ascending true for ascending, false for descending
 	 * @return The persistent objects sorted array
 	 */
-	public Editor[] toArray(String propertyName, boolean ascending) {
-		return (Editor[]) super.toArray(new Editor[size()], propertyName, ascending);
+	public Periodista[] toArray(String propertyName, boolean ascending) {
+		return (Periodista[]) super.toArray(new Periodista[size()], propertyName, ascending);
 	}
 	
 	protected PersistentManager getPersistentManager() throws PersistentException {

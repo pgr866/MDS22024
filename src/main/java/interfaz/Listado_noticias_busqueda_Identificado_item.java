@@ -5,6 +5,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import vistas.VistaListadonoticiasbusquedaidentificado_item;
 
 public class Listado_noticias_busqueda_Identificado_item extends VistaListadonoticiasbusquedaidentificado_item {
+	
 	public Listado_noticias_busqueda_Identificado _listado_noticias_busqueda_Identificado;
 	public Pagina_noticia_Identificado _pagina_noticia_Identificado;
 	basededatos.Noticia noticia;

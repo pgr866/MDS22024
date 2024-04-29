@@ -14,7 +14,7 @@
 package basededatos;
 
 public interface ORMConstants extends org.orm.util.ORMBaseConstants {
-	final int KEY_COMENTARIO_ELIMINA = -389323341;
+	final int KEY_COMENTARIO_ELIMINA_COMENTARIO = -1867097619;
 	
 	final int KEY_COMENTARIO_ESCRIBE = -194311823;
 	
@@ -26,15 +26,19 @@ public interface ORMConstants extends org.orm.util.ORMBaseConstants {
 	
 	final int KEY_EDITOR_ES_CREADA_POR = -1699311205;
 	
-	final int KEY_EDITOR_ES_ELIMINADA_POR = 434508131;
+	final int KEY_EDITOR_ES_DADO_DE_ALTA = -1276973410;
 	
-	final int KEY_EDITOR_ES_ELIMINADA_POR_EDITOR = -1964685367;
+	final int KEY_EDITOR_ES_DADO_DE_BAJA = -1276954500;
+	
+	final int KEY_EDITOR_ES_ELIMINADA_POR = 434508131;
 	
 	final int KEY_EDITOR_ES_ELIMINADO_POR = 447437425;
 	
 	final int KEY_EDITOR_ES_ORDENADA = -2071314989;
 	
 	final int KEY_EDITOR_ES_PUBLICADA_POR = 563013450;
+	
+	final int KEY_EDITOR_NOTICIA_ES_ELIMINADA_POR_ = 2114667682;
 	
 	final int KEY_IDENTIFICADO_ES_VALORADA_NEGATIVA_POR = -1159466061;
 	
@@ -48,7 +52,7 @@ public interface ORMConstants extends org.orm.util.ORMBaseConstants {
 	
 	final int KEY_NOTICIA_CREA = -233513883;
 	
-	final int KEY_NOTICIA_ELIMINA = -1452647785;
+	final int KEY_NOTICIA_ELIMINA_NOTICIA = 776519517;
 	
 	final int KEY_NOTICIA_PERTENECE_A = -752031889;
 	
@@ -64,6 +68,10 @@ public interface ORMConstants extends org.orm.util.ORMBaseConstants {
 	
 	final int KEY_NOTICIA_VALORA_POSITIVA = 421387389;
 	
+	final int KEY_PERIODISTA_DA_DE_ALTA = -1307996357;
+	
+	final int KEY_PERIODISTA_DA_DE_BAJA = -1307977447;
+	
 	final int KEY_PERIODISTA_ES_CREADA = -560277838;
 	
 	final int KEY_PORTADA_APARECE_EN_PORTADA = 658693729;
@@ -72,7 +80,7 @@ public interface ORMConstants extends org.orm.util.ORMBaseConstants {
 	
 	final int KEY_SECCION_APARECE_EN = 841444458;
 	
-	final int KEY_SECCION_CREA = 1476292468;
+	final int KEY_SECCION_CREA_SECCION = 1461266123;
 	
 	final int KEY_SECCION_ELIMINA = 1371191592;
 	

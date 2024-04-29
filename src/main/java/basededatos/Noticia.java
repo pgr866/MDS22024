@@ -23,10 +23,7 @@ public class Noticia implements Serializable {
 	}
 	
 	private java.util.Set this_getSet (int key) {
-		if (key == ORMConstants.KEY_NOTICIA_PUBLICA) {
-			return ORM_publica;
-		}
-		else if (key == ORMConstants.KEY_NOTICIA_VALORA_POSITIVA) {
+		if (key == ORMConstants.KEY_NOTICIA_VALORA_POSITIVA) {
 			return ORM_valora_positiva;
 		}
 		else if (key == ORMConstants.KEY_NOTICIA_PERTENECE_A) {
@@ -41,16 +38,21 @@ public class Noticia implements Serializable {
 		else if (key == ORMConstants.KEY_NOTICIA_PERTENECE_A_NOTICIA) {
 			return ORM_pertenece_a_noticia;
 		}
-		else if (key == ORMConstants.KEY_NOTICIA_ELIMINA) {
-			return ORM_elimina;
-		}
 		
 		return null;
 	}
 	
 	private void this_setOwner(Object owner, int key) {
-		if (key == ORMConstants.KEY_NOTICIA_CREA) {
+		if (key == ORMConstants.KEY_NOTICIA_PUBLICA) {
+			this.publica = (basededatos.Editor) owner;
+		}
+		
+		else if (key == ORMConstants.KEY_NOTICIA_CREA) {
 			this.crea = (basededatos.Periodista) owner;
+		}
+		
+		else if (key == ORMConstants.KEY_NOTICIA_ELIMINA_NOTICIA) {
+			this.elimina_noticia = (basededatos.Editor) owner;
 		}
 		
 		else if (key == ORMConstants.KEY_NOTICIA_PORTADA_CONTIENE_NOTICIAS) {
@@ -78,9 +80,21 @@ public class Noticia implements Serializable {
 	
 	@ManyToOne(targetEntity=basededatos.Portada.class, fetch=FetchType.LAZY)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.LOCK})	
-	@JoinColumns(value={ @JoinColumn(name="PortadaId_portada", referencedColumnName="Id_portada", nullable=false) }, foreignKey=@ForeignKey(name="FKNoticia219859"))	
+	@JoinColumns(value={ @JoinColumn(name="PortadaId_portada", referencedColumnName="Id_portada") }, foreignKey=@ForeignKey(name="FKNoticia219859"))	
 	@org.hibernate.annotations.LazyToOne(value=org.hibernate.annotations.LazyToOneOption.NO_PROXY)	
 	private basededatos.Portada portada_contiene_noticias;
+	
+	@ManyToOne(targetEntity=basededatos.Editor.class, fetch=FetchType.LAZY)	
+	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.LOCK})	
+	@JoinColumns(value={ @JoinColumn(name="EditorIdentificadoId2", referencedColumnName="IdentificadoId", nullable=false) }, foreignKey=@ForeignKey(name="FKNoticia105236"))	
+	@org.hibernate.annotations.LazyToOne(value=org.hibernate.annotations.LazyToOneOption.NO_PROXY)	
+	private basededatos.Editor publica;
+	
+	@ManyToOne(targetEntity=basededatos.Editor.class, fetch=FetchType.LAZY)	
+	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.LOCK})	
+	@JoinColumns(value={ @JoinColumn(name="EditorIdentificadoId", referencedColumnName="IdentificadoId", nullable=false) }, foreignKey=@ForeignKey(name="FKNoticia859437"))	
+	@org.hibernate.annotations.LazyToOne(value=org.hibernate.annotations.LazyToOneOption.NO_PROXY)	
+	private basededatos.Editor elimina_noticia;
 	
 	@ManyToOne(targetEntity=basededatos.Periodista.class, fetch=FetchType.LAZY)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.LOCK})	
@@ -115,11 +129,8 @@ public class Noticia implements Serializable {
 	@Column(name="Valoraciones_negativas", nullable=false, length=10)	
 	private int valoraciones_negativas;
 	
-	@ManyToMany(targetEntity=basededatos.Editor.class)	
-	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
-	@JoinTable(name="Editor_Noticia", joinColumns={ @JoinColumn(name="NoticiaId_noticia") }, inverseJoinColumns={ @JoinColumn(name="EditorIdentificadoId") })	
-	@org.hibernate.annotations.LazyCollection(org.hibernate.annotations.LazyCollectionOption.TRUE)	
-	private java.util.Set ORM_publica = new java.util.HashSet();
+	@Column(name="EsEliminada", nullable=false, length=1)	
+	private boolean esEliminada;
 	
 	@ManyToMany(targetEntity=basededatos.Identificado.class)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
@@ -148,11 +159,6 @@ public class Noticia implements Serializable {
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
 	@org.hibernate.annotations.LazyCollection(org.hibernate.annotations.LazyCollectionOption.TRUE)	
 	private java.util.Set ORM_pertenece_a_noticia = new java.util.HashSet();
-	
-	@ManyToMany(mappedBy="ORM_es_eliminada_por_editor", targetEntity=basededatos.Editor.class)	
-	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
-	@org.hibernate.annotations.LazyCollection(org.hibernate.annotations.LazyCollectionOption.TRUE)	
-	private java.util.Set ORM_elimina = new java.util.HashSet();
 	
 	private void setId_noticia(int value) {
 		this.id_noticia = value;
@@ -238,16 +244,37 @@ public class Noticia implements Serializable {
 		return valoraciones_negativas;
 	}
 	
-	private void setORM_Publica(java.util.Set value) {
-		this.ORM_publica = value;
+	public void setEsEliminada(boolean value) {
+		this.esEliminada = value;
 	}
 	
-	private java.util.Set getORM_Publica() {
-		return ORM_publica;
+	public boolean getEsEliminada() {
+		return esEliminada;
 	}
 	
-	@Transient	
-	public final basededatos.EditorSetCollection publica = new basededatos.EditorSetCollection(this, _ormAdapter, ORMConstants.KEY_NOTICIA_PUBLICA, ORMConstants.KEY_EDITOR_ES_PUBLICADA_POR, ORMConstants.KEY_MUL_MANY_TO_MANY);
+	public void setPublica(basededatos.Editor value) {
+		if (publica != null) {
+			publica.es_publicada_por.remove(this);
+		}
+		if (value != null) {
+			value.es_publicada_por.add(this);
+		}
+	}
+	
+	public basededatos.Editor getPublica() {
+		return publica;
+	}
+	
+	/**
+	 * This method is for internal use only.
+	 */
+	public void setORM_Publica(basededatos.Editor value) {
+		this.publica = value;
+	}
+	
+	private basededatos.Editor getORM_Publica() {
+		return publica;
+	}
 	
 	public void setCrea(basededatos.Periodista value) {
 		if (crea != null) {
@@ -328,16 +355,29 @@ public class Noticia implements Serializable {
 	@Transient	
 	public final basededatos.ComentarioSetCollection pertenece_a_noticia = new basededatos.ComentarioSetCollection(this, _ormAdapter, ORMConstants.KEY_NOTICIA_PERTENECE_A_NOTICIA, ORMConstants.KEY_COMENTARIO_NOTICIA_CONTIENE_COMENTARIOS, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
-	private void setORM_Elimina(java.util.Set value) {
-		this.ORM_elimina = value;
+	public void setElimina_noticia(basededatos.Editor value) {
+		if (elimina_noticia != null) {
+			elimina_noticia.noticia_es_eliminada_por_.remove(this);
+		}
+		if (value != null) {
+			value.noticia_es_eliminada_por_.add(this);
+		}
 	}
 	
-	private java.util.Set getORM_Elimina() {
-		return ORM_elimina;
+	public basededatos.Editor getElimina_noticia() {
+		return elimina_noticia;
 	}
 	
-	@Transient	
-	public final basededatos.EditorSetCollection elimina = new basededatos.EditorSetCollection(this, _ormAdapter, ORMConstants.KEY_NOTICIA_ELIMINA, ORMConstants.KEY_EDITOR_ES_ELIMINADA_POR_EDITOR, ORMConstants.KEY_MUL_MANY_TO_MANY);
+	/**
+	 * This method is for internal use only.
+	 */
+	public void setORM_Elimina_noticia(basededatos.Editor value) {
+		this.elimina_noticia = value;
+	}
+	
+	private basededatos.Editor getORM_Elimina_noticia() {
+		return elimina_noticia;
+	}
 	
 	public void setPortada_contiene_noticias(basededatos.Portada value) {
 		if (portada_contiene_noticias != null) {

@@ -22,6 +22,10 @@ public class NoticiaCriteria extends AbstractORMCriteria {
 	public final IntegerExpression id_noticia;
 	public final IntegerExpression portada_contiene_noticiasId;
 	public final AssociationExpression portada_contiene_noticias;
+	public final IntegerExpression publicaId;
+	public final AssociationExpression publica;
+	public final IntegerExpression elimina_noticiaId;
+	public final AssociationExpression elimina_noticia;
 	public final IntegerExpression creaId;
 	public final AssociationExpression crea;
 	public final StringExpression titulo;
@@ -33,19 +37,22 @@ public class NoticiaCriteria extends AbstractORMCriteria {
 	public final BooleanExpression publicada;
 	public final IntegerExpression valoraciones_positivas;
 	public final IntegerExpression valoraciones_negativas;
-	public final CollectionExpression publica;
+	public final BooleanExpression esEliminada;
 	public final CollectionExpression valora_positiva;
 	public final CollectionExpression pertenece_a;
 	public final CollectionExpression valora_negativa;
 	public final CollectionExpression seccion_contiene_noticias;
 	public final CollectionExpression pertenece_a_noticia;
-	public final CollectionExpression elimina;
 	
 	public NoticiaCriteria(Criteria criteria) {
 		super(criteria);
 		id_noticia = new IntegerExpression("id_noticia", this);
 		portada_contiene_noticiasId = new IntegerExpression("portada_contiene_noticias.id_portada", this);
 		portada_contiene_noticias = new AssociationExpression("portada_contiene_noticias", this);
+		publicaId = new IntegerExpression("publica.", this);
+		publica = new AssociationExpression("publica", this);
+		elimina_noticiaId = new IntegerExpression("elimina_noticia.", this);
+		elimina_noticia = new AssociationExpression("elimina_noticia", this);
 		creaId = new IntegerExpression("crea.", this);
 		crea = new AssociationExpression("crea", this);
 		titulo = new StringExpression("titulo", this);
@@ -57,13 +64,12 @@ public class NoticiaCriteria extends AbstractORMCriteria {
 		publicada = new BooleanExpression("publicada", this);
 		valoraciones_positivas = new IntegerExpression("valoraciones_positivas", this);
 		valoraciones_negativas = new IntegerExpression("valoraciones_negativas", this);
-		publica = new CollectionExpression("ORM_publica", this);
+		esEliminada = new BooleanExpression("esEliminada", this);
 		valora_positiva = new CollectionExpression("ORM_valora_positiva", this);
 		pertenece_a = new CollectionExpression("ORM_pertenece_a", this);
 		valora_negativa = new CollectionExpression("ORM_valora_negativa", this);
 		seccion_contiene_noticias = new CollectionExpression("ORM_seccion_contiene_noticias", this);
 		pertenece_a_noticia = new CollectionExpression("ORM_pertenece_a_noticia", this);
-		elimina = new CollectionExpression("ORM_elimina", this);
 	}
 	
 	public NoticiaCriteria(PersistentSession session) {
@@ -78,12 +84,16 @@ public class NoticiaCriteria extends AbstractORMCriteria {
 		return new PortadaCriteria(createCriteria("portada_contiene_noticias"));
 	}
 	
-	public PeriodistaCriteria createCreaCriteria() {
-		return new PeriodistaCriteria(createCriteria("crea"));
+	public EditorCriteria createPublicaCriteria() {
+		return new EditorCriteria(createCriteria("publica"));
 	}
 	
-	public EditorCriteria createPublicaCriteria() {
-		return new EditorCriteria(createCriteria("ORM_publica"));
+	public EditorCriteria createElimina_noticiaCriteria() {
+		return new EditorCriteria(createCriteria("elimina_noticia"));
+	}
+	
+	public PeriodistaCriteria createCreaCriteria() {
+		return new PeriodistaCriteria(createCriteria("crea"));
 	}
 	
 	public IdentificadoCriteria createValora_positivaCriteria() {
@@ -104,10 +114,6 @@ public class NoticiaCriteria extends AbstractORMCriteria {
 	
 	public ComentarioCriteria createPertenece_a_noticiaCriteria() {
 		return new ComentarioCriteria(createCriteria("ORM_pertenece_a_noticia"));
-	}
-	
-	public EditorCriteria createEliminaCriteria() {
-		return new EditorCriteria(createCriteria("ORM_elimina"));
 	}
 	
 	public Noticia uniqueNoticia() {

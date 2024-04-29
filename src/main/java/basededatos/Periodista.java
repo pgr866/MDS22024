@@ -33,16 +33,42 @@ public class Periodista extends basededatos.Identificado implements Serializable
 		return null;
 	}
 	
+	private void this_setOwner(Object owner, int key) {
+		if (key == ORMConstants.KEY_PERIODISTA_DA_DE_ALTA) {
+			this.da_de_alta = (basededatos.Editor) owner;
+		}
+		
+		else if (key == ORMConstants.KEY_PERIODISTA_DA_DE_BAJA) {
+			this.da_de_baja = (basededatos.Editor) owner;
+		}
+	}
+	
 	@Transient	
 	org.orm.util.ORMAdapter _ormAdapter = new org.orm.util.AbstractORMAdapter() {
 		public java.util.Set getSet(int key) {
 			return this_getSet(key);
 		}
 		
+		public void setOwner(Object owner, int key) {
+			this_setOwner(owner, key);
+		}
+		
 	};
 	
 	@Column(name="EsEliminado", nullable=false, length=1)	
 	private boolean esEliminado;
+	
+	@ManyToOne(targetEntity=basededatos.Editor.class, fetch=FetchType.LAZY)	
+	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.LOCK})	
+	@JoinColumns(value={ @JoinColumn(name="EditorIdentificadoId2", referencedColumnName="IdentificadoId", nullable=false) }, foreignKey=@ForeignKey(name="FKPeriodista296958"))	
+	@org.hibernate.annotations.LazyToOne(value=org.hibernate.annotations.LazyToOneOption.NO_PROXY)	
+	private basededatos.Editor da_de_baja;
+	
+	@ManyToOne(targetEntity=basededatos.Editor.class, fetch=FetchType.LAZY)	
+	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.LOCK})	
+	@JoinColumns(value={ @JoinColumn(name="EditorIdentificadoId", referencedColumnName="IdentificadoId", nullable=false) }, foreignKey=@ForeignKey(name="FKPeriodista428834"))	
+	@org.hibernate.annotations.LazyToOne(value=org.hibernate.annotations.LazyToOneOption.NO_PROXY)	
+	private basededatos.Editor da_de_alta;
 	
 	@OneToMany(mappedBy="crea", targetEntity=basededatos.Noticia.class)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
@@ -55,6 +81,54 @@ public class Periodista extends basededatos.Identificado implements Serializable
 	
 	public boolean getEsEliminado() {
 		return esEliminado;
+	}
+	
+	public void setDa_de_alta(basededatos.Editor value) {
+		if (da_de_alta != null) {
+			da_de_alta.es_dado_de_alta.remove(this);
+		}
+		if (value != null) {
+			value.es_dado_de_alta.add(this);
+		}
+	}
+	
+	public basededatos.Editor getDa_de_alta() {
+		return da_de_alta;
+	}
+	
+	/**
+	 * This method is for internal use only.
+	 */
+	public void setORM_Da_de_alta(basededatos.Editor value) {
+		this.da_de_alta = value;
+	}
+	
+	private basededatos.Editor getORM_Da_de_alta() {
+		return da_de_alta;
+	}
+	
+	public void setDa_de_baja(basededatos.Editor value) {
+		if (da_de_baja != null) {
+			da_de_baja.es_dado_de_baja.remove(this);
+		}
+		if (value != null) {
+			value.es_dado_de_baja.add(this);
+		}
+	}
+	
+	public basededatos.Editor getDa_de_baja() {
+		return da_de_baja;
+	}
+	
+	/**
+	 * This method is for internal use only.
+	 */
+	public void setORM_Da_de_baja(basededatos.Editor value) {
+		this.da_de_baja = value;
+	}
+	
+	private basededatos.Editor getORM_Da_de_baja() {
+		return da_de_baja;
 	}
 	
 	private void setORM_Es_creada(java.util.Set value) {

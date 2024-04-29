@@ -5,6 +5,7 @@ import java.util.Vector;
 import vistas.VistaSeccioncomentarios;
 
 public class Seccion_comentarios extends VistaSeccioncomentarios {
+	
 //	private Label _comentarios;
 //	private Label _valoraciones;
 //	private Label _nickname;

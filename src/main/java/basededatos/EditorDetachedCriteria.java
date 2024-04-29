@@ -35,12 +35,14 @@ public class EditorDetachedCriteria extends AbstractORMDetachedCriteria {
 	public final CollectionExpression es_valorada_positiva_por;
 	public final CollectionExpression es_valorada_negativa_por;
 	public final CollectionExpression es_eliminado_por;
-	public final CollectionExpression es_eliminada_por_editor;
+	public final CollectionExpression noticia_es_eliminada_por_;
 	public final CollectionExpression es_creada_por;
 	public final CollectionExpression es_eliminada_por;
 	public final CollectionExpression es_publicada_por;
 	public final IntegerExpression es_ordenadaId;
 	public final AssociationExpression es_ordenada;
+	public final CollectionExpression es_dado_de_alta;
+	public final CollectionExpression es_dado_de_baja;
 	
 	public EditorDetachedCriteria() {
 		super(basededatos.Editor.class, basededatos.EditorCriteria.class);
@@ -60,12 +62,14 @@ public class EditorDetachedCriteria extends AbstractORMDetachedCriteria {
 		es_valorada_positiva_por = new CollectionExpression("ORM_es_valorada_positiva_por", this.getDetachedCriteria());
 		es_valorada_negativa_por = new CollectionExpression("ORM_es_valorada_negativa_por", this.getDetachedCriteria());
 		es_eliminado_por = new CollectionExpression("ORM_es_eliminado_por", this.getDetachedCriteria());
-		es_eliminada_por_editor = new CollectionExpression("ORM_es_eliminada_por_editor", this.getDetachedCriteria());
+		noticia_es_eliminada_por_ = new CollectionExpression("ORM_noticia_es_eliminada_por_", this.getDetachedCriteria());
 		es_creada_por = new CollectionExpression("ORM_es_creada_por", this.getDetachedCriteria());
 		es_eliminada_por = new CollectionExpression("ORM_es_eliminada_por", this.getDetachedCriteria());
 		es_publicada_por = new CollectionExpression("ORM_es_publicada_por", this.getDetachedCriteria());
 		es_ordenadaId = new IntegerExpression("es_ordenada.", this.getDetachedCriteria());
 		es_ordenada = new AssociationExpression("es_ordenada", this.getDetachedCriteria());
+		es_dado_de_alta = new CollectionExpression("ORM_es_dado_de_alta", this.getDetachedCriteria());
+		es_dado_de_baja = new CollectionExpression("ORM_es_dado_de_baja", this.getDetachedCriteria());
 	}
 	
 	public EditorDetachedCriteria(DetachedCriteria aDetachedCriteria) {
@@ -86,20 +90,22 @@ public class EditorDetachedCriteria extends AbstractORMDetachedCriteria {
 		es_valorada_positiva_por = new CollectionExpression("ORM_es_valorada_positiva_por", this.getDetachedCriteria());
 		es_valorada_negativa_por = new CollectionExpression("ORM_es_valorada_negativa_por", this.getDetachedCriteria());
 		es_eliminado_por = new CollectionExpression("ORM_es_eliminado_por", this.getDetachedCriteria());
-		es_eliminada_por_editor = new CollectionExpression("ORM_es_eliminada_por_editor", this.getDetachedCriteria());
+		noticia_es_eliminada_por_ = new CollectionExpression("ORM_noticia_es_eliminada_por_", this.getDetachedCriteria());
 		es_creada_por = new CollectionExpression("ORM_es_creada_por", this.getDetachedCriteria());
 		es_eliminada_por = new CollectionExpression("ORM_es_eliminada_por", this.getDetachedCriteria());
 		es_publicada_por = new CollectionExpression("ORM_es_publicada_por", this.getDetachedCriteria());
 		es_ordenadaId = new IntegerExpression("es_ordenada.", this.getDetachedCriteria());
 		es_ordenada = new AssociationExpression("es_ordenada", this.getDetachedCriteria());
+		es_dado_de_alta = new CollectionExpression("ORM_es_dado_de_alta", this.getDetachedCriteria());
+		es_dado_de_baja = new CollectionExpression("ORM_es_dado_de_baja", this.getDetachedCriteria());
 	}
 	
 	public ComentarioDetachedCriteria createEs_eliminado_porCriteria() {
 		return new ComentarioDetachedCriteria(createCriteria("ORM_es_eliminado_por"));
 	}
 	
-	public NoticiaDetachedCriteria createEs_eliminada_por_editorCriteria() {
-		return new NoticiaDetachedCriteria(createCriteria("ORM_es_eliminada_por_editor"));
+	public NoticiaDetachedCriteria createNoticia_es_eliminada_por_Criteria() {
+		return new NoticiaDetachedCriteria(createCriteria("ORM_noticia_es_eliminada_por_"));
 	}
 	
 	public SeccionDetachedCriteria createEs_creada_porCriteria() {
@@ -116,6 +122,14 @@ public class EditorDetachedCriteria extends AbstractORMDetachedCriteria {
 	
 	public PortadaDetachedCriteria createEs_ordenadaCriteria() {
 		return new PortadaDetachedCriteria(createCriteria("es_ordenada"));
+	}
+	
+	public PeriodistaDetachedCriteria createEs_dado_de_altaCriteria() {
+		return new PeriodistaDetachedCriteria(createCriteria("ORM_es_dado_de_alta"));
+	}
+	
+	public PeriodistaDetachedCriteria createEs_dado_de_bajaCriteria() {
+		return new PeriodistaDetachedCriteria(createCriteria("ORM_es_dado_de_baja"));
 	}
 	
 	public ComentarioDetachedCriteria createPertenece_a_identificadoCriteria() {

@@ -11,6 +11,9 @@ public class Log_out extends vistas.VistaLogout{
 		{
 			this._identificado.mainview.removeAll();
 			this._identificado.mainview.add(this._identificado.mainview._usuario_no_registrado);
+			this._identificado.mainview._usuario_suscrito = null;
+			this._identificado.mainview._periodista = null;
+			this._identificado.mainview._editor = null;
 		});
 	}
 }

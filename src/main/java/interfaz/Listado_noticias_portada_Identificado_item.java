@@ -1,8 +1,9 @@
-package interfaz; //DINAMICO
+package interfaz;
 
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 public class Listado_noticias_portada_Identificado_item extends Listado_noticias_portada_item {
+	
 	public Pagina_noticia_Identificado _pagina_noticia_Identificado;
 			
 	public Listado_noticias_portada_Identificado_item(Listado_noticias_portada_Identificado _listado_noticias_portada,

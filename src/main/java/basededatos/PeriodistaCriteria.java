@@ -35,6 +35,10 @@ public class PeriodistaCriteria extends AbstractORMCriteria {
 	public final CollectionExpression es_valorada_positiva_por;
 	public final CollectionExpression es_valorada_negativa_por;
 	public final BooleanExpression esEliminado;
+	public final IntegerExpression da_de_bajaId;
+	public final AssociationExpression da_de_baja;
+	public final IntegerExpression da_de_altaId;
+	public final AssociationExpression da_de_alta;
 	public final CollectionExpression es_creada;
 	
 	public PeriodistaCriteria(Criteria criteria) {
@@ -55,6 +59,10 @@ public class PeriodistaCriteria extends AbstractORMCriteria {
 		es_valorada_positiva_por = new CollectionExpression("ORM_es_valorada_positiva_por", this);
 		es_valorada_negativa_por = new CollectionExpression("ORM_es_valorada_negativa_por", this);
 		esEliminado = new BooleanExpression("esEliminado", this);
+		da_de_bajaId = new IntegerExpression("da_de_baja.", this);
+		da_de_baja = new AssociationExpression("da_de_baja", this);
+		da_de_altaId = new IntegerExpression("da_de_alta.", this);
+		da_de_alta = new AssociationExpression("da_de_alta", this);
 		es_creada = new CollectionExpression("ORM_es_creada", this);
 	}
 	
@@ -64,6 +72,14 @@ public class PeriodistaCriteria extends AbstractORMCriteria {
 	
 	public PeriodistaCriteria() throws PersistentException {
 		this(MDS12324PFFornielesGomezPersistentManager.instance().getSession());
+	}
+	
+	public EditorCriteria createDa_de_bajaCriteria() {
+		return new EditorCriteria(createCriteria("da_de_baja"));
+	}
+	
+	public EditorCriteria createDa_de_altaCriteria() {
+		return new EditorCriteria(createCriteria("da_de_alta"));
 	}
 	
 	public NoticiaCriteria createEs_creadaCriteria() {

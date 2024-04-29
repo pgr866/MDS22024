@@ -4,10 +4,10 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 import proyectoMDS.MainView;
 
-
 //import basededatos.iEditor;
 
 public class Editor extends Identificado {
+	
 //	public iEditor _iEditor;
 	public Listado_noticias_portada_Editor _listado_noticias_portada_Editor;
 	public Noticias_a_revisar _noticias_a_revisar;

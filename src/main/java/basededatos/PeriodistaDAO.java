@@ -323,6 +323,14 @@ public class PeriodistaDAO {
 	
 	public static boolean deleteAndDissociate(basededatos.Periodista periodista)throws PersistentException {
 		try {
+			if (periodista.getDa_de_baja() != null) {
+				periodista.getDa_de_baja().es_dado_de_baja.remove(periodista);
+			}
+			
+			if (periodista.getDa_de_alta() != null) {
+				periodista.getDa_de_alta().es_dado_de_alta.remove(periodista);
+			}
+			
 			basededatos.Noticia[] lEs_creadas = periodista.es_creada.toArray();
 			for(int i = 0; i < lEs_creadas.length; i++) {
 				lEs_creadas[i].setCrea(null);
@@ -357,6 +365,14 @@ public class PeriodistaDAO {
 	
 	public static boolean deleteAndDissociate(basededatos.Periodista periodista, org.orm.PersistentSession session)throws PersistentException {
 		try {
+			if (periodista.getDa_de_baja() != null) {
+				periodista.getDa_de_baja().es_dado_de_baja.remove(periodista);
+			}
+			
+			if (periodista.getDa_de_alta() != null) {
+				periodista.getDa_de_alta().es_dado_de_alta.remove(periodista);
+			}
+			
 			basededatos.Noticia[] lEs_creadas = periodista.es_creada.toArray();
 			for(int i = 0; i < lEs_creadas.length; i++) {
 				lEs_creadas[i].setCrea(null);

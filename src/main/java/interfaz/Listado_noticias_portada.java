@@ -5,6 +5,7 @@ import java.util.Vector;
 import vistas.VistaListadonoticiasportada;
 
 public class Listado_noticias_portada extends VistaListadonoticiasportada{
+	
 //	private Label _titulo;
 //	private Label _autor;
 //	private Label _fecha;

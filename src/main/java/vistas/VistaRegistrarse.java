@@ -16,6 +16,14 @@ import com.vaadin.flow.component.textfield.PasswordField;
 public class VistaRegistrarse extends LitTemplate {
 
 
+	public Label getLabelerrordatosregistrarse() {
+		return labelerrordatosregistrarse;
+	}
+
+	public void setLabelerrordatosregistrarse(Label labelerrordatosregistrarse) {
+		this.labelerrordatosregistrarse = labelerrordatosregistrarse;
+	}
+
 	public HorizontalLayout getLayoutregistrarse() {
 		return layoutregistrarse;
 	}
@@ -324,10 +332,6 @@ public class VistaRegistrarse extends LitTemplate {
 	private Label labelcontrasenaregistrarse;
 	@Id("Passwordfieldcontrasenaregistrarse")
 	private PasswordField passwordfieldcontrasenaregistrarse;
-	@Id("Layoutrepetircontrasenaregistrarse")
-	private HorizontalLayout layoutrepetircontrasenaregistrarse;
-	@Id("Labelrepetircontrasenaregistrarse")
-	private Label labelrepetircontrasenaregistrarse;
 	@Id("Passwordfieldrepetircontrasenaregistrarse")
 	private PasswordField passwordfieldrepetircontrasenaregistrarse;
 	@Id("Layoutcancelarenviarregistrarse")
@@ -336,6 +340,12 @@ public class VistaRegistrarse extends LitTemplate {
 	private Button cancelarregistrarse;
 	@Id("Enviarregistrarse")
 	private Button enviarregistrarse;
+	@Id("Labelerrordatosregistrarse")
+	private Label labelerrordatosregistrarse;
+	@Id("Labelrepetircontrasenaregistrarse")
+	private Label labelrepetircontrasenaregistrarse;
+	@Id("Layoutrepetircontrasenaregistrarse")
+	private HorizontalLayout layoutrepetircontrasenaregistrarse;
 
 	public VistaRegistrarse() {
         // You can initialise any data required for the connected UI components here.

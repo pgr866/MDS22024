@@ -327,8 +327,8 @@ public class ComentarioDAO {
 				comentario.getEscribe().pertenece_a_identificado.remove(comentario);
 			}
 			
-			if (comentario.getElimina() != null) {
-				comentario.getElimina().es_eliminado_por.remove(comentario);
+			if (comentario.getElimina_comentario() != null) {
+				comentario.getElimina_comentario().es_eliminado_por.remove(comentario);
 			}
 			
 			if (comentario.getNoticia_contiene_comentarios() != null) {
@@ -357,8 +357,8 @@ public class ComentarioDAO {
 				comentario.getEscribe().pertenece_a_identificado.remove(comentario);
 			}
 			
-			if (comentario.getElimina() != null) {
-				comentario.getElimina().es_eliminado_por.remove(comentario);
+			if (comentario.getElimina_comentario() != null) {
+				comentario.getElimina_comentario().es_eliminado_por.remove(comentario);
 			}
 			
 			if (comentario.getNoticia_contiene_comentarios() != null) {

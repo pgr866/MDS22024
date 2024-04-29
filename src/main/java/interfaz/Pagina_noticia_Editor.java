@@ -3,6 +3,7 @@ package interfaz;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 public class Pagina_noticia_Editor extends Pagina_noticia_Identificado {
+	
 //	private event _comentar;
 	public Listado_noticias_portada_Editor_item _listado_noticias_portada_Editor;
 	public Seccion_comentarios_Editor _seccion_comentarios_Editor;

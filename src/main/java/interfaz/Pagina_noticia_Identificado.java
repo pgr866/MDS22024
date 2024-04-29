@@ -1,6 +1,5 @@
 package interfaz;
 
-import com.vaadin.flow.component.listbox.MultiSelectListBox;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 public class Pagina_noticia_Identificado extends Pagina_Noticia {
@@ -12,6 +11,7 @@ public class Pagina_noticia_Identificado extends Pagina_Noticia {
 	public Mostrar_mis_noticias_item _mostrar_mis_noticias;
 	public Mostrar_noticia_extendida _mostrar_noticia_extendida;
 	public Seccion_comentarios_Identificado _seccion_comentarios_Identificado;
+	basededatos.Identificado identificado;
 
 	public Pagina_noticia_Identificado(Listado_noticias_portada_Identificado_item _listado_noticias_portada_Identificado,
 			basededatos.Noticia noticia) {
@@ -21,7 +21,8 @@ public class Pagina_noticia_Identificado extends Pagina_Noticia {
 		this._seccion_comentarios_Identificado = new Seccion_comentarios_Identificado(this);
 		Mostrar_noticia_extendida();
 		Seccion_comentarios_Identificado();
-		this._seccion_comentarios_Identificado.getBotonanadircomentarioseccioncomentarios().addClickListener(event->Comentar(((Listado_noticias_portada_Identificado) this._listado_noticias_portada_Identificado._listado_noticias_portada)._identificado.identificado));
+		this.identificado = ((Listado_noticias_portada_Identificado) this._listado_noticias_portada_Identificado._listado_noticias_portada)._identificado.identificado;
+		this._seccion_comentarios_Identificado.getBotonanadircomentarioseccioncomentarios().addClickListener(event->Comentar());
 		this._mostrar_valoracion_noticia.getMegustamostrarvaloracionnoticia().addClickListener(event->Valorar_noticia(true));
 		this._mostrar_valoracion_noticia.getNomegustamostrarvaloracionnoticia().addClickListener(event->Valorar_noticia(false));
 	}
@@ -34,7 +35,8 @@ public class Pagina_noticia_Identificado extends Pagina_Noticia {
 		this._seccion_comentarios_Identificado = new Seccion_comentarios_Identificado(this);
 		Mostrar_noticia_extendida();
 		Seccion_comentarios_Identificado();
-		this._seccion_comentarios_Identificado.getBotonanadircomentarioseccioncomentarios().addClickListener(event->Comentar(this._listado_noticias_busqueda_Identificado._listado_noticias_busqueda_Identificado._buscar_Identificado._identificado.identificado));
+		this.identificado = this._listado_noticias_busqueda_Identificado._listado_noticias_busqueda_Identificado._buscar_Identificado._identificado.identificado;
+		this._seccion_comentarios_Identificado.getBotonanadircomentarioseccioncomentarios().addClickListener(event->Comentar());
 		this._mostrar_valoracion_noticia.getMegustamostrarvaloracionnoticia().addClickListener(event->Valorar_noticia(true));
 		this._mostrar_valoracion_noticia.getNomegustamostrarvaloracionnoticia().addClickListener(event->Valorar_noticia(false));
 	}
@@ -47,7 +49,8 @@ public class Pagina_noticia_Identificado extends Pagina_Noticia {
 		this._seccion_comentarios_Identificado = new Seccion_comentarios_Identificado(this);
 		Mostrar_noticia_extendida();
 		Seccion_comentarios_Identificado();
-		this._seccion_comentarios_Identificado.getBotonanadircomentarioseccioncomentarios().addClickListener(event->Comentar(this._noticias_en_seccion_Identificado._noticias_en_seccion_Identificado._explorar_secciones_Identificado._identificado.identificado));
+		this.identificado = this._noticias_en_seccion_Identificado._noticias_en_seccion_Identificado._explorar_secciones_Identificado._identificado.identificado;
+		this._seccion_comentarios_Identificado.getBotonanadircomentarioseccioncomentarios().addClickListener(event->Comentar());
 		this._mostrar_valoracion_noticia.getMegustamostrarvaloracionnoticia().addClickListener(event->Valorar_noticia(true));
 		this._mostrar_valoracion_noticia.getNomegustamostrarvaloracionnoticia().addClickListener(event->Valorar_noticia(false));
 	}
@@ -60,24 +63,36 @@ public class Pagina_noticia_Identificado extends Pagina_Noticia {
 		this._seccion_comentarios_Identificado = new Seccion_comentarios_Identificado(this);
 		Mostrar_noticia_extendida();
 		Seccion_comentarios_Identificado();
-		this._seccion_comentarios_Identificado.getBotonanadircomentarioseccioncomentarios().addClickListener(event->Comentar(this._mostrar_mis_noticias._mostrar_mis_noticias._periodista.identificado));
+		this.identificado = this._mostrar_mis_noticias._mostrar_mis_noticias._periodista.identificado;
+		this._seccion_comentarios_Identificado.getBotonanadircomentarioseccioncomentarios().addClickListener(event->Comentar());
 		this._mostrar_valoracion_noticia.getMegustamostrarvaloracionnoticia().addClickListener(event->Valorar_noticia(true));
 		this._mostrar_valoracion_noticia.getNomegustamostrarvaloracionnoticia().addClickListener(event->Valorar_noticia(false));
 	}
 	
 	public void Valorar_noticia(boolean positiva) {
-		int mg = noticia.getValoraciones_positivas();
-		int nmg = noticia.getValoraciones_negativas();
-		// update noticia BD, tratar cuando se ha dado ya mg o nmg
+		int mg = this.noticia.getValoraciones_positivas();
+		int nmg = this.noticia.getValoraciones_negativas();
 		if (positiva) {
-			mg++;
+			if (this.noticia.valora_positiva.contains(this.identificado)) {
+				this.noticia.valora_positiva.remove(this.identificado);
+				mg--;
+			} else {
+				this.noticia.valora_positiva.add(this.identificado);
+				mg++;
+			}
+			this.noticia.setValoraciones_positivas(mg);
+			this._mostrar_valoracion_noticia.getNumeromegustamostrarvaloracionnoticia().setText(String.valueOf(mg));
 		} else {
-			nmg++;
+			if (this.noticia.valora_negativa.contains(this.identificado)) {
+				this.noticia.valora_negativa.remove(this.identificado);
+				nmg--;
+			} else {
+				this.noticia.valora_negativa.add(this.identificado);
+				nmg++;
+			}
+			this.noticia.setValoraciones_negativas(nmg);
+			this._mostrar_valoracion_noticia.getNumeronomegustamostrarvaloracionnoticia().setText(String.valueOf(nmg));
 		}
-		this.noticia.setValoraciones_positivas(mg);
-		this._mostrar_valoracion_noticia.getNumeromegustamostrarvaloracionnoticia().setText(String.valueOf(mg));
-		this.noticia.setValoraciones_negativas(nmg);
-		this._mostrar_valoracion_noticia.getNumeronomegustamostrarvaloracionnoticia().setText(String.valueOf(nmg));
 	}
 
 	public void Mostrar_noticia_extendida() {
@@ -88,13 +103,15 @@ public class Pagina_noticia_Identificado extends Pagina_Noticia {
 		this.getLayoutseccioncomentariospaginanoticia().as(VerticalLayout.class).add(_seccion_comentarios_Identificado);
 	}
 	
-	public void Comentar(basededatos.Identificado identificado) {
-		String contenido_comentario = (String) this._seccion_comentarios_Identificado.getTextareacomentarioseccioncomentarios().getValue();
-		String mi_nick = identificado.getNick_apodo();
-		String mi_img = identificado.getUrl_foto_perfil();
-		// crear comentario BD
-		Seccion_comentarios_Identificado_item nuevo_comentario_Identificado = new Seccion_comentarios_Identificado_item(this._seccion_comentarios_Identificado, identificado);
-		this._seccion_comentarios_Identificado.getLayoutvistaseccioncomentarios().as(VerticalLayout.class).add(nuevo_comentario_Identificado);
-		this._seccion_comentarios_Identificado._item.add(nuevo_comentario_Identificado);
+	public void Comentar() {
+		basededatos.Comentario nuevo_comentario = new basededatos.Comentario();
+		nuevo_comentario.setContenido(this._seccion_comentarios_Identificado.getTextareacomentarioseccioncomentarios().getValue());
+		nuevo_comentario.setEsEliminado(false);
+		nuevo_comentario.setEscribe(this.identificado);
+		nuevo_comentario.setValoraciones_negativas(0);
+		nuevo_comentario.setValoraciones_positivas(0);
+		Seccion_comentarios_Identificado_item comentario_item = new Seccion_comentarios_Identificado_item(this._seccion_comentarios_Identificado, this.identificado, nuevo_comentario);
+		this._seccion_comentarios_Identificado.getLayoutvistaseccioncomentarios().as(VerticalLayout.class).add(comentario_item);
+		this._seccion_comentarios_Identificado._item.add(comentario_item);
 	}
 }

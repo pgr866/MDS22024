@@ -1,6 +1,6 @@
 package interfaz;
 
-import com.vaadin.flow.component.listbox.MultiSelectListBox;
+import org.orm.PersistentException;
 
 public class Explorar_secciones_Editor extends Explorar_secciones_Identificado {
 	
@@ -17,14 +17,25 @@ public class Explorar_secciones_Editor extends Explorar_secciones_Identificado {
 	}
 
 	public void Anadir_seccion() {
-		String nombre_seccion = (String) this.getTextfieldnombreexplorarsecciones().getValue();
-		// crear seccion BD
+		basededatos.Seccion nueva_seccion = new basededatos.Seccion();
+		nueva_seccion.setTitulo_seccion(this.getTextfieldnombreexplorarsecciones().getValue());
+		nueva_seccion.setEsEliminada(false);
+		nueva_seccion.setCrea_seccion((basededatos.Editor) this._editor.identificado);
 		this._editor.Explorar_secciones_Editor(); // Refrescar pagina
 	}
 
 	public void Borrar_seccion() {
-		String nombre_seccion = (String) this._secciones.getDesplegablesecciones().getValue();
-		// eliminar seccion BD
-		this._editor.Explorar_secciones_Editor(); // Refrescar pagina
+		String titulo_seccion = (String) this._secciones.getDesplegablesecciones().getValue();
+		try {
+			basededatos.Seccion[] consulta = basededatos.SeccionDAO.listSeccionByQuery(
+					"Titulo_seccion = '" + titulo_seccion + "'", "");
+			if (consulta.length > 0) {
+				consulta[0].setElimina((basededatos.Editor) this._editor.identificado);
+				consulta[0].setEsEliminada(true);
+			}
+			this._editor.Explorar_secciones_Editor(); // Refrescar pagina
+		} catch (PersistentException e) {
+			e.printStackTrace();
+		}
 	}
 }

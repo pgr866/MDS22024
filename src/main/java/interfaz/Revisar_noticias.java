@@ -1,9 +1,7 @@
 package interfaz;
 
-import com.vaadin.flow.component.listbox.MultiSelectListBox;
-import com.vaadin.flow.component.orderedlayout.VerticalLayout;
-
 public class Revisar_noticias extends vistas.VistaRevisarnoticias {
+	
 //	private event _eliminar_noticia;
 //	private event _publicar_noticia;
 //	private event _realizar_resumen;
@@ -21,10 +19,8 @@ public class Revisar_noticias extends vistas.VistaRevisarnoticias {
 		super();
 		this._noticias_a_revisar = _noticias_a_revisar;
 		this.getTextfieldtitulonoticiarevisarnoticias().setValue(_noticias_a_revisar.getItemnoticiasarevisar().getText());
-		
 		this.getEliminarrevisarnoticia().addClickListener(event->Eliminar_noticia());
 		this.getPublicarrevisarnoticia().addClickListener(event->Publicar_noticia());
-		
 		this.noticia = noticia;
 	    this.getTextfieldtitulonoticiarevisarnoticias().setValue(noticia.getTitulo());
 	    this.getTextfieldurlimagenesrevisarnoticias().setValue(noticia.getUrl_imagen_noticia());
@@ -34,15 +30,16 @@ public class Revisar_noticias extends vistas.VistaRevisarnoticias {
 	}
 
 	public void Eliminar_noticia() {
-		String titulo = this.getTextfieldtitulonoticiarevisarnoticias().getValue();
-		// eliminar noticia BD
-		this._noticias_a_revisar._noticias_a_revisar.getListboxnoticiasarevisar().as(MultiSelectListBox.class).remove(this._noticias_a_revisar);
-		this._noticias_a_revisar._noticias_a_revisar._item.remove(this._noticias_a_revisar);
+		this.noticia.setEsEliminada(true);
+		this.noticia.setElimina_noticia((basededatos.Editor) this._noticias_a_revisar._noticias_a_revisar._editor.identificado);
 		this._noticias_a_revisar._noticias_a_revisar._editor.Listado_noticias_portada_Editor(); // Refrescar pagina
 	}
 
 	public void Publicar_noticia() {
-		// update noticia Publicada a 1 BD
+		this.noticia.setResumen(getTextfieldresumenrevisarnoticias().getValue());
+		this.noticia.setPublicada(true);
+		this.noticia.setPublica((basededatos.Editor) this._noticias_a_revisar._noticias_a_revisar._editor.identificado);
+		this._noticias_a_revisar._noticias_a_revisar._editor.Listado_noticias_portada_Editor(); // Refrescar pagina
 	}
 
 }

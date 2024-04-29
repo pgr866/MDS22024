@@ -327,14 +327,18 @@ public class NoticiaDAO {
 				noticia.getPortada_contiene_noticias().aparece_en_portada.remove(noticia);
 			}
 			
+			if (noticia.getPublica() != null) {
+				noticia.getPublica().es_publicada_por.remove(noticia);
+			}
+			
+			if (noticia.getElimina_noticia() != null) {
+				noticia.getElimina_noticia().noticia_es_eliminada_por_.remove(noticia);
+			}
+			
 			if (noticia.getCrea() != null) {
 				noticia.getCrea().es_creada.remove(noticia);
 			}
 			
-			basededatos.Editor[] lPublicas = noticia.publica.toArray();
-			for(int i = 0; i < lPublicas.length; i++) {
-				lPublicas[i].es_publicada_por.remove(noticia);
-			}
 			basededatos.Identificado[] lValora_positivas = noticia.valora_positiva.toArray();
 			for(int i = 0; i < lValora_positivas.length; i++) {
 				lValora_positivas[i].es_valorada_positiva_por.remove(noticia);
@@ -354,10 +358,6 @@ public class NoticiaDAO {
 			basededatos.Comentario[] lPertenece_a_noticias = noticia.pertenece_a_noticia.toArray();
 			for(int i = 0; i < lPertenece_a_noticias.length; i++) {
 				lPertenece_a_noticias[i].setNoticia_contiene_comentarios(null);
-			}
-			basededatos.Editor[] lEliminas = noticia.elimina.toArray();
-			for(int i = 0; i < lEliminas.length; i++) {
-				lEliminas[i].es_eliminada_por_editor.remove(noticia);
 			}
 			return delete(noticia);
 		}
@@ -373,14 +373,18 @@ public class NoticiaDAO {
 				noticia.getPortada_contiene_noticias().aparece_en_portada.remove(noticia);
 			}
 			
+			if (noticia.getPublica() != null) {
+				noticia.getPublica().es_publicada_por.remove(noticia);
+			}
+			
+			if (noticia.getElimina_noticia() != null) {
+				noticia.getElimina_noticia().noticia_es_eliminada_por_.remove(noticia);
+			}
+			
 			if (noticia.getCrea() != null) {
 				noticia.getCrea().es_creada.remove(noticia);
 			}
 			
-			basededatos.Editor[] lPublicas = noticia.publica.toArray();
-			for(int i = 0; i < lPublicas.length; i++) {
-				lPublicas[i].es_publicada_por.remove(noticia);
-			}
 			basededatos.Identificado[] lValora_positivas = noticia.valora_positiva.toArray();
 			for(int i = 0; i < lValora_positivas.length; i++) {
 				lValora_positivas[i].es_valorada_positiva_por.remove(noticia);
@@ -400,10 +404,6 @@ public class NoticiaDAO {
 			basededatos.Comentario[] lPertenece_a_noticias = noticia.pertenece_a_noticia.toArray();
 			for(int i = 0; i < lPertenece_a_noticias.length; i++) {
 				lPertenece_a_noticias[i].setNoticia_contiene_comentarios(null);
-			}
-			basededatos.Editor[] lEliminas = noticia.elimina.toArray();
-			for(int i = 0; i < lEliminas.length; i++) {
-				lEliminas[i].es_eliminada_por_editor.remove(noticia);
 			}
 			try {
 				session.delete(noticia);

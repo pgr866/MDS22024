@@ -73,6 +73,17 @@
       <Index>false</Index>
       <UserTypes/>
     </Column>
+    <Column name="EsEliminada">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>1</Type>
+      <Length>1</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
   </Entity>
   <Entity name="Tematica" Unlogged="false" PKClustered="0" Temporal="false" TemporalStartTimeColumn="null" TemporalEndTimeColumn="null" TemporalHistoryTable="null">
     <Column name="Id_tematica">
@@ -114,6 +125,30 @@
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>true</ForeignKey>
       <ReferencedColumn>basededatos.Portada.Id_portada</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>true</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="EditorIdentificadoId2">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>basededatos.Editor.IdentificadoId</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="EditorIdentificadoId">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>basededatos.Editor.IdentificadoId</ReferencedColumn>
       <Type>9</Type>
       <Length>10</Length>
       <Nullable>false</Nullable>
@@ -233,6 +268,17 @@
       <Index>false</Index>
       <UserTypes/>
     </Column>
+    <Column name="EsEliminada">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>1</Type>
+      <Length>1</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
   </Entity>
   <Entity name="Comentario" Unlogged="false" PKClustered="0" Temporal="false" TemporalStartTimeColumn="null" TemporalEndTimeColumn="null" TemporalHistoryTable="null">
     <Column name="Id_comentario">
@@ -309,6 +355,17 @@
       <ForeignKey>false</ForeignKey>
       <Type>9</Type>
       <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="EsEliminado">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>1</Type>
+      <Length>1</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -466,6 +523,30 @@
       <Index>false</Index>
       <UserTypes/>
     </Column>
+    <Column name="EditorIdentificadoId2">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>basededatos.Editor.IdentificadoId</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="EditorIdentificadoId">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>basededatos.Editor.IdentificadoId</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
   </Entity>
   <Entity name="Usuario_suscrito" Unlogged="false" PKClustered="0" Temporal="false" TemporalStartTimeColumn="null" TemporalEndTimeColumn="null" TemporalHistoryTable="null">
     <Column name="Num_tarjeta">
@@ -598,58 +679,6 @@
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
       <ReferencedColumn>basededatos.Identificado.Id</ReferencedColumn>
-      <Type>9</Type>
-      <Length>10</Length>
-      <Nullable>false</Nullable>
-      <IDGenerator>assigned</IDGenerator>
-      <Unique>false</Unique>
-      <Index>false</Index>
-      <UserTypes/>
-    </Column>
-  </Entity>
-  <Entity name="Noticia_Editor" Unlogged="false" PKClustered="0" Temporal="false" TemporalStartTimeColumn="null" TemporalEndTimeColumn="null" TemporalHistoryTable="null">
-    <Column name="NoticiaId_noticia">
-      <PrimaryKey>true</PrimaryKey>
-      <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>basededatos.Noticia.Id_noticia</ReferencedColumn>
-      <Type>9</Type>
-      <Length>10</Length>
-      <Nullable>false</Nullable>
-      <IDGenerator>assigned</IDGenerator>
-      <Unique>false</Unique>
-      <Index>false</Index>
-      <UserTypes/>
-    </Column>
-    <Column name="EditorIdentificadoId">
-      <PrimaryKey>true</PrimaryKey>
-      <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>basededatos.Editor.IdentificadoId</ReferencedColumn>
-      <Type>9</Type>
-      <Length>10</Length>
-      <Nullable>false</Nullable>
-      <IDGenerator>assigned</IDGenerator>
-      <Unique>false</Unique>
-      <Index>false</Index>
-      <UserTypes/>
-    </Column>
-  </Entity>
-  <Entity name="Editor_Noticia" Unlogged="false" PKClustered="0" Temporal="false" TemporalStartTimeColumn="null" TemporalEndTimeColumn="null" TemporalHistoryTable="null">
-    <Column name="EditorIdentificadoId">
-      <PrimaryKey>true</PrimaryKey>
-      <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>basededatos.Editor.IdentificadoId</ReferencedColumn>
-      <Type>9</Type>
-      <Length>10</Length>
-      <Nullable>false</Nullable>
-      <IDGenerator>assigned</IDGenerator>
-      <Unique>false</Unique>
-      <Index>false</Index>
-      <UserTypes/>
-    </Column>
-    <Column name="NoticiaId_noticia">
-      <PrimaryKey>true</PrimaryKey>
-      <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>basededatos.Noticia.Id_noticia</ReferencedColumn>
       <Type>9</Type>
       <Length>10</Length>
       <Nullable>false</Nullable>
@@ -891,18 +920,8 @@
       <Column>IdentificadoId</Column>
     </RefColumns>
   </ForeignKey>
-  <ForeignKey name="FKNoticia_Ed759029">
-    <ReferenceTable>Noticia_Editor</ReferenceTable>
-    <ReferencedTable>Noticia</ReferencedTable>
-    <Columns>
-      <Column>NoticiaId_noticia</Column>
-    </Columns>
-    <RefColumns>
-      <Column>Id_noticia</Column>
-    </RefColumns>
-  </ForeignKey>
-  <ForeignKey name="FKNoticia_Ed99723">
-    <ReferenceTable>Noticia_Editor</ReferenceTable>
+  <ForeignKey name="FKNoticia859437">
+    <ReferenceTable>Noticia</ReferenceTable>
     <ReferencedTable>Editor</ReferencedTable>
     <Columns>
       <Column>EditorIdentificadoId</Column>
@@ -911,24 +930,14 @@
       <Column>IdentificadoId</Column>
     </RefColumns>
   </ForeignKey>
-  <ForeignKey name="FKEditor_Not344486">
-    <ReferenceTable>Editor_Noticia</ReferenceTable>
+  <ForeignKey name="FKNoticia105236">
+    <ReferenceTable>Noticia</ReferenceTable>
     <ReferencedTable>Editor</ReferencedTable>
     <Columns>
-      <Column>EditorIdentificadoId</Column>
+      <Column>EditorIdentificadoId2</Column>
     </Columns>
     <RefColumns>
       <Column>IdentificadoId</Column>
-    </RefColumns>
-  </ForeignKey>
-  <ForeignKey name="FKEditor_Not768351">
-    <ReferenceTable>Editor_Noticia</ReferenceTable>
-    <ReferencedTable>Noticia</ReferencedTable>
-    <Columns>
-      <Column>NoticiaId_noticia</Column>
-    </Columns>
-    <RefColumns>
-      <Column>Id_noticia</Column>
     </RefColumns>
   </ForeignKey>
   <ForeignKey name="FKNoticia219859">
@@ -979,6 +988,26 @@
     </Columns>
     <RefColumns>
       <Column>Id_noticia</Column>
+    </RefColumns>
+  </ForeignKey>
+  <ForeignKey name="FKPeriodista428834">
+    <ReferenceTable>Periodista</ReferenceTable>
+    <ReferencedTable>Editor</ReferencedTable>
+    <Columns>
+      <Column>EditorIdentificadoId</Column>
+    </Columns>
+    <RefColumns>
+      <Column>IdentificadoId</Column>
+    </RefColumns>
+  </ForeignKey>
+  <ForeignKey name="FKPeriodista296958">
+    <ReferenceTable>Periodista</ReferenceTable>
+    <ReferencedTable>Editor</ReferencedTable>
+    <Columns>
+      <Column>EditorIdentificadoId2</Column>
+    </Columns>
+    <RefColumns>
+      <Column>IdentificadoId</Column>
     </RefColumns>
   </ForeignKey>
 </Model>

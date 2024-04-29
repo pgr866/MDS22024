@@ -9,6 +9,7 @@ import proyectoMDS.MainView;
 //import basededatos.iIdentificado;
 
 public class Identificado extends VistaIdentificado {
+	
 //	public iIdentificado _iIdentificado;
 	public Listado_noticias_portada_Identificado _listado_noticias_portada_Identificado;
 	public Buscar_Identificado _buscar_Identificado;

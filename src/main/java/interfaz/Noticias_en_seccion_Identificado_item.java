@@ -1,10 +1,11 @@
-package interfaz; //DINAMICO
+package interfaz;
 
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 import vistas.VistaNoticiasenseccionidentificado_item;
 
 public class Noticias_en_seccion_Identificado_item extends VistaNoticiasenseccionidentificado_item {
+	
 //	private Label _titulo;
 //	private Label _autor;
 //	private Label _fecha;
@@ -24,8 +25,7 @@ public class Noticias_en_seccion_Identificado_item extends VistaNoticiasenseccio
 		this.getTitulonoticiasenseccionidentificado().setText(noticia.getTitulo());;
 		this.getImagennoticiasenseccionidentificado().setSrc(noticia.getUrl_imagen_noticia());
 		this.getFechanoticiasenseccionidentificado().setText(noticia.getFecha());
-		basededatos.Periodista periodista = new basededatos.Periodista();
-		this.getAutornoticiasenseccionidentificado().setText(periodista.getNombre() + " " + periodista.getApellidos());
+		this.getAutornoticiasenseccionidentificado().setText(noticia.getCrea().getNombre() + " " + noticia.getCrea().getApellidos());
 		this.getLugarnoticiasenseccionidentificado().setText(noticia.getLugar());
 		this.getContenidonoticiasenseccionidentificado().setValue(noticia.getResumen());;
 	}

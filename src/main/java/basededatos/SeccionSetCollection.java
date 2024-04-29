@@ -72,6 +72,7 @@ public class SeccionSetCollection extends org.orm.util.ORMSet {
 	 * @param propertyName Name of the property for sorting:<ul>
 	 * <li>id_seccion</li>
 	 * <li>titulo_seccion</li>
+	 * <li>esEliminada</li>
 	 * </ul>
 	 * @return The persistent objects sorted array
 	 */
@@ -84,6 +85,7 @@ public class SeccionSetCollection extends org.orm.util.ORMSet {
 	 * @param propertyName Name of the property for sorting:<ul>
 	 * <li>id_seccion</li>
 	 * <li>titulo_seccion</li>
+	 * <li>esEliminada</li>
 	 * </ul>
 	 * @param ascending true for ascending, false for descending
 	 * @return The persistent objects sorted array

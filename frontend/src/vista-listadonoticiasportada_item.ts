@@ -28,7 +28,9 @@ export class VistaListadonoticiasportada_item extends LitElement {
   </vaadin-vertical-layout>
  </vaadin-horizontal-layout>
  <vaadin-horizontal-layout id="Layoutimagenlistadonoticiasportada" style="width: 100%; flex-shrink: 0; flex-direction: column; display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1;">
-  <img id="Imagenlistadonoticiasportada" style="flex-shrink: 0; width: 100%; flex-grow: 1; z-index: -1;" src="https://imagenes.elpais.com/resizer/xb6jt6pm3nPIWdSvk8ikJp_3wCg=/1200x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/PC672K3NJRDJNGSA7ZEM2M6E6A.jpg">
+  <vaadin-button id="Buttonimagenlistadonoticiasportada" style="flex-grow: 1; flex-shrink: 0; width: 100%;">
+   <img id="Imagenlistadonoticiasportada" style="flex-shrink: 0; flex-grow: 0; z-index: -1;" src="https://imagenes.elpais.com/resizer/xb6jt6pm3nPIWdSvk8ikJp_3wCg=/1200x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/PC672K3NJRDJNGSA7ZEM2M6E6A.jpg">
+  </vaadin-button>
   <vaadin-horizontal-layout id="Layoutautorlugarfechalistadonoticiasportada" style="width: 100%; flex-shrink: 0; justify-content: space-between; flex-grow: 0;">
    <label style="flex-shrink: 0; width: 30%; height: 100%; text-align: center;" id="Labelfechalistadonoticiasportada">Fecha</label>
    <label style="flex-shrink: 0; width: 30%; height: 100%; text-align: center;" id="Labelautorlistadonoticiasportada">Autor</label>

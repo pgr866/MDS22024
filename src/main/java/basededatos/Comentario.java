@@ -42,8 +42,8 @@ public class Comentario implements Serializable {
 			this.escribe = (basededatos.Identificado) owner;
 		}
 		
-		else if (key == ORMConstants.KEY_COMENTARIO_ELIMINA) {
-			this.elimina = (basededatos.Editor) owner;
+		else if (key == ORMConstants.KEY_COMENTARIO_ELIMINA_COMENTARIO) {
+			this.elimina_comentario = (basededatos.Editor) owner;
 		}
 	}
 	
@@ -75,7 +75,7 @@ public class Comentario implements Serializable {
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.LOCK})	
 	@JoinColumns(value={ @JoinColumn(name="EditorIdentificadoId", referencedColumnName="IdentificadoId", nullable=false) }, foreignKey=@ForeignKey(name="FKComentario316609"))	
 	@org.hibernate.annotations.LazyToOne(value=org.hibernate.annotations.LazyToOneOption.NO_PROXY)	
-	private basededatos.Editor elimina;
+	private basededatos.Editor elimina_comentario;
 	
 	@ManyToOne(targetEntity=basededatos.Noticia.class, fetch=FetchType.LAZY)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.LOCK})	
@@ -91,6 +91,9 @@ public class Comentario implements Serializable {
 	
 	@Column(name="Valoraciones_negativas", nullable=false, length=10)	
 	private int valoraciones_negativas;
+	
+	@Column(name="EsEliminado", nullable=false, length=1)	
+	private boolean esEliminado;
 	
 	@ManyToMany(mappedBy="ORM_es_valorado_positiva", targetEntity=basededatos.Identificado.class)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
@@ -136,6 +139,14 @@ public class Comentario implements Serializable {
 	
 	public int getValoraciones_negativas() {
 		return valoraciones_negativas;
+	}
+	
+	public void setEsEliminado(boolean value) {
+		this.esEliminado = value;
+	}
+	
+	public boolean getEsEliminado() {
+		return esEliminado;
 	}
 	
 	public void setNoticia_contiene_comentarios(basededatos.Noticia value) {
@@ -186,28 +197,28 @@ public class Comentario implements Serializable {
 		return escribe;
 	}
 	
-	public void setElimina(basededatos.Editor value) {
-		if (elimina != null) {
-			elimina.es_eliminado_por.remove(this);
+	public void setElimina_comentario(basededatos.Editor value) {
+		if (elimina_comentario != null) {
+			elimina_comentario.es_eliminado_por.remove(this);
 		}
 		if (value != null) {
 			value.es_eliminado_por.add(this);
 		}
 	}
 	
-	public basededatos.Editor getElimina() {
-		return elimina;
+	public basededatos.Editor getElimina_comentario() {
+		return elimina_comentario;
 	}
 	
 	/**
 	 * This method is for internal use only.
 	 */
-	public void setORM_Elimina(basededatos.Editor value) {
-		this.elimina = value;
+	public void setORM_Elimina_comentario(basededatos.Editor value) {
+		this.elimina_comentario = value;
 	}
 	
-	private basededatos.Editor getORM_Elimina() {
-		return elimina;
+	private basededatos.Editor getORM_Elimina_comentario() {
+		return elimina_comentario;
 	}
 	
 	private void setORM_Valora_positivamente(java.util.Set value) {

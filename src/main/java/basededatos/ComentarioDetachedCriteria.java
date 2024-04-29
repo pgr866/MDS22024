@@ -22,13 +22,14 @@ public class ComentarioDetachedCriteria extends AbstractORMDetachedCriteria {
 	public final IntegerExpression id_comentario;
 	public final IntegerExpression escribeId;
 	public final AssociationExpression escribe;
-	public final IntegerExpression eliminaId;
-	public final AssociationExpression elimina;
+	public final IntegerExpression elimina_comentarioId;
+	public final AssociationExpression elimina_comentario;
 	public final IntegerExpression noticia_contiene_comentariosId;
 	public final AssociationExpression noticia_contiene_comentarios;
 	public final StringExpression contenido;
 	public final IntegerExpression valoraciones_positivas;
 	public final IntegerExpression valoraciones_negativas;
+	public final BooleanExpression esEliminado;
 	public final CollectionExpression valora_positivamente;
 	public final CollectionExpression valora_negativamente;
 	
@@ -37,13 +38,14 @@ public class ComentarioDetachedCriteria extends AbstractORMDetachedCriteria {
 		id_comentario = new IntegerExpression("id_comentario", this.getDetachedCriteria());
 		escribeId = new IntegerExpression("escribe.id", this.getDetachedCriteria());
 		escribe = new AssociationExpression("escribe", this.getDetachedCriteria());
-		eliminaId = new IntegerExpression("elimina.", this.getDetachedCriteria());
-		elimina = new AssociationExpression("elimina", this.getDetachedCriteria());
+		elimina_comentarioId = new IntegerExpression("elimina_comentario.", this.getDetachedCriteria());
+		elimina_comentario = new AssociationExpression("elimina_comentario", this.getDetachedCriteria());
 		noticia_contiene_comentariosId = new IntegerExpression("noticia_contiene_comentarios.id_noticia", this.getDetachedCriteria());
 		noticia_contiene_comentarios = new AssociationExpression("noticia_contiene_comentarios", this.getDetachedCriteria());
 		contenido = new StringExpression("contenido", this.getDetachedCriteria());
 		valoraciones_positivas = new IntegerExpression("valoraciones_positivas", this.getDetachedCriteria());
 		valoraciones_negativas = new IntegerExpression("valoraciones_negativas", this.getDetachedCriteria());
+		esEliminado = new BooleanExpression("esEliminado", this.getDetachedCriteria());
 		valora_positivamente = new CollectionExpression("ORM_valora_positivamente", this.getDetachedCriteria());
 		valora_negativamente = new CollectionExpression("ORM_valora_negativamente", this.getDetachedCriteria());
 	}
@@ -53,13 +55,14 @@ public class ComentarioDetachedCriteria extends AbstractORMDetachedCriteria {
 		id_comentario = new IntegerExpression("id_comentario", this.getDetachedCriteria());
 		escribeId = new IntegerExpression("escribe.id", this.getDetachedCriteria());
 		escribe = new AssociationExpression("escribe", this.getDetachedCriteria());
-		eliminaId = new IntegerExpression("elimina.", this.getDetachedCriteria());
-		elimina = new AssociationExpression("elimina", this.getDetachedCriteria());
+		elimina_comentarioId = new IntegerExpression("elimina_comentario.", this.getDetachedCriteria());
+		elimina_comentario = new AssociationExpression("elimina_comentario", this.getDetachedCriteria());
 		noticia_contiene_comentariosId = new IntegerExpression("noticia_contiene_comentarios.id_noticia", this.getDetachedCriteria());
 		noticia_contiene_comentarios = new AssociationExpression("noticia_contiene_comentarios", this.getDetachedCriteria());
 		contenido = new StringExpression("contenido", this.getDetachedCriteria());
 		valoraciones_positivas = new IntegerExpression("valoraciones_positivas", this.getDetachedCriteria());
 		valoraciones_negativas = new IntegerExpression("valoraciones_negativas", this.getDetachedCriteria());
+		esEliminado = new BooleanExpression("esEliminado", this.getDetachedCriteria());
 		valora_positivamente = new CollectionExpression("ORM_valora_positivamente", this.getDetachedCriteria());
 		valora_negativamente = new CollectionExpression("ORM_valora_negativamente", this.getDetachedCriteria());
 	}
@@ -68,8 +71,8 @@ public class ComentarioDetachedCriteria extends AbstractORMDetachedCriteria {
 		return new IdentificadoDetachedCriteria(createCriteria("escribe"));
 	}
 	
-	public EditorDetachedCriteria createEliminaCriteria() {
-		return new EditorDetachedCriteria(createCriteria("elimina"));
+	public EditorDetachedCriteria createElimina_comentarioCriteria() {
+		return new EditorDetachedCriteria(createCriteria("elimina_comentario"));
 	}
 	
 	public NoticiaDetachedCriteria createNoticia_contiene_comentariosCriteria() {

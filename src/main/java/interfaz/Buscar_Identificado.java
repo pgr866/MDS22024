@@ -3,7 +3,7 @@ package interfaz;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 public class Buscar_Identificado extends Buscar {
-
+	
 	public Identificado _identificado;
 	public Listado_noticias_busqueda_Identificado _listado_noticias_busqueda_Identificado;
 

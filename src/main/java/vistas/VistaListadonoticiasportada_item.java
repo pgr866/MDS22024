@@ -17,6 +17,14 @@ import com.vaadin.flow.component.html.Label;
 @JsModule("./src/vista-listadonoticiasportada_item.ts")
 public class VistaListadonoticiasportada_item extends LitTemplate {
 
+	public Button getButtonimagenlistadonoticiasportada() {
+		return buttonimagenlistadonoticiasportada;
+	}
+
+	public void setButtonimagenlistadonoticiasportada(Button buttonimagenlistadonoticiasportada) {
+		this.buttonimagenlistadonoticiasportada = buttonimagenlistadonoticiasportada;
+	}
+
 	public Element getLayouttitulolistadonoticiasportada() {
 		return layouttitulolistadonoticiasportada;
 	}
@@ -128,6 +136,8 @@ public class VistaListadonoticiasportada_item extends LitTemplate {
 	private HorizontalLayout layouresumenlistadonoticiasportada;
 	@Id("Textarearesumenlistadonoticiasportada")
 	private TextArea textarearesumenlistadonoticiasportada;
+	@Id("Buttonimagenlistadonoticiasportada")
+	private Button buttonimagenlistadonoticiasportada;
 
 	public VistaListadonoticiasportada_item() {
         // You can initialise any data required for the connected UI components here.

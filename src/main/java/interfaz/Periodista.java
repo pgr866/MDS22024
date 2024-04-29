@@ -7,6 +7,7 @@ import proyectoMDS.MainView;
 //import basededatos.iPeriodista;
 
 public class Periodista extends Identificado {
+	
 //	public iPeriodista _iPeriodista;
 	public Crear_noticias _crear_noticias;
 	public Mostrar_mis_noticias _mostrar_mis_noticias;

@@ -1,7 +1,5 @@
 package interfaz;
 
-import java.util.ArrayList;
-
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 public class Baja_Alta_Periodistas extends vistas.VistaBajaaltaperiodistas {
@@ -38,7 +36,6 @@ public class Baja_Alta_Periodistas extends vistas.VistaBajaaltaperiodistas {
 	}
 	
 	public void Alta_periodista() {
-		// crear periodista BD
 		basededatos.Periodista nuevo_periodista = new basededatos.Periodista();
 		nuevo_periodista.setNombre(this.getTextfieldnombredaraltaperiodista().getValue());
 		nuevo_periodista.setApellidos(this.getTextfieldapellidosdaraltaperiodista().getValue());
@@ -49,6 +46,8 @@ public class Baja_Alta_Periodistas extends vistas.VistaBajaaltaperiodistas {
 		nuevo_periodista.setContrasena(this.getTextfieldcontrasenadaraltaperiodista().getValue());
 		nuevo_periodista.setFecha_nacimiento(this.getTextfieldfechanacimientodaraltaperiodista().getValue());
 		nuevo_periodista.setEsEliminado(false);
+		nuevo_periodista.setDa_de_alta((basededatos.Editor) this._editor.identificado);;
+		nuevo_periodista.setUrl_foto_perfil("https://definicion.de/wp-content/uploads/2019/07/perfil-de-usuario.png");
 		this._editor.Baja_Alta_Periodistas(); // Refrescar pagina
 	}
 }

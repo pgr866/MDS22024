@@ -1,7 +1,5 @@
 package interfaz;
 
-import java.util.ArrayList;
-
 public class Configurar_perfil_Usuario_suscrito extends Configurar_perfil {
 
 	//	private event _eliminar_cuenta;
@@ -17,7 +15,6 @@ public class Configurar_perfil_Usuario_suscrito extends Configurar_perfil {
 	}
 
 	public void Eliminar_cuenta() {
-		//eliminar usuario suscrito BD
 		((basededatos.Usuario_suscrito) this.identificado).setEsEliminado(true);
 		((basededatos.Usuario_suscrito) this.identificado).setApellidos("");
 		((basededatos.Usuario_suscrito) this.identificado).setContrasena("");
@@ -30,5 +27,6 @@ public class Configurar_perfil_Usuario_suscrito extends Configurar_perfil {
 		((basededatos.Usuario_suscrito) this.identificado).setUrl_foto_perfil("");
 		this._usuario_Suscrito.mainview.removeAll();
 		this._usuario_Suscrito.mainview.add(this._usuario_Suscrito.mainview._usuario_no_registrado);
+		this._usuario_Suscrito.mainview._usuario_suscrito = null;
 	}
 }

@@ -1,8 +1,7 @@
 package interfaz;
 
-import org.orm.PersistentException;
-
 public class Pagina_Noticia extends vistas.VistaPaginanoticia {
+	
 //	private Label _titulo;
 //	private Label _autor;
 //	private Label _fecha;
@@ -18,12 +17,13 @@ public class Pagina_Noticia extends vistas.VistaPaginanoticia {
 		this._mostrar_valoracion_noticia = new Mostrar_valoracion_noticia(this, this.noticia);
 		Mostrar_valoracion_noticia();
 	    this.getLabeltitulonoticiapaginanoticia().setText(noticia.getTitulo());
-		basededatos.Tematica tematica = new basededatos.Tematica();
-	    this.getLabeltitulotematicapaginanoticia().setText(tematica.getTitulo_tematica());
+	    String tematicas = "";
+	    for (basededatos.Tematica tematica : noticia.pertenece_a.toArray())
+	    	tematicas += tematica.getTitulo_tematica() + " ";
+	    this.getLabeltitulotematicapaginanoticia().setText(tematicas);
 	    this.getImagennoticiapaginanoticia().setSrc(noticia.getUrl_imagen_noticia());
 	    this.getLayoutfechapaginanoticia().setText(noticia.getFecha());
-	    basededatos.Periodista periodista = new basededatos.Periodista();
-	    this.getLayoutautorpaginanoticia().setText(periodista.getNombre() + " " + periodista.getApellidos());
+	    this.getLayoutautorpaginanoticia().setText(noticia.getCrea().getNombre() + " " + noticia.getCrea().getApellidos());
 	    this.getLayoutlugarpaginanoticia().setText(noticia.getLugar());
 	}
 

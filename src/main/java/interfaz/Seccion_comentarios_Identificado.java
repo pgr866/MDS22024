@@ -3,6 +3,7 @@ package interfaz;
 import java.util.Vector;
 
 public class Seccion_comentarios_Identificado extends Seccion_comentarios {
+	
 //	private Button _anadir_nuevo_comentario;
 //	private comentario___TexArea _nuevo;
 	public Pagina_noticia_Identificado _pagina_noticia_Identificado;

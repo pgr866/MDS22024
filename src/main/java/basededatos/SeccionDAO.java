@@ -327,8 +327,8 @@ public class SeccionDAO {
 				seccion.getElimina().es_eliminada_por.remove(seccion);
 			}
 			
-			if (seccion.getCrea() != null) {
-				seccion.getCrea().es_creada_por.remove(seccion);
+			if (seccion.getCrea_seccion() != null) {
+				seccion.getCrea_seccion().es_creada_por.remove(seccion);
 			}
 			
 			basededatos.Noticia[] lAparece_ens = seccion.aparece_en.toArray();
@@ -349,8 +349,8 @@ public class SeccionDAO {
 				seccion.getElimina().es_eliminada_por.remove(seccion);
 			}
 			
-			if (seccion.getCrea() != null) {
-				seccion.getCrea().es_creada_por.remove(seccion);
+			if (seccion.getCrea_seccion() != null) {
+				seccion.getCrea_seccion().es_creada_por.remove(seccion);
 			}
 			
 			basededatos.Noticia[] lAparece_ens = seccion.aparece_en.toArray();

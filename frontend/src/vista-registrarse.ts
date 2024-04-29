@@ -56,10 +56,11 @@ export class VistaRegistrarse extends LitElement {
     <label style="width: 20%; flex-shrink: 0; align-self: center; padding-right: var(--lumo-space-xl);" id="Labelcontrasenaregistrarse">Contraseña</label>
     <vaadin-password-field placeholder="Contraseña" style="flex-shrink: 0; width: 80%;" has-value id="Passwordfieldcontrasenaregistrarse"></vaadin-password-field>
    </vaadin-horizontal-layout>
-   <vaadin-horizontal-layout style="width: 100%; padding-bottom: var(--lumo-space-xl);" id="Layoutrepetircontrasenaregistrarse">
+   <vaadin-horizontal-layout style="width: 100%;" id="Layoutrepetircontrasenaregistrarse">
     <label style="width: 20%; flex-shrink: 0; align-self: center; padding-right: var(--lumo-space-xl);" id="Labelrepetircontrasenaregistrarse">Repetir Contraseña</label>
     <vaadin-password-field placeholder="Repetir Contraseña" style="flex-shrink: 0; width: 80%; align-self: center;" has-value id="Passwordfieldrepetircontrasenaregistrarse"></vaadin-password-field>
    </vaadin-horizontal-layout>
+   <label style="flex-shrink: 0; font-size: 120%; width: 100%; align-self: center; font-size: 100%; text-align: center; color: #FF0000;" id="Labelerrordatosregistrarse"></label>
   </vaadin-vertical-layout>
   <vaadin-horizontal-layout style="flex-shrink: 0; width: 100%; justify-content: space-around;" id="Layoutcancelarenviarregistrarse">
    <vaadin-button style="flex-shrink: 0; align-self: center; width: 40%;" id="Cancelarregistrarse">

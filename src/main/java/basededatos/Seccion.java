@@ -31,8 +31,8 @@ public class Seccion implements Serializable {
 	}
 	
 	private void this_setOwner(Object owner, int key) {
-		if (key == ORMConstants.KEY_SECCION_CREA) {
-			this.crea = (basededatos.Editor) owner;
+		if (key == ORMConstants.KEY_SECCION_CREA_SECCION) {
+			this.crea_seccion = (basededatos.Editor) owner;
 		}
 		
 		else if (key == ORMConstants.KEY_SECCION_ELIMINA) {
@@ -68,10 +68,13 @@ public class Seccion implements Serializable {
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.LOCK})	
 	@JoinColumns(value={ @JoinColumn(name="EditorIdentificadoId", referencedColumnName="IdentificadoId", nullable=false) }, foreignKey=@ForeignKey(name="FKSeccion472636"))	
 	@org.hibernate.annotations.LazyToOne(value=org.hibernate.annotations.LazyToOneOption.NO_PROXY)	
-	private basededatos.Editor crea;
+	private basededatos.Editor crea_seccion;
 	
 	@Column(name="Titulo_seccion", nullable=true, length=255)	
 	private String titulo_seccion;
+	
+	@Column(name="EsEliminada", nullable=false, length=1)	
+	private boolean esEliminada;
 	
 	@ManyToMany(targetEntity=basededatos.Noticia.class)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
@@ -99,6 +102,14 @@ public class Seccion implements Serializable {
 		return titulo_seccion;
 	}
 	
+	public void setEsEliminada(boolean value) {
+		this.esEliminada = value;
+	}
+	
+	public boolean getEsEliminada() {
+		return esEliminada;
+	}
+	
 	private void setORM_Aparece_en(java.util.Set value) {
 		this.ORM_aparece_en = value;
 	}
@@ -110,28 +121,28 @@ public class Seccion implements Serializable {
 	@Transient	
 	public final basededatos.NoticiaSetCollection aparece_en = new basededatos.NoticiaSetCollection(this, _ormAdapter, ORMConstants.KEY_SECCION_APARECE_EN, ORMConstants.KEY_NOTICIA_SECCION_CONTIENE_NOTICIAS, ORMConstants.KEY_MUL_MANY_TO_MANY);
 	
-	public void setCrea(basededatos.Editor value) {
-		if (crea != null) {
-			crea.es_creada_por.remove(this);
+	public void setCrea_seccion(basededatos.Editor value) {
+		if (crea_seccion != null) {
+			crea_seccion.es_creada_por.remove(this);
 		}
 		if (value != null) {
 			value.es_creada_por.add(this);
 		}
 	}
 	
-	public basededatos.Editor getCrea() {
-		return crea;
+	public basededatos.Editor getCrea_seccion() {
+		return crea_seccion;
 	}
 	
 	/**
 	 * This method is for internal use only.
 	 */
-	public void setORM_Crea(basededatos.Editor value) {
-		this.crea = value;
+	public void setORM_Crea_seccion(basededatos.Editor value) {
+		this.crea_seccion = value;
 	}
 	
-	private basededatos.Editor getORM_Crea() {
-		return crea;
+	private basededatos.Editor getORM_Crea_seccion() {
+		return crea_seccion;
 	}
 	
 	public void setElimina(basededatos.Editor value) {

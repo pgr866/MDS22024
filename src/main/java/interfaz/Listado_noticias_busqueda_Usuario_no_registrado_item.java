@@ -5,6 +5,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import vistas.VistaListadonoticiasbusquedausuarionoregistrado_item;
 
 public class Listado_noticias_busqueda_Usuario_no_registrado_item extends VistaListadonoticiasbusquedausuarionoregistrado_item {
+	
 	public Listado_noticias_busqueda_Usuario_no_registrado _listado_noticias_busqueda_Usuario_no_registrado;
 	public Pagina_noticia_Usuario_no_registrado _pagina_noticia_Usuario_no_registrado;
 	basededatos.Noticia noticia;

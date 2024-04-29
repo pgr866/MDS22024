@@ -22,9 +22,10 @@ public class SeccionDetachedCriteria extends AbstractORMDetachedCriteria {
 	public final IntegerExpression id_seccion;
 	public final IntegerExpression eliminaId;
 	public final AssociationExpression elimina;
-	public final IntegerExpression creaId;
-	public final AssociationExpression crea;
+	public final IntegerExpression crea_seccionId;
+	public final AssociationExpression crea_seccion;
 	public final StringExpression titulo_seccion;
+	public final BooleanExpression esEliminada;
 	public final CollectionExpression aparece_en;
 	
 	public SeccionDetachedCriteria() {
@@ -32,9 +33,10 @@ public class SeccionDetachedCriteria extends AbstractORMDetachedCriteria {
 		id_seccion = new IntegerExpression("id_seccion", this.getDetachedCriteria());
 		eliminaId = new IntegerExpression("elimina.", this.getDetachedCriteria());
 		elimina = new AssociationExpression("elimina", this.getDetachedCriteria());
-		creaId = new IntegerExpression("crea.", this.getDetachedCriteria());
-		crea = new AssociationExpression("crea", this.getDetachedCriteria());
+		crea_seccionId = new IntegerExpression("crea_seccion.", this.getDetachedCriteria());
+		crea_seccion = new AssociationExpression("crea_seccion", this.getDetachedCriteria());
 		titulo_seccion = new StringExpression("titulo_seccion", this.getDetachedCriteria());
+		esEliminada = new BooleanExpression("esEliminada", this.getDetachedCriteria());
 		aparece_en = new CollectionExpression("ORM_aparece_en", this.getDetachedCriteria());
 	}
 	
@@ -43,9 +45,10 @@ public class SeccionDetachedCriteria extends AbstractORMDetachedCriteria {
 		id_seccion = new IntegerExpression("id_seccion", this.getDetachedCriteria());
 		eliminaId = new IntegerExpression("elimina.", this.getDetachedCriteria());
 		elimina = new AssociationExpression("elimina", this.getDetachedCriteria());
-		creaId = new IntegerExpression("crea.", this.getDetachedCriteria());
-		crea = new AssociationExpression("crea", this.getDetachedCriteria());
+		crea_seccionId = new IntegerExpression("crea_seccion.", this.getDetachedCriteria());
+		crea_seccion = new AssociationExpression("crea_seccion", this.getDetachedCriteria());
 		titulo_seccion = new StringExpression("titulo_seccion", this.getDetachedCriteria());
+		esEliminada = new BooleanExpression("esEliminada", this.getDetachedCriteria());
 		aparece_en = new CollectionExpression("ORM_aparece_en", this.getDetachedCriteria());
 	}
 	
@@ -53,8 +56,8 @@ public class SeccionDetachedCriteria extends AbstractORMDetachedCriteria {
 		return new EditorDetachedCriteria(createCriteria("elimina"));
 	}
 	
-	public EditorDetachedCriteria createCreaCriteria() {
-		return new EditorDetachedCriteria(createCriteria("crea"));
+	public EditorDetachedCriteria createCrea_seccionCriteria() {
+		return new EditorDetachedCriteria(createCriteria("crea_seccion"));
 	}
 	
 	public NoticiaDetachedCriteria createAparece_enCriteria() {

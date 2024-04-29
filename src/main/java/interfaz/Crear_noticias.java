@@ -1,9 +1,6 @@
 package interfaz;
 
-import java.util.ArrayList;
-
-import com.vaadin.flow.component.listbox.MultiSelectListBox;
-import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import org.orm.PersistentException;
 
 public class Crear_noticias extends vistas.VistaCrearnoticias {
 
@@ -34,15 +31,27 @@ public class Crear_noticias extends vistas.VistaCrearnoticias {
 		nueva_noticia.setContenido(this.getTextareacontenidocrearnoticias().getValue());
 		nueva_noticia.setFecha(this.getTextfieldfechacrearnoticias().getValue());
 		nueva_noticia.setLugar(this.getTextfiedlugarcrearnoticias().getValue());
+		nueva_noticia.setEsEliminada(false);
 		nueva_noticia.setCrea((basededatos.Periodista) this._periodista.identificado);
 		nueva_noticia.setPublicada(false);
 		nueva_noticia.setValoraciones_positivas(0);
 		nueva_noticia.setValoraciones_negativas(0);
-		nueva_noticia.setResumen("");
-		// hacer consulta, y si no existe se crea
-		basededatos.Tematica tematica = new basededatos.Tematica();
-		tematica.setTitulo_tematica(this.getTextfieldtematicacrearnoticias().getValue());
-		nueva_noticia.pertenece_a.add(tematica);
-		this._periodista.Crear_noticias(); // Refrescar pagina
+		
+		String titulo_tematica = this.getTextfieldtematicacrearnoticias().getValue().toLowerCase();
+		basededatos.Tematica tematica;
+		try {
+			basededatos.Tematica[] consulta = basededatos.TematicaDAO.listTematicaByQuery(
+					"Titulo_tematica = '" + titulo_tematica + "'", "");
+			if (consulta.length > 0) {
+				tematica = consulta[0];
+			} else {
+				tematica = new basededatos.Tematica();
+				tematica.setTitulo_tematica(titulo_tematica);
+			}
+			nueva_noticia.pertenece_a.add(tematica);
+			this._periodista.Crear_noticias(); // Refrescar pagina
+		} catch (PersistentException e) {
+			e.printStackTrace();
+		}
 	}
 }

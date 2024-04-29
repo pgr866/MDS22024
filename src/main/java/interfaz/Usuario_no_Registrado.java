@@ -9,6 +9,7 @@ import proyectoMDS.MainView;
 //import basededatos.iUsuario_no_Registrado;
 
 public class Usuario_no_Registrado extends VistaUsuarionoregistrado {
+	
 //	public iUsuario_no_Registrado _iUsuario_no_Registrado;
 	public Iniciar_Sesion _iniciar_Sesion;
 	public Listado_noticias_portada_Usuario_no_registrado _listado_noticias_portada_Usuario_no_registrado;
@@ -28,7 +29,7 @@ public class Usuario_no_Registrado extends VistaUsuarionoregistrado {
 		this.getIniciarsesion().addClickListener(event->Iniciar_Sesion());
 		this.getLogonoregistrado().addClickListener(event->{
 			this.getLayoutnoticiasportadausuarionoregistrado().as(VerticalLayout.class).removeAll();
-			this.getLayoutnoticiasportadausuarionoregistrado().as(VerticalLayout.class).add(_listado_noticias_portada_Usuario_no_registrado);
+			Listado_noticias_portada_Usuario_no_registrado();
 		});
 		this.getExplorarseccionesnoregistrado().addClickListener(event->Explorar_secciones_Usuario_no_registrado());
 	}

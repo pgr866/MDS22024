@@ -5,6 +5,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import vistas.VistaMostrarmisnoticias_item;
 
 public class Mostrar_mis_noticias_item extends VistaMostrarmisnoticias_item {
+	
 	public Mostrar_mis_noticias _mostrar_mis_noticias;
 	public Pagina_noticia_Identificado _pagina_noticia_Identificado;
 	basededatos.Noticia noticia;
