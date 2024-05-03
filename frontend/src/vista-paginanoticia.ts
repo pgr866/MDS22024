@@ -1,6 +1,7 @@
 import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
+import '@vaadin/vaadin-button/src/vaadin-button.js';
 
 @customElement('vista-paginanoticia')
 export class VistaPaginanoticia extends LitElement {
@@ -21,12 +22,17 @@ export class VistaPaginanoticia extends LitElement {
   <label style="width: 80%; flex-shrink: 0; text-align: center; font-size: 100%; align-self: center;" id="Labeltitulotematicapaginanoticia">Temática</label>
   <vaadin-vertical-layout style="width: 100%;">
    <vaadin-horizontal-layout style="width: 100%; flex-shrink: 0; flex-direction: column; display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1;" id="Layoutimagennoticiapaginanoticia">
-    <img style="flex-shrink: 1; width: 95%; flex-grow: 0; z-index: -1; align-self: center;" src="https://imagenes.elpais.com/resizer/xb6jt6pm3nPIWdSvk8ikJp_3wCg=/1200x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/PC672K3NJRDJNGSA7ZEM2M6E6A.jpg" id="Imagennoticiapaginanoticia">
+    <img style="flex-shrink: 1; width: 95%; flex-grow: 0; z-index: -1; align-self: center;" src="https://i.postimg.cc/bJs5zvj2/noticia.png" id="Imagennoticiapaginanoticia">
     <vaadin-horizontal-layout style="width: 95%; flex-shrink: 0; justify-content: space-between; flex-grow: 0; align-self: center; height: 6%;">
-     <vaadin-horizontal-layout style="flex-shrink: 0; height: 100%; align-self: center; justify-content: space-between; flex-grow: 1;" id="Layoutfechaautorlugarpaginanoticia">
+     <vaadin-horizontal-layout style="flex-shrink: 0; height: 100%; align-self: center; justify-content: space-between; flex-grow: 0; width: 70%;" id="Layoutfechaautorlugarpaginanoticia">
       <label style="flex-shrink: 0; width: 30%; text-align: center;" id="Layoutfechapaginanoticia">Fecha</label>
       <label style="flex-shrink: 0; width: 30%; text-align: center;" id="Layoutautorpaginanoticia">Autor</label>
       <label style="flex-shrink: 0; width: 30%; text-align: center;" id="Layoutlugarpaginanoticia">Lugar</label>
+     </vaadin-horizontal-layout>
+     <vaadin-horizontal-layout style="flex-shrink: 0; width: 10%; height: 100%;">
+      <vaadin-button style="width: 100%; height: 100%; flex-shrink: 0; flex-grow: 0; align-self: center; background-color: #FFFFFF;">
+       <img style="width: 100%; height: 100%;" src="https://i.postimg.cc/nhTZQWjY/papelera.png">
+      </vaadin-button>
      </vaadin-horizontal-layout>
      <vaadin-horizontal-layout style="flex-shrink: 0; width: 20%; height: 100%; justify-content: space-between;" id="Mostrarvaloracionnoticiapaginanoticia"></vaadin-horizontal-layout>
     </vaadin-horizontal-layout>

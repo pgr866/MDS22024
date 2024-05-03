@@ -8,9 +8,6 @@ import com.vaadin.flow.component.template.Id;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.html.Image;
-import vistas.VistaMostrarvaloracionnoticia;
-import vistas.VistaMostrarnoticiaresumida;
-import vistas.VistaMostrarnoticiaextendida;
 
 @Tag("vista-paginanoticia")
 @JsModule("./src/vista-paginanoticia.ts")

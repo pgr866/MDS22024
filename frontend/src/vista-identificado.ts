@@ -16,11 +16,11 @@ export class VistaIdentificado extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%; position: absolute;">
+<vaadin-vertical-layout style="width: 98%; height: 100%; position: absolute;">
  <vaadin-horizontal-layout class="header" style="background-color: #EBEBEB; width: 100%; flex-shrink: 0; padding-top: var(--lumo-space-s); padding-right: var(--lumo-space-m); padding-left: var(--lumo-space-m); padding-bottom: var(--lumo-space-s); flex-grow: 0; justify-content: space-between; height: 15%;">
   <vaadin-vertical-layout style="width: 12%; height: 100%; flex-shrink: 0;" id="Layoutlogoidentificado">
    <vaadin-button theme="icon" ; style="height: 100%; width: 100%; flex-shrink: 1; background-color: #EBEBEB;" id="Buttonlogoidentificado">
-    <img src="../../src/main/resources/META-INF/resources/images/logo.svg" width="" alt="logo" style="width: 100%; height: 100%;" id="imagenlogoidentificado">
+    <img src="https://i.postimg.cc/PJ6nS7hm/logo.png" width="" alt="logo" style="width: 100%; height: 100%;" id="imagenlogoidentificado">
    </vaadin-button>
   </vaadin-vertical-layout>
   <vaadin-vertical-layout style="flex-shrink: 1; width: 72%;">
@@ -47,7 +47,7 @@ export class VistaIdentificado extends LitElement {
   </vaadin-vertical-layout>
   <vaadin-vertical-layout style="width: 12%; height: 100%; flex-shrink: 0; flex-grow: 0; justify-content: space-between; flex-direction: row; padding-top: var(--lumo-space-xs); padding-bottom: var(--lumo-space-xs);" id="Opcionescuentaidentificado">
    <vaadin-button style="height: 100%; flex-shrink: 0; width: 45%; align-self: center; background-color: #EBEBEB;" id="Configurarperfilidentificado">
-    <img style="height: 100%; width: 100%;" src="../../src/main/resources/META-INF/resources/images/cuenta.png" id="Imagenconfigurarperfilidentificado">
+    <img style="height: 100%; width: 100%;" src="" id="Imagenconfigurarperfilidentificado">
    </vaadin-button>
   </vaadin-vertical-layout>
  </vaadin-horizontal-layout>

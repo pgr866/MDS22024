@@ -6,13 +6,8 @@ import com.vaadin.flow.component.littemplate.LitTemplate;
 import com.vaadin.flow.dom.Element;
 import com.vaadin.flow.component.template.Id;
 import com.vaadin.flow.component.html.Image;
-import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.component.button.Button;
-import com.vaadin.flow.component.textfield.TextArea;
-import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.html.Label;
-import vistas.VistaMostrarcomentario;
-import vistas.VistaMostrarvaloracioncomentario;
 
 @Tag("vista-seccioncomentarios_item")
 @JsModule("./src/vista-seccioncomentarios_item.ts")

@@ -2,7 +2,7 @@ package interfaz;
 
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
-public class Buscar_Identificado extends Buscar {
+public class Buscar_Identificado extends vistas.VistaBuscaridentificado {
 	
 	public Identificado _identificado;
 	public Listado_noticias_busqueda_Identificado _listado_noticias_busqueda_Identificado;
@@ -15,6 +15,6 @@ public class Buscar_Identificado extends Buscar {
 	}
 	
 	public void Listado_noticias_busqueda_Identificado() {
-		this.getLayoutvistasbuscar().as(VerticalLayout.class).add(_listado_noticias_busqueda_Identificado);
+		this.getLayoutvistasbuscaridentificado().as(VerticalLayout.class).add(_listado_noticias_busqueda_Identificado);
 	}
 }

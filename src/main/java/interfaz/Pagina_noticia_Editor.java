@@ -19,4 +19,10 @@ public class Pagina_noticia_Editor extends Pagina_noticia_Identificado {
 		this.getLayoutseccioncomentariospaginanoticia().as(VerticalLayout.class).remove(this._seccion_comentarios_Identificado);
 		this.getLayoutseccioncomentariospaginanoticia().as(VerticalLayout.class).add(_seccion_comentarios_Editor);
 	}
+	
+	public void Eliminar_noticia_publicada() {
+		this.noticia.setEsEliminada(true);
+		this.noticia.setElimina_noticia((basededatos.Editor) this.identificado);
+		// Refrescar pagina
+	}
 }

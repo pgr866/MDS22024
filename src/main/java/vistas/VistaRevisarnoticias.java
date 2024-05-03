@@ -8,7 +8,6 @@ import com.vaadin.flow.component.template.Id;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.component.textfield.TextArea;
-import com.vaadin.flow.dom.Element;
 import com.vaadin.flow.component.button.Button;
 
 @Tag("vista-revisarnoticias")

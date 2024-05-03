@@ -43,7 +43,9 @@ public class Registrarse extends vistas.VistaRegistrarse {
 		try {
 			consulta = basededatos.Usuario_suscritoDAO.listUsuario_suscritoByQuery(
 					"Email = '" + email + "' AND EsEliminado = FALSE", "");
-			if (consulta.length > 0) {
+			basededatos.Usuario_suscrito[] consulta2 = basededatos.Usuario_suscritoDAO.listUsuario_suscritoByQuery(
+					"Email = '" + email + "' AND EsEliminado = FALSE", "");
+			if (consulta.length > 0 || consulta2.length > 0) {
 				this.getLabelerrordatosregistrarse().setText("Email ya registrado en otra cuenta");
 				validos = false;
 			}
@@ -104,6 +106,7 @@ public class Registrarse extends vistas.VistaRegistrarse {
     		suscrito.setDni(dni);
     		suscrito.setNum_tarjeta(this.getTextfieldntarjetaregistrarse().getValue());
     		suscrito.setContrasena(contrasena);
+    		suscrito.setUrl_foto_perfil("https://i.postimg.cc/m25GMKm4/foto.png");
     		this._iniciar_Sesion._usuario_no_Registrado.mainview._usuario_suscrito = new Usuario_Suscrito(this._iniciar_Sesion._usuario_no_Registrado.mainview, suscrito);
     		this._iniciar_Sesion._usuario_no_Registrado.mainview.removeAll();
     		this._iniciar_Sesion._usuario_no_Registrado.mainview.add(this._iniciar_Sesion._usuario_no_Registrado.mainview._usuario_suscrito);

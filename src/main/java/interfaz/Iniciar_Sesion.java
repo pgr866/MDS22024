@@ -29,7 +29,7 @@ public class Iniciar_Sesion extends VistaIniciarsesion {
 		String contrasena = this.getPasswordfieldogin().getValue();
 		try {
 			basededatos.Identificado[] consulta = basededatos.IdentificadoDAO.listIdentificadoByQuery(
-					"Email = '" + email + "' AND Contrasena = '" + contrasena + "'", "");
+					"Email = '" + email + "' AND Contrasena = '" + contrasena + "'", "DEFAULT");
 			if (consulta.length > 0) {
 				basededatos.Identificado result = consulta[0];
 				this._usuario_no_Registrado.mainview.removeAll();

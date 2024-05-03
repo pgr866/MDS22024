@@ -1,5 +1,8 @@
 package interfaz;
 
+import java.awt.Desktop;
+import java.net.URI;
+
 public class Mostrar_publicidad extends vistas.VistaMostrarpublicidad {
 	
 	public Usuario_no_Registrado _usuario_no_Registrado;
@@ -10,5 +13,9 @@ public class Mostrar_publicidad extends vistas.VistaMostrarpublicidad {
 		super();
 		this._usuario_no_Registrado = _usuario_no_Registrado;
 		this._gestionar_publicidad = _gestionar_publicidad;
-	}
+		this.getButtonanunciomostrarpublidad().addClickListener(event->{
+			try { Desktop.getDesktop().browse(new URI("https://www.coca-cola.com"));}
+			catch (Exception e) { e.printStackTrace(); }
+		});
+    }
 }

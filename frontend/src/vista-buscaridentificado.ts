@@ -1,8 +1,8 @@
 import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 
-@customElement('vista-buscar')
-export class VistaBuscar extends LitElement {
+@customElement('vista-buscaridentificado')
+export class VistaBuscaridentificado extends LitElement {
   static get styles() {
     return css`
       :host {
@@ -14,7 +14,7 @@ export class VistaBuscar extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout theme="" style="width: 100%; height: 100%; justify-content: center;" id="Layoutvistasbuscar"></vaadin-vertical-layout>
+<vaadin-vertical-layout theme="" style="width: 100%; height: 100%; justify-content: center;" id="Layoutvistasbuscaridentificado"></vaadin-vertical-layout>
 `;
   }
 

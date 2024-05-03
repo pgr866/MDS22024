@@ -8,8 +8,6 @@ import com.vaadin.flow.component.template.Id;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.html.Image;
-import vistas.VistaBuscar;
-import vistas.VistaMostrarpublicidad;
 
 @Tag("vista-usuarionoregistrado")
 @JsModule("./src/vista-usuarionoregistrado.ts")

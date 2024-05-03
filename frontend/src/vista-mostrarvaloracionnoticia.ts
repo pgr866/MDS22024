@@ -18,11 +18,11 @@ export class VistaMostrarvaloracionnoticia extends LitElement {
 <vaadin-vertical-layout style="width: 100%; height: 100%;">
  <vaadin-horizontal-layout theme="" style="width: 100%; height: 100%; flex-shrink: 0;" id="Layoutmegustanomegustamostrarvaloracionnoticia">
   <vaadin-button style="height: 100%; flex-shrink: 0; flex-grow: 0; background-color: #FFFFFF; width: 20%; align-self: center;" id="Megustamostrarvaloracionnoticia">
-   <img style="height: 100%; width: 100%;" src="https://cdn-icons-png.flaticon.com/512/126/126473.png" id="Imagenmegustamostrarvaloracionnoticia">
+   <img style="height: 100%; width: 100%;" src="https://i.postimg.cc/fk4fQzwZ/mg.png" id="Imagenmegustamostrarvaloracionnoticia">
   </vaadin-button>
   <label style="width: 20%; font-size: 110%; align-self: center; text-align: center; " id="Numeromegustamostrarvaloracionnoticia">0</label>
   <vaadin-button style="height: 100%; flex-shrink: 0; flex-grow: 0; align-self: center; background-color: #FFFFFF; width: 20%;" id="Nomegustamostrarvaloracionnoticia">
-   <img style="height: 100%; width: 100%;" src="https://cdn-icons-png.flaticon.com/512/126/126504.png" id="Imagennomegustamostrarvaloracionnoticia">
+   <img style="height: 100%; width: 100%;" src="https://i.postimg.cc/FFftvT9n/nmg.png" id="Imagennomegustamostrarvaloracionnoticia">
   </vaadin-button>
   <label style="width: 20%; font-size: 110%; align-self: center; text-align: center; " id="Numeronomegustamostrarvaloracionnoticia">0</label>
  </vaadin-horizontal-layout>

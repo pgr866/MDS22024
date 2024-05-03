@@ -1,8 +1,6 @@
 import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
-import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
 import '@vaadin/vaadin-button/src/vaadin-button.js';
-import '@vaadin/vaadin-text-field/src/vaadin-text-field.js';
 
 @customElement('vista-mostrarpublicidad')
 export class VistaMostrarpublicidad extends LitElement {
@@ -17,20 +15,10 @@ export class VistaMostrarpublicidad extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%;">
- <vaadin-horizontal-layout style="width: 100%; height: 45%; flex-shrink: 0;" id="Layoutpublicidadsuperiormostrarpublidad">
-  <vaadin-button style="background-color: white; width: 100%; height: 100%;" id="Anunciosuperiormostrarpublidad">
-   <img style="width: 100%; height: 100%;" src="../../src/main/resources/META-INF/resources/images/anuncio1.jpg" id="Imagenpublicidadsuperiormostrarpublidad">
-  </vaadin-button>
- </vaadin-horizontal-layout>
- <vaadin-horizontal-layout style="width: 100%; height: 10%; flex-shrink: 0;" id="Layoutpublicidadetiquetamostrarpublidad">
-  <vaadin-text-field label="" placeholder="Textoetiquetapubliidadmostrarpublicidad" style="align-self: center; flex-grow: 1; width: 100%;" id="Publicidadetiquetamostrarpublidad"></vaadin-text-field>
- </vaadin-horizontal-layout>
- <vaadin-horizontal-layout style="width: 100%; height: 45%; flex-shrink: 0;" id="Layoutpublicidadinferiormostrarpublidad">
-  <vaadin-button style="background-color: white; width: 100%; height: 100%; flex-shrink: 0; flex-grow: 0;" id="Publicidadinferiormostrarpublidad">
-   <img style="width: 100%; height: 100%;" src="../../src/main/resources/META-INF/resources/images/anuncio2.jpg" id="Imagenpublicidadinferiormostrarpublidad">
-  </vaadin-button>
- </vaadin-horizontal-layout>
+<vaadin-vertical-layout style="width: 100%; height: 100%;" id="Layoutanunciomostrarpublidad">
+ <vaadin-button style="background-color: white; flex-shrink: 0; flex-grow: 0; width: 100%; height: 100%;" id="Buttonanunciomostrarpublidad">
+  <img style="width: 100%; height: 100%;" src="https://i.postimg.cc/Vs0hp5Rx/anuncio.png" id="Imagenmostrarpublidad">
+ </vaadin-button>
 </vaadin-vertical-layout>
 `;
   }
