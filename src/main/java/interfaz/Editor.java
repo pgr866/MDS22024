@@ -10,18 +10,23 @@ public class Editor extends Identificado {
 	
 //	public iEditor _iEditor;
 	public Listado_noticias_portada_Editor _listado_noticias_portada_Editor;
+	public Listado_noticias_busqueda_Editor _listado_noticias_busqueda_Editor;
 	public Noticias_a_revisar _noticias_a_revisar;
 	public Baja_Alta_Periodistas _baja_Alta_Periodistas;
 	public Explorar_secciones_Editor _explorar_secciones_Editor;
 	
 	public Editor (MainView mainview, basededatos.Editor editor) {
 		super(mainview, editor);
+		this.getLayoutvistabuscaridentificado().setVisible(false);
+		this.getLayoutvistabuscareditor().setVisible(true);
 		this.getLayoutvermisnoticiasidentificado().setVisible(false);
 		this.getLayoutcrearnuevanoticiaidentificado().setVisible(false);
-		//this._listado_noticias_portada_Editor = new Listado_noticias_portada_Editor(this);
-		//this._noticias_a_revisar = new Noticias_a_revisar(this);
-		//Listado_noticias_portada_Editor();
-		//Noticias_a_revisar();
+		this._listado_noticias_portada_Editor = new Listado_noticias_portada_Editor(this);
+		this._listado_noticias_busqueda_Editor = new Listado_noticias_busqueda_Editor(this);
+		this._noticias_a_revisar = new Noticias_a_revisar(this);
+		Listado_noticias_portada_Editor();
+		Listado_noticias_busqueda_Editor();
+		Noticias_a_revisar();
 		this.getExplorarseccionesidentificado().addClickListener(event->Explorar_secciones_Editor());
 		this.getButtondaraltabajaperiodistaidentificado().addClickListener(event->Baja_Alta_Periodistas());
 	}
@@ -29,6 +34,10 @@ public class Editor extends Identificado {
 	public void Listado_noticias_portada_Editor() {
 		this.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).removeAll();
 		this.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).add(_listado_noticias_portada_Editor);
+	}
+	
+	public void Listado_noticias_busqueda_Editor() {
+		this.getLayoutvistabuscareditor().add(_listado_noticias_busqueda_Editor);
 	}
 
 	public void Noticias_a_revisar() {

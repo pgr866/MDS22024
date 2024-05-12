@@ -16,7 +16,7 @@ export class VistaUsuarionoregistrado extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 98%; height: 100%; position: absolute;">
+<vaadin-vertical-layout style="width: 100%; height: 100%; position: absolute;">
  <vaadin-horizontal-layout class="header" style="background-color: #EBEBEB; width: 100%; flex-shrink: 0; padding-top: var(--lumo-space-s); padding-right: var(--lumo-space-m); padding-left: var(--lumo-space-m); padding-bottom: var(--lumo-space-s); flex-grow: 0; justify-content: space-between; height: 15%;">
   <vaadin-vertical-layout style="width: 12%; height: 100%; flex-shrink: 0;" id="Layoutlogonoregistrado">
    <vaadin-button theme="icon" ; style="height: 100%; width: 100%; flex-shrink: 1; background-color: #EBEBEB;" id="Logonoregistrado">
@@ -24,7 +24,9 @@ export class VistaUsuarionoregistrado extends LitElement {
    </vaadin-button>
   </vaadin-vertical-layout>
   <vaadin-vertical-layout style="flex-shrink: 1; width: 72%;">
-   <vaadin-horizontal-layout style="width: 100%; height: 50%; flex-shrink: 0; align-self: stretch; justify-content: center;" id="Barrabusquedanoregistrado"></vaadin-horizontal-layout>
+   <vaadin-vertical-layout style="width: 100%; height: 50%; flex-shrink: 0;">
+    <vaadin-horizontal-layout id="Barrabusquedanoregistrado" style="width: 100%; height: 100%; flex-shrink: 0; position: relative;"></vaadin-horizontal-layout>
+   </vaadin-vertical-layout>
    <vaadin-horizontal-layout style="width: 100%; height: 50%; flex-shrink: 0; justify-content: space-between;" id="Layoutexplorarseccionesnoregistrado">
     <vaadin-button style="width: 100%; height: 100%; flex-shrink: 0;" id="Explorarseccionesnoregistrado">
       Explorar secciones 
@@ -37,11 +39,13 @@ export class VistaUsuarionoregistrado extends LitElement {
    </vaadin-button>
   </vaadin-vertical-layout>
  </vaadin-horizontal-layout>
- <vaadin-horizontal-layout style="flex-shrink: 0; flex-grow: 0; padding-top: var(--lumo-space-s); padding-bottom: var(--lumo-space-s); width: 100%; justify-content: space-between;">
+ <vaadin-horizontal-layout style="flex-shrink: 0; flex-grow: 0; width: 100%;">
   <vaadin-vertical-layout style="flex-shrink: 0; width: 15%;">
    <vaadin-vertical-layout style="flex-grow: 0; flex-shrink: 0; position: relative; width: 100%;" id="Layoutanuncioizquierdausuarionoregistrado"></vaadin-vertical-layout>
   </vaadin-vertical-layout>
-  <vaadin-vertical-layout style="flex-shrink: 1; flex-grow: 0;" id="Layoutnoticiasportadausuarionoregistrado"></vaadin-vertical-layout>
+  <vaadin-vertical-layout style="flex-shrink: 0; width: 70%;">
+   <vaadin-vertical-layout style="flex-shrink: 0; flex-grow: 0; position: relative; width: 100%;" id="Layoutnoticiasportadausuarionoregistrado"></vaadin-vertical-layout>
+  </vaadin-vertical-layout>
   <vaadin-vertical-layout style="flex-shrink: 0; width: 15%;">
    <vaadin-vertical-layout style="flex-grow: 0; flex-shrink: 0; position: relative; width: 100%;" id="Layoutanuncioderechausuarionoregistrado"></vaadin-vertical-layout>
   </vaadin-vertical-layout>

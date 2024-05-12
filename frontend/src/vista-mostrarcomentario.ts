@@ -15,7 +15,7 @@ export class VistaMostrarcomentario extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%;" id="Layoutmostrarcomentario">
+<vaadin-vertical-layout style="width: 100%; position: absolute;" id="Layoutmostrarcomentario">
  <vaadin-text-area style="width: 100%;" readonly has-value value="Contenido del comentario" id="Textareacontenidocomentario"></vaadin-text-area>
 </vaadin-vertical-layout>
 `;

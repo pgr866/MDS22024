@@ -22,9 +22,9 @@ public class Listado_noticias_busqueda_Usuario_no_registrado_item extends VistaL
 
 	public void Pagina_noticia_Usuario_no_registrado() {
 		if(this.getLayoutlistadonoticiasbusquedausuarionoregistradoitem().getText() == (String) this._listado_noticias_busqueda_Usuario_no_registrado.getComboboxlistadonoticiasbusquedausuarionoregistrado().getValue()) {
-			this._listado_noticias_busqueda_Usuario_no_registrado._buscar_Usuario_no_registrado._usuario_no_Registrado.getLayoutnoticiasportadausuarionoregistrado().as(VerticalLayout.class).removeAll();
+			this._listado_noticias_busqueda_Usuario_no_registrado._usuario_no_Registrado.getLayoutnoticiasportadausuarionoregistrado().as(VerticalLayout.class).removeAll();
 			this._pagina_noticia_Usuario_no_registrado = new Pagina_noticia_Usuario_no_registrado(this, noticia);
-			this._listado_noticias_busqueda_Usuario_no_registrado._buscar_Usuario_no_registrado._usuario_no_Registrado.getLayoutnoticiasportadausuarionoregistrado().as(VerticalLayout.class).add(this._pagina_noticia_Usuario_no_registrado);
+			this._listado_noticias_busqueda_Usuario_no_registrado._usuario_no_Registrado.getLayoutnoticiasportadausuarionoregistrado().as(VerticalLayout.class).add(this._pagina_noticia_Usuario_no_registrado);
 		}
 	}
 }

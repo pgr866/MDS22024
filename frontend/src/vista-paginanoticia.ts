@@ -1,7 +1,7 @@
 import { LitElement, html, css, customElement } from 'lit-element';
-import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
-import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
 import '@vaadin/vaadin-button/src/vaadin-button.js';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 
 @customElement('vista-paginanoticia')
 export class VistaPaginanoticia extends LitElement {
@@ -16,7 +16,7 @@ export class VistaPaginanoticia extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%;">
+<vaadin-vertical-layout style="width: 100%; position: absolute;">
  <vaadin-vertical-layout style="width: 100%; flex-shrink: 0; padding-top: var(--lumo-space-s); padding-right: var(--lumo-space-xl); padding-bottom: var(--lumo-space-s); padding-left: var(--lumo-space-xl); flex-grow: 0;" id="Layoutcontenedornoticiapaginanoticia">
   <label style="width: 80%; flex-shrink: 0; text-align: center; font-size: 200%; align-self: center;" id="Labeltitulonoticiapaginanoticia">Título Noticia</label>
   <label style="width: 80%; flex-shrink: 0; text-align: center; font-size: 100%; align-self: center;" id="Labeltitulotematicapaginanoticia">Temática</label>
@@ -34,13 +34,19 @@ export class VistaPaginanoticia extends LitElement {
        <img style="width: 100%; height: 100%;" src="https://i.postimg.cc/nhTZQWjY/papelera.png">
       </vaadin-button>
      </vaadin-horizontal-layout>
-     <vaadin-horizontal-layout style="flex-shrink: 0; width: 20%; height: 100%; justify-content: space-between;" id="Mostrarvaloracionnoticiapaginanoticia"></vaadin-horizontal-layout>
+     <vaadin-vertical-layout style="height: 100%; width: 20%; flex-shrink: 0;">
+      <vaadin-horizontal-layout style="flex-shrink: 0; width: 100%; height: 100%; justify-content: space-between; position: relative;" id="Mostrarvaloracionnoticiapaginanoticia"></vaadin-horizontal-layout>
+     </vaadin-vertical-layout>
     </vaadin-horizontal-layout>
    </vaadin-horizontal-layout>
-   <vaadin-horizontal-layout style="width: 95%; flex-shrink: 1; padding-top: var(--lumo-space-s); flex-grow: 0; padding-bottom: var(--lumo-space-l); align-self: center;" id="Mostrarnoticiaresumidayextendidapaginanoticia"></vaadin-horizontal-layout>
+   <vaadin-vertical-layout style="width: 95%; flex-shrink: 0;">
+    <vaadin-horizontal-layout style="width: 100%; flex-shrink: 1; padding-top: var(--lumo-space-s); flex-grow: 0; padding-bottom: var(--lumo-space-l); align-self: center; position: relative;" id="Mostrarnoticiaresumidayextendidapaginanoticia"></vaadin-horizontal-layout>
+   </vaadin-vertical-layout>
   </vaadin-vertical-layout>
  </vaadin-vertical-layout>
- <vaadin-vertical-layout style="width: 100%; flex-shrink: 0; flex-grow: 1;" id="Layoutseccioncomentariospaginanoticia"></vaadin-vertical-layout>
+ <vaadin-vertical-layout style="width: 100%; flex-shrink: 0;">
+  <vaadin-vertical-layout style="width: 100%; flex-shrink: 0; flex-grow: 1; position: relative;" id="Layoutseccioncomentariospaginanoticia"></vaadin-vertical-layout>
+ </vaadin-vertical-layout>
 </vaadin-vertical-layout>
 `;
   }

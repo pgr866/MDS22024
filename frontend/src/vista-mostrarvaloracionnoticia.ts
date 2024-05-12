@@ -15,7 +15,7 @@ export class VistaMostrarvaloracionnoticia extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%;">
+<vaadin-vertical-layout style="width: 100%; height: 100%; position: absolute;">
  <vaadin-horizontal-layout theme="" style="width: 100%; height: 100%; flex-shrink: 0;" id="Layoutmegustanomegustamostrarvaloracionnoticia">
   <vaadin-button style="height: 100%; flex-shrink: 0; flex-grow: 0; background-color: #FFFFFF; width: 20%; align-self: center;" id="Megustamostrarvaloracionnoticia">
    <img style="height: 100%; width: 100%;" src="https://i.postimg.cc/fk4fQzwZ/mg.png" id="Imagenmegustamostrarvaloracionnoticia">

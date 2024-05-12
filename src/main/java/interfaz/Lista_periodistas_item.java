@@ -11,7 +11,7 @@ public class Lista_periodistas_item extends VistaListaperiodistas_item {
 	public Lista_periodistas_item(Lista_periodistas _lista_periodistas, basededatos.Periodista periodista) {
 		super();
 		this._lista_periodistas = _lista_periodistas;
-		this._lista_periodistas._buscar_periodista._baja_Alta_Periodistas.getButtondarbajaperiodista().addClickListener(event->Baja_periodista());
+		this._lista_periodistas._baja_Alta_Periodistas.getButtondarbajaperiodista().addClickListener(event->Baja_periodista());
 		this.periodista = periodista;
 		this.getLayoutlistaperiodistaitem().setText(periodista.getNombre() + " " + periodista.getApellidos());
 	}
@@ -25,8 +25,8 @@ public class Lista_periodistas_item extends VistaListaperiodistas_item {
 			periodista.setFecha_nacimiento("");
 			periodista.setTelefono(-1);
 			periodista.setUrl_foto_perfil("");
-			periodista.setDa_de_baja((basededatos.Editor) this._lista_periodistas._buscar_periodista._baja_Alta_Periodistas._editor.identificado);;
-			this._lista_periodistas._buscar_periodista._baja_Alta_Periodistas._editor.Baja_Alta_Periodistas(); // Refrescar pagina
+			periodista.setDa_de_baja((basededatos.Editor) this._lista_periodistas._baja_Alta_Periodistas._editor.identificado);;
+			this._lista_periodistas._baja_Alta_Periodistas._editor.Baja_Alta_Periodistas(); // Refrescar pagina
 		}
 	}
 }

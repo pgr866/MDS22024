@@ -1,9 +1,9 @@
 import { LitElement, html, css, customElement } from 'lit-element';
-import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
 import '@vaadin/vaadin-text-field/src/vaadin-text-field.js';
 import '@vaadin/vaadin-text-field/src/vaadin-text-area.js';
 import '@vaadin/vaadin-button/src/vaadin-button.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
 
 @customElement('vista-revisarnoticias')
 export class VistaRevisarnoticias extends LitElement {
@@ -18,7 +18,7 @@ export class VistaRevisarnoticias extends LitElement {
 
  render() {
     return html`
-<vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%;">
+<vaadin-vertical-layout style="width: 100%; height: 100%; position: absolute;">
  <vaadin-vertical-layout style="width: 100%; height: 100%; flex-shrink: 0; align-items: center;">
   <vaadin-horizontal-layout style="flex-shrink: 0; width: 80%; height: 12%; justify-content: center; align-items: center;" id="Layouttitulonoticiarevisarnoticias">
    <label style="width: 20%; flex-shrink: 0; flex-grow: 0;" id="Labeltitulonoticiarevisarnoticias">Titulo noticia</label>
@@ -48,7 +48,9 @@ export class VistaRevisarnoticias extends LitElement {
    <vaadin-text-field placeholder="Resumen" style="flex-shrink: 0; flex-grow: 1;" id="Textfieldresumenrevisarnoticias"></vaadin-text-field>
   </vaadin-horizontal-layout>
   <vaadin-horizontal-layout style="flex-shrink: 0; width: 60%; height: 12%; justify-content: center; align-items: center; padding-left: var(--lumo-space-xl);">
-   <vaadin-horizontal-layout style="width: 40%;" id="Layoutvistaseccionessrevisarnoticias"></vaadin-horizontal-layout>
+   <vaadin-vertical-layout style="width: 40%; flex-shrink: 0;">
+    <vaadin-horizontal-layout style="width: 100%; flex-shrink: 0; position: relative;" id="Layoutvistaseccionessrevisarnoticias"></vaadin-horizontal-layout>
+   </vaadin-vertical-layout>
    <vaadin-horizontal-layout style="width: 55%; justify-content: space-between;" id="Layoutopcionesrevisarnoticia">
     <vaadin-button style="width: 48%;" id="publicarrevisarnoticia">
       Publicar Noticia 

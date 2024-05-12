@@ -35,7 +35,7 @@ public class Pagina_noticia_Identificado extends Pagina_Noticia {
 		this._seccion_comentarios_Identificado = new Seccion_comentarios_Identificado(this);
 		Mostrar_noticia_extendida();
 		Seccion_comentarios_Identificado();
-		this.identificado = this._listado_noticias_busqueda_Identificado._listado_noticias_busqueda_Identificado._buscar_Identificado._identificado.identificado;
+		this.identificado = this._listado_noticias_busqueda_Identificado._listado_noticias_busqueda_Identificado._identificado.identificado;
 		this._seccion_comentarios_Identificado.getBotonanadircomentarioseccioncomentarios().addClickListener(event->Comentar());
 		this._mostrar_valoracion_noticia.getMegustamostrarvaloracionnoticia().addClickListener(event->Valorar_noticia(true));
 		this._mostrar_valoracion_noticia.getNomegustamostrarvaloracionnoticia().addClickListener(event->Valorar_noticia(false));

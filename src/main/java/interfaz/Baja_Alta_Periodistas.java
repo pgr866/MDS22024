@@ -21,18 +21,18 @@ public class Baja_Alta_Periodistas extends vistas.VistaBajaaltaperiodistas {
 //	private Label _dar_de_baja_periodista;
 //	private Label _busqueda_periodista;
 	public Editor _editor;
-	public Buscar_periodista _buscar_periodista;
+	public Lista_periodistas _lista_periodistas;
 	
 	public Baja_Alta_Periodistas(Editor _editor) {
 		super();
 		this._editor = _editor;
-		this._buscar_periodista = new Buscar_periodista(this);
-		Buscar_periodista();
+		this._lista_periodistas = new Lista_periodistas(this);
+		Lista_periodistas();
 		this.getButtondaraltaperiodista().addClickListener(event->Alta_periodista());
 	}
 
-	public void Buscar_periodista() {
-		this.getLayoutbuscarperiodistabajaaltaperiodistas().as(VerticalLayout.class).add(_buscar_periodista);
+	public void Lista_periodistas() {
+		this.getLayoutbuscarperiodistabajaaltaperiodistas().as(VerticalLayout.class).add(_lista_periodistas);
 	}
 	
 	public void Alta_periodista() {

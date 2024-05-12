@@ -15,7 +15,7 @@ public class Usuario_no_Registrado extends VistaUsuarionoregistrado {
 	public Listado_noticias_portada_Usuario_no_registrado _listado_noticias_portada_Usuario_no_registrado;
 	public Explorar_secciones_Usuario_no_registrado _explorar_secciones_Usuario_no_registrado;
 	public Mostrar_publicidad _mostrar_publicidad;
-	public Buscar_Usuario_no_registrado _buscar_Usuario_no_registrado;
+	public Listado_noticias_busqueda_Usuario_no_registrado _listado_noticias_busqueda_Usuario_no_registrado;
 	
 	public MainView mainview;
 	
@@ -23,10 +23,10 @@ public class Usuario_no_Registrado extends VistaUsuarionoregistrado {
 		this.mainview = mainview;
 		this._listado_noticias_portada_Usuario_no_registrado = new Listado_noticias_portada_Usuario_no_registrado(this);
 		this._mostrar_publicidad = new Mostrar_publicidad(this, null);
-		this._buscar_Usuario_no_registrado = new Buscar_Usuario_no_registrado(this);
+		this._listado_noticias_busqueda_Usuario_no_registrado = new Listado_noticias_busqueda_Usuario_no_registrado(this);
 		Listado_noticias_portada_Usuario_no_registrado();
 		Mostrar_publicidad();
-		Buscar_Usuario_no_registrado();
+		Listado_noticias_busqueda_Usuario_no_registrado();
 		this.getIniciarsesion().addClickListener(event->Iniciar_Sesion());
 		this.getLogonoregistrado().addClickListener(event->{
 			this.getLayoutnoticiasportadausuarionoregistrado().as(VerticalLayout.class).removeAll();
@@ -52,13 +52,12 @@ public class Usuario_no_Registrado extends VistaUsuarionoregistrado {
 	}
 
 	public void Mostrar_publicidad() {
-		this.getLayoutanuncioizquierdausuarionoregistrado().as(VerticalLayout.class).setWidth("15%");
 		this.getLayoutanuncioizquierdausuarionoregistrado().as(VerticalLayout.class).add(_mostrar_publicidad);
 		Mostrar_publicidad _mostrar_publicidad2 = new Mostrar_publicidad(this, null);
 		this.getLayoutanuncioderechausuarionoregistrado().as(VerticalLayout.class).add(_mostrar_publicidad2);
 	}
 
-	public void Buscar_Usuario_no_registrado() {
-		this.getBarrabusquedanoregistrado().add(_buscar_Usuario_no_registrado);
+	public void Listado_noticias_busqueda_Usuario_no_registrado() {
+		this.getBarrabusquedanoregistrado().add(_listado_noticias_busqueda_Usuario_no_registrado);
 	}
 }

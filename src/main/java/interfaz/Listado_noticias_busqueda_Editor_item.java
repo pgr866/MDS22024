@@ -16,9 +16,9 @@ public class Listado_noticias_busqueda_Editor_item extends Listado_noticias_busq
 
 	public void Pagina_noticia_Editor() {
 		if(this.getLayoutlistadonoticiasbusquedaidentificadoitem().getText() == (String) this._listado_noticias_busqueda_Identificado.getComboboxlistadonoticiasbusquedaidentificado().getValue()) {
-			this._listado_noticias_busqueda_Identificado._buscar_Identificado._identificado.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).removeAll();
+			this._listado_noticias_busqueda_Identificado._identificado.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).removeAll();
 			this._pagina_noticia_Identificado = new Pagina_noticia_Identificado(this, noticia);
-			this._listado_noticias_busqueda_Identificado._buscar_Identificado._identificado.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).add(this._pagina_noticia_Identificado);
+			this._listado_noticias_busqueda_Identificado._identificado.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).add(this._pagina_noticia_Identificado);
 		}
 	}
 }

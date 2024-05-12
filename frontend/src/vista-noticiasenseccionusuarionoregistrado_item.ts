@@ -17,11 +17,11 @@ export class VistaNoticiasenseccionusuarionoregistrado_item extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%;">
+<vaadin-vertical-layout style="width: 100%; height: 100%; position: absolute;">
  <vaadin-horizontal-layout style="width: 100%; flex-shrink: 0; padding-bottom: var(--lumo-space-s);">
   <vaadin-vertical-layout style="width: 100%; flex-shrink: 0; align-self: stretch; flex-direction: row; flex-wrap: wrap;" id="Layouttitulonoticiasenseccionusuarionoregistrado">
    <vaadin-button style="flex-shrink: 0; width: 100%; height: 100%; background-color: #FFFFFF;" id="Titulonoticiasenseccionusuarionoregistrado">
-    Titulo noticia
+     Titulo noticia 
    </vaadin-button>
   </vaadin-vertical-layout>
  </vaadin-horizontal-layout>

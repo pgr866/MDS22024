@@ -18,7 +18,7 @@ export class VistaConfigurarperfil extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%; flex-shrink: 0; padding-top: var(--lumo-space-s); padding-bottom: var(--lumo-space-s); align-items: center; justify-content: space-between;" id="Layoutconfigurarperfil">
+<vaadin-vertical-layout style="width: 100%; height: 100%; flex-shrink: 0; padding-top: var(--lumo-space-s); padding-bottom: var(--lumo-space-s); align-items: center; justify-content: space-between; position: absolute;" id="Layoutconfigurarperfil">
  <img style="width: 40%; height: 40%;" src="" id="Fotoconfigurarperfil">
  <vaadin-vertical-layout style="width: 40%; height: 40%; justify-content: space-between; flex-shrink: 0;" id="vaadinVerticalLayout">
   <vaadin-horizontal-layout style="width: 100%; height: 15%; flex-shrink: 0; align-items: center;" id="Layouturlimagenconfigurarperfil">

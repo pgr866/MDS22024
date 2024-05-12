@@ -15,7 +15,7 @@ export class VistaLogout extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%; justify-content: center;" id="Layoutbotonlogout">
+<vaadin-vertical-layout style="justify-content: center; position: absolute;" id="Layoutbotonlogout">
  <vaadin-button style="height: 100%; flex-shrink: 0; width: 100%; flex-grow: 0; background-color: #EBEBEB;" id="Buttonlogout">
   <img style="height: 100%; width: 100%;" src="https://i.postimg.cc/0yRcLfQm/cerrarsesion.png" id="Imagenlogout">
  </vaadin-button>

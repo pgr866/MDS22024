@@ -13,6 +13,12 @@ import com.vaadin.flow.component.html.Image;
 @JsModule("./src/vista-usuarionoregistrado.ts")
 public class VistaUsuarionoregistrado extends LitTemplate {
 
+	public HorizontalLayout getBarrabusquedanoregistrado() {
+		return barrabusquedanoregistrado;
+	}
+	public void setBarrabusquedanoregistrado(HorizontalLayout barrabusquedanoregistrado) {
+		this.barrabusquedanoregistrado = barrabusquedanoregistrado;
+	}
 	public Button getLogonoregistrado() {
 		return logonoregistrado;
 	}
@@ -24,12 +30,6 @@ public class VistaUsuarionoregistrado extends LitTemplate {
 	}
 	public void setFotologonoregistrado(Image fotologonoregistrado) {
 		this.fotologonoregistrado = fotologonoregistrado;
-	}
-	public HorizontalLayout getBarrabusquedanoregistrado() {
-		return barrabusquedanoregistrado;
-	}
-	public void setBarrabusquedanoregistrado(HorizontalLayout barrabusquedanoregistrado) {
-		this.barrabusquedanoregistrado = barrabusquedanoregistrado;
 	}
 	public HorizontalLayout getLayoutexplorarseccionesnoregistrado() {
 		return layoutexplorarseccionesnoregistrado;
@@ -83,8 +83,6 @@ public class VistaUsuarionoregistrado extends LitTemplate {
 	private Button logonoregistrado;
 	@Id("Fotologonoregistrado")
 	private Image fotologonoregistrado;
-	@Id("Barrabusquedanoregistrado")
-	private HorizontalLayout barrabusquedanoregistrado;
 	@Id("Layoutexplorarseccionesnoregistrado")
 	private HorizontalLayout layoutexplorarseccionesnoregistrado;
 	@Id("Explorarseccionesnoregistrado")
@@ -101,6 +99,8 @@ public class VistaUsuarionoregistrado extends LitTemplate {
 	private Element layoutlogonoregistrado;
 	@Id("Layoutanuncioderechausuarionoregistrado")
 	private Element layoutanuncioderechausuarionoregistrado;
+	@Id("Barrabusquedanoregistrado")
+	private HorizontalLayout barrabusquedanoregistrado;
 	public VistaUsuarionoregistrado() {
         // You can initialise any data required for the connected UI components here.
     }

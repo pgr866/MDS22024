@@ -13,6 +13,22 @@ import com.vaadin.flow.component.html.Image;
 @JsModule("./src/vista-identificado.ts")
 public class VistaIdentificado extends LitTemplate {
 
+	public Element getLogoutopcionescuentaidentificado() {
+		return logoutopcionescuentaidentificado;
+	}
+
+	public void setLogoutopcionescuentaidentificado(Element logoutopcionescuentaidentificado) {
+		this.logoutopcionescuentaidentificado = logoutopcionescuentaidentificado;
+	}
+
+	public HorizontalLayout getLayoutvistabuscareditor() {
+		return layoutvistabuscareditor;
+	}
+
+	public void setLayoutvistabuscareditor(HorizontalLayout layoutvistabuscareditor) {
+		this.layoutvistabuscareditor = layoutvistabuscareditor;
+	}
+
 	public Element getLayoutlogoidentificado() {
 		return layoutlogoidentificado;
 	}
@@ -109,14 +125,6 @@ public class VistaIdentificado extends LitTemplate {
 		this.buttondaraltabajaperiodistaidentificado = buttondaraltabajaperiodistaidentificado;
 	}
 
-	public Element getOpcionescuentaidentificado() {
-		return opcionescuentaidentificado;
-	}
-
-	public void setOpcionescuentaidentificado(Element opcionescuentaidentificado) {
-		this.opcionescuentaidentificado = opcionescuentaidentificado;
-	}
-
 	public Button getConfigurarperfilidentificado() {
 		return configurarperfilidentificado;
 	}
@@ -131,14 +139,6 @@ public class VistaIdentificado extends LitTemplate {
 
 	public void setImagenconfigurarperfilidentificado(Image imagenconfigurarperfilidentificado) {
 		this.imagenconfigurarperfilidentificado = imagenconfigurarperfilidentificado;
-	}
-
-	public HorizontalLayout getVaadinHorizontalLayout() {
-		return vaadinHorizontalLayout;
-	}
-
-	public void setVaadinHorizontalLayout(HorizontalLayout vaadinHorizontalLayout) {
-		this.vaadinHorizontalLayout = vaadinHorizontalLayout;
 	}
 
 	public Element getLayoutnoticiasportadaidentificado() {
@@ -173,17 +173,16 @@ public class VistaIdentificado extends LitTemplate {
 	private Element layoutdaraltabajaperiodistaidentificado;
 	@Id("Buttondaraltabajaperiodistaidentificado")
 	private Button buttondaraltabajaperiodistaidentificado;
-	@Id("Opcionescuentaidentificado")
-	private Element opcionescuentaidentificado;
 	@Id("Configurarperfilidentificado")
 	private Button configurarperfilidentificado;
 	@Id("Imagenconfigurarperfilidentificado")
 	private Image imagenconfigurarperfilidentificado;
-	@Id("vaadinHorizontalLayout")
-	private HorizontalLayout vaadinHorizontalLayout;
 	@Id("Layoutnoticiasportadaidentificado")
 	private Element layoutnoticiasportadaidentificado;
-
+	@Id("Layoutvistabuscareditor")
+	private HorizontalLayout layoutvistabuscareditor;
+	@Id("Logoutopcionescuentaidentificado")
+	private Element logoutopcionescuentaidentificado;
 	public VistaIdentificado() {
         // You can initialise any data required for the connected UI components here.
     }

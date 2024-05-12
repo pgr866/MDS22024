@@ -18,7 +18,7 @@ export class VistaListadonoticiasportada_item extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%;">
+<vaadin-vertical-layout style="width: 100%; height: 100%; position: absolute;">
  <vaadin-horizontal-layout style="width: 100%; flex-shrink: 0; padding-bottom: var(--lumo-space-s);">
   <vaadin-vertical-layout id="Layouttitulolistadonoticiasportada" style="width: 100%; flex-shrink: 0; align-self: stretch; flex-direction: row; flex-wrap: wrap;">
    <vaadin-button id="Titulolistadonoticiasportada" style="flex-shrink: 0; width: 100%; height: 100%; background-color: #FFFFFF;">

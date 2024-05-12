@@ -18,11 +18,11 @@ export class VistaIniciarsesion extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; padding-top: var(--lumo-space-m); padding-right: var(--lumo-space-m); padding-bottom: var(--lumo-space-m); padding-left: var(--lumo-space-m);">
- <vaadin-horizontal-layout id="Layoutlogin" style="width: 100%; height: 25%; flex-shrink: 0; justify-content: center; flex-grow: 0; padding-bottom: var(--lumo-space-xl);">
-  <label style="width: 70%; height: 100%; flex-shrink: 0; font-size: 400%; flex-grow: 1;" id="Labellogin">Iniciar sesión</label>
+<vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; padding-top: var(--lumo-space-m); padding-right: var(--lumo-space-m); padding-bottom: var(--lumo-space-m); padding-left: var(--lumo-space-m); position: absolute;">
+ <vaadin-horizontal-layout id="Layoutlogin" style="width: 100%; flex-shrink: 0; flex-grow: 0; justify-content: center;">
+  <label style="flex-shrink: 0; font-size: 400%; flex-grow: 0;" id="Labellogin">Iniciar sesión</label>
  </vaadin-horizontal-layout>
- <vaadin-vertical-layout style="flex-shrink: 0; align-self: center; width: 80%; flex-grow: 0; justify-content: space-evenly; height: 50%; padding-top: var(--lumo-space-xl);" id="Layoutopcioneslogin">
+ <vaadin-vertical-layout style="flex-shrink: 0; align-self: center; width: 60%; flex-grow: 0; justify-content: space-evenly; height: 50%; padding-top: var(--lumo-space-xl);" id="Layoutopcioneslogin">
   <vaadin-vertical-layout style="width: 100%; flex-shrink: 0;">
    <vaadin-horizontal-layout style="width: 100%; flex-shrink: 0;" id="Layoutemaillogin">
     <label style="width: 35%; flex-shrink: 0; align-self: center; font-size: 120%;" id="Labelemaillogin">Email </label>
