@@ -15,9 +15,9 @@ export class VistaMostrarpublicidad extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%;" id="Layoutanunciomostrarpublidad">
+<vaadin-vertical-layout style="position: absolute; width: 100%;" id="Layoutanunciomostrarpublidad">
  <vaadin-button style="background-color: white; flex-shrink: 0; flex-grow: 0; width: 100%; height: 100%;" id="Buttonanunciomostrarpublidad">
-  <img style="width: 100%; height: 100%;" src="https://i.postimg.cc/Vs0hp5Rx/anuncio.png" id="Imagenmostrarpublidad">
+  <img src="https://i.postimg.cc/Vs0hp5Rx/anuncio.png" id="Imagenmostrarpublidad" style="width: 100%; height: 100%;">
  </vaadin-button>
 </vaadin-vertical-layout>
 `;

@@ -93,14 +93,14 @@ public class VistaUsuarionoregistrado extends LitTemplate {
 	private Element layoutiniciarsesion;
 	@Id("Iniciarsesion")
 	private Button iniciarsesion;
-	@Id("Layoutanuncioderechausuarionoregistrado")
-	private Element layoutanuncioderechausuarionoregistrado;
 	@Id("Layoutanuncioizquierdausuarionoregistrado")
 	private Element layoutanuncioizquierdausuarionoregistrado;
 	@Id("Layoutnoticiasportadausuarionoregistrado")
 	private Element layoutnoticiasportadausuarionoregistrado;
 	@Id("Layoutlogonoregistrado")
 	private Element layoutlogonoregistrado;
+	@Id("Layoutanuncioderechausuarionoregistrado")
+	private Element layoutanuncioderechausuarionoregistrado;
 	public VistaUsuarionoregistrado() {
         // You can initialise any data required for the connected UI components here.
     }

@@ -52,6 +52,7 @@ public class Usuario_no_Registrado extends VistaUsuarionoregistrado {
 	}
 
 	public void Mostrar_publicidad() {
+		this.getLayoutanuncioizquierdausuarionoregistrado().as(VerticalLayout.class).setWidth("15%");
 		this.getLayoutanuncioizquierdausuarionoregistrado().as(VerticalLayout.class).add(_mostrar_publicidad);
 		Mostrar_publicidad _mostrar_publicidad2 = new Mostrar_publicidad(this, null);
 		this.getLayoutanuncioderechausuarionoregistrado().as(VerticalLayout.class).add(_mostrar_publicidad2);

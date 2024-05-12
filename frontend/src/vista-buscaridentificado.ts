@@ -15,6 +15,7 @@ export class VistaBuscaridentificado extends LitElement {
   render() {
     return html`
 <vaadin-vertical-layout theme="" style="width: 100%; height: 100%; justify-content: center;" id="Layoutvistasbuscaridentificado"></vaadin-vertical-layout>
+<vaadin-vertical-layout id="Layoutvistasbuscareditor" style="width: 100%; height: 100%; justify-content: center;"></vaadin-vertical-layout>
 `;
   }
 

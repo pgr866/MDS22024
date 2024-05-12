@@ -25,7 +25,9 @@ public class MainView extends VerticalLayout {
 	public Editor _editor;
 	
     public MainView(){
-        this._usuario_no_registrado = new Usuario_no_Registrado(this);
-        this.add(_usuario_no_registrado); 
+//    	this._usuario_no_registrado = new Usuario_no_Registrado(this);
+//        this.add(_usuario_no_registrado);
+    	this._editor = new Editor(this, new basededatos.Editor());
+        this.add(_editor);
     }
 }

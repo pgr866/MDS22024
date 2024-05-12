@@ -10,6 +10,14 @@ import com.vaadin.flow.component.template.Id;
 @JsModule("./src/vista-buscaridentificado.ts")
 public class VistaBuscaridentificado extends LitTemplate {
 
+	public Element getLayoutvistasbuscareditor() {
+		return layoutvistasbuscareditor;
+	}
+
+	public void setLayoutvistasbuscareditor(Element layoutvistasbuscareditor) {
+		this.layoutvistasbuscareditor = layoutvistasbuscareditor;
+	}
+
 	public Element getLayoutvistasbuscaridentificado() {
 		return layoutvistasbuscaridentificado;
 	}
@@ -20,6 +28,8 @@ public class VistaBuscaridentificado extends LitTemplate {
 
 	@Id("Layoutvistasbuscaridentificado")
 	private Element layoutvistasbuscaridentificado;
+	@Id("Layoutvistasbuscareditor")
+	private Element layoutvistasbuscareditor;
 
 	public VistaBuscaridentificado() {
         // You can initialise any data required for the connected UI components here.

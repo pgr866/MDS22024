@@ -10,6 +10,8 @@ public class Buscar_Identificado extends vistas.VistaBuscaridentificado {
 	public Buscar_Identificado(Identificado _identificado) {
 		super();
 		this._identificado = _identificado;
+		this.getLayoutvistasbuscareditor().setVisible(false);
+		this.getLayoutvistasbuscaridentificado().setVisible(true);
 		this._listado_noticias_busqueda_Identificado = new Listado_noticias_busqueda_Identificado(this);
 		Listado_noticias_busqueda_Identificado();
 	}

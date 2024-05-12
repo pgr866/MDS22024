@@ -18,10 +18,10 @@ public class Editor extends Identificado {
 		super(mainview, editor);
 		this.getLayoutvermisnoticiasidentificado().setVisible(false);
 		this.getLayoutcrearnuevanoticiaidentificado().setVisible(false);
-		this._listado_noticias_portada_Editor = new Listado_noticias_portada_Editor(this);
-		this._noticias_a_revisar = new Noticias_a_revisar(this);
-		Listado_noticias_portada_Editor();
-		Noticias_a_revisar();
+		//this._listado_noticias_portada_Editor = new Listado_noticias_portada_Editor(this);
+		//this._noticias_a_revisar = new Noticias_a_revisar(this);
+		//Listado_noticias_portada_Editor();
+		//Noticias_a_revisar();
 		this.getExplorarseccionesidentificado().addClickListener(event->Explorar_secciones_Editor());
 		this.getButtondaraltabajaperiodistaidentificado().addClickListener(event->Baja_Alta_Periodistas());
 	}
