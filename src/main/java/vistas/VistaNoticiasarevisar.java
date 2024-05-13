@@ -27,21 +27,10 @@ public class VistaNoticiasarevisar extends LitTemplate {
 		this.selectnoticiasarevisar = selectnoticiasarevisar;
 	}
 
-	public Element getListboxnoticiasarevisar() {
-		return listboxnoticiasarevisar;
-	}
-
-	public void setListboxnoticiasarevisar(Element listboxnoticiasarevisar) {
-		this.listboxnoticiasarevisar = listboxnoticiasarevisar;
-	}
-
 	@Id("Layoutnoticiasarevisar")
 	private Element layoutnoticiasarevisar;
 	@Id("Selectnoticiasarevisar")
 	private Select selectnoticiasarevisar;
-	@Id("Listboxnoticiasarevisar")
-	private Element listboxnoticiasarevisar;
-
 	public VistaNoticiasarevisar() {
         // You can initialise any data required for the connected UI components here.
     }

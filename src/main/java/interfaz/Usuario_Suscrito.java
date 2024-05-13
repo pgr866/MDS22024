@@ -13,9 +13,9 @@ public class Usuario_Suscrito extends Identificado {
 	
 	public Usuario_Suscrito (MainView mainview, basededatos.Usuario_suscrito usuario_suscrito) {
 		super(mainview, usuario_suscrito);
-		this.getLayoutvermisnoticiasidentificado().setVisible(false);
+		this.getLayoutvistavermisnoticiasidentificado().setVisible(false);
 		this.getLayoutcrearnuevanoticiaidentificado().setVisible(false);
-		this.getLayoutvistanoticiasarevisaridentificado().setVisible(false);
+		this.getLayoutnoticiasarevisaridentificado().setVisible(false);
 		this.getLayoutdaraltabajaperiodistaidentificado().setVisible(false);
 		this.getConfigurarperfilidentificado().addClickListener(event->Configurar_perfil_Usuario_suscrito());
 	}

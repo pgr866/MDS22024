@@ -21,7 +21,7 @@ public class Identificado extends VistaIdentificado {
 	public MainView mainview;
 	public Identificado(MainView mainview, basededatos.Identificado identificado) {
 		this.mainview = mainview;
-		this.getLayoutvistabuscareditor().setVisible(false);
+		this.getLayoutbuscareditor().setVisible(false);
 		this._listado_noticias_portada_Identificado = new Listado_noticias_portada_Identificado(this);
 		this._listado_noticias_busqueda_Identificado = new Listado_noticias_busqueda_Identificado(this);
 		this._log_out = new Log_out(this);
@@ -32,6 +32,10 @@ public class Identificado extends VistaIdentificado {
 		this.getConfigurarperfilidentificado().addClickListener(event->Configurar_perfil());
 		this.identificado = identificado;
 		this.getImagenconfigurarperfilidentificado().setSrc(identificado.getUrl_foto_perfil());
+		this.getButtonlogoidentificado().addClickListener(event->{
+			this.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).removeAll();
+			Listado_noticias_portada_Identificado();
+		});
 	}
 
 	public void Listado_noticias_portada_Identificado() {

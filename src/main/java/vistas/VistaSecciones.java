@@ -27,21 +27,10 @@ public class VistaSecciones extends LitTemplate {
 		this.desplegablesecciones = desplegablesecciones;
 	}
 
-	public Element getListboxsecciones() {
-		return listboxsecciones;
-	}
-
-	public void setListboxsecciones(Element listboxsecciones) {
-		this.listboxsecciones = listboxsecciones;
-	}
-
 	@Id("Layoutsecciones")
 	private Element layoutsecciones;
 	@Id("Desplegablesecciones")
 	private Select desplegablesecciones;
-	@Id("Listboxsecciones")
-	private Element listboxsecciones;
-
 	public VistaSecciones() {
         // You can initialise any data required for the connected UI components here.
     }

@@ -17,9 +17,9 @@ public class Editor extends Identificado {
 	
 	public Editor (MainView mainview, basededatos.Editor editor) {
 		super(mainview, editor);
-		this.getLayoutvistabuscaridentificado().setVisible(false);
-		this.getLayoutvistabuscareditor().setVisible(true);
-		this.getLayoutvermisnoticiasidentificado().setVisible(false);
+		this.getLayoutbuscaridentificado().setVisible(false);
+		this.getLayoutbuscareditor().setVisible(true);
+		this.getLayoutvistavermisnoticiasidentificado().setVisible(false);
 		this.getLayoutcrearnuevanoticiaidentificado().setVisible(false);
 		this._listado_noticias_portada_Editor = new Listado_noticias_portada_Editor(this);
 		this._listado_noticias_busqueda_Editor = new Listado_noticias_busqueda_Editor(this);

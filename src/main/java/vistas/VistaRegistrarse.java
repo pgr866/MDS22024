@@ -9,11 +9,19 @@ import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.component.textfield.PasswordField;
+import com.vaadin.flow.dom.Element;
 
 @Tag("vista-registrarse")
 @JsModule("./src/vista-registrarse.ts")
 public class VistaRegistrarse extends LitTemplate {
 
+	public HorizontalLayout getLayoutcancelarenviarregistrarse() {
+		return layoutcancelarenviarregistrarse;
+	}
+
+	public void setLayoutcancelarenviarregistrarse(HorizontalLayout layoutcancelarenviarregistrarse) {
+		this.layoutcancelarenviarregistrarse = layoutcancelarenviarregistrarse;
+	}
 
 	public Label getLabelerrordatosregistrarse() {
 		return labelerrordatosregistrarse;
@@ -255,14 +263,6 @@ public class VistaRegistrarse extends LitTemplate {
 		this.passwordfieldrepetircontrasenaregistrarse = passwordfieldrepetircontrasenaregistrarse;
 	}
 
-	public HorizontalLayout getLayoutcancelarenviarregistrarse() {
-		return layoutcancelarenviarregistrarse;
-	}
-
-	public void setLayoutcancelarenviarregistrarse(HorizontalLayout layoutcancelarenviarregistrarse) {
-		this.layoutcancelarenviarregistrarse = layoutcancelarenviarregistrarse;
-	}
-
 	public Button getCancelarregistrarse() {
 		return cancelarregistrarse;
 	}
@@ -333,8 +333,6 @@ public class VistaRegistrarse extends LitTemplate {
 	private PasswordField passwordfieldcontrasenaregistrarse;
 	@Id("Passwordfieldrepetircontrasenaregistrarse")
 	private PasswordField passwordfieldrepetircontrasenaregistrarse;
-	@Id("Layoutcancelarenviarregistrarse")
-	private HorizontalLayout layoutcancelarenviarregistrarse;
 	@Id("Cancelarregistrarse")
 	private Button cancelarregistrarse;
 	@Id("Enviarregistrarse")
@@ -345,7 +343,8 @@ public class VistaRegistrarse extends LitTemplate {
 	private Label labelrepetircontrasenaregistrarse;
 	@Id("Layoutrepetircontrasenaregistrarse")
 	private HorizontalLayout layoutrepetircontrasenaregistrarse;
-
+	@Id("Layoutcancelarenviarregistrarse")
+	private HorizontalLayout layoutcancelarenviarregistrarse;
 	public VistaRegistrarse() {
         // You can initialise any data required for the connected UI components here.
     }

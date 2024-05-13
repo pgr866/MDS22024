@@ -1,8 +1,8 @@
 import { LitElement, html, css, customElement } from 'lit-element';
-import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 import '@vaadin/vaadin-text-field/src/vaadin-text-field.js';
-import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
 import '@vaadin/vaadin-text-field/src/vaadin-password-field.js';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
 import '@vaadin/vaadin-button/src/vaadin-button.js';
 
 @customElement('vista-registrarse')
@@ -18,12 +18,12 @@ export class VistaRegistrarse extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; padding-right: var(--lumo-space-m); padding-bottom: var(--lumo-space-m); padding-left: var(--lumo-space-m); position: absolute;">
+<vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; padding-right: var(--lumo-space-m); padding-bottom: var(--lumo-space-m); padding-left: var(--lumo-space-m); position: absolute; justify-content: space-between;">
  <vaadin-horizontal-layout id="Layoutregistrarse" style="width: 100%; flex-shrink: 0; justify-content: center;">
-  <label style="flex-shrink: 0; font-size: 400%; flex-grow: 0; padding-bottom: var(--lumo-space-xl);" id="Labelregistrarse">Registrarse</label>
+  <label style="flex-shrink: 0; font-size: 400%; flex-grow: 0;" id="Labelregistrarse">Registrarse</label>
  </vaadin-horizontal-layout>
- <vaadin-vertical-layout style="flex-shrink: 0; align-self: center; width: 100%; flex-grow: 0; justify-content: space-evenly; height: 75%;">
-  <vaadin-vertical-layout style="width: 100%; flex-shrink: 0;">
+ <vaadin-vertical-layout style="flex-shrink: 0; align-self: center; width: 100%; flex-grow: 0; justify-content: space-between; height: 75%;">
+  <vaadin-vertical-layout style="width: 100%; flex-shrink: 0; justify-content: space-between;">
    <vaadin-horizontal-layout style="width: 100%; flex-shrink: 0;" id="Layoutemailregistrarse">
     <label style="width: 20%; flex-shrink: 0; align-self: center; padding-right: var(--lumo-space-xl); flex-grow: 0;" id="Labelemailregistrarse">Email</label>
     <vaadin-text-field placeholder="Email" style="flex-shrink: 0; flex-grow: 1;" id="Textfieldemailregistrarse"></vaadin-text-field>

@@ -25,7 +25,7 @@ export class VistaUsuarionoregistrado extends LitElement {
   </vaadin-vertical-layout>
   <vaadin-vertical-layout style="flex-shrink: 1; width: 72%;">
    <vaadin-vertical-layout style="width: 100%; height: 50%; flex-shrink: 0;">
-    <vaadin-horizontal-layout id="Barrabusquedanoregistrado" style="width: 100%; height: 100%; flex-shrink: 0; position: relative;"></vaadin-horizontal-layout>
+    <vaadin-horizontal-layout id="Barrabusquedanoregistrado" style="width: 100%; height: 100%; flex-shrink: 0; position: relative; padding: 0;"></vaadin-horizontal-layout>
    </vaadin-vertical-layout>
    <vaadin-horizontal-layout style="width: 100%; height: 50%; flex-shrink: 0; justify-content: space-between;" id="Layoutexplorarseccionesnoregistrado">
     <vaadin-button style="width: 100%; height: 100%; flex-shrink: 0;" id="Explorarseccionesnoregistrado">
@@ -41,13 +41,13 @@ export class VistaUsuarionoregistrado extends LitElement {
  </vaadin-horizontal-layout>
  <vaadin-horizontal-layout style="flex-shrink: 0; flex-grow: 0; width: 100%;">
   <vaadin-vertical-layout style="flex-shrink: 0; width: 15%;">
-   <vaadin-vertical-layout style="flex-grow: 0; flex-shrink: 0; position: relative; width: 100%;" id="Layoutanuncioizquierdausuarionoregistrado"></vaadin-vertical-layout>
+   <vaadin-vertical-layout style="flex-grow: 0; flex-shrink: 0; position: relative; width: 100%; padding: 0;" id="Layoutanuncioizquierdausuarionoregistrado"></vaadin-vertical-layout>
   </vaadin-vertical-layout>
   <vaadin-vertical-layout style="flex-shrink: 0; width: 70%;">
-   <vaadin-vertical-layout style="flex-shrink: 0; flex-grow: 0; position: relative; width: 100%;" id="Layoutnoticiasportadausuarionoregistrado"></vaadin-vertical-layout>
+   <vaadin-vertical-layout style="flex-shrink: 0; flex-grow: 0; position: relative; width: 100%; padding: 0;" id="Layoutnoticiasportadausuarionoregistrado"></vaadin-vertical-layout>
   </vaadin-vertical-layout>
   <vaadin-vertical-layout style="flex-shrink: 0; width: 15%;">
-   <vaadin-vertical-layout style="flex-grow: 0; flex-shrink: 0; position: relative; width: 100%;" id="Layoutanuncioderechausuarionoregistrado"></vaadin-vertical-layout>
+   <vaadin-vertical-layout style="flex-grow: 0; flex-shrink: 0; position: relative; width: 100%; padding: 0;" id="Layoutanuncioderechausuarionoregistrado"></vaadin-vertical-layout>
   </vaadin-vertical-layout>
  </vaadin-horizontal-layout>
 </vaadin-vertical-layout>

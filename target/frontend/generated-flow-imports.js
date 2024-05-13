@@ -13,9 +13,9 @@ import $css_1 from 'Frontend/styles/vaadin-text-field-styles.css';
 addCssBlock(`<dom-module id="flow_css_mod_1" theme-for="vaadin-text-field"><template><style>${$css_1}</style></template></dom-module>`);
 
 import '@vaadin/vaadin-text-field/theme/lumo/vaadin-text-field.js';
-import '@vaadin/vaadin-ordered-layout/theme/lumo/vaadin-horizontal-layout.js';
 import '@vaadin/vaadin-button/theme/lumo/vaadin-button.js';
 import '@vaadin/vaadin-ordered-layout/theme/lumo/vaadin-vertical-layout.js';
+import '@vaadin/vaadin-ordered-layout/theme/lumo/vaadin-horizontal-layout.js';
 import '@vaadin/vaadin-text-field/theme/lumo/vaadin-password-field.js';
 import '@vaadin/vaadin-text-field/theme/lumo/vaadin-text-area.js';
 import '@vaadin/vaadin-combo-box/theme/lumo/vaadin-combo-box.js';

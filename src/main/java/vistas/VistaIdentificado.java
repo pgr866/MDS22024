@@ -13,6 +13,38 @@ import com.vaadin.flow.component.html.Image;
 @JsModule("./src/vista-identificado.ts")
 public class VistaIdentificado extends LitTemplate {
 
+	public Element getLayoutbuscareditor() {
+		return layoutbuscareditor;
+	}
+
+	public void setLayoutbuscareditor(Element layoutbuscareditor) {
+		this.layoutbuscareditor = layoutbuscareditor;
+	}
+
+	public Element getLayoutbuscaridentificado() {
+		return layoutbuscaridentificado;
+	}
+
+	public void setLayoutbuscaridentificado(Element layoutbuscaridentificado) {
+		this.layoutbuscaridentificado = layoutbuscaridentificado;
+	}
+
+	public Element getLayoutnoticiasarevisaridentificado() {
+		return layoutnoticiasarevisaridentificado;
+	}
+
+	public void setLayoutnoticiasarevisaridentificado(Element layoutnoticiasarevisaridentificado) {
+		this.layoutnoticiasarevisaridentificado = layoutnoticiasarevisaridentificado;
+	}
+
+	public Element getLayoutvistavermisnoticiasidentificado() {
+		return layoutvistavermisnoticiasidentificado;
+	}
+
+	public void setLayoutvistavermisnoticiasidentificado(Element layoutvistavermisnoticiasidentificado) {
+		this.layoutvistavermisnoticiasidentificado = layoutvistavermisnoticiasidentificado;
+	}
+
 	public Element getLogoutopcionescuentaidentificado() {
 		return logoutopcionescuentaidentificado;
 	}
@@ -161,8 +193,6 @@ public class VistaIdentificado extends LitTemplate {
 	private Element layoutexplorarseccionesidentificado;
 	@Id("Explorarseccionesidentificado")
 	private Button explorarseccionesidentificado;
-	@Id("Layoutvermisnoticiasidentificado")
-	private Element layoutvermisnoticiasidentificado;
 	@Id("Layoutcrearnuevanoticiaidentificado")
 	private Element layoutcrearnuevanoticiaidentificado;
 	@Id("Buttoncrearnuevanoticiaidentificado")
@@ -183,6 +213,16 @@ public class VistaIdentificado extends LitTemplate {
 	private HorizontalLayout layoutvistabuscareditor;
 	@Id("Logoutopcionescuentaidentificado")
 	private Element logoutopcionescuentaidentificado;
+	@Id("Layoutvermisnoticiasidentificado")
+	private Element layoutvermisnoticiasidentificado;
+	@Id("Layoutnoticiasarevisaridentificado")
+	private Element layoutnoticiasarevisaridentificado;
+	@Id("Layoutvistavermisnoticiasidentificado")
+	private Element layoutvistavermisnoticiasidentificado;
+	@Id("Layoutbuscareditor")
+	private Element layoutbuscareditor;
+	@Id("Layoutbuscaridentificado")
+	private Element layoutbuscaridentificado;
 	public VistaIdentificado() {
         // You can initialise any data required for the connected UI components here.
     }

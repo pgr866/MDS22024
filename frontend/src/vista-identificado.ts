@@ -24,10 +24,10 @@ export class VistaIdentificado extends LitElement {
    </vaadin-button>
   </vaadin-vertical-layout>
   <vaadin-vertical-layout style="flex-shrink: 1; width: 72%;">
-   <vaadin-vertical-layout style="flex-shrink: 0; width: 100%; height: 50%;">
-    <vaadin-horizontal-layout style="width: 100%; height: 100%; flex-shrink: 0; flex-grow: 0; position: relative;" id="Layoutvistabuscaridentificado"></vaadin-horizontal-layout>
+   <vaadin-vertical-layout style="flex-shrink: 0; width: 100%; height: 50%;" id="Layoutbuscaridentificado">
+    <vaadin-horizontal-layout style="width: 100%; flex-shrink: 0; flex-grow: 0; position: relative; height: 100%;" id="Layoutvistabuscaridentificado"></vaadin-horizontal-layout>
    </vaadin-vertical-layout>
-   <vaadin-vertical-layout style="flex-shrink: 0; width: 100%; height: 50%;">
+   <vaadin-vertical-layout style="flex-shrink: 0; width: 100%; height: 50%;" id="Layoutbuscareditor">
     <vaadin-horizontal-layout id="Layoutvistabuscareditor" style="width: 100%; height: 100%; flex-shrink: 0; flex-grow: 0; position: relative;"></vaadin-horizontal-layout>
    </vaadin-vertical-layout>
    <vaadin-horizontal-layout style="width: 100%; height: 50%; flex-shrink: 0; justify-content: space-between; flex-wrap: wrap;">
@@ -36,7 +36,7 @@ export class VistaIdentificado extends LitElement {
        Explorar secciones 
      </vaadin-button>
     </vaadin-vertical-layout>
-    <vaadin-vertical-layout style="width: 30%; height: 100%; flex-shrink: 0;">
+    <vaadin-vertical-layout style="width: 30%; height: 100%; flex-shrink: 0;" id="Layoutvistavermisnoticiasidentificado">
      <vaadin-vertical-layout style="flex-shrink: 0; width: 100%; height: 100%; position: relative;" id="Layoutvermisnoticiasidentificado"></vaadin-vertical-layout>
     </vaadin-vertical-layout>
     <vaadin-vertical-layout style="flex-shrink: 0; width: 30%; height: 100%;" id="Layoutcrearnuevanoticiaidentificado">
@@ -44,8 +44,8 @@ export class VistaIdentificado extends LitElement {
        Crear nueva noticia 
      </vaadin-button>
     </vaadin-vertical-layout>
-    <vaadin-vertical-layout style="width: 30%; height: 100%; flex-shrink: 0;">
-     <vaadin-vertical-layout style="flex-shrink: 0; width: 100%; height: 100%; position: relative;" id="Layoutvistanoticiasarevisaridentificado"></vaadin-vertical-layout>
+    <vaadin-vertical-layout style="width: 30%; flex-shrink: 0; height: 100%;" id="Layoutnoticiasarevisaridentificado">
+     <vaadin-vertical-layout style="flex-shrink: 0; position: relative; width: 100%; height: 100%; padding: 0;" id="Layoutvistanoticiasarevisaridentificado"></vaadin-vertical-layout>
     </vaadin-vertical-layout>
     <vaadin-vertical-layout style="flex-shrink: 0; width: 30%; height: 100%;" id="Layoutdaraltabajaperiodistaidentificado">
      <vaadin-button style="width: 100%; height: 100%; flex-shrink: 1;" id="Buttondaraltabajaperiodistaidentificado">
@@ -54,12 +54,12 @@ export class VistaIdentificado extends LitElement {
     </vaadin-vertical-layout>
    </vaadin-horizontal-layout>
   </vaadin-vertical-layout>
-  <vaadin-vertical-layout style="width: 12%; height: 100%; flex-shrink: 0; flex-grow: 0; justify-content: space-between; flex-direction: row; padding-top: var(--lumo-space-xs); padding-bottom: var(--lumo-space-xs);">
-   <vaadin-button style="height: 100%; flex-shrink: 0; width: 45%; align-self: center; background-color: #EBEBEB;" id="Configurarperfilidentificado">
+  <vaadin-vertical-layout style="width: 12%; height: 100%; flex-shrink: 0; flex-grow: 0; flex-direction: row;">
+   <vaadin-button style="flex-shrink: 0; width: 50%; align-self: center; background-color: #EBEBEB; height: 100%;" id="Configurarperfilidentificado">
     <img style="height: 100%; width: 100%;" src="" id="Imagenconfigurarperfilidentificado">
    </vaadin-button>
-   <vaadin-vertical-layout style="width: 45%; height: 100%; flex-shrink: 0;">
-    <vaadin-vertical-layout id="Logoutopcionescuentaidentificado" style="flex-shrink: 0; width: 100%; height: 100%; position: relative;"></vaadin-vertical-layout>
+   <vaadin-vertical-layout style="width: 50%; height: 100%; flex-shrink: 0;">
+    <vaadin-vertical-layout id="Logoutopcionescuentaidentificado" style="flex-shrink: 0; position: relative; flex-grow: 0; width: 100%; height: 100%;"></vaadin-vertical-layout>
    </vaadin-vertical-layout>
   </vaadin-vertical-layout>
  </vaadin-horizontal-layout>

@@ -19,7 +19,7 @@ export class VistaExplorarsecciones extends LitElement {
     return html`
 <vaadin-vertical-layout style="width: 100%; height: 100%; flex-shrink: 0; align-items: center; position: absolute;">
  <vaadin-vertical-layout style="width: 60%; height: 8%; flex-shrink: 0;">
-  <vaadin-vertical-layout id="Layoutseccionesexplorarsecciones" style="width: 100%; height: 100%; flex-shrink: 0; flex-grow: 0; flex-direction: column; position: relative;"></vaadin-vertical-layout>
+  <vaadin-vertical-layout id="Layoutseccionesexplorarsecciones" style="width: 100%; height: 100%; flex-shrink: 0; flex-grow: 0; flex-direction: column; position: relative; padding: 0;"></vaadin-vertical-layout>
  </vaadin-vertical-layout>
  <vaadin-horizontal-layout style="width: 60%; justify-content: space-between; flex-shrink: 0; align-items: center; padding-top: var(--lumo-space-xl);" id="Layoutnombrebotonesexplorarsecciones">
   <vaadin-text-field placeholder="Nombre sección" style="flex-shrink: 0; width: 45%;" id="Textfieldnombreexplorarsecciones"></vaadin-text-field>
