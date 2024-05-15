@@ -8,4 +8,8 @@ public class Gestionar_publicidad {
 	public void Mostrar_publicidad() {
 		throw new UnsupportedOperationException();
 	}
+	
+	public void Publicidad() {
+		throw new UnsupportedOperationException();
+	}
 }

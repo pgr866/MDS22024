@@ -34,6 +34,7 @@ public class Iniciar_Sesion extends VistaIniciarsesion {
 				basededatos.Identificado result = consulta[0];
 				this._usuario_no_Registrado.mainview.removeAll();
 				if (result instanceof basededatos.Editor) {
+					
 					this._usuario_no_Registrado.mainview._editor = new Editor(this._usuario_no_Registrado.mainview, (basededatos.Editor) result);
 					this._usuario_no_Registrado.mainview.add(this._usuario_no_Registrado.mainview._editor);
 				} else if (result instanceof basededatos.Periodista) {
