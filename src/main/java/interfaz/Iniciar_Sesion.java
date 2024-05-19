@@ -38,7 +38,7 @@ public class Iniciar_Sesion extends VistaIniciarsesion {
 					this._usuario_no_Registrado.mainview._editor = new Editor(this._usuario_no_Registrado.mainview, (basededatos.Editor) result);
 					this._usuario_no_Registrado.mainview.add(this._usuario_no_Registrado.mainview._editor);
 				} else if (result instanceof basededatos.Periodista) {
-					if (((basededatos.Periodista) result).getEsEliminado()) {
+					if (((basededatos.Periodista) result).getDa_de_baja() == null) {
 						this.getLabelmensajeerrorlogin().setVisible(true);
 					} else {
 						this._usuario_no_Registrado.mainview._periodista = new Periodista(this._usuario_no_Registrado.mainview, (basededatos.Periodista) result);

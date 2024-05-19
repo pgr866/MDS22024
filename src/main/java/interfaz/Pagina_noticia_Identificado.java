@@ -106,7 +106,6 @@ public class Pagina_noticia_Identificado extends Pagina_Noticia {
 	public void Comentar() {
 		basededatos.Comentario nuevo_comentario = new basededatos.Comentario();
 		nuevo_comentario.setContenido(this._seccion_comentarios_Identificado.getTextareacomentarioseccioncomentarios().getValue());
-		nuevo_comentario.setEsEliminado(false);
 		nuevo_comentario.setEscribe(this.identificado);
 		nuevo_comentario.setValoraciones_negativas(0);
 		nuevo_comentario.setValoraciones_positivas(0);

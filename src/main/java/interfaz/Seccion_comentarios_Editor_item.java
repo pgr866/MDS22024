@@ -14,7 +14,6 @@ public class Seccion_comentarios_Editor_item extends Seccion_comentarios_Identif
 }
 
 	public void Eliminar_comentario() {
-		this.comentario.setEsEliminado(true);
 		this.comentario.setElimina_comentario((basededatos.Editor) this._seccion_comentarios_Identificado._pagina_noticia_Identificado.identificado);
 		this._seccion_comentarios_Identificado.getLayoutvistaseccioncomentarios().as(VerticalLayout.class).remove(this);
 		this._seccion_comentarios_Identificado._item.remove(this);

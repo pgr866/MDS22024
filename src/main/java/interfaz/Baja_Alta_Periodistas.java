@@ -47,7 +47,6 @@ public class Baja_Alta_Periodistas extends vistas.VistaBajaaltaperiodistas {
 		nuevo_periodista.setTelefono(Integer.parseInt(this.getTextfieldtelefonodaraltaperiodista().getValue()));
 		nuevo_periodista.setContrasena(this.getTextfieldcontrasenadaraltaperiodista().getValue());
 		nuevo_periodista.setFecha_nacimiento(this.getTextfieldfechanacimientodaraltaperiodista().getValue());
-		nuevo_periodista.setEsEliminado(false);
 		nuevo_periodista.setDa_de_alta((basededatos.Editor) this._editor.identificado);;
 		nuevo_periodista.setUrl_foto_perfil("https://i.postimg.cc/m25GMKm4/foto.png");
 		this._editor.Baja_Alta_Periodistas(); // Refrescar pagina
@@ -55,7 +54,6 @@ public class Baja_Alta_Periodistas extends vistas.VistaBajaaltaperiodistas {
 	
 	public void Baja_periodista() {
 		this._lista_periodistas.getComboboxlistaperiodistas().getValue();
-//		periodista.setEsEliminado(true);
 //		periodista.setContrasena("");
 //		periodista.setDni("");
 //		periodista.setEmail("");

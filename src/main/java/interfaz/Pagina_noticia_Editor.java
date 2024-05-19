@@ -21,7 +21,6 @@ public class Pagina_noticia_Editor extends Pagina_noticia_Identificado {
 	}
 	
 	public void Eliminar_noticia_publicada() {
-		this.noticia.setEsEliminada(true);
 		this.noticia.setElimina_noticia((basededatos.Editor) this.identificado);
 		// Refrescar pagina
 	}

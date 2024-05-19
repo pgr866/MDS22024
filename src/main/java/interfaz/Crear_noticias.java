@@ -31,7 +31,6 @@ public class Crear_noticias extends vistas.VistaCrearnoticias {
 		nueva_noticia.setContenido(this.getTextareacontenidocrearnoticias().getValue());
 		nueva_noticia.setFecha(this.getTextfieldfechacrearnoticias().getValue());
 		nueva_noticia.setLugar(this.getTextfiedlugarcrearnoticias().getValue());
-		nueva_noticia.setEsEliminada(false);
 		nueva_noticia.setCrea((basededatos.Periodista) this._periodista.identificado);
 		nueva_noticia.setPublicada(false);
 		nueva_noticia.setValoraciones_positivas(0);

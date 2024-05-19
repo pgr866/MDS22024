@@ -30,7 +30,6 @@ public class Revisar_noticias extends vistas.VistaRevisarnoticias {
 	}
 
 	public void Eliminar_noticia() {
-		this.noticia.setEsEliminada(true);
 		this.noticia.setElimina_noticia((basededatos.Editor) this._noticias_a_revisar._noticias_a_revisar._editor.identificado);
 		this._noticias_a_revisar._noticias_a_revisar._editor.Listado_noticias_portada_Editor(); // Refrescar pagina
 	}
