@@ -29,7 +29,6 @@ public class ComentarioDetachedCriteria extends AbstractORMDetachedCriteria {
 	public final StringExpression contenido;
 	public final IntegerExpression valoraciones_positivas;
 	public final IntegerExpression valoraciones_negativas;
-	public final BooleanExpression esEliminado;
 	public final CollectionExpression valora_positivamente;
 	public final CollectionExpression valora_negativamente;
 	
@@ -45,7 +44,6 @@ public class ComentarioDetachedCriteria extends AbstractORMDetachedCriteria {
 		contenido = new StringExpression("contenido", this.getDetachedCriteria());
 		valoraciones_positivas = new IntegerExpression("valoraciones_positivas", this.getDetachedCriteria());
 		valoraciones_negativas = new IntegerExpression("valoraciones_negativas", this.getDetachedCriteria());
-		esEliminado = new BooleanExpression("esEliminado", this.getDetachedCriteria());
 		valora_positivamente = new CollectionExpression("ORM_valora_positivamente", this.getDetachedCriteria());
 		valora_negativamente = new CollectionExpression("ORM_valora_negativamente", this.getDetachedCriteria());
 	}
@@ -62,7 +60,6 @@ public class ComentarioDetachedCriteria extends AbstractORMDetachedCriteria {
 		contenido = new StringExpression("contenido", this.getDetachedCriteria());
 		valoraciones_positivas = new IntegerExpression("valoraciones_positivas", this.getDetachedCriteria());
 		valoraciones_negativas = new IntegerExpression("valoraciones_negativas", this.getDetachedCriteria());
-		esEliminado = new BooleanExpression("esEliminado", this.getDetachedCriteria());
 		valora_positivamente = new CollectionExpression("ORM_valora_positivamente", this.getDetachedCriteria());
 		valora_negativamente = new CollectionExpression("ORM_valora_negativamente", this.getDetachedCriteria());
 	}

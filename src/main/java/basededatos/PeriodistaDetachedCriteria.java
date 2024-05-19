@@ -34,7 +34,6 @@ public class PeriodistaDetachedCriteria extends AbstractORMDetachedCriteria {
 	public final CollectionExpression es_valorado_negativa;
 	public final CollectionExpression es_valorada_positiva_por;
 	public final CollectionExpression es_valorada_negativa_por;
-	public final BooleanExpression esEliminado;
 	public final IntegerExpression da_de_bajaId;
 	public final AssociationExpression da_de_baja;
 	public final IntegerExpression da_de_altaId;
@@ -58,7 +57,6 @@ public class PeriodistaDetachedCriteria extends AbstractORMDetachedCriteria {
 		es_valorado_negativa = new CollectionExpression("ORM_es_valorado_negativa", this.getDetachedCriteria());
 		es_valorada_positiva_por = new CollectionExpression("ORM_es_valorada_positiva_por", this.getDetachedCriteria());
 		es_valorada_negativa_por = new CollectionExpression("ORM_es_valorada_negativa_por", this.getDetachedCriteria());
-		esEliminado = new BooleanExpression("esEliminado", this.getDetachedCriteria());
 		da_de_bajaId = new IntegerExpression("da_de_baja.", this.getDetachedCriteria());
 		da_de_baja = new AssociationExpression("da_de_baja", this.getDetachedCriteria());
 		da_de_altaId = new IntegerExpression("da_de_alta.", this.getDetachedCriteria());
@@ -83,7 +81,6 @@ public class PeriodistaDetachedCriteria extends AbstractORMDetachedCriteria {
 		es_valorado_negativa = new CollectionExpression("ORM_es_valorado_negativa", this.getDetachedCriteria());
 		es_valorada_positiva_por = new CollectionExpression("ORM_es_valorada_positiva_por", this.getDetachedCriteria());
 		es_valorada_negativa_por = new CollectionExpression("ORM_es_valorada_negativa_por", this.getDetachedCriteria());
-		esEliminado = new BooleanExpression("esEliminado", this.getDetachedCriteria());
 		da_de_bajaId = new IntegerExpression("da_de_baja.", this.getDetachedCriteria());
 		da_de_baja = new AssociationExpression("da_de_baja", this.getDetachedCriteria());
 		da_de_altaId = new IntegerExpression("da_de_alta.", this.getDetachedCriteria());

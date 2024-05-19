@@ -29,7 +29,6 @@ public class ComentarioCriteria extends AbstractORMCriteria {
 	public final StringExpression contenido;
 	public final IntegerExpression valoraciones_positivas;
 	public final IntegerExpression valoraciones_negativas;
-	public final BooleanExpression esEliminado;
 	public final CollectionExpression valora_positivamente;
 	public final CollectionExpression valora_negativamente;
 	
@@ -45,7 +44,6 @@ public class ComentarioCriteria extends AbstractORMCriteria {
 		contenido = new StringExpression("contenido", this);
 		valoraciones_positivas = new IntegerExpression("valoraciones_positivas", this);
 		valoraciones_negativas = new IntegerExpression("valoraciones_negativas", this);
-		esEliminado = new BooleanExpression("esEliminado", this);
 		valora_positivamente = new CollectionExpression("ORM_valora_positivamente", this);
 		valora_negativamente = new CollectionExpression("ORM_valora_negativamente", this);
 	}

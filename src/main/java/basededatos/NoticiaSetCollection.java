@@ -80,7 +80,6 @@ public class NoticiaSetCollection extends org.orm.util.ORMSet {
 	 * <li>publicada</li>
 	 * <li>valoraciones_positivas</li>
 	 * <li>valoraciones_negativas</li>
-	 * <li>esEliminada</li>
 	 * </ul>
 	 * @return The persistent objects sorted array
 	 */
@@ -101,7 +100,6 @@ public class NoticiaSetCollection extends org.orm.util.ORMSet {
 	 * <li>publicada</li>
 	 * <li>valoraciones_positivas</li>
 	 * <li>valoraciones_negativas</li>
-	 * <li>esEliminada</li>
 	 * </ul>
 	 * @param ascending true for ascending, false for descending
 	 * @return The persistent objects sorted array

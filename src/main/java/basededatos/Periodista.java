@@ -55,12 +55,9 @@ public class Periodista extends basededatos.Identificado implements Serializable
 		
 	};
 	
-	@Column(name="EsEliminado", nullable=false, length=1)	
-	private boolean esEliminado;
-	
 	@ManyToOne(targetEntity=basededatos.Editor.class, fetch=FetchType.LAZY)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.LOCK})	
-	@JoinColumns(value={ @JoinColumn(name="EditorIdentificadoId2", referencedColumnName="IdentificadoId", nullable=false) }, foreignKey=@ForeignKey(name="FKPeriodista296958"))	
+	@JoinColumns(value={ @JoinColumn(name="EditorIdentificadoId2", referencedColumnName="IdentificadoId") }, foreignKey=@ForeignKey(name="FKPeriodista296958"))	
 	@org.hibernate.annotations.LazyToOne(value=org.hibernate.annotations.LazyToOneOption.NO_PROXY)	
 	private basededatos.Editor da_de_baja;
 	
@@ -74,14 +71,6 @@ public class Periodista extends basededatos.Identificado implements Serializable
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
 	@org.hibernate.annotations.LazyCollection(org.hibernate.annotations.LazyCollectionOption.TRUE)	
 	private java.util.Set ORM_es_creada = new java.util.HashSet();
-	
-	public void setEsEliminado(boolean value) {
-		this.esEliminado = value;
-	}
-	
-	public boolean getEsEliminado() {
-		return esEliminado;
-	}
 	
 	public void setDa_de_alta(basededatos.Editor value) {
 		if (da_de_alta != null) {

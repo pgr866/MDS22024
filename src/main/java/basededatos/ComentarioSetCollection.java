@@ -74,7 +74,6 @@ public class ComentarioSetCollection extends org.orm.util.ORMSet {
 	 * <li>contenido</li>
 	 * <li>valoraciones_positivas</li>
 	 * <li>valoraciones_negativas</li>
-	 * <li>esEliminado</li>
 	 * </ul>
 	 * @return The persistent objects sorted array
 	 */
@@ -89,7 +88,6 @@ public class ComentarioSetCollection extends org.orm.util.ORMSet {
 	 * <li>contenido</li>
 	 * <li>valoraciones_positivas</li>
 	 * <li>valoraciones_negativas</li>
-	 * <li>esEliminado</li>
 	 * </ul>
 	 * @param ascending true for ascending, false for descending
 	 * @return The persistent objects sorted array

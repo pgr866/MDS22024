@@ -13,25 +13,25 @@ public class CreateMDS12324PFFornielesGomezData {
 			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : ordena
 			basededatos.PortadaDAO.save(lbasededatosPortada);
 			basededatos.Seccion lbasededatosSeccion = basededatos.SeccionDAO.createSeccion();
-			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : aparece_en, esEliminada, crea_seccion, elimina
+			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : aparece_en, esEliminada, crea_seccion
 			basededatos.SeccionDAO.save(lbasededatosSeccion);
 			basededatos.Tematica lbasededatosTematica = basededatos.TematicaDAO.createTematica();
 			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : contiene
 			basededatos.TematicaDAO.save(lbasededatosTematica);
 			basededatos.Noticia lbasededatosNoticia = basededatos.NoticiaDAO.createNoticia();
-			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : pertenece_a_noticia, seccion_contiene_noticias, valora_negativa, pertenece_a, valora_positiva, esEliminada, valoraciones_negativas, valoraciones_positivas, publicada, crea, elimina_noticia, publica
+			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : pertenece_a_noticia, seccion_contiene_noticias, valora_negativa, pertenece_a, valora_positiva, valoraciones_negativas, valoraciones_positivas, publicada, crea
 			basededatos.NoticiaDAO.save(lbasededatosNoticia);
 			basededatos.Comentario lbasededatosComentario = basededatos.ComentarioDAO.createComentario();
-			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : valora_negativamente, valora_positivamente, esEliminado, valoraciones_negativas, valoraciones_positivas, noticia_contiene_comentarios, elimina_comentario, escribe
+			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : valora_negativamente, valora_positivamente, valoraciones_negativas, valoraciones_positivas, noticia_contiene_comentarios, escribe
 			basededatos.ComentarioDAO.save(lbasededatosComentario);
 			basededatos.Identificado lbasededatosIdentificado = basededatos.IdentificadoDAO.createIdentificado();
 			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : es_valorada_negativa_por, es_valorada_positiva_por, es_valorado_negativa, es_valorado_positiva, pertenece_a_identificado, telefono, dni
 			basededatos.IdentificadoDAO.save(lbasededatosIdentificado);
 			basededatos.Editor lbasededatosEditor = basededatos.EditorDAO.createEditor();
-			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : es_dado_de_baja, es_dado_de_alta, es_ordenada, es_publicada_por, es_eliminada_por, es_creada_por, noticia_es_eliminada_por_, es_eliminado_por
+			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : es_dado_de_alta, es_ordenada, es_creada_por
 			basededatos.EditorDAO.save(lbasededatosEditor);
 			basededatos.Periodista lbasededatosPeriodista = basededatos.PeriodistaDAO.createPeriodista();
-			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : es_creada, da_de_alta, da_de_baja, esEliminado
+			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : es_creada, da_de_alta
 			basededatos.PeriodistaDAO.save(lbasededatosPeriodista);
 			basededatos.Usuario_suscrito lbasededatosUsuario_suscrito = basededatos.Usuario_suscritoDAO.createUsuario_suscrito();
 			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : esEliminado

@@ -7,4 +7,16 @@ import basededatos.Seccion;
 public class BD_Secciones {
 	public BDPrincipal _bd_main_seccion;
 	public Vector<Seccion> _contiene_secciones = new Vector<Seccion>();
+
+	public Seccion[] Cargar_secciones() {
+		throw new UnsupportedOperationException();
+	}
+
+	public Seccion Anadir_seccion(String aNombre, int aId_editor) {
+		throw new UnsupportedOperationException();
+	}
+
+	public void Borrar_seccion(String aNombre, int aId_editor) {
+		throw new UnsupportedOperationException();
+	}
 }

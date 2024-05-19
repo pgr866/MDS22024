@@ -11,6 +11,7 @@ import basededatos.Seccion;
 import basededatos.Noticia;
 // import basededatos.Periodista;
 // import basededatos.Identificado;
+import basededatos.Usuario_suscrito;
 import interfaz.Editor;
 // import interfaz.Identificado;
 import interfaz.Gestor_de_correo;
@@ -97,7 +98,7 @@ public class BDPrincipal implements iEditor, iGestor_de_correo, iGestor_de_pago,
 		throw new UnsupportedOperationException();
 	}
 
-	public void Registrarse(String aEmail, String aNombre, String aApellidos, String aFecha_nacimiento, String aNick, String aDni, String aNum_tarjeta, String aContrasena) {
+	public Usuario_suscrito Registrarse(String aEmail, String aNombre, String aApellidos, String aFecha_nacimiento, String aNick, String aDni, String aNum_tarjeta, String aContrasena) {
 		throw new UnsupportedOperationException();
 	}
 

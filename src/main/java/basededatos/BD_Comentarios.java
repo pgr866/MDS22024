@@ -7,4 +7,12 @@ import basededatos.Comentario;
 public class BD_Comentarios {
 	public BDPrincipal _bd_main_comentario;
 	public Vector<Comentario> _contiene_comentarios = new Vector<Comentario>();
+
+	public void Comentar(int aId_identificado, int aId_noticia, String aContenido) {
+		throw new UnsupportedOperationException();
+	}
+
+	public void Valorar_comentario(int aId_comentario, int aId_identificado, boolean aPositiva) {
+		throw new UnsupportedOperationException();
+	}
 }

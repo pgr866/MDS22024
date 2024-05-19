@@ -86,13 +86,13 @@ public class Noticia implements Serializable {
 	
 	@ManyToOne(targetEntity=basededatos.Editor.class, fetch=FetchType.LAZY)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.LOCK})	
-	@JoinColumns(value={ @JoinColumn(name="EditorIdentificadoId2", referencedColumnName="IdentificadoId", nullable=false) }, foreignKey=@ForeignKey(name="FKNoticia105236"))	
+	@JoinColumns(value={ @JoinColumn(name="EditorIdentificadoId2", referencedColumnName="IdentificadoId") }, foreignKey=@ForeignKey(name="FKNoticia105236"))	
 	@org.hibernate.annotations.LazyToOne(value=org.hibernate.annotations.LazyToOneOption.NO_PROXY)	
 	private basededatos.Editor publica;
 	
 	@ManyToOne(targetEntity=basededatos.Editor.class, fetch=FetchType.LAZY)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.LOCK})	
-	@JoinColumns(value={ @JoinColumn(name="EditorIdentificadoId", referencedColumnName="IdentificadoId", nullable=false) }, foreignKey=@ForeignKey(name="FKNoticia859437"))	
+	@JoinColumns(value={ @JoinColumn(name="EditorIdentificadoId", referencedColumnName="IdentificadoId") }, foreignKey=@ForeignKey(name="FKNoticia859437"))	
 	@org.hibernate.annotations.LazyToOne(value=org.hibernate.annotations.LazyToOneOption.NO_PROXY)	
 	private basededatos.Editor elimina_noticia;
 	
@@ -128,9 +128,6 @@ public class Noticia implements Serializable {
 	
 	@Column(name="Valoraciones_negativas", nullable=false, length=10)	
 	private int valoraciones_negativas;
-	
-	@Column(name="EsEliminada", nullable=false, length=1)	
-	private boolean esEliminada;
 	
 	@ManyToMany(targetEntity=basededatos.Identificado.class)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
@@ -242,14 +239,6 @@ public class Noticia implements Serializable {
 	
 	public int getValoraciones_negativas() {
 		return valoraciones_negativas;
-	}
-	
-	public void setEsEliminada(boolean value) {
-		this.esEliminada = value;
-	}
-	
-	public boolean getEsEliminada() {
-		return esEliminada;
 	}
 	
 	public void setPublica(basededatos.Editor value) {

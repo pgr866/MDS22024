@@ -73,7 +73,7 @@ public class Comentario implements Serializable {
 	
 	@ManyToOne(targetEntity=basededatos.Editor.class, fetch=FetchType.LAZY)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.LOCK})	
-	@JoinColumns(value={ @JoinColumn(name="EditorIdentificadoId", referencedColumnName="IdentificadoId", nullable=false) }, foreignKey=@ForeignKey(name="FKComentario316609"))	
+	@JoinColumns(value={ @JoinColumn(name="EditorIdentificadoId", referencedColumnName="IdentificadoId") }, foreignKey=@ForeignKey(name="FKComentario316609"))	
 	@org.hibernate.annotations.LazyToOne(value=org.hibernate.annotations.LazyToOneOption.NO_PROXY)	
 	private basededatos.Editor elimina_comentario;
 	
@@ -91,9 +91,6 @@ public class Comentario implements Serializable {
 	
 	@Column(name="Valoraciones_negativas", nullable=false, length=10)	
 	private int valoraciones_negativas;
-	
-	@Column(name="EsEliminado", nullable=false, length=1)	
-	private boolean esEliminado;
 	
 	@ManyToMany(mappedBy="ORM_es_valorado_positiva", targetEntity=basededatos.Identificado.class)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
@@ -139,14 +136,6 @@ public class Comentario implements Serializable {
 	
 	public int getValoraciones_negativas() {
 		return valoraciones_negativas;
-	}
-	
-	public void setEsEliminado(boolean value) {
-		this.esEliminado = value;
-	}
-	
-	public boolean getEsEliminado() {
-		return esEliminado;
 	}
 	
 	public void setNoticia_contiene_comentarios(basededatos.Noticia value) {

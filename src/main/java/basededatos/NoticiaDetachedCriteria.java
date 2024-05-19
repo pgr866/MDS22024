@@ -37,7 +37,6 @@ public class NoticiaDetachedCriteria extends AbstractORMDetachedCriteria {
 	public final BooleanExpression publicada;
 	public final IntegerExpression valoraciones_positivas;
 	public final IntegerExpression valoraciones_negativas;
-	public final BooleanExpression esEliminada;
 	public final CollectionExpression valora_positiva;
 	public final CollectionExpression pertenece_a;
 	public final CollectionExpression valora_negativa;
@@ -64,7 +63,6 @@ public class NoticiaDetachedCriteria extends AbstractORMDetachedCriteria {
 		publicada = new BooleanExpression("publicada", this.getDetachedCriteria());
 		valoraciones_positivas = new IntegerExpression("valoraciones_positivas", this.getDetachedCriteria());
 		valoraciones_negativas = new IntegerExpression("valoraciones_negativas", this.getDetachedCriteria());
-		esEliminada = new BooleanExpression("esEliminada", this.getDetachedCriteria());
 		valora_positiva = new CollectionExpression("ORM_valora_positiva", this.getDetachedCriteria());
 		pertenece_a = new CollectionExpression("ORM_pertenece_a", this.getDetachedCriteria());
 		valora_negativa = new CollectionExpression("ORM_valora_negativa", this.getDetachedCriteria());
@@ -92,7 +90,6 @@ public class NoticiaDetachedCriteria extends AbstractORMDetachedCriteria {
 		publicada = new BooleanExpression("publicada", this.getDetachedCriteria());
 		valoraciones_positivas = new IntegerExpression("valoraciones_positivas", this.getDetachedCriteria());
 		valoraciones_negativas = new IntegerExpression("valoraciones_negativas", this.getDetachedCriteria());
-		esEliminada = new BooleanExpression("esEliminada", this.getDetachedCriteria());
 		valora_positiva = new CollectionExpression("ORM_valora_positiva", this.getDetachedCriteria());
 		pertenece_a = new CollectionExpression("ORM_pertenece_a", this.getDetachedCriteria());
 		valora_negativa = new CollectionExpression("ORM_valora_negativa", this.getDetachedCriteria());

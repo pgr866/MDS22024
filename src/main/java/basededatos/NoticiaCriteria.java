@@ -37,7 +37,6 @@ public class NoticiaCriteria extends AbstractORMCriteria {
 	public final BooleanExpression publicada;
 	public final IntegerExpression valoraciones_positivas;
 	public final IntegerExpression valoraciones_negativas;
-	public final BooleanExpression esEliminada;
 	public final CollectionExpression valora_positiva;
 	public final CollectionExpression pertenece_a;
 	public final CollectionExpression valora_negativa;
@@ -64,7 +63,6 @@ public class NoticiaCriteria extends AbstractORMCriteria {
 		publicada = new BooleanExpression("publicada", this);
 		valoraciones_positivas = new IntegerExpression("valoraciones_positivas", this);
 		valoraciones_negativas = new IntegerExpression("valoraciones_negativas", this);
-		esEliminada = new BooleanExpression("esEliminada", this);
 		valora_positiva = new CollectionExpression("ORM_valora_positiva", this);
 		pertenece_a = new CollectionExpression("ORM_pertenece_a", this);
 		valora_negativa = new CollectionExpression("ORM_valora_negativa", this);
