@@ -12,8 +12,6 @@ import com.vaadin.flow.component.html.Label;
 @JsModule("./src/vista-listadonoticiasportada.ts")
 public class VistaListadonoticiasportada extends LitTemplate {
 
-	
-
 	public Element getLayoutprincipallistadonoticiasportada() {
 		return layoutprincipallistadonoticiasportada;
 	}

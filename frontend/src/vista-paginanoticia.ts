@@ -2,6 +2,7 @@ import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-button/src/vaadin-button.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
+import '@vaadin/vaadin-text-field/src/vaadin-text-area.js';
 
 @customElement('vista-paginanoticia')
 export class VistaPaginanoticia extends LitElement {
@@ -43,6 +44,13 @@ export class VistaPaginanoticia extends LitElement {
     <vaadin-horizontal-layout style="width: 100%; flex-shrink: 1; padding-top: var(--lumo-space-s); flex-grow: 0; padding-bottom: var(--lumo-space-l); align-self: center; position: relative;" id="Mostrarnoticiaresumidayextendidapaginanoticia"></vaadin-horizontal-layout>
    </vaadin-vertical-layout>
   </vaadin-vertical-layout>
+  <label style="flex-shrink: 0; align-self: center; font-size: 150%; align-self: center;" id="Labelseccioncomentarios">Comentarios</label>
+  <vaadin-horizontal-layout style="flex-shrink: 0; flex-grow: 0; width: 100%; justify-content: space-between; padding-top: var(--lumo-space-m); padding-bottom: var(--lumo-space-m); padding-right: var(--lumo-space-xl); padding-left: var(--lumo-space-xl);" id="Layoutcomentarioseccioncomentarios">
+   <vaadin-button style="flex-shrink: 0; flex-grow: 0; align-self: center; width: 20%;" id="Botonanadircomentarioseccioncomentarios">
+     Añadir comentario 
+   </vaadin-button>
+   <vaadin-text-area placeholder="Escriba un comentario..." style="width: 77%; height: 100%;" id="Textareacomentarioseccioncomentarios"></vaadin-text-area>
+  </vaadin-horizontal-layout>
  </vaadin-vertical-layout>
  <vaadin-vertical-layout style="width: 100%; flex-shrink: 0;">
   <vaadin-vertical-layout style="width: 100%; flex-shrink: 0; flex-grow: 1; position: relative;" id="Layoutseccioncomentariospaginanoticia"></vaadin-vertical-layout>

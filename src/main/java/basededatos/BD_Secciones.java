@@ -12,11 +12,11 @@ public class BD_Secciones {
 		throw new UnsupportedOperationException();
 	}
 
-	public Seccion Anadir_seccion(String aNombre, int aId_editor) {
+	public Seccion Anadir_seccion(String aANombre, int aAId_editor) {
 		throw new UnsupportedOperationException();
 	}
 
-	public void Borrar_seccion(String aNombre, int aId_editor) {
+	public void Borrar_seccion(String aANombre, int aAId_editor) {
 		throw new UnsupportedOperationException();
 	}
 }

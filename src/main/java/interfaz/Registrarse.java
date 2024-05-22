@@ -1,6 +1,7 @@
 package interfaz;
 
-import org.orm.PersistentException;
+import base_de_datos.BDPrincipal;
+import base_de_datos.iUsuario_no_Registrado;
 
 public class Registrarse extends vistas.VistaRegistrarse {
 	
@@ -15,6 +16,7 @@ public class Registrarse extends vistas.VistaRegistrarse {
 //	private Label _num_tarjeta;
 //	private Label _contrasena;
 //	private Label _repetir_contrasena;
+	iUsuario_no_Registrado iusuario_no_registrado = new BDPrincipal();
 	public Iniciar_Sesion _iniciar_Sesion;
 	public Gestionar_correo _gestionar_correo;
 	public Gestionar_pagos _gestionar_pagos;
@@ -22,7 +24,7 @@ public class Registrarse extends vistas.VistaRegistrarse {
 	public Registrarse(Iniciar_Sesion _iniciar_Sesion) {
 		super();
 		this._iniciar_Sesion = _iniciar_Sesion;
-		this.getCancelarregistrarse().addClickListener(event->Cancelar());
+		this.getCancelarregistrarse().addClickListener(event->this._iniciar_Sesion._usuario_no_Registrado.Iniciar_Sesion());
 		this.getEnviarregistrarse().addClickListener(event->Enviar());
 	}
 
@@ -30,43 +32,18 @@ public class Registrarse extends vistas.VistaRegistrarse {
 		throw new UnsupportedOperationException();
 	}
 
-	public void Cancelar() {
-		this._iniciar_Sesion._usuario_no_Registrado.Iniciar_Sesion();
-	}
-
 	public void Enviar() {
 		String email = this.getTextfieldemailregistrarse().getValue();
+		String nombre = this.getTextfieldnombreregistrarse().getValue();
+		String apellidos = this.getTextfieldapellidosregistrarse().getValue();
+		String fecha_nacimiento = this.getTextfieldfechanacimientoregistrarse().getValue();
 		String nick = this.getTextfieldregistrarse().getValue();
 		String dni = this.getTextfielddniregistrarse().getValue();
-		basededatos.Usuario_suscrito[] consulta;
-		boolean validos = true;
-		try {
-			consulta = basededatos.Usuario_suscritoDAO.listUsuario_suscritoByQuery(
-					"Email = '" + email + "' AND EsEliminado = FALSE", "");
-			basededatos.Usuario_suscrito[] consulta2 = basededatos.Usuario_suscritoDAO.listUsuario_suscritoByQuery(
-					"Email = '" + email + "' AND EsEliminado = FALSE", "");
-			if (consulta.length > 0 || consulta2.length > 0) {
-				this.getLabelerrordatosregistrarse().setText("Email ya registrado en otra cuenta");
-				validos = false;
-			}
-			consulta = basededatos.Usuario_suscritoDAO.listUsuario_suscritoByQuery(
-					"Nick_apodo = '" + nick + "' AND EsEliminado = FALSE", "");
-			if (consulta.length > 0 && validos) {
-				this.getLabelerrordatosregistrarse().setText("Nick ya registrado en otra cuenta");
-				validos = false;
-			}
-			consulta = basededatos.Usuario_suscritoDAO.listUsuario_suscritoByQuery(
-					"Dni = '" + dni + "' AND EsEliminado = FALSE", "");
-			if (consulta.length > 0 && validos) {
-				this.getLabelerrordatosregistrarse().setText("DNI ya registrado en otra cuenta");
-				validos = false;
-			}
-		} catch (PersistentException e) {
-			e.printStackTrace();
-		}
-		
+		String num_tarjeta = this.getTextfieldntarjetaregistrarse().getValue();
 		String contrasena = this.getPasswordfieldcontrasenaregistrarse().getValue();
 		String repetir_contrasena = this.getPasswordfieldrepetircontrasenaregistrarse().getValue();
+		
+		boolean validos = true;
 
 		if (contrasena != repetir_contrasena && validos) {
 			this.getLabelerrordatosregistrarse().setText("Las contraseñas no coinciden");
@@ -95,18 +72,9 @@ public class Registrarse extends vistas.VistaRegistrarse {
         	this.getLabelerrordatosregistrarse().setText("La contraseña debe tener al menos un número, una mayúscula, y una minúscula");
 			validos = false;
         }
-		
+        
         if (validos) {
-    		basededatos.Usuario_suscrito suscrito = new basededatos.Usuario_suscrito();
-        	suscrito.setEmail(email);
-    		suscrito.setNombre(this.getTextfieldnombreregistrarse().getValue());
-    		suscrito.setApellidos(this.getTextfieldapellidosregistrarse().getValue());
-    		suscrito.setFecha_nacimiento(this.getTextfieldfechanacimientoregistrarse().getValue());
-    		suscrito.setNick_apodo(nick);
-    		suscrito.setDni(dni);
-    		suscrito.setNum_tarjeta(this.getTextfieldntarjetaregistrarse().getValue());
-    		suscrito.setContrasena(contrasena);
-    		suscrito.setUrl_foto_perfil("https://i.postimg.cc/m25GMKm4/foto.png");
+        	basededatos.Usuario_suscrito suscrito = iusuario_no_registrado.Registrarse(email, nombre, apellidos, fecha_nacimiento, nick, dni, num_tarjeta, contrasena);
     		this._iniciar_Sesion._usuario_no_Registrado.mainview._usuario_suscrito = new Usuario_Suscrito(this._iniciar_Sesion._usuario_no_Registrado.mainview, suscrito);
     		this._iniciar_Sesion._usuario_no_Registrado.mainview.removeAll();
     		this._iniciar_Sesion._usuario_no_Registrado.mainview.add(this._iniciar_Sesion._usuario_no_Registrado.mainview._usuario_suscrito);

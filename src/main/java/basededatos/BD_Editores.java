@@ -8,11 +8,11 @@ public class BD_Editores {
 	public BDPrincipal _bd_main_editor;
 	public Vector<Editor> _contiene_editores = new Vector<Editor>();
 
-	public Editor Login(String aEmail, String aContrasena) {
+	public Editor Login(String aAEmail, String aAContrasena) {
 		throw new UnsupportedOperationException();
 	}
 
-	public void Guardar_cambios(int aId, String aNombre, String aNick, String aEmail, String aContrasena, String aUrl_foto_perfil) {
+	public void Guardar_cambios(int aAId, String aANombre, String aANick, String aAEmail, String aAContrasena, String aAUrl_foto_perfil) {
 		throw new UnsupportedOperationException();
 	}
 }

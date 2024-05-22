@@ -14,14 +14,6 @@ import com.vaadin.flow.component.textfield.TextArea;
 @JsModule("./src/vista-seccioncomentarios.ts")
 public class VistaSeccioncomentarios extends LitTemplate {
 
-	public TextArea getTextareacomentarioseccioncomentarios() {
-		return textareacomentarioseccioncomentarios;
-	}
-
-	public void setTextareacomentarioseccioncomentarios(TextArea textareacomentarioseccioncomentarios) {
-		this.textareacomentarioseccioncomentarios = textareacomentarioseccioncomentarios;
-	}
-
 	public Element getLayoutseccioncomentarios() {
 		return layoutseccioncomentarios;
 	}
@@ -29,31 +21,7 @@ public class VistaSeccioncomentarios extends LitTemplate {
 	public void setLayoutseccioncomentarios(Element layoutseccioncomentarios) {
 		this.layoutseccioncomentarios = layoutseccioncomentarios;
 	}
-
-	public Label getLabelseccioncomentarios() {
-		return labelseccioncomentarios;
-	}
-
-	public void setLabelseccioncomentarios(Label labelseccioncomentarios) {
-		this.labelseccioncomentarios = labelseccioncomentarios;
-	}
-
-	public HorizontalLayout getLayoutcomentarioseccioncomentarios() {
-		return layoutcomentarioseccioncomentarios;
-	}
-
-	public void setLayoutcomentarioseccioncomentarios(HorizontalLayout layoutcomentarioseccioncomentarios) {
-		this.layoutcomentarioseccioncomentarios = layoutcomentarioseccioncomentarios;
-	}
-
-	public Button getBotonanadircomentarioseccioncomentarios() {
-		return botonanadircomentarioseccioncomentarios;
-	}
-
-	public void setBotonanadircomentarioseccioncomentarios(Button botonanadircomentarioseccioncomentarios) {
-		this.botonanadircomentarioseccioncomentarios = botonanadircomentarioseccioncomentarios;
-	}
-
+	
 	public Element getLayoutvistaseccioncomentarios() {
 		return layoutvistaseccioncomentarios;
 	}
@@ -64,17 +32,8 @@ public class VistaSeccioncomentarios extends LitTemplate {
 
 	@Id("Layoutseccioncomentarios")
 	private Element layoutseccioncomentarios;
-	@Id("Labelseccioncomentarios")
-	private Label labelseccioncomentarios;
-	@Id("Layoutcomentarioseccioncomentarios")
-	private HorizontalLayout layoutcomentarioseccioncomentarios;
-	@Id("Botonanadircomentarioseccioncomentarios")
-	private Button botonanadircomentarioseccioncomentarios;
 	@Id("Layoutvistaseccioncomentarios")
 	private Element layoutvistaseccioncomentarios;
-	@Id("Textareacomentarioseccioncomentarios")
-	private TextArea textareacomentarioseccioncomentarios;
-
 	public VistaSeccioncomentarios() {
         // You can initialise any data required for the connected UI components here.
     }

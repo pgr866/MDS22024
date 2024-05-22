@@ -1,6 +1,8 @@
 package interfaz;
 
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import base_de_datos.BDPrincipal;
+import base_de_datos.iEditor;
 
 public class Baja_Alta_Periodistas extends vistas.VistaBajaaltaperiodistas {
 	
@@ -21,6 +23,7 @@ public class Baja_Alta_Periodistas extends vistas.VistaBajaaltaperiodistas {
 //	private Label _dar_de_alta_periodista;
 //	private Label _dar_de_baja_periodista;
 //	private Label _busqueda_periodista;
+	iEditor ieditor = new BDPrincipal();
 	public Editor _editor;
 	public Lista_periodistas _lista_periodistas;
 	
@@ -38,30 +41,24 @@ public class Baja_Alta_Periodistas extends vistas.VistaBajaaltaperiodistas {
 	}
 	
 	public void Alta_periodista() {
-		basededatos.Periodista nuevo_periodista = new basededatos.Periodista();
-		nuevo_periodista.setNombre(this.getTextfieldnombredaraltaperiodista().getValue());
-		nuevo_periodista.setApellidos(this.getTextfieldapellidosdaraltaperiodista().getValue());
-		nuevo_periodista.setNick_apodo(this.getTextfieldnickdaraltaperiodista().getValue());
-		nuevo_periodista.setDni(this.getTextfielddnidaraltaperiodista().getValue());
-		nuevo_periodista.setEmail(this.getTextfieldemaildaraltaperiodista().getValue());
-		nuevo_periodista.setTelefono(Integer.parseInt(this.getTextfieldtelefonodaraltaperiodista().getValue()));
-		nuevo_periodista.setContrasena(this.getTextfieldcontrasenadaraltaperiodista().getValue());
-		nuevo_periodista.setFecha_nacimiento(this.getTextfieldfechanacimientodaraltaperiodista().getValue());
-		nuevo_periodista.setDa_de_alta((basededatos.Editor) this._editor.identificado);;
-		nuevo_periodista.setUrl_foto_perfil("https://i.postimg.cc/m25GMKm4/foto.png");
+		String nombre = this.getTextfieldnombredaraltaperiodista().getValue();
+		String apellidos = this.getTextfieldapellidosdaraltaperiodista().getValue();
+		String nick = this.getTextfieldnickdaraltaperiodista().getValue();
+		String contrasena = this.getTextfieldcontrasenadaraltaperiodista().getValue();
+		String dni = this.getTextfielddnidaraltaperiodista().getValue();
+		String email = this.getTextfieldemaildaraltaperiodista().getValue();
+		int telefono = Integer.parseInt(this.getTextfieldtelefonodaraltaperiodista().getValue());
+		String fecha_nacimiento = this.getTextfieldfechanacimientodaraltaperiodista().getValue();
+		int id_editor = this._editor.identificado.getId();
+		ieditor.Alta_periodista(nombre, apellidos, nick, contrasena, dni, email, telefono, fecha_nacimiento, id_editor);
 		this._editor.Baja_Alta_Periodistas(); // Refrescar pagina
 	}
 	
 	public void Baja_periodista() {
-		this._lista_periodistas.getComboboxlistaperiodistas().getValue();
-//		periodista.setContrasena("");
-//		periodista.setDni("");
-//		periodista.setEmail("");
-//		periodista.setFecha_nacimiento("");
-//		periodista.setTelefono(-1);
-//		periodista.setUrl_foto_perfil("");
-//		periodista.setDa_de_baja((basededatos.Editor) this._lista_periodistas._baja_Alta_Periodistas._editor.identificado);;
-		this._lista_periodistas._baja_Alta_Periodistas._editor.Baja_Alta_Periodistas(); // Refrescar pagina
+		String nick = this._lista_periodistas.getComboboxlistaperiodistas().getValue();
+		int id_editor = this._editor.identificado.getId();
+		ieditor.Baja_Periodista(nick, id_editor);
+		this._editor.Baja_Alta_Periodistas(); // Refrescar pagina
 	}
 	
 }

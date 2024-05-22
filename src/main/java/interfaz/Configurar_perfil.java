@@ -1,5 +1,8 @@
 package interfaz;
 
+import base_de_datos.BDPrincipal;
+import base_de_datos.iIdentificado;
+
 public class Configurar_perfil extends vistas.VistaConfigurarperfil {
 
 //	private event _guardar_cambios;
@@ -15,6 +18,7 @@ public class Configurar_perfil extends vistas.VistaConfigurarperfil {
 //	private TextArea _rellenar_num_tarjeta;
 //	private Label _contrasena;
 //	private TextArea _rellenar_contrasena;
+	iIdentificado iidentificado = new BDPrincipal();
 	public Identificado _identificado;
 	basededatos.Identificado identificado;
 
@@ -35,13 +39,14 @@ public class Configurar_perfil extends vistas.VistaConfigurarperfil {
 	}
 	
 	public void Guardar_cambios() {
-		this.identificado.setNombre(this.getTextfieldnombreconfigurarperfil().getValue());
-		this.identificado.setNick_apodo(this.getTextfieldapodoconfigurarperfil().getValue());
-		this.identificado.setEmail(this.getTextfieldemailconfigurarperfil().getValue());;
-		this.identificado.setContrasena(this.getPasswordfieldcontrasenaconfigurarperfil().getValue());
-		this.identificado.setUrl_foto_perfil(this.getTextfieldurlimagenconfigurarperfil().getValue());
-		if (this.getLabelntarjetaconfigurarperfil().isVisible())
-			((basededatos.Usuario_suscrito) this.identificado).setNum_tarjeta(this.getTextfieldntarjetaconfigurarperfil().getValue());
+		int id = this.identificado.getId();
+		String nombre = this.getTextfieldnombreconfigurarperfil().getValue();
+		String nick = this.getTextfieldapodoconfigurarperfil().getValue();
+		String email = this.getTextfieldemailconfigurarperfil().getValue();
+		String contrasena = this.getPasswordfieldcontrasenaconfigurarperfil().getValue();
+		String url_foto_perfil = this.getTextfieldurlimagenconfigurarperfil().getValue();
+		String num_tarjeta = this.getTextfieldntarjetaconfigurarperfil().getValue();
+		this.iidentificado.Guardar_cambios(id, nombre, nick, email, contrasena, url_foto_perfil, num_tarjeta);
 		this._identificado.Configurar_perfil(); // Refrescar pagina
 	}
 }

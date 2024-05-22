@@ -16,6 +16,14 @@ import com.vaadin.flow.component.html.Label;
 @JsModule("./src/vista-listadonoticiasportada_item.ts")
 public class VistaListadonoticiasportada_item extends LitTemplate {
 
+	public Element getLayouttitulonoticiaordenarportada() {
+		return layouttitulonoticiaordenarportada;
+	}
+
+	public void setLayouttitulonoticiaordenarportada(Element layouttitulonoticiaordenarportada) {
+		this.layouttitulonoticiaordenarportada = layouttitulonoticiaordenarportada;
+	}
+
 	public Button getButtonimagenlistadonoticiasportada() {
 		return buttonimagenlistadonoticiasportada;
 	}
@@ -38,14 +46,6 @@ public class VistaListadonoticiasportada_item extends LitTemplate {
 
 	public void setTitulolistadonoticiasportada(Button titulolistadonoticiasportada) {
 		this.titulolistadonoticiasportada = titulolistadonoticiasportada;
-	}
-
-	public ComboBox<String> getComboboxtitulolistadonoticiasportada() {
-		return comboboxtitulolistadonoticiasportada;
-	}
-
-	public void setComboboxtitulolistadonoticiasportada(ComboBox<String> comboboxtitulolistadonoticiasportada) {
-		this.comboboxtitulolistadonoticiasportada = comboboxtitulolistadonoticiasportada;
 	}
 
 	public HorizontalLayout getLayoutimagenlistadonoticiasportada() {
@@ -117,8 +117,6 @@ public class VistaListadonoticiasportada_item extends LitTemplate {
 	private Element layouttitulolistadonoticiasportada;
 	@Id("Titulolistadonoticiasportada")
 	private Button titulolistadonoticiasportada;
-	@Id("Comboboxtitulolistadonoticiasportada")
-	private ComboBox<String> comboboxtitulolistadonoticiasportada;
 	@Id("Layoutimagenlistadonoticiasportada")
 	private HorizontalLayout layoutimagenlistadonoticiasportada;
 	@Id("Imagenlistadonoticiasportada")
@@ -137,6 +135,8 @@ public class VistaListadonoticiasportada_item extends LitTemplate {
 	private TextArea textarearesumenlistadonoticiasportada;
 	@Id("Buttonimagenlistadonoticiasportada")
 	private Button buttonimagenlistadonoticiasportada;
+	@Id("Layouttitulonoticiaordenarportada")
+	private Element layouttitulonoticiaordenarportada;
 
 	public VistaListadonoticiasportada_item() {
         // You can initialise any data required for the connected UI components here.

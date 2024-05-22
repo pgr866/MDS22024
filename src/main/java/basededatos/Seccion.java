@@ -73,9 +73,6 @@ public class Seccion implements Serializable {
 	@Column(name="Titulo_seccion", nullable=true, length=255)	
 	private String titulo_seccion;
 	
-	@Column(name="EsEliminada", nullable=false, length=1)	
-	private boolean esEliminada;
-	
 	@ManyToMany(targetEntity=basededatos.Noticia.class)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
 	@JoinTable(name="Noticia_Seccion", joinColumns={ @JoinColumn(name="SeccionId_seccion") }, inverseJoinColumns={ @JoinColumn(name="NoticiaId_noticia") })	
@@ -100,14 +97,6 @@ public class Seccion implements Serializable {
 	
 	public String getTitulo_seccion() {
 		return titulo_seccion;
-	}
-	
-	public void setEsEliminada(boolean value) {
-		this.esEliminada = value;
-	}
-	
-	public boolean getEsEliminada() {
-		return esEliminada;
 	}
 	
 	private void setORM_Aparece_en(java.util.Set value) {

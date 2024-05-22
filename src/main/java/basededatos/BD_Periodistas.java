@@ -8,15 +8,15 @@ public class BD_Periodistas {
 	public BDPrincipal _bd_main_periodista;
 	public Vector<Periodista> _contiene_periodistas = new Vector<Periodista>();
 
-	public Periodista Login(String aEmail, String aContrasena) {
+	public Periodista Login(String aAEmail, String aAContrasena) {
 		throw new UnsupportedOperationException();
 	}
 
-	public void Guardar_cambios(int aId, String aNombre, String aNick, String aEmail, String aContrasena, String aUrl_foto_perfil) {
+	public void Guardar_cambios(int aAId, String aANombre, String aANick, String aAEmail, String aAContrasena, String aAUrl_foto_perfil) {
 		throw new UnsupportedOperationException();
 	}
 
-	public Periodista Alta_periodistas(String aNombre, String aApellidos, String aNick, String aContrasena, String aDni, String aEmail, int aTelefono, String aFecha_nacimiento, int aId_editor) {
+	public Periodista Alta_periodista(String aANombre, String aAApellidos, String aANick, String aAContrasena, String aADni, String aAEmail, int aATelefono, String aAFecha_nacimiento, int aAId_editor) {
 		throw new UnsupportedOperationException();
 	}
 
@@ -24,7 +24,7 @@ public class BD_Periodistas {
 		throw new UnsupportedOperationException();
 	}
 
-	public void Baja_Periodista(String aNick, int aId_editor) {
+	public void Baja_Periodista(String aANick, int aAId_editor) {
 		throw new UnsupportedOperationException();
 	}
 }

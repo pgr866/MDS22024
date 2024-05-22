@@ -8,12 +8,45 @@ import com.vaadin.flow.component.template.Id;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.html.Image;
+import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.textfield.TextArea;
 
 @Tag("vista-paginanoticia")
 @JsModule("./src/vista-paginanoticia.ts")
 public class VistaPaginanoticia extends LitTemplate {
 
-    
+	public TextArea getTextareacomentarioseccioncomentarios() {
+		return textareacomentarioseccioncomentarios;
+	}
+
+	public void setTextareacomentarioseccioncomentarios(TextArea textareacomentarioseccioncomentarios) {
+		this.textareacomentarioseccioncomentarios = textareacomentarioseccioncomentarios;
+	}
+
+	public Label getLabelseccioncomentarios() {
+		return labelseccioncomentarios;
+	}
+
+	public void setLabelseccioncomentarios(Label labelseccioncomentarios) {
+		this.labelseccioncomentarios = labelseccioncomentarios;
+	}
+
+	public HorizontalLayout getLayoutcomentarioseccioncomentarios() {
+		return layoutcomentarioseccioncomentarios;
+	}
+
+	public void setLayoutcomentarioseccioncomentarios(HorizontalLayout layoutcomentarioseccioncomentarios) {
+		this.layoutcomentarioseccioncomentarios = layoutcomentarioseccioncomentarios;
+	}
+
+	public Button getBotonanadircomentarioseccioncomentarios() {
+		return botonanadircomentarioseccioncomentarios;
+	}
+
+	public void setBotonanadircomentarioseccioncomentarios(Button botonanadircomentarioseccioncomentarios) {
+		this.botonanadircomentarioseccioncomentarios = botonanadircomentarioseccioncomentarios;
+	}
+	
 	public Element getLayoutcontenedornoticiapaginanoticia() {
 		return layoutcontenedornoticiapaginanoticia;
 	}
@@ -135,6 +168,14 @@ public class VistaPaginanoticia extends LitTemplate {
 	private HorizontalLayout mostrarnoticiaresumidayextendidapaginanoticia;
 	@Id("Layoutseccioncomentariospaginanoticia")
 	private Element layoutseccioncomentariospaginanoticia;
+	@Id("Labelseccioncomentarios")
+	private Label labelseccioncomentarios;
+	@Id("Layoutcomentarioseccioncomentarios")
+	private HorizontalLayout layoutcomentarioseccioncomentarios;
+	@Id("Botonanadircomentarioseccioncomentarios")
+	private Button botonanadircomentarioseccioncomentarios;
+	@Id("Textareacomentarioseccioncomentarios")
+	private TextArea textareacomentarioseccioncomentarios;
 
 	public VistaPaginanoticia() {
         // You can initialise any data required for the connected UI components here.

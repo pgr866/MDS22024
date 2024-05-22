@@ -1,8 +1,12 @@
 package interfaz;
 
+import base_de_datos.BDPrincipal;
+import base_de_datos.iUsuario_Suscrito;
+
 public class Configurar_perfil_Usuario_suscrito extends Configurar_perfil {
 
 	//	private event _eliminar_cuenta;
+	iUsuario_Suscrito iusuario_suscrito = new BDPrincipal();
 	public Usuario_Suscrito _usuario_Suscrito;
 	
 	public Configurar_perfil_Usuario_suscrito(Usuario_Suscrito _usuario_Suscrito, basededatos.Usuario_suscrito usuario_suscrito) {
@@ -15,18 +19,9 @@ public class Configurar_perfil_Usuario_suscrito extends Configurar_perfil {
 	}
 
 	public void Eliminar_cuenta() {
-		((basededatos.Usuario_suscrito) this.identificado).setEsEliminado(true);
-		((basededatos.Usuario_suscrito) this.identificado).setApellidos("");
-		((basededatos.Usuario_suscrito) this.identificado).setContrasena("");
-		((basededatos.Usuario_suscrito) this.identificado).setDni("");
-		((basededatos.Usuario_suscrito) this.identificado).setEmail("");
-		((basededatos.Usuario_suscrito) this.identificado).setFecha_nacimiento("");
-		((basededatos.Usuario_suscrito) this.identificado).setNombre("");
-		((basededatos.Usuario_suscrito) this.identificado).setNum_tarjeta("");
-		((basededatos.Usuario_suscrito) this.identificado).setTelefono(-1);
-		((basededatos.Usuario_suscrito) this.identificado).setUrl_foto_perfil("");
-		this._usuario_Suscrito.mainview.removeAll();
-		this._usuario_Suscrito.mainview.add(this._usuario_Suscrito.mainview._usuario_no_registrado);
-		this._usuario_Suscrito.mainview._usuario_suscrito = null;
+		iusuario_suscrito.Eliminar_cuenta(this._identificado.identificado.getId());
+		this._identificado.mainview.removeAll();
+		this._identificado.mainview.add(this._identificado.mainview._usuario_no_registrado);
+		this._identificado.mainview._usuario_suscrito = null;
 	}
 }

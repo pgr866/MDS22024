@@ -1,6 +1,7 @@
 package interfaz;
 
-import org.orm.PersistentException;
+import base_de_datos.BDPrincipal;
+import base_de_datos.iPeriodista;
 
 public class Crear_noticias extends vistas.VistaCrearnoticias {
 
@@ -17,6 +18,7 @@ public class Crear_noticias extends vistas.VistaCrearnoticias {
 //	private TextArea _introducir_fecha;
 //	private Label _lugar;
 //	private TextArea _introducir_lugar;
+	iPeriodista iperiodista = new BDPrincipal();
 	public Periodista _periodista;
 	
 	public Crear_noticias(Periodista _periodista) {
@@ -25,32 +27,14 @@ public class Crear_noticias extends vistas.VistaCrearnoticias {
 	}
 
 	public void Crear_noticia() {
-		basededatos.Noticia nueva_noticia = new basededatos.Noticia();
-		nueva_noticia.setTitulo(this.getTextfieldtitulocrearnoticias().getValue());
-		nueva_noticia.setUrl_imagen_noticia(this.getTextfieldurlimagenescrearnoticias().getValue());
-		nueva_noticia.setContenido(this.getTextareacontenidocrearnoticias().getValue());
-		nueva_noticia.setFecha(this.getTextfieldfechacrearnoticias().getValue());
-		nueva_noticia.setLugar(this.getTextfiedlugarcrearnoticias().getValue());
-		nueva_noticia.setCrea((basededatos.Periodista) this._periodista.identificado);
-		nueva_noticia.setPublicada(false);
-		nueva_noticia.setValoraciones_positivas(0);
-		nueva_noticia.setValoraciones_negativas(0);
-		
-		String titulo_tematica = this.getTextfieldtematicacrearnoticias().getValue().toLowerCase();
-		basededatos.Tematica tematica;
-		try {
-			basededatos.Tematica[] consulta = basededatos.TematicaDAO.listTematicaByQuery(
-					"Titulo_tematica = '" + titulo_tematica + "'", "");
-			if (consulta.length > 0) {
-				tematica = consulta[0];
-			} else {
-				tematica = new basededatos.Tematica();
-				tematica.setTitulo_tematica(titulo_tematica);
-			}
-			nueva_noticia.pertenece_a.add(tematica);
-			this._periodista.Crear_noticias(); // Refrescar pagina
-		} catch (PersistentException e) {
-			e.printStackTrace();
-		}
+		String titulo = this.getTextfieldtitulocrearnoticias().getValue();
+		String url_imagen_noticia = this.getTextfieldurlimagenescrearnoticias().getValue();
+		String contenido = this.getTextareacontenidocrearnoticias().getValue();
+		String fecha = this.getTextfieldfechacrearnoticias().getValue();
+		String lugar = this.getTextfiedlugarcrearnoticias().getValue();
+		String tematicas = this.getTextfieldtematicacrearnoticias().getValue().toLowerCase();
+		int id_periodista = this._periodista.identificado.getId(); 
+		iperiodista.Crear_noticia(titulo, url_imagen_noticia, contenido, fecha, lugar, tematicas, id_periodista);
+		this._periodista.Crear_noticias(); // Refrescar pagina
 	}
 }

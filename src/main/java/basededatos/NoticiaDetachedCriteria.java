@@ -34,9 +34,9 @@ public class NoticiaDetachedCriteria extends AbstractORMDetachedCriteria {
 	public final StringExpression lugar;
 	public final StringExpression resumen;
 	public final StringExpression contenido;
-	public final BooleanExpression publicada;
 	public final IntegerExpression valoraciones_positivas;
 	public final IntegerExpression valoraciones_negativas;
+	public final IntegerExpression posicion_portada;
 	public final CollectionExpression valora_positiva;
 	public final CollectionExpression pertenece_a;
 	public final CollectionExpression valora_negativa;
@@ -60,9 +60,9 @@ public class NoticiaDetachedCriteria extends AbstractORMDetachedCriteria {
 		lugar = new StringExpression("lugar", this.getDetachedCriteria());
 		resumen = new StringExpression("resumen", this.getDetachedCriteria());
 		contenido = new StringExpression("contenido", this.getDetachedCriteria());
-		publicada = new BooleanExpression("publicada", this.getDetachedCriteria());
 		valoraciones_positivas = new IntegerExpression("valoraciones_positivas", this.getDetachedCriteria());
 		valoraciones_negativas = new IntegerExpression("valoraciones_negativas", this.getDetachedCriteria());
+		posicion_portada = new IntegerExpression("posicion_portada", this.getDetachedCriteria());
 		valora_positiva = new CollectionExpression("ORM_valora_positiva", this.getDetachedCriteria());
 		pertenece_a = new CollectionExpression("ORM_pertenece_a", this.getDetachedCriteria());
 		valora_negativa = new CollectionExpression("ORM_valora_negativa", this.getDetachedCriteria());
@@ -87,9 +87,9 @@ public class NoticiaDetachedCriteria extends AbstractORMDetachedCriteria {
 		lugar = new StringExpression("lugar", this.getDetachedCriteria());
 		resumen = new StringExpression("resumen", this.getDetachedCriteria());
 		contenido = new StringExpression("contenido", this.getDetachedCriteria());
-		publicada = new BooleanExpression("publicada", this.getDetachedCriteria());
 		valoraciones_positivas = new IntegerExpression("valoraciones_positivas", this.getDetachedCriteria());
 		valoraciones_negativas = new IntegerExpression("valoraciones_negativas", this.getDetachedCriteria());
+		posicion_portada = new IntegerExpression("posicion_portada", this.getDetachedCriteria());
 		valora_positiva = new CollectionExpression("ORM_valora_positiva", this.getDetachedCriteria());
 		pertenece_a = new CollectionExpression("ORM_pertenece_a", this.getDetachedCriteria());
 		valora_negativa = new CollectionExpression("ORM_valora_negativa", this.getDetachedCriteria());

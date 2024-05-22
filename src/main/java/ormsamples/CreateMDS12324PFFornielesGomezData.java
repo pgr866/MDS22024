@@ -13,13 +13,13 @@ public class CreateMDS12324PFFornielesGomezData {
 			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : ordena
 			basededatos.PortadaDAO.save(lbasededatosPortada);
 			basededatos.Seccion lbasededatosSeccion = basededatos.SeccionDAO.createSeccion();
-			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : aparece_en, esEliminada, crea_seccion
+			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : aparece_en, crea_seccion
 			basededatos.SeccionDAO.save(lbasededatosSeccion);
 			basededatos.Tematica lbasededatosTematica = basededatos.TematicaDAO.createTematica();
 			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : contiene
 			basededatos.TematicaDAO.save(lbasededatosTematica);
 			basededatos.Noticia lbasededatosNoticia = basededatos.NoticiaDAO.createNoticia();
-			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : pertenece_a_noticia, seccion_contiene_noticias, valora_negativa, pertenece_a, valora_positiva, valoraciones_negativas, valoraciones_positivas, publicada, crea
+			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : pertenece_a_noticia, seccion_contiene_noticias, valora_negativa, pertenece_a, valora_positiva, posicion_portada, valoraciones_negativas, valoraciones_positivas, crea
 			basededatos.NoticiaDAO.save(lbasededatosNoticia);
 			basededatos.Comentario lbasededatosComentario = basededatos.ComentarioDAO.createComentario();
 			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : valora_negativamente, valora_positivamente, valoraciones_negativas, valoraciones_positivas, noticia_contiene_comentarios, escribe

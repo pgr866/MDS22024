@@ -25,7 +25,6 @@ public class SeccionDetachedCriteria extends AbstractORMDetachedCriteria {
 	public final IntegerExpression crea_seccionId;
 	public final AssociationExpression crea_seccion;
 	public final StringExpression titulo_seccion;
-	public final BooleanExpression esEliminada;
 	public final CollectionExpression aparece_en;
 	
 	public SeccionDetachedCriteria() {
@@ -36,7 +35,6 @@ public class SeccionDetachedCriteria extends AbstractORMDetachedCriteria {
 		crea_seccionId = new IntegerExpression("crea_seccion.", this.getDetachedCriteria());
 		crea_seccion = new AssociationExpression("crea_seccion", this.getDetachedCriteria());
 		titulo_seccion = new StringExpression("titulo_seccion", this.getDetachedCriteria());
-		esEliminada = new BooleanExpression("esEliminada", this.getDetachedCriteria());
 		aparece_en = new CollectionExpression("ORM_aparece_en", this.getDetachedCriteria());
 	}
 	
@@ -48,7 +46,6 @@ public class SeccionDetachedCriteria extends AbstractORMDetachedCriteria {
 		crea_seccionId = new IntegerExpression("crea_seccion.", this.getDetachedCriteria());
 		crea_seccion = new AssociationExpression("crea_seccion", this.getDetachedCriteria());
 		titulo_seccion = new StringExpression("titulo_seccion", this.getDetachedCriteria());
-		esEliminada = new BooleanExpression("esEliminada", this.getDetachedCriteria());
 		aparece_en = new CollectionExpression("ORM_aparece_en", this.getDetachedCriteria());
 	}
 	

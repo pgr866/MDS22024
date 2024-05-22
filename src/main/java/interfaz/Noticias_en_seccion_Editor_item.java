@@ -29,7 +29,7 @@ public class Noticias_en_seccion_Editor_item extends Noticias_en_seccion_Identif
 	
 	public void Pagina_noticia_Editor() {
 		this._noticias_en_seccion_Identificado._explorar_secciones_Identificado._identificado.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).removeAll();
-		this._pagina_noticia_Identificado = new Pagina_noticia_Identificado(this, noticia);
+		this._pagina_noticia_Identificado = new Pagina_noticia_Editor(this, noticia);
 		this._noticias_en_seccion_Identificado._explorar_secciones_Identificado._identificado.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).add(_pagina_noticia_Identificado);
 	}
 }

@@ -120,14 +120,14 @@ public class Noticia implements Serializable {
 	@Column(name="Contenido", nullable=true, length=255)	
 	private String contenido;
 	
-	@Column(name="Publicada", nullable=false, length=1)	
-	private boolean publicada;
-	
 	@Column(name="Valoraciones_positivas", nullable=false, length=10)	
 	private int valoraciones_positivas;
 	
 	@Column(name="Valoraciones_negativas", nullable=false, length=10)	
 	private int valoraciones_negativas;
+	
+	@Column(name="Posicion_portada", nullable=false, length=10)	
+	private int posicion_portada;
 	
 	@ManyToMany(targetEntity=basededatos.Identificado.class)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
@@ -217,14 +217,6 @@ public class Noticia implements Serializable {
 		return contenido;
 	}
 	
-	public void setPublicada(boolean value) {
-		this.publicada = value;
-	}
-	
-	public boolean getPublicada() {
-		return publicada;
-	}
-	
 	public void setValoraciones_positivas(int value) {
 		this.valoraciones_positivas = value;
 	}
@@ -239,6 +231,14 @@ public class Noticia implements Serializable {
 	
 	public int getValoraciones_negativas() {
 		return valoraciones_negativas;
+	}
+	
+	public void setPosicion_portada(int value) {
+		this.posicion_portada = value;
+	}
+	
+	public int getPosicion_portada() {
+		return posicion_portada;
 	}
 	
 	public void setPublica(basededatos.Editor value) {

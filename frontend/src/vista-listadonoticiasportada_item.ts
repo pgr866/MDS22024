@@ -2,7 +2,6 @@ import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-text-field/src/vaadin-text-area.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
-import '@vaadin/vaadin-combo-box/src/vaadin-combo-box.js';
 import '@vaadin/vaadin-button/src/vaadin-button.js';
 
 @customElement('vista-listadonoticiasportada_item')
@@ -24,7 +23,9 @@ export class VistaListadonoticiasportada_item extends LitElement {
    <vaadin-button id="Titulolistadonoticiasportada" style="flex-shrink: 0; width: 100%; height: 100%; background-color: #FFFFFF;">
      Título Noticia 
    </vaadin-button>
-   <vaadin-combo-box id="Comboboxtitulolistadonoticiasportada" style="width: 100%; flex-shrink: 1; height: 100%;" .items="${['Noticia1', 'Noticia2']}"></vaadin-combo-box>
+   <vaadin-vertical-layout style="flex-shrink: 0; width: 100%;">
+    <vaadin-vertical-layout id="Layouttitulonoticiaordenarportada" style="width: 100%; height: 100%; padding: 0; flex-shrink: 0; position: relative;"></vaadin-vertical-layout>
+   </vaadin-vertical-layout>
   </vaadin-vertical-layout>
  </vaadin-horizontal-layout>
  <vaadin-horizontal-layout id="Layoutimagenlistadonoticiasportada" style="width: 100%; flex-shrink: 0; flex-direction: column; display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1;">

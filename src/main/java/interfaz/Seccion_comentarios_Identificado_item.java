@@ -1,11 +1,15 @@
 package interfaz;
 
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import base_de_datos.BDPrincipal;
+import base_de_datos.iIdentificado;
+
 public class Seccion_comentarios_Identificado_item extends Seccion_comentarios_item {
 	
 //	private event _valorar_comentario;
 //	private Button _me_gusta;
 //	private Button _no_me_gusta;
-	public Seccion_comentarios_Identificado _seccion_comentarios_Identificado;
+	iIdentificado iidentificado = new BDPrincipal();
 
 	public Seccion_comentarios_Identificado_item(Seccion_comentarios _seccion_comentarios, basededatos.Identificado identificado,
 			basededatos.Comentario comentario) {
@@ -15,28 +19,10 @@ public class Seccion_comentarios_Identificado_item extends Seccion_comentarios_i
 	}
 	
 	public void Valorar_comentario(boolean positiva) {
-		int mg = this.comentario.getValoraciones_positivas();
-		int nmg = this.comentario.getValoraciones_negativas();
-		if (positiva) {
-			if (this.comentario.valora_positivamente.contains(this.identificado)) {
-				this.comentario.valora_positivamente.remove(this.identificado);
-				mg--;
-			} else {
-				this.comentario.valora_positivamente.add(this.identificado);
-				mg++;
-			}
-			this.comentario.setValoraciones_positivas(mg);
-			this._mostrar_valoracion_comentario.getNumeromegustamostrarvaloracioncomentario().setText(String.valueOf(mg));
-		} else {
-			if (this.comentario.valora_negativamente.contains(this.identificado)) {
-				this.comentario.valora_negativamente.remove(this.identificado);
-				nmg--;
-			} else {
-				this.comentario.valora_negativamente.add(this.identificado);
-				nmg++;
-			}
-			this.comentario.setValoraciones_negativas(nmg);
-			this._mostrar_valoracion_comentario.getNumeronomegustamostrarvaloracioncomentario().setText(String.valueOf(nmg));
+		int id_comentario= this.comentario.getId_comentario();
+		int id_identificado = this.identificado.getId();
+		iidentificado.Valorar_comentario(id_comentario, id_identificado, positiva);
+		((Seccion_comentarios_Identificado) this._seccion_comentarios)._pagina_noticia_Identificado.getLayoutseccioncomentariospaginanoticia().as(VerticalLayout.class).add(new Seccion_comentarios_Identificado(((Seccion_comentarios_Identificado) this._seccion_comentarios)._pagina_noticia_Identificado)); // Refrescar pagina
+		((Seccion_comentarios_Identificado) this._seccion_comentarios)._pagina_noticia_Identificado.Seccion_comentarios_Identificado();
 		}
 	}
-}

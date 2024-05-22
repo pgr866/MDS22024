@@ -1,5 +1,10 @@
 package interfaz;
 
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+
+import base_de_datos.BDPrincipal;
+import base_de_datos.iEditor;
+
 public class Revisar_noticias extends vistas.VistaRevisarnoticias {
 	
 //	private event _eliminar_noticia;
@@ -12,11 +17,15 @@ public class Revisar_noticias extends vistas.VistaRevisarnoticias {
 //	private Label _fecha;
 //	private Label _lugar;
 //	private TextArea _resumen;
+	iEditor ieditor = new BDPrincipal();
 	public Noticias_a_revisar_item _noticias_a_revisar;
+	public Secciones _secciones;
 	basededatos.Noticia noticia;
 	
 	public Revisar_noticias(Noticias_a_revisar_item _noticias_a_revisar, basededatos.Noticia noticia) {
 		super();
+		this._secciones = new Secciones(this);
+		Secciones();
 		this._noticias_a_revisar = _noticias_a_revisar;
 		this.getTextfieldtitulonoticiarevisarnoticias().setValue(_noticias_a_revisar.getItemnoticiasarevisar().getText());
 		this.getEliminarrevisarnoticia().addClickListener(event->Eliminar_noticia());
@@ -28,16 +37,24 @@ public class Revisar_noticias extends vistas.VistaRevisarnoticias {
 	    this.getTextfieldfecharevisarnoticias().setValue(noticia.getFecha());
 	    this.getTextfieldfecharevisarnoticias().setValue(noticia.getLugar());
 	}
+	
+	public void Secciones() {
+		this.getLayoutvistaseccionessrevisarnoticias().add(_secciones);
+	}
 
 	public void Eliminar_noticia() {
-		this.noticia.setElimina_noticia((basededatos.Editor) this._noticias_a_revisar._noticias_a_revisar._editor.identificado);
+		int id_noticia = this.noticia.getId_noticia();
+		int id_editor = this._noticias_a_revisar._noticias_a_revisar._editor.identificado.getId();
+		ieditor.Eliminar_noticia(id_noticia, id_editor);
 		this._noticias_a_revisar._noticias_a_revisar._editor.Listado_noticias_portada_Editor(); // Refrescar pagina
 	}
 
 	public void Publicar_noticia() {
-		this.noticia.setResumen(getTextfieldresumenrevisarnoticias().getValue());
-		this.noticia.setPublicada(true);
-		this.noticia.setPublica((basededatos.Editor) this._noticias_a_revisar._noticias_a_revisar._editor.identificado);
+		String nombre_seccion = (String) this._secciones.getDesplegablesecciones().getValue();
+		String resumen = this.getTextfieldresumenrevisarnoticias().getValue();
+		int id_noticia = this.noticia.getId_noticia();
+		int id_editor = this._noticias_a_revisar._noticias_a_revisar._editor.identificado.getId();
+		ieditor.Publicar_noticia(nombre_seccion, resumen, id_noticia, id_editor);
 		this._noticias_a_revisar._noticias_a_revisar._editor.Listado_noticias_portada_Editor(); // Refrescar pagina
 	}
 

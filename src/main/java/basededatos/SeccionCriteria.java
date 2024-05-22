@@ -25,7 +25,6 @@ public class SeccionCriteria extends AbstractORMCriteria {
 	public final IntegerExpression crea_seccionId;
 	public final AssociationExpression crea_seccion;
 	public final StringExpression titulo_seccion;
-	public final BooleanExpression esEliminada;
 	public final CollectionExpression aparece_en;
 	
 	public SeccionCriteria(Criteria criteria) {
@@ -36,7 +35,6 @@ public class SeccionCriteria extends AbstractORMCriteria {
 		crea_seccionId = new IntegerExpression("crea_seccion.", this);
 		crea_seccion = new AssociationExpression("crea_seccion", this);
 		titulo_seccion = new StringExpression("titulo_seccion", this);
-		esEliminada = new BooleanExpression("esEliminada", this);
 		aparece_en = new CollectionExpression("ORM_aparece_en", this);
 	}
 	

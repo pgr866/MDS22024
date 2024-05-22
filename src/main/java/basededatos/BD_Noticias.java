@@ -8,11 +8,11 @@ public class BD_Noticias {
 	public BDPrincipal _bd_main_noticia;
 	public Vector<Noticia> _contiene_noticias = new Vector<Noticia>();
 
-	public Noticia Crear_noticia(String aTitulo, String aUrl_imagen, String aContenido, String aFecha, String aLugar, String aTematicas, int aId_periodista) {
+	public Noticia Crear_noticia(String aATitulo, String aAUrl_imagen, String aAContenido, String aAFecha, String aALugar, String aATematicas, int aAId_periodista) {
 		throw new UnsupportedOperationException();
 	}
 
-	public void Valorar_noticia(int aId_noticia, int aId_identificado, boolean aPositiva) {
+	public void Valorar_noticia(int aAId_noticia, int aAId_identificado, boolean aAPositiva) {
 		throw new UnsupportedOperationException();
 	}
 
@@ -28,11 +28,15 @@ public class BD_Noticias {
 		throw new UnsupportedOperationException();
 	}
 
-	public void Publicar_noticia(String aNombre_seccion, String aContenido, int aId_noticia, int aId_editor) {
+	public void Publicar_noticia(String aANombre_seccion, String aAContenido, int aAId_noticia, int aAId_editor) {
 		throw new UnsupportedOperationException();
 	}
 
-	public void Eliminar_noticia(int aId_noticia, int aId_editor) {
+	public void Eliminar_noticia(int aAId_noticia, int aAId_editor) {
+		throw new UnsupportedOperationException();
+	}
+
+	public void Cambiar_orden_noticias_portada(String aTitulo_noticia, int aPosicion_portada) {
 		throw new UnsupportedOperationException();
 	}
 }
