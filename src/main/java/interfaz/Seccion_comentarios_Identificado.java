@@ -7,7 +7,7 @@ public class Seccion_comentarios_Identificado extends Seccion_comentarios {
 	public Pagina_noticia_Identificado _pagina_noticia_Identificado;
 	
 	public Seccion_comentarios_Identificado(Pagina_noticia_Identificado _pagina_noticia_Identificado) {
-		super();
+		super(_pagina_noticia_Identificado);
 		this._pagina_noticia_Identificado = _pagina_noticia_Identificado;
 	}
 }

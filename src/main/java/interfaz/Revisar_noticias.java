@@ -19,12 +19,12 @@ public class Revisar_noticias extends vistas.VistaRevisarnoticias {
 //	private TextArea _resumen;
 	iEditor ieditor = new BDPrincipal();
 	public Noticias_a_revisar_item _noticias_a_revisar;
-	public Secciones _secciones;
+	public Secciones_Identificado _secciones_Identificado;
 	basededatos.Noticia noticia;
 	
 	public Revisar_noticias(Noticias_a_revisar_item _noticias_a_revisar, basededatos.Noticia noticia) {
 		super();
-		this._secciones = new Secciones(this);
+		this._secciones_Identificado = new Secciones_Identificado(this);
 		Secciones();
 		this._noticias_a_revisar = _noticias_a_revisar;
 		this.getTextfieldtitulonoticiarevisarnoticias().setValue(_noticias_a_revisar.getItemnoticiasarevisar().getText());
@@ -39,7 +39,7 @@ public class Revisar_noticias extends vistas.VistaRevisarnoticias {
 	}
 	
 	public void Secciones() {
-		this.getLayoutvistaseccionessrevisarnoticias().add(_secciones);
+		this.getLayoutvistaseccionessrevisarnoticias().add(_secciones_Identificado);
 	}
 
 	public void Eliminar_noticia() {
@@ -50,7 +50,7 @@ public class Revisar_noticias extends vistas.VistaRevisarnoticias {
 	}
 
 	public void Publicar_noticia() {
-		String nombre_seccion = (String) this._secciones.getDesplegablesecciones().getValue();
+		String nombre_seccion = (String) this._secciones_Identificado.getDesplegableseccionesidentificado().getValue();
 		String resumen = this.getTextfieldresumenrevisarnoticias().getValue();
 		int id_noticia = this.noticia.getId_noticia();
 		int id_editor = this._noticias_a_revisar._noticias_a_revisar._editor.identificado.getId();

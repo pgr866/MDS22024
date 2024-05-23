@@ -44,7 +44,7 @@ public class Pagina_noticia_Editor extends Pagina_noticia_Identificado {
 		int id_editor = this.identificado.getId();
 		this.ieditor.Eliminar_noticia(id_noticia, id_editor);
 		if (this._listado_noticias_portada_Editor != null) // Refrescar pagina
-			((Listado_noticias_portada_Editor) this._listado_noticias_portada_Editor._listado_noticias_portada)._editor.Listado_noticias_portada_Editor();
+			((Listado_noticias_portada_Editor) this._listado_noticias_portada_Editor._listado_noticias_portada_Identificado)._editor.Listado_noticias_portada_Editor();
 		else if (this._listado_noticias_busqueda_Identificado != null)
 			((Listado_noticias_busqueda_Editor) this._listado_noticias_busqueda_Identificado._listado_noticias_busqueda_Identificado)._editor.Listado_noticias_busqueda_Editor();
 		else if (this._noticias_en_seccion_Identificado != null)

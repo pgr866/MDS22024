@@ -3,8 +3,8 @@ import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 import '@vaadin/vaadin-select/src/vaadin-select.js';
 import '@vaadin/vaadin-list-box/src/vaadin-list-box.js';
 
-@customElement('vista-secciones')
-export class VistaSecciones extends LitElement {
+@customElement('vista-seccionesidentificado')
+export class VistaSeccionesidentificado extends LitElement {
   static get styles() {
     return css`
       :host {
@@ -16,10 +16,10 @@ export class VistaSecciones extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout theme="" style="position: absolute; width: 100%; height: 100%;" id="Layoutsecciones">
- <vaadin-select style="width: 100%; flex-shrink: 0; flex-grow: 0; height: 100%;" id="Desplegablesecciones" placeholder="Selecciona una sección" dir="Selectsecciones">
+<vaadin-vertical-layout theme="" style="position: absolute; width: 100%; height: 100%;" id="Layoutseccionesidentificado">
+ <vaadin-select style="width: 100%; flex-shrink: 0; flex-grow: 0; height: 100%;" id="Desplegableseccionesidentificado" placeholder="Selecciona una sección" dir="Selectsecciones">
   <template>
-   <vaadin-list-box selected="0" id="Listboxsecciones" value=""></vaadin-list-box>
+   <vaadin-list-box selected="0" id="Listboxseccionesidentificado" value=""></vaadin-list-box>
   </template>
  </vaadin-select>
 </vaadin-vertical-layout>

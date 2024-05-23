@@ -18,7 +18,7 @@ public class Seccion_comentarios_Editor_item extends Seccion_comentarios_Identif
 
 	public void Eliminar_comentario() {
 		int id_comentario = this.comentario.getId_comentario();
-		int id_editor = this.identificado.getId();
+		int id_editor = this.comentario.getEscribe().getId();
 		this.ieditor.Eliminar_comentario(id_comentario, id_editor);
 		((Seccion_comentarios_Editor) this._seccion_comentarios)._pagina_noticia_Editor._seccion_comentarios_Editor = new Seccion_comentarios_Editor(((Seccion_comentarios_Editor) this._seccion_comentarios)._pagina_noticia_Editor); // Refrescar pagina
 		((Seccion_comentarios_Editor) this._seccion_comentarios)._pagina_noticia_Editor.Seccion_comentarios_Editor();

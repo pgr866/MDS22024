@@ -1,7 +1,7 @@
 import { LitElement, html, css, customElement } from 'lit-element';
 
-@customElement('vista-secciones_item')
-export class VistaSecciones_item extends LitElement {
+@customElement('vista-seccionesidentificado_item')
+export class VistaSeccionesidentificado_item extends LitElement {
   static get styles() {
     return css`
       :host {
@@ -13,7 +13,7 @@ export class VistaSecciones_item extends LitElement {
 
   render() {
     return html`
-<vaadin-item selected id="Itemsecciones">
+<vaadin-item selected id="Itemseccionesidentificado">
  nombre_seccion
 </vaadin-item>
 `;

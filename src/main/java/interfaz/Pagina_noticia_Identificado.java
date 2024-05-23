@@ -24,7 +24,7 @@ public class Pagina_noticia_Identificado extends Pagina_Noticia {
 		this._seccion_comentarios_Identificado = new Seccion_comentarios_Identificado(this);
 		Mostrar_noticia_extendida();
 		Seccion_comentarios_Identificado();
-		this.identificado = ((Listado_noticias_portada_Identificado) this._listado_noticias_portada_Identificado._listado_noticias_portada)._identificado.identificado;
+		this.identificado = this._listado_noticias_portada_Identificado._listado_noticias_portada_Identificado._identificado.identificado;
 		this.getBotonanadircomentarioseccioncomentarios().addClickListener(event->Comentar());
 		this._mostrar_valoracion_noticia.getMegustamostrarvaloracionnoticia().addClickListener(event->Valorar_noticia(true));
 		this._mostrar_valoracion_noticia.getNomegustamostrarvaloracionnoticia().addClickListener(event->Valorar_noticia(false));
@@ -99,7 +99,6 @@ public class Pagina_noticia_Identificado extends Pagina_Noticia {
 		int id_identificado = this.identificado.getId();
 		int id_noticia = this.noticia.getId_noticia();
 		String contenido = this.getTextareacomentarioseccioncomentarios().getValue();
-		this.getTextareacomentarioseccioncomentarios().getValue();
 		iidentificado.Comentar(id_identificado, id_noticia, contenido);
 		if (this._listado_noticias_portada_Identificado != null) // Refrescar pagina
 			this._listado_noticias_portada_Identificado.Pagina_noticia_Identificado();

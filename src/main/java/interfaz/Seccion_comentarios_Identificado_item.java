@@ -10,10 +10,12 @@ public class Seccion_comentarios_Identificado_item extends Seccion_comentarios_i
 //	private Button _me_gusta;
 //	private Button _no_me_gusta;
 	iIdentificado iidentificado = new BDPrincipal();
+	basededatos.Identificado identificado;
 
 	public Seccion_comentarios_Identificado_item(Seccion_comentarios _seccion_comentarios, basededatos.Identificado identificado,
 			basededatos.Comentario comentario) {
-		super(_seccion_comentarios, identificado, comentario);
+		super(_seccion_comentarios, comentario);
+		this.identificado = identificado;
 		this._mostrar_valoracion_comentario.getMegustaseccioncomentariositem().addClickListener(event->Valorar_comentario(true));
 		this._mostrar_valoracion_comentario.getNomegustaseccioncomentariositem().addClickListener(event->Valorar_comentario(false));
 	}
