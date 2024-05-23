@@ -29,7 +29,7 @@ public class Registrarse extends vistas.VistaRegistrarse {
 	}
 
 	public void Gestionar_correo() {
-		throw new UnsupportedOperationException();
+		this._gestionar_correo = new Gestionar_correo(this);
 	}
 
 	public void Enviar() {
@@ -75,13 +75,19 @@ public class Registrarse extends vistas.VistaRegistrarse {
         
         if (validos) {
         	basededatos.Usuario_suscrito suscrito = iusuario_no_registrado.Registrarse(email, nombre, apellidos, fecha_nacimiento, nick, dni, num_tarjeta, contrasena);
-    		this._iniciar_Sesion._usuario_no_Registrado.mainview._usuario_suscrito = new Usuario_Suscrito(this._iniciar_Sesion._usuario_no_Registrado.mainview, suscrito);
-    		this._iniciar_Sesion._usuario_no_Registrado.mainview.removeAll();
-    		this._iniciar_Sesion._usuario_no_Registrado.mainview.add(this._iniciar_Sesion._usuario_no_Registrado.mainview._usuario_suscrito);
+        	if (suscrito == null)
+        		this.getLabelerrordatosregistrarse().setText("Correo electrónico / nick ya está en uso");
+        	else {
+        		this._iniciar_Sesion._usuario_no_Registrado.mainview._usuario_suscrito = new Usuario_Suscrito(this._iniciar_Sesion._usuario_no_Registrado.mainview, suscrito);
+        		this._iniciar_Sesion._usuario_no_Registrado.mainview.removeAll();
+        		this._iniciar_Sesion._usuario_no_Registrado.mainview.add(this._iniciar_Sesion._usuario_no_Registrado.mainview._usuario_suscrito);
+        		Gestionar_correo();
+        		Gestionar_pagos();
+        	}
         }
 	}
 
 	public void Gestionar_pagos() {
-		throw new UnsupportedOperationException();
+		this._gestionar_pagos = new Gestionar_pagos(this);
 	}
 }

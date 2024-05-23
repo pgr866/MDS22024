@@ -12,7 +12,7 @@ import basededatos.Seccion;
 import basededatos.Noticia;
 import basededatos.Periodista;
 import basededatos.Usuario_suscrito;
-import interfaz.Editor;
+import basededatos.Editor;
 import interfaz.Gestor_de_correo;
 import interfaz.Gestor_de_pago;
 import interfaz.Gestor_de_publicidad;
@@ -57,17 +57,17 @@ public class BDPrincipal implements iEditor, iGestor_de_correo, iGestor_de_pago,
 	}
 
 	public void Baja_Periodista(String aNick, int aId_editor) {
-		_bd_periodistas.Baja_Periodista(aNick, aId_editor);;
+		_bd_periodistas.Baja_Periodista(aNick, aId_editor);
 	}
 
 	public void Guardar_cambios(int aId, String aNombre, String aNick, String aEmail, String aContrasena, String aUrl_foto_perfil, String aNum_tarjeta) {
-		_bd_usuarios_suscritos.Guardar_cambios(aId, aNombre, aNick, aEmail, aContrasena, aUrl_foto_perfil, aNum_tarjeta);;
-		_bd_periodistas.Guardar_cambios(aId, aNombre, aNick, aEmail, aContrasena, aUrl_foto_perfil);;
-		_bd_editores.Guardar_cambios(aId, aNombre, aNick, aEmail, aContrasena, aUrl_foto_perfil);;
+		_bd_usuarios_suscritos.Guardar_cambios(aId, aNombre, aNick, aEmail, aContrasena, aUrl_foto_perfil, aNum_tarjeta);
+		_bd_periodistas.Guardar_cambios(aId, aNombre, aNick, aEmail, aContrasena, aUrl_foto_perfil);
+		_bd_editores.Guardar_cambios(aId, aNombre, aNick, aEmail, aContrasena, aUrl_foto_perfil);
 	}
 
 	public void Comentar(int aId_identificado, int aId_noticia, String aContenido) {
-		_bd_comentarios.Comentar(aId_identificado, aId_noticia, aContenido);;
+		_bd_comentarios.Comentar(aId_identificado, aId_noticia, aContenido);
 	}
 
 	public void Valorar_comentario(int aId_comentario, int aId_identificado, boolean aPositiva) {
@@ -75,7 +75,7 @@ public class BDPrincipal implements iEditor, iGestor_de_correo, iGestor_de_pago,
 	}
 
 	public void Valorar_noticia(int aId_noticia, int aId_identificado, boolean aPositiva) {
-		_bd_noticias.Valorar_noticia(aId_noticia, aId_identificado, aPositiva);;
+		_bd_noticias.Valorar_noticia(aId_noticia, aId_identificado, aPositiva);
 	}
 
 	public Seccion[] Cargar_secciones() {
@@ -95,7 +95,16 @@ public class BDPrincipal implements iEditor, iGestor_de_correo, iGestor_de_pago,
 	}
 
 	public Identificado Login(String aEmail, String aContrasena) {
-		throw new UnsupportedOperationException();
+		Usuario_suscrito suscrito = _bd_usuarios_suscritos.Login(aEmail, aContrasena);
+		Periodista periodista = _bd_periodistas.Login(aEmail, aContrasena);
+		Editor editor = _bd_editores.Login(aEmail, aContrasena);
+		if (suscrito != null)
+			return suscrito;
+		if (periodista != null)
+			return periodista;
+		if (editor != null)
+			return editor;
+		return null;
 	}
 
 	public Usuario_suscrito Registrarse(String aEmail, String aNombre, String aApellidos, String aFecha_nacimiento, String aNick, String aDni, String aNum_tarjeta, String aContrasena) {

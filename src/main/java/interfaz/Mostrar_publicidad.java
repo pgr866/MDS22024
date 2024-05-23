@@ -1,18 +1,20 @@
 package interfaz;
 
-import java.awt.Desktop;
-import java.net.URI;
+import vistas.VistaMostrarpublicidad;
 
-public class Mostrar_publicidad extends vistas.VistaMostrarpublicidad {
+public class Mostrar_publicidad extends VistaMostrarpublicidad {
 	
 	public Usuario_no_Registrado _usuario_no_Registrado;
 	public Gestionar_publicidad _gestionar_publicidad;
 	
-	public Mostrar_publicidad(Usuario_no_Registrado _usuario_no_Registrado,
-			Gestionar_publicidad _gestionar_publicidad) {
+	public Mostrar_publicidad(Usuario_no_Registrado _usuario_no_Registrado) {
 		super();
 		this._usuario_no_Registrado = _usuario_no_Registrado;
-		this._gestionar_publicidad = _gestionar_publicidad;
+		Gestionar_publicidad();
 //		this.getButtonanunciomostrarpublidad().addClickListener(event->{});
     }
+	
+	public void Gestionar_publicidad() {
+		this._gestionar_publicidad = new Gestionar_publicidad(this);
+	}
 }

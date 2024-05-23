@@ -22,7 +22,7 @@ public class Usuario_no_Registrado extends VistaUsuarionoregistrado {
 	public Usuario_no_Registrado(MainView mainview) {
 		this.mainview = mainview;
 		this._listado_noticias_portada_Usuario_no_registrado = new Listado_noticias_portada_Usuario_no_registrado(this);
-		this._mostrar_publicidad = new Mostrar_publicidad(this, null);
+		this._mostrar_publicidad = new Mostrar_publicidad(this);
 		this._listado_noticias_busqueda_Usuario_no_registrado = new Listado_noticias_busqueda_Usuario_no_registrado(this);
 		Listado_noticias_portada_Usuario_no_registrado();
 		Mostrar_publicidad();
@@ -53,7 +53,7 @@ public class Usuario_no_Registrado extends VistaUsuarionoregistrado {
 
 	public void Mostrar_publicidad() {
 		this.getLayoutanuncioizquierdausuarionoregistrado().as(VerticalLayout.class).add(_mostrar_publicidad);
-		Mostrar_publicidad _mostrar_publicidad2 = new Mostrar_publicidad(this, null);
+		Mostrar_publicidad _mostrar_publicidad2 = new Mostrar_publicidad(this);
 		this.getLayoutanuncioderechausuarionoregistrado().as(VerticalLayout.class).add(_mostrar_publicidad2);
 	}
 
