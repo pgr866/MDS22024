@@ -5,13 +5,13 @@ import basededatos.Noticia;
 
 public interface iIdentificado {
 
-	public void Guardar_cambios(int aAId, String aANombre, String aANick, String aAEmail, String aAContrasena, String aAUrl_foto_perfil, String aANum_tarjeta);
+	public void Guardar_cambios(int aId, String aNombre, String aApellidos, String aNick, String aEmail, String aContrasena, String aUrl_foto_perfil, String aNum_tarjeta);
 
-	public void Comentar(int aAId_identificado, int aAId_noticia, String aAContenido);
+	public void Comentar(int aId_identificado, int aId_noticia, String aContenido);
 
-	public void Valorar_comentario(int aAId_comentario, int aAId_identificado, boolean aAPositiva);
+	public void Valorar_comentario(int aId_comentario, int aId_identificado, boolean aPositiva);
 
-	public void Valorar_noticia(int aAId_noticia, int aAId_identificado, boolean aAPositiva);
+	public void Valorar_noticia(int aId_noticia, int aId_identificado, boolean aPositiva);
 
 	public Seccion[] Cargar_secciones();
 

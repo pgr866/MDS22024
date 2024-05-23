@@ -5,6 +5,9 @@ import basededatos.BD_Noticias;
 import basededatos.BD_Periodistas;
 import basededatos.BD_Editores;
 import basededatos.BD_Secciones;
+
+import org.orm.PersistentException;
+
 import basededatos.BD_Comentarios;
 import basededatos.BD_Tematicas;
 import basededatos.Seccion;
@@ -60,10 +63,10 @@ public class BDPrincipal implements iEditor, iGestor_de_correo, iGestor_de_pago,
 		_bd_periodistas.Baja_Periodista(aNick, aId_editor);
 	}
 
-	public void Guardar_cambios(int aId, String aNombre, String aNick, String aEmail, String aContrasena, String aUrl_foto_perfil, String aNum_tarjeta) {
-		_bd_usuarios_suscritos.Guardar_cambios(aId, aNombre, aNick, aEmail, aContrasena, aUrl_foto_perfil, aNum_tarjeta);
-		_bd_periodistas.Guardar_cambios(aId, aNombre, aNick, aEmail, aContrasena, aUrl_foto_perfil);
-		_bd_editores.Guardar_cambios(aId, aNombre, aNick, aEmail, aContrasena, aUrl_foto_perfil);
+	public void Guardar_cambios(int aId, String aNombre, String aApellidos, String aNick, String aEmail, String aContrasena, String aUrl_foto_perfil, String aNum_tarjeta) {
+		_bd_usuarios_suscritos.Guardar_cambios(aId, aNombre, aApellidos, aNick, aEmail, aContrasena, aUrl_foto_perfil, aNum_tarjeta);
+		_bd_periodistas.Guardar_cambios(aId, aNombre, aApellidos, aNick, aEmail, aContrasena, aUrl_foto_perfil);
+		_bd_editores.Guardar_cambios(aId, aNombre, aApellidos, aNick, aEmail, aContrasena, aUrl_foto_perfil);
 	}
 
 	public void Comentar(int aId_identificado, int aId_noticia, String aContenido) {
@@ -94,7 +97,7 @@ public class BDPrincipal implements iEditor, iGestor_de_correo, iGestor_de_pago,
 		_bd_usuarios_suscritos.Eliminar_cuenta(aId);;
 	}
 
-	public Identificado Login(String aEmail, String aContrasena) {
+	public Identificado Login(String aEmail, String aContrasena) throws PersistentException {
 		Usuario_suscrito suscrito = _bd_usuarios_suscritos.Login(aEmail, aContrasena);
 		Periodista periodista = _bd_periodistas.Login(aEmail, aContrasena);
 		Editor editor = _bd_editores.Login(aEmail, aContrasena);

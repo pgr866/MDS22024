@@ -1,5 +1,7 @@
 package interfaz;
 
+import org.orm.PersistentException;
+
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import vistas.VistaIniciarsesion;
 import base_de_datos.BDPrincipal;
@@ -27,7 +29,12 @@ public class Iniciar_Sesion extends VistaIniciarsesion {
 	public void Entrar() {
 		String email = this.getTextfieldemaillogin().getValue();
 		String contrasena = this.getPasswordfieldogin().getValue();
-		basededatos.Identificado usuario = iusuario_no_registrado.Login(email, contrasena);
+		basededatos.Identificado usuario;
+		try {
+			usuario = iusuario_no_registrado.Login(email, contrasena);
+		} catch (PersistentException e) {
+			usuario = null;
+		}
 		if (usuario == null)
 			this.getLabelmensajeerrorlogin().setVisible(true);
 		else if (usuario instanceof basededatos.Usuario_suscrito) {

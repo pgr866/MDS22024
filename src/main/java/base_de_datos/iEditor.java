@@ -6,23 +6,23 @@ import basededatos.Periodista;
 
 public interface iEditor extends iIdentificado {
 
-	public Seccion Anadir_seccion(String aANombre, int aAId_editor);
+	public Seccion Anadir_seccion(String aNombre, int aId_editor);
 
-	public void Borrar_seccion(String aANombre, int aAId_editor);
+	public void Borrar_seccion(String aNombre, int aId_editor);
 
 	public Noticia[] Cargar_noticias_revisar();
 
-	public void Publicar_noticia(String aANombre_seccion, String aAResumen, int aAId_noticia, int aAId_editor);
+	public void Publicar_noticia(String aNombre_seccion, String aResumen, int aId_noticia, int aId_editor);
 
-	public void Eliminar_noticia(int aAId_noticia, int aAId_editor);
+	public void Eliminar_noticia(int aId_noticia, int aId_editor);
 
-	public Periodista Alta_periodista(String aANombre, String aAApellidos, String aANick, String aAContrasena, String aADni, String aAEmail, int aATelefono, String aAFecha_nacimiento, int aAId_editor);
+	public Periodista Alta_periodista(String aNombre, String aApellidos, String aNick, String aContrasena, String aDni, String aEmail, int aTelefono, String aFecha_nacimiento, int aId_editor);
 
 	public Periodista[] Cargar_periodistas();
 
-	public void Baja_Periodista(String aANick, int aAId_editor);
+	public void Baja_Periodista(String aNick, int aId_editor);
 
-	public void Eliminar_comentario(int aAId_comentario, int aAId_editor);
+	public void Eliminar_comentario(int aId_comentario, int aId_editor);
 
-	public void Cambiar_orden_noticias_portada(String aATitulo_noticia, int aAPosicion_portada);
+	public void Cambiar_orden_noticias_portada(String aTitulo_noticia, int aPosicion_portada);
 }

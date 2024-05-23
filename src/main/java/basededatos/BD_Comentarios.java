@@ -9,15 +9,15 @@ public class BD_Comentarios {
 	public java.util.Vector<Comentario> _contiene_comentarios = new Vector<Comentario>();
 	public BDPrincipal _bd_main_comentario;
 
-	public void Comentar(int aAAId_identificado, int aAAId_noticia, String aAAContenido) {
+	public void Comentar(int aId_identificado, int aId_noticia, String aContenido) {
 		throw new UnsupportedOperationException();
 	}
 
-	public void Valorar_comentario(int aAAId_comentario, int aAAId_identificado, boolean aAAPositiva) {
+	public void Valorar_comentario(int aId_comentario, int aId_identificado, boolean aPositiva) {
 		throw new UnsupportedOperationException();
 	}
 
-	public void Eliminar_comentario(int aAAId_comentario, int aAAId_editor) {
+	public void Eliminar_comentario(int aId_comentario, int aId_editor) {
 		throw new UnsupportedOperationException();
 	}
 }

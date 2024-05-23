@@ -9,11 +9,11 @@ public class BD_Noticias {
 	public java.util.Vector<Noticia> _contiene_noticias = new Vector<Noticia>();
 	public BDPrincipal _bd_main_noticia;
 
-	public Noticia Crear_noticia(String aAATitulo, String aAAUrl_imagen, String aAAContenido, String aAAFecha, String aAALugar, String aAATematicas, int aAAId_periodista) {
+	public Noticia Crear_noticia(String aTitulo, String aUrl_imagen, String aContenido, String aFecha, String aLugar, String aTematicas, int aId_periodista) {
 		throw new UnsupportedOperationException();
 	}
 
-	public void Valorar_noticia(int aAAId_noticia, int aAAId_identificado, boolean aAAPositiva) {
+	public void Valorar_noticia(int aId_noticia, int aId_identificado, boolean aPositiva) {
 		throw new UnsupportedOperationException();
 	}
 
@@ -29,11 +29,11 @@ public class BD_Noticias {
 		throw new UnsupportedOperationException();
 	}
 
-	public void Publicar_noticia(String aAANombre_seccion, String aAAContenido, int aAAId_noticia, int aAAId_editor) {
+	public void Publicar_noticia(String aNombre_seccion, String aContenido, int aId_noticia, int aId_editor) {
 		throw new UnsupportedOperationException();
 	}
 
-	public void Eliminar_noticia(int aAAId_noticia, int aAAId_editor) {
+	public void Eliminar_noticia(int aId_noticia, int aId_editor) {
 		throw new UnsupportedOperationException();
 	}
 

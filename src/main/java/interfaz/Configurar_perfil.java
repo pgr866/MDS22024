@@ -41,12 +41,13 @@ public class Configurar_perfil extends vistas.VistaConfigurarperfil {
 	public void Guardar_cambios() {
 		int id = this.identificado.getId();
 		String nombre = this.getTextfieldnombreconfigurarperfil().getValue();
+		String apellidos = this.getTextfieldapellidosconfigurarperfil().getValue();
 		String nick = this.getTextfieldapodoconfigurarperfil().getValue();
 		String email = this.getTextfieldemailconfigurarperfil().getValue();
 		String contrasena = this.getPasswordfieldcontrasenaconfigurarperfil().getValue();
 		String url_foto_perfil = this.getTextfieldurlimagenconfigurarperfil().getValue();
 		String num_tarjeta = this.getTextfieldntarjetaconfigurarperfil().getValue();
-		this.iidentificado.Guardar_cambios(id, nombre, nick, email, contrasena, url_foto_perfil, num_tarjeta);
+		this.iidentificado.Guardar_cambios(id, nombre, apellidos, nick, email, contrasena, url_foto_perfil, num_tarjeta);
 		this._identificado.Configurar_perfil(); // Refrescar pagina
 	}
 }
