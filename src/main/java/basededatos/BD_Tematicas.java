@@ -5,10 +5,11 @@ import java.util.Vector;
 import basededatos.Tematica;
 
 public class BD_Tematicas {
+	
+	public java.util.Vector<Tematica> _contiene_tematicas = new Vector<Tematica>();
 	public BDPrincipal _bd_main_tematica;
-	public Vector<Tematica> _contiene_tematicas = new Vector<Tematica>();
 
-	public Tematica[] Cargar_tematicas(String aATematicas) {
+	public Tematica[] Cargar_tematicas(String aAATematicas) {
 		throw new UnsupportedOperationException();
 	}
 }

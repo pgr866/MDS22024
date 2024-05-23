@@ -1,7 +1,6 @@
 package base_de_datos;
 
 import basededatos.BD_Usuarios_suscritos;
-import basededatos.Identificado;
 import basededatos.BD_Noticias;
 import basededatos.BD_Periodistas;
 import basededatos.BD_Editores;
@@ -11,6 +10,7 @@ import basededatos.BD_Tematicas;
 import basededatos.Seccion;
 import basededatos.Noticia;
 import basededatos.Periodista;
+import basededatos.Identificado;
 import basededatos.Usuario_suscrito;
 import basededatos.Editor;
 import interfaz.Gestor_de_correo;
