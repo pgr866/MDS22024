@@ -6,7 +6,7 @@ import basededatos.Noticia;
 
 public class BD_Noticias {
 	
-	public java.util.Vector<Noticia> _contiene_noticias = new Vector<Noticia>();
+	public Vector<Noticia> _contiene_noticias = new Vector<Noticia>();
 	public BDPrincipal _bd_main_noticia;
 
 	public Noticia Crear_noticia(String aTitulo, String aUrl_imagen, String aContenido, String aFecha, String aLugar, String aTematicas, int aId_periodista) {

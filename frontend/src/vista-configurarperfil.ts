@@ -34,8 +34,8 @@ export class VistaConfigurarperfil extends LitElement {
    <vaadin-text-field placeholder="Apellidos" style="flex-shrink: 0; width: 70%;" id="Textfieldapellidosconfigurarperfil"></vaadin-text-field>
   </vaadin-horizontal-layout>
   <vaadin-horizontal-layout style="width: 100%; height: 15%; flex-shrink: 0; align-items: center;" id="Layoutapodoconfigurarperfil">
-   <label style="flex-shrink: 0; width: 30%; flex-grow: 0;" id="Labelapodoconfigurarperfil">Apodo</label>
-   <vaadin-text-field placeholder="Apodo" style="flex-shrink: 0; width: 70%;" id="Textfieldapodoconfigurarperfil"></vaadin-text-field>
+   <label style="flex-shrink: 0; width: 30%; flex-grow: 0;" id="Labelapodoconfigurarperfil">Nick</label>
+   <vaadin-text-field placeholder="Nick" style="flex-shrink: 0; width: 70%;" id="Textfieldapodoconfigurarperfil"></vaadin-text-field>
   </vaadin-horizontal-layout>
   <vaadin-horizontal-layout style="width: 100%; height: 15%; flex-shrink: 0; align-items: center;" id="Layoutemailconfigurarperfil">
    <label style="flex-shrink: 0; width: 30%; flex-grow: 0;" id="Labelemailconfigurarperfil">Email</label>
