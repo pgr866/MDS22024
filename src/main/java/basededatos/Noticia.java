@@ -99,7 +99,7 @@ public class Noticia implements Serializable {
 	
 	@ManyToOne(targetEntity=basededatos.Seccion.class, fetch=FetchType.LAZY)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.LOCK})	
-	@JoinColumns(value={ @JoinColumn(name="SeccionId_seccion", referencedColumnName="Id_seccion", nullable=false) }, foreignKey=@ForeignKey(name="FKNoticia469234"))	
+	@JoinColumns(value={ @JoinColumn(name="SeccionId_seccion", referencedColumnName="Id_seccion") }, foreignKey=@ForeignKey(name="FKNoticia469234"))	
 	@org.hibernate.annotations.LazyToOne(value=org.hibernate.annotations.LazyToOneOption.NO_PROXY)	
 	private basededatos.Seccion seccion_contiene_noticias;
 	

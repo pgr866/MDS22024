@@ -13,13 +13,13 @@ public class CreateMDS12324PFFornielesGomezData {
 			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : ordena
 			basededatos.PortadaDAO.save(lbasededatosPortada);
 			basededatos.Seccion lbasededatosSeccion = basededatos.SeccionDAO.createSeccion();
-			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : aparece_en, titulo_seccion, crea_seccion
+			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : titulo_seccion, crea_seccion
 			basededatos.SeccionDAO.save(lbasededatosSeccion);
 			basededatos.Tematica lbasededatosTematica = basededatos.TematicaDAO.createTematica();
 			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : contiene, titulo_tematica
 			basededatos.TematicaDAO.save(lbasededatosTematica);
 			basededatos.Noticia lbasededatosNoticia = basededatos.NoticiaDAO.createNoticia();
-			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : pertenece_a_noticia, valora_negativa, pertenece_a, valora_positiva, posicion_portada, valoraciones_negativas, valoraciones_positivas, contenido, lugar, fecha, url_imagen_noticia, titulo, crea, seccion_contiene_noticias
+			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : pertenece_a_noticia, valora_negativa, pertenece_a, valora_positiva, posicion_portada, valoraciones_negativas, valoraciones_positivas, contenido, lugar, fecha, url_imagen_noticia, titulo, crea
 			basededatos.NoticiaDAO.save(lbasededatosNoticia);
 			basededatos.Comentario lbasededatosComentario = basededatos.ComentarioDAO.createComentario();
 			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : valora_negativamente, valora_positivamente, valoraciones_negativas, valoraciones_positivas, contenido, noticia_contiene_comentarios, escribe
