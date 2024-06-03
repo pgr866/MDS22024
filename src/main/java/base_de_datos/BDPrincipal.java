@@ -23,13 +23,13 @@ import interfaz.Usuario_Suscrito;
 import interfaz.Usuario_no_Registrado;
 
 public class BDPrincipal implements iEditor, iGestor_de_correo, iGestor_de_pago, iGestor_de_publicidad, iUsuario_Suscrito, iUsuario_no_Registrado, iIdentificado, iPeriodista {
-	public BD_Usuarios_suscritos _bd_usuarios_suscritos;
-	public BD_Noticias _bd_noticias;
-	public BD_Periodistas _bd_periodistas;
-	public BD_Editores _bd_editores;
-	public BD_Secciones _bd_secciones;
-	public BD_Comentarios _bd_comentarios;
-	public BD_Tematicas _bd_tematicas;
+	public BD_Usuarios_suscritos _bd_usuarios_suscritos = new BD_Usuarios_suscritos();
+	public BD_Noticias _bd_noticias = new BD_Noticias();
+	public BD_Periodistas _bd_periodistas = new BD_Periodistas();
+	public BD_Editores _bd_editores = new BD_Editores();
+	public BD_Secciones _bd_secciones = new BD_Secciones();
+	public BD_Comentarios _bd_comentarios = new BD_Comentarios();
+	public BD_Tematicas _bd_tematicas = new BD_Tematicas();
 
 	public Seccion Anadir_seccion(String aNombre, int aId_editor) throws PersistentException {
 		return _bd_secciones.Anadir_seccion(aNombre, aId_editor);
