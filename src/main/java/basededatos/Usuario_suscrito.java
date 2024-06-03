@@ -25,7 +25,7 @@ public class Usuario_suscrito extends basededatos.Identificado implements Serial
 	public Usuario_suscrito() {
 	}
 	
-	@Column(name="Num_tarjeta", nullable=true, length=255)	
+	@Column(name="Num_tarjeta", nullable=false, length=255)	
 	private String num_tarjeta;
 	
 	@Column(name="EsEliminado", nullable=false, length=1)	

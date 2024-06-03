@@ -44,7 +44,7 @@ public class Tematica implements Serializable {
 	@org.hibernate.annotations.GenericGenerator(name="BASEDEDATOS_TEMATICA_ID_TEMATICA_GENERATOR", strategy="native")	
 	private int id_tematica;
 	
-	@Column(name="Titulo_tematica", nullable=true, length=255)	
+	@Column(name="Titulo_tematica", nullable=false, length=255)	
 	private String titulo_tematica;
 	
 	@ManyToMany(mappedBy="ORM_pertenece_a", targetEntity=basededatos.Noticia.class)	

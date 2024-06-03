@@ -83,7 +83,7 @@ public class Comentario implements Serializable {
 	@org.hibernate.annotations.LazyToOne(value=org.hibernate.annotations.LazyToOneOption.NO_PROXY)	
 	private basededatos.Noticia noticia_contiene_comentarios;
 	
-	@Column(name="Contenido", nullable=true, length=255)	
+	@Column(name="Contenido", nullable=false, length=255)	
 	private String contenido;
 	
 	@Column(name="Valoraciones_positivas", nullable=false, length=10)	

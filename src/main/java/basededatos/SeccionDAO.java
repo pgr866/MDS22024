@@ -333,7 +333,7 @@ public class SeccionDAO {
 			
 			basededatos.Noticia[] lAparece_ens = seccion.aparece_en.toArray();
 			for(int i = 0; i < lAparece_ens.length; i++) {
-				lAparece_ens[i].seccion_contiene_noticias.remove(seccion);
+				lAparece_ens[i].setSeccion_contiene_noticias(null);
 			}
 			return delete(seccion);
 		}
@@ -355,7 +355,7 @@ public class SeccionDAO {
 			
 			basededatos.Noticia[] lAparece_ens = seccion.aparece_en.toArray();
 			for(int i = 0; i < lAparece_ens.length; i++) {
-				lAparece_ens[i].seccion_contiene_noticias.remove(seccion);
+				lAparece_ens[i].setSeccion_contiene_noticias(null);
 			}
 			try {
 				session.delete(seccion);

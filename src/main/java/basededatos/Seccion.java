@@ -70,12 +70,11 @@ public class Seccion implements Serializable {
 	@org.hibernate.annotations.LazyToOne(value=org.hibernate.annotations.LazyToOneOption.NO_PROXY)	
 	private basededatos.Editor crea_seccion;
 	
-	@Column(name="Titulo_seccion", nullable=true, length=255)	
+	@Column(name="Titulo_seccion", nullable=false, length=255)	
 	private String titulo_seccion;
 	
-	@ManyToMany(targetEntity=basededatos.Noticia.class)	
+	@OneToMany(mappedBy="seccion_contiene_noticias", targetEntity=basededatos.Noticia.class)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
-	@JoinTable(name="Noticia_Seccion", joinColumns={ @JoinColumn(name="SeccionId_seccion") }, inverseJoinColumns={ @JoinColumn(name="NoticiaId_noticia") })	
 	@org.hibernate.annotations.LazyCollection(org.hibernate.annotations.LazyCollectionOption.TRUE)	
 	private java.util.Set ORM_aparece_en = new java.util.HashSet();
 	
@@ -108,7 +107,7 @@ public class Seccion implements Serializable {
 	}
 	
 	@Transient	
-	public final basededatos.NoticiaSetCollection aparece_en = new basededatos.NoticiaSetCollection(this, _ormAdapter, ORMConstants.KEY_SECCION_APARECE_EN, ORMConstants.KEY_NOTICIA_SECCION_CONTIENE_NOTICIAS, ORMConstants.KEY_MUL_MANY_TO_MANY);
+	public final basededatos.NoticiaSetCollection aparece_en = new basededatos.NoticiaSetCollection(this, _ormAdapter, ORMConstants.KEY_SECCION_APARECE_EN, ORMConstants.KEY_NOTICIA_SECCION_CONTIENE_NOTICIAS, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	public void setCrea_seccion(basededatos.Editor value) {
 		if (crea_seccion != null) {

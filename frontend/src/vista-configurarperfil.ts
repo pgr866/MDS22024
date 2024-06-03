@@ -50,6 +50,7 @@ export class VistaConfigurarperfil extends LitElement {
    <vaadin-password-field placeholder="Contraseña" style="flex-shrink: 0; width: 70%;" has-value id="Passwordfieldcontrasenaconfigurarperfil"></vaadin-password-field>
   </vaadin-horizontal-layout>
  </vaadin-vertical-layout>
+ <label id="Labelerrordatosconfigurarperfil" style="flex-shrink: 0; font-size: 120%; width: 100%; align-self: center; font-size: 100%; text-align: center; color: #FF0000;"></label>
  <vaadin-horizontal-layout style="flex-shrink: 0; width: 40%; height: 10%; justify-content: space-around;" id="Layoutbotonesconfigurarperfil">
   <vaadin-button style="flex-shrink: 0; width: 47%; align-self: center;" id="Buttoneliminarcuentaconfigurarperfil">
     Eliminar cuenta 

@@ -26,25 +26,38 @@ public class BD_Usuarios_suscritos {
 		return usuario_suscrito;
 	}
 
-	public void Guardar_cambios(int aId, String aNombre, String aApellidos, String aNick, String aEmail,
+	public Usuario_suscrito Guardar_cambios(int aId, String aNombre, String aApellidos, String aNick, String aEmail,
 			String aContrasena, String aUrl_foto_perfil, String aNum_tarjeta) throws PersistentException {
-		Usuario_suscrito suscrito = null;
+		List<Identificado> identificados = null;
 		PersistentTransaction t = MDS12324PFFornielesGomezPersistentManager.instance().getSession().beginTransaction();
 		try {
-			suscrito = Usuario_suscritoDAO.getUsuario_suscritoByORMID(aId);
-			suscrito.setNombre(aNombre);
-			suscrito.setApellidos(aApellidos);
-			suscrito.setNick_apodo(aNick);
-			suscrito.setEmail(aEmail);
-			suscrito.setContrasena(aContrasena);
-			suscrito.setUrl_foto_perfil(aUrl_foto_perfil);
-			suscrito.setNum_tarjeta(aNum_tarjeta);
-			Usuario_suscritoDAO.save(suscrito);
+			identificados = IdentificadoDAO
+					.queryIdentificado("Email = '" + aEmail + "' OR Nick_apodo = '" + aNick + "'", null);
 			t.commit();
 		} catch (Exception e) {
 			t.rollback();
 		}
-		MDS12324PFFornielesGomezPersistentManager.instance().disposePersistentManager();
+
+		Usuario_suscrito suscrito = null;
+		if (identificados == null) {
+			t = MDS12324PFFornielesGomezPersistentManager.instance().getSession().beginTransaction();
+			try {
+				suscrito = Usuario_suscritoDAO.getUsuario_suscritoByORMID(aId);
+				suscrito.setNombre(aNombre);
+				suscrito.setApellidos(aApellidos);
+				suscrito.setNick_apodo(aNick);
+				suscrito.setEmail(aEmail);
+				suscrito.setContrasena(aContrasena);
+				suscrito.setUrl_foto_perfil(aUrl_foto_perfil);
+				suscrito.setNum_tarjeta(aNum_tarjeta);
+				Usuario_suscritoDAO.save(suscrito);
+				t.commit();
+			} catch (Exception e) {
+				t.rollback();
+			}
+			MDS12324PFFornielesGomezPersistentManager.instance().disposePersistentManager();
+		}
+		return suscrito;
 	}
 
 	public void Eliminar_cuenta(int aId) throws PersistentException {
@@ -86,6 +99,7 @@ public class BD_Usuarios_suscritos {
 				suscrito.setDni(aDni);
 				suscrito.setNum_tarjeta(aNum_tarjeta);
 				suscrito.setContrasena(aContrasena);
+				suscrito.setEsEliminado(false);
 				Usuario_suscritoDAO.save(suscrito);
 				t.commit();
 			} catch (Exception e) {

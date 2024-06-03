@@ -1,5 +1,7 @@
 package interfaz;
 
+import org.orm.PersistentException;
+
 import base_de_datos.BDPrincipal;
 import base_de_datos.iEditor;
 
@@ -21,14 +23,22 @@ public class Explorar_secciones_Editor extends Explorar_secciones_Identificado {
 	public void Anadir_seccion() {
 		String nombre = this.getTextfieldnombreexplorarseccionesidentificado().getValue();
 		int id_editor = this._editor.identificado.getId();
-		ieditor.Anadir_seccion(nombre, id_editor);
+		try {
+			ieditor.Anadir_seccion(nombre, id_editor);
+		} catch (PersistentException e) {
+			e.printStackTrace();
+		}
 		this._editor.Explorar_secciones_Editor(); // Refrescar pagina
 	}
 
 	public void Borrar_seccion() {
 		String nombre = (String) this._secciones_Identificado.getDesplegableseccionesidentificado().getValue();
 		int id_editor = this._editor.identificado.getId();
-		ieditor.Borrar_seccion(nombre, id_editor);
+		try {
+			ieditor.Borrar_seccion(nombre, id_editor);
+		} catch (PersistentException e) {
+			e.printStackTrace();
+		}
 		this._editor.Explorar_secciones_Editor(); // Refrescar pagina
 	}
 }

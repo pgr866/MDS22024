@@ -1,5 +1,7 @@
 package interfaz;
 
+import org.orm.PersistentException;
+
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 import base_de_datos.BDPrincipal;
@@ -45,8 +47,15 @@ public class Revisar_noticias extends vistas.VistaRevisarnoticias {
 	public void Eliminar_noticia() {
 		int id_noticia = this.noticia.getId_noticia();
 		int id_editor = this._noticias_a_revisar._noticias_a_revisar._editor.identificado.getId();
-		ieditor.Eliminar_noticia(id_noticia, id_editor);
-		this._noticias_a_revisar._noticias_a_revisar._editor.Listado_noticias_portada_Editor(); // Refrescar pagina
+		try {
+			ieditor.Eliminar_noticia(id_noticia, id_editor);
+		} catch (PersistentException e) {
+			e.printStackTrace();
+		}
+		// Refrescar pagina
+		this._noticias_a_revisar._noticias_a_revisar._editor.mainview._editor = new Editor(this._noticias_a_revisar._noticias_a_revisar._editor.mainview, (basededatos.Editor) this._noticias_a_revisar._noticias_a_revisar._editor.identificado);
+		this._noticias_a_revisar._noticias_a_revisar._editor.mainview.removeAll();
+		this._noticias_a_revisar._noticias_a_revisar._editor.mainview.add(this._noticias_a_revisar._noticias_a_revisar._editor.mainview._editor);
 	}
 
 	public void Publicar_noticia() {
@@ -54,8 +63,14 @@ public class Revisar_noticias extends vistas.VistaRevisarnoticias {
 		String resumen = this.getTextfieldresumenrevisarnoticias().getValue();
 		int id_noticia = this.noticia.getId_noticia();
 		int id_editor = this._noticias_a_revisar._noticias_a_revisar._editor.identificado.getId();
-		ieditor.Publicar_noticia(nombre_seccion, resumen, id_noticia, id_editor);
-		this._noticias_a_revisar._noticias_a_revisar._editor.Listado_noticias_portada_Editor(); // Refrescar pagina
+		try {
+			ieditor.Publicar_noticia(nombre_seccion, resumen, id_noticia, id_editor);
+		} catch (PersistentException e) {
+			e.printStackTrace();
+		}
+		// Refrescar pagina
+		this._noticias_a_revisar._noticias_a_revisar._editor.mainview._editor = new Editor(this._noticias_a_revisar._noticias_a_revisar._editor.mainview, (basededatos.Editor) this._noticias_a_revisar._noticias_a_revisar._editor.identificado);
+		this._noticias_a_revisar._noticias_a_revisar._editor.mainview.removeAll();
+		this._noticias_a_revisar._noticias_a_revisar._editor.mainview.add(this._noticias_a_revisar._noticias_a_revisar._editor.mainview._editor);
 	}
-
 }

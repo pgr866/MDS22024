@@ -61,22 +61,22 @@ public class Identificado implements Serializable {
 	@Column(name="Dni", nullable=false, length=255)	
 	private String dni;
 	
-	@Column(name="Nombre", nullable=true, length=255)	
+	@Column(name="Nombre", nullable=false, length=255)	
 	private String nombre;
 	
-	@Column(name="Apellidos", nullable=true, length=255)	
+	@Column(name="Apellidos", nullable=false, length=255)	
 	private String apellidos;
 	
-	@Column(name="Nick_apodo", nullable=true, length=255)	
+	@Column(name="Nick_apodo", nullable=false, length=255)	
 	private String nick_apodo;
 	
-	@Column(name="Email", nullable=true, length=255)	
+	@Column(name="Email", nullable=false, length=255)	
 	private String email;
 	
-	@Column(name="Contrasena", nullable=true, length=255)	
+	@Column(name="Contrasena", nullable=false, length=255)	
 	private String contrasena;
 	
-	@Column(name="Fecha_nacimiento", nullable=true, length=255)	
+	@Column(name="Fecha_nacimiento", nullable=false, length=255)	
 	private String fecha_nacimiento;
 	
 	@Column(name="Telefono", nullable=false, length=10)	

@@ -1,5 +1,7 @@
 package interfaz;
 
+import org.orm.PersistentException;
+
 import base_de_datos.BDPrincipal;
 import base_de_datos.iPeriodista;
 
@@ -34,7 +36,11 @@ public class Crear_noticias extends vistas.VistaCrearnoticias {
 		String lugar = this.getTextfiedlugarcrearnoticias().getValue();
 		String tematicas = this.getTextfieldtematicacrearnoticias().getValue().toLowerCase();
 		int id_periodista = this._periodista.identificado.getId(); 
-		iperiodista.Crear_noticia(titulo, url_imagen_noticia, contenido, fecha, lugar, tematicas, id_periodista);
+		try {
+			iperiodista.Crear_noticia(titulo, url_imagen_noticia, contenido, fecha, lugar, tematicas, id_periodista);
+		} catch (PersistentException e) {
+			e.printStackTrace();
+		}
 		this._periodista.Crear_noticias(); // Refrescar pagina
 	}
 }

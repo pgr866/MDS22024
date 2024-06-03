@@ -1,5 +1,7 @@
 package interfaz;
 
+import org.orm.PersistentException;
+
 import base_de_datos.BDPrincipal;
 import base_de_datos.iUsuario_Suscrito;
 
@@ -19,7 +21,12 @@ public class Configurar_perfil_Usuario_suscrito extends Configurar_perfil {
 	}
 
 	public void Eliminar_cuenta() {
-		iusuario_suscrito.Eliminar_cuenta(this._identificado.identificado.getId());
+		try {
+			iusuario_suscrito.Eliminar_cuenta(this._identificado.identificado.getId());
+		} catch (PersistentException e) {
+			e.printStackTrace();
+		}
+		// Refrescar pagina
 		this._identificado.mainview.removeAll();
 		this._identificado.mainview.add(this._identificado.mainview._usuario_no_registrado);
 		this._identificado.mainview._usuario_suscrito = null;

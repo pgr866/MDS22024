@@ -335,6 +335,10 @@ public class NoticiaDAO {
 				noticia.getElimina_noticia().noticia_es_eliminada_por_.remove(noticia);
 			}
 			
+			if (noticia.getSeccion_contiene_noticias() != null) {
+				noticia.getSeccion_contiene_noticias().aparece_en.remove(noticia);
+			}
+			
 			if (noticia.getCrea() != null) {
 				noticia.getCrea().es_creada.remove(noticia);
 			}
@@ -350,10 +354,6 @@ public class NoticiaDAO {
 			basededatos.Identificado[] lValora_negativas = noticia.valora_negativa.toArray();
 			for(int i = 0; i < lValora_negativas.length; i++) {
 				lValora_negativas[i].es_valorada_negativa_por.remove(noticia);
-			}
-			basededatos.Seccion[] lSeccion_contiene_noticiass = noticia.seccion_contiene_noticias.toArray();
-			for(int i = 0; i < lSeccion_contiene_noticiass.length; i++) {
-				lSeccion_contiene_noticiass[i].aparece_en.remove(noticia);
 			}
 			basededatos.Comentario[] lPertenece_a_noticias = noticia.pertenece_a_noticia.toArray();
 			for(int i = 0; i < lPertenece_a_noticias.length; i++) {
@@ -381,6 +381,10 @@ public class NoticiaDAO {
 				noticia.getElimina_noticia().noticia_es_eliminada_por_.remove(noticia);
 			}
 			
+			if (noticia.getSeccion_contiene_noticias() != null) {
+				noticia.getSeccion_contiene_noticias().aparece_en.remove(noticia);
+			}
+			
 			if (noticia.getCrea() != null) {
 				noticia.getCrea().es_creada.remove(noticia);
 			}
@@ -396,10 +400,6 @@ public class NoticiaDAO {
 			basededatos.Identificado[] lValora_negativas = noticia.valora_negativa.toArray();
 			for(int i = 0; i < lValora_negativas.length; i++) {
 				lValora_negativas[i].es_valorada_negativa_por.remove(noticia);
-			}
-			basededatos.Seccion[] lSeccion_contiene_noticiass = noticia.seccion_contiene_noticias.toArray();
-			for(int i = 0; i < lSeccion_contiene_noticiass.length; i++) {
-				lSeccion_contiene_noticiass[i].aparece_en.remove(noticia);
 			}
 			basededatos.Comentario[] lPertenece_a_noticias = noticia.pertenece_a_noticia.toArray();
 			for(int i = 0; i < lPertenece_a_noticias.length; i++) {

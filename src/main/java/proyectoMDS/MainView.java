@@ -26,13 +26,7 @@ public class MainView extends VerticalLayout {
 	
     public MainView(){
     	this.setPadding(false);
-    	
     	this._usuario_no_registrado = new Usuario_no_Registrado(this);
-//      this.add(_usuario_no_registrado);
-    	
-    	basededatos.Editor editor = new basededatos.Editor();
-    	editor.setUrl_foto_perfil("https://i.postimg.cc/m25GMKm4/foto.png");
-    	this._editor = new Editor(this, editor);
-        this.add(_editor);
+        this.add(_usuario_no_registrado);
     }
 }

@@ -32,9 +32,6 @@ public class Noticia implements Serializable {
 		else if (key == ORMConstants.KEY_NOTICIA_VALORA_NEGATIVA) {
 			return ORM_valora_negativa;
 		}
-		else if (key == ORMConstants.KEY_NOTICIA_SECCION_CONTIENE_NOTICIAS) {
-			return ORM_seccion_contiene_noticias;
-		}
 		else if (key == ORMConstants.KEY_NOTICIA_PERTENECE_A_NOTICIA) {
 			return ORM_pertenece_a_noticia;
 		}
@@ -49,6 +46,10 @@ public class Noticia implements Serializable {
 		
 		else if (key == ORMConstants.KEY_NOTICIA_CREA) {
 			this.crea = (basededatos.Periodista) owner;
+		}
+		
+		else if (key == ORMConstants.KEY_NOTICIA_SECCION_CONTIENE_NOTICIAS) {
+			this.seccion_contiene_noticias = (basededatos.Seccion) owner;
 		}
 		
 		else if (key == ORMConstants.KEY_NOTICIA_ELIMINA_NOTICIA) {
@@ -96,28 +97,34 @@ public class Noticia implements Serializable {
 	@org.hibernate.annotations.LazyToOne(value=org.hibernate.annotations.LazyToOneOption.NO_PROXY)	
 	private basededatos.Editor elimina_noticia;
 	
+	@ManyToOne(targetEntity=basededatos.Seccion.class, fetch=FetchType.LAZY)	
+	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.LOCK})	
+	@JoinColumns(value={ @JoinColumn(name="SeccionId_seccion", referencedColumnName="Id_seccion", nullable=false) }, foreignKey=@ForeignKey(name="FKNoticia469234"))	
+	@org.hibernate.annotations.LazyToOne(value=org.hibernate.annotations.LazyToOneOption.NO_PROXY)	
+	private basededatos.Seccion seccion_contiene_noticias;
+	
 	@ManyToOne(targetEntity=basededatos.Periodista.class, fetch=FetchType.LAZY)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.LOCK})	
 	@JoinColumns(value={ @JoinColumn(name="PeriodistaIdentificadoId", referencedColumnName="IdentificadoId", nullable=false) }, foreignKey=@ForeignKey(name="FKNoticia644303"))	
 	@org.hibernate.annotations.LazyToOne(value=org.hibernate.annotations.LazyToOneOption.NO_PROXY)	
 	private basededatos.Periodista crea;
 	
-	@Column(name="Titulo", nullable=true, length=255)	
+	@Column(name="Titulo", nullable=false, length=255)	
 	private String titulo;
 	
-	@Column(name="Url_imagen_noticia", nullable=true, length=255)	
+	@Column(name="Url_imagen_noticia", nullable=false, length=255)	
 	private String url_imagen_noticia;
 	
-	@Column(name="Fecha", nullable=true, length=255)	
+	@Column(name="Fecha", nullable=false, length=255)	
 	private String fecha;
 	
-	@Column(name="Lugar", nullable=true, length=255)	
+	@Column(name="Lugar", nullable=false, length=255)	
 	private String lugar;
 	
 	@Column(name="Resumen", nullable=true, length=255)	
 	private String resumen;
 	
-	@Column(name="Contenido", nullable=true, length=255)	
+	@Column(name="Contenido", nullable=false, length=255)	
 	private String contenido;
 	
 	@Column(name="Valoraciones_positivas", nullable=false, length=10)	
@@ -146,11 +153,6 @@ public class Noticia implements Serializable {
 	@JoinTable(name="Identificado_Noticia2", joinColumns={ @JoinColumn(name="NoticiaId_noticia") }, inverseJoinColumns={ @JoinColumn(name="IdentificadoId") })	
 	@org.hibernate.annotations.LazyCollection(org.hibernate.annotations.LazyCollectionOption.TRUE)	
 	private java.util.Set ORM_valora_negativa = new java.util.HashSet();
-	
-	@ManyToMany(mappedBy="ORM_aparece_en", targetEntity=basededatos.Seccion.class)	
-	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
-	@org.hibernate.annotations.LazyCollection(org.hibernate.annotations.LazyCollectionOption.TRUE)	
-	private java.util.Set ORM_seccion_contiene_noticias = new java.util.HashSet();
 	
 	@OneToMany(mappedBy="noticia_contiene_comentarios", targetEntity=basededatos.Comentario.class)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
@@ -322,16 +324,29 @@ public class Noticia implements Serializable {
 	@Transient	
 	public final basededatos.IdentificadoSetCollection valora_negativa = new basededatos.IdentificadoSetCollection(this, _ormAdapter, ORMConstants.KEY_NOTICIA_VALORA_NEGATIVA, ORMConstants.KEY_IDENTIFICADO_ES_VALORADA_NEGATIVA_POR, ORMConstants.KEY_MUL_MANY_TO_MANY);
 	
-	private void setORM_Seccion_contiene_noticias(java.util.Set value) {
-		this.ORM_seccion_contiene_noticias = value;
+	public void setSeccion_contiene_noticias(basededatos.Seccion value) {
+		if (seccion_contiene_noticias != null) {
+			seccion_contiene_noticias.aparece_en.remove(this);
+		}
+		if (value != null) {
+			value.aparece_en.add(this);
+		}
 	}
 	
-	private java.util.Set getORM_Seccion_contiene_noticias() {
-		return ORM_seccion_contiene_noticias;
+	public basededatos.Seccion getSeccion_contiene_noticias() {
+		return seccion_contiene_noticias;
 	}
 	
-	@Transient	
-	public final basededatos.SeccionSetCollection seccion_contiene_noticias = new basededatos.SeccionSetCollection(this, _ormAdapter, ORMConstants.KEY_NOTICIA_SECCION_CONTIENE_NOTICIAS, ORMConstants.KEY_SECCION_APARECE_EN, ORMConstants.KEY_MUL_MANY_TO_MANY);
+	/**
+	 * This method is for internal use only.
+	 */
+	public void setORM_Seccion_contiene_noticias(basededatos.Seccion value) {
+		this.seccion_contiene_noticias = value;
+	}
+	
+	private basededatos.Seccion getORM_Seccion_contiene_noticias() {
+		return seccion_contiene_noticias;
+	}
 	
 	private void setORM_Pertenece_a_noticia(java.util.Set value) {
 		this.ORM_pertenece_a_noticia = value;

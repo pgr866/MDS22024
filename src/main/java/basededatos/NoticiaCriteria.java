@@ -26,6 +26,8 @@ public class NoticiaCriteria extends AbstractORMCriteria {
 	public final AssociationExpression publica;
 	public final IntegerExpression elimina_noticiaId;
 	public final AssociationExpression elimina_noticia;
+	public final IntegerExpression seccion_contiene_noticiasId;
+	public final AssociationExpression seccion_contiene_noticias;
 	public final IntegerExpression creaId;
 	public final AssociationExpression crea;
 	public final StringExpression titulo;
@@ -40,7 +42,6 @@ public class NoticiaCriteria extends AbstractORMCriteria {
 	public final CollectionExpression valora_positiva;
 	public final CollectionExpression pertenece_a;
 	public final CollectionExpression valora_negativa;
-	public final CollectionExpression seccion_contiene_noticias;
 	public final CollectionExpression pertenece_a_noticia;
 	
 	public NoticiaCriteria(Criteria criteria) {
@@ -52,6 +53,8 @@ public class NoticiaCriteria extends AbstractORMCriteria {
 		publica = new AssociationExpression("publica", this);
 		elimina_noticiaId = new IntegerExpression("elimina_noticia.", this);
 		elimina_noticia = new AssociationExpression("elimina_noticia", this);
+		seccion_contiene_noticiasId = new IntegerExpression("seccion_contiene_noticias.id_seccion", this);
+		seccion_contiene_noticias = new AssociationExpression("seccion_contiene_noticias", this);
 		creaId = new IntegerExpression("crea.", this);
 		crea = new AssociationExpression("crea", this);
 		titulo = new StringExpression("titulo", this);
@@ -66,7 +69,6 @@ public class NoticiaCriteria extends AbstractORMCriteria {
 		valora_positiva = new CollectionExpression("ORM_valora_positiva", this);
 		pertenece_a = new CollectionExpression("ORM_pertenece_a", this);
 		valora_negativa = new CollectionExpression("ORM_valora_negativa", this);
-		seccion_contiene_noticias = new CollectionExpression("ORM_seccion_contiene_noticias", this);
 		pertenece_a_noticia = new CollectionExpression("ORM_pertenece_a_noticia", this);
 	}
 	
@@ -90,6 +92,10 @@ public class NoticiaCriteria extends AbstractORMCriteria {
 		return new EditorCriteria(createCriteria("elimina_noticia"));
 	}
 	
+	public SeccionCriteria createSeccion_contiene_noticiasCriteria() {
+		return new SeccionCriteria(createCriteria("seccion_contiene_noticias"));
+	}
+	
 	public PeriodistaCriteria createCreaCriteria() {
 		return new PeriodistaCriteria(createCriteria("crea"));
 	}
@@ -104,10 +110,6 @@ public class NoticiaCriteria extends AbstractORMCriteria {
 	
 	public IdentificadoCriteria createValora_negativaCriteria() {
 		return new IdentificadoCriteria(createCriteria("ORM_valora_negativa"));
-	}
-	
-	public SeccionCriteria createSeccion_contiene_noticiasCriteria() {
-		return new SeccionCriteria(createCriteria("ORM_seccion_contiene_noticias"));
 	}
 	
 	public ComentarioCriteria createPertenece_a_noticiaCriteria() {

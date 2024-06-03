@@ -1,10 +1,12 @@
 package interfaz;
 
+import org.orm.PersistentException;
+
 import base_de_datos.BDPrincipal;
 import base_de_datos.iUsuario_no_Registrado;
 
 public class Registrarse extends vistas.VistaRegistrarse {
-	
+
 //	private event _cancelar;
 //	private event _enviar;
 //	private Label _email;
@@ -20,12 +22,13 @@ public class Registrarse extends vistas.VistaRegistrarse {
 	public Iniciar_Sesion _iniciar_Sesion;
 	public Gestionar_correo _gestionar_correo;
 	public Gestionar_pagos _gestionar_pagos;
-	
+
 	public Registrarse(Iniciar_Sesion _iniciar_Sesion) {
 		super();
 		this._iniciar_Sesion = _iniciar_Sesion;
-		this.getCancelarregistrarse().addClickListener(event->this._iniciar_Sesion._usuario_no_Registrado.Iniciar_Sesion());
-		this.getEnviarregistrarse().addClickListener(event->Enviar());
+		this.getCancelarregistrarse()
+				.addClickListener(event -> this._iniciar_Sesion._usuario_no_Registrado.Iniciar_Sesion());
+		this.getEnviarregistrarse().addClickListener(event -> Enviar());
 	}
 
 	public void Gestionar_correo() {
@@ -42,49 +45,57 @@ public class Registrarse extends vistas.VistaRegistrarse {
 		String num_tarjeta = this.getTextfieldntarjetaregistrarse().getValue();
 		String contrasena = this.getPasswordfieldcontrasenaregistrarse().getValue();
 		String repetir_contrasena = this.getPasswordfieldrepetircontrasenaregistrarse().getValue();
-		
+
 		boolean validos = true;
 
 		if (contrasena != repetir_contrasena && validos) {
 			this.getLabelerrordatosregistrarse().setText("Las contraseñas no coinciden");
 			validos = false;
 		}
-		
+
 		if (contrasena.length() < 8 && validos) {
 			this.getLabelerrordatosregistrarse().setText("La contraseña debe tener al menos 8 caracteres");
 			validos = false;
-        }
+		}
 
-        boolean hasDigit = false;
-        boolean hasUpperCase = false;
-        boolean hasLowerCase = false;
+		boolean hasDigit = false;
+		boolean hasUpperCase = false;
+		boolean hasLowerCase = false;
 
-        for (char c : contrasena.toCharArray()) {
-            if (Character.isDigit(c))
-                hasDigit = true;
-            else if (Character.isUpperCase(c))
-                hasUpperCase = true;
-            else if (Character.isLowerCase(c))
-                hasLowerCase = true;
-        }
+		for (char c : contrasena.toCharArray()) {
+			if (Character.isDigit(c))
+				hasDigit = true;
+			else if (Character.isUpperCase(c))
+				hasUpperCase = true;
+			else if (Character.isLowerCase(c))
+				hasLowerCase = true;
+		}
 
-        if (!(hasDigit && hasUpperCase && hasLowerCase) && validos) {
-        	this.getLabelerrordatosregistrarse().setText("La contraseña debe tener al menos un número, una mayúscula, y una minúscula");
+		if (!(hasDigit && hasUpperCase && hasLowerCase) && validos) {
+			this.getLabelerrordatosregistrarse()
+					.setText("La contraseña debe tener al menos un número, una mayúscula, y una minúscula");
 			validos = false;
-        }
-        
-        if (validos) {
-        	basededatos.Usuario_suscrito suscrito = iusuario_no_registrado.Registrarse(email, nombre, apellidos, fecha_nacimiento, nick, dni, num_tarjeta, contrasena);
-        	if (suscrito == null)
-        		this.getLabelerrordatosregistrarse().setText("Correo electrónico / nick ya está en uso");
-        	else {
-        		this._iniciar_Sesion._usuario_no_Registrado.mainview._usuario_suscrito = new Usuario_Suscrito(this._iniciar_Sesion._usuario_no_Registrado.mainview, suscrito);
-        		this._iniciar_Sesion._usuario_no_Registrado.mainview.removeAll();
-        		this._iniciar_Sesion._usuario_no_Registrado.mainview.add(this._iniciar_Sesion._usuario_no_Registrado.mainview._usuario_suscrito);
-        		Gestionar_correo();
-        		Gestionar_pagos();
-        	}
-        }
+		}
+
+		if (validos) {
+			try {
+				basededatos.Usuario_suscrito suscrito = iusuario_no_registrado.Registrarse(email, nombre, apellidos,
+						fecha_nacimiento, nick, dni, num_tarjeta, contrasena);
+				if (suscrito == null)
+					this.getLabelerrordatosregistrarse().setText("Correo electrónico / nick ya está en uso");
+				else {
+					this._iniciar_Sesion._usuario_no_Registrado.mainview._usuario_suscrito = new Usuario_Suscrito(
+							this._iniciar_Sesion._usuario_no_Registrado.mainview, suscrito);
+					this._iniciar_Sesion._usuario_no_Registrado.mainview.removeAll();
+					this._iniciar_Sesion._usuario_no_Registrado.mainview
+							.add(this._iniciar_Sesion._usuario_no_Registrado.mainview._usuario_suscrito);
+					Gestionar_correo();
+					Gestionar_pagos();
+				}
+			} catch (PersistentException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 
 	public void Gestionar_pagos() {

@@ -16,6 +16,14 @@ import com.vaadin.flow.component.textfield.PasswordField;
 @JsModule("./src/vista-configurarperfil.ts")
 public class VistaConfigurarperfil extends LitTemplate {
 
+	public Label getLabelerrordatosconfigurarperfil() {
+		return labelerrordatosconfigurarperfil;
+	}
+
+	public void setLabelerrordatosconfigurarperfil(Label labelerrordatosconfigurarperfil) {
+		this.labelerrordatosconfigurarperfil = labelerrordatosconfigurarperfil;
+	}
+
 	public HorizontalLayout getLayouturlimagenconfigurarperfil() {
 		return layouturlimagenconfigurarperfil;
 	}
@@ -276,6 +284,8 @@ public class VistaConfigurarperfil extends LitTemplate {
 	private Label labelurlimagenconfigurarperfil;
 	@Id("Textfieldurlimagenconfigurarperfil")
 	private TextField textfieldurlimagenconfigurarperfil;
+	@Id("Labelerrordatosconfigurarperfil")
+	private Label labelerrordatosconfigurarperfil;
 
 	public VistaConfigurarperfil() {
         // You can initialise any data required for the connected UI components here.

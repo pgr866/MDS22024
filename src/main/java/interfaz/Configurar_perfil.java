@@ -1,5 +1,7 @@
 package interfaz;
 
+import org.orm.PersistentException;
+
 import base_de_datos.BDPrincipal;
 import base_de_datos.iIdentificado;
 
@@ -46,8 +48,21 @@ public class Configurar_perfil extends vistas.VistaConfigurarperfil {
 		String email = this.getTextfieldemailconfigurarperfil().getValue();
 		String contrasena = this.getPasswordfieldcontrasenaconfigurarperfil().getValue();
 		String url_foto_perfil = this.getTextfieldurlimagenconfigurarperfil().getValue();
-		String num_tarjeta = this.getTextfieldntarjetaconfigurarperfil().getValue();
-		this.iidentificado.Guardar_cambios(id, nombre, apellidos, nick, email, contrasena, url_foto_perfil, num_tarjeta);
-		this._identificado.Configurar_perfil(); // Refrescar pagina
+		String num_tarjeta = "";
+		if (_identificado instanceof Usuario_Suscrito) num_tarjeta = this.getTextfieldntarjetaconfigurarperfil().getValue();
+		basededatos.Identificado nuevo_identificado = null;
+		try {
+			nuevo_identificado = this.iidentificado.Guardar_cambios(id, nombre, apellidos, nick, email, contrasena, url_foto_perfil, num_tarjeta);
+		} catch (PersistentException e) {
+			e.printStackTrace();
+		}
+		if (nuevo_identificado == null) {
+			this.getLabelerrordatosconfigurarperfil().setText("Correo electrónico / nick ya está en uso");
+		} else {
+			// Refrescar pagina
+			this._identificado.identificado = nuevo_identificado;
+			this._identificado.getImagenconfigurarperfilidentificado().setSrc(this._identificado.identificado.getUrl_foto_perfil());
+			this._identificado.Configurar_perfil(); 
+		}
 	}
 }

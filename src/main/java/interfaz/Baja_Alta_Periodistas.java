@@ -1,5 +1,7 @@
 package interfaz;
 
+import org.orm.PersistentException;
+
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import base_de_datos.BDPrincipal;
 import base_de_datos.iEditor;
@@ -50,14 +52,22 @@ public class Baja_Alta_Periodistas extends vistas.VistaBajaaltaperiodistas {
 		int telefono = Integer.parseInt(this.getTextfieldtelefonodaraltaperiodista().getValue());
 		String fecha_nacimiento = this.getTextfieldfechanacimientodaraltaperiodista().getValue();
 		int id_editor = this._editor.identificado.getId();
-		ieditor.Alta_periodista(nombre, apellidos, nick, contrasena, dni, email, telefono, fecha_nacimiento, id_editor);
+		try {
+			ieditor.Alta_periodista(nombre, apellidos, nick, contrasena, dni, email, telefono, fecha_nacimiento, id_editor);
+		} catch (PersistentException e) {
+			e.printStackTrace();
+		}
 		this._editor.Baja_Alta_Periodistas(); // Refrescar pagina
 	}
 	
 	public void Baja_periodista() {
 		String nick = this._lista_periodistas.getComboboxlistaperiodistas().getValue();
 		int id_editor = this._editor.identificado.getId();
-		ieditor.Baja_Periodista(nick, id_editor);
+		try {
+			ieditor.Baja_Periodista(nick, id_editor);
+		} catch (PersistentException e) {
+			e.printStackTrace();
+		}
 		this._editor.Baja_Alta_Periodistas(); // Refrescar pagina
 	}
 	

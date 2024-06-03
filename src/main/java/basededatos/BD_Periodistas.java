@@ -28,24 +28,37 @@ public class BD_Periodistas {
 		return periodista;
 	}
 
-	public void Guardar_cambios(int aId, String aNombre, String aApellidos, String aNick, String aEmail,
+	public Periodista Guardar_cambios(int aId, String aNombre, String aApellidos, String aNick, String aEmail,
 			String aContrasena, String aUrl_foto_perfil) throws PersistentException {
-		Periodista periodista = null;
+		List<Identificado> identificados = null;
 		PersistentTransaction t = MDS12324PFFornielesGomezPersistentManager.instance().getSession().beginTransaction();
 		try {
-			periodista = PeriodistaDAO.getPeriodistaByORMID(aId);
-			periodista.setNombre(aNombre);
-			periodista.setApellidos(aApellidos);
-			periodista.setNick_apodo(aNick);
-			periodista.setEmail(aEmail);
-			periodista.setContrasena(aContrasena);
-			periodista.setUrl_foto_perfil(aUrl_foto_perfil);
-			PeriodistaDAO.save(periodista);
+			identificados = IdentificadoDAO
+					.queryIdentificado("Email = '" + aEmail + "' OR Nick_apodo = '" + aNick + "'", null);
 			t.commit();
 		} catch (Exception e) {
 			t.rollback();
 		}
-		MDS12324PFFornielesGomezPersistentManager.instance().disposePersistentManager();
+
+		Periodista periodista = null;
+		if (identificados == null) {
+			t = MDS12324PFFornielesGomezPersistentManager.instance().getSession().beginTransaction();
+			try {
+				periodista = PeriodistaDAO.getPeriodistaByORMID(aId);
+				periodista.setNombre(aNombre);
+				periodista.setApellidos(aApellidos);
+				periodista.setNick_apodo(aNick);
+				periodista.setEmail(aEmail);
+				periodista.setContrasena(aContrasena);
+				periodista.setUrl_foto_perfil(aUrl_foto_perfil);
+				PeriodistaDAO.save(periodista);
+				t.commit();
+			} catch (Exception e) {
+				t.rollback();
+			}
+			MDS12324PFFornielesGomezPersistentManager.instance().disposePersistentManager();
+		}
+		return periodista;
 	}
 
 	public Periodista Alta_periodista(String aNombre, String aApellidos, String aNick, String aContrasena, String aDni,
@@ -62,8 +75,7 @@ public class BD_Periodistas {
 
 		Periodista periodista = null;
 		if (identificados == null) {
-			t = MDS12324PFFornielesGomezPersistentManager.instance().getSession()
-					.beginTransaction();
+			t = MDS12324PFFornielesGomezPersistentManager.instance().getSession().beginTransaction();
 			try {
 				periodista = PeriodistaDAO.createPeriodista();
 				periodista.setNombre(aNombre);

@@ -29,11 +29,11 @@ public class Iniciar_Sesion extends VistaIniciarsesion {
 	public void Entrar() {
 		String email = this.getTextfieldemaillogin().getValue();
 		String contrasena = this.getPasswordfieldogin().getValue();
-		basededatos.Identificado usuario;
+		basededatos.Identificado usuario = null;
 		try {
 			usuario = iusuario_no_registrado.Login(email, contrasena);
 		} catch (PersistentException e) {
-			usuario = null;
+			e.printStackTrace();
 		}
 		if (usuario == null)
 			this.getLabelmensajeerrorlogin().setVisible(true);
