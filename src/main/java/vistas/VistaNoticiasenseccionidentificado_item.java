@@ -15,38 +15,6 @@ import com.vaadin.flow.component.html.Label;
 @JsModule("./src/vista-noticiasenseccionidentificado_item.ts")
 public class VistaNoticiasenseccionidentificado_item extends LitTemplate {
 
-	public Element getLayouttitulonoticiasenseccionidentificado() {
-		return layouttitulonoticiasenseccionidentificado;
-	}
-
-	public void setLayouttitulonoticiasenseccionidentificado(Element layouttitulonoticiasenseccionidentificado) {
-		this.layouttitulonoticiasenseccionidentificado = layouttitulonoticiasenseccionidentificado;
-	}
-
-	public Button getTitulonoticiasenseccionidentificado() {
-		return titulonoticiasenseccionidentificado;
-	}
-
-	public void setTitulonoticiasenseccionidentificado(Button titulonoticiasenseccionidentificado) {
-		this.titulonoticiasenseccionidentificado = titulonoticiasenseccionidentificado;
-	}
-
-	public HorizontalLayout getLayoutimagennoticiasenseccionidentificado() {
-		return layoutimagennoticiasenseccionidentificado;
-	}
-
-	public void setLayoutimagennoticiasenseccionidentificado(HorizontalLayout layoutimagennoticiasenseccionidentificado) {
-		this.layoutimagennoticiasenseccionidentificado = layoutimagennoticiasenseccionidentificado;
-	}
-
-	public Image getImagennoticiasenseccionidentificado() {
-		return imagennoticiasenseccionidentificado;
-	}
-
-	public void setImagennoticiasenseccionidentificado(Image imagennoticiasenseccionidentificado) {
-		this.imagennoticiasenseccionidentificado = imagennoticiasenseccionidentificado;
-	}
-
 	public HorizontalLayout getLayoutautorlugarfechanoticiasenseccionidentificado() {
 		return layoutautorlugarfechanoticiasenseccionidentificado;
 	}
@@ -80,21 +48,28 @@ public class VistaNoticiasenseccionidentificado_item extends LitTemplate {
 		this.lugarnoticiasenseccionidentificado = lugarnoticiasenseccionidentificado;
 	}
 
-	public HorizontalLayout getLayoutcontenidonoticiasenseccionidentificado() {
-		return layoutcontenidonoticiasenseccionidentificado;
+	public Element getLayouttitulonoticiasenseccionidentificado() {
+		return layouttitulonoticiasenseccionidentificado;
 	}
 
-	public void setLayoutcontenidonoticiasenseccionidentificado(
-			HorizontalLayout layoutcontenidonoticiasenseccionidentificado) {
-		this.layoutcontenidonoticiasenseccionidentificado = layoutcontenidonoticiasenseccionidentificado;
+	public void setLayouttitulonoticiasenseccionidentificado(Element layouttitulonoticiasenseccionidentificado) {
+		this.layouttitulonoticiasenseccionidentificado = layouttitulonoticiasenseccionidentificado;
 	}
 
-	public TextArea getContenidonoticiasenseccionidentificado() {
-		return contenidonoticiasenseccionidentificado;
+	public Button getTitulonoticiasenseccionidentificado() {
+		return titulonoticiasenseccionidentificado;
 	}
 
-	public void setContenidonoticiasenseccionidentificado(TextArea contenidonoticiasenseccionidentificado) {
-		this.contenidonoticiasenseccionidentificado = contenidonoticiasenseccionidentificado;
+	public void setTitulonoticiasenseccionidentificado(Button titulonoticiasenseccionidentificado) {
+		this.titulonoticiasenseccionidentificado = titulonoticiasenseccionidentificado;
+	}
+
+	public HorizontalLayout getLayoutimagennoticiasenseccionidentificado() {
+		return layoutimagennoticiasenseccionidentificado;
+	}
+
+	public void setLayoutimagennoticiasenseccionidentificado(HorizontalLayout layoutimagennoticiasenseccionidentificado) {
+		this.layoutimagennoticiasenseccionidentificado = layoutimagennoticiasenseccionidentificado;
 	}
 
 	@Id("Layouttitulonoticiasenseccionidentificado")
@@ -103,8 +78,6 @@ public class VistaNoticiasenseccionidentificado_item extends LitTemplate {
 	private Button titulonoticiasenseccionidentificado;
 	@Id("Layoutimagennoticiasenseccionidentificado")
 	private HorizontalLayout layoutimagennoticiasenseccionidentificado;
-	@Id("Imagennoticiasenseccionidentificado")
-	private Image imagennoticiasenseccionidentificado;
 	@Id("Layoutautorlugarfechanoticiasenseccionidentificado")
 	private HorizontalLayout layoutautorlugarfechanoticiasenseccionidentificado;
 	@Id("Fechanoticiasenseccionidentificado")
@@ -113,11 +86,6 @@ public class VistaNoticiasenseccionidentificado_item extends LitTemplate {
 	private Label autornoticiasenseccionidentificado;
 	@Id("Lugarnoticiasenseccionidentificado")
 	private Label lugarnoticiasenseccionidentificado;
-	@Id("Layoutcontenidonoticiasenseccionidentificado")
-	private HorizontalLayout layoutcontenidonoticiasenseccionidentificado;
-	@Id("Contenidonoticiasenseccionidentificado")
-	private TextArea contenidonoticiasenseccionidentificado;
-
 	public VistaNoticiasenseccionidentificado_item() {
         // You can initialise any data required for the connected UI components here.
     }

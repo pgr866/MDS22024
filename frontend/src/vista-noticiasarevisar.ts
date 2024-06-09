@@ -1,7 +1,7 @@
 import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
-import '@vaadin/vaadin-select/src/vaadin-select.js';
-import '@vaadin/vaadin-list-box/src/vaadin-list-box.js';
+import '@vaadin/vaadin-combo-box/src/vaadin-combo-box.js';
+import '@polymer/iron-icon/iron-icon.js';
 
 @customElement('vista-noticiasarevisar')
 export class VistaNoticiasarevisar extends LitElement {
@@ -17,11 +17,9 @@ export class VistaNoticiasarevisar extends LitElement {
   render() {
     return html`
 <vaadin-vertical-layout theme="" style="position: absolute; width: 100%;" id="Layoutnoticiasarevisar">
- <vaadin-select style="width: 100%; height: 100%; flex-shrink: 0;" placeholder="Noticias a revisar" id="Selectnoticiasarevisar" tabindex="">
-  <template>
-   <vaadin-list-box id="Listboxnoticiasarevisar"></vaadin-list-box>
-  </template>
- </vaadin-select>
+ <vaadin-combo-box style="width: 100%; flex-shrink: 0; height: 100%;" placeholder="Noticias a revisar" id="Comboboxnoticiasarevisar">
+  <iron-icon icon="lumo:search" slot="prefix"></iron-icon>
+ </vaadin-combo-box>
 </vaadin-vertical-layout>
 `;
   }

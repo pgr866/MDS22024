@@ -15,40 +15,6 @@ import com.vaadin.flow.component.html.Label;
 @JsModule("./src/vista-noticiasenseccionusuarionoregistrado_item.ts")
 public class VistaNoticiasenseccionusuarionoregistrado_item extends LitTemplate {
 
-	public Element getLayouttitulonoticiasenseccionusuarionoregistrado() {
-		return layouttitulonoticiasenseccionusuarionoregistrado;
-	}
-
-	public void setLayouttitulonoticiasenseccionusuarionoregistrado(
-			Element layouttitulonoticiasenseccionusuarionoregistrado) {
-		this.layouttitulonoticiasenseccionusuarionoregistrado = layouttitulonoticiasenseccionusuarionoregistrado;
-	}
-
-	public Button getTitulonoticiasenseccionusuarionoregistrado() {
-		return titulonoticiasenseccionusuarionoregistrado;
-	}
-
-	public void setTitulonoticiasenseccionusuarionoregistrado(Button titulonoticiasenseccionusuarionoregistrado) {
-		this.titulonoticiasenseccionusuarionoregistrado = titulonoticiasenseccionusuarionoregistrado;
-	}
-
-	public HorizontalLayout getLayoutimagennoticiasenseccionusuarionoregistrado() {
-		return layoutimagennoticiasenseccionusuarionoregistrado;
-	}
-
-	public void setLayoutimagennoticiasenseccionusuarionoregistrado(
-			HorizontalLayout layoutimagennoticiasenseccionusuarionoregistrado) {
-		this.layoutimagennoticiasenseccionusuarionoregistrado = layoutimagennoticiasenseccionusuarionoregistrado;
-	}
-
-	public Image getImagennoticiasenseccionusuarionoregistrado() {
-		return imagennoticiasenseccionusuarionoregistrado;
-	}
-
-	public void setImagennoticiasenseccionusuarionoregistrado(Image imagennoticiasenseccionusuarionoregistrado) {
-		this.imagennoticiasenseccionusuarionoregistrado = imagennoticiasenseccionusuarionoregistrado;
-	}
-
 	public HorizontalLayout getLayoutautorlugarfechanoticiasenseccionusuarionoregistrado() {
 		return layoutautorlugarfechanoticiasenseccionusuarionoregistrado;
 	}
@@ -82,21 +48,38 @@ public class VistaNoticiasenseccionusuarionoregistrado_item extends LitTemplate 
 		this.lugarnoticiasenseccionusuarionoregistrado = lugarnoticiasenseccionusuarionoregistrado;
 	}
 
-	public HorizontalLayout getLayoutcontenidonoticiasenseccionusuarionoregistrado() {
-		return layoutcontenidonoticiasenseccionusuarionoregistrado;
+	public Element getLayoutnoticiasenseccionusuarionoregistrado() {
+		return layoutnoticiasenseccionusuarionoregistrado;
 	}
 
-	public void setLayoutcontenidonoticiasenseccionusuarionoregistrado(
-			HorizontalLayout layoutcontenidonoticiasenseccionusuarionoregistrado) {
-		this.layoutcontenidonoticiasenseccionusuarionoregistrado = layoutcontenidonoticiasenseccionusuarionoregistrado;
+	public void setLayoutnoticiasenseccionusuarionoregistrado(Element layoutnoticiasenseccionusuarionoregistrado) {
+		this.layoutnoticiasenseccionusuarionoregistrado = layoutnoticiasenseccionusuarionoregistrado;
 	}
 
-	public TextArea getContenidonoticiasenseccionusuarionoregistrado() {
-		return contenidonoticiasenseccionusuarionoregistrado;
+	public Element getLayouttitulonoticiasenseccionusuarionoregistrado() {
+		return layouttitulonoticiasenseccionusuarionoregistrado;
 	}
 
-	public void setContenidonoticiasenseccionusuarionoregistrado(TextArea contenidonoticiasenseccionusuarionoregistrado) {
-		this.contenidonoticiasenseccionusuarionoregistrado = contenidonoticiasenseccionusuarionoregistrado;
+	public void setLayouttitulonoticiasenseccionusuarionoregistrado(
+			Element layouttitulonoticiasenseccionusuarionoregistrado) {
+		this.layouttitulonoticiasenseccionusuarionoregistrado = layouttitulonoticiasenseccionusuarionoregistrado;
+	}
+
+	public Button getTitulonoticiasenseccionusuarionoregistrado() {
+		return titulonoticiasenseccionusuarionoregistrado;
+	}
+
+	public void setTitulonoticiasenseccionusuarionoregistrado(Button titulonoticiasenseccionusuarionoregistrado) {
+		this.titulonoticiasenseccionusuarionoregistrado = titulonoticiasenseccionusuarionoregistrado;
+	}
+
+	public HorizontalLayout getLayoutimagennoticiasenseccionusuarionoregistrado() {
+		return layoutimagennoticiasenseccionusuarionoregistrado;
+	}
+
+	public void setLayoutimagennoticiasenseccionusuarionoregistrado(
+			HorizontalLayout layoutimagennoticiasenseccionusuarionoregistrado) {
+		this.layoutimagennoticiasenseccionusuarionoregistrado = layoutimagennoticiasenseccionusuarionoregistrado;
 	}
 
 	@Id("Layouttitulonoticiasenseccionusuarionoregistrado")
@@ -105,8 +88,8 @@ public class VistaNoticiasenseccionusuarionoregistrado_item extends LitTemplate 
 	private Button titulonoticiasenseccionusuarionoregistrado;
 	@Id("Layoutimagennoticiasenseccionusuarionoregistrado")
 	private HorizontalLayout layoutimagennoticiasenseccionusuarionoregistrado;
-	@Id("Imagennoticiasenseccionusuarionoregistrado")
-	private Image imagennoticiasenseccionusuarionoregistrado;
+	@Id("Layoutnoticiasenseccionusuarionoregistrado")
+	private Element layoutnoticiasenseccionusuarionoregistrado;
 	@Id("Layoutautorlugarfechanoticiasenseccionusuarionoregistrado")
 	private HorizontalLayout layoutautorlugarfechanoticiasenseccionusuarionoregistrado;
 	@Id("Fechanoticiasenseccionusuarionoregistrado")
@@ -115,10 +98,6 @@ public class VistaNoticiasenseccionusuarionoregistrado_item extends LitTemplate 
 	private Label autornoticiasenseccionusuarionoregistrado;
 	@Id("Lugarnoticiasenseccionusuarionoregistrado")
 	private Label lugarnoticiasenseccionusuarionoregistrado;
-	@Id("Layoutcontenidonoticiasenseccionusuarionoregistrado")
-	private HorizontalLayout layoutcontenidonoticiasenseccionusuarionoregistrado;
-	@Id("Contenidonoticiasenseccionusuarionoregistrado")
-	private TextArea contenidonoticiasenseccionusuarionoregistrado;
 
 	public VistaNoticiasenseccionusuarionoregistrado_item() {
         // You can initialise any data required for the connected UI components here.

@@ -13,6 +13,12 @@ import com.vaadin.flow.component.html.Image;
 @JsModule("./src/vista-usuarionoregistrado.ts")
 public class VistaUsuarionoregistrado extends LitTemplate {
 
+	public Element getLayoutexplorarseccionesnoregistrado1() {
+		return layoutexplorarseccionesnoregistrado1;
+	}
+	public void setLayoutexplorarseccionesnoregistrado1(Element layoutexplorarseccionesnoregistrado1) {
+		this.layoutexplorarseccionesnoregistrado1 = layoutexplorarseccionesnoregistrado1;
+	}
 	public HorizontalLayout getBarrabusquedanoregistrado() {
 		return barrabusquedanoregistrado;
 	}
@@ -30,12 +36,6 @@ public class VistaUsuarionoregistrado extends LitTemplate {
 	}
 	public void setFotologonoregistrado(Image fotologonoregistrado) {
 		this.fotologonoregistrado = fotologonoregistrado;
-	}
-	public HorizontalLayout getLayoutexplorarseccionesnoregistrado() {
-		return layoutexplorarseccionesnoregistrado;
-	}
-	public void setLayoutexplorarseccionesnoregistrado(HorizontalLayout layoutexplorarseccionesnoregistrado) {
-		this.layoutexplorarseccionesnoregistrado = layoutexplorarseccionesnoregistrado;
 	}
 	public Button getExplorarseccionesnoregistrado() {
 		return explorarseccionesnoregistrado;
@@ -83,8 +83,6 @@ public class VistaUsuarionoregistrado extends LitTemplate {
 	private Button logonoregistrado;
 	@Id("Fotologonoregistrado")
 	private Image fotologonoregistrado;
-	@Id("Layoutexplorarseccionesnoregistrado")
-	private HorizontalLayout layoutexplorarseccionesnoregistrado;
 	@Id("Explorarseccionesnoregistrado")
 	private Button explorarseccionesnoregistrado;
 	@Id("Layoutiniciarsesion")
@@ -101,6 +99,8 @@ public class VistaUsuarionoregistrado extends LitTemplate {
 	private Element layoutanuncioderechausuarionoregistrado;
 	@Id("Barrabusquedanoregistrado")
 	private HorizontalLayout barrabusquedanoregistrado;
+	@Id("Layoutexplorarseccionesnoregistrado1")
+	private Element layoutexplorarseccionesnoregistrado1;
 	public VistaUsuarionoregistrado() {
         // You can initialise any data required for the connected UI components here.
     }

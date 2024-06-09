@@ -63,12 +63,12 @@ public class BDPrincipal implements iEditor, iGestor_de_correo, iGestor_de_pago,
 		_bd_periodistas.Baja_Periodista(aNick, aId_editor);
 	}
 
-	public Identificado Guardar_cambios(int aId, String aNombre, String aApellidos, String aNick, String aEmail, String aContrasena, String aUrl_foto_perfil, String aNum_tarjeta) throws PersistentException {
-		Usuario_suscrito suscrito = _bd_usuarios_suscritos.Guardar_cambios(aId, aNombre, aApellidos, aNick, aEmail, aContrasena, aUrl_foto_perfil, aNum_tarjeta);
+	public Identificado Guardar_cambios(int aId, String aNombre, String aApellidos, String aNick, String aEmail, String aContrasena, String aUrl_foto_perfil, int aTelefono, String aNum_tarjeta) throws PersistentException {
+		Usuario_suscrito suscrito = _bd_usuarios_suscritos.Guardar_cambios(aId, aNombre, aApellidos, aNick, aEmail, aContrasena, aUrl_foto_perfil, aTelefono, aNum_tarjeta);
 		if (suscrito != null) return suscrito;
-		Periodista periodista = _bd_periodistas.Guardar_cambios(aId, aNombre, aApellidos, aNick, aEmail, aContrasena, aUrl_foto_perfil); 
+		Periodista periodista = _bd_periodistas.Guardar_cambios(aId, aNombre, aApellidos, aNick, aEmail, aContrasena, aUrl_foto_perfil, aTelefono); 
 		if (periodista != null) return periodista;
-		Editor editor =_bd_editores.Guardar_cambios(aId, aNombre, aApellidos, aNick, aEmail, aContrasena, aUrl_foto_perfil); 
+		Editor editor =_bd_editores.Guardar_cambios(aId, aNombre, aApellidos, aNick, aEmail, aContrasena, aUrl_foto_perfil, aTelefono); 
 		if (editor != null) return editor;
 		return null;
 	}
@@ -110,12 +110,12 @@ public class BDPrincipal implements iEditor, iGestor_de_correo, iGestor_de_pago,
 		return null;
 	}
 
-	public Usuario_suscrito Registrarse(String aEmail, String aNombre, String aApellidos, String aFecha_nacimiento, String aNick, String aDni, String aNum_tarjeta, String aContrasena) throws PersistentException {
-		return _bd_usuarios_suscritos.Registrarse(aEmail, aNombre, aApellidos, aFecha_nacimiento, aNick, aDni, aNum_tarjeta, aContrasena);
+	public Usuario_suscrito Registrarse(String aEmail, String aNombre, String aApellidos, String aFecha_nacimiento, String aNick, String aDni, String aNum_tarjeta, int aTelefono, String aContrasena) throws PersistentException {
+		return _bd_usuarios_suscritos.Registrarse(aEmail, aNombre, aApellidos, aFecha_nacimiento, aNick, aDni, aNum_tarjeta, aTelefono, aContrasena);
 	}
 
 	public Noticia Crear_noticia(String aTitulo, String aUrl_imagen, String aContenido, String aFecha, String aLugar, String aTematicas, int aId_periodista) throws PersistentException {
-		return _bd_noticias.Crear_noticia(aTitulo, aUrl_imagen, aContenido, aFecha, aLugar, aTematicas, aId_periodista);
+		return _bd_noticias.Crear_noticia(aTitulo, aUrl_imagen, aContenido, aFecha, aLugar, aTematicas, aId_periodista, _bd_tematicas);
 	}
 
 	public Noticia Eliminar_comentario(int aId_comentario, int aId_editor) throws PersistentException {

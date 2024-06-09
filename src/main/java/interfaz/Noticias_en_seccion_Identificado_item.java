@@ -1,5 +1,6 @@
 package interfaz;
 
+import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 import vistas.VistaNoticiasenseccionidentificado_item;
@@ -20,14 +21,20 @@ public class Noticias_en_seccion_Identificado_item extends VistaNoticiasenseccio
 			basededatos.Noticia noticia) {
 		super();
 		this._noticias_en_seccion_Identificado = _noticias_en_seccion_Identificado;
-		this.getTitulonoticiasenseccionidentificado().addClickListener(event->Pagina_noticia_Identificado());
+		if (!(this._noticias_en_seccion_Identificado._explorar_secciones_Identificado._identificado instanceof Editor))
+			this.getTitulonoticiasenseccionidentificado().addClickListener(event->Pagina_noticia_Identificado());
 		this.noticia = noticia;
-		this.getTitulonoticiasenseccionidentificado().setText(noticia.getTitulo());;
-		this.getImagennoticiasenseccionidentificado().setSrc(noticia.getUrl_imagen_noticia());
+		this.getTitulonoticiasenseccionidentificado().setText(noticia.getTitulo());
+		
+		Image foto = new Image(noticia.getUrl_imagen_noticia(), "fotonoticiaseccion");
+		foto.setWidth("400px");
+		foto.setHeight("260px");
+		this.getLayoutimagennoticiasenseccionidentificado().removeAll();
+		this.getLayoutimagennoticiasenseccionidentificado().add(foto);
+		
 		this.getFechanoticiasenseccionidentificado().setText(noticia.getFecha());
 		this.getAutornoticiasenseccionidentificado().setText(noticia.getCrea().getNombre() + " " + noticia.getCrea().getApellidos());
 		this.getLugarnoticiasenseccionidentificado().setText(noticia.getLugar());
-		this.getContenidonoticiasenseccionidentificado().setValue(noticia.getResumen());;
 	}
 	
 	public void Pagina_noticia_Identificado() {

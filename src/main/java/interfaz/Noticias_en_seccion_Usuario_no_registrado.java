@@ -1,7 +1,10 @@
 package interfaz;
 
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Vector;
 
+import basededatos.Noticia;
 import vistas.VistaNoticiasenseccionusuarionoregistrado;
 
 public class Noticias_en_seccion_Usuario_no_registrado extends VistaNoticiasenseccionusuarionoregistrado {
@@ -18,11 +21,18 @@ public class Noticias_en_seccion_Usuario_no_registrado extends VistaNoticiasense
 		for (Secciones_Usuario_no_registrado_item seccion : this._explorar_secciones_Usuario_no_registrado._secciones_Usuario_no_registrado._item) {
 			if (seccion.seccion
 					.getTitulo_seccion() == this._explorar_secciones_Usuario_no_registrado._secciones_Usuario_no_registrado
-							.getDesplegableseccionesusuarionoregistrado().getValue()) {
+							.getComboboxseccionesusuarionoregistrado().getValue()) {
 				noticias_seccion = seccion.seccion.aparece_en.toArray();
 				break;
 			}
 		}
+		
+		Arrays.sort(noticias_seccion, new Comparator<Noticia>() {
+			@Override
+			public int compare(Noticia c1, Noticia c2) {
+				return Integer.compare(c2.getId_noticia(), c1.getId_noticia());
+			}
+		});
 
 		for (int i = 0; i < noticias_seccion.length; i++) {
 			if (noticias_seccion[i].getElimina_noticia() == null) {

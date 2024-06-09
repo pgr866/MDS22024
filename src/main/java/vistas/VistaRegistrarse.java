@@ -15,6 +15,30 @@ import com.vaadin.flow.dom.Element;
 @JsModule("./src/vista-registrarse.ts")
 public class VistaRegistrarse extends LitTemplate {
 
+	public HorizontalLayout getLayouttelefonoregistrarse() {
+		return layouttelefonoregistrarse;
+	}
+
+	public void setLayouttelefonoregistrarse(HorizontalLayout layouttelefonoregistrarse) {
+		this.layouttelefonoregistrarse = layouttelefonoregistrarse;
+	}
+
+	public Label getLabeltelefonoregistrarse() {
+		return labeltelefonoregistrarse;
+	}
+
+	public void setLabeltelefonoregistrarse(Label labeltelefonoregistrarse) {
+		this.labeltelefonoregistrarse = labeltelefonoregistrarse;
+	}
+
+	public TextField getTextfieldtelefonoregistrarse() {
+		return textfieldtelefonoregistrarse;
+	}
+
+	public void setTextfieldtelefonoregistrarse(TextField textfieldtelefonoregistrarse) {
+		this.textfieldtelefonoregistrarse = textfieldtelefonoregistrarse;
+	}
+
 	public HorizontalLayout getLayoutcancelarenviarregistrarse() {
 		return layoutcancelarenviarregistrarse;
 	}
@@ -345,6 +369,12 @@ public class VistaRegistrarse extends LitTemplate {
 	private HorizontalLayout layoutrepetircontrasenaregistrarse;
 	@Id("Layoutcancelarenviarregistrarse")
 	private HorizontalLayout layoutcancelarenviarregistrarse;
+	@Id("Layouttelefonoregistrarse")
+	private HorizontalLayout layouttelefonoregistrarse;
+	@Id("Labeltelefonoregistrarse")
+	private Label labeltelefonoregistrarse;
+	@Id("Textfieldtelefonoregistrarse")
+	private TextField textfieldtelefonoregistrarse;
 	public VistaRegistrarse() {
         // You can initialise any data required for the connected UI components here.
     }

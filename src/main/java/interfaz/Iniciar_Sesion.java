@@ -21,7 +21,6 @@ public class Iniciar_Sesion extends VistaIniciarsesion {
 	public Iniciar_Sesion(Usuario_no_Registrado _usuario_no_Registrado) {
 		super();
 		this._usuario_no_Registrado = _usuario_no_Registrado;
-		this.getLabelmensajeerrorlogin().setVisible(false);
 		this.getButtonentrarlogin().addClickListener(event->Entrar());
 		this.getButtonregistrarselogin().addClickListener(event->Registrarse());
 	}
@@ -36,7 +35,7 @@ public class Iniciar_Sesion extends VistaIniciarsesion {
 			e.printStackTrace();
 		}
 		if (usuario == null)
-			this.getLabelmensajeerrorlogin().setVisible(true);
+			this.getLabelmensajeerrorlogin().setText("Email o contraseña erróneos, inténtelo de nuevo");
 		else if (usuario instanceof basededatos.Usuario_suscrito) {
 			this._usuario_no_Registrado.mainview._usuario_suscrito = new Usuario_Suscrito(this._usuario_no_Registrado.mainview, (basededatos.Usuario_suscrito) usuario);
 			this._usuario_no_Registrado.mainview.removeAll();

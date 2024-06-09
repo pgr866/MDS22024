@@ -24,6 +24,7 @@ public class Explorar_secciones_Identificado extends VistaExplorarseccionesident
 	}
 	
 	public void Noticias_en_seccion_Identificado() {
+		this.getLayoutvistasnoticiasenseccionexplorarseccionesidentificado().removeAll();
 		this.getLayoutvistasnoticiasenseccionexplorarseccionesidentificado().add(_noticias_en_seccion_Identificado);
 	}
 	

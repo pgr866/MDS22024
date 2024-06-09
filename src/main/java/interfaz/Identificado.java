@@ -2,14 +2,18 @@ package interfaz;
 
 import vistas.VistaIdentificado;
 
+import com.vaadin.flow.component.UI;
+import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.server.Command;
 
 import proyectoMDS.MainView;
 
 //import basededatos.iIdentificado;
 
 public class Identificado extends VistaIdentificado {
-	
+
 //	public iIdentificado _iIdentificado;
 	public Listado_noticias_portada_Identificado _listado_noticias_portada_Identificado;
 	public Listado_noticias_busqueda_Identificado _listado_noticias_busqueda_Identificado;
@@ -17,8 +21,9 @@ public class Identificado extends VistaIdentificado {
 	public Log_out _log_out;
 	public Configurar_perfil _configurar_perfil;
 	basededatos.Identificado identificado;
-	
+
 	public MainView mainview;
+
 	public Identificado(MainView mainview, basededatos.Identificado identificado) {
 		this.mainview = mainview;
 		this.getLayoutbuscareditor().setVisible(false);
@@ -28,18 +33,25 @@ public class Identificado extends VistaIdentificado {
 		Listado_noticias_portada_Identificado();
 		Listado_noticias_busqueda_Identificado();
 		Log_out();
-		this.getExplorarseccionesidentificado().addClickListener(event->Explorar_secciones_Identificado());
-		this.getConfigurarperfilidentificado().addClickListener(event->Configurar_perfil());
 		this.identificado = identificado;
-		this.getImagenconfigurarperfilidentificado().setSrc(identificado.getUrl_foto_perfil());
-		this.getButtonlogoidentificado().addClickListener(event->{
+		
+		Image foto = new Image(identificado.getUrl_foto_perfil(), "fotoconfigurarperfil");
+		foto.setWidth("50px");
+		foto.setHeight("50px");
+		this.getConfigurarperfilidentificado().getElement().removeAllChildren();
+		this.getConfigurarperfilidentificado().getElement().appendChild(foto.getElement());
+		
+		this.getExplorarseccionesidentificado().addClickListener(event -> Explorar_secciones_Identificado());
+		this.getConfigurarperfilidentificado().addClickListener(event -> Configurar_perfil());
+		this.getButtonlogoidentificado().addClickListener(event -> {
 			this.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).removeAll();
 			Listado_noticias_portada_Identificado();
 		});
 	}
 
 	public void Listado_noticias_portada_Identificado() {
-		this.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).add(_listado_noticias_portada_Identificado);
+		this.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class)
+				.add(_listado_noticias_portada_Identificado);
 	}
 
 	public void Listado_noticias_busqueda_Identificado() {

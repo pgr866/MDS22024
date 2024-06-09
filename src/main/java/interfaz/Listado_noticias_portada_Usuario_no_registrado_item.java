@@ -1,5 +1,6 @@
 package interfaz;
 
+import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 import vistas.VistaListadonoticiasportadausuarionoregistrado_item;
@@ -14,14 +15,18 @@ public class Listado_noticias_portada_Usuario_no_registrado_item extends VistaLi
 			basededatos.Noticia noticia) {
 		super();
 		this._listado_noticias_portada_Usuario_no_registrado = _listado_noticias_portada_Usuario_no_registrado;
-		this.getLayouttitulonoticiaordenarportadausuarionoregistrado().setVisible(false);
 		this.noticia = noticia;
 		this.getTitulolistadonoticiasportadausuarionoregistrado().setText(noticia.getTitulo());
-		this.getImagenlistadonoticiasportadausuarionoregistrado().setSrc(noticia.getUrl_imagen_noticia());
+		
+		Image foto = new Image(noticia.getUrl_imagen_noticia(), "fotonoticiaportada");
+		foto.setWidth("380px");
+		foto.setHeight("250px");
+		this.getLayoutimagenlistadonoticiasportadausuarionoregistrado().removeAll();
+		this.getLayoutimagenlistadonoticiasportadausuarionoregistrado().add(foto);
+		
 		this.getLabelfechalistadonoticiasportadausuarionoregistrado().setText(noticia.getFecha());
 		this.getLabelautorlistadonoticiasportadausuarionoregistrado().setText(noticia.getCrea().getNombre() + " " + noticia.getCrea().getApellidos());
 		this.getLabellugarlistadonoticiasportadausuarionoregistrado().setText(noticia.getLugar());
-		this.getTextarearesumenlistadonoticiasportadausuarionoregistrado().setValue(noticia.getResumen());
 		this.getTitulolistadonoticiasportadausuarionoregistrado().addClickListener(event->Pagina_noticia_Usuario_no_registrado());
 	}
 

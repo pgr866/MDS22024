@@ -1,7 +1,7 @@
 import { LitElement, html, css, customElement } from 'lit-element';
+import '@vaadin/vaadin-combo-box/src/vaadin-combo-box.js';
+import '@polymer/iron-icon/iron-icon.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
-import '@vaadin/vaadin-select/src/vaadin-select.js';
-import '@vaadin/vaadin-list-box/src/vaadin-list-box.js';
 
 @customElement('vista-seccionesidentificado')
 export class VistaSeccionesidentificado extends LitElement {
@@ -16,12 +16,10 @@ export class VistaSeccionesidentificado extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout theme="" style="position: absolute; width: 100%; height: 100%;" id="Layoutseccionesidentificado">
- <vaadin-select style="width: 100%; flex-shrink: 0; flex-grow: 0; height: 100%;" id="Desplegableseccionesidentificado" placeholder="Selecciona una sección" dir="Selectsecciones">
-  <template>
-   <vaadin-list-box selected="0" id="Listboxseccionesidentificado" value=""></vaadin-list-box>
-  </template>
- </vaadin-select>
+<vaadin-vertical-layout theme="" style="position: absolute; width: 100%;" id="Layoutseccionesidentificado">
+ <vaadin-combo-box style="width: 100%; flex-shrink: 0; height: 100%; padding: 0;" placeholder="Busque una Sección" id="Comboboxseccionesidentificado">
+  <iron-icon icon="lumo:search" slot="prefix"></iron-icon>
+ </vaadin-combo-box>
 </vaadin-vertical-layout>
 `;
   }

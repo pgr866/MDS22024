@@ -14,7 +14,15 @@ import com.vaadin.flow.component.button.Button;
 @JsModule("./src/vista-bajaaltaperiodistas.ts")
 public class VistaBajaaltaperiodistas extends LitTemplate {
 
-    public HorizontalLayout getContrasenafehcanacimientodaraltaperiodista() {
+    public Label getLabelerrordatosaltaperiodista() {
+		return labelerrordatosaltaperiodista;
+	}
+
+	public void setLabelerrordatosaltaperiodista(Label labelerrordatosaltaperiodista) {
+		this.labelerrordatosaltaperiodista = labelerrordatosaltaperiodista;
+	}
+
+	public HorizontalLayout getContrasenafehcanacimientodaraltaperiodista() {
 		return contrasenafehcanacimientodaraltaperiodista;
 	}
 
@@ -294,6 +302,8 @@ public class VistaBajaaltaperiodistas extends LitTemplate {
 	private TextField textfieldcontrasenadaraltaperiodista;
 	@Id("Textfieldfechanacimientodaraltaperiodista")
 	private TextField textfieldfechanacimientodaraltaperiodista;
+	@Id("Labelerrordatosaltaperiodista")
+	private Label labelerrordatosaltaperiodista;
 
 	public VistaBajaaltaperiodistas() {
         // You can initialise any data required for the connected UI components here.

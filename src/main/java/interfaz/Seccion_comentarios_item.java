@@ -1,5 +1,6 @@
 package interfaz;
 
+import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 import vistas.VistaSeccioncomentarios_item;
@@ -16,12 +17,18 @@ public class Seccion_comentarios_item extends VistaSeccioncomentarios_item {
 		super();
 		this._seccion_comentarios = _seccion_comentarios;
 		this.comentario = comentario;
+		if (!(this instanceof Seccion_comentarios_Editor_item)) this.getLayoutborrarcomentarioseccioncomentariositem().setVisible(false);
 		this._mostrar_comentario = new Mostrar_comentario(this, comentario);
 		this._mostrar_valoracion_comentario = new Mostrar_valoracion_comentario(this, comentario);
-		this.getLayoutborrarcomentarioseccioncomentariositem().setVisible(false);
 		Mostrar_comentario();
 		Mostrar_valoracion_comentario();
-	    this.getFotousuarioseccioncomentariositem().setSrc(comentario.getEscribe().getUrl_foto_perfil());
+
+		Image foto = new Image(comentario.getEscribe().getUrl_foto_perfil(), "fotocomentario");
+		foto.setWidth("100px");
+        foto.setHeight("100px");
+		this.getLayoutfotousuarioseccioncomentariositem().as(VerticalLayout.class).removeAll();
+		this.getLayoutfotousuarioseccioncomentariositem().as(VerticalLayout.class).add(foto);
+		
 	    this.getLabelnickusuarioseccioncomentariositem().setText(comentario.getEscribe().getNick_apodo());
 	}
 

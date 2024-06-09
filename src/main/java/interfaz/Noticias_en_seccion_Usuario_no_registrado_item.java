@@ -1,5 +1,6 @@
 package interfaz;
 
+import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 import vistas.VistaNoticiasenseccionusuarionoregistrado_item;
@@ -23,12 +24,17 @@ public class Noticias_en_seccion_Usuario_no_registrado_item extends VistaNoticia
 		this._noticias_en_seccion_Usuario_no_registrado = _noticias_en_seccion_Usuario_no_registrado;
 		this.getTitulonoticiasenseccionusuarionoregistrado().addClickListener(event->Pagina_noticia_Usuario_no_registrado());
 		this.noticia = noticia;
-		this.getTitulonoticiasenseccionusuarionoregistrado().setText(noticia.getTitulo());;
-		this.getImagennoticiasenseccionusuarionoregistrado().setSrc(noticia.getUrl_imagen_noticia());
+		this.getTitulonoticiasenseccionusuarionoregistrado().setText(noticia.getTitulo());
+		
+		Image foto = new Image(noticia.getUrl_imagen_noticia(), "fotonoticiaseccion");
+		foto.setWidth("380px");
+		foto.setHeight("250px");
+		this.getLayoutimagennoticiasenseccionusuarionoregistrado().removeAll();
+		this.getLayoutimagennoticiasenseccionusuarionoregistrado().add(foto);
+		
 		this.getFechanoticiasenseccionusuarionoregistrado().setText(noticia.getFecha());
 		this.getAutornoticiasenseccionusuarionoregistrado().setText(noticia.getCrea().getNombre() + " " + noticia.getCrea().getApellidos());
 		this.getLugarnoticiasenseccionusuarionoregistrado().setText(noticia.getLugar());
-		this.getContenidonoticiasenseccionusuarionoregistrado().setValue(noticia.getResumen());;
 	}
 
 	public void Pagina_noticia_Usuario_no_registrado() {

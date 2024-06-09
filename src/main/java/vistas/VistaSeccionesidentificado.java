@@ -6,17 +6,18 @@ import com.vaadin.flow.component.littemplate.LitTemplate;
 import com.vaadin.flow.dom.Element;
 import com.vaadin.flow.component.template.Id;
 import com.vaadin.flow.component.select.Select;
+import com.vaadin.flow.component.combobox.ComboBox;
 
 @Tag("vista-seccionesidentificado")
 @JsModule("./src/vista-seccionesidentificado.ts")
 public class VistaSeccionesidentificado extends LitTemplate {
 
-	public Element getListboxseccionesidentificado() {
-		return listboxseccionesidentificado;
+	public ComboBox<String> getComboboxseccionesidentificado() {
+		return comboboxseccionesidentificado;
 	}
 
-	public void setListboxseccionesidentificado(Element listboxseccionesidentificado) {
-		this.listboxseccionesidentificado = listboxseccionesidentificado;
+	public void setComboboxseccionesidentificado(ComboBox<String> comboboxseccionesidentificado) {
+		this.comboboxseccionesidentificado = comboboxseccionesidentificado;
 	}
 
 	public Element getLayoutseccionesidentificado() {
@@ -27,20 +28,10 @@ public class VistaSeccionesidentificado extends LitTemplate {
 		this.layoutseccionesidentificado = layoutseccionesidentificado;
 	}
 
-	public Select getDesplegableseccionesidentificado() {
-		return desplegableseccionesidentificado;
-	}
-
-	public void setDesplegableseccionesidentificado(Select desplegableseccionesidentificado) {
-		this.desplegableseccionesidentificado = desplegableseccionesidentificado;
-	}
-
 	@Id("Layoutseccionesidentificado")
 	private Element layoutseccionesidentificado;
-	@Id("Desplegableseccionesidentificado")
-	private Select desplegableseccionesidentificado;
-	@Id("Listboxseccionesidentificado")
-	private Element listboxseccionesidentificado;
+	@Id("Comboboxseccionesidentificado")
+	private ComboBox<String> comboboxseccionesidentificado;
 	public VistaSeccionesidentificado() {
         // You can initialise any data required for the connected UI components here.
     }

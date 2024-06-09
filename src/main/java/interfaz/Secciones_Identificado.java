@@ -22,14 +22,17 @@ public class Secciones_Identificado extends VistaSeccionesidentificado {
 		this._explorar_secciones_Identificado = _explorar_secciones_Identificado;
 		try {
 			basededatos.Seccion[] secciones = iidentificado.Cargar_secciones();
-//			Vector<String> titulos = new Vector<String>();
+			Vector<String> titulos = new Vector<String>();
 			for (int i = 0; i < secciones.length; i++) {
 				Secciones_Identificado_item item = new Secciones_Identificado_item(this, secciones[i]);
 				this._item.add(item);
-				this.getListboxseccionesidentificado().as(MultiSelectListBox.class).add(item);
-//				titulos.add(secciones[i].getTitulo_seccion());
+				titulos.add(secciones[i].getTitulo_seccion());
 			}
-//			this.getDesplegableseccionesidentificado().setItems(titulos); // si no funciona probar con _item
+			this.getComboboxseccionesidentificado().setItems(titulos);
+			this.getComboboxseccionesidentificado().addValueChangeListener(event -> {
+				this._explorar_secciones_Identificado._noticias_en_seccion_Identificado = new Noticias_en_seccion_Identificado(this._explorar_secciones_Identificado);
+				this._explorar_secciones_Identificado.Noticias_en_seccion_Identificado();
+			});
 		} catch (PersistentException e) {
 			e.printStackTrace();
 		}
@@ -46,7 +49,7 @@ public class Secciones_Identificado extends VistaSeccionesidentificado {
 				this._item.add(item);
 				titulos.add(secciones[i].getTitulo_seccion());
 			}
-			this.getDesplegableseccionesidentificado().setItems(titulos); // si no funciona probar con _item
+			this.getComboboxseccionesidentificado().setItems(titulos);
 		} catch (PersistentException e) {
 			e.printStackTrace();
 		}

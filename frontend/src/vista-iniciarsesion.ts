@@ -18,12 +18,12 @@ export class VistaIniciarsesion extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; padding-top: var(--lumo-space-m); padding-right: var(--lumo-space-m); padding-bottom: var(--lumo-space-m); padding-left: var(--lumo-space-m); position: absolute;">
+<vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; padding-top: var(--lumo-space-m); padding-right: var(--lumo-space-m); padding-bottom: var(--lumo-space-m); padding-left: var(--lumo-space-m); position: absolute;" theme="spacing-xl">
  <vaadin-horizontal-layout id="Layoutlogin" style="width: 100%; flex-shrink: 0; flex-grow: 0; justify-content: center;">
   <label style="flex-shrink: 0; font-size: 400%; flex-grow: 0;" id="Labellogin">Iniciar sesión</label>
  </vaadin-horizontal-layout>
- <vaadin-vertical-layout style="flex-shrink: 0; align-self: center; width: 60%; flex-grow: 0; justify-content: space-evenly; height: 50%; padding-top: var(--lumo-space-xl);" id="Layoutopcioneslogin">
-  <vaadin-vertical-layout style="width: 100%; flex-shrink: 0;">
+ <vaadin-vertical-layout style="flex-shrink: 0; align-self: center; width: 60%; flex-grow: 0; justify-content: space-evenly;" id="Layoutopcioneslogin" theme="spacing-l">
+  <vaadin-vertical-layout style="width: 100%; flex-shrink: 0;" theme="spacing">
    <vaadin-horizontal-layout style="width: 100%; flex-shrink: 0;" id="Layoutemaillogin">
     <label style="width: 35%; flex-shrink: 0; align-self: center; font-size: 120%;" id="Labelemaillogin">Email </label>
     <vaadin-text-field placeholder="Email" id="Textfieldemaillogin" style="flex-shrink: 0; width: 50%;"></vaadin-text-field>
@@ -33,13 +33,13 @@ export class VistaIniciarsesion extends LitElement {
     <vaadin-password-field placeholder="Contraseña" style="flex-shrink: 0; width: 50%;" has-value id="Passwordfieldogin"></vaadin-password-field>
    </vaadin-horizontal-layout>
    <vaadin-horizontal-layout style="width: 100%; flex-shrink: 1; justify-content: center; flex-direction: column;" id="Layoutmensajeerrorlogin">
-    <label style="flex-shrink: 0; font-size: 120%; width: 100%; align-self: center; font-size: 100%; text-align: center; color: #FF0000;" id="Labelmensajeerrorlogin">Email y contraseña no coinciden, inténtelo de nuevo</label>
+    <label style="flex-shrink: 0; font-size: 120%; width: 100%; align-self: center; font-size: 100%; text-align: center; color: #FF0000;" id="Labelmensajeerrorlogin"></label>
    </vaadin-horizontal-layout>
   </vaadin-vertical-layout>
   <vaadin-button style="flex-shrink: 0; align-self: center; width: 20%;" id="Buttonentrarlogin">
     Entrar 
   </vaadin-button>
-  <vaadin-horizontal-layout style="flex-shrink: 0; width: 100%; justify-content: space-around; padding-top: var(--lumo-space-l);" id="Layoutregistrarselogin">
+  <vaadin-horizontal-layout style="flex-shrink: 0; width: 100%; justify-content: space-around;" id="Layoutregistrarselogin">
    <label style="flex-shrink: 0; font-size: 150%;" id="Labelnoestasregistrado">¿No estas registrado?</label>
    <vaadin-button style="flex-shrink: 0; align-self: center; width: 40%;" id="Buttonregistrarselogin">
      Registrarse 

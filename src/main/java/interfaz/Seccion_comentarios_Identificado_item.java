@@ -28,15 +28,14 @@ public class Seccion_comentarios_Identificado_item extends Seccion_comentarios_i
 		int id_identificado = this.identificado.getId();
 		try {
 			basededatos.Noticia noticia = iidentificado.Valorar_comentario(id_comentario, id_identificado, positiva);
-			// Refrescar pagina
-			if (identificado instanceof basededatos.Editor) {
-				((Seccion_comentarios_Editor) this._seccion_comentarios)._pagina_noticia_Editor.noticia = noticia;
-				this._seccion_comentarios = new Seccion_comentarios_Identificado(((Seccion_comentarios_Editor) this._seccion_comentarios)._pagina_noticia_Editor);
-				((Seccion_comentarios_Editor) this._seccion_comentarios)._pagina_noticia_Editor.Seccion_comentarios_Editor();
-			} else {
-				((Seccion_comentarios_Identificado) this._seccion_comentarios)._pagina_noticia_Identificado.noticia = noticia;
-				this._seccion_comentarios = new Seccion_comentarios_Identificado(((Seccion_comentarios_Identificado) this._seccion_comentarios)._pagina_noticia_Identificado);
-				((Seccion_comentarios_Identificado) this._seccion_comentarios)._pagina_noticia_Identificado.Seccion_comentarios_Identificado();
+			if (noticia != null) { // Refrescar pagina
+				for (basededatos.Comentario comentario : noticia.pertenece_a_noticia.toArray()) {
+					if (comentario.getId_comentario() == this.comentario.getId_comentario()) {
+						this._mostrar_valoracion_comentario.getNumeronomegustamostrarvaloracioncomentario().setText(String.valueOf(comentario.getValoraciones_negativas()));
+						this._mostrar_valoracion_comentario.getNumeromegustamostrarvaloracioncomentario().setText(String.valueOf(comentario.getValoraciones_positivas()));
+						break;
+					}
+				}
 			}
 		} catch (PersistentException e) {
 			e.printStackTrace();

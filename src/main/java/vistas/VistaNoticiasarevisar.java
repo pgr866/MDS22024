@@ -6,17 +6,18 @@ import com.vaadin.flow.component.littemplate.LitTemplate;
 import com.vaadin.flow.dom.Element;
 import com.vaadin.flow.component.template.Id;
 import com.vaadin.flow.component.select.Select;
+import com.vaadin.flow.component.combobox.ComboBox;
 
 @Tag("vista-noticiasarevisar")
 @JsModule("./src/vista-noticiasarevisar.ts")
 public class VistaNoticiasarevisar extends LitTemplate {
 
-	public Element getListboxnoticiasarevisar() {
-		return listboxnoticiasarevisar;
+	public ComboBox<String> getComboboxnoticiasarevisar() {
+		return comboboxnoticiasarevisar;
 	}
 
-	public void setListboxnoticiasarevisar(Element listboxnoticiasarevisar) {
-		this.listboxnoticiasarevisar = listboxnoticiasarevisar;
+	public void setComboboxnoticiasarevisar(ComboBox<String> comboboxnoticiasarevisar) {
+		this.comboboxnoticiasarevisar = comboboxnoticiasarevisar;
 	}
 
 	public Element getLayoutnoticiasarevisar() {
@@ -27,20 +28,10 @@ public class VistaNoticiasarevisar extends LitTemplate {
 		this.layoutnoticiasarevisar = layoutnoticiasarevisar;
 	}
 
-	public Select getSelectnoticiasarevisar() {
-		return selectnoticiasarevisar;
-	}
-
-	public void setSelectnoticiasarevisar(Select selectnoticiasarevisar) {
-		this.selectnoticiasarevisar = selectnoticiasarevisar;
-	}
-
 	@Id("Layoutnoticiasarevisar")
 	private Element layoutnoticiasarevisar;
-	@Id("Selectnoticiasarevisar")
-	private Select selectnoticiasarevisar;
-	@Id("Listboxnoticiasarevisar")
-	private Element listboxnoticiasarevisar;
+	@Id("Comboboxnoticiasarevisar")
+	private ComboBox<String> comboboxnoticiasarevisar;
 	public VistaNoticiasarevisar() {
         // You can initialise any data required for the connected UI components here.
     }

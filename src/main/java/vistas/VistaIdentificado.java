@@ -165,14 +165,6 @@ public class VistaIdentificado extends LitTemplate {
 		this.configurarperfilidentificado = configurarperfilidentificado;
 	}
 
-	public Image getImagenconfigurarperfilidentificado() {
-		return imagenconfigurarperfilidentificado;
-	}
-
-	public void setImagenconfigurarperfilidentificado(Image imagenconfigurarperfilidentificado) {
-		this.imagenconfigurarperfilidentificado = imagenconfigurarperfilidentificado;
-	}
-
 	public Element getLayoutnoticiasportadaidentificado() {
 		return layoutnoticiasportadaidentificado;
 	}
@@ -185,8 +177,6 @@ public class VistaIdentificado extends LitTemplate {
 	private Element layoutlogoidentificado;
 	@Id("Buttonlogoidentificado")
 	private Button buttonlogoidentificado;
-	@Id("imagenlogoidentificado")
-	private Image imagenlogoidentificado;
 	@Id("Layoutvistabuscaridentificado")
 	private HorizontalLayout layoutvistabuscaridentificado;
 	@Id("Layoutexplorarseccionesidentificado")
@@ -203,10 +193,6 @@ public class VistaIdentificado extends LitTemplate {
 	private Element layoutdaraltabajaperiodistaidentificado;
 	@Id("Buttondaraltabajaperiodistaidentificado")
 	private Button buttondaraltabajaperiodistaidentificado;
-	@Id("Configurarperfilidentificado")
-	private Button configurarperfilidentificado;
-	@Id("Imagenconfigurarperfilidentificado")
-	private Image imagenconfigurarperfilidentificado;
 	@Id("Layoutnoticiasportadaidentificado")
 	private Element layoutnoticiasportadaidentificado;
 	@Id("Layoutvistabuscareditor")
@@ -223,6 +209,10 @@ public class VistaIdentificado extends LitTemplate {
 	private Element layoutbuscareditor;
 	@Id("Layoutbuscaridentificado")
 	private Element layoutbuscaridentificado;
+	@Id("imagenlogoidentificado")
+	private Image imagenlogoidentificado;
+	@Id("Configurarperfilidentificado")
+	private Button configurarperfilidentificado;
 	public VistaIdentificado() {
         // You can initialise any data required for the connected UI components here.
     }

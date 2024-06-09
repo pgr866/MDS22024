@@ -53,6 +53,10 @@ public class BD_Comentarios {
 				} else {
 					comentario.valora_positivamente.add(identificado);
 					comentario.setValoraciones_positivas(comentario.getValoraciones_positivas() + 1);
+					if (comentario.valora_negativamente.contains(identificado)) {
+						comentario.valora_negativamente.remove(identificado);
+						comentario.setValoraciones_negativas(comentario.getValoraciones_negativas() - 1);
+					}
 				}
 				ComentarioDAO.save(comentario);
 				t.commit();
@@ -72,6 +76,10 @@ public class BD_Comentarios {
 				} else {
 					comentario.valora_negativamente.add(identificado);
 					comentario.setValoraciones_negativas(comentario.getValoraciones_negativas() + 1);
+					if (comentario.valora_positivamente.contains(identificado)) {
+						comentario.valora_positivamente.remove(identificado);
+						comentario.setValoraciones_positivas(comentario.getValoraciones_positivas() - 1);
+					}
 				}
 				ComentarioDAO.save(comentario);
 				t.commit();

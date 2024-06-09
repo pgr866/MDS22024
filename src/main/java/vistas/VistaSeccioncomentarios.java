@@ -14,6 +14,14 @@ import com.vaadin.flow.component.textfield.TextArea;
 @JsModule("./src/vista-seccioncomentarios.ts")
 public class VistaSeccioncomentarios extends LitTemplate {
 
+	public Label getLabelmensajenohaycomentarios() {
+		return labelmensajenohaycomentarios;
+	}
+
+	public void setLabelmensajenohaycomentarios(Label labelmensajenohaycomentarios) {
+		this.labelmensajenohaycomentarios = labelmensajenohaycomentarios;
+	}
+
 	public Element getLayoutseccioncomentarios() {
 		return layoutseccioncomentarios;
 	}
@@ -34,6 +42,8 @@ public class VistaSeccioncomentarios extends LitTemplate {
 	private Element layoutseccioncomentarios;
 	@Id("Layoutvistaseccioncomentarios")
 	private Element layoutvistaseccioncomentarios;
+	@Id("Labelmensajenohaycomentarios")
+	private Label labelmensajenohaycomentarios;
 	public VistaSeccioncomentarios() {
         // You can initialise any data required for the connected UI components here.
     }

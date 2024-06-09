@@ -29,19 +29,19 @@ public class BD_Periodistas {
 	}
 
 	public Periodista Guardar_cambios(int aId, String aNombre, String aApellidos, String aNick, String aEmail,
-			String aContrasena, String aUrl_foto_perfil) throws PersistentException {
+			String aContrasena, String aUrl_foto_perfil, int aTelefono) throws PersistentException {
 		List<Identificado> identificados = null;
 		PersistentTransaction t = MDS12324PFFornielesGomezPersistentManager.instance().getSession().beginTransaction();
 		try {
 			identificados = IdentificadoDAO
-					.queryIdentificado("Email = '" + aEmail + "' OR Nick_apodo = '" + aNick + "'", null);
+					.queryIdentificado("(Email = '" + aEmail + "' OR Nick_apodo = '" + aNick + "') AND Id != " + aId, null);
 			t.commit();
 		} catch (Exception e) {
 			t.rollback();
 		}
 
 		Periodista periodista = null;
-		if (identificados == null) {
+		if (identificados.isEmpty()) {
 			t = MDS12324PFFornielesGomezPersistentManager.instance().getSession().beginTransaction();
 			try {
 				periodista = PeriodistaDAO.getPeriodistaByORMID(aId);
@@ -51,6 +51,7 @@ public class BD_Periodistas {
 				periodista.setEmail(aEmail);
 				periodista.setContrasena(aContrasena);
 				periodista.setUrl_foto_perfil(aUrl_foto_perfil);
+				periodista.setTelefono(aTelefono);
 				PeriodistaDAO.save(periodista);
 				t.commit();
 			} catch (Exception e) {
@@ -74,7 +75,7 @@ public class BD_Periodistas {
 		}
 
 		Periodista periodista = null;
-		if (identificados == null) {
+		if (identificados.isEmpty()) {
 			t = MDS12324PFFornielesGomezPersistentManager.instance().getSession().beginTransaction();
 			try {
 				periodista = PeriodistaDAO.createPeriodista();
@@ -86,6 +87,7 @@ public class BD_Periodistas {
 				periodista.setDni(aDni);
 				periodista.setTelefono(aTelefono);
 				periodista.setFecha_nacimiento(aFecha_nacimiento);
+				periodista.setUrl_foto_perfil("https://i.postimg.cc/yNmSYfP8/foto.png");
 				periodista.setORM_Da_de_alta(EditorDAO.getEditorByORMID(aId_editor));
 				PeriodistaDAO.save(periodista);
 				t.commit();
@@ -106,7 +108,7 @@ public class BD_Periodistas {
 		} catch (Exception e) {
 			t.rollback();
 		}
-		return (Periodista[]) periodistas.toArray();
+		return periodistas.toArray(new Periodista[0]);
 	}
 
 	public void Baja_Periodista(String aNick, int aId_editor) throws PersistentException {

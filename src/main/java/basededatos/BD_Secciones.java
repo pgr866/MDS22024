@@ -23,7 +23,7 @@ public class BD_Secciones {
 		} catch (Exception e) {
 			t.rollback();
 		}
-		return (Seccion[]) secciones.toArray();
+		return secciones.toArray(new Seccion[0]);
 	}
 
 	public Seccion Anadir_seccion(String aNombre, int aId_editor) throws PersistentException {
@@ -37,7 +37,7 @@ public class BD_Secciones {
 		}
 		
 		Seccion seccion = null;
-		if (secciones == null) {
+		if (secciones.isEmpty()) {
 			t = MDS12324PFFornielesGomezPersistentManager.instance().getSession()
 					.beginTransaction();
 			try {

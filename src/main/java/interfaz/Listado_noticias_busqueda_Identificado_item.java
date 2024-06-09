@@ -21,10 +21,8 @@ public class Listado_noticias_busqueda_Identificado_item extends VistaListadonot
 	}
 
 	public void Pagina_noticia_Identificado() {
-		if(this.getLayoutlistadonoticiasbusquedaidentificadoitem().getText() == (String) this._listado_noticias_busqueda_Identificado.getComboboxlistadonoticiasbusquedaidentificado().getValue()) {
-			this._listado_noticias_busqueda_Identificado._identificado.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).removeAll();
-			this._pagina_noticia_Identificado = new Pagina_noticia_Identificado(this, noticia);
-			this._listado_noticias_busqueda_Identificado._identificado.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).add(this._pagina_noticia_Identificado);
-		}
+		this._listado_noticias_busqueda_Identificado._identificado.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).removeAll();
+		this._pagina_noticia_Identificado = new Pagina_noticia_Identificado(this, noticia);
+		this._listado_noticias_busqueda_Identificado._identificado.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).add(this._pagina_noticia_Identificado);
 	}
 }

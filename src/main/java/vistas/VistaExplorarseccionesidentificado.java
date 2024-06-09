@@ -8,12 +8,19 @@ import com.vaadin.flow.component.template.Id;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.html.Label;
 
 @Tag("vista-explorarseccionesidentificado")
 @JsModule("./src/vista-explorarseccionesidentificado.ts")
 public class VistaExplorarseccionesidentificado extends LitTemplate {
 
-    public Element getLayoutseccionesexplorarseccionesidentificado() {
+    public Label getLabelexplorarseccionesidentificado() {
+		return labelexplorarseccionesidentificado;
+	}
+	public void setLabelexplorarseccionesidentificado(Label labelexplorarseccionesidentificado) {
+		this.labelexplorarseccionesidentificado = labelexplorarseccionesidentificado;
+	}
+	public Element getLayoutseccionesexplorarseccionesidentificado() {
 		return layoutseccionesexplorarseccionesidentificado;
 	}
 	public void setLayoutseccionesexplorarseccionesidentificado(Element layoutseccionesexplorarseccionesidentificado) {
@@ -64,6 +71,8 @@ public class VistaExplorarseccionesidentificado extends LitTemplate {
 	private HorizontalLayout layoutvistasnoticiasenseccionexplorarseccionesidentificado;
 	@Id("Layoutseccionesexplorarseccionesidentificado")
 	private Element layoutseccionesexplorarseccionesidentificado;
+	@Id("Labelexplorarseccionesidentificado")
+	private Label labelexplorarseccionesidentificado;
 	public VistaExplorarseccionesidentificado() {
         // You can initialise any data required for the connected UI components here.
     }

@@ -37,7 +37,14 @@ public class Revisar_noticias extends vistas.VistaRevisarnoticias {
 	    this.getTextfieldurlimagenesrevisarnoticias().setValue(noticia.getUrl_imagen_noticia());
 	    this.getTextareacontenidonoticiarevisarnoticias().setValue(noticia.getContenido());
 	    this.getTextfieldfecharevisarnoticias().setValue(noticia.getFecha());
-	    this.getTextfieldfecharevisarnoticias().setValue(noticia.getLugar());
+	    this.getTextfieldlugarrevisarnoticias().setValue(noticia.getLugar());
+	    String tematicas = "";
+	    for (basededatos.Tematica tematica : noticia.pertenece_a.toArray()) {
+	    	tematicas += tematica.getTitulo_tematica() + ", ";
+	    }
+	    this.getTextfieldtematicarevisarnoticias().setValue(tematicas.substring(0, tematicas.length() - 2));
+	    this.getPublicarrevisarnoticia().addClickListener(event -> Publicar_noticia());
+	    this.getEliminarrevisarnoticia().addClickListener(event -> Eliminar_noticia());
 	}
 	
 	public void Secciones() {
@@ -59,18 +66,23 @@ public class Revisar_noticias extends vistas.VistaRevisarnoticias {
 	}
 
 	public void Publicar_noticia() {
-		String nombre_seccion = (String) this._secciones_Identificado.getDesplegableseccionesidentificado().getValue();
+		String nombre_seccion = (String) this._secciones_Identificado.getComboboxseccionesidentificado().getValue();
 		String resumen = this.getTextfieldresumenrevisarnoticias().getValue();
 		int id_noticia = this.noticia.getId_noticia();
 		int id_editor = this._noticias_a_revisar._noticias_a_revisar._editor.identificado.getId();
-		try {
-			ieditor.Publicar_noticia(nombre_seccion, resumen, id_noticia, id_editor);
-		} catch (PersistentException e) {
-			e.printStackTrace();
+		
+		if (nombre_seccion == null || resumen.isBlank()) {
+			this.getLabelmensajeerrorrevisarnoticias().setText("Debe rellenar el resumen y la sección");
+		} else {
+			try {
+				ieditor.Publicar_noticia(nombre_seccion, resumen, id_noticia, id_editor);
+			} catch (PersistentException e) {
+				e.printStackTrace();
+			}
+			// Refrescar pagina
+			this._noticias_a_revisar._noticias_a_revisar._editor.mainview._editor = new Editor(this._noticias_a_revisar._noticias_a_revisar._editor.mainview, (basededatos.Editor) this._noticias_a_revisar._noticias_a_revisar._editor.identificado);
+			this._noticias_a_revisar._noticias_a_revisar._editor.mainview.removeAll();
+			this._noticias_a_revisar._noticias_a_revisar._editor.mainview.add(this._noticias_a_revisar._noticias_a_revisar._editor.mainview._editor);
 		}
-		// Refrescar pagina
-		this._noticias_a_revisar._noticias_a_revisar._editor.mainview._editor = new Editor(this._noticias_a_revisar._noticias_a_revisar._editor.mainview, (basededatos.Editor) this._noticias_a_revisar._noticias_a_revisar._editor.identificado);
-		this._noticias_a_revisar._noticias_a_revisar._editor.mainview.removeAll();
-		this._noticias_a_revisar._noticias_a_revisar._editor.mainview.add(this._noticias_a_revisar._noticias_a_revisar._editor.mainview._editor);
 	}
 }

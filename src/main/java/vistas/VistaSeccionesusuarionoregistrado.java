@@ -6,17 +6,18 @@ import com.vaadin.flow.component.littemplate.LitTemplate;
 import com.vaadin.flow.dom.Element;
 import com.vaadin.flow.component.template.Id;
 import com.vaadin.flow.component.select.Select;
+import com.vaadin.flow.component.combobox.ComboBox;
 
 @Tag("vista-seccionesusuarionoregistrado")
 @JsModule("./src/vista-seccionesusuarionoregistrado.ts")
 public class VistaSeccionesusuarionoregistrado extends LitTemplate {
 
-	public Element getListboxseccionesusuarionoregistrado() {
-		return listboxseccionesusuarionoregistrado;
+	public ComboBox<String> getComboboxseccionesusuarionoregistrado() {
+		return comboboxseccionesusuarionoregistrado;
 	}
 
-	public void setListboxseccionesusuarionoregistrado(Element listboxseccionesusuarionoregistrado) {
-		this.listboxseccionesusuarionoregistrado = listboxseccionesusuarionoregistrado;
+	public void setComboboxseccionesusuarionoregistrado(ComboBox<String> comboboxseccionesusuarionoregistrado) {
+		this.comboboxseccionesusuarionoregistrado = comboboxseccionesusuarionoregistrado;
 	}
 
 	public Element getLayoutseccionesusuarionoregistrado() {
@@ -27,20 +28,10 @@ public class VistaSeccionesusuarionoregistrado extends LitTemplate {
 		this.layoutseccionesusuarionoregistrado = layoutseccionesusuarionoregistrado;
 	}
 
-	public Select getDesplegableseccionesusuarionoregistrado() {
-		return desplegableseccionesusuarionoregistrado;
-	}
-
-	public void setDesplegableseccionesusuarionoregistrado(Select desplegableseccionesusuarionoregistrado) {
-		this.desplegableseccionesusuarionoregistrado = desplegableseccionesusuarionoregistrado;
-	}
-
 	@Id("Layoutseccionesusuarionoregistrado")
 	private Element layoutseccionesusuarionoregistrado;
-	@Id("Desplegableseccionesusuarionoregistrado")
-	private Select desplegableseccionesusuarionoregistrado;
-	@Id("Listboxseccionesusuarionoregistrado")
-	private Element listboxseccionesusuarionoregistrado;
+	@Id("Comboboxseccionesusuarionoregistrado")
+	private ComboBox<String> comboboxseccionesusuarionoregistrado;
 	public VistaSeccionesusuarionoregistrado() {
         // You can initialise any data required for the connected UI components here.
     }

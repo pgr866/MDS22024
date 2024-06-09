@@ -2,6 +2,8 @@ package interfaz;
 
 import org.orm.PersistentException;
 
+import com.vaadin.flow.component.notification.Notification;
+
 import base_de_datos.BDPrincipal;
 import base_de_datos.iEditor;
 
@@ -23,16 +25,22 @@ public class Explorar_secciones_Editor extends Explorar_secciones_Identificado {
 	public void Anadir_seccion() {
 		String nombre = this.getTextfieldnombreexplorarseccionesidentificado().getValue();
 		int id_editor = this._editor.identificado.getId();
-		try {
-			ieditor.Anadir_seccion(nombre, id_editor);
-		} catch (PersistentException e) {
-			e.printStackTrace();
+		
+		if (nombre.isBlank()) {
+			Notification.show("Debe rellenar el título de la nueva sección");
 		}
-		this._editor.Explorar_secciones_Editor(); // Refrescar pagina
+		else {
+			try {
+				ieditor.Anadir_seccion(nombre, id_editor);
+			} catch (PersistentException e) {
+				e.printStackTrace();
+			}
+			this._editor.Explorar_secciones_Editor(); // Refrescar pagina
+		}
 	}
 
 	public void Borrar_seccion() {
-		String nombre = (String) this._secciones_Identificado.getDesplegableseccionesidentificado().getValue();
+		String nombre = (String) this._secciones_Identificado.getComboboxseccionesidentificado().getValue();
 		int id_editor = this._editor.identificado.getId();
 		try {
 			ieditor.Borrar_seccion(nombre, id_editor);

@@ -16,15 +16,7 @@ public class Noticias_en_seccion_Editor_item extends Noticias_en_seccion_Identif
 	public Noticias_en_seccion_Editor_item(Noticias_en_seccion_Identificado _noticias_en_seccion_Identificado,
 			basededatos.Noticia noticia) {
 		super(_noticias_en_seccion_Identificado, noticia);
-		this._noticias_en_seccion_Identificado = _noticias_en_seccion_Identificado;
-		this.getTitulonoticiasenseccionidentificado().addClickListener(event->Pagina_noticia_Identificado());
-		this.noticia = noticia;
-		this.getTitulonoticiasenseccionidentificado().setText(noticia.getTitulo());;
-		this.getImagennoticiasenseccionidentificado().setSrc(noticia.getUrl_imagen_noticia());
-		this.getFechanoticiasenseccionidentificado().setText(noticia.getFecha());
-		this.getAutornoticiasenseccionidentificado().setText(noticia.getCrea().getNombre() + " " + noticia.getCrea().getApellidos());
-		this.getLugarnoticiasenseccionidentificado().setText(noticia.getLugar());
-		this.getContenidonoticiasenseccionidentificado().setValue(noticia.getResumen());;
+		this.getTitulonoticiasenseccionidentificado().addClickListener(event-> this.Pagina_noticia_Editor());
 	}
 	
 	public void Pagina_noticia_Editor() {

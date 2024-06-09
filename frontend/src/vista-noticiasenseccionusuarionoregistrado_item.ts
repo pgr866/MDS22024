@@ -1,5 +1,4 @@
 import { LitElement, html, css, customElement } from 'lit-element';
-import '@vaadin/vaadin-text-field/src/vaadin-text-area.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 import '@vaadin/vaadin-button/src/vaadin-button.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
@@ -17,24 +16,17 @@ export class VistaNoticiasenseccionusuarionoregistrado_item extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%; position: absolute;">
- <vaadin-horizontal-layout style="width: 100%; flex-shrink: 0; padding-bottom: var(--lumo-space-s);">
-  <vaadin-vertical-layout style="width: 100%; flex-shrink: 0; align-self: stretch; flex-direction: row; flex-wrap: wrap;" id="Layouttitulonoticiasenseccionusuarionoregistrado">
-   <vaadin-button style="flex-shrink: 0; width: 100%; height: 100%; background-color: #FFFFFF;" id="Titulonoticiasenseccionusuarionoregistrado">
-     Titulo noticia 
-   </vaadin-button>
-  </vaadin-vertical-layout>
- </vaadin-horizontal-layout>
- <vaadin-horizontal-layout style="width: 100%; flex-shrink: 0; flex-direction: column; display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1;" id="Layoutimagennoticiasenseccionusuarionoregistrado">
-  <img style="flex-shrink: 0; width: 100%; flex-grow: 1; z-index: -1;" src="https://imagenes.elpais.com/resizer/xb6jt6pm3nPIWdSvk8ikJp_3wCg=/1200x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/PC672K3NJRDJNGSA7ZEM2M6E6A.jpg" id="Imagennoticiasenseccionusuarionoregistrado">
-  <vaadin-horizontal-layout id="Layoutautorlugarfechanoticiasenseccionusuarionoregistrado" style="width: 100%; flex-shrink: 0; justify-content: space-between; flex-grow: 0;">
-   <label style="flex-shrink: 0; width: 30%; height: 100%; text-align: center;" id="Fechanoticiasenseccionusuarionoregistrado">Fecha</label>
-   <label style="flex-shrink: 0; width: 30%; height: 100%; text-align: center;" id="Autornoticiasenseccionusuarionoregistrado">Autor</label>
-   <label style="flex-shrink: 0; height: 100%; width: 30%; text-align: center;" id="Lugarnoticiasenseccionusuarionoregistrado">Lugar</label>
-  </vaadin-horizontal-layout>
- </vaadin-horizontal-layout>
- <vaadin-horizontal-layout style="width: 100%; flex-shrink: 1; padding-top: var(--lumo-space-s); flex-grow: 0; padding-bottom: var(--lumo-space-l);" id="Layoutcontenidonoticiasenseccionusuarionoregistrado">
-  <vaadin-text-area style="width: 100%; flex-shrink: 0; align-self: stretch; height: 100%;" readonly value="Resumen" has-value id="Contenidonoticiasenseccionusuarionoregistrado"></vaadin-text-area>
+<vaadin-vertical-layout style="width: 100%; max-width: 380px; padding: 0; margin-right: var(--lumo-space-xl); margin-left: var(--lumo-space-l); margin-bottom: var(--lumo-space-l);" id="Layoutnoticiasenseccionusuarionoregistrado">
+ <vaadin-vertical-layout style="flex-shrink: 0; height: 100%; width: 100%; padding: 0;" id="Layouttitulonoticiasenseccionusuarionoregistrado">
+  <vaadin-button style="flex-shrink: 0; width: 100%; background-color: #FFFFFF; flex-grow: 0; height: 100%; margin-left: var(--lumo-space-m); padding: 0;" id="Titulonoticiasenseccionusuarionoregistrado">
+    Titulo noticia 
+  </vaadin-button>
+ </vaadin-vertical-layout>
+ <vaadin-horizontal-layout style="width: 100%; flex-shrink: 0; flex-direction: column; display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1;" id="Layoutimagennoticiasenseccionusuarionoregistrado"></vaadin-horizontal-layout>
+ <vaadin-horizontal-layout id="Layoutautorlugarfechanoticiasenseccionusuarionoregistrado" style="width: 100%; flex-shrink: 0; justify-content: space-between; flex-grow: 0;">
+  <label style="flex-shrink: 0; width: 30%; height: 100%; text-align: center;" id="Fechanoticiasenseccionusuarionoregistrado">Fecha</label>
+  <label style="flex-shrink: 0; width: 30%; height: 100%; text-align: center;" id="Autornoticiasenseccionusuarionoregistrado">Autor</label>
+  <label style="flex-shrink: 0; height: 100%; width: 30%; text-align: center;" id="Lugarnoticiasenseccionusuarionoregistrado">Lugar</label>
  </vaadin-horizontal-layout>
 </vaadin-vertical-layout>
 `;

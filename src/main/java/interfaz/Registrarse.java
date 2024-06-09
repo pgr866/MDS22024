@@ -43,12 +43,27 @@ public class Registrarse extends vistas.VistaRegistrarse {
 		String nick = this.getTextfieldregistrarse().getValue();
 		String dni = this.getTextfielddniregistrarse().getValue();
 		String num_tarjeta = this.getTextfieldntarjetaregistrarse().getValue();
+		String telefono = this.getTextfieldtelefonoregistrarse().getValue();
 		String contrasena = this.getPasswordfieldcontrasenaregistrarse().getValue();
 		String repetir_contrasena = this.getPasswordfieldrepetircontrasenaregistrarse().getValue();
 
 		boolean validos = true;
 
-		if (contrasena != repetir_contrasena && validos) {
+		if (email.isBlank() || nombre.isBlank() || apellidos.isBlank() || fecha_nacimiento.isBlank() || nick.isBlank()
+				|| dni.isBlank() || num_tarjeta.isBlank() || telefono.isBlank()) {
+			this.getLabelerrordatosregistrarse().setText("Debe rellenar todos los campos");
+			validos = false;
+		}
+
+		int num_telefono = 0;
+		try {
+			num_telefono = Integer.parseInt(telefono);
+		} catch (NumberFormatException e) {
+			if (validos) this.getLabelerrordatosregistrarse().setText("Numero de teléfono no válido");
+			validos = false;
+		}
+
+		if (!contrasena.equals(repetir_contrasena) && validos) {
 			this.getLabelerrordatosregistrarse().setText("Las contraseñas no coinciden");
 			validos = false;
 		}
@@ -77,23 +92,25 @@ public class Registrarse extends vistas.VistaRegistrarse {
 			validos = false;
 		}
 
+		basededatos.Usuario_suscrito suscrito = null;
 		if (validos) {
 			try {
-				basededatos.Usuario_suscrito suscrito = iusuario_no_registrado.Registrarse(email, nombre, apellidos,
-						fecha_nacimiento, nick, dni, num_tarjeta, contrasena);
-				if (suscrito == null)
-					this.getLabelerrordatosregistrarse().setText("Correo electrónico / nick ya está en uso");
-				else {
-					this._iniciar_Sesion._usuario_no_Registrado.mainview._usuario_suscrito = new Usuario_Suscrito(
-							this._iniciar_Sesion._usuario_no_Registrado.mainview, suscrito);
-					this._iniciar_Sesion._usuario_no_Registrado.mainview.removeAll();
-					this._iniciar_Sesion._usuario_no_Registrado.mainview
-							.add(this._iniciar_Sesion._usuario_no_Registrado.mainview._usuario_suscrito);
-					Gestionar_correo();
-					Gestionar_pagos();
-				}
+				suscrito = iusuario_no_registrado.Registrarse(email, nombre, apellidos, fecha_nacimiento, nick, dni,
+						num_tarjeta, num_telefono, contrasena);
 			} catch (PersistentException e) {
 				e.printStackTrace();
+			}
+			
+			if (suscrito == null)
+				this.getLabelerrordatosregistrarse().setText("Correo electrónico / nick ya está en uso");
+			else {
+				this._iniciar_Sesion._usuario_no_Registrado.mainview._usuario_suscrito = new Usuario_Suscrito(
+						this._iniciar_Sesion._usuario_no_Registrado.mainview, suscrito);
+				this._iniciar_Sesion._usuario_no_Registrado.mainview.removeAll();
+				this._iniciar_Sesion._usuario_no_Registrado.mainview
+						.add(this._iniciar_Sesion._usuario_no_Registrado.mainview._usuario_suscrito);
+				Gestionar_correo();
+				Gestionar_pagos();
 			}
 		}
 	}

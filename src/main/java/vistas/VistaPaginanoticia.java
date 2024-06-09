@@ -15,6 +15,38 @@ import com.vaadin.flow.component.textfield.TextArea;
 @JsModule("./src/vista-paginanoticia.ts")
 public class VistaPaginanoticia extends LitTemplate {
 
+	public Element getLayoutimagennoticiapaginanoticia() {
+		return layoutimagennoticiapaginanoticia;
+	}
+
+	public void setLayoutimagennoticiapaginanoticia(Element layoutimagennoticiapaginanoticia) {
+		this.layoutimagennoticiapaginanoticia = layoutimagennoticiapaginanoticia;
+	}
+
+	public HorizontalLayout getLayouteliminarpaginanoticia() {
+		return layouteliminarpaginanoticia;
+	}
+
+	public void setLayouteliminarpaginanoticia(HorizontalLayout layouteliminarpaginanoticia) {
+		this.layouteliminarpaginanoticia = layouteliminarpaginanoticia;
+	}
+
+	public Button getButtoneliminarpaginanoticia() {
+		return buttoneliminarpaginanoticia;
+	}
+
+	public void setButtoneliminarpaginanoticia(Button buttoneliminarpaginanoticia) {
+		this.buttoneliminarpaginanoticia = buttoneliminarpaginanoticia;
+	}
+
+	public Image getImageneliminarpaginanoticia() {
+		return imageneliminarpaginanoticia;
+	}
+
+	public void setImageneliminarpaginanoticia(Image imageneliminarpaginanoticia) {
+		this.imageneliminarpaginanoticia = imageneliminarpaginanoticia;
+	}
+
 	public TextArea getTextareacomentarioseccioncomentarios() {
 		return textareacomentarioseccioncomentarios;
 	}
@@ -69,22 +101,6 @@ public class VistaPaginanoticia extends LitTemplate {
 
 	public void setLabeltitulotematicapaginanoticia(Label labeltitulotematicapaginanoticia) {
 		this.labeltitulotematicapaginanoticia = labeltitulotematicapaginanoticia;
-	}
-
-	public HorizontalLayout getLayoutimagennoticiapaginanoticia() {
-		return layoutimagennoticiapaginanoticia;
-	}
-
-	public void setLayoutimagennoticiapaginanoticia(HorizontalLayout layoutimagennoticiapaginanoticia) {
-		this.layoutimagennoticiapaginanoticia = layoutimagennoticiapaginanoticia;
-	}
-
-	public Image getImagennoticiapaginanoticia() {
-		return imagennoticiapaginanoticia;
-	}
-
-	public void setImagennoticiapaginanoticia(Image imagennoticiapaginanoticia) {
-		this.imagennoticiapaginanoticia = imagennoticiapaginanoticia;
 	}
 
 	public HorizontalLayout getLayoutfechaautorlugarpaginanoticia() {
@@ -150,10 +166,6 @@ public class VistaPaginanoticia extends LitTemplate {
 	private Label labeltitulonoticiapaginanoticia;
 	@Id("Labeltitulotematicapaginanoticia")
 	private Label labeltitulotematicapaginanoticia;
-	@Id("Layoutimagennoticiapaginanoticia")
-	private HorizontalLayout layoutimagennoticiapaginanoticia;
-	@Id("Imagennoticiapaginanoticia")
-	private Image imagennoticiapaginanoticia;
 	@Id("Layoutfechaautorlugarpaginanoticia")
 	private HorizontalLayout layoutfechaautorlugarpaginanoticia;
 	@Id("Layoutfechapaginanoticia")
@@ -176,7 +188,14 @@ public class VistaPaginanoticia extends LitTemplate {
 	private Button botonanadircomentarioseccioncomentarios;
 	@Id("Textareacomentarioseccioncomentarios")
 	private TextArea textareacomentarioseccioncomentarios;
-
+	@Id("Layouteliminarpaginanoticia")
+	private HorizontalLayout layouteliminarpaginanoticia;
+	@Id("Buttoneliminarpaginanoticia")
+	private Button buttoneliminarpaginanoticia;
+	@Id("Imageneliminarpaginanoticia")
+	private Image imageneliminarpaginanoticia;
+	@Id("Layoutimagennoticiapaginanoticia")
+	private Element layoutimagennoticiapaginanoticia;
 	public VistaPaginanoticia() {
         // You can initialise any data required for the connected UI components here.
     }

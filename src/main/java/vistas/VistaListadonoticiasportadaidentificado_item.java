@@ -41,18 +41,6 @@ public class VistaListadonoticiasportadaidentificado_item extends LitTemplate {
 			HorizontalLayout layoutimagenlistadonoticiasportadaidentificado) {
 		this.layoutimagenlistadonoticiasportadaidentificado = layoutimagenlistadonoticiasportadaidentificado;
 	}
-	public Button getButtonimagenlistadonoticiasportadaidentificado() {
-		return buttonimagenlistadonoticiasportadaidentificado;
-	}
-	public void setButtonimagenlistadonoticiasportadaidentificado(Button buttonimagenlistadonoticiasportadaidentificado) {
-		this.buttonimagenlistadonoticiasportadaidentificado = buttonimagenlistadonoticiasportadaidentificado;
-	}
-	public Image getImagenlistadonoticiasportadaidentificado() {
-		return imagenlistadonoticiasportadaidentificado;
-	}
-	public void setImagenlistadonoticiasportadaidentificado(Image imagenlistadonoticiasportadaidentificado) {
-		this.imagenlistadonoticiasportadaidentificado = imagenlistadonoticiasportadaidentificado;
-	}
 	public HorizontalLayout getLayoutautorlugarfechalistadonoticiasportadaidentificado() {
 		return layoutautorlugarfechalistadonoticiasportadaidentificado;
 	}
@@ -78,20 +66,7 @@ public class VistaListadonoticiasportadaidentificado_item extends LitTemplate {
 	public void setLabellugarlistadonoticiasportadaidentificado(Label labellugarlistadonoticiasportadaidentificado) {
 		this.labellugarlistadonoticiasportadaidentificado = labellugarlistadonoticiasportadaidentificado;
 	}
-	public HorizontalLayout getLayouresumenlistadonoticiasportadaidentificado() {
-		return layouresumenlistadonoticiasportadaidentificado;
-	}
-	public void setLayouresumenlistadonoticiasportadaidentificado(
-			HorizontalLayout layouresumenlistadonoticiasportadaidentificado) {
-		this.layouresumenlistadonoticiasportadaidentificado = layouresumenlistadonoticiasportadaidentificado;
-	}
-	public TextArea getTextarearesumenlistadonoticiasportadaidentificado() {
-		return textarearesumenlistadonoticiasportadaidentificado;
-	}
-	public void setTextarearesumenlistadonoticiasportadaidentificado(
-			TextArea textarearesumenlistadonoticiasportadaidentificado) {
-		this.textarearesumenlistadonoticiasportadaidentificado = textarearesumenlistadonoticiasportadaidentificado;
-	}
+	
 	@Id("Layouttitulolistadonoticiasportadaidentificado")
 	private Element layouttitulolistadonoticiasportadaidentificado;
 	@Id("Titulolistadonoticiasportadaidentificado")
@@ -100,10 +75,6 @@ public class VistaListadonoticiasportadaidentificado_item extends LitTemplate {
 	private Element layouttitulonoticiaordenarportadaidentificado;
 	@Id("Layoutimagenlistadonoticiasportadaidentificado")
 	private HorizontalLayout layoutimagenlistadonoticiasportadaidentificado;
-	@Id("Buttonimagenlistadonoticiasportadaidentificado")
-	private Button buttonimagenlistadonoticiasportadaidentificado;
-	@Id("Imagenlistadonoticiasportadaidentificado")
-	private Image imagenlistadonoticiasportadaidentificado;
 	@Id("Layoutautorlugarfechalistadonoticiasportadaidentificado")
 	private HorizontalLayout layoutautorlugarfechalistadonoticiasportadaidentificado;
 	@Id("Labelfechalistadonoticiasportadaidentificado")
@@ -112,10 +83,6 @@ public class VistaListadonoticiasportadaidentificado_item extends LitTemplate {
 	private Label labelautorlistadonoticiasportadaidentificado;
 	@Id("Labellugarlistadonoticiasportadaidentificado")
 	private Label labellugarlistadonoticiasportadaidentificado;
-	@Id("Layouresumenlistadonoticiasportadaidentificado")
-	private HorizontalLayout layouresumenlistadonoticiasportadaidentificado;
-	@Id("Textarearesumenlistadonoticiasportadaidentificado")
-	private TextArea textarearesumenlistadonoticiasportadaidentificado;
 	public VistaListadonoticiasportadaidentificado_item() {
         // You can initialise any data required for the connected UI components here.
     }

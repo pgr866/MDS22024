@@ -1,5 +1,6 @@
 package interfaz;
 
+import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 import vistas.VistaListadonoticiasportadaidentificado_item;
@@ -16,14 +17,24 @@ public class Listado_noticias_portada_Identificado_item extends VistaListadonoti
 		this._listado_noticias_portada_Identificado = _listado_noticias_portada_Identificado;
 		this.getLayouttitulonoticiaordenarportadaidentificado().setVisible(false);
 		this.noticia = noticia;
-		this.getTitulolistadonoticiasportadaidentificado().setText(noticia == null ? "" : noticia.getTitulo());
-		this.getImagenlistadonoticiasportadaidentificado().setSrc(noticia == null ? "" : noticia.getUrl_imagen_noticia());
-		this.getLabelfechalistadonoticiasportadaidentificado().setText(noticia == null ? "" : noticia.getFecha());
-		this.getLabelautorlistadonoticiasportadaidentificado().setText(noticia == null ? "" : noticia.getCrea().getNombre() + " " + noticia.getCrea().getApellidos());
-		this.getLabellugarlistadonoticiasportadaidentificado().setText(noticia == null ? "" : noticia.getLugar());
-		this.getTextarearesumenlistadonoticiasportadaidentificado().setValue(noticia == null ? "" : noticia.getResumen());
-		if (noticia != null)
+		if (noticia != null) {
+			this.getTitulolistadonoticiasportadaidentificado().setText(noticia.getTitulo());
+			
+			Image foto = new Image(noticia.getUrl_imagen_noticia(), "fotonoticiaportada");
+			foto.setWidth("380px");
+			foto.setHeight("250px");
+			this.getLayoutimagenlistadonoticiasportadaidentificado().removeAll();
+			this.getLayoutimagenlistadonoticiasportadaidentificado().add(foto);
+			
+			this.getLabelfechalistadonoticiasportadaidentificado().setText(noticia.getFecha());
+			this.getLabelautorlistadonoticiasportadaidentificado().setText(noticia.getCrea().getNombre() + " " + noticia.getCrea().getApellidos());
+			this.getLabellugarlistadonoticiasportadaidentificado().setText(noticia.getLugar());
 			this.getTitulolistadonoticiasportadaidentificado().addClickListener(event->Pagina_noticia_Identificado());
+		} else {
+			this.getTitulolistadonoticiasportadaidentificado().setVisible(false);
+			this.getLayoutautorlugarfechalistadonoticiasportadaidentificado().setVisible(false);
+			this.getLayoutimagenlistadonoticiasportadaidentificado().setVisible(false);
+		}
 	}
 
 	public void Pagina_noticia_Identificado() {

@@ -17,7 +17,7 @@ export class VistaBajaaltaperiodistas extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; justify-content: space-between; position: absolute;">
+<vaadin-vertical-layout style="width: 100%; justify-content: space-between; position: absolute;" theme="spacing">
  <vaadin-vertical-layout id="Layoutdaraltaperiodista" style="width: 100%; justify-content: space-between; flex-shrink: 0; flex-grow: 0; height: 70%;" theme="spacing-s">
   <label id="Labeldaraltaperiodista" style="width: 100%; font-size: 40px; text-align: center; flex-shrink: 0; flex-grow: 0;">Dar de alta periodista</label>
   <vaadin-horizontal-layout id="Nombreydnidaraltaperiodista" style="width: 58%; height: 10%; justify-content: space-between; align-self: center; flex-shrink: 0;">
@@ -35,8 +35,8 @@ export class VistaBajaaltaperiodistas extends LitElement {
   <vaadin-horizontal-layout style="width: 58%; height: 10%; justify-content: space-between; align-self: center; flex-shrink: 0;" id="Nicktelefonodaraltaperiodista">
    <label style="width: 20%; height: 100%; text-align: center; flex-shrink: 0; font-size: 120%;" id="Labelnickdaraltaperiodista">Nick</label>
    <vaadin-text-field placeholder="Nick" style="flex-shrink: 0; align-self: center;" id="Textfieldnickdaraltaperiodista"></vaadin-text-field>
-   <label style="width: 20%; height: 100%; text-align: center; flex-shrink: 0; font-size: 120%;" id="Labeltelefonodaraltaperiodista">Telefono</label>
-   <vaadin-text-field placeholder="Telefono" style="flex-shrink: 0; align-self: center;" id="Textfieldtelefonodaraltaperiodista"></vaadin-text-field>
+   <label style="width: 20%; height: 100%; text-align: center; flex-shrink: 0; font-size: 120%;" id="Labeltelefonodaraltaperiodista">Teléfono</label>
+   <vaadin-text-field placeholder="Teléfono" style="flex-shrink: 0; align-self: center;" id="Textfieldtelefonodaraltaperiodista"></vaadin-text-field>
   </vaadin-horizontal-layout>
   <vaadin-horizontal-layout style="width: 58%; height: 10%; justify-content: space-between; align-self: center; flex-shrink: 0;" id="contrasenafehcanacimientodaraltaperiodista">
    <label style="width: 20%; height: 100%; text-align: center; flex-shrink: 0; font-size: 120%;" id="Labelcontrasenadaraltaperiodista">Contraseña</label>
@@ -44,15 +44,16 @@ export class VistaBajaaltaperiodistas extends LitElement {
    <label style="width: 20%; height: 100%; text-align: center; flex-shrink: 0; font-size: 110%;" id="Labelfechanacimientodaraltaperiodista">Fecha nacimiento</label>
    <vaadin-text-field placeholder="Fecha nacimiento" style="flex-shrink: 0; align-self: center;" id="Textfieldfechanacimientodaraltaperiodista"></vaadin-text-field>
   </vaadin-horizontal-layout>
+  <label style="flex-shrink: 0; font-size: 120%; width: 100%; align-self: center; font-size: 100%; text-align: center; color: #FF0000;" id="Labelerrordatosaltaperiodista"></label>
   <vaadin-horizontal-layout style="width: 20%; height: 15%; justify-content: center; flex-shrink: 0; align-self: center;" id="Layoutbotondaraltaperiodista">
    <vaadin-button style="width: 100%; height: 100%; flex-shrink: 0; align-self: center;" id="Buttondaraltaperiodista">
      Dar de alta 
    </vaadin-button>
   </vaadin-horizontal-layout>
  </vaadin-vertical-layout>
- <vaadin-vertical-layout style="width: 100%; flex-shrink: 0; align-self: center; flex-grow: 0; justify-content: space-between; height: 30%;" id="Layoutdarbajaperiodista" theme="spacing-xl">
+ <vaadin-vertical-layout style="width: 100%; flex-shrink: 0; align-self: center; flex-grow: 0; justify-content: space-between;" id="Layoutdarbajaperiodista" theme="spacing-s">
   <label style="font-size: 40px; text-align: center; flex-shrink: 0; flex-grow: 0; align-self: center;" id="Labeldarbajaperiodista">Dar de baja periodista</label>
-  <vaadin-vertical-layout style="flex-shrink: 0; width: 30%; align-self: center;">
+  <vaadin-vertical-layout style="flex-shrink: 0; width: 30%; align-self: center; padding-bottom: var(--lumo-space-xl);">
    <vaadin-vertical-layout id="Layoutbuscarperiodistabajaaltaperiodistas" style="flex-shrink: 0; width: 100%; position: relative; height: 100%;"></vaadin-vertical-layout>
   </vaadin-vertical-layout>
   <vaadin-button id="Buttondarbajaperiodista" style="flex-shrink: 0; width: 20%; align-self: center;">

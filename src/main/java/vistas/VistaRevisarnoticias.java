@@ -14,7 +14,15 @@ import com.vaadin.flow.component.button.Button;
 @JsModule("./src/vista-revisarnoticias.ts")
 public class VistaRevisarnoticias extends LitTemplate {
 
-    public HorizontalLayout getLayouttematicarevisarnoticias() {
+    public Label getLabelmensajeerrorrevisarnoticias() {
+		return labelmensajeerrorrevisarnoticias;
+	}
+
+	public void setLabelmensajeerrorrevisarnoticias(Label labelmensajeerrorrevisarnoticias) {
+		this.labelmensajeerrorrevisarnoticias = labelmensajeerrorrevisarnoticias;
+	}
+
+	public HorizontalLayout getLayouttematicarevisarnoticias() {
 		return layouttematicarevisarnoticias;
 	}
 
@@ -244,6 +252,8 @@ public class VistaRevisarnoticias extends LitTemplate {
 	private Label labeltematicarevisarnoticias;
 	@Id("Textfieldtematicarevisarnoticias")
 	private TextField textfieldtematicarevisarnoticias;
+	@Id("Labelmensajeerrorrevisarnoticias")
+	private Label labelmensajeerrorrevisarnoticias;
 
 	public VistaRevisarnoticias() {
         // You can initialise any data required for the connected UI components here.

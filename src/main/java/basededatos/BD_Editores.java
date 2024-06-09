@@ -27,19 +27,19 @@ public class BD_Editores {
 	}
 
 	public Editor Guardar_cambios(int aId, String aNombre, String aApellidos, String aNick, String aEmail,
-			String aContrasena, String aUrl_foto_perfil) throws PersistentException {
+			String aContrasena, String aUrl_foto_perfil, int aTelefono) throws PersistentException {
 		List<Identificado> identificados = null;
 		PersistentTransaction t = MDS12324PFFornielesGomezPersistentManager.instance().getSession().beginTransaction();
 		try {
 			identificados = IdentificadoDAO
-					.queryIdentificado("Email = '" + aEmail + "' OR Nick_apodo = '" + aNick + "'", null);
+					.queryIdentificado("(Email = '" + aEmail + "' OR Nick_apodo = '" + aNick + "') AND Id != " + aId, null);
 			t.commit();
 		} catch (Exception e) {
 			t.rollback();
 		}
-
+		
 		Editor editor = null;
-		if (identificados == null) {
+		if (identificados.isEmpty()) {
 			t = MDS12324PFFornielesGomezPersistentManager.instance().getSession().beginTransaction();
 			try {
 				editor = EditorDAO.getEditorByORMID(aId);
@@ -49,6 +49,7 @@ public class BD_Editores {
 				editor.setEmail(aEmail);
 				editor.setContrasena(aContrasena);
 				editor.setUrl_foto_perfil(aUrl_foto_perfil);
+				editor.setTelefono(aTelefono);
 				EditorDAO.save(editor);
 				t.commit();
 			} catch (Exception e) {

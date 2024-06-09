@@ -17,6 +17,7 @@ public class Usuario_Suscrito extends Identificado {
 		this.getLayoutcrearnuevanoticiaidentificado().setVisible(false);
 		this.getLayoutnoticiasarevisaridentificado().setVisible(false);
 		this.getLayoutdaraltabajaperiodistaidentificado().setVisible(false);
+		this.getLayoutexplorarseccionesidentificado().as(VerticalLayout.class).setWidthFull();
 		this.getConfigurarperfilidentificado().addClickListener(event->Configurar_perfil_Usuario_suscrito());
 	}
 

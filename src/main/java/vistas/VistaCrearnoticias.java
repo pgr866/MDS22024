@@ -14,7 +14,15 @@ import com.vaadin.flow.component.button.Button;
 @JsModule("./src/vista-crearnoticias.ts")
 public class VistaCrearnoticias extends LitTemplate {
 
-    public HorizontalLayout getLayouttitulocrearnoticias() {
+    public Label getLabelmensajeerrorcrearnoticia() {
+		return labelmensajeerrorcrearnoticia;
+	}
+
+	public void setLabelmensajeerrorcrearnoticia(Label labelmensajeerrorcrearnoticia) {
+		this.labelmensajeerrorcrearnoticia = labelmensajeerrorcrearnoticia;
+	}
+
+	public HorizontalLayout getLayouttitulocrearnoticias() {
 		return layouttitulocrearnoticias;
 	}
 
@@ -204,6 +212,8 @@ public class VistaCrearnoticias extends LitTemplate {
 	private HorizontalLayout layoutbotoncrearnoticias;
 	@Id("Buttoncrearnoticias")
 	private Button buttoncrearnoticias;
+	@Id("Labelmensajeerrorcrearnoticia")
+	private Label labelmensajeerrorcrearnoticia;
 
 	public VistaCrearnoticias() {
         // You can initialise any data required for the connected UI components here.

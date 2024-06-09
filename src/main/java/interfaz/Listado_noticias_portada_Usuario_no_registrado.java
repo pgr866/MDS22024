@@ -28,7 +28,7 @@ public class Listado_noticias_portada_Usuario_no_registrado extends VistaListado
 					_item.add(null);
 				}
 			}
-
+			
 			for (Listado_noticias_portada_Usuario_no_registrado_item noticia : aux)
 				_item.set(noticia.noticia.getPosicion_portada(), noticia);
 

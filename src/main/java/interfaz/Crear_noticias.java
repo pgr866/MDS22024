@@ -26,6 +26,7 @@ public class Crear_noticias extends vistas.VistaCrearnoticias {
 	public Crear_noticias(Periodista _periodista) {
 		super();
 		this._periodista = _periodista;
+		this.getButtoncrearnoticias().addClickListener(event->Crear_noticia());
 	}
 
 	public void Crear_noticia() {
@@ -36,11 +37,17 @@ public class Crear_noticias extends vistas.VistaCrearnoticias {
 		String lugar = this.getTextfiedlugarcrearnoticias().getValue();
 		String tematicas = this.getTextfieldtematicacrearnoticias().getValue().toLowerCase();
 		int id_periodista = this._periodista.identificado.getId(); 
-		try {
-			iperiodista.Crear_noticia(titulo, url_imagen_noticia, contenido, fecha, lugar, tematicas, id_periodista);
-		} catch (PersistentException e) {
-			e.printStackTrace();
+		
+		if (titulo.isBlank() || url_imagen_noticia.isBlank() || contenido.isBlank() || fecha.isBlank() || lugar.isBlank()
+				|| tematicas.isBlank()) {
+			this.getLabelmensajeerrorcrearnoticia().setText("Debe rellenar todos los campos");
+		} else {
+			try {
+				iperiodista.Crear_noticia(titulo, url_imagen_noticia, contenido, fecha, lugar, tematicas, id_periodista);
+			} catch (PersistentException e) {
+				e.printStackTrace();
+			}
+			this._periodista.Crear_noticias(); // Refrescar pagina
 		}
-		this._periodista.Crear_noticias(); // Refrescar pagina
 	}
 }

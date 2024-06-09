@@ -1,6 +1,10 @@
 package interfaz;
 
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Vector;
+
+import basededatos.Comentario;
 import basededatos.Noticia;
 
 public class Mostrar_mis_noticias extends vistas.VistaMostrarmisnoticias {
@@ -12,6 +16,14 @@ public class Mostrar_mis_noticias extends vistas.VistaMostrarmisnoticias {
 		super();
 		this._periodista = _periodista;
 		Noticia[] mis_noticias = ((basededatos.Periodista) this._periodista.identificado).es_creada.toArray();
+		
+		Arrays.sort(mis_noticias, new Comparator<Noticia>() {
+			@Override
+			public int compare(Noticia c1, Noticia c2) {
+				return Integer.compare(c2.getId_noticia(), c1.getId_noticia());
+			}
+		});
+		
 		Vector<String> titulos = new Vector<String>();
 		for (int i = 0; i < mis_noticias.length; i++) {
 			if (mis_noticias[i].getElimina_noticia() == null && mis_noticias[i].getPublica() != null) {
@@ -21,5 +33,8 @@ public class Mostrar_mis_noticias extends vistas.VistaMostrarmisnoticias {
 			}
 		}
 		this.getComboboxmostrarmisnoticias().setItems(titulos);
+		this.getComboboxmostrarmisnoticias().addValueChangeListener(
+				event -> _item.stream().filter(item -> item.noticia.getTitulo().equals(event.getValue())).findFirst()
+						.ifPresent(item -> item.Pagina_noticia_Identificado()));
 	}
 }

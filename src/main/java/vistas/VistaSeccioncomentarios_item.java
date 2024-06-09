@@ -13,20 +13,28 @@ import com.vaadin.flow.component.html.Label;
 @JsModule("./src/vista-seccioncomentarios_item.ts")
 public class VistaSeccioncomentarios_item extends LitTemplate {
 
+	public Button getButtonborrarcomentario() {
+		return buttonborrarcomentario;
+	}
+
+	public void setButtonborrarcomentario(Button buttonborrarcomentario) {
+		this.buttonborrarcomentario = buttonborrarcomentario;
+	}
+
+	public Element getLayoutborrarcomentarioseccioncomentariositem() {
+		return layoutborrarcomentarioseccioncomentariositem;
+	}
+
+	public void setLayoutborrarcomentarioseccioncomentariositem(Element layoutborrarcomentarioseccioncomentariositem) {
+		this.layoutborrarcomentarioseccioncomentariositem = layoutborrarcomentarioseccioncomentariositem;
+	}
+
 	public Element getLayoutfotousuarioseccioncomentariositem() {
 		return layoutfotousuarioseccioncomentariositem;
 	}
 
 	public void setLayoutfotousuarioseccioncomentariositem(Element layoutfotousuarioseccioncomentariositem) {
 		this.layoutfotousuarioseccioncomentariositem = layoutfotousuarioseccioncomentariositem;
-	}
-
-	public Image getFotousuarioseccioncomentariositem() {
-		return fotousuarioseccioncomentariositem;
-	}
-
-	public void setFotousuarioseccioncomentariositem(Image fotousuarioseccioncomentariositem) {
-		this.fotousuarioseccioncomentariositem = fotousuarioseccioncomentariositem;
 	}
 
 	public Element getLayoutnickusuarioseccioncomentariositem() {
@@ -54,28 +62,12 @@ public class VistaSeccioncomentarios_item extends LitTemplate {
 		this.layoutvistamostrarcomentarioseccioncomentariositem = layoutvistamostrarcomentarioseccioncomentariositem;
 	}
 
-	public Element getLayoutborrarcomentarioseccioncomentariositem() {
-		return layoutborrarcomentarioseccioncomentariositem;
-	}
-
-	public void setLayoutborrarcomentarioseccioncomentariositem(Element layoutborrarcomentarioseccioncomentariositem) {
-		this.layoutborrarcomentarioseccioncomentariositem = layoutborrarcomentarioseccioncomentariositem;
-	}
-
 	public Image getImagenborrarcomentarioseccioncomentariositem() {
 		return imagenborrarcomentarioseccioncomentariositem;
 	}
 
 	public void setImagenborrarcomentarioseccioncomentariositem(Image imagenborrarcomentarioseccioncomentariositem) {
 		this.imagenborrarcomentarioseccioncomentariositem = imagenborrarcomentarioseccioncomentariositem;
-	}
-
-	public Button getSeccioncomentariositem() {
-		return seccioncomentariositem;
-	}
-
-	public void setSeccioncomentariositem(Button seccioncomentariositem) {
-		this.seccioncomentariositem = seccioncomentariositem;
 	}
 
 	public Element getLayoutvistamostrarvaloracioncomentarioseccioncomentariositem() {
@@ -87,8 +79,6 @@ public class VistaSeccioncomentarios_item extends LitTemplate {
 		this.layoutvistamostrarvaloracioncomentarioseccioncomentariositem = layoutvistamostrarvaloracioncomentarioseccioncomentariositem;
 	}
 
-	@Id("Fotousuarioseccioncomentariositem")
-	private Image fotousuarioseccioncomentariositem;
 	@Id("Layoutnickusuarioseccioncomentariositem")
 	private Element layoutnickusuarioseccioncomentariositem;
 	@Id("Labelnickusuarioseccioncomentariositem")
@@ -99,12 +89,12 @@ public class VistaSeccioncomentarios_item extends LitTemplate {
 	private Element layoutborrarcomentarioseccioncomentariositem;
 	@Id("Imagenborrarcomentarioseccioncomentariositem")
 	private Image imagenborrarcomentarioseccioncomentariositem;
-	@Id("seccioncomentariositem")
-	private Button seccioncomentariositem;
 	@Id("Layoutvistamostrarvaloracioncomentarioseccioncomentariositem")
 	private Element layoutvistamostrarvaloracioncomentarioseccioncomentariositem;
 	@Id("Layoutfotousuarioseccioncomentariositem")
 	private Element layoutfotousuarioseccioncomentariositem;
+	@Id("Buttonborrarcomentario")
+	private Button buttonborrarcomentario;
 	public VistaSeccioncomentarios_item() {
         // You can initialise any data required for the connected UI components here.
     }

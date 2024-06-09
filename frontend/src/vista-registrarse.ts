@@ -18,12 +18,12 @@ export class VistaRegistrarse extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; padding-right: var(--lumo-space-m); padding-bottom: var(--lumo-space-m); padding-left: var(--lumo-space-m); position: absolute; justify-content: space-between;">
+<vaadin-vertical-layout style="width: 100%; align-items: center; padding-right: var(--lumo-space-m); padding-bottom: var(--lumo-space-m); padding-left: var(--lumo-space-m); position: absolute; justify-content: space-between;" theme="spacing-l">
  <vaadin-horizontal-layout id="Layoutregistrarse" style="width: 100%; flex-shrink: 0; justify-content: center;">
   <label style="flex-shrink: 0; font-size: 400%; flex-grow: 0;" id="Labelregistrarse">Registrarse</label>
  </vaadin-horizontal-layout>
- <vaadin-vertical-layout style="flex-shrink: 0; align-self: center; width: 100%; flex-grow: 0; justify-content: space-between; height: 75%;">
-  <vaadin-vertical-layout style="width: 100%; flex-shrink: 0; justify-content: space-between;">
+ <vaadin-vertical-layout style="flex-shrink: 0; align-self: center; width: 100%; flex-grow: 0; justify-content: space-between; height: 75%;" theme="spacing">
+  <vaadin-vertical-layout style="width: 100%; flex-shrink: 0; justify-content: space-between;" theme="spacing-xs">
    <vaadin-horizontal-layout style="width: 100%; flex-shrink: 0;" id="Layoutemailregistrarse">
     <label style="width: 20%; flex-shrink: 0; align-self: center; padding-right: var(--lumo-space-xl); flex-grow: 0;" id="Labelemailregistrarse">Email</label>
     <vaadin-text-field placeholder="Email" style="flex-shrink: 0; flex-grow: 1;" id="Textfieldemailregistrarse"></vaadin-text-field>
@@ -35,6 +35,10 @@ export class VistaRegistrarse extends LitElement {
    <vaadin-horizontal-layout style="width: 100%; flex-shrink: 0;" id="Layoutapellidosregistrarse">
     <label style="width: 20%; flex-shrink: 0; align-self: center; flex-grow: 0; padding-right: var(--lumo-space-xl);" id="Labelapellidosregistrarse">Apellidos</label>
     <vaadin-text-field placeholder="Apellidos" style="flex-shrink: 0; flex-grow: 1;" id="Textfieldapellidosregistrarse"></vaadin-text-field>
+   </vaadin-horizontal-layout>
+   <vaadin-horizontal-layout style="width: 100%; flex-shrink: 0;" id="Layouttelefonoregistrarse">
+    <label style="width: 20%; flex-shrink: 0; align-self: center; flex-grow: 0; padding-right: var(--lumo-space-xl);" id="Labeltelefonoregistrarse">Teléfono</label>
+    <vaadin-text-field placeholder="Teléfono" style="flex-shrink: 0; flex-grow: 1;" id="Textfieldtelefonoregistrarse"></vaadin-text-field>
    </vaadin-horizontal-layout>
    <vaadin-horizontal-layout style="width: 100%; flex-shrink: 0;" id="Layoutfechanacimientoregistrarse">
     <label style="width: 20%; flex-shrink: 0; align-self: center; flex-grow: 0; padding-right: var(--lumo-space-xl);" id="Labelfechanacimientoregistrarse">Fecha Nacimiento</label>

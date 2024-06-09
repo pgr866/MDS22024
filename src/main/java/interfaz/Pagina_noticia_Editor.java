@@ -17,23 +17,29 @@ public class Pagina_noticia_Editor extends Pagina_noticia_Identificado {
 
 	public Pagina_noticia_Editor(Listado_noticias_portada_Editor_item _listado_noticias_portada_Editor, basededatos.Noticia noticia) {
 		super(_listado_noticias_portada_Editor, noticia);
+		this.getLayouteliminarpaginanoticia().setVisible(true);
 		this._listado_noticias_portada_Editor = _listado_noticias_portada_Editor;
 		this._seccion_comentarios_Editor = new Seccion_comentarios_Editor(this);
 		Seccion_comentarios_Editor();
+		this.getButtoneliminarpaginanoticia().addClickListener(event -> Eliminar_noticia_publicada());
 	}
 	
 	public Pagina_noticia_Editor(Listado_noticias_busqueda_Editor_item _listado_noticias_busqueda_Editor, basededatos.Noticia noticia) {
 		super(_listado_noticias_busqueda_Editor, noticia);
+		this.getLayouteliminarpaginanoticia().setVisible(true);
 		this._listado_noticias_busqueda_Editor = _listado_noticias_busqueda_Editor;
 		this._seccion_comentarios_Editor = new Seccion_comentarios_Editor(this);
 		Seccion_comentarios_Editor();
+		this.getButtoneliminarpaginanoticia().addClickListener(event -> Eliminar_noticia_publicada());
 	}
 	
 	public Pagina_noticia_Editor(Noticias_en_seccion_Editor_item _noticias_en_seccion_Editor, basededatos.Noticia noticia) {
 		super(_noticias_en_seccion_Editor, noticia);
+		this.getLayouteliminarpaginanoticia().setVisible(true);
 		this._noticias_en_seccion_Editor = _noticias_en_seccion_Editor;
 		this._seccion_comentarios_Editor = new Seccion_comentarios_Editor(this);
 		Seccion_comentarios_Editor();
+		this.getButtoneliminarpaginanoticia().addClickListener(event -> Eliminar_noticia_publicada());
 	}
 	
 	public void Seccion_comentarios_Editor() {

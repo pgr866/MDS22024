@@ -12,15 +12,6 @@ import com.vaadin.flow.component.html.Label;
 @JsModule("./src/vista-noticiasenseccionusuarionoregistrado.ts")
 public class VistaNoticiasenseccionusuarionoregistrado extends LitTemplate {
 
-	public Label getLabelnombreseccionnoticiasenseccionusuarionoregistrado() {
-		return labelnombreseccionnoticiasenseccionusuarionoregistrado;
-	}
-
-	public void setLabelnombreseccionnoticiasenseccionusuarionoregistrado(
-			Label labelnombreseccionnoticiasenseccionusuarionoregistrado) {
-		this.labelnombreseccionnoticiasenseccionusuarionoregistrado = labelnombreseccionnoticiasenseccionusuarionoregistrado;
-	}
-
 	public Element getLayoutnoticiasenseccionusuarionoregistrado() {
 		return layoutnoticiasenseccionusuarionoregistrado;
 	}
@@ -41,9 +32,6 @@ public class VistaNoticiasenseccionusuarionoregistrado extends LitTemplate {
 	private Element layoutnoticiasenseccionusuarionoregistrado;
 	@Id("Noticiasenseccionusuarionoregistrado")
 	private HorizontalLayout noticiasenseccionusuarionoregistrado;
-	@Id("Labelnombreseccionnoticiasenseccionusuarionoregistrado")
-	private Label labelnombreseccionnoticiasenseccionusuarionoregistrado;
-
 	public VistaNoticiasenseccionusuarionoregistrado() {
         // You can initialise any data required for the connected UI components here.
     }

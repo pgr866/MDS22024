@@ -25,7 +25,8 @@ public class Explorar_secciones_Usuario_no_registrado extends VistaExplorarsecci
 	}
 	
 	public void Noticias_en_seccion_Usuario_no_registrado() {
-		this.getLayoutvistasnoticiasenseccionexplorarseccionesusuarionoregistrado().add(_noticias_en_seccion_Usuario_no_registrado);
+		this.getLayoutvistasnoticiasenseccionexplorarseccionesusuarionoregistrado().as(VerticalLayout.class).removeAll();
+		this.getLayoutvistasnoticiasenseccionexplorarseccionesusuarionoregistrado().as(VerticalLayout.class).add(_noticias_en_seccion_Usuario_no_registrado);
 	}
 	
 	public void Secciones_Usuario_no_registrado() {

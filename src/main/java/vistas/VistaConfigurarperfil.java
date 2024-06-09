@@ -16,6 +16,38 @@ import com.vaadin.flow.component.textfield.PasswordField;
 @JsModule("./src/vista-configurarperfil.ts")
 public class VistaConfigurarperfil extends LitTemplate {
 
+	public Element getLayoutfotoconfigurarperfil() {
+		return layoutfotoconfigurarperfil;
+	}
+
+	public void setLayoutfotoconfigurarperfil(Element layoutfotoconfigurarperfil) {
+		this.layoutfotoconfigurarperfil = layoutfotoconfigurarperfil;
+	}
+
+	public HorizontalLayout getLayouttelefonoconfigurarperfil() {
+		return layouttelefonoconfigurarperfil;
+	}
+
+	public void setLayouttelefonoconfigurarperfil(HorizontalLayout layouttelefonoconfigurarperfil) {
+		this.layouttelefonoconfigurarperfil = layouttelefonoconfigurarperfil;
+	}
+
+	public Label getLabeltelefonoconfigurarperfil() {
+		return labeltelefonoconfigurarperfil;
+	}
+
+	public void setLabeltelefonoconfigurarperfil(Label labeltelefonoconfigurarperfil) {
+		this.labeltelefonoconfigurarperfil = labeltelefonoconfigurarperfil;
+	}
+
+	public TextField getTextfieldtelefonoconfigurarperfil() {
+		return textfieldtelefonoconfigurarperfil;
+	}
+
+	public void setTextfieldtelefonoconfigurarperfil(TextField textfieldtelefonoconfigurarperfil) {
+		this.textfieldtelefonoconfigurarperfil = textfieldtelefonoconfigurarperfil;
+	}
+
 	public Label getLabelerrordatosconfigurarperfil() {
 		return labelerrordatosconfigurarperfil;
 	}
@@ -78,14 +110,6 @@ public class VistaConfigurarperfil extends LitTemplate {
 
 	public void setLayoutconfigurarperfil(Element layoutconfigurarperfil) {
 		this.layoutconfigurarperfil = layoutconfigurarperfil;
-	}
-
-	public Image getFotoconfigurarperfil() {
-		return fotoconfigurarperfil;
-	}
-
-	public void setFotoconfigurarperfil(Image fotoconfigurarperfil) {
-		this.fotoconfigurarperfil = fotoconfigurarperfil;
 	}
 
 	public HorizontalLayout getLayoutnombreconfigurarperfil() {
@@ -234,8 +258,6 @@ public class VistaConfigurarperfil extends LitTemplate {
 
 	@Id("Layoutconfigurarperfil")
 	private Element layoutconfigurarperfil;
-	@Id("Fotoconfigurarperfil")
-	private Image fotoconfigurarperfil;
 	@Id("Layoutapodoconfigurarperfil")
 	private HorizontalLayout layoutapodoconfigurarperfil;
 	@Id("Labelapodoconfigurarperfil")
@@ -286,7 +308,14 @@ public class VistaConfigurarperfil extends LitTemplate {
 	private TextField textfieldurlimagenconfigurarperfil;
 	@Id("Labelerrordatosconfigurarperfil")
 	private Label labelerrordatosconfigurarperfil;
-
+	@Id("Layouttelefonoconfigurarperfil")
+	private HorizontalLayout layouttelefonoconfigurarperfil;
+	@Id("Labeltelefonoconfigurarperfil")
+	private Label labeltelefonoconfigurarperfil;
+	@Id("Textfieldtelefonoconfigurarperfil")
+	private TextField textfieldtelefonoconfigurarperfil;
+	@Id("Layoutfotoconfigurarperfil")
+	private Element layoutfotoconfigurarperfil;
 	public VistaConfigurarperfil() {
         // You can initialise any data required for the connected UI components here.
     }

@@ -22,25 +22,24 @@ public class Listado_noticias_portada_Identificado extends VistaListadonoticiasp
 			Vector<Listado_noticias_portada_Identificado_item> aux = new Vector<Listado_noticias_portada_Identificado_item>();
 			for (int i = 0; i < noticias.length; i++) {
 				if (noticias[i].getPortada_contiene_noticias() != null) {
-					if (_identificado instanceof Editor) {
-						aux.add(new Listado_noticias_portada_Editor_item((Listado_noticias_portada_Editor) this,
-								noticias[i]));
-						_item.add(null);
-					} else {
+					if (_identificado instanceof Editor)
+						aux.add(new Listado_noticias_portada_Editor_item(this, noticias[i]));
+					else
 						aux.add(new Listado_noticias_portada_Identificado_item(this, noticias[i]));
-						_item.add(null);
-					}
+					_item.add(null);
 				}
 			}
 
 			for (Listado_noticias_portada_Identificado_item noticia : aux)
 				_item.set(noticia.noticia.getPosicion_portada(), noticia);
+			
+			if (_identificado instanceof Editor)
+				_item.add(new Listado_noticias_portada_Editor_item(this, null));
 
 			for (Listado_noticias_portada_Identificado_item item : _item)
 				this.getLayoutlistadonoticiasportadaidentificado().add(item);
 		} catch (PersistentException e) {
 			e.printStackTrace();
 		}
-
 	}
 }
