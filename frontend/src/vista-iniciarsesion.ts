@@ -25,11 +25,11 @@ export class VistaIniciarsesion extends LitElement {
  <vaadin-vertical-layout style="flex-shrink: 0; align-self: center; width: 60%; flex-grow: 0; justify-content: space-evenly;" id="Layoutopcioneslogin" theme="spacing-l">
   <vaadin-vertical-layout style="width: 100%; flex-shrink: 0;" theme="spacing">
    <vaadin-horizontal-layout style="width: 100%; flex-shrink: 0;" id="Layoutemaillogin">
-    <label style="width: 35%; flex-shrink: 0; align-self: center; font-size: 120%;" id="Labelemaillogin">Email </label>
+    <label style="width: 25%; flex-shrink: 0; align-self: center; font-size: 120%;" id="Labelemaillogin">Email </label>
     <vaadin-text-field placeholder="Email" id="Textfieldemaillogin" style="flex-shrink: 0; width: 50%;"></vaadin-text-field>
    </vaadin-horizontal-layout>
    <vaadin-horizontal-layout style="width: 100%;" id="Layoutcontrasenalogin">
-    <label style="width: 35%; flex-shrink: 0; align-self: center; font-size: 120%;" id="Labelcontrasenalogin">Contraseña</label>
+    <label style="width: 25%; flex-shrink: 0; align-self: center; font-size: 120%;" id="Labelcontrasenalogin">Contraseña</label>
     <vaadin-password-field placeholder="Contraseña" style="flex-shrink: 0; width: 50%;" has-value id="Passwordfieldogin"></vaadin-password-field>
    </vaadin-horizontal-layout>
    <vaadin-horizontal-layout style="width: 100%; flex-shrink: 1; justify-content: center; flex-direction: column;" id="Layoutmensajeerrorlogin">
@@ -39,7 +39,7 @@ export class VistaIniciarsesion extends LitElement {
   <vaadin-button style="flex-shrink: 0; align-self: center; width: 20%;" id="Buttonentrarlogin">
     Entrar 
   </vaadin-button>
-  <vaadin-horizontal-layout style="flex-shrink: 0; width: 100%; justify-content: space-around;" id="Layoutregistrarselogin">
+  <vaadin-horizontal-layout style="flex-shrink: 0; width: 100%; justify-content: space-around; padding-top: var(--lumo-space-l);" id="Layoutregistrarselogin">
    <label style="flex-shrink: 0; font-size: 150%;" id="Labelnoestasregistrado">¿No estas registrado?</label>
    <vaadin-button style="flex-shrink: 0; align-self: center; width: 40%;" id="Buttonregistrarselogin">
      Registrarse 

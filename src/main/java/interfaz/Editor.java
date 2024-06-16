@@ -29,6 +29,10 @@ public class Editor extends Identificado {
 		Noticias_a_revisar();
 		this.getExplorarseccionesidentificado().addClickListener(event->Explorar_secciones_Editor());
 		this.getButtondaraltabajaperiodistaidentificado().addClickListener(event->Baja_Alta_Periodistas());
+		this.getButtonlogoidentificado().addClickListener(event -> {
+			this.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).removeAll();
+			Listado_noticias_portada_Editor();
+		});
 	}
 
 	public void Listado_noticias_portada_Editor() {

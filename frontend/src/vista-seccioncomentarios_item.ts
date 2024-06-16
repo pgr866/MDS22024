@@ -18,7 +18,7 @@ export class VistaSeccioncomentarios_item extends LitElement {
     return html`
 <vaadin-vertical-layout style="width: 100%; flex-shrink: 0; justify-content: space-between; height: 100%; flex-direction: row; flex-grow: 1; padding-bottom: var(--lumo-space-l);">
  <vaadin-vertical-layout style="width: 85%; flex-shrink: 0; height: 100%;">
-  <vaadin-horizontal-layout theme="" style="flex-shrink: 0; width: 100%; height: 50%;">
+  <vaadin-horizontal-layout theme="" style="flex-shrink: 0; width: 100%; height: 50%; min-height: 150px;">
    <vaadin-vertical-layout style="height: 100%; flex-shrink: 1; max-width: 130px;" id="Layoutfotousuarioseccioncomentariositem"></vaadin-vertical-layout>
    <vaadin-vertical-layout style="width: 70%; flex-shrink: 0; height: 100%; flex-grow: 0; justify-content: center; align-self: center;" id="Layoutnickusuarioseccioncomentariositem">
     <label style="width: 100%; flex-shrink: 0; align-self: flex-start;" id="Labelnickusuarioseccioncomentariositem">Nick</label>

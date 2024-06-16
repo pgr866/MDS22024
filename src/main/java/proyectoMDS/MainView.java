@@ -1,6 +1,7 @@
 package proyectoMDS;
 
 import com.vaadin.flow.component.dependency.CssImport;
+import com.vaadin.flow.component.dependency.StyleSheet;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.PWA;
@@ -17,6 +18,7 @@ import interfaz.Usuario_no_Registrado;
         enableInstallPrompt = false)
 @CssImport("./styles/shared-styles.css")
 @CssImport(value = "./styles/vaadin-text-field-styles.css", themeFor = "vaadin-text-field")
+@StyleSheet("context://fonts/Merriweather/stylesheet.css")
 public class MainView extends VerticalLayout {
 	
 	public Usuario_no_Registrado _usuario_no_registrado;

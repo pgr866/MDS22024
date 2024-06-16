@@ -1,8 +1,8 @@
 import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-text-field/src/vaadin-text-field.js';
-import '@vaadin/vaadin-button/src/vaadin-button.js';
-import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
+import '@vaadin/vaadin-button/src/vaadin-button.js';
 
 @customElement('vista-bajaaltaperiodistas')
 export class VistaBajaaltaperiodistas extends LitElement {
@@ -45,7 +45,7 @@ export class VistaBajaaltaperiodistas extends LitElement {
    <vaadin-text-field placeholder="Fecha nacimiento" style="flex-shrink: 0; align-self: center;" id="Textfieldfechanacimientodaraltaperiodista"></vaadin-text-field>
   </vaadin-horizontal-layout>
   <label style="flex-shrink: 0; font-size: 120%; width: 100%; align-self: center; font-size: 100%; text-align: center; color: #FF0000;" id="Labelerrordatosaltaperiodista"></label>
-  <vaadin-horizontal-layout style="width: 20%; height: 15%; justify-content: center; flex-shrink: 0; align-self: center;" id="Layoutbotondaraltaperiodista">
+  <vaadin-horizontal-layout style="width: 20%; height: 20%; justify-content: center; flex-shrink: 0; align-self: center; padding-top: var(--lumo-space-s);" id="Layoutbotondaraltaperiodista">
    <vaadin-button style="width: 100%; height: 100%; flex-shrink: 0; align-self: center;" id="Buttondaraltaperiodista">
      Dar de alta 
    </vaadin-button>
@@ -56,9 +56,11 @@ export class VistaBajaaltaperiodistas extends LitElement {
   <vaadin-vertical-layout style="flex-shrink: 0; width: 30%; align-self: center; padding-bottom: var(--lumo-space-xl);">
    <vaadin-vertical-layout id="Layoutbuscarperiodistabajaaltaperiodistas" style="flex-shrink: 0; width: 100%; position: relative; height: 100%;"></vaadin-vertical-layout>
   </vaadin-vertical-layout>
-  <vaadin-button id="Buttondarbajaperiodista" style="flex-shrink: 0; width: 20%; align-self: center;">
-    Dar de baja 
-  </vaadin-button>
+  <vaadin-vertical-layout style="flex-shrink: 0; width: 20%; height: 20%; align-self: center; padding-top: var(--lumo-space-s);">
+   <vaadin-button id="Buttondarbajaperiodista" style="flex-shrink: 0; align-self: center; width: 100%;">
+     Dar de baja 
+   </vaadin-button>
+  </vaadin-vertical-layout>
  </vaadin-vertical-layout>
 </vaadin-vertical-layout>
 `;

@@ -17,7 +17,7 @@ export class VistaListadonoticiasportadausuarionoregistrado extends LitElement {
     return html`
 <vaadin-vertical-layout id="Layoutprincipallistadonoticiasportadausuarionoregistrado" style="width: 100%; position: absolute;">
  <label style="flex-shrink: 0; align-self: center; font-size: 200%; text-align: center;" id="Labelnoticiasactualidadlistadonoticiasportadausuarionoregistrado">Noticias de Actualidad</label>
- <vaadin-vertical-layout style="flex-shrink: 0; width: 100%; height: 100%; padding-right: var(--lumo-space-xl); padding-left: var(--lumo-space-xl);">
+ <vaadin-vertical-layout style="flex-shrink: 0; width: 100%; height: 100%; padding-right: var(--lumo-space-xl); padding-left: var(--lumo-space-xl); padding-top: var(--lumo-space-m);">
   <vaadin-horizontal-layout theme="" style="flex-shrink: 0; flex-wrap: wrap; padding: 0; flex-grow: 0; width: 100%; position: relative; padding-left: var(--lumo-space-m);" id="Layoutlistadonoticiasportadausuarionoregistrado">
    <div style="max-width: 1%;"></div>
   </vaadin-horizontal-layout>

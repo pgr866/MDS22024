@@ -17,9 +17,9 @@ export class VistaIdentificado extends LitElement {
   render() {
     return html`
 <vaadin-vertical-layout style="width: 100%; height: 100%; position: absolute;">
- <vaadin-horizontal-layout class="header" style="background-color: #EBEBEB; width: 100%; flex-shrink: 0; padding-top: var(--lumo-space-s); padding-right: var(--lumo-space-m); padding-left: var(--lumo-space-m); padding-bottom: var(--lumo-space-s); flex-grow: 0; justify-content: space-between; height: 15%;">
+ <vaadin-horizontal-layout class="header" style="background-color: #F2F2F2; width: 100%; flex-shrink: 0; padding-top: var(--lumo-space-s); padding-right: var(--lumo-space-m); padding-left: var(--lumo-space-m); padding-bottom: var(--lumo-space-s); flex-grow: 0; justify-content: space-between; height: 15%;">
   <vaadin-vertical-layout style="width: 12%; height: 100%; flex-shrink: 0;" id="Layoutlogoidentificado">
-   <vaadin-button theme="icon" ; style="height: 100%; width: 100%; flex-shrink: 1; background-color: #EBEBEB;" id="Buttonlogoidentificado">
+   <vaadin-button theme="icon" ; style="height: 100%; width: 100%; flex-shrink: 1; background-color: #F2F2F2;" id="Buttonlogoidentificado">
     <img src="https://i.postimg.cc/PJ6nS7hm/logo.png" width="" alt="logo" style="width: 100%; height: 100%;" id="imagenlogoidentificado">
    </vaadin-button>
   </vaadin-vertical-layout>
@@ -55,7 +55,7 @@ export class VistaIdentificado extends LitElement {
    </vaadin-horizontal-layout>
   </vaadin-vertical-layout>
   <vaadin-vertical-layout style="width: 12%; height: 100%; flex-shrink: 0; flex-grow: 0; flex-direction: row;">
-   <vaadin-button style="flex-shrink: 0; width: 50%; background-color: #EBEBEB; height: 100%; padding: var(--lumo-space-m);" id="Configurarperfilidentificado"></vaadin-button>
+   <vaadin-button style="flex-shrink: 0; width: 50%; background-color: #F2F2F2; height: 100%; padding: var(--lumo-space-m);" id="Configurarperfilidentificado"></vaadin-button>
    <vaadin-vertical-layout style="width: 50%; height: 100%; flex-shrink: 0;">
     <vaadin-vertical-layout id="Logoutopcionescuentaidentificado" style="flex-shrink: 0; position: relative; flex-grow: 0; width: 100%; height: 100%;"></vaadin-vertical-layout>
    </vaadin-vertical-layout>

@@ -17,6 +17,7 @@ public class Pagina_noticia_Usuario_no_registrado extends Pagina_Noticia {
 				basededatos.Noticia noticia) {
 		super(noticia);
 		this._listado_noticias_portada_Usuario_no_registrado = _listado_noticias_portada_Usuario_no_registrado;
+		this.getLayoutcomentarioseccioncomentarios().setWidth("100%");
 		this._mostrar_noticia_resumida = new Mostrar_noticia_resumida(this, noticia);
 		this._seccion_comentarios_Usuario_no_registrado = new Seccion_comentarios_Usuario_no_registrado(this);
 		Seccion_comentarios_Usuario_no_registrado();
@@ -24,13 +25,13 @@ public class Pagina_noticia_Usuario_no_registrado extends Pagina_Noticia {
 		this._mostrar_valoracion_noticia.getMegustamostrarvaloracionnoticia().addClickListener(event -> Notification.show("Inicia sesión o Registrate para desbloquear nuevas funcionalidades"));
 		this._mostrar_valoracion_noticia.getNomegustamostrarvaloracionnoticia().addClickListener(event -> Notification.show("Inicia sesión o Registrate para desbloquear nuevas funcionalidades"));
 		this.getBotonanadircomentarioseccioncomentarios().addClickListener(event -> Notification.show("Inicia sesión o Registrate para desbloquear nuevas funcionalidades"));
-		this.getLayoutcomentarioseccioncomentarios().setVisible(false);
 	}
 	
 	public Pagina_noticia_Usuario_no_registrado(Listado_noticias_busqueda_Usuario_no_registrado_item _listado_noticias_busqueda_Usuario_no_registrado,
 			basededatos.Noticia noticia) {
 	super(noticia);
 	this._listado_noticias_busqueda_Usuario_no_registrado = _listado_noticias_busqueda_Usuario_no_registrado;
+	this.getLayoutcomentarioseccioncomentarios().setWidth("100%");
 	this._mostrar_noticia_resumida = new Mostrar_noticia_resumida(this, noticia);
 	this._seccion_comentarios_Usuario_no_registrado = new Seccion_comentarios_Usuario_no_registrado(this);
 	Seccion_comentarios_Usuario_no_registrado();
@@ -44,6 +45,7 @@ public class Pagina_noticia_Usuario_no_registrado extends Pagina_Noticia {
 			basededatos.Noticia noticia) {
 	super(noticia);
 	this._noticias_en_seccion_Usuario_no_registrado =_noticias_en_seccion_Usuario_no_registrado;
+	this.getLayoutcomentarioseccioncomentarios().setWidth("100%");
 	this._mostrar_noticia_resumida = new Mostrar_noticia_resumida(this, noticia);
 	this._seccion_comentarios_Usuario_no_registrado = new Seccion_comentarios_Usuario_no_registrado(this);
 	Seccion_comentarios_Usuario_no_registrado();

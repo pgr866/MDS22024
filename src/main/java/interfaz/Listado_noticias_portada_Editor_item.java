@@ -22,7 +22,8 @@ public class Listado_noticias_portada_Editor_item extends Listado_noticias_porta
 		this._listado_noticias_ordenar_portada = new Listado_noticias_ordenar_portada(this);
 		Listado_noticias_ordenar_portada();
 		this._listado_noticias_ordenar_portada.getComboboxlistadonoticiasordenarportada().setValue(noticia == null ? "" : noticia.getTitulo());
-		this._listado_noticias_ordenar_portada.getComboboxlistadonoticiasordenarportada().addValueChangeListener(event->Cambiar_orden_noticias_portada());	
+		this._listado_noticias_ordenar_portada.getComboboxlistadonoticiasordenarportada().addValueChangeListener(event->Cambiar_orden_noticias_portada());
+		this.getTitulolistadonoticiasportadaidentificado().addClickListener(event->Pagina_noticia_Editor());
 	}
 	
 	public void Listado_noticias_ordenar_portada() {

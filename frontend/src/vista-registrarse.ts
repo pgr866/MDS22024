@@ -22,7 +22,7 @@ export class VistaRegistrarse extends LitElement {
  <vaadin-horizontal-layout id="Layoutregistrarse" style="width: 100%; flex-shrink: 0; justify-content: center;">
   <label style="flex-shrink: 0; font-size: 400%; flex-grow: 0;" id="Labelregistrarse">Registrarse</label>
  </vaadin-horizontal-layout>
- <vaadin-vertical-layout style="flex-shrink: 0; align-self: center; width: 100%; flex-grow: 0; justify-content: space-between; height: 75%;" theme="spacing">
+ <vaadin-vertical-layout style="flex-shrink: 0; align-self: center; width: 70%; flex-grow: 0; justify-content: space-between; height: 75%;" theme="spacing">
   <vaadin-vertical-layout style="width: 100%; flex-shrink: 0; justify-content: space-between;" theme="spacing-xs">
    <vaadin-horizontal-layout style="width: 100%; flex-shrink: 0;" id="Layoutemailregistrarse">
     <label style="width: 20%; flex-shrink: 0; align-self: center; padding-right: var(--lumo-space-xl); flex-grow: 0;" id="Labelemailregistrarse">Email</label>
@@ -66,7 +66,7 @@ export class VistaRegistrarse extends LitElement {
    </vaadin-horizontal-layout>
    <label style="flex-shrink: 0; font-size: 120%; width: 100%; align-self: center; font-size: 100%; text-align: center; color: #FF0000;" id="Labelerrordatosregistrarse"></label>
   </vaadin-vertical-layout>
-  <vaadin-horizontal-layout style="flex-shrink: 0; width: 100%; justify-content: space-around;" id="Layoutcancelarenviarregistrarse">
+  <vaadin-horizontal-layout style="flex-shrink: 0; width: 80%; justify-content: space-around; align-self: center; padding-top: var(--lumo-space-s); padding-bottom: var(--lumo-space-m);" id="Layoutcancelarenviarregistrarse">
    <vaadin-button style="flex-shrink: 0; align-self: center; width: 40%;" id="Cancelarregistrarse">
      Cancelar 
    </vaadin-button>

@@ -21,7 +21,7 @@ export class VistaListadonoticiasportadaidentificado_item extends LitElement {
   <vaadin-vertical-layout style="flex-shrink: 0; width: 100%; height: 100%;">
    <vaadin-vertical-layout id="Layouttitulonoticiaordenarportadaidentificado" style="width: 100%; padding: 0; flex-shrink: 0; height: 100%; align-items: stretch;"></vaadin-vertical-layout>
   </vaadin-vertical-layout>
-  <vaadin-button id="Titulolistadonoticiasportadaidentificado" style="flex-shrink: 0; width: 100%; background-color: #FFFFFF; flex-grow: 0; padding: 0; height: 100%;">
+  <vaadin-button id="Titulolistadonoticiasportadaidentificado" style="flex-shrink: 0; width: 100%; background-color: #FFFFFF; flex-grow: 0; padding: 0; height: 100%; color: #263345;">
     Título Noticia 
   </vaadin-button>
  </vaadin-vertical-layout>

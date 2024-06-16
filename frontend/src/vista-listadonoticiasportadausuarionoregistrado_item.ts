@@ -18,7 +18,7 @@ export class VistaListadonoticiasportadausuarionoregistrado_item extends LitElem
     return html`
 <vaadin-vertical-layout style="width: 100%; max-width: 380px; padding: 0; margin-right: var(--lumo-space-xl); margin-left: var(--lumo-space-l); margin-bottom: var(--lumo-space-l);">
  <vaadin-vertical-layout id="Layouttitulolistadonoticiasportadausuarionoregistrado" style="flex-shrink: 0; height: 100%; width: 100%; padding: 0;">
-  <vaadin-button id="Titulolistadonoticiasportadausuarionoregistrado" style="flex-shrink: 0; width: 100%; background-color: #FFFFFF; flex-grow: 0; height: 100%; margin-left: var(--lumo-space-m); padding: 0;">
+  <vaadin-button id="Titulolistadonoticiasportadausuarionoregistrado" style="flex-shrink: 0; width: 100%; background-color: #FFFFFF; flex-grow: 0; height: 100%; margin-left: var(--lumo-space-m); padding: 0; color: #263345;">
     Título Noticia 
   </vaadin-button>
  </vaadin-vertical-layout>
