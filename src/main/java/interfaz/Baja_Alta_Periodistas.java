@@ -105,8 +105,7 @@ public class Baja_Alta_Periodistas extends vistas.VistaBajaaltaperiodistas {
 			if (nuevo_periodista == null) {
 				this.getLabelerrordatosaltaperiodista().setText("Correo electrónico / nick ya está en uso");
 			} else {
-				this._editor.Baja_Alta_Periodistas(); // Refrescar pagina	
-				Notification.show("Correo verificado correctamente");
+				this._editor.Baja_Alta_Periodistas(); // Refrescar pagina
 			}
 		}
 	}
