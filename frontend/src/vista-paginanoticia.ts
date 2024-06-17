@@ -40,11 +40,11 @@ export class VistaPaginanoticia extends LitElement {
      </vaadin-vertical-layout>
     </vaadin-horizontal-layout>
    </vaadin-horizontal-layout>
-   <vaadin-vertical-layout style="width: 95%; flex-shrink: 0; padding: 0; padding-top: var(--lumo-space-l); padding-bottom: var(--lumo-space-s);">
+   <vaadin-vertical-layout style="width: 95%; flex-shrink: 0; padding: 0; padding-bottom: var(--lumo-space-xl);">
     <vaadin-horizontal-layout style="width: 100%; flex-shrink: 1; flex-grow: 0; align-self: center; position: relative; padding: 0;" id="Mostrarnoticiaresumidayextendidapaginanoticia"></vaadin-horizontal-layout>
    </vaadin-vertical-layout>
   </vaadin-vertical-layout>
-  <label style="flex-shrink: 0; align-self: center; font-size: 150%; align-self: center; padding-top: var(--lumo-space-l);" id="Labelseccioncomentarios">Comentarios</label>
+  <label style="flex-shrink: 0; align-self: center; font-size: 150%; align-self: center; padding-top: var(--lumo-space-xl);" id="Labelseccioncomentarios">Comentarios</label>
   <vaadin-horizontal-layout style="flex-shrink: 0; flex-grow: 0; width: 75%; justify-content: space-between; padding-top: var(--lumo-space-m); padding-bottom: var(--lumo-space-m); padding-right: var(--lumo-space-xl); padding-left: var(--lumo-space-xl); align-self: center;" id="Layoutcomentarioseccioncomentarios">
    <vaadin-button style="flex-shrink: 0; flex-grow: 0; align-self: center; width: 20%;" id="Botonanadircomentarioseccioncomentarios">
      Añadir comentario 

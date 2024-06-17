@@ -34,7 +34,7 @@ export class VistaCrearnoticias extends LitElement {
  <vaadin-horizontal-layout style="flex-shrink: 0; width: 80%; height: 12%; align-items: center; justify-content: center;" id="Layoutfechalugarcrearnoticias">
   <label style="width: 18.5%; flex-shrink: 0; flex-grow: 0; font-size: 120%;" id="Labelfechalugarcrearnoticias">Fecha y Lugar</label>
   <vaadin-horizontal-layout style="flex-shrink: 0; justify-content: space-between; flex-grow: 0; width: 71.5%;" id="Layouttextfieldfechalugarcrearnoticias">
-   <vaadin-text-field placeholder="Fecha" style="flex-shrink: 0; flex-grow: 0; width: 47%;" id="Textfieldfechacrearnoticias"></vaadin-text-field>
+   <vaadin-text-field placeholder="Fecha (DD-MM-AAAA)" style="flex-shrink: 0; flex-grow: 0; width: 47%;" id="Textfieldfechacrearnoticias"></vaadin-text-field>
    <vaadin-text-field placeholder="Lugar" style="flex-shrink: 0; flex-grow: 0; width: 47%;" id="Textfiedlugarcrearnoticias"></vaadin-text-field>
   </vaadin-horizontal-layout>
  </vaadin-horizontal-layout>

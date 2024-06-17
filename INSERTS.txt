@@ -1,0 +1,63 @@
+Obligatorio:
+
+INSERT INTO Identificado VALUES (1, '12345678X', 'Pablo', 'Gómez', 'pablo', 'pgr866@inlumine.ual.es', 'Contrasena1', '02-02-2003', 608261019, 'https://avatars.githubusercontent.com/u/114260059');
+INSERT INTO Editor VALUES (1);
+INSERT INTO Portada VALUES (1, 1);
+
+Opcional:
+
+INSERT INTO Identificado VALUES (2, '12345678X', 'Jesús', 'Fornieles', 'jesus', 'jfm112@inlumine.ual.es', 'Contrasena1', '13-03-2003', 638793093, 'https://avatars.githubusercontent.com/u/114262859');
+INSERT INTO Periodista VALUES (2, NULL, 1);
+
+INSERT INTO Identificado VALUES (3, '12345678X', 'José', 'Pérez', 'joseperez02', 'pabloenlaplayadebalerma@gmail.com', 'Contrasena1', '14-05-2002', 123456789, 'https://i.postimg.cc/yNmSYfP8/foto.png');
+INSERT INTO Usuario_suscrito VALUES (12345678901234567890, 0, 3);
+
+INSERT INTO Seccion VALUES (1, NULL, 1, 'Deportes');
+
+INSERT INTO Tematica VALUES (1, 'laroja');
+INSERT INTO Tematica VALUES (2, 'futbol');
+INSERT INTO Tematica VALUES (3, 'eurocopa');
+INSERT INTO Tematica VALUES (4, 'seleccion');
+
+INSERT INTO Noticia VALUES (1, 1, 1, NULL, 1, 2, 'Unai Simón da las gracias a De la Fuente', 'https://i.postimg.cc/5t9G8VQG/noticia1.jpg', '17-06-2024', 'Donaueschingen', 'El meta de la selección relata su aprendizaje del juego con los pies, revela que se operará una muñeca tras la Eurocopa y se desmarca de Mbappé: “Aquí soy jugador de fútbol y creo que solo debería hablar de temas deportivos”.', 'Unai Simón supera sus errores rápido, aunque le afectan tras el partido. Prefiere hablar solo de fútbol, evitando temas políticos. Reveló que se operará la muñeca tras la Eurocopa, una lesión que no le impide jugar.', 2, 1, 0);
+
+INSERT INTO Tematica_Noticia VALUES (1, 1);
+INSERT INTO Tematica_Noticia VALUES (2, 1);
+INSERT INTO Tematica_Noticia VALUES (3, 1);
+
+INSERT INTO Identificado_Noticia VALUES (1, 1);
+INSERT INTO Identificado_Noticia VALUES (2, 1);
+INSERT INTO Identificado_Noticia2 VALUES (3, 1);
+
+INSERT INTO Comentario VALUES (1, 1, NULL, 1, 'Que buen jugador!', 1, 1);
+INSERT INTO Comentario_Identificado VALUES (1, 1);
+INSERT INTO Comentario_Identificado2 VALUES (1, 3);
+INSERT INTO Comentario VALUES (2, 3, NULL, 1, 'Vaya partidazo el del otro dia!', 1, 1);
+INSERT INTO Comentario_Identificado VALUES (2, 2);
+INSERT INTO Comentario_Identificado2 VALUES (2, 1);
+
+INSERT INTO Noticia VALUES (2, 1, 1, NULL, 1, 2, 'Dani Carvajal estrena Eurocopa como goleador', 'https://i.postimg.cc/mk96TZKc/noticia2.jpg', '17-06-2024', 'Donaueschingen', 'El defensa, que arengó a la selección antes de la final de la Nations en Rotterdam, repitió antes de jugar con Croacia, su debut en una Eurocopa y su estreno como goleador.', 'Los jugadores de la selección española se unieron antes del partido contra Croacia, con Dani Carvajal, debutante en la Eurocopa a los 32 años, liderando la arenga. Tras superar lesiones y ganar la Nations League, estaba listo para inspirar a su equipo.', 1, 2, 1);
+
+INSERT INTO Tematica_Noticia VALUES (1, 2);
+INSERT INTO Tematica_Noticia VALUES (3, 2);
+INSERT INTO Tematica_Noticia VALUES (4, 2);
+
+INSERT INTO Comentario VALUES (3, 2, NULL, 2, 'Que buen jugador!', 1, 1);
+INSERT INTO Comentario_Identificado VALUES (3, 1);
+INSERT INTO Comentario_Identificado2 VALUES (3, 3);
+INSERT INTO Comentario VALUES (4, 3, NULL, 2, 'Vaya partidazo el del otro dia!', 1, 1);
+INSERT INTO Comentario_Identificado VALUES (4, 2);
+INSERT INTO Comentario_Identificado2 VALUES (4, 1);
+
+INSERT INTO Noticia VALUES (3, 1, 1, NULL, 1, 2, 'La nueva España: adiós al culto por el balón', 'https://i.postimg.cc/4y9KNjJ2/noticia3.jpg', '17-06-2024', 'Donaueschingen', 'Después de 136 partidos, la selección perdió la posesión ante Croacia, un ejemplo de los matices que buscaba Luis de la Fuente, un equipo más directo para aprovechar la velocidad de Nico y Lamine.', 'España perdió la posesión ante Croacia, mostrando el cambio hacia un juego más directo de Luis de la Fuente para aprovechar la velocidad de jóvenes como Nico Williams y Lamine Yamal en contraataques rápidos.', 1, 2, 2);
+
+INSERT INTO Tematica_Noticia VALUES (1, 3);
+INSERT INTO Tematica_Noticia VALUES (2, 3);
+INSERT INTO Tematica_Noticia VALUES (4, 3);
+
+INSERT INTO Comentario VALUES (5, 1, NULL, 3, 'Que buenos jugadores!', 1, 1);
+INSERT INTO Comentario_Identificado VALUES (5, 1);
+INSERT INTO Comentario_Identificado2 VALUES (5, 3);
+INSERT INTO Comentario VALUES (6, 2, NULL, 3, 'Vaya partidazo el del otro dia!', 1, 1);
+INSERT INTO Comentario_Identificado VALUES (6, 2);
+INSERT INTO Comentario_Identificado2 VALUES (6, 1);

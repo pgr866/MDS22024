@@ -1,6 +1,8 @@
 package interfaz;
 
 import org.orm.PersistentException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 import base_de_datos.BDPrincipal;
 import base_de_datos.iPeriodista;
@@ -37,11 +39,24 @@ public class Crear_noticias extends vistas.VistaCrearnoticias {
 		String lugar = this.getTextfiedlugarcrearnoticias().getValue();
 		String tematicas = this.getTextfieldtematicacrearnoticias().getValue().toLowerCase();
 		int id_periodista = this._periodista.identificado.getId(); 
+		boolean validos = true;
 		
 		if (titulo.isBlank() || url_imagen_noticia.isBlank() || contenido.isBlank() || fecha.isBlank() || lugar.isBlank()
 				|| tematicas.isBlank()) {
 			this.getLabelmensajeerrorcrearnoticia().setText("Debe rellenar todos los campos");
-		} else {
+			validos = false;
+		}
+		
+		SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+        dateFormat.setLenient(false);
+        try {
+            dateFormat.parse(fecha);
+        } catch (ParseException e) {
+        	if (validos) this.getLabelmensajeerrorcrearnoticia().setText("La fecha debe seguir el formato DD-MM-AAAA");
+        	validos = false;
+        }
+		
+		if (validos) {
 			try {
 				iperiodista.Crear_noticia(titulo, url_imagen_noticia, contenido, fecha, lugar, tematicas, id_periodista);
 			} catch (PersistentException e) {
