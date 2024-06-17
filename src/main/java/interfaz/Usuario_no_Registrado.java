@@ -29,6 +29,7 @@ public class Usuario_no_Registrado extends VistaUsuarionoregistrado {
 		Listado_noticias_busqueda_Usuario_no_registrado();
 		this.getIniciarsesion().addClickListener(event->Iniciar_Sesion());
 		this.getLogonoregistrado().addClickListener(event->{
+			this._listado_noticias_portada_Usuario_no_registrado = new Listado_noticias_portada_Usuario_no_registrado(this);
 			this.getLayoutnoticiasportadausuarionoregistrado().as(VerticalLayout.class).removeAll();
 			Listado_noticias_portada_Usuario_no_registrado();
 		});

@@ -44,17 +44,19 @@ public class Identificado extends VistaIdentificado {
 		this.getExplorarseccionesidentificado().addClickListener(event -> Explorar_secciones_Identificado());
 		this.getConfigurarperfilidentificado().addClickListener(event -> Configurar_perfil());
 		this.getButtonlogoidentificado().addClickListener(event -> {
-			this.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).removeAll();
+			this._listado_noticias_portada_Identificado = new Listado_noticias_portada_Identificado(this);
 			Listado_noticias_portada_Identificado();
 		});
 	}
 
 	public void Listado_noticias_portada_Identificado() {
+		this.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).removeAll();
 		this.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class)
 				.add(_listado_noticias_portada_Identificado);
 	}
 
 	public void Listado_noticias_busqueda_Identificado() {
+		this.getLayoutvistabuscaridentificado().removeAll();
 		this.getLayoutvistabuscaridentificado().add(_listado_noticias_busqueda_Identificado);
 	}
 

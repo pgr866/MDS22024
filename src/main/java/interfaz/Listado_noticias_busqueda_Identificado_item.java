@@ -15,9 +15,9 @@ public class Listado_noticias_busqueda_Identificado_item extends VistaListadonot
 			basededatos.Noticia noticia) {
 		super();
 		this._listado_noticias_busqueda_Identificado = _listado_noticias_busqueda_Identificado;
-		this._listado_noticias_busqueda_Identificado.getComboboxlistadonoticiasbusquedaidentificado().addValueChangeListener(event->Pagina_noticia_Identificado());
 		this.noticia = noticia;
 		this.getLayoutlistadonoticiasbusquedaidentificadoitem().setText(noticia.getTitulo());
+		this._listado_noticias_busqueda_Identificado.getComboboxlistadonoticiasbusquedaidentificado().addValueChangeListener(event->Pagina_noticia_Identificado());
 	}
 
 	public void Pagina_noticia_Identificado() {

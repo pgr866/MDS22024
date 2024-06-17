@@ -28,6 +28,7 @@ public class Periodista extends Identificado {
 	}
 
 	public void Mostrar_mis_noticias() {
+		this.getLayoutvermisnoticiasidentificado().as(VerticalLayout.class).removeAll();
 		this.getLayoutvermisnoticiasidentificado().as(VerticalLayout.class).add(_mostrar_mis_noticias);
 	}
 }

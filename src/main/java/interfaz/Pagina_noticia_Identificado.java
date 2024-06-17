@@ -90,13 +90,12 @@ public class Pagina_noticia_Identificado extends Pagina_Noticia {
 		basededatos.Noticia noticia;
 		try {
 			noticia = iidentificado.Valorar_noticia(id_noticia, id_identificado, positiva);
+			// Refrescar pagina
 			if (noticia != null) {
 				this._mostrar_valoracion_noticia.getNumeromegustamostrarvaloracionnoticia()
 						.setText(String.valueOf(noticia.getValoraciones_positivas()));
-				;
 				this._mostrar_valoracion_noticia.getNumeronomegustamostrarvaloracionnoticia()
 						.setText(String.valueOf(noticia.getValoraciones_negativas()));
-				;
 			}
 		} catch (PersistentException e) {
 			e.printStackTrace();
@@ -123,33 +122,34 @@ public class Pagina_noticia_Identificado extends Pagina_Noticia {
 		else {
 			try {
 				basededatos.Noticia noticia = iidentificado.Comentar(id_identificado, id_noticia, contenido);
+				// Refrescar pagina
 				if (this._listado_noticias_portada_Identificado != null) {
 					if (identificado instanceof basededatos.Editor) {
 						((Pagina_noticia_Editor) this)._listado_noticias_portada_Editor.noticia = noticia;
-						((Pagina_noticia_Editor) this)._listado_noticias_portada_Editor.Pagina_noticia_Editor(); // Refrescar																							// pagina
+						((Pagina_noticia_Editor) this)._listado_noticias_portada_Editor.Pagina_noticia_Editor();																						// pagina
 					} else {
 						this._listado_noticias_portada_Identificado.noticia = noticia;
-						this._listado_noticias_portada_Identificado.Pagina_noticia_Identificado(); // Refrescar pagina
+						this._listado_noticias_portada_Identificado.Pagina_noticia_Identificado();
 					}
 				} else if (this._listado_noticias_busqueda_Identificado != null) {
 					if (identificado instanceof basededatos.Editor) {
 						((Pagina_noticia_Editor) this)._listado_noticias_busqueda_Editor.noticia = noticia;
-						((Pagina_noticia_Editor) this)._listado_noticias_busqueda_Editor.Pagina_noticia_Editor(); // Refrescar																							// pagina
+						((Pagina_noticia_Editor) this)._listado_noticias_busqueda_Editor.Pagina_noticia_Editor();																				// pagina
 					} else {
 						this._listado_noticias_busqueda_Identificado.noticia = noticia;
-						this._listado_noticias_busqueda_Identificado.Pagina_noticia_Identificado(); // Refrescar pagina
+						this._listado_noticias_busqueda_Identificado.Pagina_noticia_Identificado();
 					}
 				} else if (this._noticias_en_seccion_Identificado != null) {
 					if (identificado instanceof basededatos.Editor) {
 						((Pagina_noticia_Editor) this)._noticias_en_seccion_Editor.noticia = noticia;
-						((Pagina_noticia_Editor) this)._noticias_en_seccion_Editor.Pagina_noticia_Editor(); // Refrescar																					// pagina
+						((Pagina_noticia_Editor) this)._noticias_en_seccion_Editor.Pagina_noticia_Editor();																				// pagina
 					} else {
 						this._noticias_en_seccion_Identificado.noticia = noticia;
-						this._noticias_en_seccion_Identificado.Pagina_noticia_Identificado(); // Refrescar pagina
+						this._noticias_en_seccion_Identificado.Pagina_noticia_Identificado();
 					}
 				} else if (this._mostrar_mis_noticias != null) {
 					this._mostrar_mis_noticias.noticia = noticia;
-					this._mostrar_mis_noticias.Pagina_noticia_Identificado(); // Refrescar pagina
+					this._mostrar_mis_noticias.Pagina_noticia_Identificado();
 				}
 			} catch (PersistentException e) {
 				e.printStackTrace();
