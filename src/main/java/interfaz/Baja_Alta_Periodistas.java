@@ -1,8 +1,10 @@
 package interfaz;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
 import org.orm.PersistentException;
 
-import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import base_de_datos.BDPrincipal;
 import base_de_datos.iEditor;
@@ -61,6 +63,15 @@ public class Baja_Alta_Periodistas extends vistas.VistaBajaaltaperiodistas {
 			this.getLabelerrordatosaltaperiodista().setText("Debe rellenar todos los campos");
 			validos = false;
 		}
+		
+		SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+        dateFormat.setLenient(false);
+        try {
+            dateFormat.parse(fecha_nacimiento);
+        } catch (ParseException e) {
+        	if (validos) this.getLabelerrordatosaltaperiodista().setText("La fecha de nacimiento debe seguir el formato DD-MM-AAAA");
+			validos = false;
+        }
 
 		int num_telefono = 0;
 		try {

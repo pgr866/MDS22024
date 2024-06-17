@@ -7,7 +7,6 @@ import org.orm.PersistentException;
 import vistas.VistaListadonoticiasbusquedausuarionoregistrado;
 import base_de_datos.BDPrincipal;
 import base_de_datos.iUsuario_no_Registrado;
-import ch.qos.logback.core.recovery.ResilientSyslogOutputStream;
 
 public class Listado_noticias_busqueda_Usuario_no_registrado extends VistaListadonoticiasbusquedausuarionoregistrado {
 

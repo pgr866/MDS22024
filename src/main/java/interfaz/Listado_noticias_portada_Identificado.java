@@ -32,9 +32,6 @@ public class Listado_noticias_portada_Identificado extends VistaListadonoticiasp
 
 			for (Listado_noticias_portada_Identificado_item noticia : aux)
 				_item.set(noticia.noticia.getPosicion_portada(), noticia);
-			
-			if (_identificado instanceof Editor)
-				_item.add(new Listado_noticias_portada_Editor_item(this, null));
 
 			for (Listado_noticias_portada_Identificado_item item : _item)
 				this.getLayoutlistadonoticiasportadaidentificado().add(item);

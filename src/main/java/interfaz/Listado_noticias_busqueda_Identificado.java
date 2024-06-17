@@ -30,15 +30,12 @@ public class Listado_noticias_busqueda_Identificado extends VistaListadonoticias
 				titulos.add(noticias[i].getTitulo());
 			}
 			this.getComboboxlistadonoticiasbusquedaidentificado().setItems(titulos);
-
-			this.getComboboxlistadonoticiasbusquedaidentificado()
-			.addValueChangeListener(event -> {
+			this.getComboboxlistadonoticiasbusquedaidentificado().addValueChangeListener(event -> {
 				_identificado._listado_noticias_busqueda_Identificado = new Listado_noticias_busqueda_Identificado(_identificado);
 				_identificado.Listado_noticias_busqueda_Identificado();
 				_identificado._listado_noticias_busqueda_Identificado._item.stream().filter(item -> item.noticia.getTitulo().equals(event.getValue()))
 				.findFirst().ifPresent(item -> item.Pagina_noticia_Identificado());
 			});
-			
 		} catch (PersistentException e) {
 			e.printStackTrace();
 		}

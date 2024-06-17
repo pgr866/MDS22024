@@ -42,7 +42,7 @@ export class VistaBajaaltaperiodistas extends LitElement {
    <label style="width: 20%; height: 100%; text-align: center; flex-shrink: 0; font-size: 120%;" id="Labelcontrasenadaraltaperiodista">Contraseña</label>
    <vaadin-text-field placeholder="Contraseña" style="flex-shrink: 0; align-self: center;" id="Textfieldcontrasenadaraltaperiodista"></vaadin-text-field>
    <label style="width: 20%; height: 100%; text-align: center; flex-shrink: 0; font-size: 110%;" id="Labelfechanacimientodaraltaperiodista">Fecha nacimiento</label>
-   <vaadin-text-field placeholder="Fecha nacimiento" style="flex-shrink: 0; align-self: center;" id="Textfieldfechanacimientodaraltaperiodista"></vaadin-text-field>
+   <vaadin-text-field placeholder="DD-MM-AAAA" style="flex-shrink: 0; align-self: center;" id="Textfieldfechanacimientodaraltaperiodista"></vaadin-text-field>
   </vaadin-horizontal-layout>
   <label style="flex-shrink: 0; font-size: 120%; width: 100%; align-self: center; font-size: 100%; text-align: center; color: #FF0000;" id="Labelerrordatosaltaperiodista"></label>
   <vaadin-horizontal-layout style="width: 20%; height: 20%; justify-content: center; flex-shrink: 0; align-self: center; padding-top: var(--lumo-space-s);" id="Layoutbotondaraltaperiodista">

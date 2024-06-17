@@ -1,6 +1,8 @@
 package interfaz;
 
 import org.orm.PersistentException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 import base_de_datos.BDPrincipal;
 import base_de_datos.iUsuario_no_Registrado;
@@ -55,6 +57,15 @@ public class Registrarse extends vistas.VistaRegistrarse {
 			validos = false;
 		}
 
+		SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+        dateFormat.setLenient(false);
+        try {
+            dateFormat.parse(fecha_nacimiento);
+        } catch (ParseException e) {
+        	if (validos) this.getLabelerrordatosregistrarse().setText("La fecha de nacimiento debe seguir el formato DD-MM-AAAA");
+			validos = false;
+        }
+		
 		int num_telefono = 0;
 		try {
 			num_telefono = Integer.parseInt(telefono);

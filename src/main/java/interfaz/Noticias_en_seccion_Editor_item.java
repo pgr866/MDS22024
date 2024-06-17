@@ -2,8 +2,6 @@ package interfaz;
 
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
-import vistas.VistaNoticiasenseccionidentificado_item;
-
 public class Noticias_en_seccion_Editor_item extends Noticias_en_seccion_Identificado_item {
 	
 //	private Label _titulo;

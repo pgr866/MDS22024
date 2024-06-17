@@ -2,11 +2,8 @@ package interfaz;
 
 import vistas.VistaIdentificado;
 
-import com.vaadin.flow.component.UI;
-import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
-import com.vaadin.flow.server.Command;
 
 import proyectoMDS.MainView;
 

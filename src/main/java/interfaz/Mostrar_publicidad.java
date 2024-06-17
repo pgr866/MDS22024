@@ -1,5 +1,7 @@
 package interfaz;
 
+import com.vaadin.flow.component.UI;
+
 import vistas.VistaMostrarpublicidad;
 
 public class Mostrar_publicidad extends VistaMostrarpublicidad {
@@ -11,7 +13,6 @@ public class Mostrar_publicidad extends VistaMostrarpublicidad {
 		super();
 		this._usuario_no_Registrado = _usuario_no_Registrado;
 		Gestionar_publicidad();
-//		this.getButtonanunciomostrarpublidad().addClickListener(event->{});
     }
 	
 	public void Gestionar_publicidad() {

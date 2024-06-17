@@ -4,8 +4,6 @@ import java.util.Vector;
 
 import org.orm.PersistentException;
 
-import com.vaadin.flow.component.listbox.MultiSelectListBox;
-
 import vistas.VistaSeccionesusuarionoregistrado;
 import base_de_datos.BDPrincipal;
 import base_de_datos.iUsuario_no_Registrado;

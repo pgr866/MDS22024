@@ -2,8 +2,6 @@ package interfaz;
 
 import java.util.Vector;
 
-import vistas.VistaNoticiasenseccionidentificado;
-
 public class Noticias_en_seccion_Editor extends Noticias_en_seccion_Identificado {
 	
 	public Explorar_secciones_Editor _explorar_secciones_Editor;

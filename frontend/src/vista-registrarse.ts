@@ -42,7 +42,7 @@ export class VistaRegistrarse extends LitElement {
    </vaadin-horizontal-layout>
    <vaadin-horizontal-layout style="width: 100%; flex-shrink: 0;" id="Layoutfechanacimientoregistrarse">
     <label style="width: 20%; flex-shrink: 0; align-self: center; flex-grow: 0; padding-right: var(--lumo-space-xl);" id="Labelfechanacimientoregistrarse">Fecha Nacimiento</label>
-    <vaadin-text-field placeholder="Fecha Nacimiento" style="flex-shrink: 0; align-self: center; flex-grow: 1;" id="Textfieldfechanacimientoregistrarse"></vaadin-text-field>
+    <vaadin-text-field placeholder="Fecha Nacimiento (DD-MM-AAAA)" style="flex-shrink: 0; align-self: center; flex-grow: 1;" id="Textfieldfechanacimientoregistrarse"></vaadin-text-field>
    </vaadin-horizontal-layout>
    <vaadin-horizontal-layout style="width: 100%; flex-shrink: 0;" id="Layoutapodoregistrarse">
     <label style="width: 20%; flex-shrink: 0; align-self: center; flex-grow: 0; padding-right: var(--lumo-space-xl);" id="Labelapodoregistrarse">Nick</label>

@@ -4,7 +4,6 @@ import java.util.Vector;
 
 import org.orm.PersistentException;
 
-import com.vaadin.flow.component.listbox.MultiSelectListBox;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 import vistas.VistaNoticiasarevisar;
@@ -29,7 +28,6 @@ public class Noticias_a_revisar extends VistaNoticiasarevisar {
 				titulos.add(noticias_revisar[i].getTitulo());
 			}
 			this.getComboboxnoticiasarevisar().setItems(titulos);
-
 			this.getComboboxnoticiasarevisar().addValueChangeListener(event -> _item.stream()
 					.filter(item -> item.noticia.getTitulo().equals(event.getValue())).findFirst().ifPresent(item -> {
 						this._editor.getLayoutnoticiasportadaidentificado().as(VerticalLayout.class).removeAll();

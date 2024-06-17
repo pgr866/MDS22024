@@ -2,8 +2,6 @@ package interfaz;
 
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
-import vistas.VistaListadonoticiasbusquedaidentificado_item;
-
 public class Listado_noticias_busqueda_Editor_item extends Listado_noticias_busqueda_Identificado_item {
 
 	public Listado_noticias_busqueda_Editor_item(

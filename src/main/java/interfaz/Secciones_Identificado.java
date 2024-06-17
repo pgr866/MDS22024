@@ -4,8 +4,6 @@ import java.util.Vector;
 
 import org.orm.PersistentException;
 
-import com.vaadin.flow.component.listbox.MultiSelectListBox;
-
 import vistas.VistaSeccionesidentificado;
 import base_de_datos.BDPrincipal;
 import base_de_datos.iIdentificado;

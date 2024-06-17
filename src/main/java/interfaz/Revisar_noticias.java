@@ -2,8 +2,6 @@ package interfaz;
 
 import org.orm.PersistentException;
 
-import com.vaadin.flow.component.orderedlayout.VerticalLayout;
-
 import base_de_datos.BDPrincipal;
 import base_de_datos.iEditor;
 

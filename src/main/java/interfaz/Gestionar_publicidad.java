@@ -1,5 +1,7 @@
 package interfaz;
 
+import com.vaadin.flow.component.UI;
+
 public class Gestionar_publicidad {
 
 	public Gestor_de_publicidad _gestor_de_publicidad;
@@ -13,5 +15,8 @@ public class Gestionar_publicidad {
 	
 	public void Publicidad() {
 		this._mostrar_publicidad.getImagenmostrarpublidad().setSrc("https://i.postimg.cc/Vs0hp5Rx/anuncio.png");
+		this._mostrar_publicidad.getButtonanunciomostrarpublidad().addClickListener(event -> {
+			UI.getCurrent().getPage().setLocation("https://www.coca-cola.com/");
+		});
 	}
 }
