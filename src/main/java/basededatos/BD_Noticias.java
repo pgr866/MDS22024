@@ -169,9 +169,10 @@ public class BD_Noticias {
 		t = MDS12324PFFornielesGomezPersistentManager.instance().getSession().beginTransaction();
 		try {
 			noticias = NoticiaDAO.queryNoticia("PortadaId_portada IS NOT NULL", "Posicion_portada");
-			for (int i=0; i<noticias.size(); i++)
+			for (int i=0; i<noticias.size(); i++) {
 				noticias.get(i).setPosicion_portada(i);
-			NoticiaDAO.save(noticia);
+				NoticiaDAO.save(noticias.get(i));
+			}
 			t.commit();
 		} catch (Exception e) {
 			t.rollback();
