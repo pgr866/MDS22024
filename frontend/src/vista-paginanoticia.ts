@@ -24,7 +24,7 @@ export class VistaPaginanoticia extends LitElement {
   <vaadin-vertical-layout style="width: 100%; max-width: 1000px; align-self: center;">
    <vaadin-horizontal-layout style="width: 100%; flex-shrink: 0; flex-direction: column; display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1; align-self: center;">
     <vaadin-vertical-layout id="Layoutimagennoticiapaginanoticia" style="align-self: center; flex-shrink: 0;"></vaadin-vertical-layout>
-    <vaadin-horizontal-layout style="width: 95%; flex-shrink: 0; justify-content: space-between; flex-grow: 0; align-self: center; height: 5%; padding-bottom: var(--lumo-space-l); padding-right: var(--lumo-space-xl);">
+    <vaadin-horizontal-layout style="width: 95%; flex-shrink: 0; justify-content: space-between; flex-grow: 0; align-self: center; height: 5%; padding-right: var(--lumo-space-xl);">
      <vaadin-horizontal-layout style="flex-shrink: 0; height: 100%; align-self: center; flex-grow: 0; width: 65%; padding-right: var(--lumo-space-l);" id="Layoutfechaautorlugarpaginanoticia">
       <label style="flex-shrink: 0; text-align: left; width: 33%;" id="Layoutfechapaginanoticia">Fecha</label>
       <label style="flex-shrink: 0; text-align: center; width: 33%;" id="Layoutautorpaginanoticia">Autor</label>
