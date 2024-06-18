@@ -142,10 +142,9 @@ public class Noticia implements Serializable {
 	@org.hibernate.annotations.LazyCollection(org.hibernate.annotations.LazyCollectionOption.TRUE)	
 	private java.util.Set ORM_valora_positiva = new java.util.HashSet();
 	
-	@ManyToMany(targetEntity=basededatos.Tematica.class)	
+	@ManyToMany(targetEntity=basededatos.Tematica.class, fetch = FetchType.EAGER)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
-	@JoinTable(name="Tematica_Noticia", joinColumns={ @JoinColumn(name="NoticiaId_noticia") }, inverseJoinColumns={ @JoinColumn(name="TematicaId_tematica") })	
-	@org.hibernate.annotations.LazyCollection(org.hibernate.annotations.LazyCollectionOption.TRUE)	
+	@JoinTable(name="Tematica_Noticia", joinColumns={ @JoinColumn(name="NoticiaId_noticia") }, inverseJoinColumns={ @JoinColumn(name="TematicaId_tematica") })		
 	private java.util.Set ORM_pertenece_a = new java.util.HashSet();
 	
 	@ManyToMany(targetEntity=basededatos.Identificado.class)	
@@ -154,9 +153,8 @@ public class Noticia implements Serializable {
 	@org.hibernate.annotations.LazyCollection(org.hibernate.annotations.LazyCollectionOption.TRUE)	
 	private java.util.Set ORM_valora_negativa = new java.util.HashSet();
 	
-	@OneToMany(mappedBy="noticia_contiene_comentarios", targetEntity=basededatos.Comentario.class)	
-	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
-	@org.hibernate.annotations.LazyCollection(org.hibernate.annotations.LazyCollectionOption.TRUE)	
+	@OneToMany(mappedBy="noticia_contiene_comentarios", targetEntity=basededatos.Comentario.class, fetch = FetchType.EAGER)	
+	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})		
 	private java.util.Set ORM_pertenece_a_noticia = new java.util.HashSet();
 	
 	private void setId_noticia(int value) {
