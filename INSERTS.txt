@@ -39,8 +39,8 @@ INSERT INTO Comentario_Identificado2 VALUES (2, 1);
 INSERT INTO Noticia VALUES (2, 1, 1, NULL, 1, 2, 'Dani Carvajal estrena Eurocopa como goleador', 'https://i.postimg.cc/mk96TZKc/noticia2.jpg', '17-06-2024', 'Donaueschingen', 'El defensa, que arengó a la selección antes de la final de la Nations en Rotterdam, repitió antes de jugar con Croacia, su debut en una Eurocopa y su estreno como goleador.', 'Los jugadores de la selección española se unieron antes del partido contra Croacia, con Dani Carvajal, debutante en la Eurocopa a los 32 años, liderando la arenga. Tras superar lesiones y ganar la Nations League, estaba listo para inspirar a su equipo.', 1, 2, 1);
 
 INSERT INTO Tematica_Noticia VALUES (1, 2);
-INSERT INTO Tematica_Noticia VALUES (3, 2);
-INSERT INTO Tematica_Noticia VALUES (4, 2);
+INSERT INTO Tematica_Noticia2 VALUES (3, 2);
+INSERT INTO Tematica_Noticia2 VALUES (4, 2);
 
 INSERT INTO Comentario VALUES (3, 2, NULL, 2, 'Que buen jugador!', 1, 1);
 INSERT INTO Comentario_Identificado VALUES (3, 1);
@@ -52,8 +52,8 @@ INSERT INTO Comentario_Identificado2 VALUES (4, 1);
 INSERT INTO Noticia VALUES (3, 1, 1, NULL, 1, 2, 'La nueva España: adiós al culto por el balón', 'https://i.postimg.cc/4y9KNjJ2/noticia3.jpg', '17-06-2024', 'Donaueschingen', 'Después de 136 partidos, la selección perdió la posesión ante Croacia, un ejemplo de los matices que buscaba Luis de la Fuente, un equipo más directo para aprovechar la velocidad de Nico y Lamine.', 'España perdió la posesión ante Croacia, mostrando el cambio hacia un juego más directo de Luis de la Fuente para aprovechar la velocidad de jóvenes como Nico Williams y Lamine Yamal en contraataques rápidos.', 1, 2, 2);
 
 INSERT INTO Tematica_Noticia VALUES (1, 3);
-INSERT INTO Tematica_Noticia VALUES (2, 3);
-INSERT INTO Tematica_Noticia VALUES (4, 3);
+INSERT INTO Tematica_Noticia2 VALUES (2, 3);
+INSERT INTO Tematica_Noticia2 VALUES (4, 3);
 
 INSERT INTO Comentario VALUES (5, 1, NULL, 3, 'Que buenos jugadores!', 1, 1);
 INSERT INTO Comentario_Identificado VALUES (5, 1);
