@@ -61,3 +61,12 @@ INSERT INTO Comentario_Identificado2 VALUES (5, 3);
 INSERT INTO Comentario VALUES (6, 2, NULL, 3, 'Vaya partidazo el del otro dia!', 1, 1);
 INSERT INTO Comentario_Identificado VALUES (6, 2);
 INSERT INTO Comentario_Identificado2 VALUES (6, 1);
+
+
+
+Lamine Yamal: “Ficharía a Nico Williams”
+Madrid
+19-06-2024
+https://i.postimg.cc/NF3jwnNc/noticia4.jpg
+Lamine Yamal, joven futbolista del FC Barcelona, ha destacado en la selección española en la Eurocopa. Con solo 16 años, ha roto récords en la competición. En El Larguero de la Cadena SER, habló sobre su primera experiencia en el torneo.
+El futbolista de 16 años detalla cómo está siendo su primera experiencia con la selección española en una Eurocopa.
