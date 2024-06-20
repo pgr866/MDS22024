@@ -65,9 +65,9 @@ public class Pagina_noticia_Editor extends Pagina_noticia_Identificado {
 			((Listado_noticias_busqueda_Editor) this._listado_noticias_busqueda_Identificado._listado_noticias_busqueda_Identificado)._editor.mainview.removeAll();
 			((Listado_noticias_busqueda_Editor) this._listado_noticias_busqueda_Identificado._listado_noticias_busqueda_Identificado)._editor.mainview.add(((Listado_noticias_busqueda_Editor) this._listado_noticias_busqueda_Identificado._listado_noticias_busqueda_Identificado)._editor.mainview._editor);
 		} else if (this._noticias_en_seccion_Identificado != null) {
-			this._noticias_en_seccion_Editor._noticias_en_seccion_Identificado._explorar_secciones_Identificado._identificado.mainview._editor = new Editor(this._noticias_en_seccion_Editor._noticias_en_seccion_Identificado._explorar_secciones_Identificado._identificado.mainview, (basededatos.Editor) this._noticias_en_seccion_Editor._noticias_en_seccion_Identificado._explorar_secciones_Identificado._identificado.identificado);
-			this._noticias_en_seccion_Editor._noticias_en_seccion_Identificado._explorar_secciones_Identificado._identificado.mainview.removeAll();
-			this._noticias_en_seccion_Editor._noticias_en_seccion_Identificado._explorar_secciones_Identificado._identificado.mainview.add(this._noticias_en_seccion_Editor._noticias_en_seccion_Identificado._explorar_secciones_Identificado._identificado.mainview._editor);
+			((Noticias_en_seccion_Identificado) this._noticias_en_seccion_Editor._noticias_en_seccion_Identificado)._explorar_secciones_Identificado._identificado.mainview._editor = new Editor(((Noticias_en_seccion_Identificado) this._noticias_en_seccion_Editor._noticias_en_seccion_Identificado)._explorar_secciones_Identificado._identificado.mainview, (basededatos.Editor) ((Noticias_en_seccion_Identificado) this._noticias_en_seccion_Editor._noticias_en_seccion_Identificado)._explorar_secciones_Identificado._identificado.identificado);
+			((Noticias_en_seccion_Identificado) this._noticias_en_seccion_Editor._noticias_en_seccion_Identificado)._explorar_secciones_Identificado._identificado.mainview.removeAll();
+			((Noticias_en_seccion_Identificado) this._noticias_en_seccion_Editor._noticias_en_seccion_Identificado)._explorar_secciones_Identificado._identificado.mainview.add(((Noticias_en_seccion_Identificado) this._noticias_en_seccion_Editor._noticias_en_seccion_Identificado)._explorar_secciones_Identificado._identificado.mainview._editor);
 		}
 	}
 }
